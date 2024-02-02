@@ -1,0 +1,99 @@
+"""
+/**
+ * @file LFSR.py
+ * @brief This module provides an implementation of a Linear Feedback Shift Register (LFSR)
+ *        which can be used as a pseudo-random number generator.
+/**
+ * @file data_export.py
+ * @brief 
+ *
+ * @author Saeid Jamili and Marco Angioli
+ * @note Author names are listed in alphabetical order.
+ * @email <saeid.jamili@uniroma1.it>
+ * @email <marco.angioli@uniroma1.it>
+ *
+ * @contributors
+ *
+ * @date Created: 24th July 2023
+ * @date Last Updated: 23th August 2023
+ *
+ * @version 1.0.0
+ *
+ * @institute Sapienza University of Rome
+ * @cite https://doi.org/10.xxxx/yyyyy
+ *
+ * @section DEPENDENCIES
+ * - 
+ *
+ * @section LICENSE
+ * This file is part of the Aeneas HyperCompute Platform.
+ *
+ * Licensed under the MIT License. See the LICENSE file in the project root for full license details.
+ *
+ * @section CHANGELOG
+ * @version 0.0.0=dev - 23th August 2023
+ * - Initial release
+ *
+ * @todo
+ * - 
+ * - 
+ *
+ * @see
+ * -
+ */
+"""
+
+class LFSR:
+    """
+    Linear Feedback Shift Register (LFSR) implementation for pseudo-random number generation.
+    
+    Attributes:
+        OUT_BWIDTH (int): The output bit-width.
+        N_OF_REM_FBITS (int): The number of remaining feedback bits.
+        b1 (int): Feedback bit 1.
+        b2 (int): Feedback bit 2.
+        b3 (int): Feedback bit 3.
+        b4 (int): Feedback bit 4.
+        lfsr (int): The current state of the LFSR.
+        rnd_o (int): The current random output value.
+    """
+    def __init__(self, OUT_BWIDTH, N_OF_REM_FBITS, b1, b2, b3, b4, seed):
+        self.OUT_BWIDTH = OUT_BWIDTH
+        self.N_OF_REM_FBITS = N_OF_REM_FBITS
+        self.b1 = b1
+        self.b2 = b2
+        self.b3 = b3
+        self.b4 = b4
+        self.lfsr = seed
+        self.rnd_o = 0
+
+    def set_seed(self, _seed):
+        """
+        Set the initial seed value for the LFSR.
+        
+        Parameters:
+            seed (int): The seed value.
+        """
+        self.lfsr = _seed
+
+    def randomize(self):
+        """
+        Generate a new pseudo-random number using the LFSR.
+        
+        Returns:
+            bool: True if the operation was successful.
+        """
+        self.lfsr >>= 1
+        new_bit = ((self.lfsr >> self.b1) & 1) ^ ((self.lfsr >> self.b2) & 1) ^ ((self.lfsr >> (self.OUT_BWIDTH+self.N_OF_REM_FBITS-1-self.b3)) & 1) ^ ((self.lfsr >> (self.OUT_BWIDTH+self.N_OF_REM_FBITS-1-self.b4)) & 1)
+        self.lfsr |= (new_bit << (self.OUT_BWIDTH+self.N_OF_REM_FBITS-1))
+        self.rnd_o = (self.lfsr >> self.N_OF_REM_FBITS) & ((1 << self.OUT_BWIDTH) - 1)
+
+        self.apply_constrain()
+        return True
+
+    def apply_constrain(self):
+        """
+        
+        """
+        # apply your constraints here
+        pass

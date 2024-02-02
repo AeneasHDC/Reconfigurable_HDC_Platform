@@ -1,0 +1,21 @@
+{
+    "dataset_name": "isolet",
+    "description": "This dataset was created by collecting speech samples of letters in the English alphabet spoken by various speakers.",
+    "total_data_size": 7797,
+    "training_data_size": 6238,
+    "testing_data_size": 1559,
+    "feature_size": 617,
+    "data_type": "FP",
+    "data_range": {
+      "min": -1,
+      "max": 1
+    },
+    "class_size": 26,
+    "source": "UCI Machine Learning Repository",
+    "date_collected": "1994-05-01",
+    "date_published": "1994-06-01",
+    "created_by": "The Institute for the Study of Learning and Expertise (ISLE)",
+    "paper_citation": "Dietterich, T. G., & Bakiri, G. (1995). Solving Multiclass Learning Problems via Error-Correcting Output Codes. Journal of Artificial Intelligence Research, 263-286.",
+    "dataset_link": "https://archive.ics.uci.edu/ml/datasets/isolet"
+  }
+  

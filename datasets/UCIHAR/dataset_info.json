@@ -1,0 +1,21 @@
+{
+    "dataset_name": "UCIHAR",
+    "description": "The dataset comprises motion sensor data of 19 daily and sports activities each performed by 8 subjects in their own style for 5 minutes. Five Xsens MTx units are used on the torso, arms, and legs.",
+    "total_data_size": 10299,
+    "training_data_size": 7352,
+    "testing_data_size": 2947,
+    "feature_size": 561,
+    "data_type": "FP",
+    "data_range": {
+      "min": -1,
+      "max": 1
+    },
+    "class_size": 6,
+    "source": "UCI Machine Learning Repository",
+    "date_collected": "-",
+    "date_published": "7/7/2013",
+    "created_by": "-",
+    "paper_citation": "Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. A Public Domain Dataset for Human Activity Recognition Using Smartphones. 21st European Symposium on Artificial Neural Networks, Computational Intelligence and Machine Learning, ESANN 2013. Bruges, Belgium 24-26 April 2013.",
+    "dataset_link": "https://archive.ics.uci.edu/dataset/256/daily+and+sports+activities"
+  }
+  
