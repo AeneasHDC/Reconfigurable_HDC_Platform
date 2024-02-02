@@ -65,8 +65,8 @@ AeneasHDC is in constant evolution, aiming to catch up all the innovations in th
 ```bash
 $ git clone https://github.com/AeneasHDC/Reconfigurable_HDC_Platform.git
 $ cd Reconfigurable_HDC_Platform
-$ 
-$ ...
+$ run run.bat
+$ you can find "Getting Started" guides and examples in the ./tests directory.
 ```
 
 ---
