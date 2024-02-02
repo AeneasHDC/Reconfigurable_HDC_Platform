@@ -8,29 +8,29 @@ Absolutely! I'll incorporate the documentation task into the Collaboration Frame
 
 ### 🌟 **Contributors & Contact**:
 
-**Marco Angioli (MA)**
+**Marco Angioli**
 📧 [marco.angioli@uniroma1.it](mailto:marco.angioli@uniroma1.it)
 
-**Saeid Jamili (SJ)**
+**Saeid Jamili**
 📧 [saeid.jamili@uniroma1.it](mailto:saeid.jamili@uniroma1.it)
 
 ---
 
 ### 📋 **Roles & Domain Expertise**:
 
-- **Environment Initialization by SJ**
+- **Environment Initialization by SAEID**
     - 📚 Selection of relevant tools, libraries, and architecture.
     - 🔗 Seamless integration and structure flow.
 
-- **Model Development by MA**
+- **Model Development by MARCO**
   - 📊 Data collection and pre-processing.
   - 📉 Model deployment and evaluation.
 
 - **HLS (High-Level Synthesis) Project Initiation**
-  - 🌉 Joint venture: SJ & MA.
+  - 🌉 Joint venture: SAEID & MARCO.
 
 - **Project Documentation**
-  - 📜 Joint responsibility: MA & SJ.
+  - 📜 Joint responsibility: MARCO & SAEID.
   - ✍️ Detailed, clear, and comprehensive documentation of project functionalities, methodologies, and results.
   - 🔄 Regular updates to documentation reflecting project evolutions and updates.
 
