@@ -1,0 +1,20 @@
+{
+    "dataset_name": "Wingnut",
+    "description": "The WingNut dataset has two classes and a density gradient within each class. It consists of two equal-sized datasets with n = 508 points on a plane. Each set is located within a rectangle of size 3 x 2, such that along one of the diagonals of the rectangle the density of the points is linearly increasing. The densest edges of the rectangle are placed at the opposite ends of a gap with a minimum width of 0.3 between the rectangles.",
+    "total_data_size": 1016,
+    "training_data_size": 1016,
+    "testing_data_size": 1016,
+    "feature_size": 2,
+    "data_type": "FP",
+    "data_range": {
+      "min": -2.15,
+      "max": 2.15
+    },
+    "class_size": 7,
+    "source": "https://www.mdpi.com/2306-5729/5/1/13",
+    "date_published": " 30 January 2020",
+    "created_by": "Alfred Ultsch, and Jörn Lötsch",
+    "paper_citation": "The Fundamental Clustering and Projection Suite (FCPS): A Dataset Collection to Test the Performance of Clustering and Data Projection Algorithms",
+    "dataset_link": "https://www.mdpi.com/2306-5729/5/1/13/s1"
+  }
+  

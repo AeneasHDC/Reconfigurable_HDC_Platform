@@ -1,0 +1,21 @@
+{
+    "dataset_name": "CARDIO",
+    "description": "The dataset consists of measurements of fetal heart rate (FHR) and uterine contraction (UC) features on cardiotocograms classified by expert obstetricians.",
+    "total_data_size": 2126,
+    "training_data_size": 1594,
+    "testing_data_size": 529,
+    "feature_size": 21,
+    "data_type": "FP",
+    "data_range": {
+      "min": 0,
+      "max": 1
+    },
+    "class_size": 3,
+    "source": "UCI Machine Learning Repository",
+    "date_collected": "-",
+    "date_published": "9/6/2010",
+    "created_by": "-",
+    "paper_citation": "-",
+    "dataset_link": "https://archive.ics.uci.edu/dataset/193/cardiotocography"
+  }
+  

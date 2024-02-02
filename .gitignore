@@ -1,0 +1,20 @@
+/rep/tmp/
+/out/dataset/
+/out/extracted_params/
+/out/dataset/
+/out/hls/
+/out/mem_data/hdl_functions/
+/out/model_eva/
+/doc/latex/
+/doc/references/
+/doc/Aeneas_HDC_weekly updates.pptx
+/doc/theory/
+/doc/Basic_concepts_HDC.pptx
+/node_modules/
+/.ipynb_checkpoints/
+/main/_hdc_hls_xilinx/
+/main/__pycache__/
+/src/config/__pycache__/
+/package.json
+/jupyter_log.txt
+/package-lock.json

@@ -1,0 +1,20 @@
+{
+    "dataset_name": "Hepta",
+    "description": "The Hepta dataset represents seven very separate 3D clouds, one with a considerable larger density than the others. The Hepta dataset consists of six classes with n = 30 points each, drawn uniform from the unit cube centered at the 3 points on the axes. The seventh class consists of n = 32 points drawn uniform-independent and identically distributed from a sphere of radius 0.15 centered at the origin.",
+    "total_data_size": 212,
+    "training_data_size": 212,
+    "testing_data_size": 212,
+    "feature_size": 3,
+    "data_type": "FP",
+    "data_range": {
+      "min": -3,
+      "max": 3
+    },
+    "class_size": 7,
+    "source": "https://www.mdpi.com/2306-5729/5/1/13",
+    "date_published": " 30 January 2020",
+    "created_by": "Alfred Ultsch, and Jörn Lötsch",
+    "paper_citation": "The Fundamental Clustering and Projection Suite (FCPS): A Dataset Collection to Test the Performance of Clustering and Data Projection Algorithms",
+    "dataset_link": "https://www.mdpi.com/2306-5729/5/1/13/s1"
+  }
+  

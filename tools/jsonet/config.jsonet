@@ -1,0 +1,221 @@
+/* @file  config.jsonnet  
+ * @brief configuration file
+ *
+ * @author Saeid Jamili and Marco Angioli
+ * @note Author names are listed in alphabetical order.
+ * @email <saeid.jamili@uniroma1.it>
+ * @email <marco.angioli@uniroma1.it>
+ *
+ * @contributors
+ *
+ * @date Created: 24th July 2023
+ * @date Last Updated: 23th August 2023
+ *
+ * @version 1.0.0
+ *
+ * @institute Sapienza University of Rome
+ * @cite https:doi.org/10.xxxx/yyyyy
+ *
+ * @section DEPENDENCIES
+ * - 
+ *
+ * @section LICENSE
+ * This file is part of the Aeneas HyperCompute Platform.
+ *
+ * Licensed under the MIT License. See the LICENSE file in the project root for full license details.
+ *
+ * @section CHANGELOG
+ * @version 1.0.0 - 23th August 2023
+ * - Initial release
+ *
+ * @todo
+ * - 
+ * - 
+ *
+ * @see
+ * -
+ */
+
+
+// GENERAL
+local VERBOS_DISABLE  = 0;
+local VERBOS_L1       = 1;
+local VERBOS_L2       = 2;
+local VERBOS          = VERBOS_L1;
+
+local WINDOWS         = 0;
+local LINUX           = 1;
+local MAC             = 2;
+local OS              = WINDOWS;
+
+
+
+// TARGET DEVICE OR BOARD
+local FPGA                      = 0;
+local MICROCONTROLER            = 1;
+local SOFT_PROCESSOR            = 2;
+local TARGET                    = FPGA;
+
+local AMD_ZYBO		            = 0;
+local AMD_ZEDBOARD	            = 1;
+local AMD_ZCU106	            = 2;
+local AMD_ZCU102	            = 3;
+local AMD_VCU108	            = 4;
+local INTEL_XXX	                = 5;
+local ARM_XXXX		            = 6;
+local PIC_XXXX		            = 7;
+local RISCV_PULPINO_RISCY	    = 8;
+local RISCV_PULPINO_KLESS_T13   = 9;
+
+local TARGET_DEVICE = "xczu9eg-ffvb1156-2-e";
+local TARGET_BOARD  = AMD_ZCU102;
+
+local OP_FREQ               = 200; 
+local USE_VIV_EN            = 1;
+local VIV_OPT_DEFAULT       = 0;
+local VIV_OPT_RESOURCE      = 1;
+local VIV_OPT_SPEED         = 2;
+local VIV_OPT_PERFORMANCE   = 3;
+local VIV_OPT_METHOD        = VIV_OPT_DEFAULT;
+
+// LANGUAGES
+local HLS 		    	    = 0;
+local SYSTEM_VERILOG  	    = 1;
+local VHDL 				    = 2;
+local VERILOG 			    = 3;
+local PYTHON 		        = 4;
+local MATLAB 		        = 5;
+local CPP 		            = 6;
+local C	                    = 7;
+local RUST	                = 8;
+
+local HDL_LANG    	        = HLS;
+local MODEL_LANG    	    = PYTHON;
+
+// DATASET
+local DS_NAME               = "CARDIO";
+local DS_SIZE               = 2126;
+local DS_TRAIN_SIZE         = 1594;
+local DS_TEST_SIZE          = 532;
+local DS_FEATURE_SIZE       = 21;
+local DS_DATA_TYPE          = "FP";
+local DS_DATA_RAGE_MIN      = 0;
+local DS_DATA_RAGE_MAX      = 1;
+local DS_CLASSES_SIZE       = 3;
+
+// TRAIN
+local TRAIN_ON_HW           = 0;
+local EPOCH                 = 1;
+
+// HDC 
+local HD_DIM                = 1000;
+
+local BINARY                = 0;
+local BIPOLAR               = 1;
+local HD_DATA_TYPE          = BIPOLAR;
+
+local SIMI_COS              = 0;
+local SIMI_DPROD            = 1;
+local SIMI_HAM              = 2;
+local HD_SIMI_METHOD        = SIMI_COS;
+local APPROX_SQRT_ON_HW     = 1;
+local APPROX_SQRT_ON_MODEL  = 1;
+local HD_SIMI_W_BITS        = 32;
+
+local LINEAR                = 0;
+local APPROX                = 1;
+local THERMOMETER           = 2;
+local HD_LV_TYPE            = LINEAR;
+local HD_LV_LEN             = 30;
+
+
+
+// hw interface
+local DI_M_STREAM         	= 0;
+local DI_M_PARTIAL_PARALLEL = 1;
+local DI_M_PARALLEL       	= 2;
+local IN_DATA_MODE        	= DI_M_STREAM;
+local DI_PARALLEL_W_BITS    = 100;
+
+local DI_QUANT_BITS 	    = 6;
+
+local HD_DATA_W_BITS        = 1;
+
+local BV_M_INT_MEM        	= 0;
+local BV_M_EXT            	= 1;
+local BV_M_PERMUTATION    	= 2;
+local BV_M_RND_GEN        	= 3;
+local BV_MODE             	= BV_M_INT_MEM;
+local BV_DATA_W_BITS        = 1;
+local BV_IN_DATA_W_BITS     = 100;
+
+local BV_RND_GEN_W_BITS     = 50;
+
+local LV_M_INT_MEM        	= 0;
+local LV_M_EXT            	= 1;
+local LV_M_THERMOMETER    	= 2;
+local LV_M_APPROX         	= 3;
+local LV_M_APPROX_IMPORT_PARAMS = 4;
+local LV_M_APPROX_RND_GEN_W_BITS = 20;
+local LV_M_RND_GEN        	= 5;
+local LV_M_HDL_GEN        	= 6;
+local LV_MODE             	= LV_M_INT_MEM;
+local LV_DATA_W_BITS        = 1;
+local LV_IN_DATA_W_BITS     = 100;
+
+local CV_DATA_W_BITS        = 1;
+local CV_M_INT_MEM        	= 0;
+local CV_M_EXT            	= 1;
+local CV_M_HDL_GEN        	= 2;
+local CV_MODE             	= CV_M_INT_MEM;
+local CV_IN_DATA_W_BITS     = 100;
+
+local DI_FEATUREID_W_BITS   = 10;
+local DI_FRAMEID_W_BITS     = 10;
+local DO_CLASS_W_BITS 	    = 5;
+local DO_STATUS_W_BITS 	    = 5;
+
+
+local DENSE                 = 0;
+local SPARSE                = 1;
+local HD_MODE               = DENSE;
+local SPARSITY_FACTOR_X10   = 5;
+
+local CLIPPING_DISABLE 	    = 0;
+local CLIPPING_BINARY 	    = 1;
+local CLIPPING_TERNARY 	    = 2;
+local CLIPPING_QUANTIZED    = 3;
+local CLIPPING_ENCODING     = CLIPPING_BINARY;
+local CLIPPING_CLASS        = CLIPPING_BINARY;
+local CLIPPING_BINARY_FOR_VALUE_EQ_HALF_HD_DIM_USE_RND_GEN   = 0;
+local CLIPPING_BINARY_FOR_VALUE_EQ_HALF_HD_DIM_USE_TOGGLING  = 1;
+local CLIPPING_BINARY_FOR_VALUE_EQ_HALF_HD_DIM_SET_ZERO      = 2;
+local CLIPPING_BINARY_METHOD_FOR_VALUE_EQ_HALF_HD_DIM = CLIPPING_BINARY_FOR_VALUE_EQ_HALF_HD_DIM_SET_ZERO;
+local N_GRAM                = 0;
+local N_GRAM_SIZE           = 4;
+local ENCODING_RECORD       = 0;
+local ENCODING_NGRAM        = 1;
+local ENCODING_TECHNIQUE    = ENCODING_RECORD;
+local RETRAIN               = 1;
+local LR_CONSTANT           = 0;
+local LR_ITER               = 1;
+local LR_DATA               = 2;
+local LR_HYBRID             = 3;
+local LR_DECAY              = LR_HYBRID;
+local MAX_LEARNING_RATE     = 15;
+local BETA_LR               = 3;
+
+// Tools
+local VITIS_HLS_XILINX_PATH = "D:/Xilinx/Vitis_HLS/2023.1/bin/vitis_hls.bat";
+local VIVADO_XILINX_PATH = "D:/Xilinx/Vivado/2023.1/bin/vivado.bat";
+local VITIS_XILINX_PATH = "D:/Xilinx/Vitis/2023.1/bin/vitis.bat";
+
+
+{
+    "ENV": {
+        "VERBOS": VERBOS_L1
+    },
+    "MODEL": {
+        "D": "VERBOS_L1"
+    }
+}

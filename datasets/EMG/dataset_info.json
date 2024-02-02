@@ -1,0 +1,20 @@
+{
+    "dataset_name": "EMG",
+    "description": " Hand Gesture Recognition using Electromyography (EMG) Signals. Designing an algorithm for hand gesture recognition from a stream of EMG sensors for a smart prosthetic application",
+    "total_data_size": 186036,
+    "training_data_size": 372106,
+    "testing_data_size": 148830,
+    "feature_size": 4,
+    "data_type": "FP",
+    "data_range": {
+      "min": 0,
+      "max": 21
+    },
+    "class_size": 5,
+    "source": "https://github.com/abbas-rahimi/HDC-EMG",
+    "date_published": "17-19 October 2016",
+    "created_by": "Abbas Rahim",
+    "paper_citation": "Rahimi, Abbas, et al. Hyperdimensional biosignal processing: A case study for EMG-based hand gesture recognition. 2016 IEEE International Conference on Rebooting Computing (ICRC). IEEE, 2016.",
+    "dataset_link": "https://iis-people.ee.ethz.ch/~arahimi/papers/ICRC16.pdf"
+  }
+  
