@@ -24,7 +24,24 @@
     <a href="#-acknowledgements">🌟 Acknowledgements</a> &nbsp;·&nbsp;
     <a href="#-contact">📞 Contact</a>
 </p>
-
+<style>
+  @media (prefers-color-scheme: dark) {
+    .light-mode-only {
+      display: none;
+    }
+    .dark-mode-only {
+      display: block;
+    }
+  }
+  @media (prefers-color-scheme: light) {
+    .light-mode-only {
+      display: block;
+    }
+    .dark-mode-only {
+      display: none;
+    }
+  }
+</style>
 
 ## 🗺️ Model Overview
 AeneasHDC is the first automatic open-source framework in the literature to facilitate the generation of flexible hardware accelerators for hyperdimensional computing (HDC) learning problems.
