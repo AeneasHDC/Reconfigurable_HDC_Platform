@@ -32,10 +32,10 @@ The environment is extremely customizable, supporting a wide range of the most c
 different design choices on model accuracy, memory usage, execution time, energy consumption, and area requirements.
     
 The Figure below illustrates the AeneasHDC's workflow. The intuitive <a href="#-gui" style="font-weight: bold;">Graphic User Interface (GUI)</a> allows the user to specify the problem characteristics, including dataset details, the number of features and classes, the desired programming language, and the target FPGA. An interactive mechanism lets the user decide how to distribute the workload between the software and the hardware implementations. The hardware can be generated to accelerate the entire classification process (train, inference, retrain) or just some tasks, deciding, for example, to execute the train and retrain in software and instantiate only the hardware for the inference, as commonly done for embedded applications.
-<center>
-![#](./doc/img/theory/aeneas_model_nobg.png#gh-light-mode-only)
-![#](./doc/img/theory/aeneas_model_nobg_dark.png#gh-dark-mode-only)
-</center>
+<p align="center">
+  <img src="./doc/img/theory/aeneas_model_nobg.png#gh-light-mode-only" alt="Light Mode Image" width="600">
+  <img src="./doc/img/theory/aeneas_model_nobg_dark.png#gh-dark-mode-only" alt="Dark Mode Image" width="600">
+</p>
 The system automatically generates all the configuration files required by the following entities and instantiates the model in software and hardware. 
 Thanks to the versatile AeneasHDC library, the software model can be produced in Python, Matlab, or C++. The model is executed, and the results in terms of accuracy and other performance metrics are collected. The data required for inference are extracted and passed to the hardware model.
     
