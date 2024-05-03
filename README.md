@@ -13,8 +13,8 @@
 <p align="center" style="font-size: 18px;">
     <a href="#-model-overview"  style="font-weight: bold;">🗺️ Model Overview</a> &nbsp;·&nbsp;
     <a href="#-getting-started" style="font-weight: bold;">⚙️ Getting Started</a> &nbsp;·&nbsp;
-    <a href="#-project-structure">📂 Project Structure</a> &nbsp;·&nbsp;
     <a href="#-gui" style="font-weight: bold;">⚙💻 Graphic User Interface (GUI)</a> &nbsp;·&nbsp;
+    <a href="#-project-structure">📂 Project Structure</a> &nbsp;·&nbsp;    
     <a href="#-usage">🖥 Usage</a> &nbsp;·&nbsp;
     <a href="#-documentation">📚 Documentation</a> &nbsp;·&nbsp;
     <a href="#-publications">📜 Publications</a> &nbsp;·&nbsp;
@@ -50,6 +50,25 @@ The AeneasHDC environment is always in evolution and we are constantly adding ne
 However, the model is completely open-source, and the user can easily extend the software and hardware libraries to include new desired models. The detailed how-to-use manual is on GitHub.
 We always encourage community <a href="#-contribution">collaboration</a> to enhance and evolve the framework over time. If you have any questions or need help, please <a href="#-contact">contact</a> the support team.
 </p>
+---
+
+## 🚀 Graphic User Interface (GUI)
+![image](https://github.com/AeneasHDC/Reconfigurable_HDC_Platform/assets/104903225/3494bb54-3f59-44ce-be1a-a9e605703f69)
+
+![image](https://github.com/AeneasHDC/Reconfigurable_HDC_Platform/assets/104903225/89da923a-ecaf-4c94-923d-a48c53e13807)
+
+![image](https://github.com/AeneasHDC/Reconfigurable_HDC_Platform/assets/104903225/5d56697d-9e77-42fd-b4c2-62b23a74f971)
+
+![image](https://github.com/AeneasHDC/Reconfigurable_HDC_Platform/assets/104903225/3b38ab2f-0463-45c2-b20f-f59193aad659)
+
+![image](https://github.com/AeneasHDC/Reconfigurable_HDC_Platform/assets/104903225/944f97e4-80f1-4321-aa66-7ab6a71e27a7)
+
+![image](https://github.com/AeneasHDC/Reconfigurable_HDC_Platform/assets/104903225/1b21e437-8666-4428-a9bc-bfe904e922b3)
+
+
+
+
+
 
 ---
 
