@@ -33,7 +33,8 @@ different design choices on model accuracy, memory usage, execution time, energy
     
 The Figure below illustrates the AeneasHDC's workflow. The intuitive Graphic User Interface (GUI) allows one to specify the problem characteristics, including dataset details, the number of features and classes, the desired programming language, and the target FPGA. An interactive mechanism lets the user decide how to distribute the workload between the software and the hardware implementations. The hardware can be generated to accelerate the entire classification process (train, inference, retrain) or just some tasks, deciding, for example, to execute the train and retrain in software and instantiate only the hardware for the inference, as commonly done for embedded applications.
 <p align="center">
-  <img src="./doc/img/theory/aeneas_model_nobg.png" width="600">
+  <img src="./doc/img/theory/aeneas_model_nobg.png" alt="Light Mode Image" width="600" style="display: none;" class="light-mode-only">
+  <img src="./doc/img/theory/Aeneas_model.png" alt="Dark Mode Image" width="300" style="display: none;" class="dark-mode-only">
 </p>
     
 The system automatically generates all the configuration files required by the following entities and instantiates the model in software and hardware. 
