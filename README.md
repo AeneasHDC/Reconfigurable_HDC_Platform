@@ -160,15 +160,15 @@ Aeneas HyperCompute Platform/
 
 ![QR Code for 2023 Publication](./qrcodes/2023_AeneasHyperCompute.png)
 
-### 📘 **2023 - Aeneas HyperCompute: Revolutionizing Vector Operations**
+### 📘 **AeneasHDC: An Automatic Framework for Deploying Hyperdimensional Computing Models on FPGAs, WCCI-2024**
 
 🔗 [**Abstract**](#abstract) • 🔗 [**Citation**](#citation) • 🔗 [**Download Paper**](./publications/2023_AeneasHyperCompute.pdf)
 
 <details id="abstract">
   <summary><strong>Abstract</strong></summary>
-
-  Hyperdimensional Computing (HDC) is an emerging bio-inspired computing paradigm, that models neural pattern activities using high-dimensional distributed representations. Unlike traditional AI models, HDC leverages extremely parallel, simple vector arithmetic operations. This computational efficiency and parallelism make HDC particularly suited for hardware implementations, especially as a lightweight energy-efficient solution for performing classification tasks on resource-constrained edge devices.
-The HDC classification pipeline, including encoding, training, and comparison stages, has been extensively explored with various approaches in the literature. However, while these techniques are mainly oriented to improve the model accuracy, their influence on hardware parameters remains largely unexplored. This work presents AeneasHDC, the first universal, automatic, and open-source platform for the streamlined deployment of HDC models in both software and hardware with diverse configurable options. AeneasHDC supports an extensive range of techniques commonly adopted in literature, automates the design of hardware accelerators for HDC, and empowers users to easily assess the impact of different design choices on model accuracy, memory usage, execution time, energy consumption, and area requirements.
+  Hyperdimensional Computing (HDC) is a bio-inspired learning paradigm, that models neural pattern activities using high-dimensional distributed representations.
+  HDC leverages parallel and simple vector arithmetic operations to combine and compare different concepts, enabling cognitive and reasoning tasks. 
+  The computational efficiency and parallelism of this approach make it particularly suited for hardware implementations, especially as a lightweight, energy-efficient solution for performing learning tasks on resource-constrained edge devices. The HDC pipeline, including encoding, training, and comparison stages, has been extensively explored with various approaches in the literature. However, while these techniques are mainly oriented to improve the model accuracy, their influence on hardware parameters remains largely unexplored. This work presents AeneasHDC, an automatic and open-source platform for the streamlined deployment of HDC models in both software and hardware for classification, regression and clustering tasks. AeneasHDC supports an extensive range of techniques commonly adopted in literature, automates the design of flexible hardware accelerators for HDC, and empowers users to easily assess the impact of different design choices on model accuracy, memory usage, execution time, power consumption, and area requirements. 
 </details>
 
 <details id="citation">
