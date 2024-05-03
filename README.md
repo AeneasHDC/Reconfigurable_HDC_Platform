@@ -53,22 +53,50 @@ We always encourage community <a href="#-contribution">collaboration</a> to enha
 ---
 
 ## 🚀 Graphic User Interface (GUI)
-![image](https://github.com/AeneasHDC/Reconfigurable_HDC_Platform/assets/104903225/3494bb54-3f59-44ce-be1a-a9e605703f69)
+The Aeneas HyperCompute Platform offers a robust, user-friendly interface designed to simplify the deployment of Hyperdimensional Computing (HDC) models across both software and hardware environments. The platform is built to accommodate researchers and developers looking to rapidly prototype and deploy flexible HDC systems in hardware.
 
-![image](https://github.com/AeneasHDC/Reconfigurable_HDC_Platform/assets/104903225/89da923a-ecaf-4c94-923d-a48c53e13807)
+### Landing Page
+The landing page presents a clean and minimalistic design, centered around easy navigation to all the platform's features. Users are greeted with an overview of the platform’s capabilities and an inviting "Dive In!" button to start their project configuration immediately.
+<p align="center">
+  <img src="https://github.com/AeneasHDC/Reconfigurable_HDC_Platform/assets/104903225/3494bb54-3f59-44ce-be1a-a9e605703f69" width="600">
+</p>
 
-![image](https://github.com/AeneasHDC/Reconfigurable_HDC_Platform/assets/104903225/5d56697d-9e77-42fd-b4c2-62b23a74f971)
+### Configuration Dashboard
+The Configuration Dashboard serves as the central hub where users can define the specifics of their HDC model. The dashboard allows users to configure:
 
-![image](https://github.com/AeneasHDC/Reconfigurable_HDC_Platform/assets/104903225/3b38ab2f-0463-45c2-b20f-f59193aad659)
+- Dataset characteristics
+- Learning task
+- Desired design choices for the HDC model
+- Software implementation language choices (Python, Matlab, C++)
+- Target FPGA
+- Selection of the target learning phase for hardware acceleration (train, inference, retrain, all)
+- Desired hardware parallelism
 
-![image](https://github.com/AeneasHDC/Reconfigurable_HDC_Platform/assets/104903225/944f97e4-80f1-4321-aa66-7ab6a71e27a7)
+The intuitive layout ensures all settings are accessible in a logical, streamlined manner, facilitating a seamless configuration process.
+For more granular control over the configuration settings, modal windows provide detailed options for each component of the HDC model. 
+<p align="center">
+<img src="https://github.com/AeneasHDC/Reconfigurable_HDC_Platform/assets/104903225/5d56697d-9e77-42fd-b4c2-62b23a74f971" width="600">
+</p>
+<p align="center">
+<img src="https://github.com/AeneasHDC/Reconfigurable_HDC_Platform/assets/104903225/89da923a-ecaf-4c94-923d-a48c53e13807" width="600">
+</p>
 
-![image](https://github.com/AeneasHDC/Reconfigurable_HDC_Platform/assets/104903225/1b21e437-8666-4428-a9bc-bfe904e922b3)
+### Execution and Reporting Interface
+Once the model is configured, a Jupyter notebook is created, including all the functions to compile and execute the specified model in software and hardware. These notebooks also provide a detailed log of the execution, including performance metrics and operational logs, facilitating debugging and performance optimization.
+<p align="center">
+<img src="https://github.com/AeneasHDC/Reconfigurable_HDC_Platform/assets/104903225/3b38ab2f-0463-45c2-b20f-f59193aad659" width="600">
+</p>
+<p align="center">
+<img src="https://github.com/AeneasHDC/Reconfigurable_HDC_Platform/assets/104903225/1b21e437-8666-4428-a9bc-bfe904e922b3" width="600">
+</p>
 
-
-
-
-
+### Project and Report Management
+The platform includes a project dashboard for managing multiple HDC projects, offering options to open, rename, copy, or delete projects. Additionally, a dedicated reporting interface compiles and displays performance metrics and other crucial data from each run, enhancing transparency and traceability.
+<p align="center">
+<img src="https://github.com/AeneasHDC/Reconfigurable_HDC_Platform/assets/104903225/944f97e4-80f1-4321-aa66-7ab6a71e27a7" width="600">
+</p>
+Conclusion
+The Aeneas HyperCompute Platform's GUI is crafted to ensure that users can focus more on exploring the impact of different design choices for HDC models and less on the intricacies of custom hardware design.
 
 ---
 
