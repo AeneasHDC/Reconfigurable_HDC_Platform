@@ -7,32 +7,33 @@
 <h1 align="center">Aeneas HyperCompute Platform</h1>
 
 <p align="center">
-    <em>The future of hyperdimensional computing.</em>
-</p>
-
-<p align="center">
-A cutting-edge, universal, automatic and open-source environment that enables simple and fast deployment of Hyperdimensional Computing (HDC) classification models in software and hardware. 
+    <em>An automatic open-source environment for simple and fast deployment of flexible Hyperdimensional Computing (HDC) learning models in software and hardware.</em>
 </p>
 
 <p align="center" style="font-size: 18px;">
+    <a href="#-model-overview"  style="font-weight: bold;">🗺️ Model Overview</a> &nbsp;·&nbsp;
     <a href="#-getting-started" style="font-weight: bold;">⚙️ Getting Started</a> &nbsp;·&nbsp;
     <a href="#-project-structure">📂 Project Structure</a> &nbsp;·&nbsp;
+    <a href="#-getting-started" style="font-weight: bold;">⚙💻 Graphic User Interface (GUI)</a> &nbsp;·&nbsp;
     <a href="#-usage">🖥 Usage</a> &nbsp;·&nbsp;
     <a href="#-documentation">📚 Documentation</a> &nbsp;·&nbsp;
     <a href="#-publications">📜 Publications</a> &nbsp;·&nbsp;
     <a href="#-license">⚖️ License</a> &nbsp;·&nbsp;
+    <a href="#-usage">🖥 Frequently Asked Questions (FAQ)</a> &nbsp;·&nbsp;
     <a href="#-contribution">🤝 Contribution</a> &nbsp;·&nbsp; </br>;
     <a href="#-acknowledgements">🌟 Acknowledgements</a> &nbsp;·&nbsp;
     <a href="#-contact">📞 Contact</a>
 </p>
 
 
-## 🗺️ Model Description
-AeneasHDC is extremely customizable, supporting a wide range of the most common techniques adopted in the literature for classification models, enabling users to easily assess the impact of different design choices on model accuracy, memory usage, execution time, energy consumption, and area requirements.
+## 🗺️ Model Overview
+AeneasHDC is the first automatic open-source framework in the literature to facilitate the generation of flexible hardware accelerators for hyperdimensional computing (HDC) learning problems.
+The environment is extremely customizable, supporting a wide range of the most common techniques adopted in the literature for learning models, enabling users to easily assess the impact of
+different design choices on model accuracy, memory usage, execution time, energy consumption, and area requirements.
     
-The following Figure illustrates the AeneasHDC's workflow. An intuitive Graphic User Interface (GUI) allows to specify the problem characteristics, including dataset details, the number of features and classes, the desired programming language, and the target FPGA. An interactive mechanism lets the user decide how to distribute the workload between the software and the hardware implementations. The hardware can be generated to accelerate the entire classification process (train, inference, retrain) or just some tasks, deciding, for example, to execute the train and retrain in software and instantiate only the hardware for the inference, as commonly done for embedded applications.
+The Figure below illustrates the AeneasHDC's workflow. The intuitive Graphic User Interface (GUI) allows one to specify the problem characteristics, including dataset details, the number of features and classes, the desired programming language, and the target FPGA. An interactive mechanism lets the user decide how to distribute the workload between the software and the hardware implementations. The hardware can be generated to accelerate the entire classification process (train, inference, retrain) or just some tasks, deciding, for example, to execute the train and retrain in software and instantiate only the hardware for the inference, as commonly done for embedded applications.
 <p align="center">
-  <img src="./doc/img/theory/Aeneas_model.png" width="600">
+  <img src="./doc/img/theory/aeneas_model_nobg.png" width="600">
 </p>
     
 The system automatically generates all the configuration files required by the following entities and instantiates the model in software and hardware. 
