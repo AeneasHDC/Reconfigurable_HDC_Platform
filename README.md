@@ -2,7 +2,7 @@
 ---
 
 <p align="center">
-  <img src="./doc/img/logo/AeneasHDC.png" alt="Aeneas HyperCompute Platform Logo" width="200">
+  <img src="./doc/img/logo/AeneasHDC_white.png" alt="Aeneas HyperCompute Platform Logo" width="200">
 </p>
 <h1 align="center">Aeneas HyperCompute Platform</h1>
 
