@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta
+      name="application-name"
+      content="Aeneas HyperCompute Platform-Report"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Config Editor</title>
+    <style>
+      body {
+          font-family: Arial, sans-serif;
+          background-color: #f7f7f7;
+      }
+      .container {
+          max-width: 1000px;
+          margin: 20px auto;
+          padding: 20px;
+          background-color: white;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      table {
+          width: 100%;
+          border-collapse: collapse;
+      }
+
+      th, td {
+          border: 1px solid #dcdcdc;
+          padding: 10px;
+          text-align: left;
+          vertical-align: middle;
+      }
+      th {
+          background-color: #f7f7f7;
+          font-weight: 600;
+      }
+
+      /* Seleziona la seconda cella di ogni riga e assegna una larghezza minima del 30% */
+      td:nth-child(2),
+      th:nth-child(2) {
+        min-width: 30%;
+      }
+
+      button {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.2s ease;
+        font-size: 16px;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+
+      select,
+      input {
+        width: 100%;
+        padding: 5px;
+        border: 1px solid #dcdcdc;
+        border-radius: 4px;
+        font-size: 14px;
+        outline: none;
+        box-sizing: border-box;
+      }
+
+      select:focus,
+      input:focus {
+        border-color: #4caf50;
+      }
+
+      @media (max-width: 600px) {
+        .container {
+          margin: 10px;
+          padding: 10px;
+        }
+
+        th,
+        td {
+          padding: 5px;
+        }
+
+        button {
+          padding: 5px 10px;
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p>What are these parameters? Check the detailed description in the Documentation. If you need support, please write to <a href="mailto:aeneashdc@gmail.com">aeneashdc@gmail.com</a>.</p>
+      <table id="configTable"></table>
+      <button onclick="saveData()">Save Data</button>
+  </div>
+
+    <script>
+      const configData = {
+        target: {
+          DEVICE_TYPE: {
+            description: "Target Device or Board Type",
+            options: {
+              FPGA: 0,
+              MICROCONTROLER: 1,
+              SOFT_PROCESSOR: 2,
+            },
+            selected: "FPGA",
+          },
+          DEVICE_INFO: {
+            description: "Specific Target Device Information",
+            TARGET_DEVICE: "xczu9eg-ffvb1156-2-e",
+            TARGET_BOARD: {
+              options: {
+                AMD_ZYBO: 0,
+                AMD_ZEDBOARD: 1,
+                AMD_ZCU106: 2,
+                AMD_ZCU102: 3,
+                AMD_VCU108: 4,
+              },
+              selected: "AMD_ZCU102",
+            },
+          },
+          VIVADO: {
+            description: "Vivado Configuration",
+            OP_FREQ: 200,
+            USE_VIV_EN: 1,
+            VIV_OPT_METHOD: {
+              options: {
+                VIV_OPT_DEFAULT: 0,
+                VIV_OPT_RESOURCE: 1,
+                VIV_OPT_SPEED: 2,
+                VIV_OPT_PERFORMANCE: 3,
+              },
+              selected: "VIV_OPT_DEFAULT",
+            },
+          },
+        },
+        hw_interface: {
+          DATA_INTERFACE: {
+            description: "Data Interface Modes",
+            IN_DATA_MODE: {
+              options: {
+                DI_M_STREAM: 0,
+                DI_M_PARTIAL_PARALLEL: 1,
+                DI_M_PARALLEL: 2,
+              },
+              selected: "DI_M_STREAM",
+            },
+            AXI_CNTR_PORT_EN: 0,
+            PARALLELISM_FEATURES: 1,
+            PARALLELISM_CLASS: 1,
+            DI_PARALLEL_W_BITS: 64,
+            FRAME_SIZE_MIN: 64,
+            DI_QUANT_BITS: 6,
+            HD_DATA_W_BITS: 1,
+          },
+          BV_MODES: {
+            description: "Base Vector Modes and Configurations",
+            BV_MODE: {
+              options: {
+                BV_M_INT_MEM: 0,
+                BV_M_EXT: 1,
+                BV_M_PERMUTATION: 2,
+                BV_M_RND_GEN: 3,
+              },
+              selected: "BV_M_INT_MEM",
+            },
+            BV_DATA_W_BITS: 1,
+            BV_IN_DATA_W_BITS: 64,
+            BV_RND_GEN_W_BITS: 64,
+          },
+          LV_MODES: {
+            description: "Level Vector Modes and Configurations",
+            LV_MODE: {
+              options: {
+                LV_M_INT_MEM: 0,
+                LV_M_EXT: 1,
+                LV_M_LOGIC: 2,
+                LV_M_HDL_GEN: 3,
+              },
+              selected: "LV_M_INT_MEM",
+            },
+            LV_DATA_W_BITS: 1,
+            LV_IN_DATA_W_BITS: 64,
+            LV_M_APPROX_RND_GEN_W_BITS: 64,
+          },
+          CV_MODES: {
+            description: "Class Vector Modes and Configurations",
+            CV_MODE: {
+              options: {
+                CV_M_INT_MEM: 0,
+                CV_M_EXT: 1,
+                CV_M_HDL_GEN: 2,
+              },
+              selected: "CV_M_INT_MEM",
+            },
+            CV_DATA_W_BITS: 1,
+            CV_IN_DATA_W_BITS: 64,
+          },
+        },
+      }; // Your JSON data here
+
+      const aliases = {
+        DEVICE_TYPE: "Device Type",
+        DEVICE_INFO: "Device Information",
+        TARGET_DEVICE: "Target Device",
+        TARGET_BOARD: "Target Board",
+        VIVADO: "Vivado Configuration",
+        OP_FREQ: "Operating Frequency",
+        USE_VIV_EN: "Use Vivado",
+        VIV_OPT_METHOD: "Optimization Method",
+        DATA_INTERFACE: "Data Interface",
+        IN_DATA_MODE: "Input Data Mode",
+        AXI_CNTR_PORT_EN: "AXI Control Port Enable",
+        PARALLELISM_FEATURES: "Parallelism Features",
+        PARALLELISM_CLASS: "Parallelism Class",
+        DI_PARALLEL_W_BITS: "Data Interface Parallel Width in Bits",
+        FRAME_SIZE_MIN: "Minimum Frame Size",
+        DI_QUANT_BITS: "Data Interface Quantization Bits",
+        HD_DATA_W_BITS: "HD Data Width Bits",
+        BV_MODES: "Base Vector Modes",
+        LV_MODES: "Level Vector Modes",
+        CV_MODES: "Class Vector Modes"
+        // Add more as necessary
+      };
+
+      function generateTable(data, parentKey = '', isFirstCall = true) {
+          let tableHtml = "";
+
+          // Only add column headers on the first call to the function
+          if (isFirstCall) {
+              tableHtml += `<tr><td colspan="2" style="background-color: #eee; font-weight: bold;">Target Device or Board Type</td></tr>`;
+          }
+
+          for (const key in data) {
+              let value = data[key];
+              
+              // Check if the current key is 'description'
+              if (key === "description") {
+                  tableHtml += `<tr><td colspan="2" style="background-color: #eee; font-weight: bold;">${value}</td></tr>`;
+                  continue; // Continue to the next iteration to ensure the description is not skipped
+              }
+
+              const alias = aliases[key] || key;  // Use alias if available
+
+              if (typeof value === 'object' && !Array.isArray(value) && value.hasOwnProperty("options")) {
+                  // Construct a select dropdown for options
+                  tableHtml += `<tr><td>${alias}</td><td><select data-path="${parentKey ? `${parentKey}.${key}` : key}" onchange="updateValue(this)">`;
+                  for (const optionKey in value.options) {
+                      let optionAlias = aliases[optionKey] || optionKey;
+                      tableHtml += `<option value="${optionKey}" ${value.selected === optionKey ? "selected" : ""}>${optionAlias}</option>`;
+                  }
+                  tableHtml += `</select></td></tr>`;
+              } else if (typeof value === 'object') {
+                  // Recursively handle nested objects
+                  tableHtml += generateTable(value, parentKey ? `${parentKey}.${key}` : key, false);
+              } else {
+                  // Handle simple key-value pairs with input fields
+                  tableHtml += `<tr><td>${alias}</td><td><input type="text" data-path="${parentKey ? `${parentKey}.${key}` : key}" value="${value}" onblur="updateValue(this)" /></td></tr>`;
+              }
+          }
+          return tableHtml;
+      }
+
+
+function updateValue(element) {
+    const path = element.dataset.path.split(".");
+    let obj = configData;
+    for (let i = 0; i < path.length - 1; i++) {
+        obj = obj[path[i]];
+    }
+    if (element.tagName === 'SELECT') {
+        obj[path[path.length - 1]].selected = element.value;
+    } else {
+        obj[path[path.length - 1]] = element.value;
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById("configTable").innerHTML = generateTable(configData);
+});
+
+function saveData() {
+    console.log("Saving data:", JSON.stringify(configData, null, 2));
+    fetch("/save-config", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(configData),
+    })
+    .then((response) => response.json())
+    .then((data) => {
+        if (data.success) {
+            alert("Saved successfully!");
+        } else {
+            alert(data.message || "An error occurred while saving.");
+        }
+    })
+    .catch((error) => {
+        console.error("Error saving data:", error);
+        alert("An error occurred. Please try again.");
+    });
+}
+
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,86 @@
+.buttons-container {
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  right: 20px; /* Aumenta questo valore per spostare i pulsanti più a sinistra */
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+}
+
+#nextStep,
+#stopTutorial {
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  margin: 0 10px; /* Spazio adeguato tra i pulsanti */
+}
+
+#nextStep {
+  background-color: #0b56ce;
+}
+
+#stopTutorial {
+  background-color: #58658a;
+}
+#nextStep:hover,
+#stopTutorial:hover {
+  background-color: #367537;
+}
+
+.tutorial-tooltip {
+  font-size: 1.2rem; /* Larger font size for tutorial tooltips */
+}
+
+.tutorial-btn,
+.done-btn {
+  padding: 10px 10px;
+  background-color: #367537; /* Green */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: background-color 0.3s;
+  margin: 0 5px; /* Provides a little space between buttons */
+  z-index: 10;
+}
+
+.tutorial-btn:hover,
+.done-btn:hover {
+  background-color: #367537;
+}
+
+/* Stile per il pannello tutorial */
+.tutorial-panel {
+  position: fixed; /* Posizione fissa rispetto alla finestra del browser */
+  top: 62%; /* Posizione verticale al centro */
+  left: 50%; /* Posizione orizzontale al centro */
+  height: 20vw !important; /* Larghezza del 80% della larghezza della finestra */
+  width: 90vw !important; /* Larghezza del 80% della larghezza della finestra */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Centra il pannello rispetto al suo contenitore */
+  background-color: rgba(54, 54, 54, 0.200); /* Sfondo con opacità al 50% */
+  border: 2px solid #ccc; /* Bordo con colore grigio chiaro */
+  padding: 10px; /* Spaziatura interna */
+  box-shadow: 0 0 10px rgba(61, 141, 245, 0.1); /* Ombra */
+  z-index: 2; /* Indice di sovrapposizione */
+  text-align: center; /* Testo centrato */
+}
+.tutorial-panel h2 {
+  position: absolute;  /* Posizione assoluta rispetto al suo contenitore più vicino non statico */
+  bottom: -16px;        /* Distanza dal fondo del contenitore */
+  right: 20px;         /* Distanza dal lato destro del contenitore */
+  color: white;         /* Colore del testo bianco */
+  text-align: right;   /* Allineamento del testo a destra */
+
+  font-family: "Roboto", sans-serif; /* Font Roboto */
+  font-size: 48px; /* Dimensione del testo */
+  margin-top: 0; /* Rimuove il margine superiore predefinito */
+}

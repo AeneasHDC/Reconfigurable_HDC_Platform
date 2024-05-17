@@ -2,6 +2,7 @@ import os
 import subprocess
 import sys
 import webbrowser
+import time
 
 def find_anaconda_root():
     # Tries to find the Anaconda root directory from the system path.
@@ -11,7 +12,7 @@ def find_anaconda_root():
     return None
 
 def main():
-    anaconda_root = "C:/Users/disa/anaconda3/"#find_anaconda_root()
+    anaconda_root = "C:/Users/angio/anaconda3"#find_anaconda_root()
     if not anaconda_root:
         print("Anaconda installation not found.")
         sys.exit(1)
@@ -26,8 +27,6 @@ def main():
 
     # Run the cwp.py script to set up the Anaconda environment asynchronously
     subprocess.Popen([python_path, cwp_path, anaconda_root, python_path, jupyter_path, notebook_directory])
-    
-    
 
 if __name__ == "__main__":
     main()

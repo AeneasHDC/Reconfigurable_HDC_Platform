@@ -36,6 +36,23 @@
             z-index: 1;
         }
 
+        #learnModel {
+            display: none;
+            color: #fff;
+            padding: 20px;
+            min-height: 100vh;
+            text-align: center; /* Centers text */
+            font-family: Arial, sans-serif; /* Arial is widely available and readable */
+            font-size: 1.5rem; /* Adjust the font size as needed */
+        }
+
+        #learnModel img {
+            max-width: 80%;
+            height: auto;
+            margin: 0 auto; /* This centers the image */
+            display: block; /* Images are inline by default */
+        }
+
         .content-wrapper {
             z-index: 2;
             text-align: center;
@@ -155,6 +172,13 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.5);
             animation: slideDown 0.5s;
         }
+        .modal-content h2 {
+            font-family: 'Orbitron', sans-serif; /* Consistent with the site theme */
+            color: #0A1931; /* Dark blue, matches the gradient background */
+            font-size: 2rem; /* Large enough to be impactful */
+            text-align: center; /* Center the title for better focus */
+            margin-bottom: 20px; /* Spacing below the title */
+        }
         .modal-btn {
             padding: 12px 24px;
             margin: 10px;
@@ -187,19 +211,39 @@
         <div id="particles-js"></div>
         <div class="content-wrapper">
             <img src="../doc/img/logo/AeneasHDC.png" alt="Aeneas Logo" class="logo">
-            <h1 class="title">Aeneas HyperCompute Platform</h1>
-            <p class="description">Dive into the future of hyperdimensional computing with Aeneas.</p>
+            <h1 class="title">AeneasHDC Platform</h1>
+            <p class="description">The first automatic open-source environment for simple and fast deployment of Hyperdimensional Computing (HDC) learning models in software and hardware.</p>
             <button class="start-btn" onclick="redirectToJupyter()">Dive In!</button>
         </div>
     </div>
 
     <div id="choiceModal" class="modal">
         <div class="modal-content">
-            <h2>Choose Your Path</h2>
-            <button id="startBtn" class="modal-btn">Getting Started</button>
-            <button id="testBtn" class="modal-btn">Test Benches</button>
+            <h2>Explore AeneasHDC</h2>
+            <button id="learnBtn" class="modal-btn">Learn to Use the Model</button>
+            <button id="newProjectBtn" class="modal-btn">Start a New Project</button>
+            <button id="openProjectBtn" class="modal-btn">Open an Existing Project</button>
+            <button id="testBenchBtn" class="modal-btn">Test Benches</button>
         </div>
     </div>
+
+    <div id="learnModel">
+        <p>
+            AeneasHDC is the first open-source framework in the literature that allows the automatic generation of hardware accelerators for HDC learning problems.
+            The environment is extremely customizable, supporting a wide range of the most common techniques adopted in the literature for learning models, enabling users to easily assess the impact of different design choices on model accuracy, memory usage, execution time, energy consumption, and area requirements. 
+        </p>
+        <img src="diagram.png" alt="AeneasHDC Workflow" style="max-width:100%;height:auto;">
+        <p>
+            An intuitive Graphic User Interface (GUI) allows specifying the problem characteristics, including dataset details, the number of features and classes, the desired programming language, and the target FPGA. An interactive mechanism lets the user decide how to distribute the workload between the software and the hardware implementations. The hardware can be generated to accelerate the entire classification process (train, inference, retrain) or just some tasks, deciding, for example, to execute the train and retrain in software and instantiate only the hardware for the inference, as commonly done for embedded applications. 
+            The system automatically generates all the configuration files required by the following entities and instantiates the model in software and hardware. From the software side, the model can be produced in Python, Matlab or C++, thanks to the versatile AeneasHDC library. The model is executed, and the results in terms of accuracy and confusion matrix are collected. Additionally, the data required for inference are extracted and passed to the hardware model.
+            The hardware architecture is generated using the Xilinx High-Level Synthesis (HLS) tool, Vitis and it is then synthesized, simulated and tested using the Vivado 2023. The data about energy consumption, execution time and resource allocation are collected from the design.
+            All the results accumulated from the software and the hardware implementations are finally relayed to a dedicated report-generation module that compiles a comprehensive HTML-based summary, encapsulating all the information from the run simulations. The summary includes details of the model configuration, dataset specifications, chosen programming language, target hardware platform, and key performance metrics such as execution time, memory usage, energy consumption, and resource utilization. This report is stored locally and can be readily accessible through the user-friendly GUI, which organizes all conducted tests and allows to review and compare different runs.
+            The entire described process is engineered to be fully automated, abstracting complex or time-consuming tasks associated with coding models or designing custom hardware architectures. The GUI is an efficient singular point of control that enables users to manage the model at every stage. However, AeneasHDC is completely open-source, and makes accessible all its libraries and scripts. Extensive documentation is provided, covering the basic usage of the model, the theoretical concepts behind parameter selections, and detailed insights into the underlying code and library functions.
+            AeneasHDC is in constant evolution, aiming to catch up all the innovations in the literature and provide a model always updated to the user. Feel free to collaborate with us!!
+        </p>
+        <!-- The rest of your text can continue in <p> tags. -->
+    </div>
+    
     
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
@@ -234,19 +278,36 @@ function redirectToJupyter() {
     var modal = document.getElementById('choiceModal');
     modal.style.display = 'block';
 
-    var startBtn = document.getElementById('startBtn');
-    var testBtn = document.getElementById('testBtn');
+    var learnBtn        = document.getElementById('learnBtn');
+    var newProjectBtn   = document.getElementById('newProjectBtn');
+    var openProjectBtn  = document.getElementById('openProjectBtn');
+    var testBenchBtn    = document.getElementById('testBenchBtn');
 
-    startBtn.onclick = function() {
+    newProjectBtn.onclick = function() {
         modal.style.display = 'none';
         redirectWithProgress("http://localhost:8888/notebooks/notebook.ipynb");
     }
 
-    testBtn.onclick = function() {
+    testBenchBtn.onclick = function() {
         modal.style.display = 'none';
         redirectWithProgress("http://localhost:8888/notebooks/test_notebook.ipynb");
     }
+
 }
+
+function showModal() {
+    document.getElementById('choiceModal').style.display = 'block';
+}
+
+function hideModal() {
+    document.getElementById('choiceModal').style.display = 'none';
+}
+
+document.getElementById('learnBtn').onclick = function() {
+    hideModal();
+    document.getElementById('learnModel').style.display = 'block';
+    document.getElementById('learnModel').scrollIntoView({ behavior: 'smooth' });
+};
 
 function redirectWithProgress(url) {
     var redirectDelay = 4000; // 4 seconds
@@ -276,8 +337,6 @@ function redirectWithProgress(url) {
         window.location.href = url; 
     }, redirectDelay);
 }
-
-
 
 </script>
 </body>

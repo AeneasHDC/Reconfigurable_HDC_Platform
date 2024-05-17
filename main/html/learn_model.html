@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aeneas HyperCompute Platform</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/scheme2.css">
+    <link rel="stylesheet" href="../css/tutorial.css">
+    
+    <style>
+    
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: "Orbitron", sans-serif;
+        overflow: hidden;
+
+        background: radial-gradient(circle at center, #0a1931, #161616);
+      }
+
+      #learnModel {
+
+        color: #fff;
+        padding: 20px;
+        min-height: 100vh;
+        text-align: center; /* Centers text */
+        font-family: "Orbitron", sans-serif; /* Arial is widely available and readable */
+        font-size: 2rem; /* Adjust the font size as needed */
+      }
+      .content-wrapper-3 {
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.6rem;
+        color: #fff;
+        text-align: justify;
+        width: 90%;
+        padding: 20px;
+        margin: 0 auto; /* Center the wrapper on the page horizontally */
+        box-sizing: border-box; /* Include padding in the width */
+        position: relative; /* For vertical centering if needed */
+        top: 40%; /* Move down by half of the viewport height */
+        transform: translateY(-50%); /* Shift up by half of its own height */
+        max-width: 1600px; /* Optional: set a max-width for larger screens */
+        }
+    </style>
+
+  </head>
+
+
+    <div id="particles-js"></div>
+    <div class="content-wrapper-3">
+      <h1 class="title">AeneasHDC FAQ:</h1>
+        <span style="color: #ffff00cc">What is AeneasHDC?</span> AeneasHDC is the first automatic open-source framework in the literature to facilitate the generation of flexible hardware accelerators for hyperdimensional computing (HDC) learning problems.
+        The environment is extremely customizable, supporting a wide range of the most common techniques adopted in the literature for learning models, enabling users to easily assess the impact of
+        different design choices on model accuracy, memory usage, execution time, energy consumption, and area requirements.
+          <br><br>
+          <span style="color: #ffff00cc">What is the purpose of AeneasHDC?</span> The main goal of AeneasHDC is to provide a complete and automatic environment to generate <b>flexible</b>hardware accelerators for HDC learning problems,
+          allowing the user to easily explor the impact of different design choices on model performance as well as hardware requirements.
+          <br><br>
+          <span style="color: #ffff00cc">How to use AeneasHDC?</span> The intuitive AeneasHDC's GUI allows users to define the specifics
+          of the problem, such as dataset characteristics, the desired programming language, the target FPGA
+          device and the model details. It also allows to distribute tasks between
+          software and hardware implementations, allowing for flexible
+          customization of the hardware accelerator. The desired model is automatically instantiated and evaluated both in software and hardware and 
+          all the report data are made available in PDF. From the home page, click on the
+          <i>"Configure Your Model"</i> button to open the configuration page, and adjust your model's parameters.
+          <br><br>
+          <span style="color: #ffff00cc">Can I use the environment without GUI?</span> Sure, all the software and hardware libraries of AeneasHDC are 
+          open-source and completely free. You can just import the required class and use the model how u prefer. You can find all the infos in the AeneasHDC PDF manual.
+          <br><br>
+          <span style="color: #ffff00cc">I dont know how to use AeneasHDC</span> You can find a complete tutorial in the tutorial section of the platform. Additionally, 
+            you can find the detailed how-to-use manual on GitHub. For any other question, you can contact the support team.
+          <br><br>
+          <span style="color: #ffff00cc">I can not find the desired learning task or technique in AeneasHDC</span> The AeneasHDC environment is always in evolution and we are constantly adding new models and techniques.
+           However, the model is open-source, so you can easily extend the software and hardware libraries to include the desired model. You can find the detailed how-to-use manual on GitHub.
+           We always encourage community collaboration to enhance and evolve the framework over time. If you have any questions or need help, please contact the support team.
+      </p>
+  </div>
+
+
+      </div>
+
+    </div>
+
+    
+
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+      particlesJS("particles-js", {
+        particles: {
+          number: { value: 100, density: { enable: true, value_area: 800 } },
+          color: { value: "#a0a0a0" },
+          shape: { type: "circle", stroke: { width: 0, color: "#000000" } },
+          opacity: { value: 0.5, random: true },
+          size: { value: 4, random: true },
+          line_linked: {
+            enable: true,
+            distance: 100,
+            color: "#a0a0a0",
+            opacity: 0.2,
+            width: 1.5,
+          },
+          move: { enable: true, speed: 4, bounce: true },
+        },
+      });
+
+      function animateText() {
+        const logo = document.querySelector(".logo");
+        logo.style.opacity = "1";
+        logo.style.transform = "translateY(0)";
+
+        const desc = document.querySelector(".description");
+        desc.style.opacity = "0.8";
+        desc.style.transform = "translateY(0)";
+      }
+
+      //
+    </script>
+  </body>
+</html>

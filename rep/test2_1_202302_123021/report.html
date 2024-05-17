@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report</title>
+
+    <!-- Google Font: Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- DataTables CSS and JS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+    <link rel="stylesheet" href="./../../main/web/rep_template/styles_sub.css">
+    <script src="./../../main/web/rep_template/scripts.js" defer></script>
+
+</head>
+
+<body>
+
+    <!-- Tets summary Section -->
+    <div class="section">
+        <h3>Test summary</h3>
+        <p>test for</p>
+    </div>
+
+    <!-- General Information Section -->
+    <div class="section">
+        <h3 onclick="toggleContent(this, 'generalInfo')" class="active"> General Information
+            <div class="help-container">
+                <a href="help.html/#report_generalInfo" target="_blank" title="Click for help">
+                    <!-- Info SVG Icon -->
+                    <svg width="16" height="16" fill="white" viewBox="0 0 16 16">
+                        <circle cx="8" cy="8" r="7" stroke="white" stroke-width="2" fill="none"></circle>
+                        <path d="M7.5 4H8.5V5H7.5z" fill="white"></path>
+                        <path d="M7.5 7H8.5V12H7.5z" fill="white"></path>
+                    </svg>
+                </a>
+                <!-- Tooltip content -->
+                <span class="help-tooltip"> <!-- Tooltip_generalInfo --> </span>
+            </div>
+        </h3>
+        <div id="generalInfo" class="content info active">
+            <p><span class="info-title">Name:</span>: ./rep/test2</p>
+            <p><span class="info-title">ID:</span>:   1</p>
+            <p><span class="info-title">Date:</span>: /02/2023</p>
+            <p><span class="info-title">Time:</span>: 12:30:21</p>
+        </div>
+    </div>
+
+    <!-- Input Configuration Section -->
+    <div class="section">
+        <h3 onclick="toggleContent(this, 'configInfo')" class="active">Input Configuration
+            <div class="help-container">
+                <a href="help.html/#report_configInfo" target="_blank" title="Click for help">
+                    <!-- Info SVG Icon -->
+                    <svg width="16" height="16" fill="white" viewBox="0 0 16 16">
+                        <circle cx="8" cy="8" r="7" stroke="white" stroke-width="2" fill="none"></circle>
+                        <path d="M7.5 4H8.5V5H7.5z" fill="white"></path>
+                        <path d="M7.5 7H8.5V12H7.5z" fill="white"></path>
+                    </svg>
+                </a>
+                <!-- Tooltip content -->
+                <span class="help-tooltip"> <!-- Tooltip_configInfo --> </span>
+            </div>
+        </h3>
+        <div id="configInfo" class="content active">
+            <table id="configTable">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Parameter</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                                <td>general</td>
+                                <td>VERBOS</td>
+                                <td>VERBOS_L1</td>
+                            </tr><tr>
+                                <td>general</td>
+                                <td>OS</td>
+                                <td>WINDOWS</td>
+                            </tr><tr>
+                                <td>target</td>
+                                <td>DEVICE_TYPE</td>
+                                <td>FPGA</td>
+                            </tr><tr>
+                                <td>target</td>
+                                <td>TARGET_DEVICE</td>
+                                <td>xczu9eg-ffvb1156-2-e</td>
+                            </tr><tr>
+                                <td>target</td>
+                                <td>TARGET_BOARD</td>
+                                <td>AMD_ZCU102</td>
+                            </tr><tr>
+                                <td>target</td>
+                                <td>OP_FREQ</td>
+                                <td>200</td>
+                            </tr><tr>
+                                <td>target</td>
+                                <td>USE_VIV_EN</td>
+                                <td>1</td>
+                            </tr><tr>
+                                <td>target</td>
+                                <td>VIV_OPT_METHOD</td>
+                                <td>VIV_OPT_DEFAULT</td>
+                            </tr><tr>
+                                <td>languages</td>
+                                <td>HDL_LANG</td>
+                                <td>HLS</td>
+                            </tr><tr>
+                                <td>languages</td>
+                                <td>MODEL_LANG</td>
+                                <td>PYTHON</td>
+                            </tr><tr>
+                                <td>dataset</td>
+                                <td>DS_NAME</td>
+                                <td>CARDIO</td>
+                            </tr><tr>
+                                <td>dataset</td>
+                                <td>DS_SIZE</td>
+                                <td>2126</td>
+                            </tr><tr>
+                                <td>dataset</td>
+                                <td>DS_TRAIN_SIZE</td>
+                                <td>1594</td>
+                            </tr><tr>
+                                <td>dataset</td>
+                                <td>DS_TEST_SIZE</td>
+                                <td>532</td>
+                            </tr><tr>
+                                <td>dataset</td>
+                                <td>DS_FEATURE_SIZE</td>
+                                <td>21</td>
+                            </tr><tr>
+                                <td>dataset</td>
+                                <td>DS_DATA_TYPE</td>
+                                <td>FP</td>
+                            </tr><tr>
+                                <td>dataset</td>
+                                <td>DS_DATA_RAGE_MIN</td>
+                                <td>0</td>
+                            </tr><tr>
+                                <td>dataset</td>
+                                <td>DS_DATA_RAGE_MAX</td>
+                                <td>1</td>
+                            </tr><tr>
+                                <td>dataset</td>
+                                <td>DS_CLASSES_SIZE</td>
+                                <td>3</td>
+                            </tr><tr>
+                                <td>train</td>
+                                <td>TRAIN_ON_HW</td>
+                                <td>0</td>
+                            </tr><tr>
+                                <td>train</td>
+                                <td>EPOCH</td>
+                                <td>1</td>
+                            </tr><tr>
+                                <td>HDC</td>
+                                <td>HD_DIM</td>
+                                <td>1000</td>
+                            </tr><tr>
+                                <td>HDC</td>
+                                <td>HD_DATA_TYPE</td>
+                                <td>BIPOLAR</td>
+                            </tr><tr>
+                                <td>HDC</td>
+                                <td>HD_SIMI_METHOD</td>
+                                <td>SIMI_COS</td>
+                            </tr><tr>
+                                <td>HDC</td>
+                                <td>APPROX_SQRT_ON_HW</td>
+                                <td>0</td>
+                            </tr><tr>
+                                <td>HDC</td>
+                                <td>APPROX_SQRT_ON_MODEL</td>
+                                <td>0</td>
+                            </tr><tr>
+                                <td>HDC</td>
+                                <td>HD_SIMI_W_BITS</td>
+                                <td>32</td>
+                            </tr><tr>
+                                <td>HDC</td>
+                                <td>HD_LV_TYPE</td>
+                                <td>LINEAR</td>
+                            </tr><tr>
+                                <td>HDC</td>
+                                <td>HD_LV_LEN</td>
+                                <td>30</td>
+                            </tr><tr>
+                                <td>hw_interface</td>
+                                <td>IN_DATA_MODE</td>
+                                <td>DI_M_STREAM</td>
+                            </tr><tr>
+                                <td>hw_interface</td>
+                                <td>DI_PARALLEL_W_BITS</td>
+                                <td>100</td>
+                            </tr><tr>
+                                <td>hw_interface</td>
+                                <td>DI_QUANT_BITS</td>
+                                <td>6</td>
+                            </tr><tr>
+                                <td>hw_interface</td>
+                                <td>HD_DATA_W_BITS</td>
+                                <td>1</td>
+                            </tr><tr>
+                                <td>hw_interface</td>
+                                <td>BV_MODE</td>
+                                <td>BV_M_INT_MEM</td>
+                            </tr><tr>
+                                <td>hw_interface</td>
+                                <td>BV_DATA_W_BITS</td>
+                                <td>1</td>
+                            </tr><tr>
+                                <td>hw_interface</td>
+                                <td>BV_IN_DATA_W_BITS</td>
+                                <td>100</td>
+                            </tr><tr>
+                                <td>hw_interface</td>
+                                <td>BV_RND_GEN_W_BITS</td>
+                                <td>50</td>
+                            </tr><tr>
+                                <td>hw_interface</td>
+                                <td>LV_MODE</td>
+                                <td>LV_M_INT_MEM</td>
+                            </tr><tr>
+                                <td>hw_interface</td>
+                                <td>LV_DATA_W_BITS</td>
+                                <td>1</td>
+                            </tr><tr>
+                                <td>hw_interface</td>
+                                <td>LV_IN_DATA_W_BITS</td>
+                                <td>100</td>
+                            </tr><tr>
+                                <td>hw_interface</td>
+                                <td>LV_M_APPROX_RND_GEN_W_BITS</td>
+                                <td>20</td>
+                            </tr><tr>
+                                <td>hw_interface</td>
+                                <td>CV_MODE</td>
+                                <td>CV_M_INT_MEM</td>
+                            </tr><tr>
+                                <td>hw_interface</td>
+                                <td>CV_DATA_W_BITS</td>
+                                <td>1</td>
+                            </tr><tr>
+                                <td>hw_interface</td>
+                                <td>CV_IN_DATA_W_BITS</td>
+                                <td>100</td>
+                            </tr><tr>
+                                <td>INTERFACE_DETAILS</td>
+                                <td>DI_FEATUREID_W_BITS</td>
+                                <td>10</td>
+                            </tr><tr>
+                                <td>INTERFACE_DETAILS</td>
+                                <td>DI_FRAMEID_W_BITS</td>
+                                <td>10</td>
+                            </tr><tr>
+                                <td>INTERFACE_DETAILS</td>
+                                <td>DO_CLASS_W_BITS</td>
+                                <td>5</td>
+                            </tr><tr>
+                                <td>INTERFACE_DETAILS</td>
+                                <td>DO_STATUS_W_BITS</td>
+                                <td>5</td>
+                            </tr><tr>
+                                <td>HD_ENCODING</td>
+                                <td>HD_MODE</td>
+                                <td>DENSE</td>
+                            </tr><tr>
+                                <td>HD_ENCODING</td>
+                                <td>SPARSITY_FACTOR_X10</td>
+                                <td>5</td>
+                            </tr><tr>
+                                <td>HD_ENCODING</td>
+                                <td>ENCODING_TECHNIQUE</td>
+                                <td>ENCODING_RECORD</td>
+                            </tr><tr>
+                                <td>HD_ENCODING</td>
+                                <td>N_GRAM_SIZE</td>
+                                <td>4</td>
+                            </tr><tr>
+                                <td>CLIPPING</td>
+                                <td>CLIPPING_ENCODING</td>
+                                <td>CLIPPING_BINARY</td>
+                            </tr><tr>
+                                <td>CLIPPING</td>
+                                <td>CLIPPING_CLASS</td>
+                                <td>CLIPPING_BINARY</td>
+                            </tr><tr>
+                                <td>CLIPPING</td>
+                                <td>CLIPPING_BINARY_METHOD_FOR_VALUE_EQ_HALF_HD_DIM</td>
+                                <td>CLIPPING_BINARY_FOR_VALUE_EQ_HALF_HD_DIM_SET_ZERO</td>
+                            </tr><tr>
+                                <td>CLIPPING</td>
+                                <td>N_GRAM</td>
+                                <td>0</td>
+                            </tr><tr>
+                                <td>CLIPPING</td>
+                                <td>N_GRAM_SIZE</td>
+                                <td>4</td>
+                            </tr><tr>
+                                <td>LEARNING_RATE</td>
+                                <td>LR_DECAY</td>
+                                <td>LR_HYBRID</td>
+                            </tr><tr>
+                                <td>LEARNING_RATE</td>
+                                <td>MAX_LEARNING_RATE</td>
+                                <td>15</td>
+                            </tr><tr>
+                                <td>LEARNING_RATE</td>
+                                <td>BETA_LR</td>
+                                <td>3</td>
+                            </tr><tr>
+                                <td>LEARNING_RATE</td>
+                                <td>RETRAIN</td>
+                                <td>0</td>
+                            </tr><tr>
+                                <td>TOOLS</td>
+                                <td>VITIS_HLS_XILINX_PATH</td>
+                                <td>D:/Xilinx/Vitis_HLS/2023.1/bin/vitis_hls.bat</td>
+                            </tr><tr>
+                                <td>TOOLS</td>
+                                <td>VIVADO_XILINX_PATH</td>
+                                <td>D:/Xilinx/Vivado/2023.1/bin/vivado.bat</td>
+                            </tr><tr>
+                                <td>TOOLS</td>
+                                <td>VITIS_XILINX_PATH</td>
+                                <td>D:/Xilinx/Vitis/2023.1/bin/vitis.bat</td>
+                            </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Dataset Information Section -->
+    <div class="section">
+        <h3 onclick="toggleContent(this, 'datasetInfo')" class="active">Dataset Information
+            <div class="help-container">
+                <a href="help.html/#report_datasetInfo" target="_blank" title="Click for help">
+                    <!-- Info SVG Icon -->
+                    <svg width="16" height="16" fill="white" viewBox="0 0 16 16">
+                        <circle cx="8" cy="8" r="7" stroke="white" stroke-width="2" fill="none"></circle>
+                        <path d="M7.5 4H8.5V5H7.5z" fill="white"></path>
+                        <path d="M7.5 7H8.5V12H7.5z" fill="white"></path>
+                    </svg>
+                </a>
+                <!-- Tooltip content -->
+                <span class="help-tooltip">  <!-- Tooltip_datasetInfo --> </span>
+            </div>
+        </h3>
+        <div id="datasetInfo" class="content info active">
+            <table>
+                <tr>
+                    <td class="info-title">Dataset Name</td>
+                    <td><a href="#" id="dataset_link">CARDIO</a></td>
+                </tr>
+                <tr>
+                    <td class="info-title">Description</td>
+                    <td>The dataset consists of measurements of fetal heart rate (FHR) and uterine contraction (UC) features on cardiotocograms classified by expert obstetricians.</td>
+                </tr>
+                <tr>
+                    <td class="info-title">Total Data Size</td>
+                    <td>2126</td>
+                </tr>
+                <tr>
+                    <td class="info-title">Training Data Size</td>
+                    <td>1594</td>
+                </tr>
+                <tr>
+                    <td class="info-title">Testing Data Size</td>
+                    <td>529</td>
+                </tr>
+                <tr>
+                    <td class="info-title">Feature Size</td>
+                    <td>21</td>
+                </tr>
+                <tr>
+                    <td class="info-title">Data Type</td>
+                    <td>FP</td>
+                </tr>
+                <tr>
+                    <td class="info-title">Data Range</td>
+                    <td>{'min': 0, 'max': 1}</td>
+                </tr>
+                <tr>
+                    <td class="info-title">Class Size</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td class="info-title">Source</td>
+                    <td>UCI Machine Learning Repository</td>
+                </tr>
+                <tr>
+                    <td class="info-title">Date Collected</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td class="info-title">Date Published</td>
+                    <td>9/6/2010</td>
+                </tr>
+                <tr>
+                    <td class="info-title">Created By</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td class="info-title">Paper Citation</td>
+                    <td>-</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+    <!-- Feature Extraction Data Section -->
+    <div class="section">
+        <h3 onclick="toggleContent(this, 'featureExtractionInfo')" class="active">Feature Extraction Data
+            <div class="help-container">
+                <a href="help.html/#report_featureExtractionInfo" target="_blank" title="Click for help">
+                    <!-- Info SVG Icon -->
+                    <svg width="16" height="16" fill="white" viewBox="0 0 16 16">
+                        <circle cx="8" cy="8" r="7" stroke="white" stroke-width="2" fill="none"></circle>
+                        <path d="M7.5 4H8.5V5H7.5z" fill="white"></path>
+                        <path d="M7.5 7H8.5V12H7.5z" fill="white"></path>
+                    </svg>
+                </a>
+                <!-- Tooltip content -->
+                <span class="help-tooltip">  <!-- Tooltip_featureExtractionInfo --> </span>
+            </div>
+        </h3>
+        <div id="featureExtractionInfo" class="content info active">
+            
+            <!-- Matrix Similarity Base Vectors -->
+            <h4 onclick="toggleContent(this, 'baseVectors')">Matrix Similarity Base Vectors</h4>
+            <div id="baseVectors" class="content-subsection active">
+                <img src="./extracted_params/CARDIO/out_features/BaseHVs_plot.png" alt="Matrix Similarity Base Vectors" class="matrix-img">
+                
+                <!-- Base Vector Changes Table -->
+                <h5>Base Vector Changes</h5>
+                <table>
+                    <tr>
+                        <th>Index</th>
+                        <th>Number of Changes</th>
+                    </tr>
+                    <tr><td>1</td><td>Element Changes</td></tr><tr><td>2</td><td>502</td></tr><tr><td>3</td><td>500</td></tr><tr><td>4</td><td>532</td></tr><tr><td>5</td><td>494</td></tr><tr><td>6</td><td>498</td></tr><tr><td>7</td><td>482</td></tr><tr><td>8</td><td>514</td></tr><tr><td>9</td><td>502</td></tr><tr><td>10</td><td>526</td></tr><tr><td>11</td><td>530</td></tr><tr><td>12</td><td>504</td></tr><tr><td>13</td><td>492</td></tr><tr><td>14</td><td>516</td></tr><tr><td>15</td><td>512</td></tr><tr><td>16</td><td>502</td></tr><tr><td>17</td><td>510</td></tr><tr><td>18</td><td>500</td></tr><tr><td>19</td><td>490</td></tr><tr><td>20</td><td>488</td></tr><tr><td>21</td><td>504</td></tr>
+                </table>
+            </div>
+    
+            <!-- Matrix Similarity Level Vectors -->
+            <h4 onclick="toggleContent(this, 'levelVectors')">Matrix Similarity Level Vectors</h4>
+            <div id="levelVectors" class="content-subsection active">
+                <img src="./extracted_params/CARDIO/out_features/LevelHVs_plot.png" alt="Matrix Similarity Level Vectors" class="matrix-img">
+    
+                <!-- Level Vector Changes Table -->
+                <h5>Level Vector Changes</h5>
+                <table>
+                    <tr>
+                        <th>Index</th>
+                        <th>Number of Changes</th>
+                    </tr>
+                    <tr><td>1</td><td>Element Changes</td></tr><tr><td>2</td><td>16</td></tr><tr><td>3</td><td>16</td></tr><tr><td>4</td><td>16</td></tr><tr><td>5</td><td>16</td></tr><tr><td>6</td><td>16</td></tr><tr><td>7</td><td>16</td></tr><tr><td>8</td><td>16</td></tr><tr><td>9</td><td>16</td></tr><tr><td>10</td><td>16</td></tr><tr><td>11</td><td>16</td></tr><tr><td>12</td><td>16</td></tr><tr><td>13</td><td>16</td></tr><tr><td>14</td><td>16</td></tr><tr><td>15</td><td>16</td></tr><tr><td>16</td><td>16</td></tr><tr><td>17</td><td>16</td></tr><tr><td>18</td><td>16</td></tr><tr><td>19</td><td>16</td></tr><tr><td>20</td><td>16</td></tr><tr><td>21</td><td>16</td></tr><tr><td>22</td><td>16</td></tr><tr><td>23</td><td>16</td></tr><tr><td>24</td><td>16</td></tr><tr><td>25</td><td>16</td></tr><tr><td>26</td><td>16</td></tr><tr><td>27</td><td>16</td></tr><tr><td>28</td><td>16</td></tr><tr><td>29</td><td>16</td></tr><tr><td>30</td><td>16</td></tr>
+                </table>
+            </div>
+            
+            <!-- Class Vector (assuming you want a similar structure, but without example data I'm leaving it simple) -->
+            <h4 onclick="toggleContent(this, 'classVectors')">Class Vector</h4>
+            <div id="classVectors" class="content-subsection active">
+                <!-- Content for Class Vector goes here -->
+            </div>
+    
+        </div>
+    </div>
+
+
+
+    <!-- Evaluation Metrics of the Model Section -->
+    <div class="section">
+        <h3 onclick="toggleContent(this, 'evaluationMetricsInfo')" class="active">Evaluation Metrics
+            <div class="help-container">
+                <a href="help.html/#report_evaluationMetricsInfo" target="_blank" title="Click for help">
+                    <!-- Info SVG Icon -->
+                    <svg width="16" height="16" fill="white" viewBox="0 0 16 16">
+                        <circle cx="8" cy="8" r="7" stroke="white" stroke-width="2" fill="none"></circle>
+                        <path d="M7.5 4H8.5V5H7.5z" fill="white"></path>
+                        <path d="M7.5 7H8.5V12H7.5z" fill="white"></path>
+                    </svg>
+                </a>
+                <!-- Tooltip content -->
+                <span class="help-tooltip">  <!-- Tooltip_evaluationMetricsInfo --> </span>
+            </div>
+        </h3>
+        <div id="evaluationMetricsInfo" class="content info active">
+
+            <!-- Model Evaluation -->
+            <h4 onclick="toggleContent(this, 'modelEvaluation')">Model Evaluation</h4>
+            <div id="modelEvaluation" class="content-subsection active">
+                <h5>Confusion Matrix</h5>
+                <img src="./model_eva/CARDIO/confusion_matrix.png" alt="Model Confusion Matrix" class="matrix-img">
+
+                <!-- Model Metrics -->
+                <h5>Metrics</h5>
+                <table>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Value</th>
+                    </tr>
+                    <tr>
+                        <td>Accuracy</td>
+                        <td id="AccuracyValue">0.7406015037593985</td>
+                    </tr>
+                    <tr>
+                        <td>Precision</td>
+                        <td id="PrecisionValue">0.6067790280683835</td>
+                    </tr>
+                    <tr>
+                        <td>Recall</td>
+                        <td id="RecallValue">0.7193360433604337</td>
+                    </tr>
+                    <tr>
+                        <td>F1 Score</td>
+                        <td id="F1ScoreValue">0.633513876890972</td>
+                    </tr>
+                    <tr>
+                        <td>ROC auc</td>
+                        <td id="ROC_auc">0.7941694703640784</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- HLS (Hardware Implementation) Evaluation -->
+            <h4 onclick="toggleContent(this, 'hlsEvaluation')">Hardware Implementation Evaluation</h4>
+            <div id="hlsEvaluation" class="content-subsection active">
+                <h5>Confusion Matrix</h5>
+                <img src="./hls/confusion_matrix.png" alt="HLS Confusion Matrix" class="matrix-img">
+                
+                <!-- HLS Metrics -->
+                <h5>Metrics</h5>
+                <table>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Value</th>
+                    </tr>
+                    <tr>
+                        <td>Accuracy</td>
+                        <td id="hdlAccuracyValue"><!-- __HDL_EVAL_ACCURACY__ --></td>
+                    </tr>
+                    <tr>
+                        <td>Precision</td>
+                        <td id="hdlPrecisionValue"><!-- __HDL_EVAL_PRECISION__ --></td>
+                    </tr>
+                    <tr>
+                        <td>Recall</td>
+                        <td id="hdlRecallValue"><!-- __HDL_EVAL_RECALL__ --></td>
+                    </tr>
+                    <tr>
+                        <td>F1 Score</td>
+                        <td id="hdlF1ScoreValue"><!-- __HDL_EVAL_F1SCORE__ --></td>
+                    </tr>
+                    <tr>
+                        <td>ROC auc</td>
+                        <td id="hdlF1ScoreValue"><!-- __HDL_EVAL_ROC_AUC__ --></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resource Usage Section -->
+    <div class="section">
+        <h3 onclick="toggleContent(this, 'resourceUsageInfo')" class="active">Resource Usage
+            <div class="help-container">
+                <a href="help.html/#report_resourceUsageInfo" target="_blank" title="Click for help">
+                    <!-- Info SVG Icon -->
+                    <svg width="16" height="16" fill="white" viewBox="0 0 16 16">
+                        <circle cx="8" cy="8" r="7" stroke="white" stroke-width="2" fill="none"></circle>
+                        <path d="M7.5 4H8.5V5H7.5z" fill="white"></path>
+                        <path d="M7.5 7H8.5V12H7.5z" fill="white"></path>
+                    </svg>
+                </a>
+                <!-- Tooltip content -->
+                <span class="help-tooltip">  <!-- Tooltip_resourceUsageInfo --> </span>
+            </div>
+        </h3>
+        <div id="resourceUsageInfo" class="content active">
+            <h4>Site Resource Usage estimated by  </h4>
+            
+            
+        </div>
+    </div>
+
+    <!-- Timing Report Section -->
+    <div class="section">
+        <h3 onclick="toggleContent(this, 'timingReportInfo')" class="active">Timing Report (For One Classification Execution)
+            <div class="help-container">
+                <a href="help.html/#report_timingReportInfo" target="_blank" title="Click for help">
+                    <!-- Info SVG Icon -->
+                    <svg width="16" height="16" fill="white" viewBox="0 0 16 16">
+                        <circle cx="8" cy="8" r="7" stroke="white" stroke-width="2" fill="none"></circle>
+                        <path d="M7.5 4H8.5V5H7.5z" fill="white"></path>
+                        <path d="M7.5 7H8.5V12H7.5z" fill="white"></path>
+                    </svg>
+                </a>
+                <!-- Tooltip content -->
+                <span class="help-tooltip">  <!-- Tooltip_timingReportInfo --> </span>
+            </div>
+        </h3>
+        <div id="timingReportInfo" class="content active">
+            <!-- Your timing report content will be here. You can present it in any preferred format, like tables or descriptive paragraphs. -->
+            <p><!-- __HDL_TIME_REPORT__ --></p>
+        </div>
+    </div>
+
+    <!-- Power Consumption Section -->
+    <div class="section">
+        <h3 onclick="toggleContent(this, 'powerConsumptionInfo')" class="active">Power Consumption
+            <div class="help-container">
+                <a href="help.html/#report_powerConsumptionInfo" target="_blank" title="Click for help">
+                    <!-- Info SVG Icon -->
+                    <svg width="16" height="16" fill="white" viewBox="0 0 16 16">
+                        <circle cx="8" cy="8" r="7" stroke="white" stroke-width="2" fill="none"></circle>
+                        <path d="M7.5 4H8.5V5H7.5z" fill="white"></path>
+                        <path d="M7.5 7H8.5V12H7.5z" fill="white"></path>
+                    </svg>
+                </a>
+                <!-- Tooltip content -->
+                <span class="help-tooltip">  <!-- Tooltip_powerConsumptionInfo --> </span>
+            </div></h3>
+        <div id="powerConsumptionInfo" class="content active">
+            <h4>Static Power Consumption</h4>
+            <p><!-- __HDL_POWER_STATIC__ --></p>
+            <h4>Dynamic Power Consumption</h4>
+            <p><!-- __HDL_POWER_DYN__ --></p>
+            <div id="resourceUsageInfo" class="content active">
+                <h4>Site Resource Usage estimated by <!-- __HDL_SYNTHESIS_TOOL_FOR_REPORT_RESOURCE__ --> </h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Site Type</th>
+                            <th>Power usage(W)</th>
+                            <th>Power usage(%)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Clocks</td>
+                            <td><!-- __POWER_DYN_CLOCK_USAGE__ --></td>
+                            <td><!-- __POWER_DYN_CLOCK_USAGE_PERCENT__ --></td>
+                        </tr>
+                        <tr>
+                            <td>Signals</td>
+                            <td><!-- __POWER_DYN_SIG_USAGE__ --></td>
+                            <td><!-- __POWER_DYN_SIG_USAGE_PERCENT__ --></td>
+                        </tr>
+                        <tr>
+                            <td>Logic</td>
+                            <td><!-- __POWER_DYN_LOGIC_USAGE__ --></td>
+                            <td><!-- __POWER_DYN_LOGIC_USAGE_PERCENT__ --></td>
+                        </tr>
+                        <tr>
+                            <td>BRAM</td>
+                            <td><!-- __POWER_DYN_BRAM_USAGE__ --></td>
+                            <td><!-- __POWER_DYN_BRAM_USAGE_PERCENT__ --></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    
+
+</body>
+
+</html>

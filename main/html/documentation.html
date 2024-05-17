@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../web/rep_template/styles.css">
+    <style>
+        .logo {
+            width: 150px; /* Increase width as needed */
+            height: auto; /* Maintain aspect ratio */
+        }
+        @media (max-width: 768px) {
+            .logo {
+                width: 120px; /* Smaller on small devices */
+            }
+        }
+    </style>
+    <title>Documentation - Aeneas HyperCompute Platform</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="main_page.html" class="logo-link">
+                <img src="../../doc/img/logo/AeneasHDC_white.png" alt="Aeneas HyperCompute Logo" class="logo">
+            </a>
+            <h1>Documentation Center</h1>
+            <a href="https://github.com/AeneasHDC/Reconfigurable_HDC_Platform.git" target="_blank" class="github-link">
+                <i class="fab fa-github github-icon"></i> GitHub Repository
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <table id="documentationTable">
+            <thead>
+                <tr>
+                    <th>Document</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>HDC: From Theory to Practice</td>
+                    <td><button onclick="window.open('../../doc/theory_doc.pdf')">Open</button></td>
+                </tr>
+                <tr>
+                    <td>AeneasHDC Manual</td>
+                    <td><button onclick="window.open('../../doc/aeneas_doc.pdf')">Open</button></td>
+                </tr>
+                <tr>
+                    <td>Software Libraries & Test Suite</td>
+                    <td><button onclick="window.open('../../doc/library_doc.pdf')">Open</button></td>
+                </tr>
+                <tr>
+                    <td>AeneasHDC WCCI2024 Paper</td>
+                    <td><button onclick="window.open('../../doc/paper_doc.pdf')">Open</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <!-- Optional footer content here -->
+    </footer>
+</body>
+</html>

@@ -15,16 +15,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./../main/web/rep_template/styles.css">
-    <script src="./../main/web/rep_template/scripts.js" defer></script>
+    <script src="../main/web/rep_template/scripts.js" defer></script>
+    <style>
+        .logo {
+            width: 150px; /* Increase width as needed */
+            height: auto; /* Maintain aspect ratio */
+        }
+        @media (max-width: 768px) {
+            .logo {
+                width: 120px; /* Smaller on small devices */
+            }
+        }
+    </style>
+    <title>Aeneas HDC Projects Dashboard</title>
 </head>
-
 <body>
     <header>
         <nav>
-            <a href="#" class="logo-link">
-                <img src="../doc/img/logo/AeneasHDC.png" alt="Aeneas HyperCompute Logo" class="logo">
+            <a href="../main/html/main_page.html" class="logo-link">
+                <img src="../doc/img/logo/AeneasHDC_white.png" alt="Aeneas HyperCompute Logo" class="logo">
             </a>
-            <h1>Aeneas HyperCompute Platform Report</h1>
+            <h1>AeneasHDC Platform Report</h1>
             <a href="https://github.com/AeneasHDC/Reconfigurable_HDC_Platform.git" target="_blank" class="github-link">
                     <i class="fab fa-github github-icon"></i> GitHub Repository
             </a>
@@ -55,6 +66,46 @@
             </thead>
             
             
+                <tr>
+                    <td>AA</td>
+                    <td>12</td>
+                    <td>01/02/2023</td>
+                    <td>12:30:21</td>
+                    <td><button onclick="loadReport('./AA_12_20230201_123021/report.html')">View</button></td>
+                </tr>
+    
+                <tr>
+                    <td>A</td>
+                    <td>12</td>
+                    <td>01/02/2023</td>
+                    <td>12:30:</td>
+                    <td><button onclick="loadReport('./A_12_20230201_1230/report.html')">View</button></td>
+                </tr>
+    
+                <tr>
+                    <td>A</td>
+                    <td>12</td>
+                    <td>01/02/2023</td>
+                    <td>12:30:21</td>
+                    <td><button onclick="loadReport('./A_12_20230201_123021/report.html')">View</button></td>
+                </tr>
+    
+                <tr>
+                    <td>test1</td>
+                    <td>1</td>
+                    <td>/02/2023</td>
+                    <td>12:30:21</td>
+                    <td><button onclick="loadReport('./test1_1_202302_123021/report.html')">View</button></td>
+                </tr>
+    
+                <tr>
+                    <td>test2</td>
+                    <td>1</td>
+                    <td>/02/2023</td>
+                    <td>12:30:21</td>
+                    <td><button onclick="loadReport('./test2_1_202302_123021/report.html')">View</button></td>
+                </tr>
+    
 
 
         </table>

@@ -1,0 +1,510 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Orbitron", sans-serif;
+  overflow: hidden;
+  background: radial-gradient(circle at center, #0a1931, #161616);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 20px;
+  color: white;
+  position: relative; /* Makes sure it's in flow */
+}
+
+
+.logo {
+  position: absolute;
+  left: 10px; /* Adjust based on your preference */
+  height: 150px;
+}
+
+.title {
+  font-family: "Orbitron", sans-serif;
+  font-size: 4rem; /* Adjust font size as needed */
+  color: #ffffff;
+}
+
+/* Additional styles */
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: radial-gradient(circle at center, #0a1931, #161616);
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+#learnModel img {
+  max-width: 80%;
+  height: auto;
+  margin: 0 auto; /* This centers the image */
+  display: block; /* Images are inline by default */
+}
+
+/* ----------------------------------- */
+.content-wrapper {
+  z-index: 2;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  color: #fff;
+  text-align: center;
+  max-width: 100%;
+  /* padding: 200px 0px 40px 20px; */
+  width: 90%;
+  
+  
+  
+}
+/* ----------------------------------- */
+.content-wrapper2 {
+  
+  z-index: 2;
+  text-align: center;
+  max-width: 90%;
+  padding: 0px 0 400px 10px;
+  margin-top: 20px;
+}
+
+/* ----------------------------------- */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 80%;
+  }
+  .content-wrapper {
+    width: 90%;
+    margin-top: 4rem;
+    padding: 10px;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+  .logo {
+    width: 500px;
+  }
+}
+
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 200%;
+  }
+}
+
+.description {
+  font-family: "Playfair Display", serif;
+  font-style: normal;
+  text-align: left;
+  font-size: 1.5rem;
+  margin-top: 4px;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  line-height: 1.5;
+  opacity: 1;
+
+  transition: opacity 2.5s ease, transform 3.5s ease;
+}
+
+
+
+/* Improved Typography */
+h1 {
+  font-family: "Playfair Display", serif;
+  color: #0a5df8f8;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+  padding-top: 50px;
+}
+h2 {
+  font-family: "Playfair Display", serif;
+  color: #0a5df8f8;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+  padding-top: 20px;
+}
+
+h3 {
+  font-family: "Roboto", serif;
+  font-size: 1.0rem;
+  font-style: semi-bold;
+  color: lightgray;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  padding-bottom: 10px;
+}
+
+h2, h3 {
+  line-height: 0.2; /* Aumenta o diminuisci secondo il design desiderato */
+}
+
+.description-box {
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  max-width:1600px;
+  text-align: justify;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 3;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(26, 163, 152, 0.2);
+  animation: fadeIn 0.5s;
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%; /* Smaller width for a more elegant look */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  animation: slideDown 0.5s;
+}
+.modal-content h2 {
+  font-family: "Orbitron", sans-serif; /* Consistent with the site theme */
+  color: #0a1931; /* Dark blue, matches the gradient background */
+  font-size: 2rem; /* Large enough to be impactful */
+  text-align: center; /* Center the title for better focus */
+  margin-bottom: 20px; /* Spacing below the title */
+}
+
+.configuration-steps {
+  font-family: "Orbitron", serif !important;
+  font-style: normal !important; /* Ensures the font is not italicized */
+  text-align: left;
+  max-width: 1900px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+  list-style-type: none; /* Removes bullet points */
+  color: #ffffff; /* White text color */
+}
+
+.configuration-steps li {
+  margin-bottom: 1px;
+  font-size: 1.5rem;
+  line-height: 1.6; /* Increased line height for readability */
+  font-style: normal !important; /* Ensures the font is not italicized */
+}
+
+.configuration-steps li strong {
+  color: #ffff00cc; /* Yellow color for emphasis */
+  font-style: normal !important; /* Ensures the font is not italicized */
+}
+
+.modal-btn {
+  padding: 12px 24px;
+  margin: 10px;
+  cursor: pointer;
+  border: none;
+  background-color: #0b56ce;
+  color: white;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+.modal-btn:hover {
+  background-color: #161616;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slideDown {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.glow-on-hover-dataset {
+  width: 200px;
+  height: 100px;
+  font-family: calibri, serif;
+  font-size: 1.2rem;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  margin: 10px 10px 10px 10px;
+}
+
+.glow-on-hover-enabled {
+  width: 200px;
+  height: 100px;
+  font-family: calibri, serif;
+  font-size: 1.2rem;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  margin: 10px 10px 10px 10px;
+}
+.glow-on-hover-final {
+  width: 200px;
+  height: 100px;
+  font-family: calibri, serif;
+  font-size: 1.2rem;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  margin: 10px 10px 10px 10px;
+}
+.glow-on-hover-disabled {
+  width: 200px;
+  height: 100px;
+  font-family: calibri, serif;
+  font-size: 1.2rem;
+  outline: none;
+  color: black;
+  cursor: not-allowed;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  margin: 10px 10px 10px 10px;
+}
+.glow-on-hover-dataset:before,
+.glow-on-hover-enabled:before,
+.glow-on-hover-final:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover-dataset:active,
+.glow-on-hover-enabled:active,
+.glow-on-hover-final:active,
+.glow-on-hover-disabled:active {
+  color: #2b2e2f;
+}
+
+.glow-on-hover-dataset:active:after,
+.glow-on-hover-enabled:active:after,
+.glow-on-hover-final:active:after,
+.glow-on-hover-disabled:after {
+  background: transparent;
+}
+
+.glow-on-hover-dataset:hover:before,
+.glow-on-hover-enabled:hover:before,
+.glow-on-hover-final:hover:before,
+.glow-on-hover-disabled:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover-dataset:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #0b6e56;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+.glow-on-hover-enabled:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #1f548d;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+.glow-on-hover-final:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #13a429;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+.glow-on-hover-disabled:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #dae2fd;
+  color: black;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+.glow-on-hover-dataset i,
+.glow-on-hover-enabled i,
+.glow-on-hover-final i,
+.glow-on-hover-disabled i {
+  margin-right: 5px; /* Adds space between the icon and text */
+  color: inherit; /* Ensures the icon matches the text color */
+}
+
+table {
+  width: 100%;
+}
+
+.disabled-tooltip {
+  position: static;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  vertical-align: top; /* Ensures alignment with inline or table-cell elements */
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 400px; /* Adjust width based on content */
+  background-color: rgb(119, 119, 119);
+  color: rgba(255, 255, 255, 0.897);
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%; /* Position above the button */
+  left: 50%;
+  margin-left: -200px; /* Center the tooltip */
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+  z-index: 2;
+  cursor: pointer;
+}
+
+.tutorial-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+.highlight {
+  border: 4px solid #ffff00; /* Bright yellow border */
+  position: relative;
+  z-index: 10;
+}
+
+.highlight,
+.tooltip .tooltiptext {
+  z-index: 10; /* Ensures these are above the overlay */
+}
+
+
+.button-bar {
+  position: fixed;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around; /* Changed to space-around for even spacing */
+  align-items: center; /* Ensures vertical alignment */
+  padding: 10px; /* Optional padding for better visibility */
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+

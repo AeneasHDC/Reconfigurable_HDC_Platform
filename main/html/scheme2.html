@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aeneas HyperCompute Platform</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/scheme2.css">
+    <link rel="stylesheet" href="../css/tutorial.css">
+    
+    <style>
+      .center {
+        width: 100%; /* O la larghezza che preferisci */
+        background-image: url("../background.png"); /* Percorso verso l'immagine di sfondo */
+        background-size: cover; /* O usa 100% 100% per adattarlo esattamente alla tabella */
+        background-repeat: no-repeat;
+        background-position: center center; /* Centra l'immagine nella tabella */
+      }
+      .sapienza-logo {
+        position: fixed;
+          bottom: 20px;  /* Distance from the top */
+          right: 20px;  /* Distance from the right */
+          width: 250px; /* Adjust the size as needed */
+          z-index: 10; /* Ensures it's on top of other elements */
+      }
+    </style>
+
+  </head>
+
+  <header>
+    <img src="../../doc/img/logo/AeneasHDC_white.png" alt="Aeneas Logo" class="logo">
+    <h1 class="title">Aeneas HyperCompute Platform</h1>
+  </header>
+  <body onload="animateText()">
+    
+    <div class="landing-page">
+      <div id="particles-js"></div>
+      <div class="content-wrapper">
+        <p class="description-box">
+          Welcome to the Aeneas HyperCompute Platform configuration page. Configure your HDC models and hardware accelerators to suit your computational needs.
+          Start the tutorial by clicking the "Tutorial" button below, or hover over the buttons for more information.
+          Once you're done configuring, click the "Ready" button at the bottom to finalize your settings.
+        </p>
+    </div>
+
+
+    <div class="content-wrapper2">
+        <table class="center">
+          <!-- <table > -->
+          <!--  Row 1 ------------------------------------------------------------------------ -->
+          <tr>
+            <td></td>
+            <td>
+              <div class="tooltip">
+              <button
+                class="glow-on-hover-enabled"
+                id="btnModel"
+                onclick="openPopup('model_config.html')"
+              >
+                <i class="fas fa-cogs"></i> Model Configuration
+              
+              <span class="tooltiptext">Configure all the parameters of your HDC model.</span>
+              </div>
+             </button>
+            </td>
+            <td>
+              <div class="tooltip">
+              <button class="glow-on-hover-disabled" id="btnSoftware">
+                <i class="fas fa-laptop-code"></i> Software model (Python,
+                Matlab or C++)
+              
+              <span class="tooltiptext">The software model can be instantiated in Python, Matlab or C++. Set your choice with the "Model Configuration" button.</span>
+            </button>
+            </div>
+            </td>
+            <td>
+              <div class="tooltip">
+              <button class="glow-on-hover-disabled" id="btnEvaluation">
+                <i class="fas fa-chart-line"></i> Evaluation metrics
+                <span class="tooltiptext">The performance in terms of accuracy are collected for the software model and redirected to the report generator.</span>
+              </div>
+              </button>
+            </td>
+            <td></td>
+            <td></td>
+          </tr>
+          <!--  Row 2 ------------------------------------------------------------------------ -->
+          <tr>
+            <td>
+              <div class="tooltip">
+              <button
+                class="glow-on-hover-dataset"
+                type="button"
+                id="btnDataset"
+                onclick="openPopup('dataset_config.html')"
+              >
+                <i class="fas fa-database"></i> Dataset
+              
+                <span class="tooltiptext">Specify informations about the target learning task and datasets.</span>
+              </button>
+              </div>
+            </td>
+            <td></td>
+            <td>
+              <div class="tooltip">
+              <button class="glow-on-hover-disabled" type="btnTrained">
+                <i class="fas fa-sliders"></i> Trained Parameters
+              
+              <span class="tooltiptext">The trained parameters are transferred to the hardware accelerator when training is done in software and inference in hardware. This setting is adjusted using the 'Hardware Accelerator' button.</span>
+              </button>  
+            </div>
+            </td>
+            <td></td>
+            <td>
+              <div class="tooltip">
+              <button class="glow-on-hover-disabled" id="btnReport">
+                <i class="fas fa-file-alt"></i> Report Generator
+              
+              <span class="tooltiptext">The report generator collects all the performance metrics and generates a final PDF report.</span>
+            </button>
+              </div>
+            </td>
+            <td>
+              <div class="tooltip">
+              <button class="glow-on-hover-final" id="btnFinal">
+                <i class="fas fa-flag-checkered"></i> Final Report
+              
+              <span class="tooltiptext">The report is made available for download and further analysis.</span>
+            </button>
+              </div>
+            </td>
+          </tr>
+          <!--  Row 3 ------------------------------------------------------------------------ -->
+          <tr>
+            <td></td>
+            <td>
+              <div class="tooltip">
+              <!-- <button class="glow-on-hover-enabled" id="bntHardwareAcc"> -->
+              <button
+                class="glow-on-hover-enabled"
+                type="button"
+                id="bntHardwareAcc"
+                onclick="openPopup('HWA_config.html')"
+              >
+                <i class="fas fa-microchip"></i> Hardware Accelerator
+                <span class="tooltiptext">Configure the setting for your HDC hardware accelerator, including the parallism and the target learning phase.</tooltiptext>
+                </div>  
+              </button>
+            </td>
+            <td>
+              <div class="tooltip">
+              <button class="glow-on-hover-disabled" id="btnHardwareModel">
+                <i class="fas fa-network-wired"></i> Hardware Model (HLS)
+                <span class="tooltiptext">The hardware model is generated using High-Level Synthesis (HLS) tools. The settings are adjusted using the 'Hardware Accelerator' button.</span>
+              </div>
+              </button>
+            </td>
+            <td>
+              <div class="tooltip">
+              <button class="glow-on-hover-disabled" id="btnVivado">
+                <i class="fas fa-tools"></i> Vivado
+                <span class="tooltiptext">The Vivado tool is used to synthesize the hardware model on the target FPGA, test and caracterize it in terms of execution time and energy consumption.</span>
+              </div>
+              </button>
+            </td>
+            <td>
+              <button class="glow-on-hover-disabled" id="btnEvaluation2">
+                <div class="tooltip">
+                <i class="fas fa-chart-line"></i> Evaluation Metrics
+                <span class="tooltiptext">The performance in terms of accuracy, execution time and energy are collected for the hardware model and redirected to the report generator.</span>
+              </div>
+              </button>
+            </td>
+            <td></td>
+          </tr>
+        </table>
+
+        <div class="button-bar">
+          <button id="startTutorial" class="tutorial-btn"><i class="fas fa-question-circle"></i> Tutorial</button>
+          <button id="doneConfig" class="done-btn" ><i class="fas fa-check-circle" ></i> Done</button>
+        </div>
+
+        <img src="../../doc/img/logo/sapienza-logo-wh.png" alt="Sapienza University Logo" class="sapienza-logo">
+        <!--------------------------------------------------------------------------
+        // Open a new popup window with the specified URL
+        //------------------------------------------------------------------------ -->
+        <script>
+          function openPopup(url) {
+            // Verifica se l'URL è fornito e non è vuoto
+            if (url && url.trim() !== "") {
+              // Imposta le dimensioni del popup
+              var width = 800;
+              var height = 600;
+
+              // Calcola la posizione centrale tenendo conto delle dimensioni della finestra
+              var left = (window.screen.width - width) / 2;
+              var top = (window.screen.height - height) / 2;
+
+              // Apri una nuova finestra centrata sullo schermo
+              var popupWindow = window.open(
+                url,
+                "Popup",
+                "scrollbars=yes, width=" +
+                  width +
+                  ", height=" +
+                  height +
+                  ", top=" +
+                  top +
+                  ", left=" +
+                  left
+              );
+
+              // Questo può essere necessario per assicurarsi che il popup venga in primo piano
+              if (window.focus) {
+                popupWindow.focus();
+              }
+            } else {
+              // Opzionale: gestisci il caso in cui l'URL non sia valido o non sia fornito
+              alert("URL non specificato per il popup");
+            }
+          }
+
+          // -----------------------------------------------------------------------
+          // Tutorial
+          document.getElementById('startTutorial').addEventListener('click', function() {
+              startTutorial();
+          });
+
+          document.getElementById('doneConfig').addEventListener('click', function() {
+            backupProject();
+          });
+
+
+        </script>
+
+      </div>
+
+    </div>
+
+    
+    <div class="buttons-container">
+      <button id="nextStep" style="display:none; position: fixed; bottom: 20px; right: 20px;">Next Step</button>
+      <button id="stopTutorial" style="display:none; position: fixed; bottom: 20px; right: 200px;">End Tutorial</button>
+    </div>
+    
+    <div id="choiceModal" class="modal">
+      <div class="modal-content">
+        <h2>Explore AeneasHDC</h2>
+        <button id="learnBtn" class="modal-btn">Learn to Use the Model</button>
+        <button id="newProjectBtn" class="modal-btn">
+          Start a New Project
+        </button>
+        <button id="openProjectBtn" class="modal-btn">
+          Open an Existing Project
+        </button>
+        <button id="testBenchBtn" class="modal-btn">Test Benches</button>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+      particlesJS("particles-js", {
+        particles: {
+          number: { value: 100, density: { enable: true, value_area: 800 } },
+          color: { value: "#a0a0a0" },
+          shape: { type: "circle", stroke: { width: 0, color: "#000000" } },
+          opacity: { value: 0.5, random: true },
+          size: { value: 4, random: true },
+          line_linked: {
+            enable: true,
+            distance: 100,
+            color: "#a0a0a0",
+            opacity: 0.2,
+            width: 1.5,
+          },
+          move: { enable: true, speed: 4, bounce: true },
+        },
+      });
+
+      function animateText() {
+        const logo = document.querySelector(".logo");
+        logo.style.opacity = "1";
+        logo.style.transform = "translateY(0)";
+
+        const desc = document.querySelector(".description");
+        desc.style.opacity = "0.8";
+        desc.style.transform = "translateY(0)";
+      }
+
+      
+        function backupProject() {
+            const data = {
+                message: "New project created", 
+            };
+            const notebookPath = './main/AeneasHDC - New Project.ipynb'; // Adjust according to your setup
+
+            fetch('/save-project', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ notebookPath })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    console.log('Backup successful:', data.newPath);
+                    window.location.href = data.newPath; // Redirect to the new file if needed
+                } else {
+                    console.error('Backup failed:', data.message);
+                }
+            })
+            .catch(error => console.error('Error in backup:', error));
+        }
+      function startTutorial() {
+        // const overlay = document.createElement('div');
+        // overlay.className = 'overlay';
+        // document.body.appendChild(overlay);
+        
+        const tutorialPanel = document.createElement('div');
+        tutorialPanel.className = 'tutorial-panel';
+        tutorialPanel.innerHTML = '<h2>Tutorial</h2>';
+        document.body.appendChild(tutorialPanel);
+
+        tutorialPanel.style.width = "80vw";
+        tutorialPanel.style.height = "50vh";
+        tutorialPanel.style.display = 'block';
+        tutorialPanel.style.zIndex = 1;
+
+        const steps = [
+            { element: '#btnDataset', tooltip: 'Specify informations about the target learning task and datasets.' },
+            { element: '#btnModel', tooltip: 'Configure all the parameters of your HDC model.' },
+            { element: '#btnSoftware', tooltip: 'The software model can be instantiated in Python, Matlab or C++.' },
+            { element: '#btnEvaluation', tooltip: 'The performance in terms of accuracy are collected for the software model.' },
+            { element: '#bntHardwareAcc', tooltip: 'Configure the setting for your HDC hardware accelerator.' },
+            { element: '#btnHardwareModel', tooltip: 'The hardware model is generated using High-Level Synthesis (HLS) tools.' },
+            { element: '#btnVivado', tooltip: 'The Vivado tool is used to synthesize the hardware model on the target FPGA.' },
+            { element: '#btnEvaluation2', tooltip: 'The performance in terms of accuracy, execution time and energy are collected for the hardware model.' },
+            { element: '#btnReport', tooltip: 'The report generator collects all the performance metrics and generates a final PDF report.' },
+            { element: '#btnFinal', tooltip: 'The report is made available for download and further analysis.' },         
+        ];
+
+        disableTutorialButtons(); // Disabilita i pulsanti durante il tutorial
+
+        let currentStep = 0;
+        // -----------------------------------------------------------------------
+        const nextButton = document.getElementById('nextStep');
+        const endTutorialButton = document.getElementById('stopTutorial');
+
+        // Impostare la visualizzazione dei pulsanti
+        nextButton.style.display = 'block';
+        endTutorialButton.style.display = 'block';
+        
+        // Nascondere il pulsante "Done", se presente
+        const startTutorialButton = document.getElementById('startTutorial'); // Assicurati che l'ID corrisponda
+        if (startTutorialButton) {
+          startTutorialButton.style.display = 'none';
+        } 
+
+        // Nascondere il pulsante "Done", se presente
+        const doneButton = document.getElementById('doneConfig'); // Assicurati che l'ID corrisponda
+        if (doneButton) {
+            doneButton.style.display = 'none';
+        }        
+        // -----------------------------------------------------------------------
+
+        function showTooltip(step) {
+            const element = document.querySelector(step.element);
+            const tooltip = element.querySelector('.tooltiptext');
+
+            tooltip.style.visibility = 'visible';
+            tooltip.style.opacity = 1;
+            tooltip.classList.add('tutorial-tooltip'); // Apply larger font size for better visibility
+
+            element.classList.add('highlight'); // Highlight the element
+            // element.style.position = 'relative';
+            element.style.zIndex = 100; // Bring the element to the front
+        }
+
+        function hideTooltips() {
+            document.querySelectorAll('.tooltiptext').forEach(tooltip => {
+                tooltip.style.visibility = 'hidden';
+                tooltip.style.opacity = 0;
+                tooltip.classList.remove('tutorial-tooltip');
+                tooltip.parentNode.style.zIndex = '0'; // Reset z-index after tutorial step
+            });
+            document.querySelectorAll('.highlight').forEach(hl => {
+                hl.classList.remove('highlight');
+                hl.style.zIndex = '0'; // Reset z-index after tutorial step
+            });
+        }
+
+        function nextStep() {
+            if (currentStep > 0) {
+                hideTooltips();
+            }
+            if (currentStep < steps.length) {
+                showTooltip(steps[currentStep]);
+                currentStep++;
+            } else {
+                endTutorial();
+            }          
+        }
+
+        function endTutorial() {
+            hideTooltips();
+            nextButton.style.display = 'none'; // Hide the Next button
+            endTutorialButton.style.display = 'none'; // Hide the End Tutorial button
+            tutorialPanel.style.display = 'none';
+            doneButton.style.display = 'block'; // Show the Done button
+            startTutorialButton.style.display = 'block'; // Show the Start Tutorial button
+            enableTutorialButtons(); // Riabilita i pulsanti
+            // Ricarica la pagina
+            window.location.reload();
+        }
+
+        function disableTutorialButtons() {
+            steps.forEach(step => {
+                const button = document.querySelector(step.element);
+                if (button) {
+                    button.disabled = true; // Disabilita il pulsante
+                }
+            });
+        }
+
+        function enableTutorialButtons() {
+            steps.forEach(step => {
+                const button = document.querySelector(step.element);
+                if (button) {
+                    button.disabled = false; // Riabilita il pulsante
+                    // button.classList.add('tooltiptext'); // Rimuovi la classe per ripristinare l'hover
+                }
+            });
+        }
+        
+        nextButton.onclick = nextStep;
+        nextStep(); // Start the first step
+        
+        endTutorialButton.onclick = endTutorial;  // End the tutorial
+    }
+
+
+
+
+    function redirectToJupyter() {
+        var modal = document.getElementById("choiceModal");
+        modal.style.display = "block";
+
+        var learnBtn = document.getElementById("learnBtn");
+        var newProjectBtn = document.getElementById("newProjectBtn");
+        var openProjectBtn = document.getElementById("openProjectBtn");
+        var testBenchBtn = document.getElementById("testBenchBtn");
+        newProjectBtn.onclick = function () {
+            modal.style.display = "none";
+            redirectWithProgress("http://localhost:8888/notebooks/notebook.ipynb");
+        };
+
+        testBenchBtn.onclick = function () {
+            modal.style.display = "none";
+            redirectWithProgress("http://localhost:8888/notebooks/test_notebook.ipynb");
+        };
+
+        
+
+    }
+    function redirectWithProgress(url) {
+        var redirectDelay = 1000; // 4 seconds
+
+        let progressBarContainer = document.createElement("div");
+        progressBarContainer.style.position = "fixed";
+        progressBarContainer.style.top = "85%";
+        progressBarContainer.style.left = "50%";
+        progressBarContainer.style.transform = "translate(-50%, -50%)";
+        progressBarContainer.style.width = "50%"; // Width of the container
+        progressBarContainer.style.height = "5px";
+        progressBarContainer.style.backgroundColor = "#ddd"; // Background color
+        progressBarContainer.style.borderRadius = "5px";
+        document.body.appendChild(progressBarContainer);
+
+        let progressBar = document.createElement("div");
+        progressBar.style.width = "0%";
+        progressBar.style.height = "100%";
+        progressBar.style.backgroundColor = "green";
+        progressBar.style.borderRadius = "5px";
+        progressBar.style.transition = `width ${redirectDelay}ms linear`;
+        progressBarContainer.appendChild(progressBar);
+
+        setTimeout(() => {
+          progressBar.style.width = "100%";
+        }, 100); // Start shortly after
+
+        setTimeout(function () {
+          window.location.href = url;
+        }, redirectDelay);
+      }
+
+      //
+    </script>
+  </body>
+</html>

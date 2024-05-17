@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../web/rep_template/styles.css">
+    <style>
+        .logo {
+            width: 150px; /* Increase width as needed */
+            height: auto; /* Maintain aspect ratio */
+        }
+        @media (max-width: 768px) {
+            .logo {
+                width: 120px; /* Smaller on small devices */
+            }
+        }
+    </style>
+    <title>Aeneas HDC Projects Dashboard</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="main_page.html" class="logo-link">
+                <img src="../../doc/img/logo/AeneasHDC_white.png" alt="Aeneas HyperCompute Logo" class="logo">
+            </a>
+            <h1>AeneasHDC Projects Dashboard </h1>
+            <a href="https://github.com/AeneasHDC/Reconfigurable_HDC_Platform.git" target="_blank" class="github-link">
+                <i class="fab fa-github github-icon"></i> GitHub Repository
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <table id="projectTable">
+            <thead>
+                <tr>
+                    <th>Project Name</th>
+                    <th>Open</th>
+                    <th>Rename</th>
+                    <th>Copy</th>
+                    <th>Delete</th>
+                    <th onclick="sortTable()">Last Modified <span class="sort-indicator">&#8597;</span></th>
+                </tr>
+            </thead>
+            <tbody id="projectList">
+                <!-- Projects will be loaded here dynamically -->
+            </tbody>
+        </table>
+
+        <div id="loadingText" style="display: none; font-size: 20px; text-align: center;">
+            Loading...
+        </div>
+    </main>
+
+    <script src="../web/rep_template/scripts.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', loadProjects);
+
+        function loadProjects() {
+            const loadingText = document.getElementById('loadingText');
+            loadingText.style.display = 'block'; // Show loading text
+
+            fetch('/list-projects')
+                .then(response => response.json())
+                .then(data => {
+                    const projectList = document.getElementById('projectList');
+                    projectList.innerHTML = ''; // Clear previous entries
+                    data.forEach(project => {
+                        const row = projectList.insertRow();
+                        row.insertCell(0).textContent = project.name;
+                        row.insertCell(1).appendChild(createButton('fas fa-external-link-alt', () => window.open(`http://localhost:8888/notebooks/projects/${project.name}`, '_blank'), '#006699'));
+                        row.insertCell(2).appendChild(createButton('fas fa-edit', () => renameFile(project.name), '#29a37a'));
+                        row.insertCell(3).appendChild(createButton('fas fa-copy', () => copyFile(project.name), '#ff9966'));
+                        row.insertCell(4).appendChild(createButton('fas fa-trash-alt', () => deleteFile(project.name), 'lightcoral'));
+                        row.insertCell(5).textContent = new Date(project.lastModified).toLocaleString();
+                    });
+
+
+                    loadingText.style.display = 'none'; // Hide loading text
+                })
+                .catch(error => {
+                    console.error('Failed to load projects:', error);
+                    loadingText.textContent = 'Failed to load projects.';
+                });
+        }
+
+        function createButton(iconClass, action, color) {
+            const button = document.createElement('button');
+            button.innerHTML = `<i class="${iconClass}"></i>`; // Insert the Font Awesome icon
+            button.onclick = action;
+            button.style.background = color; // Set the color of the button
+            button.style.color = 'white'; // Set text/icon color to white for contrast
+            button.style.border = 'none';
+            button.style.borderRadius = '5px';
+            button.style.padding = '10px 15px'; // Increase padding for a bigger button
+            button.style.margin = '5px';
+            button.style.cursor = 'pointer';
+            button.style.fontSize = '16px'; // Increase font size for better readability
+            button.style.boxShadow = '0 2px 4px rgba(0,0,0,0.2)'; // Add a subtle shadow for depth
+            return button;
+        }
+
+        function renameFile(filename) {
+            const newName = prompt('New name for ' + filename + ':', filename);
+            if (newName && newName !== filename) {
+                fetch('/rename-project', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({oldPath: `projects/${filename}`, newPath: `projects/${newName}`})
+                }).then(res => res.json())
+                .then(data => {
+                    alert(data.message);
+                    if (data.success) {
+                        location.reload(); // Refresh the page to reflect changes
+                    }
+                });
+            }
+        }
+
+        function copyFile(filename) {
+            const newName = prompt('Copy of ' + filename + ', enter new name:', 'Copy_of_' + filename);
+            if (newName) {
+                fetch('/copy-project', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({sourcePath: `projects/${filename}`, destinationPath: `projects/${newName}`})
+                }).then(res => res.json())
+                .then(data => {
+                    alert(data.message);
+                    if (data.success) {
+                        location.reload(); // Refresh the page to reflect changes
+                    }
+                });
+            }
+        }
+
+        function deleteFile(filename) {
+            if (confirm('Are you sure you want to delete ' + filename + '?')) {
+                fetch('/delete-project', {
+                    method: 'DELETE',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({filePath: `projects/${filename}`})
+                }).then(res => res.json())
+                .then(data => {
+                    alert(data.message);
+                    if (data.success) {
+                        location.reload(); // Refresh the page to reflect changes
+                    }
+                });
+            }
+        }
+
+        // Add sorting function for the last modified column
+        function sortTable() {
+            let table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+            table = document.getElementById("projectTable");
+            switching = true;
+            dir = "asc"; 
+            while (switching) {
+                switching = false;
+                rows = table.rows;
+                for (i = 1; i < (rows.length - 1); i++) {
+                    shouldSwitch = false;
+                    x = rows[i].getElementsByTagName("TD")[5];
+                    y = rows[i + 1].getElementsByTagName("TD")[5];
+                    if (dir == "asc") {
+                        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                            shouldSwitch = true;
+                            break;
+                        }
+                    } else if (dir == "desc") {
+                        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                            shouldSwitch = true;
+                            break;
+                        }
+                    }
+                }
+                if (shouldSwitch) {
+                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                    switching = true;
+                    switchcount++;      
+                } else {
+                    if (switchcount == 0 && dir == "asc") {
+                        dir = "desc";
+                        switching = true;
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

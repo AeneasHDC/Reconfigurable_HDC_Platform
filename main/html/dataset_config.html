@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Config Editor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #dcdcdc;
+            padding: 10px;
+            text-align: left;
+            vertical-align: middle;
+        }
+        th {
+            background-color: #f7f7f7;
+            font-weight: 600;
+        }
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        select, input {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #dcdcdc;
+            border-radius: 4px;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>What are these parameters? Check the detailed description in the Documentation. If you need support, please write to <a href="mailto:aeneashdc@gmail.com">aeneashdc@gmail.com</a>.</p>
+        <table id="configTable"></table>
+        <button onclick="saveData()">Save Data</button>
+    </div>
+    <script>
+        const configData = {
+                "dataset": {
+                    "DS_INFO": {
+                        "description": "Dataset Information",
+                        "DS_NAME": "CARDIO",
+                        "DS_SIZE": 2126,
+                        "DS_TRAIN_SIZE": 1594,
+                        "DS_TEST_SIZE": 532,
+                        "DS_VALIDATION_SIZE": 500,
+                        "DS_FEATURE_SIZE": 21,
+                        "DS_DATA_TYPE": "FP",
+                        "DS_DATA_RANGE_MIN": 0,
+                        "DS_DATA_RANGE_MAX": 1,
+                        "DS_CLASSES_SIZE": 3
+                    }
+                },
+            };
+
+            const aliases = {
+            "DS_NAME": "Dataset Name",
+            "DS_SIZE": "Total Size of Dataset",
+            "DS_TRAIN_SIZE": "Training Set Size",
+            "DS_TEST_SIZE": "Test Set Size",
+            "DS_VALIDATION_SIZE": "Validation Set Size",
+            "DS_FEATURE_SIZE": "Number of Features",
+            "DS_DATA_TYPE": "Data Type",
+            "DS_DATA_RANGE_MIN": "Minimum Data Value",
+            "DS_DATA_RANGE_MAX": "Maximum Data Value",
+            "DS_CLASSES_SIZE": "Number of Classes"
+            // Continue with other aliases as necessary
+        };
+
+
+
+        function generateTable(data, parentKey = '') {
+            let tableHtml = '';
+
+            for (const key in data) {
+                const item = data[key];
+                if (key === "description") continue; // Skip fields named "description"
+
+                if (typeof item === 'object' && !Array.isArray(item) && item !== null) {
+                    if (item.hasOwnProperty('description')) {
+                        // Use the description if available and ignore it in the alias mapping
+                        tableHtml += `<tr><td colspan="2" style="background-color: #eee;"><strong>${item.description}</strong></td></tr>`;
+                    }
+                    tableHtml += generateTable(item, parentKey ? `${parentKey}.${key}` : key);
+                } else {
+                    const alias = aliases[key] || key; // Use alias if available
+                    console.log("Searching for alias for", parentKey ? `${parentKey}.${key}` : key, "found", alias);
+                    tableHtml += `<tr><td>${alias}</td><td>`;
+                    if (data[key + '_OPTIONS']) { // Assume options for this key would be suffixed with _OPTIONS
+                        tableHtml += `<select data-path="${parentKey ? `${parentKey}.${key}` : key}" onchange="updateValue(this)">`;
+                        const options = data[key + '_OPTIONS'];
+                        for (const optionKey in options) {
+                            tableHtml += `<option value="${optionKey}" ${item === options[optionKey] ? "selected" : ""}>${optionKey}</option>`;
+                        }
+                        tableHtml += `</select>`;
+                    } else {
+                        tableHtml += `<input data-path="${parentKey ? `${parentKey}.${key}` : key}" value="${item}" onblur="updateValue(this)"/>`;
+                    }
+                    tableHtml += `</td></tr>`;
+                }
+            }
+            return tableHtml;
+        }
+
+        function updateValue(element) {
+            const path = element.dataset.path.split(".");
+            let obj = configData;
+            for (let i = 0; i < path.length - 1; i++) {
+                obj = obj[path[i]];
+            }
+            if (element.tagName === 'SELECT') {
+                obj[path[path.length - 1]] = element.options[element.selectedIndex].value;
+            } else {
+                obj[path[path.length - 1]] = element.value;
+            }
+        }
+
+        function saveData() {
+            console.log("Saving data:", JSON.stringify(configData, null, 2)); // For debugging purposes
+            // Implement your save data logic here using the internal parameter names
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('configTable').innerHTML = generateTable(configData);
+        });
+
+    </script>
+</body>
+</html>
