@@ -124,14 +124,40 @@ app.post('/copy-project', (req, res) => {
 });
 
 
-// Route to handle the config save request
 app.post('/save-config', (req, res) => {
-  const configData = req.body;
-  try {
-      fs.writeFileSync(path.join(__dirname, 'config.json'), JSON.stringify(configData, null, 2));
-      res.send({ success: true });
-  } catch (error) {
-      console.error('Error saving config:', error);
-      res.status(500).send({ success: false, message: 'Failed to save config' });
-  }
-});
+    const newConfigData = req.body;
+    const configPath = path.join(__dirname, 'config.json');
+  
+    // Load existing config
+    let configData;
+    try {
+      configData = JSON.parse(fs.readFileSync(configPath, 'utf8'));
+    } catch (err) {
+      return res.status(500).json({ success: false, message: 'Failed to read config file.' });
+    }
+  
+    // Deep merge function to update configData with newConfigData
+    function deepMerge(target, source) {
+      for (const key in source) {
+        if (source[key] && typeof source[key] === 'object' && !Array.isArray(source[key])) {
+          if (!target[key]) target[key] = {};
+          deepMerge(target[key], source[key]);
+        } else {
+          target[key] = source[key];
+        }
+      }
+      return target;
+    }
+  
+    // Merge new data with existing config
+    configData = deepMerge(configData, newConfigData);
+  
+    // Save updated config
+    fs.writeFile(configPath, JSON.stringify(configData, null, 2), (err) => {
+      if (err) {
+        return res.status(500).json({ success: false, message: 'Failed to save config file.' });
+      }
+      res.json({ success: true });
+    });
+  });
+  

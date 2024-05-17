@@ -127,25 +127,36 @@
         }
 
         function updateValue(element) {
-            const path = element.dataset.path.split(".");
-            let obj = configData;
-            for (let i = 0; i < path.length - 1; i++) {
-                obj = obj[path[i]];
-            }
-            if (element.tagName === 'SELECT') {
-                obj[path[path.length - 1]] = element.options[element.selectedIndex].value;
-            } else {
-                obj[path[path.length - 1]] = element.value;
-            }
+        const path = element.dataset.path.split(".");
+        let obj = configData;
+        for (let i = 0; i < path.length - 1; i++) {
+            obj = obj[path[i]];
+        }
+        obj[path[path.length - 1]] = element.value;
         }
 
         function saveData() {
-            console.log("Saving data:", JSON.stringify(configData, null, 2)); // For debugging purposes
-            // Implement your save data logic here using the internal parameter names
+        fetch("/save-config", {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(configData),
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+            alert("Saved successfully!");
+            } else {
+            alert(data.message || "An error occurred while saving.");
+            }
+        })
+        .catch(error => {
+            console.error("Error saving data:", error);
+            alert("An error occurred. Please try again.");
+        });
         }
 
         document.addEventListener('DOMContentLoaded', () => {
-            document.getElementById('configTable').innerHTML = generateTable(configData);
+        document.getElementById("configTable").innerHTML = generateTable(configData);
         });
 
     </script>
