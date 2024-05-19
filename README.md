@@ -8,7 +8,8 @@
 
 <p align="center">
     <em>An automatic open-source environment for simple and fast deployment of flexible Hyperdimensional Computing (HDC) learning models in software and hardware.</em>
-    <em><u>The first stable version will be released in July 2024</u></em>
+    <a href="#"  style="font-weight: bold;"> 🔜⌛ The first stable version will be released in July 2024. </span></em></a> &nbsp;·&nbsp;
+
 
 </p>
 
