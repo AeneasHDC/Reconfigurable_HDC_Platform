@@ -1,25 +1,10 @@
 """
 /**
  * @file data_export.py
- * @brief 
- *
- * @author Saeid Jamili and Marco Angioli
- * @note Author names are listed in alphabetical order.
- * @email <saeid.jamili@uniroma1.it>
- * @email <marco.angioli@uniroma1.it>
- *
- * @contributors
- *
- * @date Created: 24th July 2023
- * @date Last Updated: 23th August 2023
- *
- * @version 1.0.0
- *
- * @institute Sapienza University of Rome
- * @cite https://doi.org/10.xxxx/yyyyy
- *
- * @section DEPENDENCIES
- * - 
+ * @brief This file contains the data export functions used in the model.
+ * @date Created on: 12th August 2023
+ * @date Last updated on: 5th May 2024
+ * @institution Sapienza University of Rome
  *
  * @section LICENSE
     Copyright 2024 Sapienza University of Rome
@@ -27,9 +12,9 @@
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
     You may obtain a copy of the License at
-    
+
         http://www.apache.org/licenses/LICENSE-2.0
-    
+
     Unless required by applicable law or agreed to in writing, software
     distributed under the License is distributed on an "AS IS" BASIS,
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -37,20 +22,11 @@
     limitations under the License.
     Authors: Marco Angioli & Saeid Jamili
 
- *
- *
- * Licensed under the MIT License. See the LICENSE file in the project root for full license details.
- *
  * @section CHANGELOG
- * @version 0.0.0=dev - 23th August 2023
- * - Initial release
- *
- * @todo
- * - 
- * - 
- *
- * @see
- * -
+ * @version 1.0.2
+ * @date May 2024
+ * @Authors: Marco Angioli & Saeid Jamili
+ * @note Author names are listed in alphabetical order.
  */
 """
 import csv

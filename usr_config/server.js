@@ -1,3 +1,24 @@
+/*
+ @brief: This file is the server-side code for the AeneasHDC project. It is responsible for serving the static files, handling the API requests, and starting the server. The server listens on port 3000 and serves the static files from the current directory. It also listens for API requests to save, list, rename, delete, and copy projects. The server also listens for API requests to save the configuration data.
+ @note: The server is started by running the command node server.js in the terminal. The server can be accessed at http://localhost:3000.
+ @License:
+    Copyright 2024 Sapienza University of Rome
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+  @Authors: Marco Angioli & Saeid Jamili
+  @Version: 1.0
+  @Date: May 2024
+*/
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
