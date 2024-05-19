@@ -5,11 +5,11 @@
   <img src="./doc/img/logo/AeneasHDC_white.png" alt="Aeneas HyperCompute Platform Logo" width="200">
 </p>
 <h1 align="center">Aeneas HyperCompute Platform</h1>
-
+<h4 align="center"> 🔜 !!The first stable version will be released in July 2024!!⌛ </h2>
 <p align="center">
     <em>An automatic open-source environment for simple and fast deployment of flexible Hyperdimensional Computing (HDC) learning models in software and hardware.</em>
     <br>
-    <a style="font-weight: bold;"> 🔜 !!The first stable version will be released in July 2024!!⌛ </span></em></a> &nbsp;·&nbsp;
+    
 
 
 </p>
