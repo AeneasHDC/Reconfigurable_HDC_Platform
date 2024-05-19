@@ -157,9 +157,6 @@ Aeneas HyperCompute Platform/
 ## 📜 Publications
 
 ---
-
-![QR Code for 2023 Publication](./qrcodes/2023_AeneasHyperCompute.png)
-
 ### 📘 **AeneasHDC: An Automatic Framework for Deploying Hyperdimensional Computing Models on FPGAs, WCCI-2024**
 
 🔗 [**Abstract**](#abstract) • 🔗 [**Citation**](#citation) • 🔗 [**Download Paper**](./publications/2023_AeneasHyperCompute.pdf)
