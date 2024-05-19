@@ -1,4 +1,0 @@
-local VERBOS_DISABLE  = 0;
-local VERBOS_L1       = 1;
-local VERBOS_L2       = 2;
-local VERBOS          = VERBOS_L1;

@@ -225,6 +225,7 @@ def replace_evaluation_placeholders(template_content, rep_folder):
     with open(f'{rep_folder}/model_eva/{ds_name}/model_report.json', "r") as json_file:
         model_report = json.load(json_file)
     with open(f'{rep_folder}/hls/hls_report.json', "r") as json_file:
+        print("opened file,", json_file)
         hdl_report = json.load(json_file)
 
     # Update the dictionary with the values from the JSON file

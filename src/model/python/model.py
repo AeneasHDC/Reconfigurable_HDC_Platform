@@ -50,6 +50,7 @@ import os
 
 
 if len(sys.argv) > 1 and sys.argv[1] == "called_from_run_file":
+    print("Called from runfile")
     relative_path_prefix = ""
 else:
     relative_path_prefix = "../../../"

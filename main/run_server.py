@@ -12,7 +12,7 @@ def find_anaconda_root():
     return None
 
 def main():
-    anaconda_root = "C:/Users/angio/anaconda3"#find_anaconda_root()
+    anaconda_root = "C:/Users/disa/anaconda3/"#find_anaconda_root()
     if not anaconda_root:
         print("Anaconda installation not found.")
         sys.exit(1)
