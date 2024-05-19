@@ -218,7 +218,7 @@ This project is fortified with the Apache license. For more details, please refe
 
 We owe our gratitude to:
 - **Prof. Mauro Oliveri** - Work supervisor 📧 [Email](mailto: mauro.olivieri@uniroma1.it)
-- **Dr. Antonello Rosato** - Professor of the HDC course at Sapienza
+- **Dr. Antonello Rosato** - Professor of the HDC course at Sapienza 📧 [Email](mailto: antonello.rosato@uniroma1.it)
 
 ---
 
