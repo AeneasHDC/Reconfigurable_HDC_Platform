@@ -9,17 +9,22 @@ NOTE: Using modified tcl85t.dll from https://gitenterprise.xilinx.com/ACT/vitis_
 
 source C:/Xilinx/Vitis_HLS/2023.1/scripts/vitis_hls/hls.tcl -notrace
 INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2023.1/bin/unwrapped/win64.o/vitis_hls.exe'
+<<<<<<< HEAD
 INFO: [HLS 200-10] For user 'disa' on host 'desktop-o5663kl' (Windows NT_amd64 version 6.2) on Fri Jun 21 12:00:51 +0200 2024
 INFO: [HLS 200-10] In directory 'C:/Reconfigurable_HDC_Platform_old/main'
+=======
+INFO: [HLS 200-10] For user 'disa' on host 'desktop-o5663kl' (Windows NT_amd64 version 6.2) on Fri Jun 21 12:00:02 +0200 2024
+INFO: [HLS 200-10] In directory 'C:/Reconfigurable_HDC_Platform/main'
+>>>>>>> f6570cbfdcbfef4d093cd3e1d77748c5b55206b5
 Sourcing Tcl script '_hdc_hls_xilinx\script.tcl'
 INFO: [HLS 200-1510] Running: open_project _hdc_hls_xilinx 
-INFO: [HLS 200-10] Creating and opening project 'C:/Reconfigurable_HDC_Platform_old/main/_hdc_hls_xilinx'.
+INFO: [HLS 200-10] Creating and opening project 'C:/Reconfigurable_HDC_Platform/main/_hdc_hls_xilinx'.
 INFO: [HLS 200-1510] Running: add_files ./../src/hw/hls_xilinx/main.cpp 
 INFO: [HLS 200-10] Adding design file './../src/hw/hls_xilinx/main.cpp' to the project
 INFO: [HLS 200-1510] Running: add_files -tb ./../src/hw/hls_xilinx/tb/tb.cpp 
 INFO: [HLS 200-10] Adding test bench file './../src/hw/hls_xilinx/tb/tb.cpp' to the project
 INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
-INFO: [HLS 200-10] Creating and opening solution 'C:/Reconfigurable_HDC_Platform_old/main/_hdc_hls_xilinx/solution1'.
+INFO: [HLS 200-10] Creating and opening solution 'C:/Reconfigurable_HDC_Platform/main/_hdc_hls_xilinx/solution1'.
 INFO: [HLS 200-1505] Using flow_target 'vivado'
 Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-1505.html
 INFO: [HLS 200-1510] Running: set_top hdv_engine 
@@ -82,6 +87,7 @@ In file included from C:/Xilinx/Vitis_HLS/2023.1/include/hls_fpo.h:143:0,
 C:/Xilinx/Vitis_HLS/2023.1/include/floating_point_v7_1_bitacc_cmodel.h:141:0: note: this is the location of the previous definition
  #define __GMP_LIBGMP_DLL 1
  
+<<<<<<< HEAD
 Test index: 0, Correct Label: 0, Predicted: 0, Percentage: 0%
 [--------------------]
 Accuracy: 1
@@ -3717,3 +3723,20 @@ INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 1 seconds. CPU 
 INFO: [HLS 200-1510] Running: close_project 
 INFO: [HLS 200-112] Total CPU user time: 11 seconds. Total CPU system time: 1 seconds. Total elapsed time: 157.529 seconds; peak allocated memory: 1.626 GB.
 INFO: [Common 17-206] Exiting vitis_hls at Fri Jun 21 12:03:28 2024...
+=======
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Unable to open file: ./../../../../../out/dataset/CARDIO/validation_data.csv
+@E Simulation failed: Function 'main' returns nonzero value '3'.
+ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 7.695 seconds; current allocated memory: 0.770 MB.
+4
+    while executing
+"source {_hdc_hls_xilinx\script.tcl}"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel \#0 [list source $arg] "
+
+INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 1 seconds. Total elapsed time: 11.487 seconds; peak allocated memory: 1.452 GB.
+INFO: [Common 17-206] Exiting vitis_hls at Fri Jun 21 12:00:13 2024...
+>>>>>>> f6570cbfdcbfef4d093cd3e1d77748c5b55206b5
