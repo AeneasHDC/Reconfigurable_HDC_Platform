@@ -2,7 +2,7 @@ obj/tb.o: ../../../../../src/hw/hls_xilinx/tb/tb.cpp \
  C:/Xilinx/Vitis_HLS/2023.1/include/hls_stream.h \
  ../../../../../src/hw/hls_xilinx/tb/../lib/headers/ConfusionMatrix.hpp \
  ../../../../../src/hw/hls_xilinx/tb/../lib/headers/DataQuantizer.hpp \
- C:/Reconfigurable_HDC_Platform_old/src/config/config_cpp.hpp \
+ C:/Reconfigurable_HDC_Platform-1/src/config/config_cpp.hpp \
  ../../../../../src/hw/hls_xilinx/tb/../lib/headers/FileWriter.hpp \
  ../../../../../src/hw/hls_xilinx/tb/../lib/headers/CSVReader.hpp \
  ../../../../../src/hw/hls_xilinx/tb/../lib/headers/CSVWriter.hpp \
@@ -29,9 +29,9 @@ obj/tb.o: ../../../../../src/hw/hls_xilinx/tb/tb.cpp \
  C:/Xilinx/Vitis_HLS/2023.1/include/ap_int.h \
  C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_fixed_ref.h \
  C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_fixed_special.h \
- ../../../../../src/hw/hls_xilinx/tb/../headers/./../lib/headers/rnd.hpp \
- C:/Reconfigurable_HDC_Platform_old/src/config/config_cpp.hpp \
- C:/Reconfigurable_HDC_Platform_old/src/config/ex_config.hpp \
+ C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/lib/headers/rnd.hpp \
+ C:/Reconfigurable_HDC_Platform-1/src/config/config_cpp.hpp \
+ C:/Reconfigurable_HDC_Platform-1/src/config/ex_config.hpp \
  ../../../../../src/hw/hls_xilinx/tb/../headers/main.hpp \
  ../../../../../src/hw/hls_xilinx/tb/../headers/datatypes.hpp \
  ../../../../../src/hw/hls_xilinx/tb/../headers/../lib/hdc_lib/HDC_class.hpp \
@@ -72,12 +72,12 @@ obj/tb.o: ../../../../../src/hw/hls_xilinx/tb/tb.cpp \
  C:/Xilinx/Vitis_HLS/2023.1/include/etc/hls_cbrt_apfixed.h \
  C:/Xilinx/Vitis_HLS/2023.1/include/etc/hls_hypot_apfixed.h \
  C:/Xilinx/Vitis_HLS/2023.1/include/etc/hls_ldexp_apfixed.h \
- C:/Reconfigurable_HDC_Platform_old/src/hw/hls_xilinx/headers/datatypes.hpp \
- C:/Reconfigurable_HDC_Platform_old/src/hw/hls_xilinx/headers/definitions.hpp \
- C:/Reconfigurable_HDC_Platform_old/src/config/config_cpp.hpp \
- C:/Reconfigurable_HDC_Platform_old/src/hw/hls_xilinx/lib/hdc_lib/operations.hpp \
- C:/Reconfigurable_HDC_Platform_old/src/hw/hls_xilinx/lib/headers/rnd.hpp \
- C:/Reconfigurable_HDC_Platform_old/src/hw/hls_xilinx/lib/headers/sqrt_approx.hpp \
- C:/Reconfigurable_HDC_Platform_old/src/config/hls_configs.hpp \
+ C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/headers/datatypes.hpp \
+ C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/headers/definitions.hpp \
+ C:/Reconfigurable_HDC_Platform-1/src/config/config_cpp.hpp \
+ C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/lib/hdc_lib/operations.hpp \
+ C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/lib/headers/rnd.hpp \
+ C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/lib/headers/sqrt_approx.hpp \
+ C:/Reconfigurable_HDC_Platform-1/src/config/hls_configs.hpp \
  ../../../../../src/hw/hls_xilinx/tb/../headers/definitions.hpp \
- C:/Reconfigurable_HDC_Platform_old/src/config/config_cpp.hpp
+ C:/Reconfigurable_HDC_Platform-1/src/config/config_cpp.hpp

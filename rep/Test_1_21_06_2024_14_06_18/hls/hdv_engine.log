@@ -1,0 +1,821 @@
+WARNING: [COSIM-384] This design has internal non-blocking FIFO/Stream accesses, which may result in mismatches or simulation hanging.
+INFO: [COSIM-47] Using XSIM for RTL simulation.
+INFO: [COSIM-14] Instrumenting C test bench ...
+   Build using "C:/Xilinx/Vitis_HLS/2023.1/tps/win64/msys64/mingw64/bin/g++"
+   Compiling tb.cpp_pre.cpp.tb.cpp
+   Compiling main.cpp_pre.cpp.tb.cpp
+   Compiling apatb_hdv_engine_util.cpp
+   Compiling apatb_hdv_engine.cpp
+   Compiling apatb_hdv_engine_ir.ll
+   Generating cosim.tv.exe
+INFO: [COSIM-302] Starting C TB testing ... 
+INFO: [COSIM-333] Generating C post check test bench ...
+INFO: [COSIM-12] Generating RTL test bench ...
+INFO: [COSIM-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM-323] Starting verilog simulation. 
+INFO: [COSIM-15] Starting XSIM ...
+INFO: [COSIM-316] Starting C post checking ...
+Test index: 0, Correct Label: 0, Predicted: 0, Percentage: 0%
+[--------------------]
+Accuracy: 1
+Precision: 0.333333
+Test index: 1, Correct Label: 0, Predicted: 0, Percentage: 50%
+[##########----------]
+Accuracy: 1
+Precision: 0.333333
+Test index: 2, Correct Label: 0, Predicted: 1, Percentage: 100%
+[####################]
+Accuracy: 0.666667
+Precision: 0.333333
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 504
+WARNING [HLS SIM]: hls::stream 'hls::stream<hls::axis<ap_uint<8>, 1ull, 1ull, 1ull>, 0>0' contains leftover data, which may result in RTL simulation hanging.
+
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\sim\verilog>set PATH= 
+
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\sim\verilog>call C:/Xilinx/Vivado/2023.1/bin/xelab xil_defaultlib.apatb_hdv_engine_top glbl -Oenable_linking_all_libraries  -prj hdv_engine.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm  -L floating_point_v7_1_15 -L floating_point_v7_0_20 --lib "ieee_proposed=./ieee_proposed" -s hdv_engine -debug all 
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_hdv_engine_top glbl -Oenable_linking_all_libraries -prj hdv_engine.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_1_15 -L floating_point_v7_0_20 --lib ieee_proposed=./ieee_proposed -s hdv_engine -debug all 
+Multi-threading is on. Using 22 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/AESL_axi_s_sdata_i.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_sdata_i
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/AESL_deadlock_idx0_monitor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_idx0_monitor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/AESL_deadlock_kernel_monitor_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_kernel_monitor_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/AESL_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/hdv_engine.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_hdv_engine_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/hdv_engine.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdv_engine
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/hdv_engine_flow_control_loop_pipe_sequential_init.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdv_engine_flow_control_loop_pipe_sequential_init
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_273_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_273_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_281_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_281_2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_494_4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_494_4
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_912_8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_912_8
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/hdv_engine_mux_3_2_32_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdv_engine_mux_3_2_32_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/hdv_engine_regslice_both.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdv_engine_regslice_both
+INFO: [VRFC 10-311] analyzing module hdv_engine_regslice_both_w1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataflow_monitor
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3705] select index -1 into 'write_address' is out of bounds [C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/AESL_fifo.v:39]
+WARNING: [VRFC 10-3705] select index -1 into 'write_address' is out of bounds [C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/AESL_fifo.v:40]
+WARNING: [VRFC 10-3705] select index -1 into 'read_address' is out of bounds [C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/AESL_fifo.v:66]
+WARNING: [VRFC 10-3705] select index -1 into 'write_address' is out of bounds [C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/AESL_fifo.v:82]
+WARNING: [VRFC 10-3705] select index -1 into 'read_address' is out of bounds [C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/AESL_fifo.v:83]
+WARNING: [VRFC 10-3705] select index -1 into 'read_address' is out of bounds [C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/AESL_fifo.v:84]
+WARNING: [VRFC 10-3705] select index -1 into 'write_address' is out of bounds [C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/AESL_fifo.v:100]
+WARNING: [VRFC 10-3705] select index -1 into 'read_address' is out of bounds [C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/AESL_fifo.v:101]
+WARNING: [VRFC 10-3705] select index -1 into 'read_address' is out of bounds [C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/AESL_fifo.v:102]
+WARNING: [VRFC 10-3705] select index -1 into 'write_address' is out of bounds [C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/AESL_fifo.v:110]
+WARNING: [VRFC 10-3705] select index -1 into 'read_address' is out of bounds [C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/AESL_fifo.v:112]
+WARNING: [VRFC 10-3705] select index -1 into 'write_address' is out of bounds [C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/AESL_fifo.v:114]
+WARNING: [VRFC 10-3705] select index -1 into 'write_address' is out of bounds [C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/AESL_fifo.v:123]
+WARNING: [VRFC 10-3705] select index -1 into 'read_address' is out of bounds [C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/AESL_fifo.v:124]
+WARNING: [VRFC 10-3705] select index -1 into 'read_address' is out of bounds [C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/AESL_fifo.v:134]
+WARNING: [VRFC 10-3705] select index -1 into 'read_address' is out of bounds [C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/AESL_fifo.v:135]
+WARNING: [VRFC 10-3705] select index -1 into 'write_address' is out of bounds [C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/AESL_fifo.v:144]
+WARNING: [VRFC 10-3705] select index -1 into 'read_address' is out of bounds [C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/AESL_fifo.v:145]
+WARNING: [VRFC 10-3705] select index -1 into 'read_address' is out of bounds [C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/AESL_fifo.v:146]
+WARNING: [VRFC 10-3705] select index -1 into 'write_address' is out of bounds [C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/AESL_fifo.v:189]
+WARNING: [VRFC 10-3705] select index -1 into 'read_address' is out of bounds [C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/AESL_fifo.v:190]
+WARNING: [VRFC 10-3705] select index -1 into 'read_address' is out of bounds [C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/AESL_fifo.v:191]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
+Compiling module xil_defaultlib.hdv_engine_flow_control_loop_pip...
+Compiling module xil_defaultlib.hdv_engine_hdv_engine_Pipeline_V...
+Compiling module xil_defaultlib.hdv_engine_hdv_engine_Pipeline_V...
+Compiling module xil_defaultlib.hdv_engine_hdv_engine_Pipeline_V...
+Compiling module xil_defaultlib.hdv_engine_mux_3_2_32_1_1(ID=1,d...
+Compiling module xil_defaultlib.hdv_engine_hdv_engine_Pipeline_V...
+Compiling module xil_defaultlib.hdv_engine_regslice_both(DataWid...
+Compiling module xil_defaultlib.hdv_engine_regslice_both(DataWid...
+Compiling module xil_defaultlib.hdv_engine
+Compiling module xil_defaultlib.fifo(DEPTH=0)
+Compiling module xil_defaultlib.fifo(DEPTH=0,WIDTH=1)
+Compiling module xil_defaultlib.AESL_axi_s_sdata_i
+Compiling module xil_defaultlib.AESL_deadlock_idx0_monitor
+Compiling module xil_defaultlib.AESL_deadlock_kernel_monitor_top...
+Compiling module xil_defaultlib.nodf_module_intf
+Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=1)
+Compiling module xil_defaultlib.dataflow_monitor_1
+Compiling module xil_defaultlib.apatb_hdv_engine_top
+Compiling module work.glbl
+Built simulation snapshot hdv_engine
+
+****** xsim v2023.1 (64-bit)
+  **** SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+  **** IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+  **** SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/hdv_engine/xsim_script.tcl
+# xsim {hdv_engine} -view {{hdv_engine_dataflow_ana.wcfg}} -tclbatch {hdv_engine.tcl} -protoinst {hdv_engine.protoinst}
+INFO: [Wavedata 42-565] Reading protoinst file hdv_engine.protoinst
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_hdv_engine_top/AESL_inst_hdv_engine//AESL_inst_hdv_engine_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_hdv_engine_top/AESL_inst_hdv_engine/grp_hdv_engine_Pipeline_VITIS_LOOP_273_1_fu_683/grp_hdv_engine_Pipeline_VITIS_LOOP_273_1_fu_683_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_hdv_engine_top/AESL_inst_hdv_engine/grp_hdv_engine_Pipeline_VITIS_LOOP_281_2_fu_701/grp_hdv_engine_Pipeline_VITIS_LOOP_281_2_fu_701_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_hdv_engine_top/AESL_inst_hdv_engine/grp_hdv_engine_Pipeline_VITIS_LOOP_494_4_fu_711/grp_hdv_engine_Pipeline_VITIS_LOOP_494_4_fu_711_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_hdv_engine_top/AESL_inst_hdv_engine/grp_hdv_engine_Pipeline_VITIS_LOOP_912_8_fu_1100/grp_hdv_engine_Pipeline_VITIS_LOOP_912_8_fu_1100_activity
+Time resolution is 1 ps
+open_wave_config hdv_engine_dataflow_ana.wcfg
+source hdv_engine.tcl
+## log_wave -r /
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+## set designtopgroup [add_wave_group "Design Top Signals"]
+## set coutputgroup [add_wave_group "C Outputs" -into $designtopgroup]
+## set return_group [add_wave_group return(wire) -into $coutputgroup]
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/status_o -into $return_group -radix hex
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/pred_class_o -into $return_group -radix hex
+## set cinputgroup [add_wave_group "C Inputs" -into $designtopgroup]
+## set return_group [add_wave_group return(wire) -into $cinputgroup]
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/lhv_i -into $return_group -radix hex
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/bhv_i -into $return_group -radix hex
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/chv_i -into $return_group -radix hex
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/sdata_i_TDEST -into $return_group -radix hex
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/sdata_i_TID -into $return_group -radix hex
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/sdata_i_TLAST -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/sdata_i_TUSER -into $return_group -radix hex
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/sdata_i_TSTRB -into $return_group -radix hex
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/sdata_i_TKEEP -into $return_group -radix hex
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/sdata_i_TREADY -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/sdata_i_TVALID -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/sdata_i_TDATA -into $return_group -radix hex
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/frame_in -into $return_group -radix hex
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/op_mode_i -into $return_group -radix hex
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/nrst_i -into $return_group -radix hex
+## set blocksiggroup [add_wave_group "Block-level IO Handshake" -into $designtopgroup]
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/ap_start -into $blocksiggroup
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/ap_done -into $blocksiggroup
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/ap_idle -into $blocksiggroup
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/ap_ready -into $blocksiggroup
+## set resetgroup [add_wave_group "Reset" -into $designtopgroup]
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/ap_rst_n -into $resetgroup
+## set clockgroup [add_wave_group "Clock" -into $designtopgroup]
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/ap_clk -into $clockgroup
+## set testbenchgroup [add_wave_group "Test Bench Signals"]
+## set tbinternalsiggroup [add_wave_group "Internal Signals" -into $testbenchgroup]
+## set tb_simstatus_group [add_wave_group "Simulation Status" -into $tbinternalsiggroup]
+## set tb_portdepth_group [add_wave_group "Port Depth" -into $tbinternalsiggroup]
+## add_wave /apatb_hdv_engine_top/AUTOTB_TRANSACTION_NUM -into $tb_simstatus_group -radix hex
+## add_wave /apatb_hdv_engine_top/ready_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_hdv_engine_top/done_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_hdv_engine_top/LENGTH_bhv_i -into $tb_portdepth_group -radix hex
+## add_wave /apatb_hdv_engine_top/LENGTH_chv_i -into $tb_portdepth_group -radix hex
+## add_wave /apatb_hdv_engine_top/LENGTH_frame_in -into $tb_portdepth_group -radix hex
+## add_wave /apatb_hdv_engine_top/LENGTH_lhv_i -into $tb_portdepth_group -radix hex
+## add_wave /apatb_hdv_engine_top/LENGTH_nrst_i -into $tb_portdepth_group -radix hex
+## add_wave /apatb_hdv_engine_top/LENGTH_op_mode_i -into $tb_portdepth_group -radix hex
+## add_wave /apatb_hdv_engine_top/LENGTH_pred_class_o -into $tb_portdepth_group -radix hex
+## add_wave /apatb_hdv_engine_top/LENGTH_sdata_i_V_data_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_hdv_engine_top/LENGTH_sdata_i_V_dest_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_hdv_engine_top/LENGTH_sdata_i_V_id_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_hdv_engine_top/LENGTH_sdata_i_V_keep_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_hdv_engine_top/LENGTH_sdata_i_V_last_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_hdv_engine_top/LENGTH_sdata_i_V_strb_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_hdv_engine_top/LENGTH_sdata_i_V_user_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_hdv_engine_top/LENGTH_status_o -into $tb_portdepth_group -radix hex
+## set tbcoutputgroup [add_wave_group "C Outputs" -into $testbenchgroup]
+## set tb_return_group [add_wave_group return(wire) -into $tbcoutputgroup]
+## add_wave /apatb_hdv_engine_top/status_o -into $tb_return_group -radix hex
+## add_wave /apatb_hdv_engine_top/pred_class_o -into $tb_return_group -radix hex
+## set tbcinputgroup [add_wave_group "C Inputs" -into $testbenchgroup]
+## set tb_return_group [add_wave_group return(wire) -into $tbcinputgroup]
+## add_wave /apatb_hdv_engine_top/lhv_i -into $tb_return_group -radix hex
+## add_wave /apatb_hdv_engine_top/bhv_i -into $tb_return_group -radix hex
+## add_wave /apatb_hdv_engine_top/chv_i -into $tb_return_group -radix hex
+## add_wave /apatb_hdv_engine_top/sdata_i_TDEST -into $tb_return_group -radix hex
+## add_wave /apatb_hdv_engine_top/sdata_i_TID -into $tb_return_group -radix hex
+## add_wave /apatb_hdv_engine_top/sdata_i_TLAST -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_hdv_engine_top/sdata_i_TUSER -into $tb_return_group -radix hex
+## add_wave /apatb_hdv_engine_top/sdata_i_TSTRB -into $tb_return_group -radix hex
+## add_wave /apatb_hdv_engine_top/sdata_i_TKEEP -into $tb_return_group -radix hex
+## add_wave /apatb_hdv_engine_top/sdata_i_TREADY -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_hdv_engine_top/sdata_i_TVALID -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_hdv_engine_top/sdata_i_TDATA -into $tb_return_group -radix hex
+## add_wave /apatb_hdv_engine_top/frame_in -into $tb_return_group -radix hex
+## add_wave /apatb_hdv_engine_top/op_mode_i -into $tb_return_group -radix hex
+## add_wave /apatb_hdv_engine_top/nrst_i -into $tb_return_group -radix hex
+## save_wave_config hdv_engine.wcfg
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 578 [n/a] @ "113000"
+// RTL Simulation : 1 / 578 [n/a] @ "148000"
+// RTL Simulation : 2 / 578 [n/a] @ "183000"
+// RTL Simulation : 3 / 578 [n/a] @ "218000"
+// RTL Simulation : 4 / 578 [n/a] @ "253000"
+// RTL Simulation : 5 / 578 [n/a] @ "288000"
+// RTL Simulation : 6 / 578 [n/a] @ "323000"
+// RTL Simulation : 7 / 578 [n/a] @ "358000"
+// RTL Simulation : 8 / 578 [n/a] @ "393000"
+// RTL Simulation : 9 / 578 [n/a] @ "428000"
+// RTL Simulation : 10 / 578 [n/a] @ "463000"
+// RTL Simulation : 11 / 578 [n/a] @ "498000"
+// RTL Simulation : 12 / 578 [n/a] @ "533000"
+// RTL Simulation : 13 / 578 [n/a] @ "568000"
+// RTL Simulation : 14 / 578 [n/a] @ "603000"
+// RTL Simulation : 15 / 578 [n/a] @ "638000"
+// RTL Simulation : 16 / 578 [n/a] @ "673000"
+// RTL Simulation : 17 / 578 [n/a] @ "708000"
+// RTL Simulation : 18 / 578 [n/a] @ "743000"
+// RTL Simulation : 19 / 578 [n/a] @ "778000"
+// RTL Simulation : 20 / 578 [n/a] @ "813000"
+// RTL Simulation : 21 / 578 [n/a] @ "848000"
+// RTL Simulation : 22 / 578 [n/a] @ "883000"
+// RTL Simulation : 23 / 578 [n/a] @ "918000"
+// RTL Simulation : 24 / 578 [n/a] @ "1038000"
+// RTL Simulation : 25 / 578 [n/a] @ "1158000"
+// RTL Simulation : 26 / 578 [n/a] @ "1278000"
+// RTL Simulation : 27 / 578 [n/a] @ "1313000"
+// RTL Simulation : 28 / 578 [n/a] @ "1348000"
+// RTL Simulation : 29 / 578 [n/a] @ "1383000"
+// RTL Simulation : 30 / 578 [n/a] @ "1418000"
+// RTL Simulation : 31 / 578 [n/a] @ "1453000"
+// RTL Simulation : 32 / 578 [n/a] @ "1488000"
+// RTL Simulation : 33 / 578 [n/a] @ "1523000"
+// RTL Simulation : 34 / 578 [n/a] @ "1558000"
+// RTL Simulation : 35 / 578 [n/a] @ "1593000"
+// RTL Simulation : 36 / 578 [n/a] @ "1628000"
+// RTL Simulation : 37 / 578 [n/a] @ "1663000"
+// RTL Simulation : 38 / 578 [n/a] @ "1698000"
+// RTL Simulation : 39 / 578 [n/a] @ "1733000"
+// RTL Simulation : 40 / 578 [n/a] @ "1768000"
+// RTL Simulation : 41 / 578 [n/a] @ "1803000"
+// RTL Simulation : 42 / 578 [n/a] @ "1838000"
+// RTL Simulation : 43 / 578 [n/a] @ "1873000"
+// RTL Simulation : 44 / 578 [n/a] @ "1908000"
+// RTL Simulation : 45 / 578 [n/a] @ "1943000"
+// RTL Simulation : 46 / 578 [n/a] @ "1978000"
+// RTL Simulation : 47 / 578 [n/a] @ "2013000"
+// RTL Simulation : 48 / 578 [n/a] @ "2133000"
+// RTL Simulation : 49 / 578 [n/a] @ "2253000"
+// RTL Simulation : 50 / 578 [n/a] @ "2373000"
+// RTL Simulation : 51 / 578 [n/a] @ "2408000"
+// RTL Simulation : 52 / 578 [n/a] @ "2443000"
+// RTL Simulation : 53 / 578 [n/a] @ "2478000"
+// RTL Simulation : 54 / 578 [n/a] @ "2513000"
+// RTL Simulation : 55 / 578 [n/a] @ "2548000"
+// RTL Simulation : 56 / 578 [n/a] @ "2583000"
+// RTL Simulation : 57 / 578 [n/a] @ "2618000"
+// RTL Simulation : 58 / 578 [n/a] @ "2653000"
+// RTL Simulation : 59 / 578 [n/a] @ "2688000"
+// RTL Simulation : 60 / 578 [n/a] @ "2723000"
+// RTL Simulation : 61 / 578 [n/a] @ "2758000"
+// RTL Simulation : 62 / 578 [n/a] @ "2793000"
+// RTL Simulation : 63 / 578 [n/a] @ "2828000"
+// RTL Simulation : 64 / 578 [n/a] @ "2863000"
+// RTL Simulation : 65 / 578 [n/a] @ "2898000"
+// RTL Simulation : 66 / 578 [n/a] @ "2933000"
+// RTL Simulation : 67 / 578 [n/a] @ "2968000"
+// RTL Simulation : 68 / 578 [n/a] @ "3003000"
+// RTL Simulation : 69 / 578 [n/a] @ "3038000"
+// RTL Simulation : 70 / 578 [n/a] @ "3073000"
+// RTL Simulation : 71 / 578 [n/a] @ "3108000"
+// RTL Simulation : 72 / 578 [n/a] @ "3228000"
+// RTL Simulation : 73 / 578 [n/a] @ "3348000"
+// RTL Simulation : 74 / 578 [n/a] @ "3468000"
+// RTL Simulation : 75 / 578 [n/a] @ "3503000"
+// RTL Simulation : 76 / 578 [n/a] @ "3538000"
+// RTL Simulation : 77 / 578 [n/a] @ "3573000"
+// RTL Simulation : 78 / 578 [n/a] @ "3608000"
+// RTL Simulation : 79 / 578 [n/a] @ "3643000"
+// RTL Simulation : 80 / 578 [n/a] @ "3678000"
+// RTL Simulation : 81 / 578 [n/a] @ "3713000"
+// RTL Simulation : 82 / 578 [n/a] @ "3748000"
+// RTL Simulation : 83 / 578 [n/a] @ "3783000"
+// RTL Simulation : 84 / 578 [n/a] @ "3818000"
+// RTL Simulation : 85 / 578 [n/a] @ "3853000"
+// RTL Simulation : 86 / 578 [n/a] @ "3888000"
+// RTL Simulation : 87 / 578 [n/a] @ "3923000"
+// RTL Simulation : 88 / 578 [n/a] @ "3958000"
+// RTL Simulation : 89 / 578 [n/a] @ "3993000"
+// RTL Simulation : 90 / 578 [n/a] @ "4028000"
+// RTL Simulation : 91 / 578 [n/a] @ "4063000"
+// RTL Simulation : 92 / 578 [n/a] @ "4098000"
+// RTL Simulation : 93 / 578 [n/a] @ "4133000"
+// RTL Simulation : 94 / 578 [n/a] @ "4168000"
+// RTL Simulation : 95 / 578 [n/a] @ "4203000"
+// RTL Simulation : 96 / 578 [n/a] @ "4323000"
+// RTL Simulation : 97 / 578 [n/a] @ "4443000"
+// RTL Simulation : 98 / 578 [n/a] @ "4563000"
+// RTL Simulation : 99 / 578 [n/a] @ "4598000"
+// RTL Simulation : 100 / 578 [n/a] @ "4633000"
+// RTL Simulation : 101 / 578 [n/a] @ "4668000"
+// RTL Simulation : 102 / 578 [n/a] @ "4703000"
+// RTL Simulation : 103 / 578 [n/a] @ "4738000"
+// RTL Simulation : 104 / 578 [n/a] @ "4773000"
+// RTL Simulation : 105 / 578 [n/a] @ "4808000"
+// RTL Simulation : 106 / 578 [n/a] @ "4843000"
+// RTL Simulation : 107 / 578 [n/a] @ "4878000"
+// RTL Simulation : 108 / 578 [n/a] @ "4913000"
+// RTL Simulation : 109 / 578 [n/a] @ "4948000"
+// RTL Simulation : 110 / 578 [n/a] @ "4983000"
+// RTL Simulation : 111 / 578 [n/a] @ "5018000"
+// RTL Simulation : 112 / 578 [n/a] @ "5053000"
+// RTL Simulation : 113 / 578 [n/a] @ "5088000"
+// RTL Simulation : 114 / 578 [n/a] @ "5123000"
+// RTL Simulation : 115 / 578 [n/a] @ "5158000"
+// RTL Simulation : 116 / 578 [n/a] @ "5193000"
+// RTL Simulation : 117 / 578 [n/a] @ "5228000"
+// RTL Simulation : 118 / 578 [n/a] @ "5263000"
+// RTL Simulation : 119 / 578 [n/a] @ "5298000"
+// RTL Simulation : 120 / 578 [n/a] @ "5418000"
+// RTL Simulation : 121 / 578 [n/a] @ "5538000"
+// RTL Simulation : 122 / 578 [n/a] @ "5658000"
+// RTL Simulation : 123 / 578 [n/a] @ "5693000"
+// RTL Simulation : 124 / 578 [n/a] @ "5728000"
+// RTL Simulation : 125 / 578 [n/a] @ "5763000"
+// RTL Simulation : 126 / 578 [n/a] @ "5798000"
+// RTL Simulation : 127 / 578 [n/a] @ "5833000"
+// RTL Simulation : 128 / 578 [n/a] @ "5868000"
+// RTL Simulation : 129 / 578 [n/a] @ "5903000"
+// RTL Simulation : 130 / 578 [n/a] @ "5938000"
+// RTL Simulation : 131 / 578 [n/a] @ "5973000"
+// RTL Simulation : 132 / 578 [n/a] @ "6008000"
+// RTL Simulation : 133 / 578 [n/a] @ "6043000"
+// RTL Simulation : 134 / 578 [n/a] @ "6078000"
+// RTL Simulation : 135 / 578 [n/a] @ "6113000"
+// RTL Simulation : 136 / 578 [n/a] @ "6148000"
+// RTL Simulation : 137 / 578 [n/a] @ "6183000"
+// RTL Simulation : 138 / 578 [n/a] @ "6218000"
+// RTL Simulation : 139 / 578 [n/a] @ "6253000"
+// RTL Simulation : 140 / 578 [n/a] @ "6288000"
+// RTL Simulation : 141 / 578 [n/a] @ "6323000"
+// RTL Simulation : 142 / 578 [n/a] @ "6358000"
+// RTL Simulation : 143 / 578 [n/a] @ "6393000"
+// RTL Simulation : 144 / 578 [n/a] @ "6513000"
+// RTL Simulation : 145 / 578 [n/a] @ "6633000"
+// RTL Simulation : 146 / 578 [n/a] @ "6753000"
+// RTL Simulation : 147 / 578 [n/a] @ "6788000"
+// RTL Simulation : 148 / 578 [n/a] @ "6823000"
+// RTL Simulation : 149 / 578 [n/a] @ "6858000"
+// RTL Simulation : 150 / 578 [n/a] @ "6893000"
+// RTL Simulation : 151 / 578 [n/a] @ "6928000"
+// RTL Simulation : 152 / 578 [n/a] @ "6963000"
+// RTL Simulation : 153 / 578 [n/a] @ "6998000"
+// RTL Simulation : 154 / 578 [n/a] @ "7033000"
+// RTL Simulation : 155 / 578 [n/a] @ "7068000"
+// RTL Simulation : 156 / 578 [n/a] @ "7103000"
+// RTL Simulation : 157 / 578 [n/a] @ "7138000"
+// RTL Simulation : 158 / 578 [n/a] @ "7173000"
+// RTL Simulation : 159 / 578 [n/a] @ "7208000"
+// RTL Simulation : 160 / 578 [n/a] @ "7243000"
+// RTL Simulation : 161 / 578 [n/a] @ "7278000"
+// RTL Simulation : 162 / 578 [n/a] @ "7313000"
+// RTL Simulation : 163 / 578 [n/a] @ "7348000"
+// RTL Simulation : 164 / 578 [n/a] @ "7383000"
+// RTL Simulation : 165 / 578 [n/a] @ "7418000"
+// RTL Simulation : 166 / 578 [n/a] @ "7453000"
+// RTL Simulation : 167 / 578 [n/a] @ "7488000"
+// RTL Simulation : 168 / 578 [n/a] @ "7608000"
+// RTL Simulation : 169 / 578 [n/a] @ "7728000"
+// RTL Simulation : 170 / 578 [n/a] @ "7848000"
+// RTL Simulation : 171 / 578 [n/a] @ "7883000"
+// RTL Simulation : 172 / 578 [n/a] @ "7918000"
+// RTL Simulation : 173 / 578 [n/a] @ "7953000"
+// RTL Simulation : 174 / 578 [n/a] @ "7988000"
+// RTL Simulation : 175 / 578 [n/a] @ "8023000"
+// RTL Simulation : 176 / 578 [n/a] @ "8058000"
+// RTL Simulation : 177 / 578 [n/a] @ "8093000"
+// RTL Simulation : 178 / 578 [n/a] @ "8128000"
+// RTL Simulation : 179 / 578 [n/a] @ "8163000"
+// RTL Simulation : 180 / 578 [n/a] @ "8198000"
+// RTL Simulation : 181 / 578 [n/a] @ "8233000"
+// RTL Simulation : 182 / 578 [n/a] @ "8268000"
+// RTL Simulation : 183 / 578 [n/a] @ "8303000"
+// RTL Simulation : 184 / 578 [n/a] @ "8338000"
+// RTL Simulation : 185 / 578 [n/a] @ "8373000"
+// RTL Simulation : 186 / 578 [n/a] @ "8408000"
+// RTL Simulation : 187 / 578 [n/a] @ "8443000"
+// RTL Simulation : 188 / 578 [n/a] @ "8478000"
+// RTL Simulation : 189 / 578 [n/a] @ "8513000"
+// RTL Simulation : 190 / 578 [n/a] @ "8548000"
+// RTL Simulation : 191 / 578 [n/a] @ "8583000"
+// RTL Simulation : 192 / 578 [n/a] @ "8703000"
+// RTL Simulation : 193 / 578 [n/a] @ "8823000"
+// RTL Simulation : 194 / 578 [n/a] @ "8963000"
+// RTL Simulation : 195 / 578 [n/a] @ "8998000"
+// RTL Simulation : 196 / 578 [n/a] @ "9033000"
+// RTL Simulation : 197 / 578 [n/a] @ "9068000"
+// RTL Simulation : 198 / 578 [n/a] @ "9103000"
+// RTL Simulation : 199 / 578 [n/a] @ "9138000"
+// RTL Simulation : 200 / 578 [n/a] @ "9173000"
+// RTL Simulation : 201 / 578 [n/a] @ "9208000"
+// RTL Simulation : 202 / 578 [n/a] @ "9243000"
+// RTL Simulation : 203 / 578 [n/a] @ "9278000"
+// RTL Simulation : 204 / 578 [n/a] @ "9313000"
+// RTL Simulation : 205 / 578 [n/a] @ "9348000"
+// RTL Simulation : 206 / 578 [n/a] @ "9383000"
+// RTL Simulation : 207 / 578 [n/a] @ "9418000"
+// RTL Simulation : 208 / 578 [n/a] @ "9453000"
+// RTL Simulation : 209 / 578 [n/a] @ "9488000"
+// RTL Simulation : 210 / 578 [n/a] @ "9523000"
+// RTL Simulation : 211 / 578 [n/a] @ "9558000"
+// RTL Simulation : 212 / 578 [n/a] @ "9593000"
+// RTL Simulation : 213 / 578 [n/a] @ "9628000"
+// RTL Simulation : 214 / 578 [n/a] @ "9663000"
+// RTL Simulation : 215 / 578 [n/a] @ "9698000"
+// RTL Simulation : 216 / 578 [n/a] @ "9818000"
+// RTL Simulation : 217 / 578 [n/a] @ "9938000"
+// RTL Simulation : 218 / 578 [n/a] @ "10058000"
+// RTL Simulation : 219 / 578 [n/a] @ "10093000"
+// RTL Simulation : 220 / 578 [n/a] @ "10128000"
+// RTL Simulation : 221 / 578 [n/a] @ "10163000"
+// RTL Simulation : 222 / 578 [n/a] @ "10198000"
+// RTL Simulation : 223 / 578 [n/a] @ "10233000"
+// RTL Simulation : 224 / 578 [n/a] @ "10268000"
+// RTL Simulation : 225 / 578 [n/a] @ "10303000"
+// RTL Simulation : 226 / 578 [n/a] @ "10338000"
+// RTL Simulation : 227 / 578 [n/a] @ "10373000"
+// RTL Simulation : 228 / 578 [n/a] @ "10408000"
+// RTL Simulation : 229 / 578 [n/a] @ "10443000"
+// RTL Simulation : 230 / 578 [n/a] @ "10478000"
+// RTL Simulation : 231 / 578 [n/a] @ "10513000"
+// RTL Simulation : 232 / 578 [n/a] @ "10548000"
+// RTL Simulation : 233 / 578 [n/a] @ "10583000"
+// RTL Simulation : 234 / 578 [n/a] @ "10618000"
+// RTL Simulation : 235 / 578 [n/a] @ "10653000"
+// RTL Simulation : 236 / 578 [n/a] @ "10688000"
+// RTL Simulation : 237 / 578 [n/a] @ "10723000"
+// RTL Simulation : 238 / 578 [n/a] @ "10758000"
+// RTL Simulation : 239 / 578 [n/a] @ "10793000"
+// RTL Simulation : 240 / 578 [n/a] @ "10913000"
+// RTL Simulation : 241 / 578 [n/a] @ "11033000"
+// RTL Simulation : 242 / 578 [n/a] @ "11153000"
+// RTL Simulation : 243 / 578 [n/a] @ "11188000"
+// RTL Simulation : 244 / 578 [n/a] @ "11223000"
+// RTL Simulation : 245 / 578 [n/a] @ "11258000"
+// RTL Simulation : 246 / 578 [n/a] @ "11293000"
+// RTL Simulation : 247 / 578 [n/a] @ "11328000"
+// RTL Simulation : 248 / 578 [n/a] @ "11363000"
+// RTL Simulation : 249 / 578 [n/a] @ "11398000"
+// RTL Simulation : 250 / 578 [n/a] @ "11433000"
+// RTL Simulation : 251 / 578 [n/a] @ "11468000"
+// RTL Simulation : 252 / 578 [n/a] @ "11503000"
+// RTL Simulation : 253 / 578 [n/a] @ "11538000"
+// RTL Simulation : 254 / 578 [n/a] @ "11573000"
+// RTL Simulation : 255 / 578 [n/a] @ "11608000"
+// RTL Simulation : 256 / 578 [n/a] @ "11643000"
+// RTL Simulation : 257 / 578 [n/a] @ "11678000"
+// RTL Simulation : 258 / 578 [n/a] @ "11713000"
+// RTL Simulation : 259 / 578 [n/a] @ "11748000"
+// RTL Simulation : 260 / 578 [n/a] @ "11783000"
+// RTL Simulation : 261 / 578 [n/a] @ "11818000"
+// RTL Simulation : 262 / 578 [n/a] @ "11853000"
+// RTL Simulation : 263 / 578 [n/a] @ "11888000"
+// RTL Simulation : 264 / 578 [n/a] @ "12008000"
+// RTL Simulation : 265 / 578 [n/a] @ "12128000"
+// RTL Simulation : 266 / 578 [n/a] @ "12248000"
+// RTL Simulation : 267 / 578 [n/a] @ "12283000"
+// RTL Simulation : 268 / 578 [n/a] @ "12318000"
+// RTL Simulation : 269 / 578 [n/a] @ "12353000"
+// RTL Simulation : 270 / 578 [n/a] @ "12388000"
+// RTL Simulation : 271 / 578 [n/a] @ "12423000"
+// RTL Simulation : 272 / 578 [n/a] @ "12458000"
+// RTL Simulation : 273 / 578 [n/a] @ "12493000"
+// RTL Simulation : 274 / 578 [n/a] @ "12528000"
+// RTL Simulation : 275 / 578 [n/a] @ "12563000"
+// RTL Simulation : 276 / 578 [n/a] @ "12598000"
+// RTL Simulation : 277 / 578 [n/a] @ "12633000"
+// RTL Simulation : 278 / 578 [n/a] @ "12668000"
+// RTL Simulation : 279 / 578 [n/a] @ "12703000"
+// RTL Simulation : 280 / 578 [n/a] @ "12738000"
+// RTL Simulation : 281 / 578 [n/a] @ "12773000"
+// RTL Simulation : 282 / 578 [n/a] @ "12808000"
+// RTL Simulation : 283 / 578 [n/a] @ "12843000"
+// RTL Simulation : 284 / 578 [n/a] @ "12878000"
+// RTL Simulation : 285 / 578 [n/a] @ "12913000"
+// RTL Simulation : 286 / 578 [n/a] @ "12948000"
+// RTL Simulation : 287 / 578 [n/a] @ "12983000"
+// RTL Simulation : 288 / 578 [n/a] @ "13103000"
+// RTL Simulation : 289 / 578 [n/a] @ "13223000"
+// RTL Simulation : 290 / 578 [n/a] @ "13343000"
+// RTL Simulation : 291 / 578 [n/a] @ "13378000"
+// RTL Simulation : 292 / 578 [n/a] @ "13413000"
+// RTL Simulation : 293 / 578 [n/a] @ "13448000"
+// RTL Simulation : 294 / 578 [n/a] @ "13483000"
+// RTL Simulation : 295 / 578 [n/a] @ "13518000"
+// RTL Simulation : 296 / 578 [n/a] @ "13553000"
+// RTL Simulation : 297 / 578 [n/a] @ "13588000"
+// RTL Simulation : 298 / 578 [n/a] @ "13623000"
+// RTL Simulation : 299 / 578 [n/a] @ "13658000"
+// RTL Simulation : 300 / 578 [n/a] @ "13693000"
+// RTL Simulation : 301 / 578 [n/a] @ "13728000"
+// RTL Simulation : 302 / 578 [n/a] @ "13763000"
+// RTL Simulation : 303 / 578 [n/a] @ "13798000"
+// RTL Simulation : 304 / 578 [n/a] @ "13833000"
+// RTL Simulation : 305 / 578 [n/a] @ "13868000"
+// RTL Simulation : 306 / 578 [n/a] @ "13903000"
+// RTL Simulation : 307 / 578 [n/a] @ "13938000"
+// RTL Simulation : 308 / 578 [n/a] @ "13973000"
+// RTL Simulation : 309 / 578 [n/a] @ "14008000"
+// RTL Simulation : 310 / 578 [n/a] @ "14043000"
+// RTL Simulation : 311 / 578 [n/a] @ "14078000"
+// RTL Simulation : 312 / 578 [n/a] @ "14198000"
+// RTL Simulation : 313 / 578 [n/a] @ "14318000"
+// RTL Simulation : 314 / 578 [n/a] @ "14438000"
+// RTL Simulation : 315 / 578 [n/a] @ "14473000"
+// RTL Simulation : 316 / 578 [n/a] @ "14508000"
+// RTL Simulation : 317 / 578 [n/a] @ "14543000"
+// RTL Simulation : 318 / 578 [n/a] @ "14578000"
+// RTL Simulation : 319 / 578 [n/a] @ "14613000"
+// RTL Simulation : 320 / 578 [n/a] @ "14648000"
+// RTL Simulation : 321 / 578 [n/a] @ "14683000"
+// RTL Simulation : 322 / 578 [n/a] @ "14718000"
+// RTL Simulation : 323 / 578 [n/a] @ "14753000"
+// RTL Simulation : 324 / 578 [n/a] @ "14788000"
+// RTL Simulation : 325 / 578 [n/a] @ "14823000"
+// RTL Simulation : 326 / 578 [n/a] @ "14858000"
+// RTL Simulation : 327 / 578 [n/a] @ "14893000"
+// RTL Simulation : 328 / 578 [n/a] @ "14928000"
+// RTL Simulation : 329 / 578 [n/a] @ "14963000"
+// RTL Simulation : 330 / 578 [n/a] @ "14998000"
+// RTL Simulation : 331 / 578 [n/a] @ "15033000"
+// RTL Simulation : 332 / 578 [n/a] @ "15068000"
+// RTL Simulation : 333 / 578 [n/a] @ "15103000"
+// RTL Simulation : 334 / 578 [n/a] @ "15138000"
+// RTL Simulation : 335 / 578 [n/a] @ "15173000"
+// RTL Simulation : 336 / 578 [n/a] @ "15293000"
+// RTL Simulation : 337 / 578 [n/a] @ "15413000"
+// RTL Simulation : 338 / 578 [n/a] @ "15533000"
+// RTL Simulation : 339 / 578 [n/a] @ "15568000"
+// RTL Simulation : 340 / 578 [n/a] @ "15603000"
+// RTL Simulation : 341 / 578 [n/a] @ "15638000"
+// RTL Simulation : 342 / 578 [n/a] @ "15673000"
+// RTL Simulation : 343 / 578 [n/a] @ "15708000"
+// RTL Simulation : 344 / 578 [n/a] @ "15743000"
+// RTL Simulation : 345 / 578 [n/a] @ "15778000"
+// RTL Simulation : 346 / 578 [n/a] @ "15813000"
+// RTL Simulation : 347 / 578 [n/a] @ "15848000"
+// RTL Simulation : 348 / 578 [n/a] @ "15883000"
+// RTL Simulation : 349 / 578 [n/a] @ "15918000"
+// RTL Simulation : 350 / 578 [n/a] @ "15953000"
+// RTL Simulation : 351 / 578 [n/a] @ "15988000"
+// RTL Simulation : 352 / 578 [n/a] @ "16023000"
+// RTL Simulation : 353 / 578 [n/a] @ "16058000"
+// RTL Simulation : 354 / 578 [n/a] @ "16093000"
+// RTL Simulation : 355 / 578 [n/a] @ "16128000"
+// RTL Simulation : 356 / 578 [n/a] @ "16163000"
+// RTL Simulation : 357 / 578 [n/a] @ "16198000"
+// RTL Simulation : 358 / 578 [n/a] @ "16233000"
+// RTL Simulation : 359 / 578 [n/a] @ "16268000"
+// RTL Simulation : 360 / 578 [n/a] @ "16388000"
+// RTL Simulation : 361 / 578 [n/a] @ "16508000"
+// RTL Simulation : 362 / 578 [n/a] @ "16628000"
+// RTL Simulation : 363 / 578 [n/a] @ "16663000"
+// RTL Simulation : 364 / 578 [n/a] @ "16698000"
+// RTL Simulation : 365 / 578 [n/a] @ "16733000"
+// RTL Simulation : 366 / 578 [n/a] @ "16768000"
+// RTL Simulation : 367 / 578 [n/a] @ "16803000"
+// RTL Simulation : 368 / 578 [n/a] @ "16838000"
+// RTL Simulation : 369 / 578 [n/a] @ "16873000"
+// RTL Simulation : 370 / 578 [n/a] @ "16908000"
+// RTL Simulation : 371 / 578 [n/a] @ "16943000"
+// RTL Simulation : 372 / 578 [n/a] @ "16978000"
+// RTL Simulation : 373 / 578 [n/a] @ "17013000"
+// RTL Simulation : 374 / 578 [n/a] @ "17048000"
+// RTL Simulation : 375 / 578 [n/a] @ "17083000"
+// RTL Simulation : 376 / 578 [n/a] @ "17118000"
+// RTL Simulation : 377 / 578 [n/a] @ "17153000"
+// RTL Simulation : 378 / 578 [n/a] @ "17188000"
+// RTL Simulation : 379 / 578 [n/a] @ "17223000"
+// RTL Simulation : 380 / 578 [n/a] @ "17258000"
+// RTL Simulation : 381 / 578 [n/a] @ "17293000"
+// RTL Simulation : 382 / 578 [n/a] @ "17328000"
+// RTL Simulation : 383 / 578 [n/a] @ "17363000"
+// RTL Simulation : 384 / 578 [n/a] @ "17483000"
+// RTL Simulation : 385 / 578 [n/a] @ "17603000"
+// RTL Simulation : 386 / 578 [n/a] @ "17743000"
+// RTL Simulation : 387 / 578 [n/a] @ "17778000"
+// RTL Simulation : 388 / 578 [n/a] @ "17813000"
+// RTL Simulation : 389 / 578 [n/a] @ "17848000"
+// RTL Simulation : 390 / 578 [n/a] @ "17883000"
+// RTL Simulation : 391 / 578 [n/a] @ "17918000"
+// RTL Simulation : 392 / 578 [n/a] @ "17953000"
+// RTL Simulation : 393 / 578 [n/a] @ "17988000"
+// RTL Simulation : 394 / 578 [n/a] @ "18023000"
+// RTL Simulation : 395 / 578 [n/a] @ "18058000"
+// RTL Simulation : 396 / 578 [n/a] @ "18093000"
+// RTL Simulation : 397 / 578 [n/a] @ "18128000"
+// RTL Simulation : 398 / 578 [n/a] @ "18163000"
+// RTL Simulation : 399 / 578 [n/a] @ "18198000"
+// RTL Simulation : 400 / 578 [n/a] @ "18233000"
+// RTL Simulation : 401 / 578 [n/a] @ "18268000"
+// RTL Simulation : 402 / 578 [n/a] @ "18303000"
+// RTL Simulation : 403 / 578 [n/a] @ "18338000"
+// RTL Simulation : 404 / 578 [n/a] @ "18373000"
+// RTL Simulation : 405 / 578 [n/a] @ "18408000"
+// RTL Simulation : 406 / 578 [n/a] @ "18443000"
+// RTL Simulation : 407 / 578 [n/a] @ "18478000"
+// RTL Simulation : 408 / 578 [n/a] @ "18598000"
+// RTL Simulation : 409 / 578 [n/a] @ "18718000"
+// RTL Simulation : 410 / 578 [n/a] @ "18838000"
+// RTL Simulation : 411 / 578 [n/a] @ "18873000"
+// RTL Simulation : 412 / 578 [n/a] @ "18908000"
+// RTL Simulation : 413 / 578 [n/a] @ "18943000"
+// RTL Simulation : 414 / 578 [n/a] @ "18978000"
+// RTL Simulation : 415 / 578 [n/a] @ "19013000"
+// RTL Simulation : 416 / 578 [n/a] @ "19048000"
+// RTL Simulation : 417 / 578 [n/a] @ "19083000"
+// RTL Simulation : 418 / 578 [n/a] @ "19118000"
+// RTL Simulation : 419 / 578 [n/a] @ "19153000"
+// RTL Simulation : 420 / 578 [n/a] @ "19188000"
+// RTL Simulation : 421 / 578 [n/a] @ "19223000"
+// RTL Simulation : 422 / 578 [n/a] @ "19258000"
+// RTL Simulation : 423 / 578 [n/a] @ "19293000"
+// RTL Simulation : 424 / 578 [n/a] @ "19328000"
+// RTL Simulation : 425 / 578 [n/a] @ "19363000"
+// RTL Simulation : 426 / 578 [n/a] @ "19398000"
+// RTL Simulation : 427 / 578 [n/a] @ "19433000"
+// RTL Simulation : 428 / 578 [n/a] @ "19468000"
+// RTL Simulation : 429 / 578 [n/a] @ "19503000"
+// RTL Simulation : 430 / 578 [n/a] @ "19538000"
+// RTL Simulation : 431 / 578 [n/a] @ "19573000"
+// RTL Simulation : 432 / 578 [n/a] @ "19693000"
+// RTL Simulation : 433 / 578 [n/a] @ "19813000"
+// RTL Simulation : 434 / 578 [n/a] @ "19933000"
+// RTL Simulation : 435 / 578 [n/a] @ "19968000"
+// RTL Simulation : 436 / 578 [n/a] @ "20003000"
+// RTL Simulation : 437 / 578 [n/a] @ "20038000"
+// RTL Simulation : 438 / 578 [n/a] @ "20073000"
+// RTL Simulation : 439 / 578 [n/a] @ "20108000"
+// RTL Simulation : 440 / 578 [n/a] @ "20143000"
+// RTL Simulation : 441 / 578 [n/a] @ "20178000"
+// RTL Simulation : 442 / 578 [n/a] @ "20213000"
+// RTL Simulation : 443 / 578 [n/a] @ "20248000"
+// RTL Simulation : 444 / 578 [n/a] @ "20283000"
+// RTL Simulation : 445 / 578 [n/a] @ "20318000"
+// RTL Simulation : 446 / 578 [n/a] @ "20353000"
+// RTL Simulation : 447 / 578 [n/a] @ "20388000"
+// RTL Simulation : 448 / 578 [n/a] @ "20423000"
+// RTL Simulation : 449 / 578 [n/a] @ "20458000"
+// RTL Simulation : 450 / 578 [n/a] @ "20493000"
+// RTL Simulation : 451 / 578 [n/a] @ "20528000"
+// RTL Simulation : 452 / 578 [n/a] @ "20563000"
+// RTL Simulation : 453 / 578 [n/a] @ "20598000"
+// RTL Simulation : 454 / 578 [n/a] @ "20633000"
+// RTL Simulation : 455 / 578 [n/a] @ "20668000"
+// RTL Simulation : 456 / 578 [n/a] @ "20788000"
+// RTL Simulation : 457 / 578 [n/a] @ "20908000"
+// RTL Simulation : 458 / 578 [n/a] @ "21028000"
+// RTL Simulation : 459 / 578 [n/a] @ "21063000"
+// RTL Simulation : 460 / 578 [n/a] @ "21098000"
+// RTL Simulation : 461 / 578 [n/a] @ "21133000"
+// RTL Simulation : 462 / 578 [n/a] @ "21168000"
+// RTL Simulation : 463 / 578 [n/a] @ "21203000"
+// RTL Simulation : 464 / 578 [n/a] @ "21238000"
+// RTL Simulation : 465 / 578 [n/a] @ "21273000"
+// RTL Simulation : 466 / 578 [n/a] @ "21308000"
+// RTL Simulation : 467 / 578 [n/a] @ "21343000"
+// RTL Simulation : 468 / 578 [n/a] @ "21378000"
+// RTL Simulation : 469 / 578 [n/a] @ "21413000"
+// RTL Simulation : 470 / 578 [n/a] @ "21448000"
+// RTL Simulation : 471 / 578 [n/a] @ "21483000"
+// RTL Simulation : 472 / 578 [n/a] @ "21518000"
+// RTL Simulation : 473 / 578 [n/a] @ "21553000"
+// RTL Simulation : 474 / 578 [n/a] @ "21588000"
+// RTL Simulation : 475 / 578 [n/a] @ "21623000"
+// RTL Simulation : 476 / 578 [n/a] @ "21658000"
+// RTL Simulation : 477 / 578 [n/a] @ "21693000"
+// RTL Simulation : 478 / 578 [n/a] @ "21728000"
+// RTL Simulation : 479 / 578 [n/a] @ "21763000"
+// RTL Simulation : 480 / 578 [n/a] @ "21883000"
+// RTL Simulation : 481 / 578 [n/a] @ "22003000"
+// RTL Simulation : 482 / 578 [n/a] @ "22123000"
+// RTL Simulation : 483 / 578 [n/a] @ "22158000"
+// RTL Simulation : 484 / 578 [n/a] @ "22193000"
+// RTL Simulation : 485 / 578 [n/a] @ "22228000"
+// RTL Simulation : 486 / 578 [n/a] @ "22263000"
+// RTL Simulation : 487 / 578 [n/a] @ "22298000"
+// RTL Simulation : 488 / 578 [n/a] @ "22333000"
+// RTL Simulation : 489 / 578 [n/a] @ "22368000"
+// RTL Simulation : 490 / 578 [n/a] @ "22403000"
+// RTL Simulation : 491 / 578 [n/a] @ "22438000"
+// RTL Simulation : 492 / 578 [n/a] @ "22473000"
+// RTL Simulation : 493 / 578 [n/a] @ "22508000"
+// RTL Simulation : 494 / 578 [n/a] @ "22543000"
+// RTL Simulation : 495 / 578 [n/a] @ "22578000"
+// RTL Simulation : 496 / 578 [n/a] @ "22613000"
+// RTL Simulation : 497 / 578 [n/a] @ "22648000"
+// RTL Simulation : 498 / 578 [n/a] @ "22683000"
+// RTL Simulation : 499 / 578 [n/a] @ "22718000"
+// RTL Simulation : 500 / 578 [n/a] @ "22753000"
+// RTL Simulation : 501 / 578 [n/a] @ "22788000"
+// RTL Simulation : 502 / 578 [n/a] @ "22823000"
+// RTL Simulation : 503 / 578 [n/a] @ "22858000"
+// RTL Simulation : 504 / 578 [n/a] @ "22978000"
+// RTL Simulation : 505 / 578 [n/a] @ "23098000"
+// RTL Simulation : 506 / 578 [n/a] @ "23218000"
+// RTL Simulation : 507 / 578 [n/a] @ "23253000"
+// RTL Simulation : 508 / 578 [n/a] @ "23288000"
+// RTL Simulation : 509 / 578 [n/a] @ "23323000"
+// RTL Simulation : 510 / 578 [n/a] @ "23358000"
+// RTL Simulation : 511 / 578 [n/a] @ "23393000"
+// RTL Simulation : 512 / 578 [n/a] @ "23428000"
+// RTL Simulation : 513 / 578 [n/a] @ "23463000"
+// RTL Simulation : 514 / 578 [n/a] @ "23498000"
+// RTL Simulation : 515 / 578 [n/a] @ "23533000"
+// RTL Simulation : 516 / 578 [n/a] @ "23568000"
+// RTL Simulation : 517 / 578 [n/a] @ "23603000"
+// RTL Simulation : 518 / 578 [n/a] @ "23638000"
+// RTL Simulation : 519 / 578 [n/a] @ "23673000"
+// RTL Simulation : 520 / 578 [n/a] @ "23708000"
+// RTL Simulation : 521 / 578 [n/a] @ "23743000"
+// RTL Simulation : 522 / 578 [n/a] @ "23778000"
+// RTL Simulation : 523 / 578 [n/a] @ "23813000"
+// RTL Simulation : 524 / 578 [n/a] @ "23848000"
+// RTL Simulation : 525 / 578 [n/a] @ "23883000"
+// RTL Simulation : 526 / 578 [n/a] @ "23918000"
+// RTL Simulation : 527 / 578 [n/a] @ "23953000"
+// RTL Simulation : 528 / 578 [n/a] @ "24073000"
+// RTL Simulation : 529 / 578 [n/a] @ "24193000"
+// RTL Simulation : 530 / 578 [n/a] @ "24313000"
+// RTL Simulation : 531 / 578 [n/a] @ "24348000"
+// RTL Simulation : 532 / 578 [n/a] @ "24383000"
+// RTL Simulation : 533 / 578 [n/a] @ "24418000"
+// RTL Simulation : 534 / 578 [n/a] @ "24453000"
+// RTL Simulation : 535 / 578 [n/a] @ "24488000"
+// RTL Simulation : 536 / 578 [n/a] @ "24523000"
+// RTL Simulation : 537 / 578 [n/a] @ "24558000"
+// RTL Simulation : 538 / 578 [n/a] @ "24593000"
+// RTL Simulation : 539 / 578 [n/a] @ "24628000"
+// RTL Simulation : 540 / 578 [n/a] @ "24663000"
+// RTL Simulation : 541 / 578 [n/a] @ "24698000"
+// RTL Simulation : 542 / 578 [n/a] @ "24733000"
+// RTL Simulation : 543 / 578 [n/a] @ "24768000"
+// RTL Simulation : 544 / 578 [n/a] @ "24803000"
+// RTL Simulation : 545 / 578 [n/a] @ "24838000"
+// RTL Simulation : 546 / 578 [n/a] @ "24873000"
+// RTL Simulation : 547 / 578 [n/a] @ "24908000"
+// RTL Simulation : 548 / 578 [n/a] @ "24943000"
+// RTL Simulation : 549 / 578 [n/a] @ "24978000"
+// RTL Simulation : 550 / 578 [n/a] @ "25013000"
+// RTL Simulation : 551 / 578 [n/a] @ "25048000"
+// RTL Simulation : 552 / 578 [n/a] @ "25168000"
+// RTL Simulation : 553 / 578 [n/a] @ "25288000"
+// RTL Simulation : 554 / 578 [n/a] @ "25408000"
+// RTL Simulation : 555 / 578 [n/a] @ "25443000"
+// RTL Simulation : 556 / 578 [n/a] @ "25478000"
+// RTL Simulation : 557 / 578 [n/a] @ "25513000"
+// RTL Simulation : 558 / 578 [n/a] @ "25548000"
+// RTL Simulation : 559 / 578 [n/a] @ "25583000"
+// RTL Simulation : 560 / 578 [n/a] @ "25618000"
+// RTL Simulation : 561 / 578 [n/a] @ "25653000"
+// RTL Simulation : 562 / 578 [n/a] @ "25688000"
+// RTL Simulation : 563 / 578 [n/a] @ "25723000"
+// RTL Simulation : 564 / 578 [n/a] @ "25758000"
+// RTL Simulation : 565 / 578 [n/a] @ "25793000"
+// RTL Simulation : 566 / 578 [n/a] @ "25828000"
+// RTL Simulation : 567 / 578 [n/a] @ "25863000"
+// RTL Simulation : 568 / 578 [n/a] @ "25898000"
+// RTL Simulation : 569 / 578 [n/a] @ "25933000"
+// RTL Simulation : 570 / 578 [n/a] @ "25968000"
+// RTL Simulation : 571 / 578 [n/a] @ "26003000"
+// RTL Simulation : 572 / 578 [n/a] @ "26038000"
+// RTL Simulation : 573 / 578 [n/a] @ "26073000"
+// RTL Simulation : 574 / 578 [n/a] @ "26108000"
+// RTL Simulation : 575 / 578 [n/a] @ "26143000"
+// RTL Simulation : 576 / 578 [n/a] @ "26263000"
+// RTL Simulation : 577 / 578 [n/a] @ "26383000"
+// RTL Simulation : 578 / 578 [n/a] @ "26523000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 26552500 ps : File "C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/hdv_engine.autotb.v" Line 662
+## quit
+INFO: [Common 17-206] Exiting xsim at Fri Jun 21 14:08:59 2024...
+Test index: 0, Correct Label: 0, Predicted: 0, Percentage: 0%
+[--------------------]
+Accuracy: 1
+Precision: 0.333333
+Test index: 1, Correct Label: 0, Predicted: 0, Percentage: 50%
+[##########----------]
+Accuracy: 1
+Precision: 0.333333
+Test index: 2, Correct Label: 0, Predicted: 1, Percentage: 100%
+[####################]
+Accuracy: 0.666667
+Precision: 0.333333
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 504
+WARNING [HLS SIM]: hls::stream 'hls::stream<hls::axis<ap_uint<8>, 1ull, 1ull, 1ull>, 0>0' contains leftover data, which may result in RTL simulation hanging.
+INFO: [COSIM-1000] *** C/RTL co-simulation finished: PASS ***

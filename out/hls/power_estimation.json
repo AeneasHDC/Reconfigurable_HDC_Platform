@@ -33,7 +33,7 @@
                                 },
                                 {
                                     "@class": "",
-                                    "@contents": "0.631",
+                                    "@contents": "1.283",
                                     "@halign": "0",
                                     "@type": "string"
                                 }
@@ -90,7 +90,7 @@
                                 },
                                 {
                                     "@class": "",
-                                    "@contents": "0.011",
+                                    "@contents": "0.659",
                                     "@halign": "0",
                                     "@type": "string"
                                 }
@@ -109,7 +109,7 @@
                                 },
                                 {
                                     "@class": "",
-                                    "@contents": "0.620",
+                                    "@contents": "0.624",
                                     "@halign": "0",
                                     "@type": "string"
                                 }
@@ -147,7 +147,7 @@
                                 },
                                 {
                                     "@class": "",
-                                    "@contents": "99.4",
+                                    "@contents": "98.7",
                                     "@halign": "0",
                                     "@type": "string"
                                 }
@@ -166,7 +166,7 @@
                                 },
                                 {
                                     "@class": "",
-                                    "@contents": "25.6",
+                                    "@contents": "26.3",
                                     "@halign": "0",
                                     "@type": "string"
                                 }
@@ -347,13 +347,13 @@
                                         },
                                         {
                                             "@class": "",
-                                            "@contents": "    0.001",
+                                            "@contents": "    0.007",
                                             "@halign": "0",
                                             "@type": "string"
                                         },
                                         {
                                             "@class": "",
-                                            "@contents": "    6292",
+                                            "@contents": "   19532",
                                             "@halign": "0",
                                             "@type": "string"
                                         },
@@ -384,13 +384,13 @@
                                         },
                                         {
                                             "@class": "",
-                                            "@contents": "    0.001",
+                                            "@contents": "    0.007",
                                             "@halign": "0",
                                             "@type": "string"
                                         },
                                         {
                                             "@class": "",
-                                            "@contents": "    3122",
+                                            "@contents": "    7058",
                                             "@halign": "0",
                                             "@type": "string"
                                         },
@@ -402,7 +402,7 @@
                                         },
                                         {
                                             "@class": "",
-                                            "@contents": "           1.14",
+                                            "@contents": "           2.58",
                                             "@halign": "0",
                                             "@type": "string"
                                         }
@@ -427,7 +427,7 @@
                                         },
                                         {
                                             "@class": "",
-                                            "@contents": "     264",
+                                            "@contents": "     498",
                                             "@halign": "0",
                                             "@type": "string"
                                         },
@@ -439,7 +439,7 @@
                                         },
                                         {
                                             "@class": "",
-                                            "@contents": "           0.77",
+                                            "@contents": "           1.45",
                                             "@halign": "0",
                                             "@type": "string"
                                         }
@@ -464,7 +464,7 @@
                                         },
                                         {
                                             "@class": "",
-                                            "@contents": "    2781",
+                                            "@contents": "    9301",
                                             "@halign": "0",
                                             "@type": "string"
                                         },
@@ -476,7 +476,7 @@
                                         },
                                         {
                                             "@class": "",
-                                            "@contents": "           0.51",
+                                            "@contents": "           1.70",
                                             "@halign": "0",
                                             "@type": "string"
                                         }
@@ -538,7 +538,7 @@
                                         },
                                         {
                                             "@class": "",
-                                            "@contents": "      19",
+                                            "@contents": "      28",
                                             "@halign": "0",
                                             "@type": "string"
                                         },
@@ -563,19 +563,56 @@
                                     "tablecell": [
                                         {
                                             "@class": "",
+                                            "@contents": "  F7/F8 Muxes",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "    0.000",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "     392",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "   274080",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "           0.14",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
                                             "@contents": "Signals",
                                             "@halign": "0",
                                             "@type": "string"
                                         },
                                         {
                                             "@class": "",
-                                            "@contents": "    0.001",
+                                            "@contents": "    0.009",
                                             "@halign": "0",
                                             "@type": "string"
                                         },
                                         {
                                             "@class": "",
-                                            "@contents": "    4106",
+                                            "@contents": "   11792",
                                             "@halign": "0",
                                             "@type": "string"
                                         },
@@ -606,13 +643,13 @@
                                         },
                                         {
                                             "@class": "",
-                                            "@contents": "    0.008",
+                                            "@contents": "    0.643",
                                             "@halign": "0",
                                             "@type": "string"
                                         },
                                         {
                                             "@class": "",
-                                            "@contents": "     234",
+                                            "@contents": "    4274",
                                             "@halign": "0",
                                             "@type": "string"
                                         },
@@ -624,7 +661,7 @@
                                         },
                                         {
                                             "@class": "",
-                                            "@contents": "          71.34",
+                                            "@contents": "        1303.05",
                                             "@halign": "0",
                                             "@type": "string"
                                         }
@@ -643,7 +680,7 @@
                                         },
                                         {
                                             "@class": "",
-                                            "@contents": "    0.620",
+                                            "@contents": "    0.624",
                                             "@halign": "0",
                                             "@type": "string"
                                         },
@@ -680,7 +717,7 @@
                                         },
                                         {
                                             "@class": "",
-                                            "@contents": "    0.631",
+                                            "@contents": "    1.283",
                                             "@halign": "0",
                                             "@type": "string"
                                         },
@@ -791,21 +828,21 @@
                                         },
                                         {
                                             "@class": "",
-                                            "@contents": "0.181626",
+                                            "@contents": "0.202393",
                                             "@decimalplaces": "3",
                                             "@halign": "0",
                                             "@type": "double"
                                         },
                                         {
                                             "@class": "",
-                                            "@contents": "0.003031",
+                                            "@contents": "0.019070",
                                             "@decimalplaces": "3",
                                             "@halign": "0",
                                             "@type": "double"
                                         },
                                         {
                                             "@class": "",
-                                            "@contents": "0.178594",
+                                            "@contents": "0.183324",
                                             "@decimalplaces": "3",
                                             "@halign": "0",
                                             "@type": "double"
@@ -850,21 +887,21 @@
                                         },
                                         {
                                             "@class": "",
-                                            "@contents": "0.037528",
+                                            "@contents": "0.058398",
                                             "@decimalplaces": "3",
                                             "@halign": "0",
                                             "@type": "double"
                                         },
                                         {
                                             "@class": "",
-                                            "@contents": "0.002212",
+                                            "@contents": "0.022986",
                                             "@decimalplaces": "3",
                                             "@halign": "0",
                                             "@type": "double"
                                         },
                                         {
                                             "@class": "",
-                                            "@contents": "0.035316",
+                                            "@contents": "0.035412",
                                             "@decimalplaces": "3",
                                             "@halign": "0",
                                             "@type": "double"
@@ -909,7 +946,7 @@
                                         },
                                         {
                                             "@class": "",
-                                            "@contents": "0.002648",
+                                            "@contents": "0.002717",
                                             "@decimalplaces": "3",
                                             "@halign": "0",
                                             "@type": "double"
@@ -923,7 +960,7 @@
                                         },
                                         {
                                             "@class": "",
-                                            "@contents": "0.002648",
+                                            "@contents": "0.002717",
                                             "@decimalplaces": "3",
                                             "@halign": "0",
                                             "@type": "double"
@@ -968,7 +1005,7 @@
                                         },
                                         {
                                             "@class": "",
-                                            "@contents": "0.194700",
+                                            "@contents": "0.194348",
                                             "@decimalplaces": "3",
                                             "@halign": "0",
                                             "@type": "double"
@@ -982,7 +1019,7 @@
                                         },
                                         {
                                             "@class": "",
-                                            "@contents": "0.194700",
+                                            "@contents": "0.194348",
                                             "@decimalplaces": "3",
                                             "@halign": "0",
                                             "@type": "double"
@@ -1027,21 +1064,21 @@
                                         },
                                         {
                                             "@class": "",
-                                            "@contents": "0.035109",
+                                            "@contents": "0.364378",
                                             "@decimalplaces": "3",
                                             "@halign": "0",
                                             "@type": "double"
                                         },
                                         {
                                             "@class": "",
-                                            "@contents": "0.002494",
+                                            "@contents": "0.331762",
                                             "@decimalplaces": "3",
                                             "@halign": "0",
                                             "@type": "double"
                                         },
                                         {
                                             "@class": "",
-                                            "@contents": "0.032615",
+                                            "@contents": "0.032616",
                                             "@decimalplaces": "3",
                                             "@halign": "0",
                                             "@type": "double"
@@ -1204,14 +1241,14 @@
                                         },
                                         {
                                             "@class": "",
-                                            "@contents": "0.000918",
+                                            "@contents": "0.014675",
                                             "@decimalplaces": "3",
                                             "@halign": "0",
                                             "@type": "double"
                                         },
                                         {
                                             "@class": "",
-                                            "@contents": "0.000910",
+                                            "@contents": "0.014667",
                                             "@decimalplaces": "3",
                                             "@halign": "0",
                                             "@type": "double"
@@ -1617,7 +1654,7 @@
                                         },
                                         {
                                             "@class": "",
-                                            "@contents": "0.004914",
+                                            "@contents": "0.005008",
                                             "@decimalplaces": "3",
                                             "@halign": "0",
                                             "@type": "double"
@@ -1631,7 +1668,7 @@
                                         },
                                         {
                                             "@class": "",
-                                            "@contents": "0.004914",
+                                            "@contents": "0.005008",
                                             "@decimalplaces": "3",
                                             "@halign": "0",
                                             "@type": "double"
@@ -3114,7 +3151,64 @@
                                     },
                                     {
                                         "@class": "",
-                                        "@contents": "    0.011",
+                                        "@contents": "    0.659",
+                                        "@halign": "0",
+                                        "@type": "string"
+                                    }
+                                ]
+                            },
+                            {
+                                "@class": "",
+                                "@suppressoutput": "0",
+                                "@wordwrap": "0",
+                                "tablecell": [
+                                    {
+                                        "@class": "",
+                                        "@contents": "  grp_hdv_engine_Pipeline_VITIS_LOOP_494_4_fu_3812",
+                                        "@halign": "0",
+                                        "@type": "string"
+                                    },
+                                    {
+                                        "@class": "",
+                                        "@contents": "    0.001",
+                                        "@halign": "0",
+                                        "@type": "string"
+                                    }
+                                ]
+                            },
+                            {
+                                "@class": "",
+                                "@suppressoutput": "0",
+                                "@wordwrap": "0",
+                                "tablecell": [
+                                    {
+                                        "@class": "",
+                                        "@contents": "  grp_hdv_engine_Pipeline_VITIS_LOOP_766_6_fu_4210",
+                                        "@halign": "0",
+                                        "@type": "string"
+                                    },
+                                    {
+                                        "@class": "",
+                                        "@contents": "    0.008",
+                                        "@halign": "0",
+                                        "@type": "string"
+                                    }
+                                ]
+                            },
+                            {
+                                "@class": "",
+                                "@suppressoutput": "0",
+                                "@wordwrap": "0",
+                                "tablecell": [
+                                    {
+                                        "@class": "",
+                                        "@contents": "    flow_control_loop_pipe_sequential_init_U",
+                                        "@halign": "0",
+                                        "@type": "string"
+                                    },
+                                    {
+                                        "@class": "",
+                                        "@contents": "    0.007",
                                         "@halign": "0",
                                         "@type": "string"
                                     }

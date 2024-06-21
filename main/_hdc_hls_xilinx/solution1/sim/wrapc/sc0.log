@@ -1,7 +1,0 @@
-   Build using "C:/Xilinx/Vitis_HLS/2023.1/tps/win64/msys64/mingw64/bin/g++"
-   Compiling tb.cpp_pre.cpp.tb.cpp
-   Compiling main.cpp_pre.cpp.tb.cpp
-   Compiling apatb_hdv_engine_util.cpp
-   Compiling apatb_hdv_engine.cpp
-   Compiling apatb_hdv_engine_ir.ll
-   Generating cosim.tv.exe

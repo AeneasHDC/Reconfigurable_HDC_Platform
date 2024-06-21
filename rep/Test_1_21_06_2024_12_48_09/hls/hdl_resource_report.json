@@ -1,0 +1,11 @@
+{
+    "LUT as Logic": 3122,
+    "LUT as Memory": 0,
+    "CLB Registers": 2781,
+    "Register as Flip Flop": 2781,
+    "Register as Latch": 0,
+    "CARRY8": 264,
+    "DSPs": 0,
+    "Total LUTs": 3122,
+    "Total FF": 5562
+}

@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'hdv_engine_Pipeline_VITIS_LOOP_281_2'
 ================================================================
-* Date:           Fri Jun 21 12:02:51 2024
+* Date:           Fri Jun 21 16:16:01 2024
 
 * Version:        2023.1 (Build 3854077 on May  4 2023)
 * Project:        _hdc_hls_xilinx
@@ -85,8 +85,8 @@
     +---------------------+----------+----+---+----+------------+------------+
     |    Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +---------------------+----------+----+---+----+------------+------------+
-    |add_ln281_fu_48_p2   |         +|   0|  0|   9|           2|           1|
-    |icmp_ln281_fu_42_p2  |      icmp|   0|  0|   9|           2|           2|
+    |add_ln281_fu_54_p2   |         +|   0|  0|   9|           2|           1|
+    |icmp_ln281_fu_48_p2  |      icmp|   0|  0|   9|           2|           2|
     +---------------------+----------+----+---+----+------------+------------+
     |Total                |          |   0|  0|  18|           4|           3|
     +---------------------+----------+----+---+----+------------+------------+
@@ -96,8 +96,8 @@
     |         Name         | LUT| Input Size| Bits| Total Bits|
     +----------------------+----+-----------+-----+-----------+
     |ap_done_int           |   9|          2|    1|          2|
-    |ap_sig_allocacmp_i_3  |   9|          2|    2|          4|
-    |i_fu_30               |   9|          2|    2|          4|
+    |ap_sig_allocacmp_i_4  |   9|          2|    2|          4|
+    |i_fu_36               |   9|          2|    2|          4|
     +----------------------+----+-----------+-----+-----------+
     |Total                 |  27|          6|    5|         10|
     +----------------------+----+-----------+-----+-----------+
@@ -108,7 +108,7 @@
     +-------------+---+----+-----+-----------+
     |ap_CS_fsm    |  1|   0|    1|          0|
     |ap_done_reg  |  1|   0|    1|          0|
-    |i_fu_30      |  2|   0|    2|          0|
+    |i_fu_36      |  2|   0|    2|          0|
     +-------------+---+----+-----+-----------+
     |Total        |  4|   0|    4|          0|
     +-------------+---+----+-----+-----------+
@@ -119,20 +119,26 @@
 == Interface
 ================================================================
 * Summary: 
-+--------------------------------------------------------------------------------------+-----+-----+------------+-------------------------------------------------------------------------------+--------------+
-|                                       RTL Ports                                      | Dir | Bits|  Protocol  |                                 Source Object                                 |    C Type    |
-+--------------------------------------------------------------------------------------+-----+-----+------------+-------------------------------------------------------------------------------+--------------+
-|ap_clk                                                                                |   in|    1|  ap_ctrl_hs|                                           hdv_engine_Pipeline_VITIS_LOOP_281_2|  return value|
-|ap_rst                                                                                |   in|    1|  ap_ctrl_hs|                                           hdv_engine_Pipeline_VITIS_LOOP_281_2|  return value|
-|ap_start                                                                              |   in|    1|  ap_ctrl_hs|                                           hdv_engine_Pipeline_VITIS_LOOP_281_2|  return value|
-|ap_done                                                                               |  out|    1|  ap_ctrl_hs|                                           hdv_engine_Pipeline_VITIS_LOOP_281_2|  return value|
-|ap_idle                                                                               |  out|    1|  ap_ctrl_hs|                                           hdv_engine_Pipeline_VITIS_LOOP_281_2|  return value|
-|ap_ready                                                                              |  out|    1|  ap_ctrl_hs|                                           hdv_engine_Pipeline_VITIS_LOOP_281_2|  return value|
-|hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_2         |  out|   32|      ap_vld|  hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_2|       pointer|
-|hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_2_ap_vld  |  out|    1|      ap_vld|  hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_2|       pointer|
-|hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_1         |  out|   32|      ap_vld|  hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_1|       pointer|
-|hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_1_ap_vld  |  out|    1|      ap_vld|  hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_1|       pointer|
-|hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl           |  out|   32|      ap_vld|    hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl|       pointer|
-|hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_ap_vld    |  out|    1|      ap_vld|    hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl|       pointer|
-+--------------------------------------------------------------------------------------+-----+-----+------------+-------------------------------------------------------------------------------+--------------+
++-------------------------------------------------------------------------------------+-----+-----+------------+------------------------------------------------------------------------------+--------------+
+|                                      RTL Ports                                      | Dir | Bits|  Protocol  |                                 Source Object                                |    C Type    |
++-------------------------------------------------------------------------------------+-----+-----+------------+------------------------------------------------------------------------------+--------------+
+|ap_clk                                                                               |   in|    1|  ap_ctrl_hs|                                          hdv_engine_Pipeline_VITIS_LOOP_281_2|  return value|
+|ap_rst                                                                               |   in|    1|  ap_ctrl_hs|                                          hdv_engine_Pipeline_VITIS_LOOP_281_2|  return value|
+|ap_start                                                                             |   in|    1|  ap_ctrl_hs|                                          hdv_engine_Pipeline_VITIS_LOOP_281_2|  return value|
+|ap_done                                                                              |  out|    1|  ap_ctrl_hs|                                          hdv_engine_Pipeline_VITIS_LOOP_281_2|  return value|
+|ap_idle                                                                              |  out|    1|  ap_ctrl_hs|                                          hdv_engine_Pipeline_VITIS_LOOP_281_2|  return value|
+|ap_ready                                                                             |  out|    1|  ap_ctrl_hs|                                          hdv_engine_Pipeline_VITIS_LOOP_281_2|  return value|
+|bunded_train_chv_0                                                                   |  out|   32|      ap_vld|                                                            bunded_train_chv_0|       pointer|
+|bunded_train_chv_0_ap_vld                                                            |  out|    1|      ap_vld|                                                            bunded_train_chv_0|       pointer|
+|hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t_2          |  out|   32|      ap_vld|   hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t_2|       pointer|
+|hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t_2_ap_vld   |  out|    1|      ap_vld|   hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t_2|       pointer|
+|bunded_train_chv_1                                                                   |  out|   32|      ap_vld|                                                            bunded_train_chv_1|       pointer|
+|bunded_train_chv_1_ap_vld                                                            |  out|    1|      ap_vld|                                                            bunded_train_chv_1|       pointer|
+|hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t_1          |  out|   32|      ap_vld|   hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t_1|       pointer|
+|hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t_1_ap_vld   |  out|    1|      ap_vld|   hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t_1|       pointer|
+|bunded_train_chv_2                                                                   |  out|   32|      ap_vld|                                                            bunded_train_chv_2|       pointer|
+|bunded_train_chv_2_ap_vld                                                            |  out|    1|      ap_vld|                                                            bunded_train_chv_2|       pointer|
+|hdv_mulengine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t         |  out|   32|      ap_vld|  hdv_mulengine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t|       pointer|
+|hdv_mulengine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t_ap_vld  |  out|    1|      ap_vld|  hdv_mulengine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t|       pointer|
++-------------------------------------------------------------------------------------+-----+-----+------------+------------------------------------------------------------------------------+--------------+
 

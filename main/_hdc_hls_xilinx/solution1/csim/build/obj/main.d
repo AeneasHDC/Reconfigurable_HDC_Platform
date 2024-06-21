@@ -25,8 +25,8 @@ obj/main.o: ../../../../../src/hw/hls_xilinx/main.cpp \
  C:/Xilinx/Vitis_HLS/2023.1/include/ap_axi_sdata.h \
  C:/Xilinx/Vitis_HLS/2023.1/include/ap_int.h \
  ../../../../../src/hw/hls_xilinx/headers/./../lib/headers/rnd.hpp \
- C:/Reconfigurable_HDC_Platform_old/src/config/config_cpp.hpp \
- C:/Reconfigurable_HDC_Platform_old/src/config/ex_config.hpp \
+ C:/Reconfigurable_HDC_Platform-1/src/config/config_cpp.hpp \
+ C:/Reconfigurable_HDC_Platform-1/src/config/ex_config.hpp \
  ../../../../../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp \
  C:/Xilinx/Vitis_HLS/2023.1/include/hls_math.h \
  C:/Xilinx/Vitis_HLS/2023.1/include/hls_half.h \
@@ -65,16 +65,16 @@ obj/main.o: ../../../../../src/hw/hls_xilinx/main.cpp \
  C:/Xilinx/Vitis_HLS/2023.1/include/etc/hls_cbrt_apfixed.h \
  C:/Xilinx/Vitis_HLS/2023.1/include/etc/hls_hypot_apfixed.h \
  C:/Xilinx/Vitis_HLS/2023.1/include/etc/hls_ldexp_apfixed.h \
- C:/Reconfigurable_HDC_Platform_old/src/hw/hls_xilinx/headers/datatypes.hpp \
- C:/Reconfigurable_HDC_Platform_old/src/hw/hls_xilinx/headers/definitions.hpp \
- C:/Reconfigurable_HDC_Platform_old/src/config/config_cpp.hpp \
- C:/Reconfigurable_HDC_Platform_old/src/hw/hls_xilinx/lib/hdc_lib/operations.hpp \
- C:/Reconfigurable_HDC_Platform_old/src/hw/hls_xilinx/lib/headers/rnd.hpp \
- C:/Reconfigurable_HDC_Platform_old/src/hw/hls_xilinx/lib/headers/sqrt_approx.hpp \
+ C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/headers/datatypes.hpp \
+ C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/headers/definitions.hpp \
+ C:/Reconfigurable_HDC_Platform-1/src/config/config_cpp.hpp \
+ C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/lib/hdc_lib/operations.hpp \
+ C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/lib/headers/rnd.hpp \
+ C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/lib/headers/sqrt_approx.hpp \
  ../../../../../src/hw/hls_xilinx/lib/headers/rnd.hpp \
  ../../../../../src/hw/hls_xilinx/lib/hdc_lib/HDC_class.hpp \
  ../../../../../src/hw/hls_xilinx/headers/data.hpp \
  ../../../../../src/hw/hls_xilinx/headers/datatypes.hpp \
  ../../../../../src/hw/hls_xilinx/headers/definitions.hpp \
- C:/Reconfigurable_HDC_Platform_old/src/config/config_cpp.hpp \
- C:/Reconfigurable_HDC_Platform_old/src/config/ex_config.hpp
+ C:/Reconfigurable_HDC_Platform-1/src/config/config_cpp.hpp \
+ C:/Reconfigurable_HDC_Platform-1/src/config/ex_config.hpp

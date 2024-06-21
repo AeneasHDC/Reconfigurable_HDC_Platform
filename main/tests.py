@@ -222,6 +222,7 @@ def setup_test(aeneas, test_id, test_name, summary):
     aeneas.prj.set_test_summary(summary)
     aeneas.prj.date = datetime.now()
     aeneas.prj.time = datetime.now()
+    aeneas.prj.create_project()
 
 def collect_data(aeneas, run_sw_model):
     report = {}
@@ -260,6 +261,8 @@ def test_hd_dim(aeneas, hd_dim_range):
         report['HD_DIM'] = dim
         all_reports.append(report)
     save_test_results(aeneas, 'Test_HD_DIM', all_reports)
+    aeneas.prj.save()
+    aeneas.report.open()
     return all_reports
 
 '''
@@ -276,6 +279,8 @@ def test_hd_sparsity(aeneas, sparsity_range):
         all_reports.append(report)
     save_test_results(aeneas, 'Test_Sparsity', all_reports)
     change_config(aeneas, hd_mode="DENSE")
+    aeneas.prj.save()
+    aeneas.report.open()    
     return all_reports
 
 '''
@@ -291,6 +296,8 @@ def test_hd_type(aeneas, hd_type_options):
         report['HV_Type'] = hv_type
         all_reports.append(report)
     save_test_results(aeneas, 'Test_HD_Type', all_reports)
+    aeneas.prj.save()
+    aeneas.report.open()    
     return all_reports
 
 '''
@@ -306,6 +313,8 @@ def test_learning_rate(aeneas, lr_values):
         report['Learning_Rate'] = lr
         all_reports.append(report)
     save_test_results(aeneas, 'Test_LR', all_reports)
+    aeneas.prj.save()
+    aeneas.report.open()    
     return all_reports
 
 '''
@@ -327,6 +336,8 @@ def test_frame_parallelism(aeneas, frame_range, dim):
         report['Frame'] = frame
         all_reports.append(report)
     save_test_results(aeneas, 'Test_FRAME', all_reports)
+    aeneas.prj.save()
+    aeneas.report.open()    
     return all_reports
 
 '''
@@ -347,6 +358,8 @@ def test_feature_parallelism(aeneas, parallel_features_range):
         report['Feature_Parallelism'] = parallel_features
         all_reports.append(report)
     save_test_results(aeneas, 'Test_Feature_Parallelism', all_reports)
+    aeneas.prj.save()
+    aeneas.report.open()    
     return all_reports
 
 '''
@@ -367,6 +380,8 @@ def test_class_parallelism(aeneas, parallel_classes_range):
         report['Class_Parallelism'] = parallel_classes
         all_reports.append(report)
     save_test_results(aeneas, 'Test_Class_Parallelism', all_reports)
+    aeneas.prj.save()
+    aeneas.report.open()    
     return all_reports
 
 '''
@@ -382,6 +397,8 @@ def test_lv_mode_model(aeneas, lv_mode_model_options):
         report['LV_Mode_Model'] = lv_mode_model
         all_reports.append(report)
     save_test_results(aeneas, 'Test_LV_Mode_Model', all_reports)
+    aeneas.prj.save()
+    aeneas.report.open()    
     return all_reports
 
 '''
@@ -397,6 +414,8 @@ def test_bv_mode(aeneas, bv_mode_options):
         report['BV_Mode'] = bv_mode
         all_reports.append(report)
     save_test_results(aeneas, 'Test_BV_Mode', all_reports)
+    aeneas.prj.save()
+    aeneas.report.open()    
     return all_reports
 
 '''
@@ -412,6 +431,8 @@ def test_cv_mode(aeneas, cv_mode_options):
         report['CV_Mode'] = cv_mode
         all_reports.append(report)
     save_test_results(aeneas, 'Test_CV_Mode', all_reports)
+    aeneas.prj.save()
+    aeneas.report.open()    
     return all_reports
 
 '''
@@ -430,6 +451,8 @@ def test_hw_train(aeneas, hw_train_options):
         report['HW_Train'] = hw_train
         all_reports.append(report)
     save_test_results(aeneas, 'Test_HW_Train', all_reports)
+    aeneas.prj.save()
+    aeneas.report.open()    
     return all_reports
 
 '''
@@ -445,6 +468,8 @@ def test_retrain_in_hw(aeneas, retrain_in_hw_options):
         report['Retrain_HW'] = retrain_in_hw
         all_reports.append(report)
     save_test_results(aeneas, 'Test_Retrain_HW', all_reports)
+    aeneas.prj.save()
+    aeneas.report.open()    
     return all_reports
 
 '''
@@ -460,6 +485,8 @@ def test_spatial_encoding(aeneas, encoding_technique_options):
         report['Spatial_Encoding'] = encoding_technique
         all_reports.append(report)
     save_test_results(aeneas, 'Test_Spatial_Encoding', all_reports)
+    aeneas.prj.save()
+    aeneas.report.open()    
     return all_reports
 
 '''
@@ -475,6 +502,8 @@ def test_temporal_encoding(aeneas, n_gram_size_options):
         report['Temporal_Encoding_N_Gram'] = n_gram_size
         all_reports.append(report)
     save_test_results(aeneas, 'Test_Temporal_Encoding', all_reports)
+    aeneas.prj.save()
+    aeneas.report.open()    
     return all_reports
 
 '''
@@ -490,6 +519,8 @@ def test_clipping_techniques(aeneas, clipping_options):
         report['Clipping_Technique'] = clipping
         all_reports.append(report)
     save_test_results(aeneas, 'Test_Clipping_Techniques', all_reports)
+    aeneas.prj.save()
+    aeneas.report.open()    
     return all_reports
 
 
@@ -527,6 +558,8 @@ def test_comb_parallelism(aeneas, parallel_features_range, parallel_classes_rang
                 all_reports.append(report)
                 count += 1
     save_test_results(aeneas, 'Test_COMB_PARALLELISM', all_reports)
+    aeneas.prj.save()
+    aeneas.report.open()    
     return all_reports
 
 '''
@@ -550,6 +583,8 @@ def test_generation(aeneas, dim_range, bv_mode_range, lv_mode_range, cv_mode_ran
                     all_reports.append(report)
                     count += 1
     save_test_results(aeneas, 'Test_generation', all_reports)
+    aeneas.prj.save()
+    aeneas.report.open()    
     return all_reports
 
 
@@ -572,6 +607,8 @@ def test_clipping_similarity(aeneas, clip_range, sim_range):
                 all_reports.append(report)
                 count += 1
     save_test_results(aeneas, 'Test_CLIPPING', all_reports)
+    aeneas.prj.save()
+    aeneas.report.open()    
     return all_reports
 
 '''
@@ -595,6 +632,8 @@ def test_type_clipping_similarity(aeneas, hvtype_range, clip_range, sim_range):
                     all_reports.append(report)
                     count += 1
     save_test_results(aeneas, 'Test_type_clipping_similarity', all_reports)
+    aeneas.prj.save()
+    aeneas.report.open()    
     return all_reports
 
 
@@ -617,6 +656,8 @@ def test_dataset_cardio(aeneas,sw_train):
     report = collect_data(aeneas,sw_train)
     all_reports.append(report)
     save_test_results(aeneas, 'Test_dataset_cardio', all_reports)
+    aeneas.prj.save()
+    aeneas.report.open()    
     return all_reports
 
 
@@ -633,6 +674,8 @@ def test_dataset_emg(aeneas,sw_train):
     report = collect_data(aeneas,sw_train)
     all_reports.append(report)
     save_test_results(aeneas, 'Test_dataset_emg', all_reports)
+    aeneas.prj.save()
+    aeneas.report.open()    
     return all_reports
 
 
@@ -649,6 +692,8 @@ def test_dataset_hepta(aeneas,sw_train):
     report = collect_data(aeneas,sw_train)
     all_reports.append(report)
     save_test_results(aeneas, 'Test_dataset_hepta', all_reports)
+    aeneas.prj.save()
+    aeneas.report.open()    
     return all_reports
 
 
@@ -665,6 +710,8 @@ def test_dataset_boston(aeneas,sw_train):
     report = collect_data(aeneas,sw_train)
     all_reports.append(report)
     save_test_results(aeneas, 'Test_dataset_boston', all_reports)
+    aeneas.prj.save()
+    aeneas.report.open()    
     return all_reports
 
 # -------------------------------- PLOTTING ------------------------------------------
