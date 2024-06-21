@@ -36,18 +36,64 @@ import sys
 import webbrowser
 import time
 
-def find_anaconda_root():
-    # Tries to find the Anaconda root directory from the system path.
-    for path in os.environ['PATH'].split(os.pathsep):
-        if 'anaconda' in path.lower() and 'Scripts' in path:
-            return os.path.dirname(path)
+CONFIG_FILE = "anaconda_config.json"
+
+class AnacondaRootNotFoundError(Exception):
+    """Custom exception for when Anaconda root directory is not found."""
+    pass
+
+def load_anaconda_root_from_config():
+    if os.path.exists(CONFIG_FILE):
+        with open(CONFIG_FILE, 'r') as file:
+            try:
+                config = json.load(file)
+                return config.get("anaconda_root")
+            except json.JSONDecodeError:
+                return None
     return None
 
+def save_anaconda_root_to_config(anaconda_root):
+    with open(CONFIG_FILE, 'w') as file:
+        json.dump({"anaconda_root": anaconda_root}, file)
+
+def find_anaconda_root():
+    # Tries to find the Anaconda root directory from the system path.
+    paths = os.environ['PATH'].split(os.pathsep)
+    potential_paths = []
+
+    for path in paths:
+        if 'anaconda' in path.lower():
+            if 'Scripts' in path or 'bin' in path:
+                potential_paths.append(path)
+
+    if not potential_paths:
+        raise AnacondaRootNotFoundError("Anaconda root directory not found in system PATH.")
+
+    for path in potential_paths:
+        anaconda_root = os.path.dirname(os.path.dirname(path))
+        if os.path.isdir(anaconda_root):
+            return anaconda_root
+
+    raise AnacondaRootNotFoundError("Anaconda root directory not found after checking potential paths.")
+
 def main():
-    anaconda_root = "C:/Users/disa/anaconda3/"#find_anaconda_root()
-    if not anaconda_root:
-        print("Anaconda installation not found.")
-        sys.exit(1)
+    anaconda_root = load_anaconda_root_from_config()
+    if anaconda_root and os.path.isdir(anaconda_root):
+        print(f"Anaconda root directory found in config: {anaconda_root}")
+    else:
+        try:
+            anaconda_root = find_anaconda_root()
+            print(f"Anaconda root directory found: {anaconda_root}")
+            save_anaconda_root_to_config(anaconda_root)
+        except AnacondaRootNotFoundError as e:
+            print(e)
+            anaconda_root = input("Please manually enter the Anaconda root directory path: ")
+            if os.path.isdir(anaconda_root):
+                save_anaconda_root_to_config(anaconda_root)
+                print(f"Anaconda root directory set to: {anaconda_root}")
+            else:
+                print("The provided path is not a valid directory.")
+                sys.exit(1)
 
     cwp_path = os.path.join(anaconda_root, 'cwp.py')
     python_path = os.path.join(anaconda_root, 'python.exe')
