@@ -23,9 +23,9 @@ Test index: 1, Correct Label: 0, Predicted: 0, Percentage: 50%
 [##########----------]
 Accuracy: 1
 Precision: 0.333333
-Test index: 2, Correct Label: 0, Predicted: 1, Percentage: 100%
+Test index: 2, Correct Label: 0, Predicted: 0, Percentage: 100%
 [####################]
-Accuracy: 0.666667
+Accuracy: 1
 Precision: 0.333333
 INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 504
 WARNING [HLS SIM]: hls::stream 'hls::stream<hls::axis<ap_uint<8>, 1ull, 1ull, 1ull>, 0>0' contains leftover data, which may result in RTL simulation hanging.
@@ -821,7 +821,7 @@ WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of o
 ////////////////////////////////////////////////////////////////////////////////////
 $finish called at time : 23422500 ps : File "C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/hdv_engine.autotb.v" Line 835
 ## quit
-INFO: [Common 17-206] Exiting xsim at Fri Jun 21 16:16:47 2024...
+INFO: [Common 17-206] Exiting xsim at Fri Jun 21 16:48:01 2024...
 Test index: 0, Correct Label: 0, Predicted: 0, Percentage: 0%
 [--------------------]
 Accuracy: 1
@@ -830,9 +830,9 @@ Test index: 1, Correct Label: 0, Predicted: 0, Percentage: 50%
 [##########----------]
 Accuracy: 1
 Precision: 0.333333
-Test index: 2, Correct Label: 0, Predicted: 1, Percentage: 100%
+Test index: 2, Correct Label: 0, Predicted: 0, Percentage: 100%
 [####################]
-Accuracy: 0.666667
+Accuracy: 1
 Precision: 0.333333
 INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 504
 WARNING [HLS SIM]: hls::stream 'hls::stream<hls::axis<ap_uint<8>, 1ull, 1ull, 1ull>, 0>0' contains leftover data, which may result in RTL simulation hanging.

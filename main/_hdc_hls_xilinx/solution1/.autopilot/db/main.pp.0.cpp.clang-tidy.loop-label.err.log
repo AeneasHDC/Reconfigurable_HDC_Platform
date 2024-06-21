@@ -1,0 +1,5 @@
+3 warnings and 26 errors generated.
+Error while processing C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp.
+clang-tidy applied 162 of 162 suggested fixes.
+Suppressed 234 warnings (231 in non-user code, 3 with check filters).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

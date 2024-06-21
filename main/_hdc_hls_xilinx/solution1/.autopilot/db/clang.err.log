@@ -1,0 +1,10 @@
+./../src/hw/hls_xilinx/main.cpp:490:9: warning: '#pragma HLS unroll' can only be applied inside loop body [-Winvalid-hls-pragmas]
+#pragma HLS UNROLL
+        ^
+./../src/hw/hls_xilinx/main.cpp:794:9: warning: '#pragma HLS unroll' can only be applied inside loop body [-Winvalid-hls-pragmas]
+#pragma HLS UNROLL
+        ^
+./../src/hw/hls_xilinx/main.cpp:818:9: warning: Only for/while/do loop or function body support the pipeline pragma [-Wignored-hls-attributes]
+#pragma HLS PIPELINE II=5
+        ^~~~~~~~~~~~~~~~~
+3 warnings generated.

@@ -1,0 +1,1 @@
+create_clock -period 5.0 -name ap_clk -waveform {0.000 2.5}

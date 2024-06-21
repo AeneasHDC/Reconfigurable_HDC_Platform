@@ -1,0 +1,1592 @@
+---
+MainSourceFile:  'C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/.autopilot/db/main.pp.0.cpp'
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1213_1:  '
+    FileOffset:      1213
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\ap_int_base.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          854470
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1213_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_676_1:  '
+    FileOffset:      676
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          1081794
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_676_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_690_1:  '
+    FileOffset:      690
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          1082258
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_690_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_704_1:  '
+    FileOffset:      704
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          1082723
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_704_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1247_1:  '
+    FileOffset:      1247
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\ap_fixed_base.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          1365400
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1247_1: '
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      117
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      118
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      119
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      120
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      121
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      151
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      152
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      153
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      154
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      155
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      156
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      157
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      158
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      159
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      160
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      210
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      211
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      212
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      239
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      240
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      241
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      242
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      243
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      244
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      280
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      281
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
+    Replacements:    
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_87_1:  '
+    FileOffset:      87
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_cordic_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2269798
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_87_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_143_1:  '
+    FileOffset:      143
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_cordic_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2270612
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_143_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_315_1:  '
+    FileOffset:      315
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_cordic_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2273259
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_315_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_475_1:  '
+    FileOffset:      475
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_cordic_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2275982
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_475_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_655_1:  '
+    FileOffset:      655
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_cordic_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2279143
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_655_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_659_2:  '
+    FileOffset:      659
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_cordic_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2279224
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_659_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_769_1:  '
+    FileOffset:      769
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_cordic_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2281533
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_769_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_866_1:  '
+    FileOffset:      866
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_cordic_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2283027
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_866_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_885_2:  '
+    FileOffset:      885
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_cordic_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2283257
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_885_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1199_1:  '
+    FileOffset:      1199
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_cordic_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2289439
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1199_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1282_1:  '
+    FileOffset:      1282
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_cordic_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2291042
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1282_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_94_1:  '
+    FileOffset:      94
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2298890
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_94_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_100_2:  '
+    FileOffset:      100
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2299040
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_100_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_104_3:  '
+    FileOffset:      104
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2299137
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_104_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_171_4:  '
+    FileOffset:      171
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2300997
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_171_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_177_5:  '
+    FileOffset:      177
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2301147
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_177_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_181_6:  '
+    FileOffset:      181
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2301244
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_181_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_196_7:  '
+    FileOffset:      196
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2301625
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_196_7: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_204_8:  '
+    FileOffset:      204
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2301856
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_204_8: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_269_9:  '
+    FileOffset:      269
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2305303
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_269_9: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_275_10:  '
+    FileOffset:      275
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2305455
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_275_10: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_279_11:  '
+    FileOffset:      279
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2305555
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_279_11: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_294_12:  '
+    FileOffset:      294
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2305937
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_294_12: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_302_13:  '
+    FileOffset:      302
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2306175
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_302_13: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_531_14:  '
+    FileOffset:      531
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2321730
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_531_14: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_537_15:  '
+    FileOffset:      537
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2321882
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_537_15: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_541_16:  '
+    FileOffset:      541
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2321981
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_541_16: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_551_17:  '
+    FileOffset:      551
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2322158
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_551_17: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_555_18:  '
+    FileOffset:      555
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2322256
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_555_18: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_565_19:  '
+    FileOffset:      565
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2322541
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_565_19: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_573_20:  '
+    FileOffset:      573
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2322796
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_573_20: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_934_21:  '
+    FileOffset:      934
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2355035
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_934_21: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_940_22:  '
+    FileOffset:      940
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2355187
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_940_22: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_944_23:  '
+    FileOffset:      944
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2355287
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_944_23: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1060_1:  '
+    FileOffset:      1060
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2357963
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1060_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1066_2:  '
+    FileOffset:      1066
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2358113
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1066_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1070_3:  '
+    FileOffset:      1070
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2358211
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1070_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1157_4:  '
+    FileOffset:      1157
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2361681
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1157_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1163_5:  '
+    FileOffset:      1163
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2361832
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1163_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1167_6:  '
+    FileOffset:      1167
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2361931
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1167_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1186_7:  '
+    FileOffset:      1186
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2362411
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1186_7: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1193_8:  '
+    FileOffset:      1193
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2362653
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1193_8: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1309_9:  '
+    FileOffset:      1309
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2368225
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1309_9: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1315_10:  '
+    FileOffset:      1315
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2368377
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1315_10: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1319_11:  '
+    FileOffset:      1319
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2368476
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1319_11: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1339_12:  '
+    FileOffset:      1339
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2368985
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1339_12: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1346_13:  '
+    FileOffset:      1346
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2369234
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1346_13: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1608_14:  '
+    FileOffset:      1608
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2386591
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1608_14: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1614_15:  '
+    FileOffset:      1614
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2386743
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1614_15: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1618_16:  '
+    FileOffset:      1618
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2386843
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1618_16: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1642_17:  '
+    FileOffset:      1642
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2387317
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1642_17: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1649_18:  '
+    FileOffset:      1649
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2387584
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1649_18: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2079_19:  '
+    FileOffset:      2079
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2426155
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2079_19: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2085_20:  '
+    FileOffset:      2085
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2426307
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2085_20: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2089_21:  '
+    FileOffset:      2089
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2426407
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2089_21: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2219_1:  '
+    FileOffset:      2219
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2429027
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2219_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2226_2:  '
+    FileOffset:      2226
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2429190
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2226_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2230_3:  '
+    FileOffset:      2230
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2429282
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2230_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2277_4:  '
+    FileOffset:      2277
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2430891
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2277_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2284_5:  '
+    FileOffset:      2284
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2431053
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2284_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2288_6:  '
+    FileOffset:      2288
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2431145
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2288_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2306_7:  '
+    FileOffset:      2306
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2431518
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2306_7: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2361_8:  '
+    FileOffset:      2361
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2433984
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2361_8: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2368_9:  '
+    FileOffset:      2368
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2434151
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2368_9: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2372_10:  '
+    FileOffset:      2372
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2434244
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2372_10: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2390_11:  '
+    FileOffset:      2390
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2434625
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2390_11: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2479_12:  '
+    FileOffset:      2479
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2440066
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2479_12: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2486_13:  '
+    FileOffset:      2486
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2440234
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2486_13: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2490_14:  '
+    FileOffset:      2490
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2440328
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2490_14: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2500_15:  '
+    FileOffset:      2500
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2440499
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2500_15: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2504_16:  '
+    FileOffset:      2504
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2440590
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2504_16: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2515_17:  '
+    FileOffset:      2515
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2440872
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2515_17: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2523_18:  '
+    FileOffset:      2523
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2441059
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2523_18: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2848_19:  '
+    FileOffset:      2848
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2475529
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2848_19: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2855_20:  '
+    FileOffset:      2855
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2475697
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2855_20: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2859_21:  '
+    FileOffset:      2859
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2475791
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2859_21: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2947_1:  '
+    FileOffset:      2947
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2477593
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2947_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2954_2:  '
+    FileOffset:      2954
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2477701
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2954_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2958_3:  '
+    FileOffset:      2958
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2477772
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2958_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_2973_4:  '
+    FileOffset:      2973
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2478060
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_2973_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3005_5:  '
+    FileOffset:      3005
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2479274
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3005_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3012_6:  '
+    FileOffset:      3012
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2479385
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3012_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3016_7:  '
+    FileOffset:      3016
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2479458
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3016_7: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3031_8:  '
+    FileOffset:      3031
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2479753
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3031_8: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3081_9:  '
+    FileOffset:      3081
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2483086
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3081_9: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3088_10:  '
+    FileOffset:      3088
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2483197
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3088_10: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3092_11:  '
+    FileOffset:      3092
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2483270
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3092_11: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3107_12:  '
+    FileOffset:      3107
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2483566
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3107_12: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3244_13:  '
+    FileOffset:      3244
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2502878
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3244_13: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3251_14:  '
+    FileOffset:      3251
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2502992
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3251_14: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3255_15:  '
+    FileOffset:      3255
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2503067
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3255_15: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3270_16:  '
+    FileOffset:      3270
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2503354
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3270_16: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3430_17:  '
+    FileOffset:      3430
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2528964
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3430_17: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3437_18:  '
+    FileOffset:      3437
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2529078
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3437_18: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_3441_19:  '
+    FileOffset:      3441
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2529155
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_3441_19: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_729_1:  '
+    FileOffset:      729
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_log_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2563223
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_729_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_947_1:  '
+    FileOffset:      947
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_log_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2571612
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_947_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1371_1:  '
+    FileOffset:      1371
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_log_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2590586
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1371_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_266_1:  '
+    FileOffset:      266
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_sqrt_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2605520
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_266_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_294_2:  '
+    FileOffset:      294
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_sqrt_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2606041
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_294_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_74_1:  '
+    FileOffset:      74
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_pow_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2622041
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_74_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_135_2:  '
+    FileOffset:      135
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_pow_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2623191
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_135_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_149_3:  '
+    FileOffset:      149
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_pow_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2623500
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_149_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_179_4:  '
+    FileOffset:      179
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_pow_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2624010
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_179_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_307_1:  '
+    FileOffset:      307
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_pow_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2625924
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_307_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_327_2:  '
+    FileOffset:      327
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_pow_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2626289
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_327_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_341_3:  '
+    FileOffset:      341
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_pow_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2626597
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_341_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_459_1:  '
+    FileOffset:      459
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_pow_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2628425
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_459_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_473_2:  '
+    FileOffset:      473
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_pow_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2628750
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_473_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_59_1:  '
+    FileOffset:      59
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_diff_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2631479
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_59_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_209_1:  '
+    FileOffset:      209
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_diff_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2634372
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_209_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_274_1:  '
+    FileOffset:      274
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_diff_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2635659
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_274_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_42_1:  '
+    FileOffset:      42
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_all_any_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2646719
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_42_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_53_1:  '
+    FileOffset:      53
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_all_any_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2646894
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_53_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_64_1:  '
+    FileOffset:      64
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_all_any_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2647055
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_64_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_75_1:  '
+    FileOffset:      75
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_all_any_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2647217
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_75_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_86_1:  '
+    FileOffset:      86
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_all_any_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2647391
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_86_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_97_1:  '
+    FileOffset:      97
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_all_any_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2647566
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_97_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_108_1:  '
+    FileOffset:      108
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_all_any_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2647727
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_108_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_119_1:  '
+    FileOffset:      119
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_all_any_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2647889
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_119_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_23_1:  '
+    FileOffset:      23
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_mad_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2718910
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_23_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_66_1:  '
+    FileOffset:      66
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_cbrt_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2720654
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_66_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_75_1:  '
+    FileOffset:      75
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hypot_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2725160
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_75_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_107_2:  '
+    FileOffset:      107
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hypot_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2725892
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_107_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_195_3:  '
+    FileOffset:      195
+    FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hypot_apfixed.h'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2727577
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_195_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_13_1:  '
+    FileOffset:      13
+    FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\lib\hdc_lib\operations.hpp'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2780708
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_13_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_21_1:  '
+    FileOffset:      21
+    FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\lib\hdc_lib\operations.hpp'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2780917
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_21_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_29_1:  '
+    FileOffset:      29
+    FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\lib\hdc_lib\operations.hpp'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2781124
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_29_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_37_1:  '
+    FileOffset:      37
+    FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\lib\hdc_lib\operations.hpp'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2781332
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_37_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_45_1:  '
+    FileOffset:      45
+    FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\lib\hdc_lib\operations.hpp'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2781541
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_45_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_53_1:  '
+    FileOffset:      53
+    FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\lib\hdc_lib\operations.hpp'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2781749
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_53_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_68_1:  '
+    FileOffset:      68
+    FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\lib\headers\sqrt_approx.hpp'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2782660
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_68_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_72_2:  '
+    FileOffset:      72
+    FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\lib\headers\sqrt_approx.hpp'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2782725
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_72_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_130_1:  '
+    FileOffset:      130
+    FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\lib\hdc_lib\HDC_class.hpp'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2783760
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_130_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_134_2:  '
+    FileOffset:      134
+    FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\lib\hdc_lib\HDC_class.hpp'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2783824
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_134_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_371_1:  '
+    FileOffset:      371
+    FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\lib\hdc_lib\HDC_class.hpp'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2784888
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_371_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_403_1:  '
+    FileOffset:      403
+    FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\lib\hdc_lib\HDC_class.hpp'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2785297
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_403_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_426_2:  '
+    FileOffset:      426
+    FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\lib\hdc_lib\HDC_class.hpp'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2785569
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_426_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_459_1:  '
+    FileOffset:      459
+    FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\lib\hdc_lib\HDC_class.hpp'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2785929
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_459_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_463_2:  '
+    FileOffset:      463
+    FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\lib\hdc_lib\HDC_class.hpp'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2785993
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_463_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_540_1:  '
+    FileOffset:      540
+    FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\lib\hdc_lib\HDC_class.hpp'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2786668
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_540_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_548_2:  '
+    FileOffset:      548
+    FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\lib\hdc_lib\HDC_class.hpp'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2786794
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_548_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_606_3:  '
+    FileOffset:      606
+    FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\lib\hdc_lib\HDC_class.hpp'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2787433
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_606_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_626_4:  '
+    FileOffset:      626
+    FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\lib\hdc_lib\HDC_class.hpp'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2787747
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_626_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_790_1:  '
+    FileOffset:      790
+    FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\lib\hdc_lib\HDC_class.hpp'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2788780
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_790_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_848_1:  '
+    FileOffset:      848
+    FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\lib\hdc_lib\HDC_class.hpp'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2789423
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_848_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_851_2:  '
+    FileOffset:      851
+    FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\lib\hdc_lib\HDC_class.hpp'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2789521
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_851_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_876_1:  '
+    FileOffset:      876
+    FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\lib\hdc_lib\HDC_class.hpp'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2789852
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_876_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_273_1:  '
+    FileOffset:      273
+    FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\main.cpp'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2793463
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_273_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_281_2:  '
+    FileOffset:      281
+    FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\main.cpp'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2793570
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_281_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_488_3:  '
+    FileOffset:      488
+    FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\main.cpp'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2794391
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_488_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_494_4:  '
+    FileOffset:      494
+    FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\main.cpp'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2794582
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_494_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_626_5:  '
+    FileOffset:      626
+    FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\main.cpp'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2795406
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_626_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_766_6:  '
+    FileOffset:      766
+    FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\main.cpp'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2796459
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_766_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_792_7:  '
+    FileOffset:      792
+    FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\main.cpp'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2796737
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_792_7: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_899_8:  '
+    FileOffset:      899
+    FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\main.cpp'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2797723
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_899_8: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_912_9:  '
+    FileOffset:      912
+    FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\main.cpp'
+    Replacements:    
+      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
+        Offset:          2797812
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_912_9: '
+...

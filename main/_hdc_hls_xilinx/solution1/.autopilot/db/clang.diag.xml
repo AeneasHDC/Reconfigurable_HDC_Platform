@@ -1,0 +1,55 @@
+<dict>
+  <key>main-file</key>
+  <string>C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/.autopilot/db/main.pp.0.cpp</string>
+  <key>diagnostics</key>
+  <array>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>./../src/hw/hls_xilinx/main.cpp</string>
+      <key>line</key>
+      <integer>490</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>&apos;#pragma HLS unroll&apos; can only be applied inside loop body</string>
+      <key>ID</key>
+      <integer>5575</integer>
+      <key>WarningOption</key>
+      <string>invalid-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>./../src/hw/hls_xilinx/main.cpp</string>
+      <key>line</key>
+      <integer>794</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>&apos;#pragma HLS unroll&apos; can only be applied inside loop body</string>
+      <key>ID</key>
+      <integer>5575</integer>
+      <key>WarningOption</key>
+      <string>invalid-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>./../src/hw/hls_xilinx/main.cpp</string>
+      <key>line</key>
+      <integer>818</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>Only for/while/do loop or function body support the pipeline pragma</string>
+      <key>ID</key>
+      <integer>5564</integer>
+      <key>WarningOption</key>
+      <string>ignored-hls-attributes</string>
+    </dict>
+  </array>
+</dict>

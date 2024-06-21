@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Fri Jun 21 16:48:04 2024
+# Process ID: 11788
+# Current directory: C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/viv
+# Command line: vivado.exe -mode batch -source .\script.tcl
+# Log file: C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/viv/vivado.log
+# Journal file: C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/viv\vivado.jou
+# Running On: DESKTOP-O5663KL, OS: Windows, CPU Frequency: 2419 MHz, CPU Physical cores: 16, Host memory: 137167 MB
+#-----------------------------------------------------------
+source {.\script.tcl}

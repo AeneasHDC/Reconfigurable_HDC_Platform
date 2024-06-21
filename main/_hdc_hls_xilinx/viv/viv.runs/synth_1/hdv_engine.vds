@@ -1,0 +1,726 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Fri Jun 21 16:48:17 2024
+# Process ID: 17680
+# Current directory: C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/viv/viv.runs/synth_1
+# Command line: vivado.exe -log hdv_engine.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source hdv_engine.tcl
+# Log file: C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/viv/viv.runs/synth_1/hdv_engine.vds
+# Journal file: C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/viv/viv.runs/synth_1\vivado.jou
+# Running On: DESKTOP-O5663KL, OS: Windows, CPU Frequency: 2419 MHz, CPU Physical cores: 16, Host memory: 137167 MB
+#-----------------------------------------------------------
+source hdv_engine.tcl -notrace
+Command: synth_design -top hdv_engine -part xczu9eg-ffvb1156-2-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu9eg'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu9eg'
+INFO: [Device 21-403] Loading part xczu9eg-ffvb1156-2-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 3708
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 3287.516 ; gain = 345.004
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'hdv_engine' [C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine.vhd:42]
+INFO: [Synth 8-3491] module 'hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_273_1' declared at 'C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_273_1.vhd:11' bound to instance 'grp_hdv_engine_Pipeline_VITIS_LOOP_273_1_fu_3778' of component 'hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_273_1' [C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine.vhd:2744]
+INFO: [Synth 8-638] synthesizing module 'hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_273_1' [C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_273_1.vhd:31]
+INFO: [Synth 8-3491] module 'hdv_engine_flow_control_loop_pipe_sequential_init' declared at 'C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_flow_control_loop_pipe_sequential_init.vhd:13' bound to instance 'flow_control_loop_pipe_sequential_init_U' of component 'hdv_engine_flow_control_loop_pipe_sequential_init' [C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_273_1.vhd:80]
+INFO: [Synth 8-638] synthesizing module 'hdv_engine_flow_control_loop_pipe_sequential_init' [C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_flow_control_loop_pipe_sequential_init.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'hdv_engine_flow_control_loop_pipe_sequential_init' (0#1) [C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_flow_control_loop_pipe_sequential_init.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_273_1' (0#1) [C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_273_1.vhd:31]
+INFO: [Synth 8-3491] module 'hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_281_2' declared at 'C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_281_2.vhd:11' bound to instance 'grp_hdv_engine_Pipeline_VITIS_LOOP_281_2_fu_3796' of component 'hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_281_2' [C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine.vhd:2762]
+INFO: [Synth 8-638] synthesizing module 'hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_281_2' [C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_281_2.vhd:34]
+INFO: [Synth 8-3491] module 'hdv_engine_flow_control_loop_pipe_sequential_init' declared at 'C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_flow_control_loop_pipe_sequential_init.vhd:13' bound to instance 'flow_control_loop_pipe_sequential_init_U' of component 'hdv_engine_flow_control_loop_pipe_sequential_init' [C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_281_2.vhd:89]
+INFO: [Synth 8-256] done synthesizing module 'hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_281_2' (0#1) [C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_281_2.vhd:34]
+INFO: [Synth 8-3491] module 'hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_494_4' declared at 'C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_494_4.vhd:11' bound to instance 'grp_hdv_engine_Pipeline_VITIS_LOOP_494_4_fu_3812' of component 'hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_494_4' [C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine.vhd:2783]
+INFO: [Synth 8-638] synthesizing module 'hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_494_4' [C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_494_4.vhd:343]
+INFO: [Synth 8-3491] module 'hdv_engine_flow_control_loop_pipe_sequential_init' declared at 'C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_flow_control_loop_pipe_sequential_init.vhd:13' bound to instance 'flow_control_loop_pipe_sequential_init_U' of component 'hdv_engine_flow_control_loop_pipe_sequential_init' [C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_494_4.vhd:721]
+INFO: [Synth 8-256] done synthesizing module 'hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_494_4' (0#1) [C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_494_4.vhd:343]
+INFO: [Synth 8-3491] module 'hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_912_9' declared at 'C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_912_9.vhd:11' bound to instance 'grp_hdv_engine_Pipeline_VITIS_LOOP_912_9_fu_4201' of component 'hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_912_9' [C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine.vhd:3113]
+INFO: [Synth 8-638] synthesizing module 'hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_912_9' [C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_912_9.vhd:27]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter din2_WIDTH bound to: 32 - type: integer 
+	Parameter din3_WIDTH bound to: 2 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'hdv_engine_mux_3_2_32_1_1' declared at 'C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_mux_3_2_32_1_1.vhd:13' bound to instance 'mux_3_2_32_1_1_U14' of component 'hdv_engine_mux_3_2_32_1_1' [C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_912_9.vhd:112]
+INFO: [Synth 8-638] synthesizing module 'hdv_engine_mux_3_2_32_1_1' [C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_mux_3_2_32_1_1.vhd:30]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter din2_WIDTH bound to: 32 - type: integer 
+	Parameter din3_WIDTH bound to: 2 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'hdv_engine_mux_3_2_32_1_1' (0#1) [C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_mux_3_2_32_1_1.vhd:30]
+INFO: [Synth 8-3491] module 'hdv_engine_flow_control_loop_pipe_sequential_init' declared at 'C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_flow_control_loop_pipe_sequential_init.vhd:13' bound to instance 'flow_control_loop_pipe_sequential_init_U' of component 'hdv_engine_flow_control_loop_pipe_sequential_init' [C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_912_9.vhd:128]
+INFO: [Synth 8-256] done synthesizing module 'hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_912_9' (0#1) [C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_912_9.vhd:27]
+INFO: [Synth 8-3491] module 'hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_766_6' declared at 'C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_766_6.vhd:11' bound to instance 'grp_hdv_engine_Pipeline_VITIS_LOOP_766_6_fu_4210' of component 'hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_766_6' [C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine.vhd:3127]
+INFO: [Synth 8-638] synthesizing module 'hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_766_6' [C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_766_6.vhd:278]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter din2_WIDTH bound to: 32 - type: integer 
+	Parameter din3_WIDTH bound to: 32 - type: integer 
+	Parameter din4_WIDTH bound to: 32 - type: integer 
+	Parameter din5_WIDTH bound to: 32 - type: integer 
+	Parameter din6_WIDTH bound to: 32 - type: integer 
+	Parameter din7_WIDTH bound to: 32 - type: integer 
+	Parameter din8_WIDTH bound to: 32 - type: integer 
+	Parameter din9_WIDTH bound to: 32 - type: integer 
+	Parameter din10_WIDTH bound to: 32 - type: integer 
+	Parameter din11_WIDTH bound to: 32 - type: integer 
+	Parameter din12_WIDTH bound to: 32 - type: integer 
+	Parameter din13_WIDTH bound to: 32 - type: integer 
+	Parameter din14_WIDTH bound to: 32 - type: integer 
+	Parameter din15_WIDTH bound to: 32 - type: integer 
+	Parameter din16_WIDTH bound to: 32 - type: integer 
+	Parameter din17_WIDTH bound to: 32 - type: integer 
+	Parameter din18_WIDTH bound to: 32 - type: integer 
+	Parameter din19_WIDTH bound to: 32 - type: integer 
+	Parameter din20_WIDTH bound to: 32 - type: integer 
+	Parameter din21_WIDTH bound to: 32 - type: integer 
+	Parameter din22_WIDTH bound to: 32 - type: integer 
+	Parameter din23_WIDTH bound to: 32 - type: integer 
+	Parameter din24_WIDTH bound to: 32 - type: integer 
+	Parameter din25_WIDTH bound to: 32 - type: integer 
+	Parameter din26_WIDTH bound to: 32 - type: integer 
+	Parameter din27_WIDTH bound to: 32 - type: integer 
+	Parameter din28_WIDTH bound to: 32 - type: integer 
+	Parameter din29_WIDTH bound to: 32 - type: integer 
+	Parameter din30_WIDTH bound to: 32 - type: integer 
+	Parameter din31_WIDTH bound to: 32 - type: integer 
+	Parameter din32_WIDTH bound to: 32 - type: integer 
+	Parameter din33_WIDTH bound to: 32 - type: integer 
+	Parameter din34_WIDTH bound to: 32 - type: integer 
+	Parameter din35_WIDTH bound to: 32 - type: integer 
+	Parameter din36_WIDTH bound to: 32 - type: integer 
+	Parameter din37_WIDTH bound to: 32 - type: integer 
+	Parameter din38_WIDTH bound to: 32 - type: integer 
+	Parameter din39_WIDTH bound to: 32 - type: integer 
+	Parameter din40_WIDTH bound to: 32 - type: integer 
+	Parameter din41_WIDTH bound to: 32 - type: integer 
+	Parameter din42_WIDTH bound to: 32 - type: integer 
+	Parameter din43_WIDTH bound to: 32 - type: integer 
+	Parameter din44_WIDTH bound to: 32 - type: integer 
+	Parameter din45_WIDTH bound to: 32 - type: integer 
+	Parameter din46_WIDTH bound to: 32 - type: integer 
+	Parameter din47_WIDTH bound to: 32 - type: integer 
+	Parameter din48_WIDTH bound to: 32 - type: integer 
+	Parameter din49_WIDTH bound to: 32 - type: integer 
+	Parameter din50_WIDTH bound to: 32 - type: integer 
+	Parameter din51_WIDTH bound to: 32 - type: integer 
+	Parameter din52_WIDTH bound to: 32 - type: integer 
+	Parameter din53_WIDTH bound to: 32 - type: integer 
+	Parameter din54_WIDTH bound to: 32 - type: integer 
+	Parameter din55_WIDTH bound to: 32 - type: integer 
+	Parameter din56_WIDTH bound to: 32 - type: integer 
+	Parameter din57_WIDTH bound to: 32 - type: integer 
+	Parameter din58_WIDTH bound to: 32 - type: integer 
+	Parameter din59_WIDTH bound to: 32 - type: integer 
+	Parameter din60_WIDTH bound to: 32 - type: integer 
+	Parameter din61_WIDTH bound to: 32 - type: integer 
+	Parameter din62_WIDTH bound to: 32 - type: integer 
+	Parameter din63_WIDTH bound to: 32 - type: integer 
+	Parameter din64_WIDTH bound to: 6 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'hdv_engine_mux_64_6_32_1_1' declared at 'C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_mux_64_6_32_1_1.vhd:13' bound to instance 'mux_64_6_32_1_1_U213' of component 'hdv_engine_mux_64_6_32_1_1' [C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_766_6.vhd:745]
+INFO: [Synth 8-638] synthesizing module 'hdv_engine_mux_64_6_32_1_1' [C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_mux_64_6_32_1_1.vhd:152]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter din2_WIDTH bound to: 32 - type: integer 
+	Parameter din3_WIDTH bound to: 32 - type: integer 
+	Parameter din4_WIDTH bound to: 32 - type: integer 
+	Parameter din5_WIDTH bound to: 32 - type: integer 
+	Parameter din6_WIDTH bound to: 32 - type: integer 
+	Parameter din7_WIDTH bound to: 32 - type: integer 
+	Parameter din8_WIDTH bound to: 32 - type: integer 
+	Parameter din9_WIDTH bound to: 32 - type: integer 
+	Parameter din10_WIDTH bound to: 32 - type: integer 
+	Parameter din11_WIDTH bound to: 32 - type: integer 
+	Parameter din12_WIDTH bound to: 32 - type: integer 
+	Parameter din13_WIDTH bound to: 32 - type: integer 
+	Parameter din14_WIDTH bound to: 32 - type: integer 
+	Parameter din15_WIDTH bound to: 32 - type: integer 
+	Parameter din16_WIDTH bound to: 32 - type: integer 
+	Parameter din17_WIDTH bound to: 32 - type: integer 
+	Parameter din18_WIDTH bound to: 32 - type: integer 
+	Parameter din19_WIDTH bound to: 32 - type: integer 
+	Parameter din20_WIDTH bound to: 32 - type: integer 
+	Parameter din21_WIDTH bound to: 32 - type: integer 
+	Parameter din22_WIDTH bound to: 32 - type: integer 
+	Parameter din23_WIDTH bound to: 32 - type: integer 
+	Parameter din24_WIDTH bound to: 32 - type: integer 
+	Parameter din25_WIDTH bound to: 32 - type: integer 
+	Parameter din26_WIDTH bound to: 32 - type: integer 
+	Parameter din27_WIDTH bound to: 32 - type: integer 
+	Parameter din28_WIDTH bound to: 32 - type: integer 
+	Parameter din29_WIDTH bound to: 32 - type: integer 
+	Parameter din30_WIDTH bound to: 32 - type: integer 
+	Parameter din31_WIDTH bound to: 32 - type: integer 
+	Parameter din32_WIDTH bound to: 32 - type: integer 
+	Parameter din33_WIDTH bound to: 32 - type: integer 
+	Parameter din34_WIDTH bound to: 32 - type: integer 
+	Parameter din35_WIDTH bound to: 32 - type: integer 
+	Parameter din36_WIDTH bound to: 32 - type: integer 
+	Parameter din37_WIDTH bound to: 32 - type: integer 
+	Parameter din38_WIDTH bound to: 32 - type: integer 
+	Parameter din39_WIDTH bound to: 32 - type: integer 
+	Parameter din40_WIDTH bound to: 32 - type: integer 
+	Parameter din41_WIDTH bound to: 32 - type: integer 
+	Parameter din42_WIDTH bound to: 32 - type: integer 
+	Parameter din43_WIDTH bound to: 32 - type: integer 
+	Parameter din44_WIDTH bound to: 32 - type: integer 
+	Parameter din45_WIDTH bound to: 32 - type: integer 
+	Parameter din46_WIDTH bound to: 32 - type: integer 
+	Parameter din47_WIDTH bound to: 32 - type: integer 
+	Parameter din48_WIDTH bound to: 32 - type: integer 
+	Parameter din49_WIDTH bound to: 32 - type: integer 
+	Parameter din50_WIDTH bound to: 32 - type: integer 
+	Parameter din51_WIDTH bound to: 32 - type: integer 
+	Parameter din52_WIDTH bound to: 32 - type: integer 
+	Parameter din53_WIDTH bound to: 32 - type: integer 
+	Parameter din54_WIDTH bound to: 32 - type: integer 
+	Parameter din55_WIDTH bound to: 32 - type: integer 
+	Parameter din56_WIDTH bound to: 32 - type: integer 
+	Parameter din57_WIDTH bound to: 32 - type: integer 
+	Parameter din58_WIDTH bound to: 32 - type: integer 
+	Parameter din59_WIDTH bound to: 32 - type: integer 
+	Parameter din60_WIDTH bound to: 32 - type: integer 
+	Parameter din61_WIDTH bound to: 32 - type: integer 
+	Parameter din62_WIDTH bound to: 32 - type: integer 
+	Parameter din63_WIDTH bound to: 32 - type: integer 
+	Parameter din64_WIDTH bound to: 6 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'hdv_engine_mux_64_6_32_1_1' (0#1) [C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_mux_64_6_32_1_1.vhd:152]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 1 - type: integer 
+	Parameter din1_WIDTH bound to: 1 - type: integer 
+	Parameter din2_WIDTH bound to: 1 - type: integer 
+	Parameter din3_WIDTH bound to: 1 - type: integer 
+	Parameter din4_WIDTH bound to: 1 - type: integer 
+	Parameter din5_WIDTH bound to: 1 - type: integer 
+	Parameter din6_WIDTH bound to: 1 - type: integer 
+	Parameter din7_WIDTH bound to: 1 - type: integer 
+	Parameter din8_WIDTH bound to: 1 - type: integer 
+	Parameter din9_WIDTH bound to: 1 - type: integer 
+	Parameter din10_WIDTH bound to: 1 - type: integer 
+	Parameter din11_WIDTH bound to: 1 - type: integer 
+	Parameter din12_WIDTH bound to: 1 - type: integer 
+	Parameter din13_WIDTH bound to: 1 - type: integer 
+	Parameter din14_WIDTH bound to: 1 - type: integer 
+	Parameter din15_WIDTH bound to: 1 - type: integer 
+	Parameter din16_WIDTH bound to: 1 - type: integer 
+	Parameter din17_WIDTH bound to: 1 - type: integer 
+	Parameter din18_WIDTH bound to: 1 - type: integer 
+	Parameter din19_WIDTH bound to: 1 - type: integer 
+	Parameter din20_WIDTH bound to: 1 - type: integer 
+	Parameter din21_WIDTH bound to: 1 - type: integer 
+	Parameter din22_WIDTH bound to: 1 - type: integer 
+	Parameter din23_WIDTH bound to: 1 - type: integer 
+	Parameter din24_WIDTH bound to: 1 - type: integer 
+	Parameter din25_WIDTH bound to: 1 - type: integer 
+	Parameter din26_WIDTH bound to: 1 - type: integer 
+	Parameter din27_WIDTH bound to: 1 - type: integer 
+	Parameter din28_WIDTH bound to: 1 - type: integer 
+	Parameter din29_WIDTH bound to: 1 - type: integer 
+	Parameter din30_WIDTH bound to: 1 - type: integer 
+	Parameter din31_WIDTH bound to: 1 - type: integer 
+	Parameter din32_WIDTH bound to: 1 - type: integer 
+	Parameter din33_WIDTH bound to: 1 - type: integer 
+	Parameter din34_WIDTH bound to: 1 - type: integer 
+	Parameter din35_WIDTH bound to: 1 - type: integer 
+	Parameter din36_WIDTH bound to: 1 - type: integer 
+	Parameter din37_WIDTH bound to: 1 - type: integer 
+	Parameter din38_WIDTH bound to: 1 - type: integer 
+	Parameter din39_WIDTH bound to: 1 - type: integer 
+	Parameter din40_WIDTH bound to: 1 - type: integer 
+	Parameter din41_WIDTH bound to: 1 - type: integer 
+	Parameter din42_WIDTH bound to: 1 - type: integer 
+	Parameter din43_WIDTH bound to: 1 - type: integer 
+	Parameter din44_WIDTH bound to: 1 - type: integer 
+	Parameter din45_WIDTH bound to: 1 - type: integer 
+	Parameter din46_WIDTH bound to: 1 - type: integer 
+	Parameter din47_WIDTH bound to: 1 - type: integer 
+	Parameter din48_WIDTH bound to: 1 - type: integer 
+	Parameter din49_WIDTH bound to: 1 - type: integer 
+	Parameter din50_WIDTH bound to: 1 - type: integer 
+	Parameter din51_WIDTH bound to: 1 - type: integer 
+	Parameter din52_WIDTH bound to: 1 - type: integer 
+	Parameter din53_WIDTH bound to: 1 - type: integer 
+	Parameter din54_WIDTH bound to: 1 - type: integer 
+	Parameter din55_WIDTH bound to: 1 - type: integer 
+	Parameter din56_WIDTH bound to: 1 - type: integer 
+	Parameter din57_WIDTH bound to: 1 - type: integer 
+	Parameter din58_WIDTH bound to: 1 - type: integer 
+	Parameter din59_WIDTH bound to: 1 - type: integer 
+	Parameter din60_WIDTH bound to: 1 - type: integer 
+	Parameter din61_WIDTH bound to: 1 - type: integer 
+	Parameter din62_WIDTH bound to: 1 - type: integer 
+	Parameter din63_WIDTH bound to: 1 - type: integer 
+	Parameter din64_WIDTH bound to: 6 - type: integer 
+	Parameter dout_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'hdv_engine_mux_64_6_1_1_1' declared at 'C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_mux_64_6_1_1_1.vhd:13' bound to instance 'mux_64_6_1_1_1_U214' of component 'hdv_engine_mux_64_6_1_1_1' [C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_766_6.vhd:883]
+INFO: [Synth 8-638] synthesizing module 'hdv_engine_mux_64_6_1_1_1' [C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_mux_64_6_1_1_1.vhd:152]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 1 - type: integer 
+	Parameter din1_WIDTH bound to: 1 - type: integer 
+	Parameter din2_WIDTH bound to: 1 - type: integer 
+	Parameter din3_WIDTH bound to: 1 - type: integer 
+	Parameter din4_WIDTH bound to: 1 - type: integer 
+	Parameter din5_WIDTH bound to: 1 - type: integer 
+	Parameter din6_WIDTH bound to: 1 - type: integer 
+	Parameter din7_WIDTH bound to: 1 - type: integer 
+	Parameter din8_WIDTH bound to: 1 - type: integer 
+	Parameter din9_WIDTH bound to: 1 - type: integer 
+	Parameter din10_WIDTH bound to: 1 - type: integer 
+	Parameter din11_WIDTH bound to: 1 - type: integer 
+	Parameter din12_WIDTH bound to: 1 - type: integer 
+	Parameter din13_WIDTH bound to: 1 - type: integer 
+	Parameter din14_WIDTH bound to: 1 - type: integer 
+	Parameter din15_WIDTH bound to: 1 - type: integer 
+	Parameter din16_WIDTH bound to: 1 - type: integer 
+	Parameter din17_WIDTH bound to: 1 - type: integer 
+	Parameter din18_WIDTH bound to: 1 - type: integer 
+	Parameter din19_WIDTH bound to: 1 - type: integer 
+	Parameter din20_WIDTH bound to: 1 - type: integer 
+	Parameter din21_WIDTH bound to: 1 - type: integer 
+	Parameter din22_WIDTH bound to: 1 - type: integer 
+	Parameter din23_WIDTH bound to: 1 - type: integer 
+	Parameter din24_WIDTH bound to: 1 - type: integer 
+	Parameter din25_WIDTH bound to: 1 - type: integer 
+	Parameter din26_WIDTH bound to: 1 - type: integer 
+	Parameter din27_WIDTH bound to: 1 - type: integer 
+	Parameter din28_WIDTH bound to: 1 - type: integer 
+	Parameter din29_WIDTH bound to: 1 - type: integer 
+	Parameter din30_WIDTH bound to: 1 - type: integer 
+	Parameter din31_WIDTH bound to: 1 - type: integer 
+	Parameter din32_WIDTH bound to: 1 - type: integer 
+	Parameter din33_WIDTH bound to: 1 - type: integer 
+	Parameter din34_WIDTH bound to: 1 - type: integer 
+	Parameter din35_WIDTH bound to: 1 - type: integer 
+	Parameter din36_WIDTH bound to: 1 - type: integer 
+	Parameter din37_WIDTH bound to: 1 - type: integer 
+	Parameter din38_WIDTH bound to: 1 - type: integer 
+	Parameter din39_WIDTH bound to: 1 - type: integer 
+	Parameter din40_WIDTH bound to: 1 - type: integer 
+	Parameter din41_WIDTH bound to: 1 - type: integer 
+	Parameter din42_WIDTH bound to: 1 - type: integer 
+	Parameter din43_WIDTH bound to: 1 - type: integer 
+	Parameter din44_WIDTH bound to: 1 - type: integer 
+	Parameter din45_WIDTH bound to: 1 - type: integer 
+	Parameter din46_WIDTH bound to: 1 - type: integer 
+	Parameter din47_WIDTH bound to: 1 - type: integer 
+	Parameter din48_WIDTH bound to: 1 - type: integer 
+	Parameter din49_WIDTH bound to: 1 - type: integer 
+	Parameter din50_WIDTH bound to: 1 - type: integer 
+	Parameter din51_WIDTH bound to: 1 - type: integer 
+	Parameter din52_WIDTH bound to: 1 - type: integer 
+	Parameter din53_WIDTH bound to: 1 - type: integer 
+	Parameter din54_WIDTH bound to: 1 - type: integer 
+	Parameter din55_WIDTH bound to: 1 - type: integer 
+	Parameter din56_WIDTH bound to: 1 - type: integer 
+	Parameter din57_WIDTH bound to: 1 - type: integer 
+	Parameter din58_WIDTH bound to: 1 - type: integer 
+	Parameter din59_WIDTH bound to: 1 - type: integer 
+	Parameter din60_WIDTH bound to: 1 - type: integer 
+	Parameter din61_WIDTH bound to: 1 - type: integer 
+	Parameter din62_WIDTH bound to: 1 - type: integer 
+	Parameter din63_WIDTH bound to: 1 - type: integer 
+	Parameter din64_WIDTH bound to: 6 - type: integer 
+	Parameter dout_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'hdv_engine_mux_64_6_1_1_1' (0#1) [C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_mux_64_6_1_1_1.vhd:152]
+INFO: [Synth 8-3491] module 'hdv_engine_flow_control_loop_pipe_sequential_init' declared at 'C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_flow_control_loop_pipe_sequential_init.vhd:13' bound to instance 'flow_control_loop_pipe_sequential_init_U' of component 'hdv_engine_flow_control_loop_pipe_sequential_init' [C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_766_6.vhd:1021]
+INFO: [Synth 8-256] done synthesizing module 'hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_766_6' (0#1) [C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_766_6.vhd:278]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter din2_WIDTH bound to: 32 - type: integer 
+	Parameter din3_WIDTH bound to: 2 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'hdv_engine_mux_3_2_32_1_1' declared at 'C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_mux_3_2_32_1_1.vhd:13' bound to instance 'mux_3_2_32_1_1_U409' of component 'hdv_engine_mux_3_2_32_1_1' [C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine.vhd:3392]
+	Parameter DataWidth bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'hdv_engine_regslice_both' declared at 'C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_regslice_both.vhd:13' bound to instance 'regslice_both_sdata_i_V_data_V_U' of component 'hdv_engine_regslice_both' [C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine.vhd:3408]
+INFO: [Synth 8-638] synthesizing module 'hdv_engine_regslice_both' [C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_regslice_both.vhd:28]
+	Parameter DataWidth bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'hdv_engine_regslice_both' (0#1) [C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_regslice_both.vhd:28]
+	Parameter DataWidth bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'hdv_engine_regslice_both' declared at 'C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_regslice_both.vhd:13' bound to instance 'regslice_both_sdata_i_V_keep_V_U' of component 'hdv_engine_regslice_both' [C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine.vhd:3422]
+INFO: [Synth 8-638] synthesizing module 'hdv_engine_regslice_both__parameterized1' [C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_regslice_both.vhd:28]
+	Parameter DataWidth bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'hdv_engine_regslice_both__parameterized1' (0#1) [C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_regslice_both.vhd:28]
+	Parameter DataWidth bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'hdv_engine_regslice_both' declared at 'C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_regslice_both.vhd:13' bound to instance 'regslice_both_sdata_i_V_strb_V_U' of component 'hdv_engine_regslice_both' [C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine.vhd:3436]
+	Parameter DataWidth bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'hdv_engine_regslice_both' declared at 'C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_regslice_both.vhd:13' bound to instance 'regslice_both_sdata_i_V_user_V_U' of component 'hdv_engine_regslice_both' [C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine.vhd:3450]
+	Parameter DataWidth bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'hdv_engine_regslice_both' declared at 'C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_regslice_both.vhd:13' bound to instance 'regslice_both_sdata_i_V_last_V_U' of component 'hdv_engine_regslice_both' [C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine.vhd:3464]
+	Parameter DataWidth bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'hdv_engine_regslice_both' declared at 'C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_regslice_both.vhd:13' bound to instance 'regslice_both_sdata_i_V_id_V_U' of component 'hdv_engine_regslice_both' [C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine.vhd:3478]
+	Parameter DataWidth bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'hdv_engine_regslice_both' declared at 'C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_regslice_both.vhd:13' bound to instance 'regslice_both_sdata_i_V_dest_V_U' of component 'hdv_engine_regslice_both' [C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine.vhd:3492]
+INFO: [Synth 8-256] done synthesizing module 'hdv_engine' (0#1) [C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine.vhd:42]
+WARNING: [Synth 8-3917] design hdv_engine has port pred_class_o[5] driven by constant 0
+WARNING: [Synth 8-3917] design hdv_engine has port pred_class_o[4] driven by constant 0
+WARNING: [Synth 8-3917] design hdv_engine has port pred_class_o[3] driven by constant 0
+WARNING: [Synth 8-3917] design hdv_engine has port pred_class_o[2] driven by constant 0
+WARNING: [Synth 8-3917] design hdv_engine has port status_o[4] driven by constant 0
+WARNING: [Synth 8-3917] design hdv_engine has port status_o[3] driven by constant 0
+WARNING: [Synth 8-3917] design hdv_engine has port status_o[2] driven by constant 0
+WARNING: [Synth 8-3917] design hdv_engine has port status_o[1] driven by constant 0
+WARNING: [Synth 8-3917] design hdv_engine has port status_o[0] driven by constant 0
+WARNING: [Synth 8-7129] Port ap_done_int in module hdv_engine_flow_control_loop_pipe_sequential_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sdata_i_TDATA[7] in module hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_273_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sdata_i_TDATA[6] in module hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_273_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sdata_i_TDATA[5] in module hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_273_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sdata_i_TDATA[4] in module hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_273_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sdata_i_TDATA[3] in module hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_273_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sdata_i_TDATA[2] in module hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_273_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sdata_i_TDATA[1] in module hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_273_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sdata_i_TDATA[0] in module hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_273_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sdata_i_TKEEP[0] in module hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_273_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sdata_i_TSTRB[0] in module hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_273_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sdata_i_TUSER[0] in module hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_273_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sdata_i_TLAST[0] in module hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_273_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sdata_i_TID[0] in module hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_273_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sdata_i_TDEST[0] in module hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_273_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port op_mode_i[15] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port op_mode_i[14] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port op_mode_i[13] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port op_mode_i[12] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port op_mode_i[11] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port op_mode_i[7] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port op_mode_i[6] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port op_mode_i[5] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port op_mode_i[4] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port op_mode_i[3] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port op_mode_i[2] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frame_in[47] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frame_in[46] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frame_in[45] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frame_in[44] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frame_in[43] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frame_in[42] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frame_in[31] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frame_in[30] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frame_in[29] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frame_in[28] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frame_in[27] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frame_in[26] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frame_in[15] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frame_in[14] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frame_in[13] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frame_in[12] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frame_in[11] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frame_in[10] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frame_in[9] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frame_in[8] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frame_in[7] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frame_in[6] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frame_in[5] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frame_in[4] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frame_in[3] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frame_in[2] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port lable_class_i[5] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port lable_class_i[4] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port lable_class_i[3] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port lable_class_i[2] in module hdv_engine is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 3463.609 ; gain = 521.098
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 3481.496 ; gain = 538.984
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 3481.496 ; gain = 538.984
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.385 . Memory (MB): peak = 3481.496 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/viv/const.xdc]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'ap_clk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/viv/const.xdc:1]
+create_clock: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 3606.250 ; gain = 0.000
+Finished Parsing XDC File [C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/viv/const.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 3606.250 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.068 . Memory (MB): peak = 3606.250 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:30 . Memory (MB): peak = 3606.250 ; gain = 663.738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu9eg-ffvb1156-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:30 . Memory (MB): peak = 3606.250 ; gain = 663.738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:30 . Memory (MB): peak = 3606.250 ; gain = 663.738
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:34 . Memory (MB): peak = 3606.250 ; gain = 663.738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 68    
+	   2 Input    7 Bit       Adders := 2     
+	   4 Input    6 Bit       Adders := 10    
+	   3 Input    6 Bit       Adders := 11    
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 1     
+	   4 Input    5 Bit       Adders := 5     
+	   3 Input    5 Bit       Adders := 5     
+	   4 Input    4 Bit       Adders := 2     
+	   3 Input    4 Bit       Adders := 3     
+	   2 Input    4 Bit       Adders := 1     
+	   3 Input    3 Bit       Adders := 2     
+	   2 Input    2 Bit       Adders := 4     
++---XORs : 
+	   2 Input      1 Bit         XORs := 65    
++---Registers : 
+	               66 Bit    Registers := 1     
+	               64 Bit    Registers := 1     
+	               32 Bit    Registers := 266   
+	               10 Bit    Registers := 2     
+	                8 Bit    Registers := 2     
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 22    
+	                5 Bit    Registers := 10    
+	                4 Bit    Registers := 6     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 14    
+	                1 Bit    Registers := 463   
++---Muxes : 
+	  67 Input   66 Bit        Muxes := 1     
+	   6 Input   46 Bit        Muxes := 1     
+	   2 Input   45 Bit        Muxes := 5     
+	   2 Input   32 Bit        Muxes := 341   
+	   3 Input   32 Bit        Muxes := 1     
+	   2 Input   25 Bit        Muxes := 1     
+	   2 Input   10 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 11    
+	   2 Input    5 Bit        Muxes := 5     
+	   2 Input    4 Bit        Muxes := 3     
+	   2 Input    2 Bit        Muxes := 9     
+	   4 Input    2 Bit        Muxes := 7     
+	   3 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 137   
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 2520 (col length:168)
+BRAMs: 1824 (col length: RAMB18 168 RAMB36 84)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3917] design hdv_engine has port pred_class_o[5] driven by constant 0
+WARNING: [Synth 8-3917] design hdv_engine has port pred_class_o[4] driven by constant 0
+WARNING: [Synth 8-3917] design hdv_engine has port pred_class_o[3] driven by constant 0
+WARNING: [Synth 8-3917] design hdv_engine has port pred_class_o[2] driven by constant 0
+WARNING: [Synth 8-3917] design hdv_engine has port status_o[4] driven by constant 0
+WARNING: [Synth 8-3917] design hdv_engine has port status_o[3] driven by constant 0
+WARNING: [Synth 8-3917] design hdv_engine has port status_o[2] driven by constant 0
+WARNING: [Synth 8-3917] design hdv_engine has port status_o[1] driven by constant 0
+WARNING: [Synth 8-3917] design hdv_engine has port status_o[0] driven by constant 0
+WARNING: [Synth 8-7129] Port op_mode_i[15] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port op_mode_i[14] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port op_mode_i[13] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port op_mode_i[12] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port op_mode_i[11] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port op_mode_i[7] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port op_mode_i[6] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port op_mode_i[5] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port op_mode_i[4] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port op_mode_i[3] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port op_mode_i[2] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frame_in[47] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frame_in[46] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frame_in[45] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frame_in[44] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frame_in[43] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frame_in[42] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frame_in[31] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frame_in[30] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frame_in[29] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frame_in[28] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frame_in[27] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frame_in[26] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frame_in[15] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frame_in[14] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frame_in[13] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frame_in[12] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frame_in[11] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frame_in[10] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frame_in[9] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frame_in[8] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frame_in[7] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frame_in[6] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frame_in[5] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frame_in[4] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frame_in[3] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port frame_in[2] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port lable_class_i[5] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port lable_class_i[4] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port lable_class_i[3] in module hdv_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port lable_class_i[2] in module hdv_engine is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:59 . Memory (MB): peak = 3606.250 ; gain = 663.738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:44 ; elapsed = 00:01:18 . Memory (MB): peak = 4007.977 ; gain = 1065.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:46 ; elapsed = 00:01:22 . Memory (MB): peak = 4293.926 ; gain = 1351.414
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:50 ; elapsed = 00:01:28 . Memory (MB): peak = 4323.242 ; gain = 1380.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:53 ; elapsed = 00:01:33 . Memory (MB): peak = 4335.160 ; gain = 1392.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:53 ; elapsed = 00:01:33 . Memory (MB): peak = 4335.160 ; gain = 1392.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:53 ; elapsed = 00:01:34 . Memory (MB): peak = 4335.160 ; gain = 1392.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:53 ; elapsed = 00:01:34 . Memory (MB): peak = 4335.160 ; gain = 1392.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:54 ; elapsed = 00:01:35 . Memory (MB): peak = 4335.160 ; gain = 1392.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:54 ; elapsed = 00:01:35 . Memory (MB): peak = 4335.160 ; gain = 1392.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY8 |   498|
+|3     |LUT1   |    64|
+|4     |LUT2   |  2112|
+|5     |LUT3   |  2790|
+|6     |LUT4   |  2478|
+|7     |LUT5   |   553|
+|8     |LUT6   |  1315|
+|9     |MUXF7  |   264|
+|10    |MUXF8  |   128|
+|11    |FDRE   |  9300|
+|12    |FDSE   |     1|
+|13    |IBUF   |  2210|
+|14    |OBUF   |  2064|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:54 ; elapsed = 00:01:35 . Memory (MB): peak = 4335.160 ; gain = 1392.648
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 51 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:40 ; elapsed = 00:01:23 . Memory (MB): peak = 4335.160 ; gain = 1267.895
+Synthesis Optimization Complete : Time (s): cpu = 00:00:54 ; elapsed = 00:01:35 . Memory (MB): peak = 4335.160 ; gain = 1392.648
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.507 . Memory (MB): peak = 4347.172 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 3101 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 4371.062 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2211 instances were transformed.
+  BUFG => BUFGCE: 1 instance 
+  IBUF => IBUF (IBUFCTRL, INBUF): 2210 instances
+
+Synth Design complete | Checksum: 8b4499c1
+INFO: [Common 17-83] Releasing license: Synthesis
+62 Infos, 116 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:04 ; elapsed = 00:01:54 . Memory (MB): peak = 4371.062 ; gain = 2462.000
+INFO: [Common 17-1381] The checkpoint 'C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/viv/viv.runs/synth_1/hdv_engine.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file hdv_engine_utilization_synth.rpt -pb hdv_engine_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Jun 21 16:50:21 2024...

@@ -1,0 +1,4 @@
+<VitisHLS:BurstInfo>
+    <burst group="BURST_VERBOSE_MISSED" fe_name="CouldNotAnalyzeBoundsPatternMissed" src_info="./../src/hw/hls_xilinx/main.cpp:273:23" msg_id="214-252" msg_severity="INFO" msg_body="Could not analyze the loop bounds" resolution="214-252" LoopLoc="./../src/hw/hls_xilinx/main.cpp:273:23" LoopName="VITIS_LOOP_273_1" ParentFunc="hdv_engine(bool&amp;, op_mode_t, frame_in_t, hls::stream&lt;hls::axis&lt;ap_uint&lt;8&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;, chv_p_t&amp;, chv_t*, bhv_p_t&amp;, lhv_p_t&amp;, pred_class_t&amp;, pred_class_t*, sys_status_t*)"/>
+</VitisHLS:BurstInfo>
+

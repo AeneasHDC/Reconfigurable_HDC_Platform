@@ -1,0 +1,151 @@
+
+
+================================================================
+== Vitis HLS Report for 'hdv_engine_Pipeline_VITIS_LOOP_912_9'
+================================================================
+* Date:           Fri Jun 21 16:47:09 2024
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        _hdc_hls_xilinx
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu9eg-ffvb1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  2.275 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        5|        5|  25.000 ns|  25.000 ns|    5|    5|       no|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_912_9  |        3|        3|         1|          1|          1|     3|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.42>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operation 4 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%similarity_max = alloca i32 1"   --->   Operation 5 'alloca' 'similarity_max' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t_33 = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t_62"   --->   Operation 6 'read' 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t_33' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t_34 = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t_61"   --->   Operation 7 'read' 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t_34' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t_35 = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t_60"   --->   Operation 8 'read' 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t_35' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.42ns)   --->   "%store_ln0 = store i64 0, i64 %similarity_max"   --->   Operation 9 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 10 [1/1] (0.42ns)   --->   "%store_ln0 = store i2 0, i2 %i"   --->   Operation 10 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body228"   --->   Operation 11 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 2.27>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%i_1 = load i2 %i" [./../src/hw/hls_xilinx/main.cpp:912]   --->   Operation 12 'load' 'i_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (0.54ns)   --->   "%icmp_ln912 = icmp_eq  i2 %i_1, i2 3" [./../src/hw/hls_xilinx/main.cpp:912]   --->   Operation 13 'icmp' 'icmp_ln912' <Predicate = true> <Delay = 0.54> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.54> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 14 [1/1] (0.54ns)   --->   "%i_2 = add i2 %i_1, i2 1" [./../src/hw/hls_xilinx/main.cpp:912]   --->   Operation 14 'add' 'i_2' <Predicate = true> <Delay = 0.54> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%br_ln912 = br i1 %icmp_ln912, void %for.body228.split, void %xcl_inline.VITIS_LOOP_912_9.5_end.exitStub" [./../src/hw/hls_xilinx/main.cpp:912]   --->   Operation 15 'br' 'br_ln912' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%similarity_max_load = load i64 %similarity_max" [./../src/hw/hls_xilinx/main.cpp:916]   --->   Operation 16 'load' 'similarity_max_load' <Predicate = (!icmp_ln912)> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%specpipeline_ln914 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_7" [./../src/hw/hls_xilinx/main.cpp:914]   --->   Operation 17 'specpipeline' 'specpipeline_ln914' <Predicate = (!icmp_ln912)> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%speclooptripcount_ln225 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 3, i64 3, i64 3" [./../src/hw/hls_xilinx/main.cpp:225]   --->   Operation 18 'speclooptripcount' 'speclooptripcount_ln225' <Predicate = (!icmp_ln912)> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%specloopname_ln912 = specloopname void @_ssdm_op_SpecLoopName, void @empty_3" [./../src/hw/hls_xilinx/main.cpp:912]   --->   Operation 19 'specloopname' 'specloopname_ln912' <Predicate = (!icmp_ln912)> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (0.47ns)   --->   "%similarity_max_1 = mux i32 @_ssdm_op_Mux.ap_auto.3i32.i2, i32 %hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t_35, i32 %hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t_34, i32 %hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t_33, i2 %i_1" [./../src/hw/hls_xilinx/main.cpp:916]   --->   Operation 20 'mux' 'similarity_max_1' <Predicate = (!icmp_ln912)> <Delay = 0.47> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 0.47> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%sext_ln916 = sext i32 %similarity_max_1" [./../src/hw/hls_xilinx/main.cpp:916]   --->   Operation 21 'sext' 'sext_ln916' <Predicate = (!icmp_ln912)> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (1.08ns)   --->   "%icmp_ln916 = icmp_slt  i64 %similarity_max_load, i64 %sext_ln916" [./../src/hw/hls_xilinx/main.cpp:916]   --->   Operation 22 'icmp' 'icmp_ln916' <Predicate = (!icmp_ln912)> <Delay = 1.08> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.08> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%br_ln916 = br i1 %icmp_ln916, void %for.inc238, void %if.then232" [./../src/hw/hls_xilinx/main.cpp:916]   --->   Operation 23 'br' 'br_ln916' <Predicate = (!icmp_ln912)> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%store_ln922 = store i2 %i_1, i2 %p_pred_class_o" [./../src/hw/hls_xilinx/main.cpp:922]   --->   Operation 24 'store' 'store_ln922' <Predicate = (!icmp_ln912 & icmp_ln916)> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.42ns)   --->   "%store_ln924 = store i64 %sext_ln916, i64 %similarity_max" [./../src/hw/hls_xilinx/main.cpp:924]   --->   Operation 25 'store' 'store_ln924' <Predicate = (!icmp_ln912 & icmp_ln916)> <Delay = 0.42>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%br_ln924 = br void %for.inc238" [./../src/hw/hls_xilinx/main.cpp:924]   --->   Operation 26 'br' 'br_ln924' <Predicate = (!icmp_ln912 & icmp_ln916)> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.42ns)   --->   "%store_ln912 = store i2 %i_2, i2 %i" [./../src/hw/hls_xilinx/main.cpp:912]   --->   Operation 27 'store' 'store_ln912' <Predicate = (!icmp_ln912)> <Delay = 0.42>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%br_ln912 = br void %for.body228" [./../src/hw/hls_xilinx/main.cpp:912]   --->   Operation 28 'br' 'br_ln912' <Predicate = (!icmp_ln912)> <Delay = 0.00>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 29 'ret' 'ret_ln0' <Predicate = (icmp_ln912)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5.000ns, clock uncertainty: 1.350ns.
+
+ <State 1>: 0.427ns
+The critical path consists of the following:
+	'alloca' operation ('similarity_max') [6]  (0.000 ns)
+	'store' operation ('store_ln0') of constant 0 on local variable 'similarity_max' [10]  (0.427 ns)
+
+ <State 2>: 2.275ns
+The critical path consists of the following:
+	'load' operation ('i', ./../src/hw/hls_xilinx/main.cpp:912) on local variable 'i' [14]  (0.000 ns)
+	'mux' operation ('similarity_max', ./../src/hw/hls_xilinx/main.cpp:916) [23]  (0.476 ns)
+	'icmp' operation ('icmp_ln916', ./../src/hw/hls_xilinx/main.cpp:916) [25]  (1.085 ns)
+	blocking operation 0.714 ns on control path)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

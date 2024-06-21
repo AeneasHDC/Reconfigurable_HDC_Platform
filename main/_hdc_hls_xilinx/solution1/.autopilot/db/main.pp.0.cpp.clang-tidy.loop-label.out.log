@@ -1,0 +1,888 @@
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:29002:7: warning: Added loop label VITIS_LOOP_1213_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1213_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:29002:7: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:29976:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:29976:5: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:29990:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:29990:5: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:30004:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:30004:5: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:31615:7: warning: Added loop label VITIS_LOOP_1247_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1247_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:31615:7: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:52827:72: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::sin_cos_K0 type=ROM_1P impl=LUTRAM
+                                                                       ^
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:52828:72: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::sin_cos_K1 type=ROM_1P impl=LUTRAM
+                                                                       ^
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:52829:72: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::sin_cos_K2 type=ROM_1P impl=LUTRAM
+                                                                       ^
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:52830:72: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::sin_cos_K3 type=ROM_1P impl=LUTRAM
+                                                                       ^
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:52831:72: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::sin_cos_K4 type=ROM_1P impl=LUTRAM
+                                                                       ^
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:52861:68: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::cos_K0 type=ROM_1P impl=LUTRAM
+                                                                   ^
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:52862:68: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::cos_K1 type=ROM_1P impl=LUTRAM
+                                                                   ^
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:52863:68: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::cos_K2 type=ROM_1P impl=LUTRAM
+                                                                   ^
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:52864:68: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::cos_K3 type=ROM_1P impl=LUTRAM
+                                                                   ^
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:52865:68: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::cos_K4 type=ROM_1P impl=LUTRAM
+                                                                   ^
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:52866:68: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::sin_K0 type=ROM_1P impl=LUTRAM
+                                                                   ^
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:52867:68: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::sin_K1 type=ROM_1P impl=LUTRAM
+                                                                   ^
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:52868:68: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::sin_K2 type=ROM_1P impl=LUTRAM
+                                                                   ^
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:52869:68: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::sin_K3 type=ROM_1P impl=LUTRAM
+                                                                   ^
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:52870:68: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::sin_K4 type=ROM_1P impl=LUTRAM
+                                                                   ^
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:52920:71: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=second_order_float::sin_cos_K0 type=ROM_1P impl=LUTRAM
+                                                                      ^
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:52921:71: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=second_order_float::sin_cos_K1 type=ROM_1P impl=LUTRAM
+                                                                      ^
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:52922:71: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=second_order_float::sin_cos_K2 type=ROM_1P impl=LUTRAM
+                                                                      ^
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:52949:67: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=second_order_float::cos_K0 type=ROM_1P impl=LUTRAM
+                                                                  ^
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:52950:67: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=second_order_float::cos_K1 type=ROM_1P impl=LUTRAM
+                                                                  ^
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:52951:67: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=second_order_float::cos_K2 type=ROM_1P impl=LUTRAM
+                                                                  ^
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:52952:67: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=second_order_float::sin_K0 type=ROM_1P impl=LUTRAM
+                                                                  ^
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:52953:67: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=second_order_float::sin_K1 type=ROM_1P impl=LUTRAM
+                                                                  ^
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:52954:67: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=second_order_float::sin_K2 type=ROM_1P impl=LUTRAM
+                                                                  ^
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:52990:73: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=first_order_fixed_16::sin_cos_K0 type=ROM_1P impl=LUTRAM
+                                                                        ^
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:52991:73: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=first_order_fixed_16::sin_cos_K1 type=ROM_1P impl=LUTRAM
+                                                                        ^
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:53265:5: warning: Added loop label VITIS_LOOP_87_1:   [xilinx-label-all-loops]
+    for (int n=0; n<Nmax; n++){
+    ^~~
+    VITIS_LOOP_87_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:53265:5: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:53311:5: warning: Added loop label VITIS_LOOP_143_1:   [xilinx-label-all-loops]
+    for (int n=0; n<Nmax; n++){
+    ^~~
+    VITIS_LOOP_143_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:53311:5: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:53474:9: warning: Added loop label VITIS_LOOP_315_1:   [xilinx-label-all-loops]
+        for(int i=0;i<W-1;i++){
+        ^~~
+        VITIS_LOOP_315_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:53474:9: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:53626:9: warning: Added loop label VITIS_LOOP_475_1:   [xilinx-label-all-loops]
+        for(int i=0;i<W-1;i++){
+        ^~~
+        VITIS_LOOP_475_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:53626:9: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:53806:5: warning: Added loop label VITIS_LOOP_655_1:   [xilinx-label-all-loops]
+    for(int i=0;i<W+1;i++){
+    ^~~
+    VITIS_LOOP_655_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:53806:5: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:53810:5: warning: Added loop label VITIS_LOOP_659_2:   [xilinx-label-all-loops]
+    for(int i=0;i<W+1;i++){
+    ^~~
+    VITIS_LOOP_659_2: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:53810:5: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:53920:5: warning: Added loop label VITIS_LOOP_769_1:   [xilinx-label-all-loops]
+    for (int n=0; n<Nmax; n++){
+    ^~~
+    VITIS_LOOP_769_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:53920:5: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:54010:7: warning: Added loop label VITIS_LOOP_866_1:   [xilinx-label-all-loops]
+      for(int i=0;i<W-1;i++){
+      ^~~
+      VITIS_LOOP_866_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:54010:7: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:54029:7: warning: Added loop label VITIS_LOOP_885_2:   [xilinx-label-all-loops]
+      for(int i=0;i<W-1;i++){
+      ^~~
+      VITIS_LOOP_885_2: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:54029:7: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:54319:5: warning: Added loop label VITIS_LOOP_1199_1:   [xilinx-label-all-loops]
+    for(int i=0; i<Nmax; i++) {
+    ^~~
+    VITIS_LOOP_1199_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:54319:5: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:54402:5: warning: Added loop label VITIS_LOOP_1282_1:   [xilinx-label-all-loops]
+    for(int i=0; i<Nmax; i++) {
+    ^~~
+    VITIS_LOOP_1282_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:54402:5: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:54808:13: warning: Added loop label VITIS_LOOP_94_1:   [xilinx-label-all-loops]
+            for (int j = 3; j >= I_+1; j--) {
+            ^~~
+            VITIS_LOOP_94_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:54808:13: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:54814:17: warning: Added loop label VITIS_LOOP_100_2:   [xilinx-label-all-loops]
+                for (int j = 3; j >= I_+1; j--){
+                ^~~
+                VITIS_LOOP_100_2: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:54814:17: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:54818:17: warning: Added loop label VITIS_LOOP_104_3:   [xilinx-label-all-loops]
+                for (int j = I_; j >= 0; j--){
+                ^~~
+                VITIS_LOOP_104_3: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:54818:17: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:54866:13: warning: Added loop label VITIS_LOOP_171_4:   [xilinx-label-all-loops]
+            for (int j = 9; j >= I_+4; j--) {
+            ^~~
+            VITIS_LOOP_171_4: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:54866:13: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:54872:17: warning: Added loop label VITIS_LOOP_177_5:   [xilinx-label-all-loops]
+                for (int j = 9; j >= I_+4; j--){
+                ^~~
+                VITIS_LOOP_177_5: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:54872:17: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:54876:17: warning: Added loop label VITIS_LOOP_181_6:   [xilinx-label-all-loops]
+                for (int j = I_+3; j >= 0; j--){
+                ^~~
+                VITIS_LOOP_181_6: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:54876:17: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:54891:9: warning: Added loop label VITIS_LOOP_196_7:   [xilinx-label-all-loops]
+        for (int j = 14; j < 22; j++){
+        ^~~
+        VITIS_LOOP_196_7: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:54891:9: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:54899:17: warning: Added loop label VITIS_LOOP_204_8:   [xilinx-label-all-loops]
+                for (int j = 0; j < 22; j++){
+                ^~~
+                VITIS_LOOP_204_8: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:54899:17: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:54964:13: warning: Added loop label VITIS_LOOP_269_9:   [xilinx-label-all-loops]
+            for (int j = 21; j >= I_+10; j--) {
+            ^~~
+            VITIS_LOOP_269_9: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:54964:13: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:54970:17: warning: Added loop label VITIS_LOOP_275_10:   [xilinx-label-all-loops]
+                for (int j = 21; j >= I_+10; j--) {
+                ^~~
+                VITIS_LOOP_275_10: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:54970:17: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:54974:17: warning: Added loop label VITIS_LOOP_279_11:   [xilinx-label-all-loops]
+                for (int j = I_+9; j >= 0; j--) {
+                ^~~
+                VITIS_LOOP_279_11: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:54974:17: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:54989:9: warning: Added loop label VITIS_LOOP_294_12:   [xilinx-label-all-loops]
+        for (int j = 27; j < 46; j++){
+        ^~~
+        VITIS_LOOP_294_12: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:54989:9: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:54997:17: warning: Added loop label VITIS_LOOP_302_13:   [xilinx-label-all-loops]
+                for (int j = 0; j < 46; j++) {
+                ^~~
+                VITIS_LOOP_302_13: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:54997:17: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:55226:13: warning: Added loop label VITIS_LOOP_531_14:   [xilinx-label-all-loops]
+            for (int j = 45; j >= I_+22; j--) {
+            ^~~
+            VITIS_LOOP_531_14: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:55226:13: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:55232:17: warning: Added loop label VITIS_LOOP_537_15:   [xilinx-label-all-loops]
+                for (int j = 45; j >= I_+22; j--){
+                ^~~
+                VITIS_LOOP_537_15: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:55232:17: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:55236:17: warning: Added loop label VITIS_LOOP_541_16:   [xilinx-label-all-loops]
+                for (int j = I_+21; j >= 0; j--) {
+                ^~~
+                VITIS_LOOP_541_16: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:55236:17: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:55246:9: warning: Added loop label VITIS_LOOP_551_17:   [xilinx-label-all-loops]
+        for (int j = 32-F_; j < 32+I_; j++){
+        ^~~
+        VITIS_LOOP_551_17: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:55246:9: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:55250:9: warning: Added loop label VITIS_LOOP_555_18:   [xilinx-label-all-loops]
+        for (int j = 32+I_; j <= 64; j++){
+        ^~~
+        VITIS_LOOP_555_18: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:55250:9: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:55260:9: warning: Added loop label VITIS_LOOP_565_19:   [xilinx-label-all-loops]
+        for (int j = 37; j < 64; j++) {
+        ^~~
+        VITIS_LOOP_565_19: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:55260:9: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:55268:17: warning: Added loop label VITIS_LOOP_573_20:   [xilinx-label-all-loops]
+                for (int j = 0; j < 64; j++){
+                ^~~
+                VITIS_LOOP_573_20: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:55268:17: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:55629:13: warning: Added loop label VITIS_LOOP_934_21:   [xilinx-label-all-loops]
+            for (int j = 63; j >= I_+31; j--) {
+            ^~~
+            VITIS_LOOP_934_21: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:55629:13: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:55635:17: warning: Added loop label VITIS_LOOP_940_22:   [xilinx-label-all-loops]
+                for (int j = 63; j >= I_+31; j--) {
+                ^~~
+                VITIS_LOOP_940_22: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:55635:17: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:55639:17: warning: Added loop label VITIS_LOOP_944_23:   [xilinx-label-all-loops]
+                for (int j = I_+30; j >= 0; j--) {
+                ^~~
+                VITIS_LOOP_944_23: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:55639:17: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:55755:13: warning: Added loop label VITIS_LOOP_1060_1:   [xilinx-label-all-loops]
+            for (int j = 4; j >= I_+1; j--) {
+            ^~~
+            VITIS_LOOP_1060_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:55755:13: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:55761:17: warning: Added loop label VITIS_LOOP_1066_2:   [xilinx-label-all-loops]
+                for (int j = 4; j >= I_+1; j--) {
+                ^~~
+                VITIS_LOOP_1066_2: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:55761:17: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:55765:17: warning: Added loop label VITIS_LOOP_1070_3:   [xilinx-label-all-loops]
+                for (int j = I_; j >= 0; j--) {
+                ^~~
+                VITIS_LOOP_1070_3: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:55765:17: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:55852:13: warning: Added loop label VITIS_LOOP_1157_4:   [xilinx-label-all-loops]
+            for (int j = 10; j >= I_+4; j--) {
+            ^~~
+            VITIS_LOOP_1157_4: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:55852:13: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:55858:17: warning: Added loop label VITIS_LOOP_1163_5:   [xilinx-label-all-loops]
+                for (int j = 10; j >= I_+4; j--) {
+                ^~~
+                VITIS_LOOP_1163_5: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:55858:17: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:55862:17: warning: Added loop label VITIS_LOOP_1167_6:   [xilinx-label-all-loops]
+                for (int j = I_+3; j >= 0; j--) {
+                ^~~
+                VITIS_LOOP_1167_6: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:55862:17: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:55881:9: warning: Added loop label VITIS_LOOP_1186_7:   [xilinx-label-all-loops]
+        for (int j = wf+3; j < w-1; j++) {
+        ^~~
+        VITIS_LOOP_1186_7: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:55881:9: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:55888:17: warning: Added loop label VITIS_LOOP_1193_8:   [xilinx-label-all-loops]
+                for (int j = 0; j < 22; j++) {
+                ^~~
+                VITIS_LOOP_1193_8: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:55888:17: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:56004:13: warning: Added loop label VITIS_LOOP_1309_9:   [xilinx-label-all-loops]
+            for (int j = 22; j >= I_+10; j--) {
+            ^~~
+            VITIS_LOOP_1309_9: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:56004:13: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:56010:17: warning: Added loop label VITIS_LOOP_1315_10:   [xilinx-label-all-loops]
+                for (int j = 22; j >= I_+10; j--){
+                ^~~
+                VITIS_LOOP_1315_10: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:56010:17: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:56014:17: warning: Added loop label VITIS_LOOP_1319_11:   [xilinx-label-all-loops]
+                for (int j = I_+9; j >= 0; j--) {
+                ^~~
+                VITIS_LOOP_1319_11: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:56014:17: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:56034:9: warning: Added loop label VITIS_LOOP_1339_12:   [xilinx-label-all-loops]
+        for (int j = wf+4; j < w-1; j++){
+        ^~~
+        VITIS_LOOP_1339_12: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:56034:9: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:56041:17: warning: Added loop label VITIS_LOOP_1346_13:   [xilinx-label-all-loops]
+                for (int j = 0; j < 46; j++) {
+                ^~~
+                VITIS_LOOP_1346_13: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:56041:17: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:56303:13: warning: Added loop label VITIS_LOOP_1608_14:   [xilinx-label-all-loops]
+            for (int j = 46; j >= I_+22; j--) {
+            ^~~
+            VITIS_LOOP_1608_14: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:56303:13: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:56309:17: warning: Added loop label VITIS_LOOP_1614_15:   [xilinx-label-all-loops]
+                for (int j = 46; j >= I_+22; j--) {
+                ^~~
+                VITIS_LOOP_1614_15: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:56309:17: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:56313:17: warning: Added loop label VITIS_LOOP_1618_16:   [xilinx-label-all-loops]
+                for (int j = I_+21; j >= 0; j--) {
+                ^~~
+                VITIS_LOOP_1618_16: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:56313:17: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:56337:9: warning: Added loop label VITIS_LOOP_1642_17:   [xilinx-label-all-loops]
+        for (int j = wf+5; j < w-1; j++){
+        ^~~
+        VITIS_LOOP_1642_17: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:56337:9: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:56344:17: warning: Added loop label VITIS_LOOP_1649_18:   [xilinx-label-all-loops]
+                for (int j = 0; j < 64; j++) {
+                ^~~
+                VITIS_LOOP_1649_18: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:56344:17: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:56774:13: warning: Added loop label VITIS_LOOP_2079_19:   [xilinx-label-all-loops]
+            for (int j = 64; j >= I_+31; j--) {
+            ^~~
+            VITIS_LOOP_2079_19: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:56774:13: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:56780:17: warning: Added loop label VITIS_LOOP_2085_20:   [xilinx-label-all-loops]
+                for (int j = 64; j >= I_+31; j--) {
+                ^~~
+                VITIS_LOOP_2085_20: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:56780:17: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:56784:17: warning: Added loop label VITIS_LOOP_2089_21:   [xilinx-label-all-loops]
+                for (int j = I_+30; j >= 0; j--) {
+                ^~~
+                VITIS_LOOP_2089_21: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:56784:17: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:56914:13: warning: Added loop label VITIS_LOOP_2219_1:   [xilinx-label-all-loops]
+            for(int j=3; j>=I+1; j--) {
+            ^~~
+            VITIS_LOOP_2219_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:56914:13: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:56921:17: warning: Added loop label VITIS_LOOP_2226_2:   [xilinx-label-all-loops]
+                for(int j=3; j>=I+1; j--) {
+                ^~~
+                VITIS_LOOP_2226_2: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:56921:17: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:56925:17: warning: Added loop label VITIS_LOOP_2230_3:   [xilinx-label-all-loops]
+                for(int j=I; j>=0; j--) {
+                ^~~
+                VITIS_LOOP_2230_3: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:56925:17: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:56972:13: warning: Added loop label VITIS_LOOP_2277_4:   [xilinx-label-all-loops]
+            for(int j=7; j>=3+I; j--) {
+            ^~~
+            VITIS_LOOP_2277_4: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:56972:13: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:56979:17: warning: Added loop label VITIS_LOOP_2284_5:   [xilinx-label-all-loops]
+                for(int j=7; j>=3+I; j--) {
+                ^~~
+                VITIS_LOOP_2284_5: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:56979:17: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:56983:17: warning: Added loop label VITIS_LOOP_2288_6:   [xilinx-label-all-loops]
+                for(int j=I+2; j>=0; j--) {
+                ^~~
+                VITIS_LOOP_2288_6: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:56983:17: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57001:9: warning: Added loop label VITIS_LOOP_2306_7:   [xilinx-label-all-loops]
+        for(int j=11; j<16; j++) {
+        ^~~
+        VITIS_LOOP_2306_7: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57001:9: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57056:13: warning: Added loop label VITIS_LOOP_2361_8:   [xilinx-label-all-loops]
+            for(int j=15; j>=7+I; j--) {
+            ^~~
+            VITIS_LOOP_2361_8: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57056:13: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57063:17: warning: Added loop label VITIS_LOOP_2368_9:   [xilinx-label-all-loops]
+                for(int j=15; j>=7+I; j--) {
+                ^~~
+                VITIS_LOOP_2368_9: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57063:17: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57067:17: warning: Added loop label VITIS_LOOP_2372_10:   [xilinx-label-all-loops]
+                for(int j=6+I; j>=0; j--) {
+                ^~~
+                VITIS_LOOP_2372_10: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57067:17: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57085:9: warning: Added loop label VITIS_LOOP_2390_11:   [xilinx-label-all-loops]
+        for(int j=20; j<32; j++) {
+        ^~~
+        VITIS_LOOP_2390_11: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57085:9: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57174:13: warning: Added loop label VITIS_LOOP_2479_12:   [xilinx-label-all-loops]
+            for(int j=31; j>=I+15; j--) {
+            ^~~
+            VITIS_LOOP_2479_12: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57174:13: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57181:17: warning: Added loop label VITIS_LOOP_2486_13:   [xilinx-label-all-loops]
+                for(int j=31; j>=I+15; j--) {
+                ^~~
+                VITIS_LOOP_2486_13: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57181:17: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57185:17: warning: Added loop label VITIS_LOOP_2490_14:   [xilinx-label-all-loops]
+                for(int j=I+14; j>=0; j--) {
+                ^~~
+                VITIS_LOOP_2490_14: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57185:17: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57195:9: warning: Added loop label VITIS_LOOP_2500_15:   [xilinx-label-all-loops]
+        for(int j=32-F; j<32+I; j++) {
+        ^~~
+        VITIS_LOOP_2500_15: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57195:9: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57199:9: warning: Added loop label VITIS_LOOP_2504_16:   [xilinx-label-all-loops]
+        for(int j=32+I; j<=64; j++) {
+        ^~~
+        VITIS_LOOP_2504_16: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57199:9: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57210:9: warning: Added loop label VITIS_LOOP_2515_17:   [xilinx-label-all-loops]
+        for(int j=37; j<64; j++) {
+        ^~~
+        VITIS_LOOP_2515_17: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57210:9: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57218:17: warning: Added loop label VITIS_LOOP_2523_18:   [xilinx-label-all-loops]
+                for(int j=0; j<64; j++) {
+                ^~~
+                VITIS_LOOP_2523_18: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57218:17: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57543:13: warning: Added loop label VITIS_LOOP_2848_19:   [xilinx-label-all-loops]
+            for(int j=63; j>=I+31; j--) {
+            ^~~
+            VITIS_LOOP_2848_19: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57543:13: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57550:17: warning: Added loop label VITIS_LOOP_2855_20:   [xilinx-label-all-loops]
+                for(int j=63; j>=I+31; j--) {
+                ^~~
+                VITIS_LOOP_2855_20: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57550:17: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57554:17: warning: Added loop label VITIS_LOOP_2859_21:   [xilinx-label-all-loops]
+                for(int j=I+30; j>=0; j--) {
+                ^~~
+                VITIS_LOOP_2859_21: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57554:17: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57642:4: warning: Added loop label VITIS_LOOP_2947_1:   [xilinx-label-all-loops]
+   for(int j = 5; j>=I_+2; j--) {
+   ^~~
+   VITIS_LOOP_2947_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57642:4: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57649:5: warning: Added loop label VITIS_LOOP_2954_2:   [xilinx-label-all-loops]
+    for(int j = 5; j>=I_+2; j--) {
+    ^~~
+    VITIS_LOOP_2954_2: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57649:5: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57653:5: warning: Added loop label VITIS_LOOP_2958_3:   [xilinx-label-all-loops]
+    for(int j = I_+1; j>=0; j--) {
+    ^~~
+    VITIS_LOOP_2958_3: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57653:5: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57668:3: warning: Added loop label VITIS_LOOP_2973_4:   [xilinx-label-all-loops]
+  for(int j = 11; j >=7; j--) {
+  ^~~
+  VITIS_LOOP_2973_4: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57668:3: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57700:4: warning: Added loop label VITIS_LOOP_3005_5:   [xilinx-label-all-loops]
+   for(int j = 11; j >= I_+5; j--) {
+   ^~~
+   VITIS_LOOP_3005_5: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57700:4: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57707:5: warning: Added loop label VITIS_LOOP_3012_6:   [xilinx-label-all-loops]
+    for(int j = 11; j>= I_+5; j--) {
+    ^~~
+    VITIS_LOOP_3012_6: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57707:5: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57711:5: warning: Added loop label VITIS_LOOP_3016_7:   [xilinx-label-all-loops]
+    for(int j = I_+4; j>=0; j--) {
+    ^~~
+    VITIS_LOOP_3016_7: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57711:5: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57726:3: warning: Added loop label VITIS_LOOP_3031_8:   [xilinx-label-all-loops]
+  for(int j = 25; j>=15; j--) {
+  ^~~
+  VITIS_LOOP_3031_8: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57726:3: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57776:4: warning: Added loop label VITIS_LOOP_3081_9:   [xilinx-label-all-loops]
+   for(int j = 25; j>= I_+12; j--) {
+   ^~~
+   VITIS_LOOP_3081_9: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57776:4: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57783:5: warning: Added loop label VITIS_LOOP_3088_10:   [xilinx-label-all-loops]
+    for(int j = 25; j>=I_+12; j--) {
+    ^~~
+    VITIS_LOOP_3088_10: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57783:5: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57787:5: warning: Added loop label VITIS_LOOP_3092_11:   [xilinx-label-all-loops]
+    for(int j = I_+11; j>=0; j--) {
+    ^~~
+    VITIS_LOOP_3092_11: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57787:5: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57802:3: warning: Added loop label VITIS_LOOP_3107_12:   [xilinx-label-all-loops]
+  for(int j = 51; j >= 29; j--) {
+  ^~~
+  VITIS_LOOP_3107_12: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57802:3: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57939:4: warning: Added loop label VITIS_LOOP_3244_13:   [xilinx-label-all-loops]
+   for(int j = 51; j >= 25 + I_; j--) {
+   ^~~
+   VITIS_LOOP_3244_13: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57939:4: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57946:5: warning: Added loop label VITIS_LOOP_3251_14:   [xilinx-label-all-loops]
+    for(int j = 51; j>=25 + I_; j--) {
+    ^~~
+    VITIS_LOOP_3251_14: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57946:5: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57950:5: warning: Added loop label VITIS_LOOP_3255_15:   [xilinx-label-all-loops]
+    for(int j = 24 + I_; j >= 0; j--) {
+    ^~~
+    VITIS_LOOP_3255_15: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57950:5: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57965:3: warning: Added loop label VITIS_LOOP_3270_16:   [xilinx-label-all-loops]
+  for(int j = 63; j >= 36; j--) {
+  ^~~
+  VITIS_LOOP_3270_16: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:57965:3: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:58125:4: warning: Added loop label VITIS_LOOP_3430_17:   [xilinx-label-all-loops]
+   for(int j = 63; j >= 31 + I_; j--) {
+   ^~~
+   VITIS_LOOP_3430_17: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:58125:4: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:58132:5: warning: Added loop label VITIS_LOOP_3437_18:   [xilinx-label-all-loops]
+    for(int j = 63; j >= 31 + I_; j--) {
+    ^~~
+    VITIS_LOOP_3437_18: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:58132:5: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:58136:5: warning: Added loop label VITIS_LOOP_3441_19:   [xilinx-label-all-loops]
+    for(int j = 30 + I_; j >= 0; j--) {
+    ^~~
+    VITIS_LOOP_3441_19: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:58136:5: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:58851:13: warning: Added loop label VITIS_LOOP_729_1:   [xilinx-label-all-loops]
+            for (b_exp = I_-1; b_exp >= -F_; b_exp--) {
+            ^~~
+            VITIS_LOOP_729_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:58851:13: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:59069:13: warning: Added loop label VITIS_LOOP_947_1:   [xilinx-label-all-loops]
+            for (b_exp = I_-1; b_exp >= -F_; b_exp--) {
+            ^~~
+            VITIS_LOOP_947_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:59069:13: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:59486:13: warning: Added loop label VITIS_LOOP_1371_1:   [xilinx-label-all-loops]
+            for (b_exp = I_-1; b_exp >= -F_; b_exp--) {
+            ^~~
+            VITIS_LOOP_1371_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:59486:13: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:59800:9: warning: Added loop label VITIS_LOOP_266_1:   [xilinx-label-all-loops]
+        for ( int pos = msbr-1; pos >= 0; pos-- ) {
+        ^~~
+        VITIS_LOOP_266_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:59800:9: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:59828:9: warning: Added loop label VITIS_LOOP_294_2:   [xilinx-label-all-loops]
+        for ( int pos = -1; pos >= -F_-1; pos-- ) {
+        ^~~
+        VITIS_LOOP_294_2: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:59828:9: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:60523:13: warning: Added loop label VITIS_LOOP_74_1:   [xilinx-label-all-loops]
+            for (int j = 0; j < W_-1; j++){
+            ^~~
+            VITIS_LOOP_74_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:60523:13: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:60576:5: warning: Added loop label VITIS_LOOP_135_2:   [xilinx-label-all-loops]
+    for (int j = F_l+F_+I_m-1; j < F_l+W_+5; j++){
+    ^~~
+    VITIS_LOOP_135_2: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:60576:5: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:60590:13: warning: Added loop label VITIS_LOOP_149_3:   [xilinx-label-all-loops]
+            for (int j = WO_m-1; j >= W_-1; j--) {
+            ^~~
+            VITIS_LOOP_149_3: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:60590:13: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:60620:13: warning: Added loop label VITIS_LOOP_179_4:   [xilinx-label-all-loops]
+            for (int j = W_-2; j >= 0; j--){
+            ^~~
+            VITIS_LOOP_179_4: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:60620:13: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:60705:12: warning: Added loop label VITIS_LOOP_307_1:   [xilinx-label-all-loops]
+           for(int i = wf_log+we_log-2; i > WI_e - 2; --i) {
+           ^~~
+           VITIS_LOOP_307_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:60705:12: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:60725:16: warning: Added loop label VITIS_LOOP_327_2:   [xilinx-label-all-loops]
+               for (int j = WO_e-1; j >= W_-1; j--) {
+               ^~~
+               VITIS_LOOP_327_2: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:60725:16: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:60739:20: warning: Added loop label VITIS_LOOP_341_3:   [xilinx-label-all-loops]
+                   for(int i = 0; i < W_-1; ++i) {
+                   ^~~
+                   VITIS_LOOP_341_3: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:60739:20: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:60832:12: warning: Added loop label VITIS_LOOP_459_1:   [xilinx-label-all-loops]
+           for (int j =WO_d-1; j >= W_-1; j--) {
+           ^~~
+           VITIS_LOOP_459_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:60832:12: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:60846:15: warning: Added loop label VITIS_LOOP_473_2:   [xilinx-label-all-loops]
+              for(int i = 0; i < W_-1; ++i) {
+              ^~~
+              VITIS_LOOP_473_2: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:60846:15: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:60959:13: warning: Added loop label VITIS_LOOP_59_1:   [xilinx-label-all-loops]
+            for (int i = 0; i < W_-1; i++){
+            ^~~
+            VITIS_LOOP_59_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:60959:13: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:61083:13: warning: Added loop label VITIS_LOOP_209_1:   [xilinx-label-all-loops]
+            for (int i = 0; i < W_-1; i++){
+            ^~~
+            VITIS_LOOP_209_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:61083:13: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:61138:13: warning: Added loop label VITIS_LOOP_274_1:   [xilinx-label-all-loops]
+            for (int i = 0; i < W_-1; i++){
+            ^~~
+            VITIS_LOOP_274_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:61138:13: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:61643:2: warning: Added loop label VITIS_LOOP_42_1:   [xilinx-label-all-loops]
+ for (int i=0; i<W_;i++)
+ ^~~
+ VITIS_LOOP_42_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:61643:2: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:61654:2: warning: Added loop label VITIS_LOOP_53_1:   [xilinx-label-all-loops]
+ for (int i=0; i<W_;i++)
+ ^~~
+ VITIS_LOOP_53_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:61654:2: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:61665:2: warning: Added loop label VITIS_LOOP_64_1:   [xilinx-label-all-loops]
+ for (int i=0; i<I_;i++)
+ ^~~
+ VITIS_LOOP_64_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:61665:2: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:61676:2: warning: Added loop label VITIS_LOOP_75_1:   [xilinx-label-all-loops]
+ for (int i=0; i<I_;i++)
+ ^~~
+ VITIS_LOOP_75_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:61676:2: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:61687:2: warning: Added loop label VITIS_LOOP_86_1:   [xilinx-label-all-loops]
+ for (int i=0; i<W_;i++)
+ ^~~
+ VITIS_LOOP_86_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:61687:2: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:61698:2: warning: Added loop label VITIS_LOOP_97_1:   [xilinx-label-all-loops]
+ for (int i=0; i<W_;i++)
+ ^~~
+ VITIS_LOOP_97_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:61698:2: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:61709:2: warning: Added loop label VITIS_LOOP_108_1:   [xilinx-label-all-loops]
+ for (int i=0; i<I_;i++)
+ ^~~
+ VITIS_LOOP_108_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:61709:2: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:61720:2: warning: Added loop label VITIS_LOOP_119_1:   [xilinx-label-all-loops]
+ for (int i=0; i<I_;i++)
+ ^~~
+ VITIS_LOOP_119_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:61720:2: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:64021:12: warning: Added loop label VITIS_LOOP_23_1:   [xilinx-label-all-loops]
+           for(int i = 0; i < W_-1; ++i) {
+           ^~~
+           VITIS_LOOP_23_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:64021:12: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:64085:7: warning: Added loop label VITIS_LOOP_66_1:   [xilinx-label-all-loops]
+      for(int pos = msbr - 1 ; pos >= -F-1; pos--) {
+      ^~~
+      VITIS_LOOP_66_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:64085:7: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:64202:9: warning: Added loop label VITIS_LOOP_75_1:   [xilinx-label-all-loops]
+        for(int pos = msbr - 1; pos >= 0; pos--) {
+        ^~~
+        VITIS_LOOP_75_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:64202:9: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:64227:5: warning: Added loop label VITIS_LOOP_107_2:   [xilinx-label-all-loops]
+    for(int pos = -1; pos >= -F-1; pos--) {
+    ^~~
+    VITIS_LOOP_107_2: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:64227:5: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:64297:8: warning: Added loop label VITIS_LOOP_195_3:   [xilinx-label-all-loops]
+       for(int i = 0; i < W - 1; ++i) {
+       ^~~
+       VITIS_LOOP_195_3: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:64297:8: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:66540:2: warning: Added loop label VITIS_LOOP_13_1:   [xilinx-label-all-loops]
+ for (size_t i = 0; i < LEN; ++i) {
+ ^~~
+ VITIS_LOOP_13_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:66540:2: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:66548:2: warning: Added loop label VITIS_LOOP_21_1:   [xilinx-label-all-loops]
+ for (size_t i = 0; i < LEN; ++i) {
+ ^~~
+ VITIS_LOOP_21_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:66548:2: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:66556:2: warning: Added loop label VITIS_LOOP_29_1:   [xilinx-label-all-loops]
+ for (size_t i = 0; i < LEN; ++i) {
+ ^~~
+ VITIS_LOOP_29_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:66556:2: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:66564:2: warning: Added loop label VITIS_LOOP_37_1:   [xilinx-label-all-loops]
+ for (size_t i = 0; i < LEN; ++i) {
+ ^~~
+ VITIS_LOOP_37_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:66564:2: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:66572:2: warning: Added loop label VITIS_LOOP_45_1:   [xilinx-label-all-loops]
+ for (size_t i = 0; i < LEN; ++i) {
+ ^~~
+ VITIS_LOOP_45_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:66572:2: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:66580:2: warning: Added loop label VITIS_LOOP_53_1:   [xilinx-label-all-loops]
+ for (size_t i = 0; i < LEN; ++i) {
+ ^~~
+ VITIS_LOOP_53_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:66580:2: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:66624:9: warning: Added loop label VITIS_LOOP_68_1:   [xilinx-label-all-loops]
+        while (bit > number) {
+        ^~~~~
+        VITIS_LOOP_68_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:66624:9: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:66628:9: warning: Added loop label VITIS_LOOP_72_2:   [xilinx-label-all-loops]
+        while (bit != 0) {
+        ^~~~~
+        VITIS_LOOP_72_2: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:66628:9: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:66684:2: warning: Added loop label VITIS_LOOP_130_1:   [xilinx-label-all-loops]
+ for ( auto i = 0; i < LEN; i += 64 )
+ ^~~
+ VITIS_LOOP_130_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:66684:2: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:66688:2: warning: Added loop label VITIS_LOOP_134_2:   [xilinx-label-all-loops]
+ for ( auto j = 0; j < 64; j++ )
+ ^~~
+ VITIS_LOOP_134_2: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:66688:2: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:66730:2: warning: Added loop label VITIS_LOOP_371_1:   [xilinx-label-all-loops]
+ for ( auto i = 0; i < LEN; i++ )
+ ^~~
+ VITIS_LOOP_371_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:66730:2: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:66752:5: warning: Added loop label VITIS_LOOP_403_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < LEN; i++) {
+    ^~~
+    VITIS_LOOP_403_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:66752:5: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:66775:5: warning: Added loop label VITIS_LOOP_426_2:   [xilinx-label-all-loops]
+    for (auto i = 0; i < positions; i++) {
+    ^~~
+    VITIS_LOOP_426_2: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:66775:5: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:66790:2: warning: Added loop label VITIS_LOOP_459_1:   [xilinx-label-all-loops]
+ for ( auto i = 0; i < LEN; i += 64 )
+ ^~~
+ VITIS_LOOP_459_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:66790:2: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:66794:2: warning: Added loop label VITIS_LOOP_463_2:   [xilinx-label-all-loops]
+ for ( auto j = 0; j < 64; j++ )
+ ^~~
+ VITIS_LOOP_463_2: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:66794:2: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:66838:6: warning: Added loop label VITIS_LOOP_540_1:   [xilinx-label-all-loops]
+     for ( auto i = 0; i < LEN; i++ )
+     ^~~
+     VITIS_LOOP_540_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:66838:6: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:66846:6: warning: Added loop label VITIS_LOOP_548_2:   [xilinx-label-all-loops]
+     for ( auto i = 0; i < LEN; i++ )
+     ^~~
+     VITIS_LOOP_548_2: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:66846:6: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:66892:6: warning: Added loop label VITIS_LOOP_606_3:   [xilinx-label-all-loops]
+     for ( HDVIndex_t i = 0; i < LEN; i++ )
+     ^~~
+     VITIS_LOOP_606_3: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:66892:6: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:66912:6: warning: Added loop label VITIS_LOOP_626_4:   [xilinx-label-all-loops]
+     for ( HDVIndex_t i = 0; i < LEN; i++ )
+     ^~~
+     VITIS_LOOP_626_4: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:66912:6: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:66958:4: warning: Added loop label VITIS_LOOP_790_1:   [xilinx-label-all-loops]
+   for ( auto lv_i = 0; lv_i < 2; lv_i++ )
+   ^~~
+   VITIS_LOOP_790_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:66958:4: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:66974:7: warning: Added loop label VITIS_LOOP_848_1:   [xilinx-label-all-loops]
+      for ( auto i = 0; i < in_HV_LEN; i += RND_GEN_LEN )
+      ^~~
+      VITIS_LOOP_848_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:66974:7: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:66977:5: warning: Added loop label VITIS_LOOP_851_2:   [xilinx-label-all-loops]
+    for ( auto j = 0; j < RND_GEN_LEN; j++ )
+    ^~~
+    VITIS_LOOP_851_2: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:66977:5: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:66989:4: warning: Added loop label VITIS_LOOP_876_1:   [xilinx-label-all-loops]
+   for ( const auto& element : hv )
+   ^~~
+   VITIS_LOOP_876_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:66989:4: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:67176:5: warning: Added loop label VITIS_LOOP_273_1:   [xilinx-label-all-loops]
+    while ( sdata_i.empty() == 0 )
+    ^~~~~
+    VITIS_LOOP_273_1: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:67176:5: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:67184:4: warning: Added loop label VITIS_LOOP_281_2:   [xilinx-label-all-loops]
+   for(auto i = 0; i < 3; i++)
+   ^~~
+   VITIS_LOOP_281_2: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:67184:4: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:67247:5: warning: Added loop label VITIS_LOOP_488_3:   [xilinx-label-all-loops]
+    for ( auto feature_p_id = 0; feature_p_id < paralled_feature_inx_end; feature_p_id+=1 )
+    ^~~
+    VITIS_LOOP_488_3: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:67247:5: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:67253:2: warning: Added loop label VITIS_LOOP_494_4:   [xilinx-label-all-loops]
+ for ( auto state = 0; state < 2; state++)
+ ^~~
+ VITIS_LOOP_494_4: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:67253:2: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:67313:2: warning: Added loop label VITIS_LOOP_626_5:   [xilinx-label-all-loops]
+ for(auto i = 0; i < 64; i++)
+ ^~~
+ VITIS_LOOP_626_5: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:67313:2: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:67389:8: warning: Added loop label VITIS_LOOP_766_6:   [xilinx-label-all-loops]
+       for ( auto i = 0; i < 64; i++ )
+       ^~~
+       VITIS_LOOP_766_6: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:67389:8: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:67406:2: warning: Added loop label VITIS_LOOP_792_7:   [xilinx-label-all-loops]
+ for ( auto class_p_id = 0; class_p_id < 1; class_p_id+=1 )
+ ^~~
+ VITIS_LOOP_792_7: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:67406:2: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:67475:10: warning: Added loop label VITIS_LOOP_899_8:   [xilinx-label-all-loops]
+         for ( auto i = 0; i < 3; i++ )
+         ^~~
+         VITIS_LOOP_899_8: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:67475:10: note: FIX-IT applied suggested code changes
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:67488:10: warning: Added loop label VITIS_LOOP_912_9:   [xilinx-label-all-loops]
+         for ( auto i = 0; i < 3; i++ )
+         ^~~
+         VITIS_LOOP_912_9: 
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp:67488:10: note: FIX-IT applied suggested code changes
