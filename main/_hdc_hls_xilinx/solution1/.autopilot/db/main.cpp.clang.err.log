@@ -1,0 +1,10 @@
+In file included from ./../src/hw/hls_xilinx/main.cpp:44:
+In file included from ./../src/hw/hls_xilinx/headers/main.hpp:44:
+In file included from ./../src/hw/hls_xilinx/headers/datatypes.hpp:39:
+./../src/hw/hls_xilinx/headers/./../../../config/config_cpp.hpp:11:9: warning: 'FPGA' macro redefined [-Wmacro-redefined]
+#define FPGA 0
+        ^
+<built-in>:350:9: note: previous definition is here
+#define FPGA 1
+        ^
+1 warning generated.

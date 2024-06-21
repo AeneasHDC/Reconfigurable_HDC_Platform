@@ -1,0 +1,21 @@
+{
+  "0": {
+    "basicblocks": 931,
+    "calls": "",
+    "file": "main.cpp",
+    "fileloc": 82,
+    "instructions": 5045,
+    "loads": {
+      "G": 398,
+      "L": 448,
+      "T": 193
+    },
+    "name": "hdv_engine",
+    "stores": {
+      "G": 463,
+      "L": 448,
+      "T": 2
+    },
+    "total_instructions": 5045
+  }
+}

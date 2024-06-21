@@ -1,0 +1,604 @@
+--- !Failure
+Pass:            reflow-check-pragma-conflict
+Name:            IgnoreTopHLSStreamDepth
+DebugLoc:        { File: ./../src/hw/hls_xilinx/main.cpp, Line: 139, Column: 0 }
+Function:        _Z10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tR7bhv_p_tR7lhv_p_tP12pred_class_tP12sys_status_t
+Args:            
+  - String:          'Ignore depth setting for top argument '''
+  - String:          sdata_i
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ./../src/hw/hls_xilinx/main.cpp, Line: 826, Column: 12 }
+Function:        _Z10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tR7bhv_p_tR7lhv_p_tP12pred_class_tP12sys_status_t
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void HDC_op<1ul, 1ul, 64ul>::similarity_phase1<ap_uint<1> [64], ap_uint<32> [64], ap_uint<32>, ap_uint<32> >(ap_uint<1> const (&) [64], ap_uint<32> const (&) [64], ap_uint<32>&, ap_uint<32>&, ap_uint<32>&, unsigned char)'
+    DebugLoc:        { File: ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp, 
+                       Line: 121, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'hdv_engine(bool&, op_mode_t, frame_in_t, hls::stream<hls::axis<ap_uint<8>, 1ul, 1ul, 1ul>, 0>&, chv_p_t&, bhv_p_t&, lhv_p_t&, pred_class_t*, sys_status_t*)'
+    DebugLoc:        { File: ./../src/hw/hls_xilinx/main.cpp, Line: 139, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ./../src/hw/hls_xilinx/main.cpp, Line: 740, Column: 11 }
+Function:        _Z10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tR7bhv_p_tR7lhv_p_tP12pred_class_tP12sys_status_t
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void HDC_op<1ul, 1ul, 64ul>::clip<ap_uint<32> [64], ap_uint<32> [64]>(ap_uint<32> const (&) [64], ap_uint<32> (&) [64], short const&, short const&, ap_int<32>, unsigned char)'
+    DebugLoc:        { File: ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp, 
+                       Line: 529, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'hdv_engine(bool&, op_mode_t, frame_in_t, hls::stream<hls::axis<ap_uint<8>, 1ul, 1ul, 1ul>, 0>&, chv_p_t&, bhv_p_t&, lhv_p_t&, pred_class_t*, sys_status_t*)'
+    DebugLoc:        { File: ./../src/hw/hls_xilinx/main.cpp, Line: 139, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ./../src/hw/hls_xilinx/main.cpp, Line: 664, Column: 6 }
+Function:        _Z10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tR7bhv_p_tR7lhv_p_tP12pred_class_tP12sys_status_t
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void HDC_op<1ul, 1ul, 64ul>::bundle<ap_uint<1> [64], ap_uint<32> [64]>(ap_uint<1> const (&) [64], ap_uint<32> (&) [64])'
+    DebugLoc:        { File: ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp, 
+                       Line: 452, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'hdv_engine(bool&, op_mode_t, frame_in_t, hls::stream<hls::axis<ap_uint<8>, 1ul, 1ul, 1ul>, 0>&, chv_p_t&, bhv_p_t&, lhv_p_t&, pred_class_t*, sys_status_t*)'
+    DebugLoc:        { File: ./../src/hw/hls_xilinx/main.cpp, Line: 139, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ./../src/hw/hls_xilinx/main.cpp, Line: 541, Column: 14 }
+Function:        _Z10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tR7bhv_p_tR7lhv_p_tP12pred_class_tP12sys_status_t
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void HDC_op<1ul, 1ul, 64ul>::bind<ap_uint<1> [64]>(ap_uint<1> const (&) [64], ap_uint<1> const (&) [64], ap_uint<1> (&) [64])'
+    DebugLoc:        { File: ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp, 
+                       Line: 366, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'hdv_engine(bool&, op_mode_t, frame_in_t, hls::stream<hls::axis<ap_uint<8>, 1ul, 1ul, 1ul>, 0>&, chv_p_t&, bhv_p_t&, lhv_p_t&, pred_class_t*, sys_status_t*)'
+    DebugLoc:        { File: ./../src/hw/hls_xilinx/main.cpp, Line: 139, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Missed
+Pass:            reflow-pragma-preprocess
+Name:            IgnoreDepOnScalar
+DebugLoc:        { File: ./../src/hw/hls_xilinx/main.cpp, Line: 262, Column: 9 }
+Function:        _Z10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tR7bhv_p_tR7lhv_p_tP12pred_class_tP12sys_status_t
+Args:            
+  - String:          'Ignoring dependence pragma on local scalar variable '''
+  - Value:           similarity_max
+  - String:          '''.'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp, 
+                   Line: 459, Column: 20 }
+Function:        _Z10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tR7bhv_p_tR7lhv_p_tP12pred_class_tP12sys_status_t
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_459_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp, 
+                   Line: 463, Column: 20 }
+Function:        _Z10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tR7bhv_p_tR7lhv_p_tP12pred_class_tP12sys_status_t
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_463_2
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ./../src/hw/hls_xilinx/main.cpp, Line: 626, Column: 20 }
+Function:        _Z10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tR7bhv_p_tR7lhv_p_tP12pred_class_tP12sys_status_t
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_626_5
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp, 
+                   Line: 371, Column: 20 }
+Function:        _Z10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tR7bhv_p_tR7lhv_p_tP12pred_class_tP12sys_status_t
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_371_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ./../src/hw/hls_xilinx/main.cpp, Line: 139, Column: 0 }
+Function:        _Z10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tR7bhv_p_tR7lhv_p_tP12pred_class_tP12sys_status_t
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_548_2
+  - String:          ''' ('
+  - LoopLoc:         './../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:548:24'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          hdv_engine
+  - String:          ''' completely with a factor of '
+  - Factor:          '64'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ./../src/hw/hls_xilinx/main.cpp, Line: 139, Column: 0 }
+Function:        _Z10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tR7bhv_p_tR7lhv_p_tP12pred_class_tP12sys_status_t
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_459_1
+  - String:          ''' ('
+  - LoopLoc:         './../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:459:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          hdv_engine
+  - String:          ''' completely with a factor of '
+  - Factor:          '1'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ./../src/hw/hls_xilinx/main.cpp, Line: 139, Column: 0 }
+Function:        _Z10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tR7bhv_p_tR7lhv_p_tP12pred_class_tP12sys_status_t
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_463_2
+  - String:          ''' ('
+  - LoopLoc:         './../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:463:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          hdv_engine
+  - String:          ''' completely with a factor of '
+  - Factor:          '64'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ./../src/hw/hls_xilinx/main.cpp, Line: 139, Column: 0 }
+Function:        _Z10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tR7bhv_p_tR7lhv_p_tP12pred_class_tP12sys_status_t
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_626_5
+  - String:          ''' ('
+  - LoopLoc:         './../src/hw/hls_xilinx/main.cpp:626:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          hdv_engine
+  - String:          ''' completely with a factor of '
+  - Factor:          '64'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ./../src/hw/hls_xilinx/main.cpp, Line: 139, Column: 0 }
+Function:        _Z10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tR7bhv_p_tR7lhv_p_tP12pred_class_tP12sys_status_t
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_371_1
+  - String:          ''' ('
+  - LoopLoc:         './../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:371:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          hdv_engine
+  - String:          ''' completely with a factor of '
+  - Factor:          '64'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ./../src/hw/hls_xilinx/main.cpp, Line: 139, Column: 0 }
+Function:        _Z10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tR7bhv_p_tR7lhv_p_tP12pred_class_tP12sys_status_t
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_130_1
+  - String:          ''' ('
+  - LoopLoc:         './../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:130:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          hdv_engine
+  - String:          ''' completely with a factor of '
+  - Factor:          '1'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ./../src/hw/hls_xilinx/main.cpp, Line: 139, Column: 0 }
+Function:        _Z10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tR7bhv_p_tR7lhv_p_tP12pred_class_tP12sys_status_t
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_134_2
+  - String:          ''' ('
+  - LoopLoc:         './../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:134:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          hdv_engine
+  - String:          ''' completely with a factor of '
+  - Factor:          '64'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ./../src/hw/hls_xilinx/main.cpp, Line: 212, Column: 0 }
+Function:        _Z10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tR7bhv_p_tR7lhv_p_tP12pred_class_tP12sys_status_t
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tR7bhv_p_tR7lhv_p_tP12pred_class_tP12sys_status_tE9BundledHV
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ./../src/hw/hls_xilinx/main.cpp, Line: 213, Column: 0 }
+Function:        _Z10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tR7bhv_p_tR7lhv_p_tP12pred_class_tP12sys_status_t
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tR7bhv_p_tR7lhv_p_tP12pred_class_tP12sys_status_tE17Clipped_BundledHV
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ./../src/hw/hls_xilinx/main.cpp, Line: 215, Column: 0 }
+Function:        _Z10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tR7bhv_p_tR7lhv_p_tP12pred_class_tP12sys_status_t
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tR7bhv_p_tR7lhv_p_tP12pred_class_tP12sys_status_tE18similarity_classes
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ./../src/hw/hls_xilinx/main.cpp, Line: 222, Column: 0 }
+Function:        _Z10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tR7bhv_p_tR7lhv_p_tP12pred_class_tP12sys_status_t
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tR7bhv_p_tR7lhv_p_tP12pred_class_tP12sys_status_tE15Binded_Features
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ./../src/hw/hls_xilinx/main.cpp, Line: 194, Column: 11 }
+Function:        _Z10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tR7bhv_p_tR7lhv_p_tP12pred_class_tP12sys_status_t
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _bhv
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ./../src/hw/hls_xilinx/main.cpp, Line: 195, Column: 11 }
+Function:        _Z10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tR7bhv_p_tR7lhv_p_tP12pred_class_tP12sys_status_t
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _lhv
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ./../src/hw/hls_xilinx/main.cpp, Line: 199, Column: 13 }
+Function:        _Z10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tR7bhv_p_tR7lhv_p_tP12pred_class_tP12sys_status_t
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _bhv_i
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ./../src/hw/hls_xilinx/main.cpp, Line: 200, Column: 13 }
+Function:        _Z10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tR7bhv_p_tR7lhv_p_tP12pred_class_tP12sys_status_t
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _lhv_i
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ./../src/hw/hls_xilinx/main.cpp, Line: 201, Column: 13 }
+Function:        _Z10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tR7bhv_p_tR7lhv_p_tP12pred_class_tP12sys_status_t
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _chv_i
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ./../src/hw/hls_xilinx/main.cpp, Line: 139, Column: 0 }
+Function:        _Z10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tR7bhv_p_tR7lhv_p_tP12pred_class_tP12sys_status_t
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            lhv_i
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '64'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ./../src/hw/hls_xilinx/main.cpp, Line: 139, Column: 0 }
+Function:        _Z10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tR7bhv_p_tR7lhv_p_tP12pred_class_tP12sys_status_t
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            bhv_i
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '64'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ./../src/hw/hls_xilinx/main.cpp, Line: 139, Column: 0 }
+Function:        _Z10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tR7bhv_p_tR7lhv_p_tP12pred_class_tP12sys_status_t
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            chv_i
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '64'
+  - String:          '-bits'
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: ./../src/hw/hls_xilinx/main.cpp, Line: 273, Column: 23 }
+Function:        _Z10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tR7bhv_p_tR7lhv_p_tP12pred_class_tP12sys_status_t
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_273_1
+  - String:          ' '
+  - LoopLoc:         './../src/hw/hls_xilinx/main.cpp:273:23'
+  - String:          ' '
+  - Function:        'hdv_engine(bool&, op_mode_t, frame_in_t, hls::stream<hls::axis<ap_uint<8>, 1ul, 1ul, 1ul>, 0>&, chv_p_t&, bhv_p_t&, lhv_p_t&, pred_class_t*, sys_status_t*)'
+    DebugLoc:        { File: ./../src/hw/hls_xilinx/main.cpp, Line: 139, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: ./../src/hw/hls_xilinx/main.cpp, Line: 273, Column: 23 }
+Function:        _Z10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tR7bhv_p_tR7lhv_p_tP12pred_class_tP12sys_status_t
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        VITIS_LOOP_273_1
+  - String:          '''('
+  - LoopLoc:         './../src/hw/hls_xilinx/main.cpp:273:23'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: ./../src/hw/hls_xilinx/main.cpp, Line: 0, Column: 1 }
+Function:        _Z10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tR7bhv_p_tR7lhv_p_tP12pred_class_tP12sys_status_t
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=cyclic factor=13 variable=_bhv_i308'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  hdv_engine
+  - String:          ' '
+  - varLoc:          './../src/hw/hls_xilinx/main.cpp:199:13'
+  - String:          ' '
+  - PragmaSrcLoc:    './../src/hw/hls_xilinx/main.cpp:496:9'
+    DebugLoc:        { File: ./../src/hw/hls_xilinx/main.cpp, Line: 496, 
+                       Column: 9 }
+  - VarName:         _bhv_i308
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: ./../src/hw/hls_xilinx/main.cpp, Line: 496, Column: 9 }
+Function:        _Z10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tR7bhv_p_tR7lhv_p_tP12pred_class_tP12sys_status_t
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            cyclic
+  - String:          ' factor='
+  - Factor:          '13'
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            _bhv_i308
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: ./../src/hw/hls_xilinx/main.cpp, Line: 0, Column: 2 }
+Function:        _Z10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tR7bhv_p_tR7lhv_p_tP12pred_class_tP12sys_status_t
+Args:            
+  - PragmaType:      array_partition
+  - String:          ' '
+  - PragmaOptions:   'dim=1 type=cyclic factor=13 variable=_lhv_i309'
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  hdv_engine
+  - String:          ' '
+  - varLoc:          './../src/hw/hls_xilinx/main.cpp:200:13'
+  - String:          ' '
+  - PragmaSrcLoc:    './../src/hw/hls_xilinx/main.cpp:496:9'
+    DebugLoc:        { File: ./../src/hw/hls_xilinx/main.cpp, Line: 496, 
+                       Column: 9 }
+  - VarName:         _lhv_i309
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayXform
+DebugLoc:        { File: ./../src/hw/hls_xilinx/main.cpp, Line: 496, Column: 9 }
+Function:        _Z10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tR7bhv_p_tR7lhv_p_tP12pred_class_tP12sys_status_t
+Args:            
+  - String:          'Inferring pragma '''
+  - PragmaType:      array_partition
+  - String:          ' type='
+  - Mode:            cyclic
+  - String:          ' factor='
+  - Factor:          '13'
+  - String:          ' dim='
+  - Dim:             '1'
+  - String:          ''' for array '''
+  - Name:            _lhv_i309
+  - String:          ''''
+  - String:          ' due to '
+  - String:          pipeline
+  - String:          ' pragma'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ./../src/hw/hls_xilinx/main.cpp, Line: 199, Column: 13 }
+Function:        _Z10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tR7bhv_p_tR7lhv_p_tP12pred_class_tP12sys_status_t
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _bhv_i308
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '13'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ./../src/hw/hls_xilinx/main.cpp, Line: 200, Column: 13 }
+Function:        _Z10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tR7bhv_p_tR7lhv_p_tP12pred_class_tP12sys_status_t
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _lhv_i309
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '13'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
