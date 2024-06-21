@@ -5,9 +5,13 @@
   <img src="./doc/img/logo/AeneasHDC_white.png" alt="Aeneas HyperCompute Platform Logo" width="200">
 </p>
 <h1 align="center">Aeneas HyperCompute Platform</h1>
-
+<h4 align="center"> 🔜 !!The first stable version will be released in July 2024!!⌛ </h2>
 <p align="center">
     <em>An automatic open-source environment for simple and fast deployment of flexible Hyperdimensional Computing (HDC) learning models in software and hardware.</em>
+    <br>
+    
+
+
 </p>
 
 <p align="center" style="font-size: 18px;">
@@ -157,9 +161,6 @@ Aeneas HyperCompute Platform/
 ## 📜 Publications
 
 ---
-
-![QR Code for 2023 Publication](./qrcodes/2023_AeneasHyperCompute.png)
-
 ### 📘 **AeneasHDC: An Automatic Framework for Deploying Hyperdimensional Computing Models on FPGAs, WCCI-2024**
 
 🔗 [**Abstract**](#abstract) • 🔗 [**Citation**](#citation) • 🔗 [**Download Paper**](./publications/2023_AeneasHyperCompute.pdf)
@@ -221,7 +222,7 @@ This project is fortified with the Apache license. For more details, please refe
 
 We owe our gratitude to:
 - **Prof. Mauro Oliveri** - Work supervisor 📧 [Email](mailto: mauro.olivieri@uniroma1.it)
-- **Dr. Antonello Rosato** - Professor of the HDC course at Sapienza
+- **Dr. Antonello Rosato** - Professor of the HDC course at Sapienza 📧 [Email](mailto: antonello.rosato@uniroma1.it)
 
 ---
 

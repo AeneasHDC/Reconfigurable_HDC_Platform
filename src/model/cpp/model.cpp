@@ -1,32 +1,3 @@
-/**
- * @file Model.cpp
- * @author Marco Angioli and Saeid Jamili
- * @email marco.angioli@uniroma1.it and saeid.jamili@uniroma1.it
- * @date Created on: 12th August 2023
- * @date Last updated on: 16th August 2023
- * @institution Sapienza University of Rome
- * @ref :
- * https://doi.org/10.xxxx/yyyyy
- *
- * @section LICENSE
-    Copyright 2024 Sapienza University of Rome
-
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-    
-        http://www.apache.org/licenses/LICENSE-2.0
-    
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
-    Authors: Marco Angioli & Saeid Jamili
-
-
- */
-
 #include "./classes/HDC_op.hpp"
 
 
@@ -42,7 +13,7 @@ int main()
     printf("HV level length: %d\n",       HD_LV_LEN);
     printf("HV similarity method: %d\n",  HD_SIMI_METHOD);
     printf("HV Encoding method: %d\n",    ENCODING_TECHNIQUE);
-    printf("HV sparsity factor: %f\n",    SPARSITY_FACTOR);
+    printf("HV sparsity factor: %f\n",    SPARSITY_FACTOR_X10);
     printf("HV clipping encoding: %d\n",  CLIPPING_ENCODING);
     printf("HV clipping class: %d\n",     CLIPPING_CLASS);
     printf("N-gram: %d\n",                N_GRAM);
@@ -54,19 +25,30 @@ int main()
     printf("Beta learning rate: %d\n",    BETA_LR);
     printf("------------------\n");
 
-    std::string app_ = "./../../datasets/" + std::string(DS_NAME) + "/" + std::string(DS_NAME);
+    std::string app_ = "./../../../../datasets/" + std::string(DS_NAME) + "/" + std::string(DS_NAME);
 
     // Creating the HDC model:
-    HDC_op HDC_model(HD_DIM,                // HV size
-                     HD_DATA_TYPE,          // HV data type (binary or bipolar)
-                     HD_MODE,               // HV mode (dense or sparsity)
-                     SPARSITY_FACTOR,       // percentage HV sparsity
-                     DS_FEATURE_SIZE,       // number of features
-                     HD_LV_LEN,             // number of levels
-                     HD_LV_TYPE,            // level type (linear, approx. linear, thermometer)
-                     HD_SIMI_METHOD,        // similarity method (hamming, dotp, cosine)
-                     ENCODING_QUANT_MIN,    // min value for quantization
-                     ENCODING_QUANT_MAX);   // max value for quantization
+    HDC_op HDC_model(HD_DIM,                    // HV dimensionality
+                     HD_DATA_TYPE,              // HV data type (0: binary, 1: bipolar)
+                     HD_MODE,                   // HV density   (0: dense, 1: sparse)
+                     (float) SPARSITY_FACTOR_X10/10,    // HV sparsity factor (x10)
+                     DS_FEATURE_SIZE,           // Dataset feature size
+                     HD_LV_LEN,                 // Number of levels 
+                     HD_LV_TYPE,                // Technique to generate the levels (0: linear, 1: approximately linear, 2: thermometer)
+                     HD_SIMI_METHOD,            // Similarity method (0: dot product, 1: cosine similarity, 2: Hamming distance)
+                     QUANT_MIN,                 // QUANT_MIN
+                     QUANT_MAX,                 // QUANT_MAX
+                     ENCODING_TECHNIQUE,        // Encoding technique (0: record-based, 1: ngram-based)
+                     N_GRAM,                    // N-gram (0: no n-gram, 1: n-gram)
+                     N_GRAM_SIZE,               // N-gram size (Temporal window size)
+                     DS_CLASSES_SIZE,           // Number of classes
+                     CLIPPING_ENCODING,         // Clipping encoding (0: no clipping, 1: binary, 2: bipolar, 3:quantized)
+                     CLIPPING_CLASS,            // Clipping class (0: no clipping, 1: binary, 2: bipolar, 3:quantized, 4:powertwo, 5:quantized_powertwo)
+                     EPOCH,                     // Number of epochs
+                     (float)MAX_LEARNING_RATE,         // Max learning rate
+                     LR_DECAY,                   // Learning rate decay (0: constant, 1: iter, 2: data, 3: hybrid)
+                     BETA_LR);                   // Beta learning rate
+
      
     // Dataset load:
     float Train_data[DS_TRAIN_SIZE][DS_FEATURE_SIZE];
@@ -85,7 +67,8 @@ int main()
     HV BaseHVs[DS_FEATURE_SIZE];
     HV LevelHVs[HD_LV_LEN];
     float LevelList[HD_LV_LEN];
-    float accuracy; 
+    float accuracy;
+    std::vector<int> estimated_classes(DS_TEST_SIZE); 
     int clip_class;
     if(RETRAIN==0)
         clip_class=CLIPPING_CLASS;
@@ -111,10 +94,11 @@ int main()
            
     // Testing procedure
     printf("------------------\nTesting procedure:\n");
-    accuracy=HDC_model.predict(Test_data,            // Test dataset
+    PredictionResult new_data  =HDC_model.predict(Test_data,            // Test dataset
                                Test_label,           // Test labels
                                DS_CLASSES_SIZE,      // Number of classes
                                LevelList,            // LevelList
+                               HD_LV_LEN,            // Number of levels
                                BaseHVs,              // BaseHVs
                                LevelHVs,             // LevelHVs
                                ClassHVs,             // ClassHVs
@@ -123,6 +107,7 @@ int main()
                                N_GRAM,               // N-gram (0: no n-gram, 1: n-gram)
                                N_GRAM_SIZE,          // N-gram size
                                ENCODING_TECHNIQUE);  // Encoding technique (0: record-based, 1: ngram-based)
+    accuracy=new_data.accuracy;
 
 
     // Retrain procedure
@@ -135,6 +120,7 @@ int main()
                           Test_label,               // Test labels
                           DS_CLASSES_SIZE,          // Number of classes
                           LevelList,                // LevelList
+                          HD_LV_LEN,                // Number of levels
                           BaseHVs,                  // BaseHVs
                           LevelHVs,                 // LevelHVs
                           ClassHVs,                 // ClassHVs
@@ -151,10 +137,11 @@ int main()
                           LR_DECAY,                 // Learning rate decay
                           best_ClassHVs);           // Best ClassHVs
 
-            accuracy=HDC_model.predict(Test_data,    // Test dataset
+            new_data=HDC_model.predict(Test_data,    // Test dataset
                                Test_label,           // Test labels
                                DS_CLASSES_SIZE,      // Number of classes
                                LevelList,            // LevelList
+                               HD_LV_LEN,            // Number of levels
                                BaseHVs,              // BaseHVs
                                LevelHVs,             // LevelHVs
                                ClassHVs,             // ClassHVs
@@ -163,7 +150,23 @@ int main()
                                N_GRAM,               // N-gram (0: no n-gram, 1: n-gram)
                                N_GRAM_SIZE,          // N-gram size
                                ENCODING_TECHNIQUE);  // Encoding technique (0: record-based, 1: ngram-based)
+            accuracy=new_data.accuracy;
     }
+    std::vector<int> predicted_labels=new_data.estimated_classes;
+
+    
+
+    std::string output_dir = "./";
+    std::vector<int>test_labels(Test_label, Test_label + DS_TEST_SIZE);
+
+    // Generate and save confusion matrix
+    generateAndSaveConfMatrix(test_labels, predicted_labels, output_dir);
+
+    // Export datasets and parameters
+    export2DArray(Train_data, DS_TRAIN_SIZE, "Train_data.csv");
+    export1DArray(Train_label, DS_TRAIN_SIZE, "Train_label.csv");
+    export2DArray(Test_data, DS_TEST_SIZE, "Test_data.csv");
+    export1DArray(Test_label, DS_TEST_SIZE, "Test_label.csv");
 
     return 0;
 }

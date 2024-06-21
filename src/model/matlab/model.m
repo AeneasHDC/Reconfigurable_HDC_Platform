@@ -10,6 +10,7 @@
 %        accompanying research paper: paper_citation
 % @author Marco Angioli and Saeid Jamili
 % @email marco.angioli@uniroma1.it and saeid.jamili@uniroma1.it
+% @note Authors name are listed in alphabetical order
 % @date Created on: 12th August 2023
 % @date Last updated on: 16th August 2023
 % @institution Sapienza University of Rome
