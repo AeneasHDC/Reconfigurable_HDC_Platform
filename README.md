@@ -110,10 +110,9 @@ The Aeneas HyperCompute Platform's GUI is crafted to ensure that users can focus
 - **Python**: Mandatory 
 - **C++** (Optional)
 - **Matlab** (Optional)
-
-#### FPGA Development Tools
 - **Xilinx Vivado Suite 2023**
 - **Xilinx High-Level Synthesis (HLS) tool, Vitis 2023**
+
 **Installation**:
 ```bash
 $ git clone https://github.com/AeneasHDC/Reconfigurable_HDC_Platform.git
