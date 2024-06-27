@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'hdv_engine'" level="0">
-<item name = "Date">Fri Jun 21 16:47:17 2024
+<item name = "Date">Wed Jun 26 20:23:23 2024
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">_hdc_hls_xilinx</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">5.00 ns, 3.622 ns, 1.35 ns</column>
+<column name="ap_clk">5.00 ns, 3.639 ns, 1.35 ns</column>
 </table>
 </item>
 </section>
@@ -31,11 +31,11 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_hdv_engine_Pipeline_VITIS_LOOP_273_1_fu_3778">hdv_engine_Pipeline_VITIS_LOOP_273_1, ?, ?, ?, ?, ?, ?, no</column>
-<column name="grp_hdv_engine_Pipeline_VITIS_LOOP_281_2_fu_3796">hdv_engine_Pipeline_VITIS_LOOP_281_2, 5, 5, 25.000 ns, 25.000 ns, 5, 5, no</column>
-<column name="grp_hdv_engine_Pipeline_VITIS_LOOP_494_4_fu_3812">hdv_engine_Pipeline_VITIS_LOOP_494_4, 4, 4, 20.000 ns, 20.000 ns, 4, 4, no</column>
-<column name="grp_hdv_engine_Pipeline_VITIS_LOOP_912_9_fu_4201">hdv_engine_Pipeline_VITIS_LOOP_912_9, 5, 5, 25.000 ns, 25.000 ns, 5, 5, no</column>
-<column name="grp_hdv_engine_Pipeline_VITIS_LOOP_766_6_fu_4210">hdv_engine_Pipeline_VITIS_LOOP_766_6, 66, 66, 0.330 us, 0.330 us, 66, 66, no</column>
+<column name="grp_hdv_engine_Pipeline_VITIS_LOOP_286_1_fu_948">hdv_engine_Pipeline_VITIS_LOOP_286_1, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_hdv_engine_Pipeline_VITIS_LOOP_294_2_fu_966">hdv_engine_Pipeline_VITIS_LOOP_294_2, 5, 5, 25.000 ns, 25.000 ns, 5, 5, no</column>
+<column name="grp_hdv_engine_Pipeline_VITIS_LOOP_511_4_fu_988">hdv_engine_Pipeline_VITIS_LOOP_511_4, 4, 4, 20.000 ns, 20.000 ns, 4, 4, no</column>
+<column name="grp_hdv_engine_Pipeline_VITIS_LOOP_916_7_fu_1377">hdv_engine_Pipeline_VITIS_LOOP_916_7, 87, 87, 0.435 us, 0.435 us, 87, 87, no</column>
+<column name="grp_hdv_engine_Pipeline_VITIS_LOOP_929_8_fu_1396">hdv_engine_Pipeline_VITIS_LOOP_929_8, 5, 5, 25.000 ns, 25.000 ns, 5, 5, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

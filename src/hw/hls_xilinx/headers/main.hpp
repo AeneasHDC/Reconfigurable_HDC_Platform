@@ -73,6 +73,10 @@ void hdv_engine(
 		#if ( LV_MODE == LV_M_INT_MEM )
 			lhv_p_t &lhv_i,
 		#endif
+		#if ( LV_MODE == LV_M_LOGIC &&  HD_LV_TYPE == APPROX )
+			lhv_p_t &lhv_i0,
+			lhv_p_t &lhv_i1,
+		#endif
 
 		#if ( AXI_CNTR_PORT_EN )
 			if_axi_cmd_t &axi_if_cmd,

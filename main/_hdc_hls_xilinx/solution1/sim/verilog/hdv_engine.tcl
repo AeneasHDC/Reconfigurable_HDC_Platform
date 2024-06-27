@@ -5,11 +5,8 @@ set coutputgroup [add_wave_group "C Outputs" -into $designtopgroup]
 set return_group [add_wave_group return(wire) -into $coutputgroup]
 add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/status_o -into $return_group -radix hex
 add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/pred_class_o -into $return_group -radix hex
-add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/chv_o_ap_vld -into $return_group -color #ffff00 -radix hex
-add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/chv_o -into $return_group -radix hex
 set cinputgroup [add_wave_group "C Inputs" -into $designtopgroup]
 set return_group [add_wave_group return(wire) -into $cinputgroup]
-add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/lable_class_i -into $return_group -radix hex
 add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/lhv_i -into $return_group -radix hex
 add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/bhv_i -into $return_group -radix hex
 add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/chv_i -into $return_group -radix hex
@@ -43,9 +40,7 @@ add_wave /apatb_hdv_engine_top/ready_cnt -into $tb_simstatus_group -radix hex
 add_wave /apatb_hdv_engine_top/done_cnt -into $tb_simstatus_group -radix hex
 add_wave /apatb_hdv_engine_top/LENGTH_bhv_i -into $tb_portdepth_group -radix hex
 add_wave /apatb_hdv_engine_top/LENGTH_chv_i -into $tb_portdepth_group -radix hex
-add_wave /apatb_hdv_engine_top/LENGTH_chv_o -into $tb_portdepth_group -radix hex
 add_wave /apatb_hdv_engine_top/LENGTH_frame_in -into $tb_portdepth_group -radix hex
-add_wave /apatb_hdv_engine_top/LENGTH_lable_class_i -into $tb_portdepth_group -radix hex
 add_wave /apatb_hdv_engine_top/LENGTH_lhv_i -into $tb_portdepth_group -radix hex
 add_wave /apatb_hdv_engine_top/LENGTH_nrst_i -into $tb_portdepth_group -radix hex
 add_wave /apatb_hdv_engine_top/LENGTH_op_mode_i -into $tb_portdepth_group -radix hex
@@ -62,11 +57,8 @@ set tbcoutputgroup [add_wave_group "C Outputs" -into $testbenchgroup]
 set tb_return_group [add_wave_group return(wire) -into $tbcoutputgroup]
 add_wave /apatb_hdv_engine_top/status_o -into $tb_return_group -radix hex
 add_wave /apatb_hdv_engine_top/pred_class_o -into $tb_return_group -radix hex
-add_wave /apatb_hdv_engine_top/chv_o_ap_vld -into $tb_return_group -color #ffff00 -radix hex
-add_wave /apatb_hdv_engine_top/chv_o -into $tb_return_group -radix hex
 set tbcinputgroup [add_wave_group "C Inputs" -into $testbenchgroup]
 set tb_return_group [add_wave_group return(wire) -into $tbcinputgroup]
-add_wave /apatb_hdv_engine_top/lable_class_i -into $tb_return_group -radix hex
 add_wave /apatb_hdv_engine_top/lhv_i -into $tb_return_group -radix hex
 add_wave /apatb_hdv_engine_top/bhv_i -into $tb_return_group -radix hex
 add_wave /apatb_hdv_engine_top/chv_i -into $tb_return_group -radix hex

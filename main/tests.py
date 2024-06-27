@@ -86,8 +86,10 @@ def change_config(aeneas, dim=None, hd_mode=None, sparsity_factorx10=None, paral
         elif clip=="CLIPPING_TERNARY":
             aeneas.configuration.config_data['hw_interface']['CV_MODES']['CV_DATA_W_BITS'] = 3 
         elif clip =="CLIPPING_QUANTIZED" or clip == "CLIPPING_QUANTIZED_POWERTWO":
-            aeneas.configuration.config_data['hw_interface']['CV_MODES']['CV_DATA_W_BITS'] = 6 #int(np.ceil(np.log2(aeneas.configuration.config_data['CLIPPING']['QUANT_MAX'])))
+            aeneas.configuration.config_data['train']['TRAINING_INFO']['EPOCH'] = epoch
+            aeneas.configuration.config_data['hw_interface']['CV_MODES']['CV_DATA_W_BITS'] = 7 #int(np.ceil(np.log2(aeneas.configuration.config_data['CLIPPING']['QUANT_MAX'])))
         else:
+            aeneas.configuration.config_data['train']['TRAINING_INFO']['EPOCH'] = epoch
             aeneas.configuration.config_data['hw_interface']['CV_MODES']['CV_DATA_W_BITS'] = int(np.ceil(np.log2(epoch*aeneas.configuration.config_data['dataset']['DS_INFO']['DS_TRAIN_SIZE'])))
     # ------------------------------------------------------------------------------------    
 
@@ -290,8 +292,9 @@ Analyzes the performance with different HV types.
 def test_hd_type(aeneas, hd_type_options):
     setup_test(aeneas, 3, 'Test_HD_Type', 'Testing different HV types.')
     all_reports = []
+    similar = "SIMI_COS"
     for hv_type in hd_type_options:
-        change_config(aeneas, hvtype=hv_type)
+        change_config(aeneas, hvtype=hv_type, similarity=similar)
         report = collect_data(aeneas,1)
         report['HV_Type'] = hv_type
         all_reports.append(report)
@@ -392,7 +395,10 @@ def test_lv_mode_model(aeneas, lv_mode_model_options):
     setup_test(aeneas, 8, 'Test_LV_Mode_Model', 'Testing different Level Vector modes on model.')
     all_reports = []
     for lv_mode_model in lv_mode_model_options:
-        change_config(aeneas, lv_mode_model=lv_mode_model)
+        if lv_mode_model=="APPROX" or lv_mode_model=="THERMOMETER":
+            change_config(aeneas, lv_mode_model=lv_mode_model, lv_mode="LV_M_LOGIC")
+        else:
+            change_config(aeneas, lv_mode_model=lv_mode_model)
         report = collect_data(aeneas,1)
         report['LV_Mode_Model'] = lv_mode_model
         all_reports.append(report)
@@ -497,11 +503,14 @@ def test_temporal_encoding(aeneas, n_gram_size_options):
     setup_test(aeneas, 14, 'Test_Temporal_Encoding', 'Testing different temporal encoding n-gram sizes.')
     all_reports = []
     for n_gram_size in n_gram_size_options:
-        change_config(aeneas, n_gram=1, n_gram_size=n_gram_size)
+        if n_gram_size == 1:
+            change_config(aeneas, n_gram=0, n_gram_size=n_gram_size)
+        else:
+            change_config(aeneas, n_gram=1, n_gram_size=n_gram_size)
         report = collect_data(aeneas,1)
         report['Temporal_Encoding_N_Gram'] = n_gram_size
         all_reports.append(report)
-    save_test_results(aeneas, 'Test_Temporal_Encoding', all_reports)
+    save_test_results(aeneas, 'Test_Temporal_Encoditest_type_clipping_similarityng', all_reports)
     aeneas.prj.save()
     aeneas.report.open()    
     return all_reports
@@ -514,7 +523,10 @@ def test_clipping_techniques(aeneas, clipping_options):
     setup_test(aeneas, 15, 'Test_Clipping_Techniques', 'Testing different clipping techniques.')
     all_reports = []
     for clipping in clipping_options:
-        change_config(aeneas, clip=clipping)
+        if clipping == "CLIPPING_BINARY":
+            change_config(aeneas, clip=clipping, similarity="SIMI_HAM", epoch=1)
+        else:
+            change_config(aeneas, clip=clipping, similarity="SIMI_COS", epoch=1)
         report = collect_data(aeneas,1)
         report['Clipping_Technique'] = clipping
         all_reports.append(report)
@@ -626,7 +638,7 @@ def test_type_clipping_similarity(aeneas, hvtype_range, clip_range, sim_range):
             for sim in sim_range:
                 if not ((clip == "CLIPPING_DISABLE" and sim == "SIMI_HAM") or 
                         (clip == "CLIPPING_BINARY" and hvtype == "BIPOLAR" and sim == "SIMI_HAM")):
-                    change_config(aeneas, hvtype=hvtype, clip=clip, similarity=sim)
+                    change_config(aeneas, hvtype=hvtype, clip=clip, similarity=sim, epoch = 1)
                     report = collect_data(aeneas, 1)
                     report.update({'ID': count, 'HV_type': hvtype, 'Clipping': clip, 'Similarity': sim})
                     all_reports.append(report)
@@ -908,6 +920,7 @@ def plot_test_type_clipping_similarity(loaded_array):
     plt.tight_layout()
     plt.show()
 
+
 def plot_test_type_clipping_similarity(loaded_array):
     # Define the metrics
     metrics = {
@@ -923,65 +936,55 @@ def plot_test_type_clipping_similarity(loaded_array):
         'Speed': [item['Speed'] for item in loaded_array]
     }
 
-    # Extract unique HD_DIM values
-    hd_dim_values = sorted(set(item['Dimension'] for item in loaded_array))
+    # Extract unique combinations of HV_type, Clipping, and Similarity
+    hv_types = (set(item['HV_type'] for item in loaded_array))
+    clippings = (set(item['Clipping'] for item in loaded_array))
+    similarities = (set(item['Similarity'] for item in loaded_array))
 
-    # Extract unique combinations of BV_mode and LV_mode
-    bv_modes = (set(item['HV_type'] for item in loaded_array))
-    lv_modes = (set(item['Clipping'] for item in loaded_array))
-    cv_modes = (set(item['Similarity'] for item in loaded_array))
-
-    # Create a colormap for unique combinations of BV_mode and LV_mode
+    # Create a colormap for unique combinations
+    combinations = [(hv, clip, sim) for hv in hv_types for clip in clippings for sim in similarities]
+    non_empty_combinations = [comb for comb in combinations if any(
+        item['HV_type'] == comb[0] and item['Clipping'] == comb[1] and item['Similarity'] == comb[2]
+        for item in loaded_array
+    )]
+    num_combinations = len(non_empty_combinations)
     cmap = plt.cm.viridis
-    colors = [cmap(i) for i in range(len(bv_modes) * len(lv_modes)*len(cv_modes))]
-    for index in range(len(bv_modes) * len(lv_modes) *len(cv_modes)):
-        colors[index] = plt.cm.viridis(index / (len(bv_modes) * len(lv_modes) *len(cv_modes)))
+    colors = [cmap(i / num_combinations) for i in range(num_combinations)]
 
     # Create grouped bar plots for each metric
     num_metrics = len(metrics)
 
     fig, axes = plt.subplots(nrows=num_metrics, ncols=1, figsize=(15, 3 * num_metrics))
-    emptyvalues=0
+
     for ax, (metric_name, metric_data) in zip(axes, metrics.items()):
-        x = np.arange(len(hd_dim_values))
-        num_combinations = len(bv_modes) * len(lv_modes) * len(cv_modes)
-        total_width = 0.8  # Total width for each group of bars
-        bar_width = total_width / num_combinations  # Width of each individual bar in a group
-        offset = -total_width / 2
+        x = np.arange(num_combinations)
+        bar_width = 0.8  # Width of each individual bar
 
-        # Precompute positions and labels for non-empty combinations
-        x_positions = []
-        x_labels = []
-        x_data = []  # Store data for each label in the same order
-        for i, bv_mode in enumerate(bv_modes):
-            for j, lv_mode in enumerate(lv_modes):
-                for k, cv_mode in enumerate(cv_modes):
-                    key = f'{bv_mode} - {lv_mode} - {cv_mode}'
-                    values = [metric_data[idx] for idx, item in enumerate(loaded_array) if item['HV_type'] == bv_mode and item['Clipping'] == lv_mode and item['Similarity'] == cv_mode]
+        # Plot bars for each combination
+        for idx, (hv_type, clipping, similarity) in enumerate(non_empty_combinations):
+            key = f'{hv_type} - {clipping} - {similarity}'
+            values = [
+                metric_data[i] for i, item in enumerate(loaded_array)
+                if item['HV_type'] == hv_type and item['Clipping'] == clipping and item['Similarity'] == similarity
+            ]
 
-                    # Store data and labels in the same order
-                    if values:
-                        x_data.append(values)
-                        x_labels.append(f'{bv_mode} - {lv_mode} - {cv_mode}')
-                        # Adjust x_pos to center the bars
-                        x_positions.append(x + offset + (i * len(lv_modes) * len(cv_modes) + j * len(cv_modes) + k - emptyvalues) * bar_width + bar_width / 2)
-                    else: 
-                        emptyvalues += 1
+            if values:
+                ax.bar(
+                    x[idx], np.mean(values), bar_width,
+                    label=key if metric_name == 'ModelEval Accuracy' else "",
+                    color=colors[idx]
+                )
 
-        # Plot bars for non-empty combinations
-        for x_pos, values, label, color in zip(x_positions, x_data, x_labels, colors):
-            ax.bar(x_pos, values, bar_width, label=label, color=color)
-
-        ax.set_xlabel('HD_DIM')
+        ax.set_xlabel('Test Combinations')
         ax.set_ylabel(metric_name)
-        ax.set_title(f'{metric_name} vs. HD_DIM (Grouped by BV_mode, LV_mode, and CV_mode)')
-        ax.set_xticks(x + (total_width-emptyvalues) / 2)  # Move ticks to the center of the bars
-        ax.set_xticklabels(hd_dim_values)
+        ax.set_title(f'{metric_name} vs. Test Combinations')
+        ax.set_xticks(x)
+        ax.set_xticklabels([])  # Remove x-labels
         ax.legend(loc='upper left', bbox_to_anchor=(1, 1))
         ax.grid(True)
+
     plt.tight_layout()
     plt.show()
-
 
 
 def plot_test_comb_parallelism(loaded_array):

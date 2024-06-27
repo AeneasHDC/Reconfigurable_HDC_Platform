@@ -1,0 +1,2135 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../../src/hw/hls_xilinx/tb/tb.cpp in debug mode
+   Compiling ../../../../../src/hw/hls_xilinx/main.cpp in debug mode
+   Generating csim.exe
+Test index: 0, Correct Label: 0, Predicted: 0, Percentage: 0%
+[--------------------]
+Accuracy: 1
+Precision: 0.333333
+Test index: 1, Correct Label: 0, Predicted: 0, Percentage: 0%
+[--------------------]
+Accuracy: 1
+Precision: 0.333333
+Test index: 2, Correct Label: 0, Predicted: 0, Percentage: 0%
+[--------------------]
+Accuracy: 1
+Precision: 0.333333
+Test index: 3, Correct Label: 0, Predicted: 1, Percentage: 0%
+[--------------------]
+Accuracy: 0.75
+Precision: 0.333333
+Test index: 4, Correct Label: 1, Predicted: 1, Percentage: 0%
+[--------------------]
+Accuracy: 0.8
+Precision: 0.5
+Test index: 5, Correct Label: 0, Predicted: 0, Percentage: 0%
+[--------------------]
+Accuracy: 0.833333
+Precision: 0.5
+Test index: 6, Correct Label: 0, Predicted: 0, Percentage: 1%
+[--------------------]
+Accuracy: 0.857143
+Precision: 0.5
+Test index: 7, Correct Label: 0, Predicted: 0, Percentage: 1%
+[--------------------]
+Accuracy: 0.875
+Precision: 0.5
+Test index: 8, Correct Label: 0, Predicted: 0, Percentage: 1%
+[--------------------]
+Accuracy: 0.888889
+Precision: 0.5
+Test index: 9, Correct Label: 1, Predicted: 1, Percentage: 1%
+[--------------------]
+Accuracy: 0.9
+Precision: 0.555556
+Test index: 10, Correct Label: 2, Predicted: 2, Percentage: 1%
+[--------------------]
+Accuracy: 0.909091
+Precision: 0.888889
+Test index: 11, Correct Label: 0, Predicted: 0, Percentage: 2%
+[--------------------]
+Accuracy: 0.916667
+Precision: 0.888889
+Test index: 12, Correct Label: 0, Predicted: 0, Percentage: 2%
+[--------------------]
+Accuracy: 0.923077
+Precision: 0.888889
+Test index: 13, Correct Label: 0, Predicted: 0, Percentage: 2%
+[--------------------]
+Accuracy: 0.928571
+Precision: 0.888889
+Test index: 14, Correct Label: 0, Predicted: 0, Percentage: 2%
+[--------------------]
+Accuracy: 0.933333
+Precision: 0.888889
+Test index: 15, Correct Label: 0, Predicted: 0, Percentage: 2%
+[--------------------]
+Accuracy: 0.9375
+Precision: 0.888889
+Test index: 16, Correct Label: 0, Predicted: 0, Percentage: 3%
+[--------------------]
+Accuracy: 0.941176
+Precision: 0.888889
+Test index: 17, Correct Label: 0, Predicted: 0, Percentage: 3%
+[--------------------]
+Accuracy: 0.944444
+Precision: 0.888889
+Test index: 18, Correct Label: 0, Predicted: 0, Percentage: 3%
+[--------------------]
+Accuracy: 0.947368
+Precision: 0.888889
+Test index: 19, Correct Label: 1, Predicted: 1, Percentage: 3%
+[--------------------]
+Accuracy: 0.95
+Precision: 0.916667
+Test index: 20, Correct Label: 0, Predicted: 0, Percentage: 3%
+[--------------------]
+Accuracy: 0.952381
+Precision: 0.916667
+Test index: 21, Correct Label: 0, Predicted: 0, Percentage: 3%
+[--------------------]
+Accuracy: 0.954545
+Precision: 0.916667
+Test index: 22, Correct Label: 0, Predicted: 0, Percentage: 4%
+[--------------------]
+Accuracy: 0.956522
+Precision: 0.916667
+Test index: 23, Correct Label: 2, Predicted: 2, Percentage: 4%
+[--------------------]
+Accuracy: 0.958333
+Precision: 0.916667
+Test index: 24, Correct Label: 0, Predicted: 0, Percentage: 4%
+[--------------------]
+Accuracy: 0.96
+Precision: 0.916667
+Test index: 25, Correct Label: 0, Predicted: 0, Percentage: 4%
+[--------------------]
+Accuracy: 0.961538
+Precision: 0.916667
+Test index: 26, Correct Label: 0, Predicted: 0, Percentage: 4%
+[--------------------]
+Accuracy: 0.962963
+Precision: 0.916667
+Test index: 27, Correct Label: 1, Predicted: 1, Percentage: 5%
+[#-------------------]
+Accuracy: 0.964286
+Precision: 0.933333
+Test index: 28, Correct Label: 0, Predicted: 0, Percentage: 5%
+[#-------------------]
+Accuracy: 0.965517
+Precision: 0.933333
+Test index: 29, Correct Label: 1, Predicted: 1, Percentage: 5%
+[#-------------------]
+Accuracy: 0.966667
+Precision: 0.944444
+Test index: 30, Correct Label: 0, Predicted: 0, Percentage: 5%
+[#-------------------]
+Accuracy: 0.967742
+Precision: 0.944444
+Test index: 31, Correct Label: 0, Predicted: 0, Percentage: 5%
+[#-------------------]
+Accuracy: 0.96875
+Precision: 0.944444
+Test index: 32, Correct Label: 0, Predicted: 0, Percentage: 6%
+[#-------------------]
+Accuracy: 0.969697
+Precision: 0.944444
+Test index: 33, Correct Label: 0, Predicted: 0, Percentage: 6%
+[#-------------------]
+Accuracy: 0.970588
+Precision: 0.944444
+Test index: 34, Correct Label: 0, Predicted: 0, Percentage: 6%
+[#-------------------]
+Accuracy: 0.971429
+Precision: 0.944444
+Test index: 35, Correct Label: 0, Predicted: 0, Percentage: 6%
+[#-------------------]
+Accuracy: 0.972222
+Precision: 0.944444
+Test index: 36, Correct Label: 1, Predicted: 1, Percentage: 6%
+[#-------------------]
+Accuracy: 0.972973
+Precision: 0.952381
+Test index: 37, Correct Label: 0, Predicted: 0, Percentage: 6%
+[#-------------------]
+Accuracy: 0.973684
+Precision: 0.952381
+Test index: 38, Correct Label: 2, Predicted: 1, Percentage: 7%
+[#-------------------]
+Accuracy: 0.948718
+Precision: 0.916667
+Test index: 39, Correct Label: 0, Predicted: 0, Percentage: 7%
+[#-------------------]
+Accuracy: 0.95
+Precision: 0.916667
+Test index: 40, Correct Label: 0, Predicted: 1, Percentage: 7%
+[#-------------------]
+Accuracy: 0.926829
+Precision: 0.888889
+Test index: 41, Correct Label: 1, Predicted: 1, Percentage: 7%
+[#-------------------]
+Accuracy: 0.928571
+Precision: 0.9
+Test index: 42, Correct Label: 0, Predicted: 0, Percentage: 7%
+[#-------------------]
+Accuracy: 0.930233
+Precision: 0.9
+Test index: 43, Correct Label: 0, Predicted: 1, Percentage: 8%
+[#-------------------]
+Accuracy: 0.909091
+Precision: 0.878788
+Test index: 44, Correct Label: 1, Predicted: 1, Percentage: 8%
+[#-------------------]
+Accuracy: 0.911111
+Precision: 0.888889
+Test index: 45, Correct Label: 0, Predicted: 0, Percentage: 8%
+[#-------------------]
+Accuracy: 0.913043
+Precision: 0.888889
+Test index: 46, Correct Label: 0, Predicted: 0, Percentage: 8%
+[#-------------------]
+Accuracy: 0.914894
+Precision: 0.888889
+Test index: 47, Correct Label: 0, Predicted: 0, Percentage: 8%
+[#-------------------]
+Accuracy: 0.916667
+Precision: 0.888889
+Test index: 48, Correct Label: 0, Predicted: 0, Percentage: 9%
+[#-------------------]
+Accuracy: 0.918367
+Precision: 0.888889
+Test index: 49, Correct Label: 0, Predicted: 0, Percentage: 9%
+[#-------------------]
+Accuracy: 0.92
+Precision: 0.888889
+Test index: 50, Correct Label: 0, Predicted: 0, Percentage: 9%
+[#-------------------]
+Accuracy: 0.921569
+Precision: 0.888889
+Test index: 51, Correct Label: 0, Predicted: 2, Percentage: 9%
+[#-------------------]
+Accuracy: 0.903846
+Precision: 0.777778
+Test index: 52, Correct Label: 1, Predicted: 1, Percentage: 9%
+[#-------------------]
+Accuracy: 0.90566
+Precision: 0.786325
+Test index: 53, Correct Label: 0, Predicted: 0, Percentage: 9%
+[#-------------------]
+Accuracy: 0.907407
+Precision: 0.786325
+Test index: 54, Correct Label: 0, Predicted: 0, Percentage: 10%
+[##------------------]
+Accuracy: 0.909091
+Precision: 0.786325
+Test index: 55, Correct Label: 0, Predicted: 0, Percentage: 10%
+[##------------------]
+Accuracy: 0.910714
+Precision: 0.786325
+Test index: 56, Correct Label: 0, Predicted: 0, Percentage: 10%
+[##------------------]
+Accuracy: 0.912281
+Precision: 0.786325
+Test index: 57, Correct Label: 0, Predicted: 0, Percentage: 10%
+[##------------------]
+Accuracy: 0.913793
+Precision: 0.786325
+Test index: 58, Correct Label: 1, Predicted: 0, Percentage: 10%
+[##------------------]
+Accuracy: 0.898305
+Precision: 0.778573
+Test index: 59, Correct Label: 0, Predicted: 0, Percentage: 11%
+[##------------------]
+Accuracy: 0.9
+Precision: 0.778749
+Test index: 60, Correct Label: 0, Predicted: 0, Percentage: 11%
+[##------------------]
+Accuracy: 0.901639
+Precision: 0.778917
+Test index: 61, Correct Label: 0, Predicted: 0, Percentage: 11%
+[##------------------]
+Accuracy: 0.903226
+Precision: 0.779078
+Test index: 62, Correct Label: 0, Predicted: 0, Percentage: 11%
+[##------------------]
+Accuracy: 0.904762
+Precision: 0.779233
+Test index: 63, Correct Label: 1, Predicted: 1, Percentage: 11%
+[##------------------]
+Accuracy: 0.90625
+Precision: 0.786559
+Test index: 64, Correct Label: 0, Predicted: 2, Percentage: 12%
+[##------------------]
+Accuracy: 0.892308
+Precision: 0.731003
+Test index: 65, Correct Label: 1, Predicted: 1, Percentage: 12%
+[##------------------]
+Accuracy: 0.893939
+Precision: 0.737352
+Test index: 66, Correct Label: 0, Predicted: 0, Percentage: 12%
+[##------------------]
+Accuracy: 0.895522
+Precision: 0.7375
+Test index: 67, Correct Label: 0, Predicted: 1, Percentage: 12%
+[##------------------]
+Accuracy: 0.882353
+Precision: 0.722222
+Test index: 68, Correct Label: 0, Predicted: 0, Percentage: 12%
+[##------------------]
+Accuracy: 0.884058
+Precision: 0.722364
+Test index: 69, Correct Label: 0, Predicted: 0, Percentage: 12%
+[##------------------]
+Accuracy: 0.885714
+Precision: 0.7225
+Test index: 70, Correct Label: 0, Predicted: 1, Percentage: 13%
+[##------------------]
+Accuracy: 0.873239
+Precision: 0.70902
+Test index: 71, Correct Label: 1, Predicted: 1, Percentage: 13%
+[##------------------]
+Accuracy: 0.875
+Precision: 0.715556
+Test index: 72, Correct Label: 0, Predicted: 1, Percentage: 13%
+[##------------------]
+Accuracy: 0.863014
+Precision: 0.70386
+Test index: 73, Correct Label: 0, Predicted: 0, Percentage: 13%
+[##------------------]
+Accuracy: 0.864865
+Precision: 0.70399
+Test index: 74, Correct Label: 0, Predicted: 0, Percentage: 13%
+[##------------------]
+Accuracy: 0.866667
+Precision: 0.704116
+Test index: 75, Correct Label: 0, Predicted: 1, Percentage: 14%
+[##------------------]
+Accuracy: 0.855263
+Precision: 0.69359
+Test index: 76, Correct Label: 1, Predicted: 1, Percentage: 14%
+[##------------------]
+Accuracy: 0.857143
+Precision: 0.699939
+Test index: 77, Correct Label: 0, Predicted: 0, Percentage: 14%
+[##------------------]
+Accuracy: 0.858974
+Precision: 0.70006
+Test index: 78, Correct Label: 0, Predicted: 0, Percentage: 14%
+[##------------------]
+Accuracy: 0.860759
+Precision: 0.700176
+Test index: 79, Correct Label: 0, Predicted: 0, Percentage: 14%
+[##------------------]
+Accuracy: 0.8625
+Precision: 0.700289
+Test index: 80, Correct Label: 0, Predicted: 1, Percentage: 15%
+[###-----------------]
+Accuracy: 0.851852
+Precision: 0.690909
+Test index: 81, Correct Label: 0, Predicted: 0, Percentage: 15%
+[###-----------------]
+Accuracy: 0.853659
+Precision: 0.691017
+Test index: 82, Correct Label: 0, Predicted: 0, Percentage: 15%
+[###-----------------]
+Accuracy: 0.855422
+Precision: 0.691122
+Test index: 83, Correct Label: 0, Predicted: 0, Percentage: 15%
+[###-----------------]
+Accuracy: 0.857143
+Precision: 0.691223
+Test index: 84, Correct Label: 0, Predicted: 0, Percentage: 15%
+[###-----------------]
+Accuracy: 0.858824
+Precision: 0.69132
+Test index: 85, Correct Label: 0, Predicted: 2, Percentage: 16%
+[###-----------------]
+Accuracy: 0.848837
+Precision: 0.657987
+Test index: 86, Correct Label: 0, Predicted: 1, Percentage: 16%
+[###-----------------]
+Accuracy: 0.83908
+Precision: 0.649423
+Test index: 87, Correct Label: 0, Predicted: 0, Percentage: 16%
+[###-----------------]
+Accuracy: 0.840909
+Precision: 0.649517
+Test index: 88, Correct Label: 0, Predicted: 0, Percentage: 16%
+[###-----------------]
+Accuracy: 0.842697
+Precision: 0.649608
+Test index: 89, Correct Label: 0, Predicted: 0, Percentage: 16%
+[###-----------------]
+Accuracy: 0.844444
+Precision: 0.649696
+Test index: 90, Correct Label: 1, Predicted: 1, Percentage: 16%
+[###-----------------]
+Accuracy: 0.846154
+Precision: 0.655735
+Test index: 91, Correct Label: 0, Predicted: 0, Percentage: 17%
+[###-----------------]
+Accuracy: 0.847826
+Precision: 0.65582
+Test index: 92, Correct Label: 0, Predicted: 0, Percentage: 17%
+[###-----------------]
+Accuracy: 0.849462
+Precision: 0.655903
+Test index: 93, Correct Label: 0, Predicted: 0, Percentage: 17%
+[###-----------------]
+Accuracy: 0.851064
+Precision: 0.655983
+Test index: 94, Correct Label: 1, Predicted: 1, Percentage: 17%
+[###-----------------]
+Accuracy: 0.852632
+Precision: 0.661538
+Test index: 95, Correct Label: 0, Predicted: 0, Percentage: 17%
+[###-----------------]
+Accuracy: 0.854167
+Precision: 0.661616
+Test index: 96, Correct Label: 0, Predicted: 2, Percentage: 18%
+[###-----------------]
+Accuracy: 0.845361
+Precision: 0.639394
+Test index: 97, Correct Label: 0, Predicted: 0, Percentage: 18%
+[###-----------------]
+Accuracy: 0.846939
+Precision: 0.639469
+Test index: 98, Correct Label: 0, Predicted: 0, Percentage: 18%
+[###-----------------]
+Accuracy: 0.848485
+Precision: 0.639543
+Test index: 99, Correct Label: 1, Predicted: 1, Percentage: 18%
+[###-----------------]
+Accuracy: 0.85
+Precision: 0.644671
+Test index: 100, Correct Label: 0, Predicted: 1, Percentage: 18%
+[###-----------------]
+Accuracy: 0.841584
+Precision: 0.637073
+Test index: 101, Correct Label: 0, Predicted: 0, Percentage: 19%
+[###-----------------]
+Accuracy: 0.843137
+Precision: 0.637144
+Test index: 102, Correct Label: 0, Predicted: 1, Percentage: 19%
+[###-----------------]
+Accuracy: 0.834951
+Precision: 0.63009
+Test index: 103, Correct Label: 2, Predicted: 2, Percentage: 19%
+[###-----------------]
+Accuracy: 0.836538
+Precision: 0.661836
+Test index: 104, Correct Label: 1, Predicted: 1, Percentage: 19%
+[###-----------------]
+Accuracy: 0.838095
+Precision: 0.666762
+Test index: 105, Correct Label: 1, Predicted: 1, Percentage: 19%
+[###-----------------]
+Accuracy: 0.839623
+Precision: 0.67136
+Test index: 106, Correct Label: 0, Predicted: 0, Percentage: 19%
+[###-----------------]
+Accuracy: 0.841121
+Precision: 0.671429
+Test index: 107, Correct Label: 0, Predicted: 0, Percentage: 20%
+[####----------------]
+Accuracy: 0.842593
+Precision: 0.671496
+Test index: 108, Correct Label: 2, Predicted: 2, Percentage: 20%
+[####----------------]
+Accuracy: 0.844037
+Precision: 0.695305
+Test index: 109, Correct Label: 1, Predicted: 1, Percentage: 20%
+[####----------------]
+Accuracy: 0.845455
+Precision: 0.699606
+Test index: 110, Correct Label: 0, Predicted: 0, Percentage: 20%
+[####----------------]
+Accuracy: 0.846847
+Precision: 0.699671
+Test index: 111, Correct Label: 0, Predicted: 0, Percentage: 20%
+[####----------------]
+Accuracy: 0.848214
+Precision: 0.699735
+Test index: 112, Correct Label: 0, Predicted: 1, Percentage: 21%
+[####----------------]
+Accuracy: 0.840708
+Precision: 0.69335
+Test index: 113, Correct Label: 0, Predicted: 1, Percentage: 21%
+[####----------------]
+Accuracy: 0.833333
+Precision: 0.687353
+Test index: 114, Correct Label: 0, Predicted: 2, Percentage: 21%
+[####----------------]
+Accuracy: 0.826087
+Precision: 0.668834
+Test index: 115, Correct Label: 0, Predicted: 0, Percentage: 21%
+[####----------------]
+Accuracy: 0.827586
+Precision: 0.668896
+Test index: 116, Correct Label: 1, Predicted: 1, Percentage: 21%
+[####----------------]
+Accuracy: 0.82906
+Precision: 0.673055
+Test index: 117, Correct Label: 1, Predicted: 1, Percentage: 22%
+[####----------------]
+Accuracy: 0.830508
+Precision: 0.676977
+Test index: 118, Correct Label: 0, Predicted: 1, Percentage: 22%
+[####----------------]
+Accuracy: 0.823529
+Precision: 0.671421
+Test index: 119, Correct Label: 0, Predicted: 1, Percentage: 22%
+[####----------------]
+Accuracy: 0.816667
+Precision: 0.666166
+Test index: 120, Correct Label: 2, Predicted: 2, Percentage: 22%
+[####----------------]
+Accuracy: 0.818182
+Precision: 0.684685
+Test index: 121, Correct Label: 1, Predicted: 1, Percentage: 22%
+[####----------------]
+Accuracy: 0.819672
+Precision: 0.688478
+Test index: 122, Correct Label: 0, Predicted: 0, Percentage: 22%
+[####----------------]
+Accuracy: 0.821138
+Precision: 0.688538
+Test index: 123, Correct Label: 0, Predicted: 0, Percentage: 23%
+[####----------------]
+Accuracy: 0.822581
+Precision: 0.688596
+Test index: 124, Correct Label: 0, Predicted: 0, Percentage: 23%
+[####----------------]
+Accuracy: 0.824
+Precision: 0.688653
+Test index: 125, Correct Label: 0, Predicted: 0, Percentage: 23%
+[####----------------]
+Accuracy: 0.825397
+Precision: 0.688709
+Test index: 126, Correct Label: 0, Predicted: 2, Percentage: 23%
+[####----------------]
+Accuracy: 0.818898
+Precision: 0.673557
+Test index: 127, Correct Label: 0, Predicted: 0, Percentage: 23%
+[####----------------]
+Accuracy: 0.820312
+Precision: 0.673612
+Test index: 128, Correct Label: 0, Predicted: 2, Percentage: 24%
+[####----------------]
+Accuracy: 0.813953
+Precision: 0.660985
+Test index: 129, Correct Label: 2, Predicted: 1, Percentage: 24%
+[####----------------]
+Accuracy: 0.807692
+Precision: 0.656037
+Test index: 130, Correct Label: 0, Predicted: 1, Percentage: 24%
+[####----------------]
+Accuracy: 0.801527
+Precision: 0.651336
+Test index: 131, Correct Label: 0, Predicted: 0, Percentage: 24%
+[####----------------]
+Accuracy: 0.80303
+Precision: 0.651389
+Test index: 132, Correct Label: 0, Predicted: 1, Percentage: 24%
+[####----------------]
+Accuracy: 0.796992
+Precision: 0.646917
+Test index: 133, Correct Label: 1, Predicted: 1, Percentage: 25%
+[#####---------------]
+Accuracy: 0.798507
+Precision: 0.650595
+Test index: 134, Correct Label: 2, Predicted: 2, Percentage: 25%
+[#####---------------]
+Accuracy: 0.8
+Precision: 0.665552
+Test index: 135, Correct Label: 0, Predicted: 0, Percentage: 25%
+[#####---------------]
+Accuracy: 0.801471
+Precision: 0.665604
+Test index: 136, Correct Label: 1, Predicted: 1, Percentage: 25%
+[#####---------------]
+Accuracy: 0.80292
+Precision: 0.669111
+Test index: 137, Correct Label: 0, Predicted: 2, Percentage: 25%
+[#####---------------]
+Accuracy: 0.797101
+Precision: 0.658122
+Test index: 138, Correct Label: 0, Predicted: 1, Percentage: 25%
+[#####---------------]
+Accuracy: 0.791367
+Precision: 0.653893
+Test index: 139, Correct Label: 0, Predicted: 0, Percentage: 26%
+[#####---------------]
+Accuracy: 0.792857
+Precision: 0.653944
+Test index: 140, Correct Label: 0, Predicted: 0, Percentage: 26%
+[#####---------------]
+Accuracy: 0.794326
+Precision: 0.653993
+Test index: 141, Correct Label: 0, Predicted: 1, Percentage: 26%
+[#####---------------]
+Accuracy: 0.788732
+Precision: 0.649952
+Test index: 142, Correct Label: 0, Predicted: 0, Percentage: 26%
+[#####---------------]
+Accuracy: 0.79021
+Precision: 0.65
+Test index: 143, Correct Label: 1, Predicted: 1, Percentage: 26%
+[#####---------------]
+Accuracy: 0.791667
+Precision: 0.653382
+Test index: 144, Correct Label: 0, Predicted: 1, Percentage: 27%
+[#####---------------]
+Accuracy: 0.786207
+Precision: 0.649527
+Test index: 145, Correct Label: 1, Predicted: 1, Percentage: 27%
+[#####---------------]
+Accuracy: 0.787671
+Precision: 0.652778
+Test index: 146, Correct Label: 2, Predicted: 1, Percentage: 27%
+[#####---------------]
+Accuracy: 0.782313
+Precision: 0.649093
+Test index: 147, Correct Label: 0, Predicted: 0, Percentage: 27%
+[#####---------------]
+Accuracy: 0.783784
+Precision: 0.64914
+Test index: 148, Correct Label: 0, Predicted: 0, Percentage: 27%
+[#####---------------]
+Accuracy: 0.785235
+Precision: 0.649185
+Test index: 149, Correct Label: 0, Predicted: 0, Percentage: 28%
+[#####---------------]
+Accuracy: 0.786667
+Precision: 0.64923
+Test index: 150, Correct Label: 0, Predicted: 0, Percentage: 28%
+[#####---------------]
+Accuracy: 0.788079
+Precision: 0.649273
+Test index: 151, Correct Label: 0, Predicted: 0, Percentage: 28%
+[#####---------------]
+Accuracy: 0.789474
+Precision: 0.649316
+Test index: 152, Correct Label: 0, Predicted: 1, Percentage: 28%
+[#####---------------]
+Accuracy: 0.784314
+Precision: 0.645778
+Test index: 153, Correct Label: 1, Predicted: 1, Percentage: 28%
+[#####---------------]
+Accuracy: 0.785714
+Precision: 0.648916
+Test index: 154, Correct Label: 0, Predicted: 0, Percentage: 29%
+[#####---------------]
+Accuracy: 0.787097
+Precision: 0.648957
+Test index: 155, Correct Label: 0, Predicted: 0, Percentage: 29%
+[#####---------------]
+Accuracy: 0.788462
+Precision: 0.648998
+Test index: 156, Correct Label: 0, Predicted: 2, Percentage: 29%
+[#####---------------]
+Accuracy: 0.78344
+Precision: 0.639474
+Test index: 157, Correct Label: 0, Predicted: 2, Percentage: 29%
+[#####---------------]
+Accuracy: 0.778481
+Precision: 0.631141
+Test index: 158, Correct Label: 0, Predicted: 0, Percentage: 29%
+[#####---------------]
+Accuracy: 0.779874
+Precision: 0.631181
+Test index: 159, Correct Label: 0, Predicted: 0, Percentage: 29%
+[#####---------------]
+Accuracy: 0.78125
+Precision: 0.63122
+Test index: 160, Correct Label: 1, Predicted: 1, Percentage: 30%
+[######--------------]
+Accuracy: 0.782609
+Precision: 0.634236
+Test index: 161, Correct Label: 0, Predicted: 2, Percentage: 30%
+[######--------------]
+Accuracy: 0.777778
+Precision: 0.626883
+Test index: 162, Correct Label: 0, Predicted: 0, Percentage: 30%
+[######--------------]
+Accuracy: 0.779141
+Precision: 0.626921
+Test index: 163, Correct Label: 0, Predicted: 0, Percentage: 30%
+[######--------------]
+Accuracy: 0.780488
+Precision: 0.626959
+Test index: 164, Correct Label: 0, Predicted: 0, Percentage: 30%
+[######--------------]
+Accuracy: 0.781818
+Precision: 0.626995
+Test index: 165, Correct Label: 0, Predicted: 0, Percentage: 31%
+[######--------------]
+Accuracy: 0.783133
+Precision: 0.627031
+Test index: 166, Correct Label: 0, Predicted: 0, Percentage: 31%
+[######--------------]
+Accuracy: 0.784431
+Precision: 0.627066
+Test index: 167, Correct Label: 0, Predicted: 0, Percentage: 31%
+[######--------------]
+Accuracy: 0.785714
+Precision: 0.627101
+Test index: 168, Correct Label: 0, Predicted: 0, Percentage: 31%
+[######--------------]
+Accuracy: 0.786982
+Precision: 0.627134
+Test index: 169, Correct Label: 0, Predicted: 0, Percentage: 31%
+[######--------------]
+Accuracy: 0.788235
+Precision: 0.627167
+Test index: 170, Correct Label: 0, Predicted: 2, Percentage: 32%
+[######--------------]
+Accuracy: 0.783626
+Precision: 0.620631
+Test index: 171, Correct Label: 0, Predicted: 2, Percentage: 32%
+[######--------------]
+Accuracy: 0.77907
+Precision: 0.614783
+Test index: 172, Correct Label: 0, Predicted: 0, Percentage: 32%
+[######--------------]
+Accuracy: 0.780347
+Precision: 0.614816
+Test index: 173, Correct Label: 0, Predicted: 0, Percentage: 32%
+[######--------------]
+Accuracy: 0.781609
+Precision: 0.614847
+Test index: 174, Correct Label: 0, Predicted: 1, Percentage: 32%
+[######--------------]
+Accuracy: 0.777143
+Precision: 0.611461
+Test index: 175, Correct Label: 0, Predicted: 0, Percentage: 32%
+[######--------------]
+Accuracy: 0.778409
+Precision: 0.611492
+Test index: 176, Correct Label: 0, Predicted: 0, Percentage: 33%
+[######--------------]
+Accuracy: 0.779661
+Precision: 0.611522
+Test index: 177, Correct Label: 2, Predicted: 2, Percentage: 33%
+[######--------------]
+Accuracy: 0.780899
+Precision: 0.622926
+Test index: 178, Correct Label: 0, Predicted: 0, Percentage: 33%
+[######--------------]
+Accuracy: 0.782123
+Precision: 0.622956
+Test index: 179, Correct Label: 0, Predicted: 0, Percentage: 33%
+[######--------------]
+Accuracy: 0.783333
+Precision: 0.622985
+Test index: 180, Correct Label: 0, Predicted: 0, Percentage: 33%
+[######--------------]
+Accuracy: 0.78453
+Precision: 0.623014
+Test index: 181, Correct Label: 0, Predicted: 0, Percentage: 34%
+[######--------------]
+Accuracy: 0.785714
+Precision: 0.623043
+Test index: 182, Correct Label: 0, Predicted: 2, Percentage: 34%
+[######--------------]
+Accuracy: 0.781421
+Precision: 0.617487
+Test index: 183, Correct Label: 0, Predicted: 0, Percentage: 34%
+[######--------------]
+Accuracy: 0.782609
+Precision: 0.617515
+Test index: 184, Correct Label: 0, Predicted: 0, Percentage: 34%
+[######--------------]
+Accuracy: 0.783784
+Precision: 0.617542
+Test index: 185, Correct Label: 0, Predicted: 0, Percentage: 34%
+[######--------------]
+Accuracy: 0.784946
+Precision: 0.617569
+Test index: 186, Correct Label: 2, Predicted: 2, Percentage: 35%
+[#######-------------]
+Accuracy: 0.786096
+Precision: 0.62767
+Test index: 187, Correct Label: 0, Predicted: 0, Percentage: 35%
+[#######-------------]
+Accuracy: 0.787234
+Precision: 0.627696
+Test index: 188, Correct Label: 1, Predicted: 1, Percentage: 35%
+[#######-------------]
+Accuracy: 0.78836
+Precision: 0.630608
+Test index: 189, Correct Label: 2, Predicted: 1, Percentage: 35%
+[#######-------------]
+Accuracy: 0.784211
+Precision: 0.627353
+Test index: 190, Correct Label: 0, Predicted: 2, Percentage: 35%
+[#######-------------]
+Accuracy: 0.780105
+Precision: 0.622083
+Test index: 191, Correct Label: 0, Predicted: 0, Percentage: 35%
+[#######-------------]
+Accuracy: 0.78125
+Precision: 0.622109
+Test index: 192, Correct Label: 0, Predicted: 0, Percentage: 36%
+[#######-------------]
+Accuracy: 0.782383
+Precision: 0.622134
+Test index: 193, Correct Label: 0, Predicted: 0, Percentage: 36%
+[#######-------------]
+Accuracy: 0.783505
+Precision: 0.622159
+Test index: 194, Correct Label: 0, Predicted: 0, Percentage: 36%
+[#######-------------]
+Accuracy: 0.784615
+Precision: 0.622184
+Test index: 195, Correct Label: 0, Predicted: 0, Percentage: 36%
+[#######-------------]
+Accuracy: 0.785714
+Precision: 0.622208
+Test index: 196, Correct Label: 2, Predicted: 2, Percentage: 36%
+[#######-------------]
+Accuracy: 0.786802
+Precision: 0.631266
+Test index: 197, Correct Label: 2, Predicted: 1, Percentage: 37%
+[#######-------------]
+Accuracy: 0.782828
+Precision: 0.628128
+Test index: 198, Correct Label: 0, Predicted: 0, Percentage: 37%
+[#######-------------]
+Accuracy: 0.78392
+Precision: 0.628151
+Test index: 199, Correct Label: 2, Predicted: 2, Percentage: 37%
+[#######-------------]
+Accuracy: 0.785
+Precision: 0.636485
+Test index: 200, Correct Label: 0, Predicted: 1, Percentage: 37%
+[#######-------------]
+Accuracy: 0.781095
+Precision: 0.633456
+Test index: 201, Correct Label: 1, Predicted: 0, Percentage: 37%
+[#######-------------]
+Accuracy: 0.777228
+Precision: 0.630702
+Test index: 202, Correct Label: 2, Predicted: 2, Percentage: 38%
+[#######-------------]
+Accuracy: 0.778325
+Precision: 0.638394
+Test index: 203, Correct Label: 0, Predicted: 1, Percentage: 38%
+[#######-------------]
+Accuracy: 0.77451
+Precision: 0.63547
+Test index: 204, Correct Label: 2, Predicted: 0, Percentage: 38%
+[#######-------------]
+Accuracy: 0.770732
+Precision: 0.632761
+Test index: 205, Correct Label: 0, Predicted: 0, Percentage: 38%
+[#######-------------]
+Accuracy: 0.771845
+Precision: 0.632829
+Test index: 206, Correct Label: 0, Predicted: 1, Percentage: 38%
+[#######-------------]
+Accuracy: 0.768116
+Precision: 0.630004
+Test index: 207, Correct Label: 0, Predicted: 0, Percentage: 38%
+[#######-------------]
+Accuracy: 0.769231
+Precision: 0.630071
+Test index: 208, Correct Label: 0, Predicted: 0, Percentage: 39%
+[#######-------------]
+Accuracy: 0.770335
+Precision: 0.630136
+Test index: 209, Correct Label: 1, Predicted: 1, Percentage: 39%
+[#######-------------]
+Accuracy: 0.771429
+Precision: 0.632961
+Test index: 210, Correct Label: 0, Predicted: 0, Percentage: 39%
+[#######-------------]
+Accuracy: 0.772512
+Precision: 0.633026
+Test index: 211, Correct Label: 0, Predicted: 0, Percentage: 39%
+[#######-------------]
+Accuracy: 0.773585
+Precision: 0.633089
+Test index: 212, Correct Label: 0, Predicted: 0, Percentage: 39%
+[#######-------------]
+Accuracy: 0.774648
+Precision: 0.633152
+Test index: 213, Correct Label: 2, Predicted: 0, Percentage: 40%
+[########------------]
+Accuracy: 0.771028
+Precision: 0.630609
+Test index: 214, Correct Label: 0, Predicted: 1, Percentage: 40%
+[########------------]
+Accuracy: 0.767442
+Precision: 0.627877
+Test index: 215, Correct Label: 0, Predicted: 0, Percentage: 40%
+[########------------]
+Accuracy: 0.768519
+Precision: 0.627958
+Test index: 216, Correct Label: 0, Predicted: 0, Percentage: 40%
+[########------------]
+Accuracy: 0.769585
+Precision: 0.628037
+Test index: 217, Correct Label: 0, Predicted: 0, Percentage: 40%
+[########------------]
+Accuracy: 0.770642
+Precision: 0.628115
+Test index: 218, Correct Label: 1, Predicted: 2, Percentage: 41%
+[########------------]
+Accuracy: 0.767123
+Precision: 0.622892
+Test index: 219, Correct Label: 0, Predicted: 0, Percentage: 41%
+[########------------]
+Accuracy: 0.768182
+Precision: 0.622969
+Test index: 220, Correct Label: 1, Predicted: 1, Percentage: 41%
+[########------------]
+Accuracy: 0.769231
+Precision: 0.625701
+Test index: 221, Correct Label: 0, Predicted: 0, Percentage: 41%
+[########------------]
+Accuracy: 0.77027
+Precision: 0.625777
+Test index: 222, Correct Label: 2, Predicted: 2, Percentage: 41%
+[########------------]
+Accuracy: 0.7713
+Precision: 0.632832
+Test index: 223, Correct Label: 0, Predicted: 0, Percentage: 41%
+[########------------]
+Accuracy: 0.772321
+Precision: 0.632907
+Test index: 224, Correct Label: 0, Predicted: 2, Percentage: 42%
+[########------------]
+Accuracy: 0.768889
+Precision: 0.627981
+Test index: 225, Correct Label: 0, Predicted: 1, Percentage: 42%
+[########------------]
+Accuracy: 0.765487
+Precision: 0.625335
+Test index: 226, Correct Label: 0, Predicted: 0, Percentage: 42%
+[########------------]
+Accuracy: 0.76652
+Precision: 0.625409
+Test index: 227, Correct Label: 1, Predicted: 0, Percentage: 42%
+[########------------]
+Accuracy: 0.763158
+Precision: 0.623031
+Test index: 228, Correct Label: 2, Predicted: 2, Percentage: 42%
+[########------------]
+Accuracy: 0.764192
+Precision: 0.629544
+Test index: 229, Correct Label: 0, Predicted: 0, Percentage: 43%
+[########------------]
+Accuracy: 0.765217
+Precision: 0.629633
+Test index: 230, Correct Label: 0, Predicted: 0, Percentage: 43%
+[########------------]
+Accuracy: 0.766234
+Precision: 0.629722
+Test index: 231, Correct Label: 1, Predicted: 1, Percentage: 43%
+[########------------]
+Accuracy: 0.767241
+Precision: 0.632367
+Test index: 232, Correct Label: 0, Predicted: 0, Percentage: 43%
+[########------------]
+Accuracy: 0.76824
+Precision: 0.632454
+Test index: 233, Correct Label: 0, Predicted: 0, Percentage: 43%
+[########------------]
+Accuracy: 0.769231
+Precision: 0.63254
+Test index: 234, Correct Label: 0, Predicted: 2, Percentage: 44%
+[########------------]
+Accuracy: 0.765957
+Precision: 0.62788
+Test index: 235, Correct Label: 0, Predicted: 1, Percentage: 44%
+[########------------]
+Accuracy: 0.762712
+Precision: 0.625316
+Test index: 236, Correct Label: 2, Predicted: 2, Percentage: 44%
+[########------------]
+Accuracy: 0.763713
+Precision: 0.631364
+Test index: 237, Correct Label: 1, Predicted: 0, Percentage: 44%
+[########------------]
+Accuracy: 0.760504
+Precision: 0.629085
+Test index: 238, Correct Label: 0, Predicted: 0, Percentage: 44%
+[########------------]
+Accuracy: 0.761506
+Precision: 0.629185
+Test index: 239, Correct Label: 0, Predicted: 2, Percentage: 45%
+[#########-----------]
+Accuracy: 0.758333
+Precision: 0.624766
+Test index: 240, Correct Label: 1, Predicted: 1, Percentage: 45%
+[#########-----------]
+Accuracy: 0.759336
+Precision: 0.62733
+Test index: 241, Correct Label: 2, Predicted: 2, Percentage: 45%
+[#########-----------]
+Accuracy: 0.760331
+Precision: 0.632974
+Test index: 242, Correct Label: 0, Predicted: 0, Percentage: 45%
+[#########-----------]
+Accuracy: 0.761317
+Precision: 0.633073
+Test index: 243, Correct Label: 0, Predicted: 0, Percentage: 45%
+[#########-----------]
+Accuracy: 0.762295
+Precision: 0.63317
+Test index: 244, Correct Label: 0, Predicted: 0, Percentage: 45%
+[#########-----------]
+Accuracy: 0.763265
+Precision: 0.633266
+Test index: 245, Correct Label: 0, Predicted: 0, Percentage: 46%
+[#########-----------]
+Accuracy: 0.764228
+Precision: 0.63336
+Test index: 246, Correct Label: 0, Predicted: 0, Percentage: 46%
+[#########-----------]
+Accuracy: 0.765182
+Precision: 0.633453
+Test index: 247, Correct Label: 0, Predicted: 0, Percentage: 46%
+[#########-----------]
+Accuracy: 0.766129
+Precision: 0.633545
+Test index: 248, Correct Label: 0, Predicted: 2, Percentage: 46%
+[#########-----------]
+Accuracy: 0.763052
+Precision: 0.629344
+Test index: 249, Correct Label: 0, Predicted: 1, Percentage: 46%
+[#########-----------]
+Accuracy: 0.76
+Precision: 0.626856
+Test index: 250, Correct Label: 1, Predicted: 1, Percentage: 47%
+[#########-----------]
+Accuracy: 0.760956
+Precision: 0.629344
+Test index: 251, Correct Label: 0, Predicted: 0, Percentage: 47%
+[#########-----------]
+Accuracy: 0.761905
+Precision: 0.629434
+Test index: 252, Correct Label: 0, Predicted: 0, Percentage: 47%
+[#########-----------]
+Accuracy: 0.762846
+Precision: 0.629524
+Test index: 253, Correct Label: 0, Predicted: 0, Percentage: 47%
+[#########-----------]
+Accuracy: 0.76378
+Precision: 0.629612
+Test index: 254, Correct Label: 0, Predicted: 0, Percentage: 47%
+[#########-----------]
+Accuracy: 0.764706
+Precision: 0.629699
+Test index: 255, Correct Label: 1, Predicted: 1, Percentage: 48%
+[#########-----------]
+Accuracy: 0.765625
+Precision: 0.632115
+Test index: 256, Correct Label: 2, Predicted: 2, Percentage: 48%
+[#########-----------]
+Accuracy: 0.766537
+Precision: 0.637406
+Test index: 257, Correct Label: 0, Predicted: 0, Percentage: 48%
+[#########-----------]
+Accuracy: 0.767442
+Precision: 0.637492
+Test index: 258, Correct Label: 0, Predicted: 0, Percentage: 48%
+[#########-----------]
+Accuracy: 0.76834
+Precision: 0.637577
+Test index: 259, Correct Label: 0, Predicted: 0, Percentage: 48%
+[#########-----------]
+Accuracy: 0.769231
+Precision: 0.63766
+Test index: 260, Correct Label: 1, Predicted: 1, Percentage: 48%
+[#########-----------]
+Accuracy: 0.770115
+Precision: 0.640007
+Test index: 261, Correct Label: 0, Predicted: 0, Percentage: 49%
+[#########-----------]
+Accuracy: 0.770992
+Precision: 0.64009
+Test index: 262, Correct Label: 0, Predicted: 0, Percentage: 49%
+[#########-----------]
+Accuracy: 0.771863
+Precision: 0.640171
+Test index: 263, Correct Label: 0, Predicted: 0, Percentage: 49%
+[#########-----------]
+Accuracy: 0.772727
+Precision: 0.640252
+Test index: 264, Correct Label: 0, Predicted: 0, Percentage: 49%
+[#########-----------]
+Accuracy: 0.773585
+Precision: 0.640331
+Test index: 265, Correct Label: 0, Predicted: 1, Percentage: 49%
+[#########-----------]
+Accuracy: 0.770677
+Precision: 0.637917
+Test index: 266, Correct Label: 0, Predicted: 2, Percentage: 50%
+[##########----------]
+Accuracy: 0.76779
+Precision: 0.633913
+Test index: 267, Correct Label: 1, Predicted: 1, Percentage: 50%
+[##########----------]
+Accuracy: 0.768657
+Precision: 0.636195
+Test index: 268, Correct Label: 0, Predicted: 0, Percentage: 50%
+[##########----------]
+Accuracy: 0.769517
+Precision: 0.636274
+Test index: 269, Correct Label: 2, Predicted: 2, Percentage: 50%
+[##########----------]
+Accuracy: 0.77037
+Precision: 0.641252
+Test index: 270, Correct Label: 0, Predicted: 0, Percentage: 50%
+[##########----------]
+Accuracy: 0.771218
+Precision: 0.64133
+Test index: 271, Correct Label: 2, Predicted: 1, Percentage: 51%
+[##########----------]
+Accuracy: 0.768382
+Precision: 0.638984
+Test index: 272, Correct Label: 0, Predicted: 1, Percentage: 51%
+[##########----------]
+Accuracy: 0.765568
+Precision: 0.6367
+Test index: 273, Correct Label: 2, Predicted: 1, Percentage: 51%
+[##########----------]
+Accuracy: 0.762774
+Precision: 0.634478
+Test index: 274, Correct Label: 0, Predicted: 0, Percentage: 51%
+[##########----------]
+Accuracy: 0.763636
+Precision: 0.634555
+Test index: 275, Correct Label: 0, Predicted: 0, Percentage: 51%
+[##########----------]
+Accuracy: 0.764493
+Precision: 0.634631
+Test index: 276, Correct Label: 0, Predicted: 0, Percentage: 51%
+[##########----------]
+Accuracy: 0.765343
+Precision: 0.634705
+Test index: 277, Correct Label: 1, Predicted: 1, Percentage: 52%
+[##########----------]
+Accuracy: 0.766187
+Precision: 0.636928
+Test index: 278, Correct Label: 0, Predicted: 0, Percentage: 52%
+[##########----------]
+Accuracy: 0.767025
+Precision: 0.637002
+Test index: 279, Correct Label: 0, Predicted: 0, Percentage: 52%
+[##########----------]
+Accuracy: 0.767857
+Precision: 0.637075
+Test index: 280, Correct Label: 0, Predicted: 0, Percentage: 52%
+[##########----------]
+Accuracy: 0.768683
+Precision: 0.637147
+Test index: 281, Correct Label: 0, Predicted: 2, Percentage: 52%
+[##########----------]
+Accuracy: 0.765957
+Precision: 0.633323
+Test index: 282, Correct Label: 0, Predicted: 0, Percentage: 53%
+[##########----------]
+Accuracy: 0.766784
+Precision: 0.633394
+Test index: 283, Correct Label: 0, Predicted: 0, Percentage: 53%
+[##########----------]
+Accuracy: 0.767606
+Precision: 0.633465
+Test index: 284, Correct Label: 0, Predicted: 0, Percentage: 53%
+[##########----------]
+Accuracy: 0.768421
+Precision: 0.633534
+Test index: 285, Correct Label: 0, Predicted: 0, Percentage: 53%
+[##########----------]
+Accuracy: 0.769231
+Precision: 0.633603
+Test index: 286, Correct Label: 1, Predicted: 1, Percentage: 53%
+[##########----------]
+Accuracy: 0.770035
+Precision: 0.635768
+Test index: 287, Correct Label: 2, Predicted: 2, Percentage: 54%
+[##########----------]
+Accuracy: 0.770833
+Precision: 0.640469
+Test index: 288, Correct Label: 1, Predicted: 0, Percentage: 54%
+[##########----------]
+Accuracy: 0.768166
+Precision: 0.638599
+Test index: 289, Correct Label: 1, Predicted: 1, Percentage: 54%
+[##########----------]
+Accuracy: 0.768966
+Precision: 0.640708
+Test index: 290, Correct Label: 0, Predicted: 0, Percentage: 54%
+[##########----------]
+Accuracy: 0.769759
+Precision: 0.640786
+Test index: 291, Correct Label: 1, Predicted: 1, Percentage: 54%
+[##########----------]
+Accuracy: 0.770548
+Precision: 0.642842
+Test index: 292, Correct Label: 0, Predicted: 1, Percentage: 54%
+[##########----------]
+Accuracy: 0.767918
+Precision: 0.640679
+Test index: 293, Correct Label: 2, Predicted: 1, Percentage: 55%
+[###########---------]
+Accuracy: 0.765306
+Precision: 0.63857
+Test index: 294, Correct Label: 0, Predicted: 2, Percentage: 55%
+[###########---------]
+Accuracy: 0.762712
+Precision: 0.634912
+Test index: 295, Correct Label: 0, Predicted: 0, Percentage: 55%
+[###########---------]
+Accuracy: 0.763514
+Precision: 0.634989
+Test index: 296, Correct Label: 2, Predicted: 1, Percentage: 55%
+[###########---------]
+Accuracy: 0.760943
+Precision: 0.632932
+Test index: 297, Correct Label: 0, Predicted: 0, Percentage: 55%
+[###########---------]
+Accuracy: 0.761745
+Precision: 0.633008
+Test index: 298, Correct Label: 2, Predicted: 2, Percentage: 56%
+[###########---------]
+Accuracy: 0.762542
+Precision: 0.63746
+Test index: 299, Correct Label: 2, Predicted: 2, Percentage: 56%
+[###########---------]
+Accuracy: 0.763333
+Precision: 0.641705
+Test index: 300, Correct Label: 0, Predicted: 0, Percentage: 56%
+[###########---------]
+Accuracy: 0.76412
+Precision: 0.641781
+Test index: 301, Correct Label: 0, Predicted: 1, Percentage: 56%
+[###########---------]
+Accuracy: 0.761589
+Precision: 0.639773
+Test index: 302, Correct Label: 0, Predicted: 1, Percentage: 56%
+[###########---------]
+Accuracy: 0.759076
+Precision: 0.637813
+Test index: 303, Correct Label: 2, Predicted: 1, Percentage: 57%
+[###########---------]
+Accuracy: 0.756579
+Precision: 0.635899
+Test index: 304, Correct Label: 0, Predicted: 1, Percentage: 57%
+[###########---------]
+Accuracy: 0.754098
+Precision: 0.634029
+Test index: 305, Correct Label: 2, Predicted: 2, Percentage: 57%
+[###########---------]
+Accuracy: 0.754902
+Precision: 0.638081
+Test index: 306, Correct Label: 0, Predicted: 1, Percentage: 57%
+[###########---------]
+Accuracy: 0.752443
+Precision: 0.636255
+Test index: 307, Correct Label: 1, Predicted: 1, Percentage: 57%
+[###########---------]
+Accuracy: 0.753247
+Precision: 0.638258
+Test index: 308, Correct Label: 0, Predicted: 1, Percentage: 58%
+[###########---------]
+Accuracy: 0.750809
+Precision: 0.63647
+Test index: 309, Correct Label: 2, Predicted: 2, Percentage: 58%
+[###########---------]
+Accuracy: 0.751613
+Precision: 0.640342
+Test index: 310, Correct Label: 0, Predicted: 0, Percentage: 58%
+[###########---------]
+Accuracy: 0.752412
+Precision: 0.640417
+Test index: 311, Correct Label: 0, Predicted: 0, Percentage: 58%
+[###########---------]
+Accuracy: 0.753205
+Precision: 0.640491
+Test index: 312, Correct Label: 0, Predicted: 0, Percentage: 58%
+[###########---------]
+Accuracy: 0.753994
+Precision: 0.640564
+Test index: 313, Correct Label: 0, Predicted: 2, Percentage: 58%
+[###########---------]
+Accuracy: 0.751592
+Precision: 0.637022
+Test index: 314, Correct Label: 0, Predicted: 1, Percentage: 59%
+[###########---------]
+Accuracy: 0.749206
+Precision: 0.635274
+Test index: 315, Correct Label: 0, Predicted: 1, Percentage: 59%
+[###########---------]
+Accuracy: 0.746835
+Precision: 0.633564
+Test index: 316, Correct Label: 0, Predicted: 0, Percentage: 59%
+[###########---------]
+Accuracy: 0.747634
+Precision: 0.633637
+Test index: 317, Correct Label: 0, Predicted: 0, Percentage: 59%
+[###########---------]
+Accuracy: 0.748428
+Precision: 0.633708
+Test index: 318, Correct Label: 0, Predicted: 2, Percentage: 59%
+[###########---------]
+Accuracy: 0.746082
+Precision: 0.630316
+Test index: 319, Correct Label: 2, Predicted: 1, Percentage: 60%
+[############--------]
+Accuracy: 0.74375
+Precision: 0.628644
+Test index: 320, Correct Label: 0, Predicted: 0, Percentage: 60%
+[############--------]
+Accuracy: 0.744548
+Precision: 0.628715
+Test index: 321, Correct Label: 0, Predicted: 0, Percentage: 60%
+[############--------]
+Accuracy: 0.745342
+Precision: 0.628785
+Test index: 322, Correct Label: 0, Predicted: 0, Percentage: 60%
+[############--------]
+Accuracy: 0.74613
+Precision: 0.628854
+Test index: 323, Correct Label: 0, Predicted: 0, Percentage: 60%
+[############--------]
+Accuracy: 0.746914
+Precision: 0.628923
+Test index: 324, Correct Label: 1, Predicted: 1, Percentage: 61%
+[############--------]
+Accuracy: 0.747692
+Precision: 0.630871
+Test index: 325, Correct Label: 0, Predicted: 1, Percentage: 61%
+[############--------]
+Accuracy: 0.745399
+Precision: 0.629231
+Test index: 326, Correct Label: 0, Predicted: 1, Percentage: 61%
+[############--------]
+Accuracy: 0.743119
+Precision: 0.627626
+Test index: 327, Correct Label: 0, Predicted: 2, Percentage: 61%
+[############--------]
+Accuracy: 0.740854
+Precision: 0.624376
+Test index: 328, Correct Label: 0, Predicted: 0, Percentage: 61%
+[############--------]
+Accuracy: 0.741641
+Precision: 0.624443
+Test index: 329, Correct Label: 0, Predicted: 1, Percentage: 61%
+[############--------]
+Accuracy: 0.739394
+Precision: 0.622872
+Test index: 330, Correct Label: 0, Predicted: 0, Percentage: 62%
+[############--------]
+Accuracy: 0.740181
+Precision: 0.622939
+Test index: 331, Correct Label: 2, Predicted: 2, Percentage: 62%
+[############--------]
+Accuracy: 0.740964
+Precision: 0.626624
+Test index: 332, Correct Label: 0, Predicted: 0, Percentage: 62%
+[############--------]
+Accuracy: 0.741742
+Precision: 0.62669
+Test index: 333, Correct Label: 0, Predicted: 0, Percentage: 62%
+[############--------]
+Accuracy: 0.742515
+Precision: 0.626756
+Test index: 334, Correct Label: 0, Predicted: 0, Percentage: 62%
+[############--------]
+Accuracy: 0.743284
+Precision: 0.626821
+Test index: 335, Correct Label: 2, Predicted: 2, Percentage: 63%
+[############--------]
+Accuracy: 0.744048
+Precision: 0.630358
+Test index: 336, Correct Label: 2, Predicted: 2, Percentage: 63%
+[############--------]
+Accuracy: 0.744807
+Precision: 0.633757
+Test index: 337, Correct Label: 0, Predicted: 0, Percentage: 63%
+[############--------]
+Accuracy: 0.745562
+Precision: 0.633821
+Test index: 338, Correct Label: 1, Predicted: 1, Percentage: 63%
+[############--------]
+Accuracy: 0.746313
+Precision: 0.635718
+Test index: 339, Correct Label: 1, Predicted: 1, Percentage: 63%
+[############--------]
+Accuracy: 0.747059
+Precision: 0.637577
+Test index: 340, Correct Label: 0, Predicted: 1, Percentage: 64%
+[############--------]
+Accuracy: 0.744868
+Precision: 0.636031
+Test index: 341, Correct Label: 1, Predicted: 1, Percentage: 64%
+[############--------]
+Accuracy: 0.745614
+Precision: 0.637849
+Test index: 342, Correct Label: 0, Predicted: 0, Percentage: 64%
+[############--------]
+Accuracy: 0.746356
+Precision: 0.637913
+Test index: 343, Correct Label: 1, Predicted: 0, Percentage: 64%
+[############--------]
+Accuracy: 0.744186
+Precision: 0.636248
+Test index: 344, Correct Label: 0, Predicted: 1, Percentage: 64%
+[############--------]
+Accuracy: 0.742029
+Precision: 0.63473
+Test index: 345, Correct Label: 0, Predicted: 0, Percentage: 64%
+[############--------]
+Accuracy: 0.742775
+Precision: 0.634802
+Test index: 346, Correct Label: 0, Predicted: 0, Percentage: 65%
+[#############-------]
+Accuracy: 0.743516
+Precision: 0.634872
+Test index: 347, Correct Label: 0, Predicted: 0, Percentage: 65%
+[#############-------]
+Accuracy: 0.744253
+Precision: 0.634942
+Test index: 348, Correct Label: 0, Predicted: 0, Percentage: 65%
+[#############-------]
+Accuracy: 0.744986
+Precision: 0.635011
+Test index: 349, Correct Label: 0, Predicted: 0, Percentage: 65%
+[#############-------]
+Accuracy: 0.745714
+Precision: 0.635079
+Test index: 350, Correct Label: 0, Predicted: 1, Percentage: 65%
+[#############-------]
+Accuracy: 0.74359
+Precision: 0.633591
+Test index: 351, Correct Label: 0, Predicted: 0, Percentage: 66%
+[#############-------]
+Accuracy: 0.744318
+Precision: 0.633658
+Test index: 352, Correct Label: 0, Predicted: 1, Percentage: 66%
+[#############-------]
+Accuracy: 0.74221
+Precision: 0.632199
+Test index: 353, Correct Label: 0, Predicted: 0, Percentage: 66%
+[#############-------]
+Accuracy: 0.742938
+Precision: 0.632266
+Test index: 354, Correct Label: 1, Predicted: 1, Percentage: 66%
+[#############-------]
+Accuracy: 0.743662
+Precision: 0.63404
+Test index: 355, Correct Label: 0, Predicted: 2, Percentage: 66%
+[#############-------]
+Accuracy: 0.741573
+Precision: 0.630897
+Test index: 356, Correct Label: 0, Predicted: 0, Percentage: 67%
+[#############-------]
+Accuracy: 0.742297
+Precision: 0.630964
+Test index: 357, Correct Label: 0, Predicted: 0, Percentage: 67%
+[#############-------]
+Accuracy: 0.743017
+Precision: 0.631029
+Test index: 358, Correct Label: 0, Predicted: 0, Percentage: 67%
+[#############-------]
+Accuracy: 0.743733
+Precision: 0.631094
+Test index: 359, Correct Label: 0, Predicted: 1, Percentage: 67%
+[#############-------]
+Accuracy: 0.741667
+Precision: 0.62966
+Test index: 360, Correct Label: 0, Predicted: 0, Percentage: 67%
+[#############-------]
+Accuracy: 0.742382
+Precision: 0.629724
+Test index: 361, Correct Label: 0, Predicted: 0, Percentage: 67%
+[#############-------]
+Accuracy: 0.743094
+Precision: 0.629788
+Test index: 362, Correct Label: 0, Predicted: 1, Percentage: 68%
+[#############-------]
+Accuracy: 0.741047
+Precision: 0.62838
+Test index: 363, Correct Label: 0, Predicted: 0, Percentage: 68%
+[#############-------]
+Accuracy: 0.741758
+Precision: 0.628443
+Test index: 364, Correct Label: 0, Predicted: 0, Percentage: 68%
+[#############-------]
+Accuracy: 0.742466
+Precision: 0.628506
+Test index: 365, Correct Label: 0, Predicted: 0, Percentage: 68%
+[#############-------]
+Accuracy: 0.743169
+Precision: 0.628568
+Test index: 366, Correct Label: 0, Predicted: 0, Percentage: 68%
+[#############-------]
+Accuracy: 0.743869
+Precision: 0.628629
+Test index: 367, Correct Label: 0, Predicted: 0, Percentage: 69%
+[#############-------]
+Accuracy: 0.744565
+Precision: 0.62869
+Test index: 368, Correct Label: 1, Predicted: 1, Percentage: 69%
+[#############-------]
+Accuracy: 0.745257
+Precision: 0.630424
+Test index: 369, Correct Label: 1, Predicted: 1, Percentage: 69%
+[#############-------]
+Accuracy: 0.745946
+Precision: 0.632126
+Test index: 370, Correct Label: 2, Predicted: 1, Percentage: 69%
+[#############-------]
+Accuracy: 0.743935
+Precision: 0.630738
+Test index: 371, Correct Label: 0, Predicted: 0, Percentage: 69%
+[#############-------]
+Accuracy: 0.744624
+Precision: 0.630799
+Test index: 372, Correct Label: 0, Predicted: 0, Percentage: 70%
+[##############------]
+Accuracy: 0.745308
+Precision: 0.630858
+Test index: 373, Correct Label: 0, Predicted: 0, Percentage: 70%
+[##############------]
+Accuracy: 0.745989
+Precision: 0.630917
+Test index: 374, Correct Label: 0, Predicted: 0, Percentage: 70%
+[##############------]
+Accuracy: 0.746667
+Precision: 0.630976
+Test index: 375, Correct Label: 0, Predicted: 1, Percentage: 70%
+[##############------]
+Accuracy: 0.744681
+Precision: 0.629613
+Test index: 376, Correct Label: 0, Predicted: 0, Percentage: 70%
+[##############------]
+Accuracy: 0.745358
+Precision: 0.629672
+Test index: 377, Correct Label: 0, Predicted: 0, Percentage: 70%
+[##############------]
+Accuracy: 0.746032
+Precision: 0.629729
+Test index: 378, Correct Label: 0, Predicted: 0, Percentage: 71%
+[##############------]
+Accuracy: 0.746702
+Precision: 0.629786
+Test index: 379, Correct Label: 0, Predicted: 0, Percentage: 71%
+[##############------]
+Accuracy: 0.747368
+Precision: 0.629842
+Test index: 380, Correct Label: 0, Predicted: 0, Percentage: 71%
+[##############------]
+Accuracy: 0.748031
+Precision: 0.629898
+Test index: 381, Correct Label: 2, Predicted: 1, Percentage: 71%
+[##############------]
+Accuracy: 0.746073
+Precision: 0.62856
+Test index: 382, Correct Label: 0, Predicted: 0, Percentage: 71%
+[##############------]
+Accuracy: 0.746736
+Precision: 0.628616
+Test index: 383, Correct Label: 0, Predicted: 0, Percentage: 72%
+[##############------]
+Accuracy: 0.747396
+Precision: 0.628671
+Test index: 384, Correct Label: 0, Predicted: 0, Percentage: 72%
+[##############------]
+Accuracy: 0.748052
+Precision: 0.628725
+Test index: 385, Correct Label: 0, Predicted: 0, Percentage: 72%
+[##############------]
+Accuracy: 0.748705
+Precision: 0.628779
+Test index: 386, Correct Label: 0, Predicted: 0, Percentage: 72%
+[##############------]
+Accuracy: 0.749354
+Precision: 0.628832
+Test index: 387, Correct Label: 0, Predicted: 2, Percentage: 72%
+[##############------]
+Accuracy: 0.747423
+Precision: 0.625808
+Test index: 388, Correct Label: 0, Predicted: 2, Percentage: 73%
+[##############------]
+Accuracy: 0.745501
+Precision: 0.622897
+Test index: 389, Correct Label: 0, Predicted: 2, Percentage: 73%
+[##############------]
+Accuracy: 0.74359
+Precision: 0.620091
+Test index: 390, Correct Label: 2, Predicted: 2, Percentage: 73%
+[##############------]
+Accuracy: 0.744246
+Precision: 0.623338
+Test index: 391, Correct Label: 0, Predicted: 1, Percentage: 73%
+[##############------]
+Accuracy: 0.742347
+Precision: 0.622024
+Test index: 392, Correct Label: 0, Predicted: 0, Percentage: 73%
+[##############------]
+Accuracy: 0.743003
+Precision: 0.622077
+Test index: 393, Correct Label: 0, Predicted: 1, Percentage: 74%
+[##############------]
+Accuracy: 0.741117
+Precision: 0.620786
+Test index: 394, Correct Label: 0, Predicted: 0, Percentage: 74%
+[##############------]
+Accuracy: 0.741772
+Precision: 0.620839
+Test index: 395, Correct Label: 0, Predicted: 0, Percentage: 74%
+[##############------]
+Accuracy: 0.742424
+Precision: 0.620891
+Test index: 396, Correct Label: 0, Predicted: 0, Percentage: 74%
+[##############------]
+Accuracy: 0.743073
+Precision: 0.620942
+Test index: 397, Correct Label: 0, Predicted: 1, Percentage: 74%
+[##############------]
+Accuracy: 0.741206
+Precision: 0.619674
+Test index: 398, Correct Label: 0, Predicted: 0, Percentage: 74%
+[##############------]
+Accuracy: 0.741855
+Precision: 0.619725
+Test index: 399, Correct Label: 1, Predicted: 0, Percentage: 75%
+[###############-----]
+Accuracy: 0.74
+Precision: 0.618327
+Test index: 400, Correct Label: 0, Predicted: 0, Percentage: 75%
+[###############-----]
+Accuracy: 0.740648
+Precision: 0.618383
+Test index: 401, Correct Label: 0, Predicted: 0, Percentage: 75%
+[###############-----]
+Accuracy: 0.741294
+Precision: 0.618439
+Test index: 402, Correct Label: 0, Predicted: 1, Percentage: 75%
+[###############-----]
+Accuracy: 0.739454
+Precision: 0.617193
+Test index: 403, Correct Label: 0, Predicted: 1, Percentage: 75%
+[###############-----]
+Accuracy: 0.737624
+Precision: 0.615969
+Test index: 404, Correct Label: 0, Predicted: 0, Percentage: 76%
+[###############-----]
+Accuracy: 0.738272
+Precision: 0.616024
+Test index: 405, Correct Label: 2, Predicted: 2, Percentage: 76%
+[###############-----]
+Accuracy: 0.738916
+Precision: 0.619157
+Test index: 406, Correct Label: 0, Predicted: 1, Percentage: 76%
+[###############-----]
+Accuracy: 0.737101
+Precision: 0.617954
+Test index: 407, Correct Label: 0, Predicted: 0, Percentage: 76%
+[###############-----]
+Accuracy: 0.737745
+Precision: 0.618009
+Test index: 408, Correct Label: 0, Predicted: 0, Percentage: 76%
+[###############-----]
+Accuracy: 0.738386
+Precision: 0.618063
+Test index: 409, Correct Label: 0, Predicted: 0, Percentage: 77%
+[###############-----]
+Accuracy: 0.739024
+Precision: 0.618117
+Test index: 410, Correct Label: 0, Predicted: 0, Percentage: 77%
+[###############-----]
+Accuracy: 0.739659
+Precision: 0.618171
+Test index: 411, Correct Label: 0, Predicted: 2, Percentage: 77%
+[###############-----]
+Accuracy: 0.737864
+Precision: 0.615449
+Test index: 412, Correct Label: 0, Predicted: 2, Percentage: 77%
+[###############-----]
+Accuracy: 0.736077
+Precision: 0.612819
+Test index: 413, Correct Label: 0, Predicted: 0, Percentage: 77%
+[###############-----]
+Accuracy: 0.736715
+Precision: 0.612872
+Test index: 414, Correct Label: 0, Predicted: 1, Percentage: 77%
+[###############-----]
+Accuracy: 0.73494
+Precision: 0.611689
+Test index: 415, Correct Label: 0, Predicted: 0, Percentage: 78%
+[###############-----]
+Accuracy: 0.735577
+Precision: 0.611741
+Test index: 416, Correct Label: 0, Predicted: 1, Percentage: 78%
+[###############-----]
+Accuracy: 0.733813
+Precision: 0.610578
+Test index: 417, Correct Label: 0, Predicted: 0, Percentage: 78%
+[###############-----]
+Accuracy: 0.73445
+Precision: 0.610631
+Test index: 418, Correct Label: 0, Predicted: 0, Percentage: 78%
+[###############-----]
+Accuracy: 0.735084
+Precision: 0.610682
+Test index: 419, Correct Label: 0, Predicted: 0, Percentage: 78%
+[###############-----]
+Accuracy: 0.735714
+Precision: 0.610734
+Test index: 420, Correct Label: 0, Predicted: 0, Percentage: 79%
+[###############-----]
+Accuracy: 0.736342
+Precision: 0.610785
+Test index: 421, Correct Label: 1, Predicted: 1, Percentage: 79%
+[###############-----]
+Accuracy: 0.736967
+Precision: 0.612419
+Test index: 422, Correct Label: 0, Predicted: 0, Percentage: 79%
+[###############-----]
+Accuracy: 0.737589
+Precision: 0.612469
+Test index: 423, Correct Label: 0, Predicted: 0, Percentage: 79%
+[###############-----]
+Accuracy: 0.738208
+Precision: 0.61252
+Test index: 424, Correct Label: 0, Predicted: 1, Percentage: 79%
+[###############-----]
+Accuracy: 0.736471
+Precision: 0.611372
+Test index: 425, Correct Label: 0, Predicted: 0, Percentage: 80%
+[################----]
+Accuracy: 0.737089
+Precision: 0.611422
+Test index: 426, Correct Label: 0, Predicted: 0, Percentage: 80%
+[################----]
+Accuracy: 0.737705
+Precision: 0.611471
+Test index: 427, Correct Label: 0, Predicted: 0, Percentage: 80%
+[################----]
+Accuracy: 0.738318
+Precision: 0.61152
+Test index: 428, Correct Label: 0, Predicted: 0, Percentage: 80%
+[################----]
+Accuracy: 0.738928
+Precision: 0.611569
+Test index: 429, Correct Label: 0, Predicted: 1, Percentage: 80%
+[################----]
+Accuracy: 0.737209
+Precision: 0.61044
+Test index: 430, Correct Label: 0, Predicted: 0, Percentage: 80%
+[################----]
+Accuracy: 0.737819
+Precision: 0.610488
+Test index: 431, Correct Label: 0, Predicted: 0, Percentage: 81%
+[################----]
+Accuracy: 0.738426
+Precision: 0.610536
+Test index: 432, Correct Label: 1, Predicted: 1, Percentage: 81%
+[################----]
+Accuracy: 0.73903
+Precision: 0.612135
+Test index: 433, Correct Label: 0, Predicted: 0, Percentage: 81%
+[################----]
+Accuracy: 0.739631
+Precision: 0.612182
+Test index: 434, Correct Label: 1, Predicted: 1, Percentage: 81%
+[################----]
+Accuracy: 0.74023
+Precision: 0.613756
+Test index: 435, Correct Label: 0, Predicted: 0, Percentage: 81%
+[################----]
+Accuracy: 0.740826
+Precision: 0.613803
+Test index: 436, Correct Label: 0, Predicted: 0, Percentage: 82%
+[################----]
+Accuracy: 0.741419
+Precision: 0.61385
+Test index: 437, Correct Label: 0, Predicted: 0, Percentage: 82%
+[################----]
+Accuracy: 0.742009
+Precision: 0.613896
+Test index: 438, Correct Label: 0, Predicted: 0, Percentage: 82%
+[################----]
+Accuracy: 0.742597
+Precision: 0.613942
+Test index: 439, Correct Label: 0, Predicted: 0, Percentage: 82%
+[################----]
+Accuracy: 0.743182
+Precision: 0.613988
+Test index: 440, Correct Label: 0, Predicted: 0, Percentage: 82%
+[################----]
+Accuracy: 0.743764
+Precision: 0.614033
+Test index: 441, Correct Label: 1, Predicted: 2, Percentage: 83%
+[################----]
+Accuracy: 0.742081
+Precision: 0.61149
+Test index: 442, Correct Label: 0, Predicted: 0, Percentage: 83%
+[################----]
+Accuracy: 0.742664
+Precision: 0.611535
+Test index: 443, Correct Label: 0, Predicted: 0, Percentage: 83%
+[################----]
+Accuracy: 0.743243
+Precision: 0.61158
+Test index: 444, Correct Label: 0, Predicted: 0, Percentage: 83%
+[################----]
+Accuracy: 0.74382
+Precision: 0.611624
+Test index: 445, Correct Label: 0, Predicted: 1, Percentage: 83%
+[################----]
+Accuracy: 0.742152
+Precision: 0.610506
+Test index: 446, Correct Label: 0, Predicted: 0, Percentage: 83%
+[################----]
+Accuracy: 0.742729
+Precision: 0.61055
+Test index: 447, Correct Label: 1, Predicted: 1, Percentage: 84%
+[################----]
+Accuracy: 0.743304
+Precision: 0.612095
+Test index: 448, Correct Label: 0, Predicted: 0, Percentage: 84%
+[################----]
+Accuracy: 0.743875
+Precision: 0.612138
+Test index: 449, Correct Label: 0, Predicted: 0, Percentage: 84%
+[################----]
+Accuracy: 0.744444
+Precision: 0.612181
+Test index: 450, Correct Label: 0, Predicted: 1, Percentage: 84%
+[################----]
+Accuracy: 0.742794
+Precision: 0.611077
+Test index: 451, Correct Label: 0, Predicted: 0, Percentage: 84%
+[################----]
+Accuracy: 0.743363
+Precision: 0.61112
+Test index: 452, Correct Label: 0, Predicted: 0, Percentage: 85%
+[#################---]
+Accuracy: 0.743929
+Precision: 0.611163
+Test index: 453, Correct Label: 0, Predicted: 0, Percentage: 85%
+[#################---]
+Accuracy: 0.744493
+Precision: 0.611205
+Test index: 454, Correct Label: 0, Predicted: 0, Percentage: 85%
+[#################---]
+Accuracy: 0.745055
+Precision: 0.611247
+Test index: 455, Correct Label: 0, Predicted: 0, Percentage: 85%
+[#################---]
+Accuracy: 0.745614
+Precision: 0.611289
+Test index: 456, Correct Label: 0, Predicted: 2, Percentage: 85%
+[#################---]
+Accuracy: 0.743982
+Precision: 0.608829
+Test index: 457, Correct Label: 0, Predicted: 0, Percentage: 86%
+[#################---]
+Accuracy: 0.744541
+Precision: 0.608871
+Test index: 458, Correct Label: 0, Predicted: 0, Percentage: 86%
+[#################---]
+Accuracy: 0.745098
+Precision: 0.608912
+Test index: 459, Correct Label: 2, Predicted: 2, Percentage: 86%
+[#################---]
+Accuracy: 0.745652
+Precision: 0.611908
+Test index: 460, Correct Label: 2, Predicted: 2, Percentage: 86%
+[#################---]
+Accuracy: 0.746204
+Precision: 0.61481
+Test index: 461, Correct Label: 0, Predicted: 2, Percentage: 86%
+[#################---]
+Accuracy: 0.744589
+Precision: 0.612413
+Test index: 462, Correct Label: 0, Predicted: 0, Percentage: 87%
+[#################---]
+Accuracy: 0.74514
+Precision: 0.612453
+Test index: 463, Correct Label: 0, Predicted: 0, Percentage: 87%
+[#################---]
+Accuracy: 0.74569
+Precision: 0.612494
+Test index: 464, Correct Label: 0, Predicted: 2, Percentage: 87%
+[#################---]
+Accuracy: 0.744086
+Precision: 0.61017
+Test index: 465, Correct Label: 1, Predicted: 1, Percentage: 87%
+[#################---]
+Accuracy: 0.744635
+Precision: 0.611687
+Test index: 466, Correct Label: 0, Predicted: 0, Percentage: 87%
+[#################---]
+Accuracy: 0.745182
+Precision: 0.611727
+Test index: 467, Correct Label: 0, Predicted: 0, Percentage: 87%
+[#################---]
+Accuracy: 0.745726
+Precision: 0.611767
+Test index: 468, Correct Label: 0, Predicted: 1, Percentage: 88%
+[#################---]
+Accuracy: 0.744136
+Precision: 0.610677
+Test index: 469, Correct Label: 1, Predicted: 1, Percentage: 88%
+[#################---]
+Accuracy: 0.744681
+Precision: 0.612168
+Test index: 470, Correct Label: 0, Predicted: 1, Percentage: 88%
+[#################---]
+Accuracy: 0.7431
+Precision: 0.611091
+Test index: 471, Correct Label: 0, Predicted: 2, Percentage: 88%
+[#################---]
+Accuracy: 0.741525
+Precision: 0.608838
+Test index: 472, Correct Label: 1, Predicted: 1, Percentage: 88%
+[#################---]
+Accuracy: 0.742072
+Precision: 0.610303
+Test index: 473, Correct Label: 1, Predicted: 1, Percentage: 89%
+[#################---]
+Accuracy: 0.742616
+Precision: 0.611746
+Test index: 474, Correct Label: 0, Predicted: 0, Percentage: 89%
+[#################---]
+Accuracy: 0.743158
+Precision: 0.611786
+Test index: 475, Correct Label: 0, Predicted: 1, Percentage: 89%
+[#################---]
+Accuracy: 0.741597
+Precision: 0.610719
+Test index: 476, Correct Label: 0, Predicted: 0, Percentage: 89%
+[#################---]
+Accuracy: 0.742138
+Precision: 0.610759
+Test index: 477, Correct Label: 0, Predicted: 0, Percentage: 89%
+[#################---]
+Accuracy: 0.742678
+Precision: 0.610798
+Test index: 478, Correct Label: 1, Predicted: 1, Percentage: 90%
+[##################--]
+Accuracy: 0.743215
+Precision: 0.612216
+Test index: 479, Correct Label: 1, Predicted: 1, Percentage: 90%
+[##################--]
+Accuracy: 0.74375
+Precision: 0.613614
+Test index: 480, Correct Label: 0, Predicted: 0, Percentage: 90%
+[##################--]
+Accuracy: 0.744283
+Precision: 0.613653
+Test index: 481, Correct Label: 0, Predicted: 1, Percentage: 90%
+[##################--]
+Accuracy: 0.742739
+Precision: 0.612598
+Test index: 482, Correct Label: 0, Predicted: 2, Percentage: 90%
+[##################--]
+Accuracy: 0.741201
+Precision: 0.610412
+Test index: 483, Correct Label: 0, Predicted: 1, Percentage: 90%
+[##################--]
+Accuracy: 0.739669
+Precision: 0.609371
+Test index: 484, Correct Label: 1, Predicted: 1, Percentage: 91%
+[##################--]
+Accuracy: 0.740206
+Precision: 0.610744
+Test index: 485, Correct Label: 0, Predicted: 0, Percentage: 91%
+[##################--]
+Accuracy: 0.740741
+Precision: 0.610783
+Test index: 486, Correct Label: 0, Predicted: 0, Percentage: 91%
+[##################--]
+Accuracy: 0.741273
+Precision: 0.610821
+Test index: 487, Correct Label: 0, Predicted: 0, Percentage: 91%
+[##################--]
+Accuracy: 0.741803
+Precision: 0.610859
+Test index: 488, Correct Label: 0, Predicted: 1, Percentage: 91%
+[##################--]
+Accuracy: 0.740286
+Precision: 0.609831
+Test index: 489, Correct Label: 0, Predicted: 0, Percentage: 92%
+[##################--]
+Accuracy: 0.740816
+Precision: 0.609868
+Test index: 490, Correct Label: 0, Predicted: 0, Percentage: 92%
+[##################--]
+Accuracy: 0.741344
+Precision: 0.609906
+Test index: 491, Correct Label: 0, Predicted: 0, Percentage: 92%
+[##################--]
+Accuracy: 0.74187
+Precision: 0.609943
+Test index: 492, Correct Label: 1, Predicted: 1, Percentage: 92%
+[##################--]
+Accuracy: 0.742393
+Precision: 0.611294
+Test index: 493, Correct Label: 0, Predicted: 0, Percentage: 92%
+[##################--]
+Accuracy: 0.742915
+Precision: 0.61133
+Test index: 494, Correct Label: 0, Predicted: 2, Percentage: 93%
+[##################--]
+Accuracy: 0.741414
+Precision: 0.609209
+Test index: 495, Correct Label: 0, Predicted: 0, Percentage: 93%
+[##################--]
+Accuracy: 0.741935
+Precision: 0.609245
+Test index: 496, Correct Label: 0, Predicted: 1, Percentage: 93%
+[##################--]
+Accuracy: 0.740443
+Precision: 0.60823
+Test index: 497, Correct Label: 0, Predicted: 0, Percentage: 93%
+[##################--]
+Accuracy: 0.740964
+Precision: 0.608266
+Test index: 498, Correct Label: 2, Predicted: 1, Percentage: 93%
+[##################--]
+Accuracy: 0.739479
+Precision: 0.607265
+Test index: 499, Correct Label: 0, Predicted: 0, Percentage: 93%
+[##################--]
+Accuracy: 0.74
+Precision: 0.607301
+Test index: 500, Correct Label: 2, Predicted: 2, Percentage: 94%
+[##################--]
+Accuracy: 0.740519
+Precision: 0.610071
+Test index: 501, Correct Label: 0, Predicted: 0, Percentage: 94%
+[##################--]
+Accuracy: 0.741036
+Precision: 0.610107
+Test index: 502, Correct Label: 0, Predicted: 0, Percentage: 94%
+[##################--]
+Accuracy: 0.741551
+Precision: 0.610143
+Test index: 503, Correct Label: 0, Predicted: 0, Percentage: 94%
+[##################--]
+Accuracy: 0.742063
+Precision: 0.610178
+Test index: 504, Correct Label: 0, Predicted: 0, Percentage: 94%
+[##################--]
+Accuracy: 0.742574
+Precision: 0.610213
+Test index: 505, Correct Label: 0, Predicted: 0, Percentage: 95%
+[###################-]
+Accuracy: 0.743083
+Precision: 0.610248
+Test index: 506, Correct Label: 0, Predicted: 1, Percentage: 95%
+[###################-]
+Accuracy: 0.741617
+Precision: 0.60926
+Test index: 507, Correct Label: 0, Predicted: 0, Percentage: 95%
+[###################-]
+Accuracy: 0.742126
+Precision: 0.609295
+Test index: 508, Correct Label: 0, Predicted: 0, Percentage: 95%
+[###################-]
+Accuracy: 0.742633
+Precision: 0.609329
+Test index: 509, Correct Label: 0, Predicted: 0, Percentage: 95%
+[###################-]
+Accuracy: 0.743137
+Precision: 0.609364
+Test index: 510, Correct Label: 0, Predicted: 2, Percentage: 96%
+[###################-]
+Accuracy: 0.741683
+Precision: 0.607293
+Test index: 511, Correct Label: 0, Predicted: 0, Percentage: 96%
+[###################-]
+Accuracy: 0.742188
+Precision: 0.607327
+Test index: 512, Correct Label: 1, Predicted: 1, Percentage: 96%
+[###################-]
+Accuracy: 0.74269
+Precision: 0.608652
+Test index: 513, Correct Label: 2, Predicted: 2, Percentage: 96%
+[###################-]
+Accuracy: 0.743191
+Precision: 0.611335
+Test index: 514, Correct Label: 1, Predicted: 1, Percentage: 96%
+[###################-]
+Accuracy: 0.743689
+Precision: 0.612642
+Test index: 515, Correct Label: 2, Predicted: 2, Percentage: 96%
+[###################-]
+Accuracy: 0.744186
+Precision: 0.61525
+Test index: 516, Correct Label: 0, Predicted: 1, Percentage: 97%
+[###################-]
+Accuracy: 0.742747
+Precision: 0.614272
+Test index: 517, Correct Label: 2, Predicted: 2, Percentage: 97%
+[###################-]
+Accuracy: 0.743243
+Precision: 0.616808
+Test index: 518, Correct Label: 0, Predicted: 0, Percentage: 97%
+[###################-]
+Accuracy: 0.743738
+Precision: 0.616842
+Test index: 519, Correct Label: 2, Predicted: 2, Percentage: 97%
+[###################-]
+Accuracy: 0.744231
+Precision: 0.61931
+Test index: 520, Correct Label: 0, Predicted: 0, Percentage: 97%
+[###################-]
+Accuracy: 0.744722
+Precision: 0.619344
+Test index: 521, Correct Label: 0, Predicted: 0, Percentage: 98%
+[###################-]
+Accuracy: 0.745211
+Precision: 0.619377
+Test index: 522, Correct Label: 0, Predicted: 0, Percentage: 98%
+[###################-]
+Accuracy: 0.745698
+Precision: 0.61941
+Test index: 523, Correct Label: 0, Predicted: 0, Percentage: 98%
+[###################-]
+Accuracy: 0.746183
+Precision: 0.619443
+Test index: 524, Correct Label: 0, Predicted: 0, Percentage: 98%
+[###################-]
+Accuracy: 0.746667
+Precision: 0.619475
+Test index: 525, Correct Label: 0, Predicted: 0, Percentage: 98%
+[###################-]
+Accuracy: 0.747148
+Precision: 0.619508
+Test index: 526, Correct Label: 0, Predicted: 0, Percentage: 99%
+[###################-]
+Accuracy: 0.747628
+Precision: 0.61954
+Test index: 527, Correct Label: 0, Predicted: 0, Percentage: 99%
+[###################-]
+Accuracy: 0.748106
+Precision: 0.619572
+Test index: 528, Correct Label: 0, Predicted: 0, Percentage: 99%
+[###################-]
+Accuracy: 0.748582
+Precision: 0.619603
+Test index: 529, Correct Label: 0, Predicted: 1, Percentage: 99%
+[###################-]
+Accuracy: 0.74717
+Precision: 0.618638
+Test index: 530, Correct Label: 0, Predicted: 2, Percentage: 99%
+[###################-]
+Accuracy: 0.745763
+Precision: 0.616596
+Test index: 531, Correct Label: 0, Predicted: 0, Percentage: 100%
+[####################]
+Accuracy: 0.746241
+Precision: 0.616628
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

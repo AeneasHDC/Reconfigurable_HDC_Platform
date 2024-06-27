@@ -17,108 +17,111 @@ INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
 INFO: [HLS 200-2036] Building debug C Simulation binaries
 INFO: [SIM 211-1] CSim done with 0 errors.
 INFO: [SIM 211-3] *************** CSIM finish ***************
-INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 335.461 seconds; current allocated memory: 0.566 MB.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 81.345 seconds; current allocated memory: 0.816 MB.
 INFO: [HLS 200-1510] Running: csynth_design 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.086 seconds; current allocated memory: 1.453 GB.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.096 seconds; current allocated memory: 1.452 GB.
 INFO: [HLS 200-10] Analyzing design file './../src/hw/hls_xilinx/main.cpp' ... 
 WARNING: [HLS 207-910] 'FPGA' macro redefined (./../src/hw/hls_xilinx/headers/./../../../config/config_cpp.hpp:11:9)
 INFO: [HLS 207-71] previous definition is here (<built-in>:350:9)
-WARNING: [HLS 207-5575] '#pragma HLS unroll' can only be applied inside loop body (./../src/hw/hls_xilinx/main.cpp:490:9)
-WARNING: [HLS 207-5575] '#pragma HLS unroll' can only be applied inside loop body (./../src/hw/hls_xilinx/main.cpp:794:9)
-WARNING: [HLS 207-5564] Only for/while/do loop or function body support the pipeline pragma (./../src/hw/hls_xilinx/main.cpp:818:9)
-WARNING: [HLS 207-5292] unused parameter 'denom_a' (./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:121:43)
-WARNING: [HLS 207-5292] unused parameter 'denom_b' (./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:121:63)
+WARNING: [HLS 207-5575] '#pragma HLS unroll' can only be applied inside loop body (./../src/hw/hls_xilinx/main.cpp:507:9)
+WARNING: [HLS 207-5575] '#pragma HLS unroll' can only be applied inside loop body (./../src/hw/hls_xilinx/main.cpp:811:9)
+WARNING: [HLS 207-5564] Only for/while/do loop or function body support the pipeline pragma (./../src/hw/hls_xilinx/main.cpp:835:9)
 WARNING: [HLS 207-5292] unused parameter 'mode' (./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:121:80)
-WARNING: [HLS 207-5292] unused parameter 'sim' (./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:278:35)
-WARNING: [HLS 207-5292] unused parameter 'denom_a' (./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:278:57)
-WARNING: [HLS 207-5292] unused parameter 'denom_b' (./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:278:83)
 WARNING: [HLS 207-5292] unused parameter 'mode' (./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:278:100)
 WARNING: [HLS 207-5292] unused parameter 'frame_id' (./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:714:68)
 WARNING: [HLS 207-5292] unused parameter 'frame_index' (./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:715:28)
-WARNING: [HLS 207-5292] unused parameter 'classVector' (./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:816:36)
-WARNING: [HLS 207-5292] unused parameter 'frame_id' (./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:816:68)
-WARNING: [HLS 207-5292] unused parameter 'frame_index' (./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:817:28)
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 15.017 seconds; current allocated memory: 1.461 GB.
+WARNING: [HLS 207-5292] unused parameter 'lv_approx_0' (./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:715:50)
+WARNING: [HLS 207-5292] unused parameter 'lv_approx_1' (./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:715:72)
+WARNING: [HLS 207-5292] unused parameter 'classVector' (./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:817:36)
+WARNING: [HLS 207-5292] unused parameter 'frame_id' (./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:817:68)
+WARNING: [HLS 207-5292] unused parameter 'frame_index' (./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:818:28)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 18.784 seconds; current allocated memory: 1.461 GB.
 INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
-WARNING: [HLS 214-387] Ignore depth setting for top argument 'sdata_i' (./../src/hw/hls_xilinx/main.cpp:139:0)
-INFO: [HLS 214-131] Inlining function 'void HDC_op<1ul, 1ul, 64ul>::similarity_phase1<ap_uint<32> [64], ap_uint<32> [64], ap_uint<32>, ap_uint<32> >(ap_uint<32> const (&) [64], ap_uint<32> const (&) [64], ap_uint<32>&, ap_uint<32>&, ap_uint<32>&, unsigned char)' into 'hdv_engine(bool&, op_mode_t, frame_in_t, hls::stream<hls::axis<ap_uint<8>, 1ul, 1ul, 1ul>, 0>&, chv_p_t&, chv_t*, bhv_p_t&, lhv_p_t&, pred_class_t&, pred_class_t*, sys_status_t*)' (./../src/hw/hls_xilinx/main.cpp:826:12)
-INFO: [HLS 214-131] Inlining function 'void HDC_op<1ul, 1ul, 64ul>::clip<ap_uint<32> [64], ap_uint<32> [64]>(ap_uint<32> const (&) [64], ap_uint<32> (&) [64], short const&, short const&, ap_int<32>, unsigned char)' into 'hdv_engine(bool&, op_mode_t, frame_in_t, hls::stream<hls::axis<ap_uint<8>, 1ul, 1ul, 1ul>, 0>&, chv_p_t&, chv_t*, bhv_p_t&, lhv_p_t&, pred_class_t&, pred_class_t*, sys_status_t*)' (./../src/hw/hls_xilinx/main.cpp:740:11)
-INFO: [HLS 214-131] Inlining function 'void HDC_op<1ul, 1ul, 64ul>::bundle<ap_uint<1> [64], ap_uint<32> [64]>(ap_uint<1> const (&) [64], ap_uint<32> (&) [64])' into 'hdv_engine(bool&, op_mode_t, frame_in_t, hls::stream<hls::axis<ap_uint<8>, 1ul, 1ul, 1ul>, 0>&, chv_p_t&, chv_t*, bhv_p_t&, lhv_p_t&, pred_class_t&, pred_class_t*, sys_status_t*)' (./../src/hw/hls_xilinx/main.cpp:664:6)
-INFO: [HLS 214-131] Inlining function 'void HDC_op<1ul, 1ul, 64ul>::bind<ap_uint<1> [64]>(ap_uint<1> const (&) [64], ap_uint<1> const (&) [64], ap_uint<1> (&) [64])' into 'hdv_engine(bool&, op_mode_t, frame_in_t, hls::stream<hls::axis<ap_uint<8>, 1ul, 1ul, 1ul>, 0>&, chv_p_t&, chv_t*, bhv_p_t&, lhv_p_t&, pred_class_t&, pred_class_t*, sys_status_t*)' (./../src/hw/hls_xilinx/main.cpp:541:14)
-INFO: [HLS 214-131] Inlining function 'void HDC_op<1ul, 1ul, 64ul>::clip<ap_uint<32> [64], ap_uint<32> [64]>(ap_uint<32> const (&) [64], ap_uint<32> (&) [64], short const&, short const&, ap_int<32>, unsigned char)' into 'hdv_engine(bool&, op_mode_t, frame_in_t, hls::stream<hls::axis<ap_uint<8>, 1ul, 1ul, 1ul>, 0>&, chv_p_t&, chv_t*, bhv_p_t&, lhv_p_t&, pred_class_t&, pred_class_t*, sys_status_t*)' (./../src/hw/hls_xilinx/main.cpp:357:9)
-WARNING: [HLS 214-199] Ignoring dependence pragma on local scalar variable 'similarity_max'. (./../src/hw/hls_xilinx/main.cpp:262:9)
-INFO: [HLS 214-377] Adding '_chv_o' into disaggregation list because there's array-partition pragma applied on the struct field (./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:530:9)
-INFO: [HLS 214-210] Disaggregating variable '_chv_o' (./../src/hw/hls_xilinx/main.cpp:197:11)
+WARNING: [HLS 214-387] Ignore depth setting for top argument 'sdata_i' (./../src/hw/hls_xilinx/main.cpp:144:0)
+INFO: [HLS 214-131] Inlining function 'void HDC_op<1ul, 1ul, 64ul>::similarity_phase2<ap_int<32>, ap_uint<32> >(ap_int<32>&, ap_uint<32> const&, ap_uint<32> const&, unsigned char)' into 'hdv_engine(bool&, op_mode_t, frame_in_t, hls::stream<hls::axis<ap_uint<8>, 1ul, 1ul, 1ul>, 0>&, chv_p_t&, bhv_p_t&, lhv_p_t&, pred_class_t*, sys_status_t*)' (./../src/hw/hls_xilinx/main.cpp:921:6)
+INFO: [HLS 214-131] Inlining function 'void HDC_op<1ul, 1ul, 64ul>::similarity_phase1<ap_uint<11> [64], ap_uint<32> [64], ap_uint<32>, ap_uint<32> >(ap_uint<11> const (&) [64], ap_uint<32> const (&) [64], ap_uint<32>&, ap_uint<32>&, ap_uint<32>&, unsigned char)' into 'hdv_engine(bool&, op_mode_t, frame_in_t, hls::stream<hls::axis<ap_uint<8>, 1ul, 1ul, 1ul>, 0>&, chv_p_t&, bhv_p_t&, lhv_p_t&, pred_class_t*, sys_status_t*)' (./../src/hw/hls_xilinx/main.cpp:843:12)
+INFO: [HLS 214-131] Inlining function 'void HDC_op<1ul, 1ul, 64ul>::clip<ap_uint<32> [64], ap_uint<32> [64]>(ap_uint<32> const (&) [64], ap_uint<32> (&) [64], short const&, short const&, ap_int<32>, unsigned char)' into 'hdv_engine(bool&, op_mode_t, frame_in_t, hls::stream<hls::axis<ap_uint<8>, 1ul, 1ul, 1ul>, 0>&, chv_p_t&, bhv_p_t&, lhv_p_t&, pred_class_t*, sys_status_t*)' (./../src/hw/hls_xilinx/main.cpp:757:11)
+INFO: [HLS 214-131] Inlining function 'void HDC_op<1ul, 1ul, 64ul>::bundle<ap_uint<1> [64], ap_uint<32> [64]>(ap_uint<1> const (&) [64], ap_uint<32> (&) [64])' into 'hdv_engine(bool&, op_mode_t, frame_in_t, hls::stream<hls::axis<ap_uint<8>, 1ul, 1ul, 1ul>, 0>&, chv_p_t&, bhv_p_t&, lhv_p_t&, pred_class_t*, sys_status_t*)' (./../src/hw/hls_xilinx/main.cpp:681:6)
+INFO: [HLS 214-131] Inlining function 'void HDC_op<1ul, 1ul, 64ul>::bind<ap_uint<1> [64]>(ap_uint<1> const (&) [64], ap_uint<1> const (&) [64], ap_uint<1> (&) [64])' into 'hdv_engine(bool&, op_mode_t, frame_in_t, hls::stream<hls::axis<ap_uint<8>, 1ul, 1ul, 1ul>, 0>&, chv_p_t&, bhv_p_t&, lhv_p_t&, pred_class_t*, sys_status_t*)' (./../src/hw/hls_xilinx/main.cpp:558:14)
+WARNING: [HLS 214-199] Ignoring dependence pragma on local scalar variable 'similarity_max'. (./../src/hw/hls_xilinx/main.cpp:275:9)
 INFO: [HLS 214-291] Loop 'VITIS_LOOP_459_1' is marked as complete unroll implied by the pipeline pragma (./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:459:20)
 INFO: [HLS 214-291] Loop 'VITIS_LOOP_463_2' is marked as complete unroll implied by the pipeline pragma (./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:463:20)
-INFO: [HLS 214-291] Loop 'VITIS_LOOP_626_5' is marked as complete unroll implied by the pipeline pragma (./../src/hw/hls_xilinx/main.cpp:626:20)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_643_5' is marked as complete unroll implied by the pipeline pragma (./../src/hw/hls_xilinx/main.cpp:643:20)
 INFO: [HLS 214-291] Loop 'VITIS_LOOP_371_1' is marked as complete unroll implied by the pipeline pragma (./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:371:20)
-INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_548_2' (./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:548:24) in function 'hdv_engine' completely with a factor of 64 (./../src/hw/hls_xilinx/main.cpp:139:0)
-INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_459_1' (./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:459:20) in function 'hdv_engine' completely with a factor of 1 (./../src/hw/hls_xilinx/main.cpp:139:0)
-INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_463_2' (./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:463:20) in function 'hdv_engine' completely with a factor of 64 (./../src/hw/hls_xilinx/main.cpp:139:0)
-INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_626_5' (./../src/hw/hls_xilinx/main.cpp:626:20) in function 'hdv_engine' completely with a factor of 64 (./../src/hw/hls_xilinx/main.cpp:139:0)
-INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_371_1' (./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:371:20) in function 'hdv_engine' completely with a factor of 64 (./../src/hw/hls_xilinx/main.cpp:139:0)
-INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_130_1' (./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:130:20) in function 'hdv_engine' completely with a factor of 1 (./../src/hw/hls_xilinx/main.cpp:139:0)
-INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_134_2' (./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:134:20) in function 'hdv_engine' completely with a factor of 64 (./../src/hw/hls_xilinx/main.cpp:139:0)
-INFO: [HLS 214-248] Applying array_partition to '_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tP5chv_tR7bhv_p_tR7lhv_p_tR12pred_class_tPSI_P12sys_status_tE9BundledHV': Complete partitioning on dimension 1. (./../src/hw/hls_xilinx/main.cpp:212:0)
-INFO: [HLS 214-248] Applying array_partition to '_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tP5chv_tR7bhv_p_tR7lhv_p_tR12pred_class_tPSI_P12sys_status_tE17Clipped_BundledHV': Complete partitioning on dimension 1. (./../src/hw/hls_xilinx/main.cpp:213:0)
-INFO: [HLS 214-248] Applying array_partition to '_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tP5chv_tR7bhv_p_tR7lhv_p_tR12pred_class_tPSI_P12sys_status_tE18similarity_classes': Complete partitioning on dimension 1. (./../src/hw/hls_xilinx/main.cpp:215:0)
-INFO: [HLS 214-248] Applying array_partition to '_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tP5chv_tR7bhv_p_tR7lhv_p_tR12pred_class_tPSI_P12sys_status_tE15Binded_Features': Complete partitioning on dimension 1. (./../src/hw/hls_xilinx/main.cpp:222:0)
-INFO: [HLS 214-248] Applying array_partition to '_bhv': Complete partitioning on dimension 1. (./../src/hw/hls_xilinx/main.cpp:194:11)
-INFO: [HLS 214-248] Applying array_partition to '_lhv': Complete partitioning on dimension 1. (./../src/hw/hls_xilinx/main.cpp:195:11)
-INFO: [HLS 214-248] Applying array_partition to '_chv': Complete partitioning on dimension 1. (./../src/hw/hls_xilinx/main.cpp:196:11)
-INFO: [HLS 214-248] Applying array_partition to '_chv_o': Complete partitioning on dimension 1. (./../src/hw/hls_xilinx/main.cpp:197:11)
-INFO: [HLS 214-248] Applying array_partition to '_bhv_i': Complete partitioning on dimension 1. (./../src/hw/hls_xilinx/main.cpp:199:13)
-INFO: [HLS 214-248] Applying array_partition to '_lhv_i': Complete partitioning on dimension 1. (./../src/hw/hls_xilinx/main.cpp:200:13)
-INFO: [HLS 214-248] Applying array_partition to '_chv_i': Complete partitioning on dimension 1. (./../src/hw/hls_xilinx/main.cpp:201:13)
-INFO: [HLS 214-241] Aggregating scalar variable 'lhv_i' with compact=bit mode in 64-bits (./../src/hw/hls_xilinx/main.cpp:139:0)
-INFO: [HLS 214-241] Aggregating scalar variable 'bhv_i' with compact=bit mode in 64-bits (./../src/hw/hls_xilinx/main.cpp:139:0)
-INFO: [HLS 214-241] Aggregating scalar variable 'chv_o' with compact=bit mode in 2048-bits (./../src/hw/hls_xilinx/main.cpp:139:0)
-INFO: [HLS 214-241] Aggregating scalar variable 'chv_i' with compact=bit mode in 2048-bits (./../src/hw/hls_xilinx/main.cpp:139:0)
-INFO: [HLS 214-270] Inferring pragma 'array_partition type=cyclic factor=13 dim=1' for array '_bhv_i313' due to pipeline pragma (./../src/hw/hls_xilinx/main.cpp:496:9)
-INFO: [HLS 214-270] Inferring pragma 'array_partition type=cyclic factor=13 dim=1' for array '_lhv_i314' due to pipeline pragma (./../src/hw/hls_xilinx/main.cpp:496:9)
-INFO: [HLS 214-248] Applying array_partition to '_bhv_i313': Cyclic partitioning with factor 13 on dimension 1. (./../src/hw/hls_xilinx/main.cpp:199:13)
-INFO: [HLS 214-248] Applying array_partition to '_lhv_i314': Cyclic partitioning with factor 13 on dimension 1. (./../src/hw/hls_xilinx/main.cpp:200:13)
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 4.469 seconds; current allocated memory: 1.462 GB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 1.462 GB.
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_294_2' is marked as complete unroll implied by the pipeline pragma (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_sqrt_apfixed.h:294:27)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_266_1' is marked as complete unroll implied by the pipeline pragma (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_sqrt_apfixed.h:266:27)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_548_2' (./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:548:24) in function 'hdv_engine' completely with a factor of 64 (./../src/hw/hls_xilinx/main.cpp:144:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_459_1' (./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:459:20) in function 'hdv_engine' completely with a factor of 1 (./../src/hw/hls_xilinx/main.cpp:144:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_463_2' (./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:463:20) in function 'hdv_engine' completely with a factor of 64 (./../src/hw/hls_xilinx/main.cpp:144:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_643_5' (./../src/hw/hls_xilinx/main.cpp:643:20) in function 'hdv_engine' completely with a factor of 64 (./../src/hw/hls_xilinx/main.cpp:144:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_371_1' (./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:371:20) in function 'hdv_engine' completely with a factor of 64 (./../src/hw/hls_xilinx/main.cpp:144:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_130_1' (./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:130:20) in function 'hdv_engine' completely with a factor of 1 (./../src/hw/hls_xilinx/main.cpp:144:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_134_2' (./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:134:20) in function 'hdv_engine' completely with a factor of 64 (./../src/hw/hls_xilinx/main.cpp:144:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_294_2' (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_sqrt_apfixed.h:294:27) in function 'sqrt_fixed<33, 33>' completely with a factor of 1 (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_sqrt_apfixed.h:43:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_266_1' (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_sqrt_apfixed.h:266:27) in function 'sqrt_fixed<33, 33>' completely with a factor of 17 (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_sqrt_apfixed.h:43:0)
+INFO: [HLS 214-178] Inlining function 'ap_uint<32> sqrt_fixed<32>(ap_uint<32>) (.12)' into 'ap_uint<32> hls::sqrt<32>(ap_uint<32>)' (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1291:0)
+INFO: [HLS 214-178] Inlining function 'ap_uint<32> hls::sqrt<32>(ap_uint<32>)' into 'hdv_engine(bool&, op_mode_t, frame_in_t, hls::stream<hls::axis<ap_uint<8>, 1ul, 1ul, 1ul>, 0>&, chv_p_t&, bhv_p_t&, lhv_p_t&, pred_class_t*, sys_status_t*)' (./../src/hw/hls_xilinx/main.cpp:144:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tR7bhv_p_tR7lhv_p_tP12pred_class_tP12sys_status_tE9BundledHV': Complete partitioning on dimension 1. (./../src/hw/hls_xilinx/main.cpp:223:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tR7bhv_p_tR7lhv_p_tP12pred_class_tP12sys_status_tE17Clipped_BundledHV': Complete partitioning on dimension 1. (./../src/hw/hls_xilinx/main.cpp:224:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tR7bhv_p_tR7lhv_p_tP12pred_class_tP12sys_status_tE18similarity_classes': Complete partitioning on dimension 1. (./../src/hw/hls_xilinx/main.cpp:226:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tR7bhv_p_tR7lhv_p_tP12pred_class_tP12sys_status_tE15Binded_Features': Complete partitioning on dimension 1. (./../src/hw/hls_xilinx/main.cpp:233:0)
+INFO: [HLS 214-248] Applying array_partition to '_bhv': Complete partitioning on dimension 1. (./../src/hw/hls_xilinx/main.cpp:203:11)
+INFO: [HLS 214-248] Applying array_partition to '_lhv': Complete partitioning on dimension 1. (./../src/hw/hls_xilinx/main.cpp:204:11)
+INFO: [HLS 214-248] Applying array_partition to '_chv': Complete partitioning on dimension 1. (./../src/hw/hls_xilinx/main.cpp:205:11)
+INFO: [HLS 214-248] Applying array_partition to '_bhv_i': Complete partitioning on dimension 1. (./../src/hw/hls_xilinx/main.cpp:208:13)
+INFO: [HLS 214-248] Applying array_partition to '_lhv_i': Complete partitioning on dimension 1. (./../src/hw/hls_xilinx/main.cpp:209:13)
+INFO: [HLS 214-248] Applying array_partition to '_chv_i': Complete partitioning on dimension 1. (./../src/hw/hls_xilinx/main.cpp:212:13)
+INFO: [HLS 214-241] Aggregating scalar variable 'lhv_i' with compact=bit mode in 64-bits (./../src/hw/hls_xilinx/main.cpp:144:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'bhv_i' with compact=bit mode in 64-bits (./../src/hw/hls_xilinx/main.cpp:144:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'chv_i' with compact=bit mode in 704-bits (./../src/hw/hls_xilinx/main.cpp:144:0)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=cyclic factor=13 dim=1' for array '_bhv_i302' due to pipeline pragma (./../src/hw/hls_xilinx/main.cpp:513:9)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=cyclic factor=13 dim=1' for array '_lhv_i303' due to pipeline pragma (./../src/hw/hls_xilinx/main.cpp:513:9)
+INFO: [HLS 214-248] Applying array_partition to '_bhv_i302': Cyclic partitioning with factor 13 on dimension 1. (./../src/hw/hls_xilinx/main.cpp:208:13)
+INFO: [HLS 214-248] Applying array_partition to '_lhv_i303': Cyclic partitioning with factor 13 on dimension 1. (./../src/hw/hls_xilinx/main.cpp:209:13)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 4.753 seconds; current allocated memory: 1.462 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.003 seconds; current allocated memory: 1.462 GB.
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 3.439 seconds; current allocated memory: 1.484 GB.
+INFO: [XFORM 203-603] Inlining function 'sqrt_fixed<33, 33>' into 'hdv_engine' (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_sqrt_apfixed.h:386->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1292->./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:327->./../src/hw/hls_xilinx/main.cpp:921).
+INFO: [XFORM 203-603] Inlining function 'sqrt_fixed<33, 33>' into 'hdv_engine' (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_sqrt_apfixed.h:386->C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1292->./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:327->./../src/hw/hls_xilinx/main.cpp:921).
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 2.663 seconds; current allocated memory: 1.479 GB.
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 3.42 seconds; current allocated memory: 1.488 GB.
-INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_273_1' (./../src/hw/hls_xilinx/main.cpp:273) in function 'hdv_engine' automatically.
-INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_281_2' (./../src/hw/hls_xilinx/main.cpp:281) in function 'hdv_engine' automatically.
-INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_766_6' (./../src/hw/hls_xilinx/main.cpp:766) in function 'hdv_engine' automatically.
-INFO: [XFORM 203-102] Automatically partitioning small array 'bunded_train_chv' completely based on array size.
-INFO: [XFORM 203-101] Partitioning array 'bunded_train_chv' in dimension 1 completely.
-INFO: [XFORM 203-102] Partitioning array '_bhv_i' (./../src/hw/hls_xilinx/main.cpp:199) automatically.
-INFO: [XFORM 203-102] Partitioning array '_bhv_i.1' (./../src/hw/hls_xilinx/main.cpp:199) automatically.
-INFO: [XFORM 203-102] Partitioning array '_bhv_i.2' (./../src/hw/hls_xilinx/main.cpp:199) automatically.
-INFO: [XFORM 203-102] Partitioning array '_bhv_i.3' (./../src/hw/hls_xilinx/main.cpp:199) automatically.
-INFO: [XFORM 203-102] Partitioning array '_bhv_i.4' (./../src/hw/hls_xilinx/main.cpp:199) automatically.
-INFO: [XFORM 203-102] Partitioning array '_bhv_i.5' (./../src/hw/hls_xilinx/main.cpp:199) automatically.
-INFO: [XFORM 203-102] Partitioning array '_bhv_i.6' (./../src/hw/hls_xilinx/main.cpp:199) automatically.
-INFO: [XFORM 203-102] Partitioning array '_bhv_i.7' (./../src/hw/hls_xilinx/main.cpp:199) automatically.
-INFO: [XFORM 203-102] Partitioning array '_bhv_i.8' (./../src/hw/hls_xilinx/main.cpp:199) automatically.
-INFO: [XFORM 203-102] Partitioning array '_bhv_i.9' (./../src/hw/hls_xilinx/main.cpp:199) automatically.
-INFO: [XFORM 203-102] Partitioning array '_bhv_i.10' (./../src/hw/hls_xilinx/main.cpp:199) automatically.
-INFO: [XFORM 203-102] Partitioning array '_bhv_i.11' (./../src/hw/hls_xilinx/main.cpp:199) automatically.
-INFO: [XFORM 203-102] Partitioning array '_bhv_i.12' (./../src/hw/hls_xilinx/main.cpp:199) automatically.
-INFO: [XFORM 203-102] Partitioning array '_lhv_i' (./../src/hw/hls_xilinx/main.cpp:200) automatically.
-INFO: [XFORM 203-102] Partitioning array '_lhv_i.1' (./../src/hw/hls_xilinx/main.cpp:200) automatically.
-INFO: [XFORM 203-102] Partitioning array '_lhv_i.2' (./../src/hw/hls_xilinx/main.cpp:200) automatically.
-INFO: [XFORM 203-102] Partitioning array '_lhv_i.3' (./../src/hw/hls_xilinx/main.cpp:200) automatically.
-INFO: [XFORM 203-102] Partitioning array '_lhv_i.4' (./../src/hw/hls_xilinx/main.cpp:200) automatically.
-INFO: [XFORM 203-102] Partitioning array '_lhv_i.5' (./../src/hw/hls_xilinx/main.cpp:200) automatically.
-INFO: [XFORM 203-102] Partitioning array '_lhv_i.6' (./../src/hw/hls_xilinx/main.cpp:200) automatically.
-INFO: [XFORM 203-102] Partitioning array '_lhv_i.7' (./../src/hw/hls_xilinx/main.cpp:200) automatically.
-INFO: [XFORM 203-102] Partitioning array '_lhv_i.8' (./../src/hw/hls_xilinx/main.cpp:200) automatically.
-INFO: [XFORM 203-102] Partitioning array '_lhv_i.9' (./../src/hw/hls_xilinx/main.cpp:200) automatically.
-INFO: [XFORM 203-102] Partitioning array '_lhv_i.10' (./../src/hw/hls_xilinx/main.cpp:200) automatically.
-INFO: [XFORM 203-102] Partitioning array '_lhv_i.11' (./../src/hw/hls_xilinx/main.cpp:200) automatically.
-INFO: [XFORM 203-102] Partitioning array '_lhv_i.12' (./../src/hw/hls_xilinx/main.cpp:200) automatically.
-INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.3i32P0A.i2' into 'hdv_engine' (./../src/hw/hls_xilinx/main.cpp:356).
-INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.3i32P0A.i2' into 'hdv_engine' (./../src/hw/hls_xilinx/main.cpp:705).
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 4 seconds. CPU system time: 0 seconds. Elapsed time: 6.323 seconds; current allocated memory: 1.530 GB.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.368 seconds; current allocated memory: 1.484 GB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_286_1' (./../src/hw/hls_xilinx/main.cpp:286) in function 'hdv_engine' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_294_2' (./../src/hw/hls_xilinx/main.cpp:294) in function 'hdv_engine' automatically.
+INFO: [XFORM 203-102] Automatically partitioning small array 'denom_b_classes' completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'denom_a_classes' completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'denom_b_classes' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'denom_a_classes' in dimension 1 completely.
+INFO: [XFORM 203-102] Partitioning array '_bhv_i' (./../src/hw/hls_xilinx/main.cpp:208) automatically.
+INFO: [XFORM 203-102] Partitioning array '_bhv_i.1' (./../src/hw/hls_xilinx/main.cpp:208) automatically.
+INFO: [XFORM 203-102] Partitioning array '_bhv_i.2' (./../src/hw/hls_xilinx/main.cpp:208) automatically.
+INFO: [XFORM 203-102] Partitioning array '_bhv_i.3' (./../src/hw/hls_xilinx/main.cpp:208) automatically.
+INFO: [XFORM 203-102] Partitioning array '_bhv_i.4' (./../src/hw/hls_xilinx/main.cpp:208) automatically.
+INFO: [XFORM 203-102] Partitioning array '_bhv_i.5' (./../src/hw/hls_xilinx/main.cpp:208) automatically.
+INFO: [XFORM 203-102] Partitioning array '_bhv_i.6' (./../src/hw/hls_xilinx/main.cpp:208) automatically.
+INFO: [XFORM 203-102] Partitioning array '_bhv_i.7' (./../src/hw/hls_xilinx/main.cpp:208) automatically.
+INFO: [XFORM 203-102] Partitioning array '_bhv_i.8' (./../src/hw/hls_xilinx/main.cpp:208) automatically.
+INFO: [XFORM 203-102] Partitioning array '_bhv_i.9' (./../src/hw/hls_xilinx/main.cpp:208) automatically.
+INFO: [XFORM 203-102] Partitioning array '_bhv_i.10' (./../src/hw/hls_xilinx/main.cpp:208) automatically.
+INFO: [XFORM 203-102] Partitioning array '_bhv_i.11' (./../src/hw/hls_xilinx/main.cpp:208) automatically.
+INFO: [XFORM 203-102] Partitioning array '_bhv_i.12' (./../src/hw/hls_xilinx/main.cpp:208) automatically.
+INFO: [XFORM 203-102] Partitioning array '_lhv_i' (./../src/hw/hls_xilinx/main.cpp:209) automatically.
+INFO: [XFORM 203-102] Partitioning array '_lhv_i.1' (./../src/hw/hls_xilinx/main.cpp:209) automatically.
+INFO: [XFORM 203-102] Partitioning array '_lhv_i.2' (./../src/hw/hls_xilinx/main.cpp:209) automatically.
+INFO: [XFORM 203-102] Partitioning array '_lhv_i.3' (./../src/hw/hls_xilinx/main.cpp:209) automatically.
+INFO: [XFORM 203-102] Partitioning array '_lhv_i.4' (./../src/hw/hls_xilinx/main.cpp:209) automatically.
+INFO: [XFORM 203-102] Partitioning array '_lhv_i.5' (./../src/hw/hls_xilinx/main.cpp:209) automatically.
+INFO: [XFORM 203-102] Partitioning array '_lhv_i.6' (./../src/hw/hls_xilinx/main.cpp:209) automatically.
+INFO: [XFORM 203-102] Partitioning array '_lhv_i.7' (./../src/hw/hls_xilinx/main.cpp:209) automatically.
+INFO: [XFORM 203-102] Partitioning array '_lhv_i.8' (./../src/hw/hls_xilinx/main.cpp:209) automatically.
+INFO: [XFORM 203-102] Partitioning array '_lhv_i.9' (./../src/hw/hls_xilinx/main.cpp:209) automatically.
+INFO: [XFORM 203-102] Partitioning array '_lhv_i.10' (./../src/hw/hls_xilinx/main.cpp:209) automatically.
+INFO: [XFORM 203-102] Partitioning array '_lhv_i.11' (./../src/hw/hls_xilinx/main.cpp:209) automatically.
+INFO: [XFORM 203-102] Partitioning array '_lhv_i.12' (./../src/hw/hls_xilinx/main.cpp:209) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (./../src/hw/hls_xilinx/main.cpp:918:9) to (./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:327:11) in function 'hdv_engine'... converting 65 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:555:20) to (./../src/hw/hls_xilinx/main.cpp:798:5) in function 'hdv_engine'... converting 129 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'hdv_engine' (./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:82:9)...375 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 4.999 seconds; current allocated memory: 1.526 GB.
 INFO: [ANALYSIS 214-51] Found inter dependency for variable '_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1' (distance = 1).
 INFO: [ANALYSIS 214-51] Found inter dependency for variable '_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1.1' (distance = 1).
 INFO: [ANALYSIS 214-51] Found inter dependency for variable '_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1.2' (distance = 1).
@@ -173,16 +176,16 @@ INFO: [ANALYSIS 214-51] Found inter dependency for variable '_ZZ10hdv_engineRb9o
 INFO: [ANALYSIS 214-51] Found inter dependency for variable '_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1.51' (distance = 1).
 INFO: [ANALYSIS 214-51] Found inter dependency for variable '_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1.52' (distance = 1).
 INFO: [ANALYSIS 214-51] Found inter dependency for variable '_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1.53' (distance = 1).
-INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,chv_t*,bhv_p_t&,lhv_p_t&,.13' (distance = 1).
-INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,chv_t*,bhv_p_t&,lhv_p_t&,.14' (distance = 1).
-INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,chv_t*,bhv_p_t&,lhv_p_t&,.15' (distance = 1).
-INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,chv_t*,bhv_p_t&,lhv_p_t&,.16' (distance = 1).
-INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,chv_t*,bhv_p_t&,lhv_p_t&,.17' (distance = 1).
-INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,chv_t*,bhv_p_t&,lhv_p_t&,.18' (distance = 1).
-INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,chv_t*,bhv_p_t&,lhv_p_t&,.19' (distance = 1).
-INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,chv_t*,bhv_p_t&,lhv_p_t&,.20' (distance = 1).
-INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,chv_t*,bhv_p_t&,lhv_p_t&,.21' (distance = 1).
-INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,chv_t*,bhv_p_t&,lhv_p_t&,.22' (distance = 1).
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,bhv_p_t&,lhv_p_t&,pred_cl.13' (distance = 1).
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,bhv_p_t&,lhv_p_t&,pred_cl.14' (distance = 1).
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,bhv_p_t&,lhv_p_t&,pred_cl.15' (distance = 1).
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,bhv_p_t&,lhv_p_t&,pred_cl.16' (distance = 1).
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,bhv_p_t&,lhv_p_t&,pred_cl.17' (distance = 1).
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,bhv_p_t&,lhv_p_t&,pred_cl.18' (distance = 1).
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,bhv_p_t&,lhv_p_t&,pred_cl.19' (distance = 1).
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,bhv_p_t&,lhv_p_t&,pred_cl.20' (distance = 1).
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,bhv_p_t&,lhv_p_t&,pred_cl.21' (distance = 1).
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,bhv_p_t&,lhv_p_t&,pred_cl.22' (distance = 1).
 INFO: [ANALYSIS 214-51] Found inter dependency for variable '_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1.54' (distance = 1).
 INFO: [ANALYSIS 214-51] Found inter dependency for variable '_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1.55' (distance = 1).
 INFO: [ANALYSIS 214-51] Found inter dependency for variable '_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1.56' (distance = 1).
@@ -237,19 +240,19 @@ INFO: [ANALYSIS 214-51] Found inter dependency for variable '_ZZ10hdv_engineRb9o
 INFO: [ANALYSIS 214-51] Found inter dependency for variable '_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1.105' (distance = 1).
 INFO: [ANALYSIS 214-51] Found inter dependency for variable '_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1.106' (distance = 1).
 INFO: [ANALYSIS 214-51] Found inter dependency for variable '_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1.107' (distance = 1).
-INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,chv_t*,bhv_p_t&,lhv_p_t&,.3' (distance = 1).
-INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,chv_t*,bhv_p_t&,lhv_p_t&,.4' (distance = 1).
-INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,chv_t*,bhv_p_t&,lhv_p_t&,.5' (distance = 1).
-INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,chv_t*,bhv_p_t&,lhv_p_t&,.6' (distance = 1).
-INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,chv_t*,bhv_p_t&,lhv_p_t&,.7' (distance = 1).
-INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,chv_t*,bhv_p_t&,lhv_p_t&,.8' (distance = 1).
-INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,chv_t*,bhv_p_t&,lhv_p_t&,.9' (distance = 1).
-INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,chv_t*,bhv_p_t&,lhv_p_t&,.10' (distance = 1).
-INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,chv_t*,bhv_p_t&,lhv_p_t&,.11' (distance = 1).
-INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,chv_t*,bhv_p_t&,lhv_p_t&,.12' (distance = 1).
-INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,chv_t*,bhv_p_t&,lhv_p_t&,' (distance = 16).
-INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,chv_t*,bhv_p_t&,lhv_p_t&,.1' (distance = 16).
-INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,chv_t*,bhv_p_t&,lhv_p_t&,.2' (distance = 16).
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,bhv_p_t&,lhv_p_t&,pred_cl.3' (distance = 1).
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,bhv_p_t&,lhv_p_t&,pred_cl.4' (distance = 1).
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,bhv_p_t&,lhv_p_t&,pred_cl.5' (distance = 1).
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,bhv_p_t&,lhv_p_t&,pred_cl.6' (distance = 1).
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,bhv_p_t&,lhv_p_t&,pred_cl.7' (distance = 1).
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,bhv_p_t&,lhv_p_t&,pred_cl.8' (distance = 1).
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,bhv_p_t&,lhv_p_t&,pred_cl.9' (distance = 1).
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,bhv_p_t&,lhv_p_t&,pred_cl.10' (distance = 1).
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,bhv_p_t&,lhv_p_t&,pred_cl.11' (distance = 1).
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,bhv_p_t&,lhv_p_t&,pred_cl.12' (distance = 1).
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,bhv_p_t&,lhv_p_t&,pred_cl' (distance = 16).
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,bhv_p_t&,lhv_p_t&,pred_cl.1' (distance = 16).
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,bhv_p_t&,lhv_p_t&,pred_cl.2' (distance = 16).
 INFO: [ANALYSIS 214-51] Found inter dependency for variable '_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1' (distance = 1).
 INFO: [ANALYSIS 214-51] Found inter dependency for variable '_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1.1' (distance = 1).
 INFO: [ANALYSIS 214-51] Found inter dependency for variable '_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1.2' (distance = 1).
@@ -304,16 +307,16 @@ INFO: [ANALYSIS 214-51] Found inter dependency for variable '_ZZ10hdv_engineRb9o
 INFO: [ANALYSIS 214-51] Found inter dependency for variable '_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1.51' (distance = 1).
 INFO: [ANALYSIS 214-51] Found inter dependency for variable '_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1.52' (distance = 1).
 INFO: [ANALYSIS 214-51] Found inter dependency for variable '_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1.53' (distance = 1).
-INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,chv_t*,bhv_p_t&,lhv_p_t&,.13' (distance = 1).
-INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,chv_t*,bhv_p_t&,lhv_p_t&,.14' (distance = 1).
-INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,chv_t*,bhv_p_t&,lhv_p_t&,.15' (distance = 1).
-INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,chv_t*,bhv_p_t&,lhv_p_t&,.16' (distance = 1).
-INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,chv_t*,bhv_p_t&,lhv_p_t&,.17' (distance = 1).
-INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,chv_t*,bhv_p_t&,lhv_p_t&,.18' (distance = 1).
-INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,chv_t*,bhv_p_t&,lhv_p_t&,.19' (distance = 1).
-INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,chv_t*,bhv_p_t&,lhv_p_t&,.20' (distance = 1).
-INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,chv_t*,bhv_p_t&,lhv_p_t&,.21' (distance = 1).
-INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,chv_t*,bhv_p_t&,lhv_p_t&,.22' (distance = 1).
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,bhv_p_t&,lhv_p_t&,pred_cl.13' (distance = 1).
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,bhv_p_t&,lhv_p_t&,pred_cl.14' (distance = 1).
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,bhv_p_t&,lhv_p_t&,pred_cl.15' (distance = 1).
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,bhv_p_t&,lhv_p_t&,pred_cl.16' (distance = 1).
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,bhv_p_t&,lhv_p_t&,pred_cl.17' (distance = 1).
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,bhv_p_t&,lhv_p_t&,pred_cl.18' (distance = 1).
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,bhv_p_t&,lhv_p_t&,pred_cl.19' (distance = 1).
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,bhv_p_t&,lhv_p_t&,pred_cl.20' (distance = 1).
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,bhv_p_t&,lhv_p_t&,pred_cl.21' (distance = 1).
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,bhv_p_t&,lhv_p_t&,pred_cl.22' (distance = 1).
 INFO: [ANALYSIS 214-51] Found inter dependency for variable '_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1.54' (distance = 1).
 INFO: [ANALYSIS 214-51] Found inter dependency for variable '_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1.55' (distance = 1).
 INFO: [ANALYSIS 214-51] Found inter dependency for variable '_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1.56' (distance = 1).
@@ -368,134 +371,178 @@ INFO: [ANALYSIS 214-51] Found inter dependency for variable '_ZZ10hdv_engineRb9o
 INFO: [ANALYSIS 214-51] Found inter dependency for variable '_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1.105' (distance = 1).
 INFO: [ANALYSIS 214-51] Found inter dependency for variable '_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1.106' (distance = 1).
 INFO: [ANALYSIS 214-51] Found inter dependency for variable '_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1.107' (distance = 1).
-INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,chv_t*,bhv_p_t&,lhv_p_t&,.3' (distance = 1).
-INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,chv_t*,bhv_p_t&,lhv_p_t&,.4' (distance = 1).
-INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,chv_t*,bhv_p_t&,lhv_p_t&,.5' (distance = 1).
-INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,chv_t*,bhv_p_t&,lhv_p_t&,.6' (distance = 1).
-INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,chv_t*,bhv_p_t&,lhv_p_t&,.7' (distance = 1).
-INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,chv_t*,bhv_p_t&,lhv_p_t&,.8' (distance = 1).
-INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,chv_t*,bhv_p_t&,lhv_p_t&,.9' (distance = 1).
-INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,chv_t*,bhv_p_t&,lhv_p_t&,.10' (distance = 1).
-INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,chv_t*,bhv_p_t&,lhv_p_t&,.11' (distance = 1).
-INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,chv_t*,bhv_p_t&,lhv_p_t&,.12' (distance = 1).
-INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,chv_t*,bhv_p_t&,lhv_p_t&,' (distance = 16).
-INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,chv_t*,bhv_p_t&,lhv_p_t&,.1' (distance = 16).
-INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,chv_t*,bhv_p_t&,lhv_p_t&,.2' (distance = 16).
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 4.204 seconds; current allocated memory: 1.583 GB.
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,bhv_p_t&,lhv_p_t&,pred_cl.3' (distance = 1).
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,bhv_p_t&,lhv_p_t&,pred_cl.4' (distance = 1).
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,bhv_p_t&,lhv_p_t&,pred_cl.5' (distance = 1).
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,bhv_p_t&,lhv_p_t&,pred_cl.6' (distance = 1).
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,bhv_p_t&,lhv_p_t&,pred_cl.7' (distance = 1).
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,bhv_p_t&,lhv_p_t&,pred_cl.8' (distance = 1).
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,bhv_p_t&,lhv_p_t&,pred_cl.9' (distance = 1).
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,bhv_p_t&,lhv_p_t&,pred_cl.10' (distance = 1).
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,bhv_p_t&,lhv_p_t&,pred_cl.11' (distance = 1).
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,bhv_p_t&,lhv_p_t&,pred_cl.12' (distance = 1).
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,bhv_p_t&,lhv_p_t&,pred_cl' (distance = 16).
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,bhv_p_t&,lhv_p_t&,pred_cl.1' (distance = 16).
+INFO: [ANALYSIS 214-51] Found inter dependency for variable 'hdv_engine(bool&,op_mode_t,frame_in_t,stream&,chv_p_t&,bhv_p_t&,lhv_p_t&,pred_cl.2' (distance = 16).
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 5.731 seconds; current allocated memory: 1.568 GB.
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'hdv_engine' ...
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'hdv_engine_Pipeline_VITIS_LOOP_273_1' 
+INFO: [HLS 200-42] -- Implementing module 'hdv_engine_Pipeline_VITIS_LOOP_286_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_273_1'.
-INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_273_1'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_286_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_286_1'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.317 seconds; current allocated memory: 1.588 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.237 seconds; current allocated memory: 1.573 GB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.081 seconds; current allocated memory: 1.589 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.095 seconds; current allocated memory: 1.574 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'hdv_engine_Pipeline_VITIS_LOOP_281_2' 
+INFO: [HLS 200-42] -- Implementing module 'hdv_engine_Pipeline_VITIS_LOOP_294_2' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_281_2'.
-INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_281_2'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_294_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_294_2'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.101 seconds; current allocated memory: 1.589 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.149 seconds; current allocated memory: 1.574 GB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.103 seconds; current allocated memory: 1.589 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.088 seconds; current allocated memory: 1.574 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'hdv_engine_Pipeline_VITIS_LOOP_912_9' 
+INFO: [HLS 200-42] -- Implementing module 'hdv_engine_Pipeline_VITIS_LOOP_916_7' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_912_9'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_912_9'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_916_7'.
+WARNING: [HLS 200-880] The II Violation in module 'hdv_engine_Pipeline_VITIS_LOOP_916_7' (loop 'VITIS_LOOP_916_7'): Unable to enforce a carried dependence constraint (II = 3, distance = 16, offset = 0) between 'store' operation ('hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_2_write_ln327', ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:327->./../src/hw/hls_xilinx/main.cpp:921) of variable 'trunc_ln327', ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:327->./../src/hw/hls_xilinx/main.cpp:921 on static variable 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_2' and 'load' operation ('hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_33', ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:327->./../src/hw/hls_xilinx/main.cpp:921) on static variable 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_2'.
+WARNING: [HLS 200-880] The II Violation in module 'hdv_engine_Pipeline_VITIS_LOOP_916_7' (loop 'VITIS_LOOP_916_7'): Unable to enforce a carried dependence constraint (II = 4, distance = 16, offset = 0) between 'store' operation ('hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_2_write_ln327', ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:327->./../src/hw/hls_xilinx/main.cpp:921) of variable 'trunc_ln327', ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:327->./../src/hw/hls_xilinx/main.cpp:921 on static variable 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_2' and 'load' operation ('hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_33', ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:327->./../src/hw/hls_xilinx/main.cpp:921) on static variable 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 3, Final II = 5, Depth = 76, loop 'VITIS_LOOP_916_7'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.094 seconds; current allocated memory: 1.589 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.972 seconds; current allocated memory: 1.579 GB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.091 seconds; current allocated memory: 1.589 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.959 seconds; current allocated memory: 1.579 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'hdv_engine_Pipeline_VITIS_LOOP_494_4' 
+INFO: [HLS 200-42] -- Implementing module 'hdv_engine_Pipeline_VITIS_LOOP_929_8' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_494_4'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 5, Final II = 1, Depth = 1, loop 'VITIS_LOOP_494_4'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_929_8'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_929_8'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.274 seconds; current allocated memory: 1.599 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.364 seconds; current allocated memory: 1.579 GB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.376 seconds; current allocated memory: 1.599 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.089 seconds; current allocated memory: 1.579 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'hdv_engine_Pipeline_VITIS_LOOP_766_6' 
+INFO: [HLS 200-42] -- Implementing module 'hdv_engine_Pipeline_VITIS_LOOP_511_4' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_766_6'.
-INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_766_6'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_511_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 5, Final II = 1, Depth = 1, loop 'VITIS_LOOP_511_4'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.657 seconds; current allocated memory: 1.600 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.257 seconds; current allocated memory: 1.587 GB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.189 seconds; current allocated memory: 1.600 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.284 seconds; current allocated memory: 1.587 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'hdv_engine' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln212_60) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln212_27) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln212_25) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln212_23) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln212_21) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln212_19) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln212_17) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln212_15) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln212_13) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln212_11) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln212_9) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln212_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln212_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln212_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln212_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln212_62) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln212_42) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln212_40) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln212_38) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln212_36) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln212_34) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln212_32) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln212_30) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln212_28) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln212_50) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln212_48) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln212_46) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln212_44) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln212_54) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln212_52) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln212_56) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln212_59) to 3 in order to utilize available DSP registers.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 3.445 seconds; current allocated memory: 1.617 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 3.452 seconds; current allocated memory: 1.594 GB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.515 seconds; current allocated memory: 1.617 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.71 seconds; current allocated memory: 1.595 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'hdv_engine_Pipeline_VITIS_LOOP_273_1' 
+INFO: [HLS 200-10] -- Generating RTL for module 'hdv_engine_Pipeline_VITIS_LOOP_286_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-100] Finished creating RTL model for 'hdv_engine_Pipeline_VITIS_LOOP_273_1'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.561 seconds; current allocated memory: 1.618 GB.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'hdv_engine_Pipeline_VITIS_LOOP_286_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.517 seconds; current allocated memory: 1.597 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'hdv_engine_Pipeline_VITIS_LOOP_281_2' 
+INFO: [HLS 200-10] -- Generating RTL for module 'hdv_engine_Pipeline_VITIS_LOOP_294_2' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-100] Finished creating RTL model for 'hdv_engine_Pipeline_VITIS_LOOP_281_2'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.127 seconds; current allocated memory: 1.619 GB.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'hdv_engine_Pipeline_VITIS_LOOP_294_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.145 seconds; current allocated memory: 1.598 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'hdv_engine_Pipeline_VITIS_LOOP_912_9' 
+INFO: [HLS 200-10] -- Generating RTL for module 'hdv_engine_Pipeline_VITIS_LOOP_916_7' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'hdv_engine_Pipeline_VITIS_LOOP_912_9' pipeline 'VITIS_LOOP_912_9' pipeline type 'loop pipeline'
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'hdv_engine_Pipeline_VITIS_LOOP_916_7' pipeline 'VITIS_LOOP_916_7' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_17ns_17ns_34_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_15ns_47_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_3_2_32_1_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'udiv_64s_34ns_32_68_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'hdv_engine_Pipeline_VITIS_LOOP_916_7'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.265 seconds; current allocated memory: 1.603 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'hdv_engine_Pipeline_VITIS_LOOP_929_8' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'hdv_engine_Pipeline_VITIS_LOOP_929_8' pipeline 'VITIS_LOOP_929_8' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Generating core module 'mux_3_2_32_1_1': 1 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'hdv_engine_Pipeline_VITIS_LOOP_912_9'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.144 seconds; current allocated memory: 1.619 GB.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'hdv_engine_Pipeline_VITIS_LOOP_929_8'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.001 seconds; current allocated memory: 1.611 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'hdv_engine_Pipeline_VITIS_LOOP_494_4' 
+INFO: [HLS 200-10] -- Generating RTL for module 'hdv_engine_Pipeline_VITIS_LOOP_511_4' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t_32' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t_31' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t_30' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t_29' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t_28' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t_27' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t_26' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t_25' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t_24' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t_23' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_32' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_31' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_30' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_29' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_28' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_27' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_26' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_25' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_24' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_23' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'p_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1_161' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'p_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1_162' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'p_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1_163' is power-on initialization.
@@ -550,15 +597,8 @@ WARNING: [RTGEN 206-101] Register 'p_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hl
 WARNING: [RTGEN 206-101] Register 'p_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1_212' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'p_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1_213' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'p_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1_214' is power-on initialization.
-INFO: [RTGEN 206-100] Finished creating RTL model for 'hdv_engine_Pipeline_VITIS_LOOP_494_4'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.153 seconds; current allocated memory: 1.621 GB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'hdv_engine_Pipeline_VITIS_LOOP_766_6' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-100] Generating core module 'mux_64_6_1_1_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mux_64_6_32_1_1': 1 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'hdv_engine_Pipeline_VITIS_LOOP_766_6'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.046 seconds; current allocated memory: 1.635 GB.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'hdv_engine_Pipeline_VITIS_LOOP_511_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.547 seconds; current allocated memory: 1.614 GB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'hdv_engine' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -574,32 +614,33 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'hdv_engine/sdata_i_V_last_
 INFO: [RTGEN 206-500] Setting interface mode on port 'hdv_engine/sdata_i_V_id_V' to 'axis' (register, both mode).
 INFO: [RTGEN 206-500] Setting interface mode on port 'hdv_engine/sdata_i_V_dest_V' to 'axis' (register, both mode).
 INFO: [RTGEN 206-500] Setting interface mode on port 'hdv_engine/chv_i' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'hdv_engine/chv_o' to 'ap_vld'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'hdv_engine/bhv_i' to 'ap_none'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'hdv_engine/lhv_i' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'hdv_engine/lable_class_i' to 'ap_none'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'hdv_engine/pred_class_o' to 'ap_none'.
 WARNING: [RTGEN 206-101] Port 'pred_class_o' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
 INFO: [RTGEN 206-500] Setting interface mode on port 'hdv_engine/status_o' to 'ap_none'.
 WARNING: [RTGEN 206-101] Port 'status_o' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
 INFO: [RTGEN 206-500] Setting interface mode on function 'hdv_engine' to 'ap_ctrl_hs'.
 WARNING: [RTGEN 206-101] Register 'p_pred_class_o' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'bunded_train_chv_0' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t_2' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'bunded_train_chv_1' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t_1' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'bunded_train_chv_2' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'hdv_mulengine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t_22' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t_21' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t_20' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t_19' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t_18' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t_17' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t_16' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t_15' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t_14' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t_13' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'denom_a_classes_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'denom_b_classes_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'denom_a_classes_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'denom_b_classes_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'denom_a_classes_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'denom_b_classes_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_22' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_21' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_20' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_19' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_18' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_17' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_16' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_15' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_14' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_13' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'p_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1_53' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'p_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1_52' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'p_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1_51' is power-on initialization.
@@ -654,16 +695,16 @@ WARNING: [RTGEN 206-101] Register 'p_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hl
 WARNING: [RTGEN 206-101] Register 'p_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1_2' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'p_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1_1' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'p_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t_12' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t_11' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t_10' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t_9' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t_8' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t_7' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t_6' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t_5' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t_4' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_chv_t_bhv_p_t_lhv_p_t_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_12' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_11' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_3' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'p_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1_215' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'p_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1_216' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'p_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1_217' is power-on initialization.
@@ -718,16 +759,20 @@ WARNING: [RTGEN 206-101] Register 'p_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hl
 WARNING: [RTGEN 206-101] Register 'p_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1_56' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'p_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1_55' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'p_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1_54' is power-on initialization.
-INFO: [RTGEN 206-100] Generating core module 'mux_3_2_32_1_1': 1 instance(s).
+WARNING: [RTGEN 206-101] Port 'hdv_engine/op_mode_i' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_11ns_11ns_22ns_23_4_1': 32 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_11ns_11ns_22_1_1': 32 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_3_2_32_1_1': 3 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'hdv_engine'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.789 seconds; current allocated memory: 1.657 GB.
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 3.345 seconds; current allocated memory: 1.689 GB.
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 1.209 seconds; current allocated memory: 1.692 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 4.75 seconds; current allocated memory: 1.639 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 3.834 seconds; current allocated memory: 1.664 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.246 seconds; current allocated memory: 1.670 GB.
 INFO: [VHDL 208-304] Generating VHDL RTL for hdv_engine.
 INFO: [VLOG 209-307] Generating Verilog RTL for hdv_engine.
 INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
-INFO: [HLS 200-789] **** Estimated Fmax: 276.13 MHz
-INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 18 seconds. CPU system time: 2 seconds. Elapsed time: 55.909 seconds; current allocated memory: 246.789 MB.
+INFO: [HLS 200-789] **** Estimated Fmax: 274.82 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 16 seconds. CPU system time: 1 seconds. Elapsed time: 62.724 seconds; current allocated memory: 225.555 MB.
 INFO: [HLS 200-1510] Running: cosim_design -rtl verilog -trace_level all 
 WARNING: [COSIM 212-384] This design has internal non-blocking FIFO/Stream accesses, which may result in mismatches or simulation hanging.
 INFO: [COSIM 212-47] Using XSIM for RTL simulation.
@@ -740,5 +785,5 @@ INFO: [COSIM 212-323] Starting verilog simulation.
 INFO: [COSIM 212-15] Starting XSIM ...
 INFO: [COSIM 212-316] Starting C post checking ...
 INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
-INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 35.198 seconds; current allocated memory: 14.391 MB.
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 2 seconds. CPU system time: 1 seconds. Elapsed time: 36.75 seconds; current allocated memory: 14.141 MB.
 INFO: [HLS 200-1510] Running: close_project 

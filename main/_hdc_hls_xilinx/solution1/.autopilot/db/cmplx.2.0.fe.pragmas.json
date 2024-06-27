@@ -1,21 +1,51 @@
 {
   "0": {
-    "basicblocks": 1327,
+    "basicblocks": 813,
     "calls": "",
     "file": "main.cpp",
     "fileloc": 82,
-    "instructions": 6445,
+    "instructions": 6597,
     "loads": {
-      "G": 401,
-      "L": 641,
-      "T": 195
+      "G": 533,
+      "L": 578,
+      "T": 193
     },
     "name": "hdv_engine",
     "stores": {
-      "G": 465,
-      "L": 641,
-      "T": 66
+      "G": 472,
+      "L": 450,
+      "T": 2
     },
-    "total_instructions": 6445
+    "total_instructions": 8175
+  },
+  "1": {
+    "basicblocks": 8,
+    "calls": "2",
+    "file": "hls_sqrt_apfixed.h",
+    "fileloc": 384,
+    "instructions": 21,
+    "loads": {
+      "L": 2
+    },
+    "name": "sqrt_fixed<32>",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 784
+  },
+  "2": {
+    "basicblocks": 293,
+    "calls": "",
+    "file": "hls_sqrt_apfixed.h",
+    "fileloc": 42,
+    "instructions": 763,
+    "loads": {
+      "L": 8
+    },
+    "name": "sqrt_fixed<33, 33>",
+    "stores": {
+      "L": 5
+    },
+    "total_instructions": 763
   }
 }

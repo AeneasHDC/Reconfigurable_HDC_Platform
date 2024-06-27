@@ -34043,10 +34043,12 @@ typedef struct {
 
 
 typedef struct {
+# 153 "./../src/hw/hls_xilinx/headers/datatypes.hpp"
+      ap_uint<11> cvh1[64];
 
 
-      ap_uint<32> cvh1[64];
-# 158 "./../src/hw/hls_xilinx/headers/datatypes.hpp"
+
+
 } chv_t;
 
 typedef struct {
@@ -66654,11 +66656,11 @@ class HDC_op
 
 
     public:
-  typedef struct{
-   HV_HD_DIM element;
-  }lv_approx_t;
 
-  lv_approx_t lv_approx[2];
+
+
+
+
 
 
   HDC_op()
@@ -66692,15 +66694,18 @@ class HDC_op
  {
 
        {
-
+# 207 "./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp"
         {
-         if ( HV1[i+j] == HV2[i+j] )
+         sim += HV1[i+j] * HV2[i+j];
+
+
          {
-          sim += 1;
+          denom_a = denom_a + (HV1[i+j]*HV1[i+j]);
+          denom_b = denom_b + (HV2[i+j]*HV2[i+j]);
          }
-# 183 "./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp"
+
         }
-# 218 "./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp"
+
        }
 # 250 "./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp"
       }
@@ -66717,8 +66722,33 @@ class HDC_op
   void similarity_phase2(SimType &sim, const DenomType &denom_a, const DenomType &denom_b, uint8_t mode)
   {
 #pragma HLS INLINE
-# 344 "./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp"
- }
+# 300 "./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp"
+ {
+# 321 "./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp"
+    {
+
+     {
+
+
+
+      sim = ( sim * 10000 )/( hls::sqrt(denom_b) * hls::sqrt(denom_a) );
+
+
+
+     }
+
+
+
+
+
+    }
+
+      }
+
+
+
+
+  }
 # 364 "./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp"
   template < typename HVType >
   void bind( const HVType& HV1, const HVType& HV2, HVType& Binded_HV )
@@ -66939,42 +66969,26 @@ class HDC_op
 # 713 "./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp"
   template < typename HV_Type >
   void generate_LevelHVs( HV_Type& levelVector, const ap_uint<10>& frame_id,
-        const ap_uint<10>& frame_index )
+        const ap_uint<10>& frame_index, HV_Type& lv_approx_0, HV_Type& lv_approx_1 )
   {
 #pragma HLS ARRAY_PARTITION variable=levelVector complete
 # 778 "./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp"
  }
-
-
-
-
-
-
-
-  void init_approx_level_vector_generator()
-  {
-   rnd_lv_approx_gen_t rnd_gen;
-   rnd_gen.reset();
-   VITIS_LOOP_790_1: for ( auto lv_i = 0; lv_i < 2; lv_i++ )
-   {
-    random_HV( lv_approx[lv_i].element, rnd_gen, 512, 64 );
-   }
-  }
-# 815 "./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp"
+# 816 "./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp"
   template < typename HV_Type >
   void generate_ClassHVs( HV_Type& classVector, const ap_uint<10>& frame_id,
         const ap_uint<10>& frame_index )
   {
-# 830 "./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp"
+# 831 "./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp"
   }
-# 845 "./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp"
+# 846 "./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp"
   template < typename HVType, typename RndGenType >
   void random_HV( HVType &in_HV, RndGenType &lfsr_instance, const int in_HV_LEN, const int RND_GEN_LEN )
   {
-      VITIS_LOOP_848_1: for ( auto i = 0; i < in_HV_LEN; i += RND_GEN_LEN )
+      VITIS_LOOP_849_1: for ( auto i = 0; i < in_HV_LEN; i += RND_GEN_LEN )
       {
        lfsr_instance.randomize();
-    VITIS_LOOP_851_2: for ( auto j = 0; j < RND_GEN_LEN; j++ )
+    VITIS_LOOP_852_2: for ( auto j = 0; j < RND_GEN_LEN; j++ )
     {
 #pragma HLS unroll
  auto index = i + ( RND_GEN_LEN - 1 - j );
@@ -66982,11 +66996,11 @@ class HDC_op
     }
       }
   }
-# 873 "./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp"
+# 874 "./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp"
   template < typename HypervectorType >
   void print_HV( const HypervectorType& hv )
   {
-   VITIS_LOOP_876_1: for ( const auto& element : hv )
+   VITIS_LOOP_877_1: for ( const auto& element : hv )
    {
     cout << element << " ";
    }
@@ -67012,7 +67026,7 @@ __attribute__((sdx_kernel("hdv_engine", 0))) void hdv_engine(
 
    chv_p_t &chv_i,
 
-    chv_t *chv_o,
+
 
 
 
@@ -67020,9 +67034,7 @@ __attribute__((sdx_kernel("hdv_engine", 0))) void hdv_engine(
 
 
    lhv_p_t &lhv_i,
-# 83 "./../src/hw/hls_xilinx/headers/main.hpp"
-   pred_class_t &lable_class_i,
-# 98 "./../src/hw/hls_xilinx/headers/main.hpp"
+# 102 "./../src/hw/hls_xilinx/headers/main.hpp"
    pred_class_t *pred_class_o,
 
 
@@ -67053,7 +67065,7 @@ __attribute__((sdx_kernel("hdv_engine", 0))) void hdv_engine(
 
   chv_p_t &chv_i,
 
-   chv_t *chv_o,
+
 
 
 
@@ -67063,9 +67075,7 @@ __attribute__((sdx_kernel("hdv_engine", 0))) void hdv_engine(
 
 
         lhv_p_t &lhv_i,
-# 115 "./../src/hw/hls_xilinx/main.cpp"
-  pred_class_t &lable_class_i,
-# 131 "./../src/hw/hls_xilinx/main.cpp"
+# 136 "./../src/hw/hls_xilinx/main.cpp"
      pred_class_t *pred_class_o,
 
 
@@ -67077,7 +67087,7 @@ __attribute__((sdx_kernel("hdv_engine", 0))) void hdv_engine(
 {
 #line 11 "C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/script.tcl"
 #pragma HLSDIRECTIVE TOP name=hdv_engine
-# 139 "./../src/hw/hls_xilinx/main.cpp"
+# 144 "./../src/hw/hls_xilinx/main.cpp"
 
 
 #pragma HLS INTERFACE ap_none port = nrst_i
@@ -67097,10 +67107,10 @@ __attribute__((sdx_kernel("hdv_engine", 0))) void hdv_engine(
 
 
 #pragma HLS INTERFACE ap_none port = lhv_i
-# 168 "./../src/hw/hls_xilinx/main.cpp"
+# 177 "./../src/hw/hls_xilinx/main.cpp"
 #pragma HLS INTERFACE ap_none port = pred_class_o
 #pragma HLS AGGREGATE compact=bit variable = pred_class_o
-# 189 "./../src/hw/hls_xilinx/main.cpp"
+# 198 "./../src/hw/hls_xilinx/main.cpp"
 #pragma HLS INTERFACE ap_none port = status_o
 #pragma HLS AGGREGATE compact=bit variable = status_o
 
@@ -67113,6 +67123,8 @@ __attribute__((sdx_kernel("hdv_engine", 0))) void hdv_engine(
 
     bhv_p_t _bhv_i;
     lhv_p_t _lhv_i;
+ lhv_p_t _lhv_i0;
+ lhv_p_t _lhv_i1;
     chv_p_t _chv_i;
     uint8_t _n_gram_idx;
     static pred_class_t _pred_class_o;
@@ -67130,8 +67142,8 @@ __attribute__((sdx_kernel("hdv_engine", 0))) void hdv_engine(
     static ap_int<32> similarity_classes[3];
 
 
-
-
+  static ap_uint<32> denom_a_classes[3];
+  static ap_uint<32> denom_b_classes[3];
 
 
     static HV Binded_Features;
@@ -67146,9 +67158,11 @@ __attribute__((sdx_kernel("hdv_engine", 0))) void hdv_engine(
 
 
     static bunded_clip_t bunded_train_chv[3];
-# 247 "./../src/hw/hls_xilinx/main.cpp"
+# 258 "./../src/hw/hls_xilinx/main.cpp"
 #pragma HLS ARRAY_PARTITION variable = _bhv_i complete
 #pragma HLS ARRAY_PARTITION variable = _lhv_i complete
+#pragma HLS ARRAY_PARTITION variable = _lhv_i0 complete
+#pragma HLS ARRAY_PARTITION variable = _lhv_i1 complete
 #pragma HLS ARRAY_PARTITION variable = _chv_i complete
 #pragma HLS ARRAY_PARTITION variable = _bhv complete
 #pragma HLS ARRAY_PARTITION variable = _lhv complete
@@ -67173,7 +67187,7 @@ __attribute__((sdx_kernel("hdv_engine", 0))) void hdv_engine(
  if ( nrst_i == 0 )
   {
 
-    VITIS_LOOP_273_1: while ( sdata_i.empty() == 0 )
+    VITIS_LOOP_286_1: while ( sdata_i.empty() == 0 )
     {
      sdata_i.read( _aValue[0] );
     }
@@ -67181,12 +67195,12 @@ __attribute__((sdx_kernel("hdv_engine", 0))) void hdv_engine(
 
    _pred_class_o.c1 = 0;
 
-   VITIS_LOOP_281_2: for(auto i = 0; i < 3; i++)
+   VITIS_LOOP_294_2: for(auto i = 0; i < 3; i++)
    {
     bunded_train_chv[i] = 0;
 
-
-
+     denom_a_classes[i] = 0;
+     denom_b_classes[i] = 0;
 
     similarity_classes[i] = 0;
    }
@@ -67207,50 +67221,36 @@ __attribute__((sdx_kernel("hdv_engine", 0))) void hdv_engine(
 
 
    _lhv_i = lhv_i;
-
-
-
-
-
+# 329 "./../src/hw/hls_xilinx/main.cpp"
   _chv = _chv_i.el[0];
-# 331 "./../src/hw/hls_xilinx/main.cpp"
+# 348 "./../src/hw/hls_xilinx/main.cpp"
  }
 
 
  check_cmd:{
-# 344 "./../src/hw/hls_xilinx/main.cpp"
+# 361 "./../src/hw/hls_xilinx/main.cpp"
  }
 
 
     main:
  {
 #pragma HLS INLINE recursive
-
-
-
-
- if ( op_mode_i.phase == 3 )
-  {
-    int32_t threshold = bunded_train_chv[lable_class_i.c1]/2;
-    HDC.clip( _chv.cvh1, _chv_o.cvh1, 0, 1, threshold, 1);
-    goto exit;
-  }
-# 471 "./../src/hw/hls_xilinx/main.cpp"
-  auto _frame_index = frame_in.index;
+# 488 "./../src/hw/hls_xilinx/main.cpp"
+ auto _frame_index = frame_in.index;
   if ( frame_in.type == 0 )
   {
    process_features:
    {
 #pragma HLS INLINE recursive
  auto paralled_feature_inx_end = 1;
-# 488 "./../src/hw/hls_xilinx/main.cpp"
-    VITIS_LOOP_488_3: for ( auto feature_p_id = 0; feature_p_id < paralled_feature_inx_end; feature_p_id+=1 )
+# 505 "./../src/hw/hls_xilinx/main.cpp"
+    VITIS_LOOP_505_3: for ( auto feature_p_id = 0; feature_p_id < paralled_feature_inx_end; feature_p_id+=1 )
     {
 #pragma HLS UNROLL
 
  _frame_index = frame_in.index + feature_p_id;
 #pragma HLS INLINE recursive
- VITIS_LOOP_494_4: for ( auto state = 0; state < 2; state++)
+ VITIS_LOOP_511_4: for ( auto state = 0; state < 2; state++)
      {
 #pragma HLS PIPELINE II = 5
 
@@ -67266,18 +67266,11 @@ __attribute__((sdx_kernel("hdv_engine", 0))) void hdv_engine(
          _bhv = _bhv_i.el[feature_p_id];
 
         }
-# 523 "./../src/hw/hls_xilinx/main.cpp"
+# 540 "./../src/hw/hls_xilinx/main.cpp"
         {
          _lhv = _lhv_i.el[feature_p_id];
-
         }
-
-
-
-
-
-
-
+# 551 "./../src/hw/hls_xilinx/main.cpp"
        }
        ____phase_2_process_input_features:
        {
@@ -67286,9 +67279,9 @@ __attribute__((sdx_kernel("hdv_engine", 0))) void hdv_engine(
  {
 
          HDC.bind( _lhv.lvh, _bhv.bvh, Binded_Features );
-# 573 "./../src/hw/hls_xilinx/main.cpp"
+# 590 "./../src/hw/hls_xilinx/main.cpp"
         }
-# 605 "./../src/hw/hls_xilinx/main.cpp"
+# 622 "./../src/hw/hls_xilinx/main.cpp"
        }
       break;
       case 1:
@@ -67310,11 +67303,11 @@ __attribute__((sdx_kernel("hdv_engine", 0))) void hdv_engine(
          {
 #pragma HLS INLINE recursive
 
- VITIS_LOOP_626_5: for(auto i = 0; i < 64; i++)
+ VITIS_LOOP_643_5: for(auto i = 0; i < 64; i++)
           {
 #pragma HLS UNROLL
  hv_class_t tmp_chv_val;
-# 640 "./../src/hw/hls_xilinx/main.cpp"
+# 657 "./../src/hw/hls_xilinx/main.cpp"
             if (Binded_Features[i] == 0)
             {
              BundledHV[i] = 0;
@@ -67340,7 +67333,7 @@ __attribute__((sdx_kernel("hdv_engine", 0))) void hdv_engine(
 
 
  HDC.bundle(Binded_Features, BundledHV);
-# 686 "./../src/hw/hls_xilinx/main.cpp"
+# 703 "./../src/hw/hls_xilinx/main.cpp"
          }
         }
        }
@@ -67348,27 +67341,7 @@ __attribute__((sdx_kernel("hdv_engine", 0))) void hdv_engine(
       }
      }
     }
-
-
-     if ( op_mode_i.mode == 0)
-     {
-
-
-
-
-
-       if ( _frame_index==(21 - 1) && frame_in.id == 0 )
-
-       {
-        bunded_train_chv[lable_class_i.c1]++;
-
-
-
-
-       }
-
-     }
-
+# 731 "./../src/hw/hls_xilinx/main.cpp"
    }
    ____phase_4_clipping:
    {
@@ -67380,17 +67353,12 @@ __attribute__((sdx_kernel("hdv_engine", 0))) void hdv_engine(
  if ( _frame_index == 21 - 1 )
 
     {
-# 740 "./../src/hw/hls_xilinx/main.cpp"
+# 757 "./../src/hw/hls_xilinx/main.cpp"
       HDC.clip( BundledHV, Clipped_BundledHV, 0, 1, 21 / 2, 1 );
-# 753 "./../src/hw/hls_xilinx/main.cpp"
+# 770 "./../src/hw/hls_xilinx/main.cpp"
      if ( op_mode_i.mode == 0 )
      {
-# 766 "./../src/hw/hls_xilinx/main.cpp"
-       VITIS_LOOP_766_6: for ( auto i = 0; i < 64; i++ )
-       {
-        _chv_o.cvh1[i] = _chv.cvh1[i] + Clipped_BundledHV[i];
-       }
-# 780 "./../src/hw/hls_xilinx/main.cpp"
+# 797 "./../src/hw/hls_xilinx/main.cpp"
      }
     }
    }
@@ -67403,7 +67371,7 @@ __attribute__((sdx_kernel("hdv_engine", 0))) void hdv_engine(
    process_associate_search:
    {
 #pragma HLS INLINE recursive
- VITIS_LOOP_792_7: for ( auto class_p_id = 0; class_p_id < 1; class_p_id+=1 )
+ VITIS_LOOP_809_6: for ( auto class_p_id = 0; class_p_id < 1; class_p_id+=1 )
     {
 #pragma HLS UNROLL
 
@@ -67416,7 +67384,7 @@ __attribute__((sdx_kernel("hdv_engine", 0))) void hdv_engine(
       {
        _chv = _chv_i.el[class_p_id];
       }
-# 816 "./../src/hw/hls_xilinx/main.cpp"
+# 833 "./../src/hw/hls_xilinx/main.cpp"
       ____similarity_functions:
       {
 #pragma HLS PIPELINE II=5
@@ -67428,28 +67396,35 @@ __attribute__((sdx_kernel("hdv_engine", 0))) void hdv_engine(
        ap_uint<32> denom_a= 0; ap_uint<32> denom_b = 0;
 
        HDC.similarity_phase1( _chv.cvh1, Clipped_BundledHV, similarity, denom_a, denom_b, op_mode_i.mode );
-# 856 "./../src/hw/hls_xilinx/main.cpp"
-       {
 
+
+
+
+
+       {
 
 
 
          if ( frame_in.id == 0 )
 
-         {
+        {
 
 
 
-          similarity_classes[_frame_index] = similarity;
+         similarity_classes[_frame_index] = similarity;
+         denom_a_classes[_frame_index] = denom_a;
+         denom_b_classes[_frame_index] = denom_b;
+        }
+        else
+        {
+         similarity_classes[_frame_index] += similarity;
+         denom_a_classes[_frame_index] += denom_a;
+         denom_b_classes[_frame_index] += denom_b;
+        }
 
-         }else
-         {
-          similarity_classes[_frame_index] += similarity;
-         }
 
        }
-
-
+# 894 "./../src/hw/hls_xilinx/main.cpp"
       }
 
 
@@ -67472,20 +67447,20 @@ __attribute__((sdx_kernel("hdv_engine", 0))) void hdv_engine(
 
 
  {
-         VITIS_LOOP_899_8: for ( auto i = 0; i < 3; i++ )
+         VITIS_LOOP_916_7: for ( auto i = 0; i < 3; i++ )
          {
 #pragma HLS PIPELINE II=3
 
 
+ HDC.similarity_phase2( similarity_classes[i], denom_a_classes[i], denom_b_classes[i],op_mode_i.mode );
 
 
 
 
 
+         }
 
- }
-
-         VITIS_LOOP_912_9: for ( auto i = 0; i < 3; i++ )
+         VITIS_LOOP_929_8: for ( auto i = 0; i < 3; i++ )
          {
 #pragma HLS PIPELINE II=1
 
@@ -67503,7 +67478,7 @@ __attribute__((sdx_kernel("hdv_engine", 0))) void hdv_engine(
 
 
        }
-# 939 "./../src/hw/hls_xilinx/main.cpp"
+# 956 "./../src/hw/hls_xilinx/main.cpp"
       }
 
 
@@ -67525,7 +67500,7 @@ exit:
 
     *status_o = _status;
 
-  *chv_o = _chv_o;
+
 
 
 }

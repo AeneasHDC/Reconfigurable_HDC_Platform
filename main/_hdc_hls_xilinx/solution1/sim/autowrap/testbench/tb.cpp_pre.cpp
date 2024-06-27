@@ -85764,10 +85764,12 @@ typedef struct {
 
 
 typedef struct {
+# 153 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/headers/datatypes.hpp"
+      ap_uint<11> cvh1[64];
 
 
-      ap_uint<32> cvh1[64];
-# 158 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/headers/datatypes.hpp"
+
+
 } chv_t;
 
 typedef struct {
@@ -110240,11 +110242,11 @@ class HDC_op
 
 
     public:
-  typedef struct{
-   HV_HD_DIM element;
-  }lv_approx_t;
 
-  lv_approx_t lv_approx[2];
+
+
+
+
 
 
   HDC_op()
@@ -110278,15 +110280,18 @@ class HDC_op
       {
 
        {
-
+# 207 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/lib/hdc_lib/HDC_class.hpp"
         {
-         if ( HV1[i+j] == HV2[i+j] )
+         sim += HV1[i+j] * HV2[i+j];
+
+
          {
-          sim += 1;
+          denom_a = denom_a + (HV1[i+j]*HV1[i+j]);
+          denom_b = denom_b + (HV2[i+j]*HV2[i+j]);
          }
-# 183 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/lib/hdc_lib/HDC_class.hpp"
+
         }
-# 218 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/lib/hdc_lib/HDC_class.hpp"
+
        }
 # 250 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/lib/hdc_lib/HDC_class.hpp"
       }
@@ -110303,7 +110308,32 @@ class HDC_op
   void similarity_phase2(SimType &sim, const DenomType &denom_a, const DenomType &denom_b, uint8_t mode)
   {
 #pragma HLS INLINE
-# 344 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/lib/hdc_lib/HDC_class.hpp"
+# 300 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/lib/hdc_lib/HDC_class.hpp"
+      {
+# 321 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/lib/hdc_lib/HDC_class.hpp"
+    {
+
+     {
+
+
+
+      sim = ( sim * 10000 )/( hls::sqrt(denom_b) * hls::sqrt(denom_a) );
+
+
+
+     }
+
+
+
+
+
+    }
+
+      }
+
+
+
+
   }
 # 364 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/lib/hdc_lib/HDC_class.hpp"
   template < typename HVType >
@@ -110525,35 +110555,19 @@ class HDC_op
 # 713 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/lib/hdc_lib/HDC_class.hpp"
   template < typename HV_Type >
   void generate_LevelHVs( HV_Type& levelVector, const ap_uint<10>& frame_id,
-        const ap_uint<10>& frame_index )
+        const ap_uint<10>& frame_index, HV_Type& lv_approx_0, HV_Type& lv_approx_1 )
   {
 #pragma HLS ARRAY_PARTITION variable=levelVector complete
 # 778 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/lib/hdc_lib/HDC_class.hpp"
   }
-
-
-
-
-
-
-
-  void init_approx_level_vector_generator()
-  {
-   rnd_lv_approx_gen_t rnd_gen;
-   rnd_gen.reset();
-   for ( auto lv_i = 0; lv_i < 2; lv_i++ )
-   {
-    random_HV( lv_approx[lv_i].element, rnd_gen, 512, 64 );
-   }
-  }
-# 815 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/lib/hdc_lib/HDC_class.hpp"
+# 816 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/lib/hdc_lib/HDC_class.hpp"
   template < typename HV_Type >
   void generate_ClassHVs( HV_Type& classVector, const ap_uint<10>& frame_id,
         const ap_uint<10>& frame_index )
   {
-# 830 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/lib/hdc_lib/HDC_class.hpp"
+# 831 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/lib/hdc_lib/HDC_class.hpp"
   }
-# 845 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/lib/hdc_lib/HDC_class.hpp"
+# 846 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/lib/hdc_lib/HDC_class.hpp"
   template < typename HVType, typename RndGenType >
   void random_HV( HVType &in_HV, RndGenType &lfsr_instance, const int in_HV_LEN, const int RND_GEN_LEN )
   {
@@ -110568,7 +110582,7 @@ class HDC_op
     }
       }
   }
-# 873 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/lib/hdc_lib/HDC_class.hpp"
+# 874 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/lib/hdc_lib/HDC_class.hpp"
   template < typename HypervectorType >
   void print_HV( const HypervectorType& hv )
   {
@@ -110598,7 +110612,7 @@ void hdv_engine(
 
    chv_p_t &chv_i,
 
-    chv_t *chv_o,
+
 
 
 
@@ -110606,9 +110620,7 @@ void hdv_engine(
 
 
    lhv_p_t &lhv_i,
-# 83 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/headers/main.hpp"
-   pred_class_t &lable_class_i,
-# 98 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/headers/main.hpp"
+# 102 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/headers/main.hpp"
    pred_class_t *pred_class_o,
 
 
@@ -110636,6 +110648,10 @@ bhv_p_t bhv_i;
 
 lhv_p_t lhv_i;
 
+
+
+
+
 chv_p_t chv_i;
 chv_t chv_o;
 
@@ -110655,10 +110671,12 @@ uint8_t n_gram_idx;
 
 
 typedef struct {
+# 117 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/tb/tb.cpp"
+       ap_uint<11> cvh1[512];
 
 
-       ap_uint<32> cvh1[512];
-# 118 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/tb/tb.cpp"
+
+
 } chv_mem_t;
 
 chv_mem_t chv_mem[3];
@@ -110691,7 +110709,7 @@ void run_HdlProcessing()
 
     chv_i,
 
-    &chv_o,
+
 
 
 
@@ -110699,9 +110717,7 @@ void run_HdlProcessing()
 
 
         lhv_i,
-# 166 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/tb/tb.cpp"
-    lable_class_i,
-# 182 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/tb/tb.cpp"
+# 189 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/tb/tb.cpp"
     &pred_class_o,
 
 
@@ -110727,7 +110743,7 @@ void save_chv_mem_to_csv(const char* filename, chv_mem_t* chv_mem, int size) {
 
     csvWriter.closeFile();
 }
-# 218 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/tb/tb.cpp"
+# 225 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/tb/tb.cpp"
 int main( )
 {
 
@@ -110755,6 +110771,10 @@ int main( )
 
 
     std::vector<int> datalvh;
+
+
+
+
     std::vector<int> databvh;
     std::vector<int> datacvh;
 
@@ -110802,9 +110822,9 @@ int main( )
 
     run_HdlProcessing();
  n_gram_idx=0;
-# 303 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/tb/tb.cpp"
+# 314 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/tb/tb.cpp"
   int tasks[] = { 2 };
-# 321 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/tb/tb.cpp"
+# 332 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/tb/tb.cpp"
     for ( int task_ind = 0; task_ind < sizeof(tasks)/sizeof(tasks[0]) ; task_ind++ )
     {
 
@@ -110817,7 +110837,7 @@ int main( )
   {
 
      n_of_data = 3;
-# 342 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/tb/tb.cpp"
+# 353 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/tb/tb.cpp"
    file_ds_ptr = &file_ds_test;
    file_label_ptr = &file_ds_test_label;
    op_mode_i.phase = 0;
@@ -110943,6 +110963,7 @@ int main( )
       }
 
 
+
      AXI_VALUE aValue;
      for ( int feature_p_id = 0; feature_p_id < end_index; feature_p_id+=1 )
      {
@@ -110953,7 +110974,7 @@ int main( )
        aValue.last = ( feature_id + feature_p_id == 21 - 1 );
        sdata_i.write( aValue );
       }
-# 487 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/tb/tb.cpp"
+# 499 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/tb/tb.cpp"
       {
 
        {
@@ -110971,10 +110992,7 @@ int main( )
         return -1;
        }
       }
-
-
-
-
+# 529 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/tb/tb.cpp"
       {
 
 
@@ -111003,8 +111021,7 @@ int main( )
         lhv_i.el[feature_p_id].lvh[i] = datalvh[ frame_id + i ];
        }
       }
-
-
+# 569 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/tb/tb.cpp"
       {
 
        for ( int i = 0; i < 64; i++ )
@@ -111018,7 +111035,7 @@ int main( )
 
 
      run_HdlProcessing();
-# 563 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/tb/tb.cpp"
+# 594 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/tb/tb.cpp"
     }
 
 
@@ -111026,7 +111043,7 @@ int main( )
 
 
      file_bvh.closeFile();
-# 591 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/tb/tb.cpp"
+# 622 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/tb/tb.cpp"
       if ( (0==1 && op_mode_i.mode == 0) || op_mode_i.mode == 2 || (op_mode_i.mode == 1 && retrain_en_flg==0) )
       {
        frame_in.type = 1;
@@ -111055,7 +111072,7 @@ int main( )
         run_HdlProcessing();
        }
       }
-# 628 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/tb/tb.cpp"
+# 659 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/tb/tb.cpp"
     if ( op_mode_i.mode == 1 && (frame_id == ( 512 - 64 ) && retrain_en_flg==0 ))
     {
 
@@ -111078,7 +111095,7 @@ int main( )
        chv_mem[static_cast<int>( data_ds_label_vec[0])].cvh1[frame_id+j] = chv_o.cvh1[j];
       }
      }
-# 681 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/tb/tb.cpp"
+# 712 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/tb/tb.cpp"
     if ( retrain_en_flg==1 && op_mode_i.mode == 1 )
     {
 
@@ -111098,7 +111115,7 @@ int main( )
        chv_i.el[0].cvh1[i] = chv_mem[static_cast<int>( pred_class_o.c1 )].cvh1[frame_id + i];
       }
      }
-# 721 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/tb/tb.cpp"
+# 752 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/tb/tb.cpp"
      run_HdlProcessing();
 
      for ( int i = 0; i < 64; i++ )
@@ -111131,9 +111148,9 @@ int main( )
 
 
     }
-# 763 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/tb/tb.cpp"
+# 794 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/tb/tb.cpp"
    }
-# 779 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/tb/tb.cpp"
+# 810 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/tb/tb.cpp"
     confusionMatrix.updateMatrix( static_cast<int>( data_ds_label_vec[0] ), static_cast<int>( pred_class_o.c1 ) );
 
 
@@ -111172,13 +111189,13 @@ int main( )
 
      std::cout << "Accuracy: " << metrics[0] << std::endl;
      std::cout << "Precision: " << metrics[1] << std::endl;
-# 835 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/tb/tb.cpp"
+# 866 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/tb/tb.cpp"
    }
 
 
   }
-# 848 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/tb/tb.cpp"
-  if ( (op_mode_i.mode == 0 && 0 == 0 ) || (op_mode_i.mode == 1) && 1 != 0 )
+# 879 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/tb/tb.cpp"
+  if ( (op_mode_i.mode == 0 && 0 == 0 ) || (op_mode_i.mode == 1) && 0 != 0 )
   {
 
    int previous_phase = op_mode_i.phase;
@@ -111222,9 +111239,9 @@ int main( )
    {
     save_chv_mem_to_csv( ("./../../../../../out/extracted_params/" "CARDIO" "/ClassHVs.csv"), chv_mem, 3 );
    }
-# 919 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/tb/tb.cpp"
+# 950 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/tb/tb.cpp"
     }
-# 938 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/tb/tb.cpp"
+# 969 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/tb/tb.cpp"
  file_ds_test.closeFile();
  file_ds_test_label.closeFile();
  file_ds_train.closeFile();

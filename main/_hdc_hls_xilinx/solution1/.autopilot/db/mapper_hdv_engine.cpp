@@ -366,9 +366,10 @@ static AESL_RUNTIME_BC __xlx_sdata_i_V_dest_V_V_size_Reader("../tv/stream_size/s
 using hls::sim::Byte;
 struct __cosim_s2__ { char data[2]; };
 struct __cosim_s6__ { char data[6]; };
-struct __cosim_s256__ { char data[256]; };
-extern "C" void hdv_engine(volatile void *, __cosim_s2__, __cosim_s6__, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *);
-extern "C" void apatb_hdv_engine_hw(volatile void * __xlx_apatb_param_nrst_i, __cosim_s2__* __xlx_apatb_param_op_mode_i, __cosim_s6__* __xlx_apatb_param_frame_in, volatile void * __xlx_apatb_param_sdata_i_V_data_V, volatile void * __xlx_apatb_param_sdata_i_V_keep_V, volatile void * __xlx_apatb_param_sdata_i_V_strb_V, volatile void * __xlx_apatb_param_sdata_i_V_user_V, volatile void * __xlx_apatb_param_sdata_i_V_last_V, volatile void * __xlx_apatb_param_sdata_i_V_id_V, volatile void * __xlx_apatb_param_sdata_i_V_dest_V, volatile void * __xlx_apatb_param_chv_i, volatile void * __xlx_apatb_param_chv_o, volatile void * __xlx_apatb_param_bhv_i, volatile void * __xlx_apatb_param_lhv_i, volatile void * __xlx_apatb_param_lable_class_i, volatile void * __xlx_apatb_param_pred_class_o, volatile void * __xlx_apatb_param_status_o) {
+struct __cosim_s88__ { char data[128]; };
+struct __cosim_s128__ { char data[128]; };
+extern "C" void hdv_engine(volatile void *, __cosim_s2__, __cosim_s6__, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *, volatile void *);
+extern "C" void apatb_hdv_engine_hw(volatile void * __xlx_apatb_param_nrst_i, __cosim_s2__* __xlx_apatb_param_op_mode_i, __cosim_s6__* __xlx_apatb_param_frame_in, volatile void * __xlx_apatb_param_sdata_i_V_data_V, volatile void * __xlx_apatb_param_sdata_i_V_keep_V, volatile void * __xlx_apatb_param_sdata_i_V_strb_V, volatile void * __xlx_apatb_param_sdata_i_V_user_V, volatile void * __xlx_apatb_param_sdata_i_V_last_V, volatile void * __xlx_apatb_param_sdata_i_V_id_V, volatile void * __xlx_apatb_param_sdata_i_V_dest_V, volatile void * __xlx_apatb_param_chv_i, volatile void * __xlx_apatb_param_bhv_i, volatile void * __xlx_apatb_param_lhv_i, volatile void * __xlx_apatb_param_pred_class_o, volatile void * __xlx_apatb_param_status_o) {
 using hls::sim::createStream;
 auto* ssdata_i_V_data_V = createStream((hls::stream<char>*)__xlx_apatb_param_sdata_i_V_data_V);
 auto* ssdata_i_V_keep_V = createStream((hls::stream<char>*)__xlx_apatb_param_sdata_i_V_keep_V);
@@ -378,7 +379,7 @@ auto* ssdata_i_V_last_V = createStream((hls::stream<char>*)__xlx_apatb_param_sda
 auto* ssdata_i_V_id_V = createStream((hls::stream<char>*)__xlx_apatb_param_sdata_i_V_id_V);
 auto* ssdata_i_V_dest_V = createStream((hls::stream<char>*)__xlx_apatb_param_sdata_i_V_dest_V);
   // DUT call
-  hdv_engine(__xlx_apatb_param_nrst_i, *__xlx_apatb_param_op_mode_i, *__xlx_apatb_param_frame_in, ssdata_i_V_data_V->data<char>(), ssdata_i_V_keep_V->data<char>(), ssdata_i_V_strb_V->data<char>(), ssdata_i_V_user_V->data<char>(), ssdata_i_V_last_V->data<char>(), ssdata_i_V_id_V->data<char>(), ssdata_i_V_dest_V->data<char>(), __xlx_apatb_param_chv_i, __xlx_apatb_param_chv_o, __xlx_apatb_param_bhv_i, __xlx_apatb_param_lhv_i, __xlx_apatb_param_lable_class_i, __xlx_apatb_param_pred_class_o, __xlx_apatb_param_status_o);
+  hdv_engine(__xlx_apatb_param_nrst_i, *__xlx_apatb_param_op_mode_i, *__xlx_apatb_param_frame_in, ssdata_i_V_data_V->data<char>(), ssdata_i_V_keep_V->data<char>(), ssdata_i_V_strb_V->data<char>(), ssdata_i_V_user_V->data<char>(), ssdata_i_V_last_V->data<char>(), ssdata_i_V_id_V->data<char>(), ssdata_i_V_dest_V->data<char>(), __xlx_apatb_param_chv_i, __xlx_apatb_param_bhv_i, __xlx_apatb_param_lhv_i, __xlx_apatb_param_pred_class_o, __xlx_apatb_param_status_o);
 ssdata_i_V_data_V->transfer((hls::stream<char>*)__xlx_apatb_param_sdata_i_V_data_V);
 ssdata_i_V_keep_V->transfer((hls::stream<char>*)__xlx_apatb_param_sdata_i_V_keep_V);
 ssdata_i_V_strb_V->transfer((hls::stream<char>*)__xlx_apatb_param_sdata_i_V_strb_V);

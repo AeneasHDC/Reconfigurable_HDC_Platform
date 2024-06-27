@@ -28,14 +28,11 @@
 `define AESL_DEPTH_sdata_i_V_id_V 1
 `define AESL_DEPTH_sdata_i_V_dest_V 1
 `define AESL_DEPTH_chv_i 1
-`define AESL_DEPTH_chv_o 1
 `define AESL_DEPTH_bhv_i 1
 `define AESL_DEPTH_lhv_i 1
-`define AESL_DEPTH_lable_class_i 1
 `define AESL_DEPTH_pred_class_o 1
 `define AESL_DEPTH_status_o 1
 `define AUTOTB_TVIN_nrst_i  "../tv/cdatafile/c.hdv_engine.autotvin_nrst_i.dat"
-`define AUTOTB_TVIN_op_mode_i  "../tv/cdatafile/c.hdv_engine.autotvin_op_mode_i.dat"
 `define AUTOTB_TVIN_frame_in  "../tv/cdatafile/c.hdv_engine.autotvin_frame_in.dat"
 `define AUTOTB_TVIN_sdata_i_V_data_V  "../tv/cdatafile/c.hdv_engine.autotvin_sdata_i_V_data_V.dat"
 `define AUTOTB_TVIN_sdata_i_V_keep_V  "../tv/cdatafile/c.hdv_engine.autotvin_sdata_i_V_keep_V.dat"
@@ -47,9 +44,7 @@
 `define AUTOTB_TVIN_chv_i  "../tv/cdatafile/c.hdv_engine.autotvin_chv_i.dat"
 `define AUTOTB_TVIN_bhv_i  "../tv/cdatafile/c.hdv_engine.autotvin_bhv_i.dat"
 `define AUTOTB_TVIN_lhv_i  "../tv/cdatafile/c.hdv_engine.autotvin_lhv_i.dat"
-`define AUTOTB_TVIN_lable_class_i  "../tv/cdatafile/c.hdv_engine.autotvin_lable_class_i.dat"
 `define AUTOTB_TVIN_nrst_i_out_wrapc  "../tv/rtldatafile/rtl.hdv_engine.autotvin_nrst_i.dat"
-`define AUTOTB_TVIN_op_mode_i_out_wrapc  "../tv/rtldatafile/rtl.hdv_engine.autotvin_op_mode_i.dat"
 `define AUTOTB_TVIN_frame_in_out_wrapc  "../tv/rtldatafile/rtl.hdv_engine.autotvin_frame_in.dat"
 `define AUTOTB_TVIN_sdata_i_V_data_V_out_wrapc  "../tv/rtldatafile/rtl.hdv_engine.autotvin_sdata_i_V_data_V.dat"
 `define AUTOTB_TVIN_sdata_i_V_keep_V_out_wrapc  "../tv/rtldatafile/rtl.hdv_engine.autotvin_sdata_i_V_keep_V.dat"
@@ -61,11 +56,8 @@
 `define AUTOTB_TVIN_chv_i_out_wrapc  "../tv/rtldatafile/rtl.hdv_engine.autotvin_chv_i.dat"
 `define AUTOTB_TVIN_bhv_i_out_wrapc  "../tv/rtldatafile/rtl.hdv_engine.autotvin_bhv_i.dat"
 `define AUTOTB_TVIN_lhv_i_out_wrapc  "../tv/rtldatafile/rtl.hdv_engine.autotvin_lhv_i.dat"
-`define AUTOTB_TVIN_lable_class_i_out_wrapc  "../tv/rtldatafile/rtl.hdv_engine.autotvin_lable_class_i.dat"
-`define AUTOTB_TVOUT_chv_o  "../tv/cdatafile/c.hdv_engine.autotvout_chv_o.dat"
 `define AUTOTB_TVOUT_pred_class_o  "../tv/cdatafile/c.hdv_engine.autotvout_pred_class_o.dat"
 `define AUTOTB_TVOUT_status_o  "../tv/cdatafile/c.hdv_engine.autotvout_status_o.dat"
-`define AUTOTB_TVOUT_chv_o_out_wrapc  "../tv/rtldatafile/rtl.hdv_engine.autotvout_chv_o.dat"
 `define AUTOTB_TVOUT_pred_class_o_out_wrapc  "../tv/rtldatafile/rtl.hdv_engine.autotvout_pred_class_o.dat"
 `define AUTOTB_TVOUT_status_o_out_wrapc  "../tv/rtldatafile/rtl.hdv_engine.autotvout_status_o.dat"
 module `AUTOTB_TOP;
@@ -75,9 +67,7 @@ parameter PROGRESS_TIMEOUT = 10000000;
 parameter LATENCY_ESTIMATION = -1;
 parameter LENGTH_bhv_i = 1;
 parameter LENGTH_chv_i = 1;
-parameter LENGTH_chv_o = 1;
 parameter LENGTH_frame_in = 1;
-parameter LENGTH_lable_class_i = 1;
 parameter LENGTH_lhv_i = 1;
 parameter LENGTH_nrst_i = 1;
 parameter LENGTH_op_mode_i = 1;
@@ -93,7 +83,7 @@ parameter LENGTH_status_o = 1;
 
 task read_token;
     input integer fp;
-    output reg [4119 : 0] token;
+    output reg [1431 : 0] token;
     integer ret;
     begin
         token = "";
@@ -136,12 +126,9 @@ wire [0 : 0] sdata_i_TUSER;
 wire [0 : 0] sdata_i_TLAST;
 wire [0 : 0] sdata_i_TID;
 wire [0 : 0] sdata_i_TDEST;
-wire [2047 : 0] chv_i;
-wire [2047 : 0] chv_o;
-wire  chv_o_ap_vld;
+wire [703 : 0] chv_i;
 wire [63 : 0] bhv_i;
 wire [63 : 0] lhv_i;
-wire [5 : 0] lable_class_i;
 wire [5 : 0] pred_class_o;
 wire [4 : 0] status_o;
 integer done_cnt = 0;
@@ -179,11 +166,8 @@ wire ap_rst_n_n;
     .sdata_i_TID(sdata_i_TID),
     .sdata_i_TDEST(sdata_i_TDEST),
     .chv_i(chv_i),
-    .chv_o(chv_o),
-    .chv_o_ap_vld(chv_o_ap_vld),
     .bhv_i(bhv_i),
     .lhv_i(lhv_i),
-    .lable_class_i(lable_class_i),
     .pred_class_o(pred_class_o),
     .status_o(status_o));
 
@@ -225,7 +209,7 @@ initial begin : read_file_process_nrst_i
     integer err;
     integer ret;
     integer proc_rand;
-    reg [4119  : 0] token;
+    reg [1431  : 0] token;
     integer i;
     reg transaction_finish;
     integer transaction_idx;
@@ -274,56 +258,6 @@ end
 // The signal of port op_mode_i
 reg [15: 0] AESL_REG_op_mode_i = 0;
 assign op_mode_i = AESL_REG_op_mode_i;
-initial begin : read_file_process_op_mode_i
-    integer fp;
-    integer err;
-    integer ret;
-    integer proc_rand;
-    reg [4119  : 0] token;
-    integer i;
-    reg transaction_finish;
-    integer transaction_idx;
-    transaction_idx = 0;
-    wait(AESL_reset === 1);
-    fp = $fopen(`AUTOTB_TVIN_op_mode_i,"r");
-    if(fp == 0) begin       // Failed to open file
-        $display("Failed to open file \"%s\"!", `AUTOTB_TVIN_op_mode_i);
-        $display("ERROR: Simulation using HLS TB failed.");
-        $finish;
-    end
-    read_token(fp, token);
-    if (token != "[[[runtime]]]") begin
-        $display("ERROR: Simulation using HLS TB failed.");
-        $finish;
-    end
-    read_token(fp, token);
-    while (token != "[[[/runtime]]]") begin
-        if (token != "[[transaction]]") begin
-            $display("ERROR: Simulation using HLS TB failed.");
-              $finish;
-        end
-        read_token(fp, token);  // skip transaction number
-          read_token(fp, token);
-            # 0.2;
-            while(ready_wire !== 1) begin
-                @(posedge AESL_clock);
-                # 0.2;
-            end
-        if(token != "[[/transaction]]") begin
-            ret = $sscanf(token, "0x%x", AESL_REG_op_mode_i);
-              if (ret != 1) begin
-                  $display("Failed to parse token!");
-                $display("ERROR: Simulation using HLS TB failed.");
-                  $finish;
-              end
-            @(posedge AESL_clock);
-              read_token(fp, token);
-        end
-          read_token(fp, token);
-    end
-    $fclose(fp);
-end
-
 
 // The signal of port frame_in
 reg [47: 0] AESL_REG_frame_in = 0;
@@ -333,7 +267,7 @@ initial begin : read_file_process_frame_in
     integer err;
     integer ret;
     integer proc_rand;
-    reg [4119  : 0] token;
+    reg [1431  : 0] token;
     integer i;
     reg transaction_finish;
     integer transaction_idx;
@@ -387,14 +321,14 @@ end
 
 
 // The signal of port chv_i
-reg [2047: 0] AESL_REG_chv_i = 0;
+reg [703: 0] AESL_REG_chv_i = 0;
 assign chv_i = AESL_REG_chv_i;
 initial begin : read_file_process_chv_i
     integer fp;
     integer err;
     integer ret;
     integer proc_rand;
-    reg [4119  : 0] token;
+    reg [1431  : 0] token;
     integer i;
     reg transaction_finish;
     integer transaction_idx;
@@ -440,59 +374,6 @@ initial begin : read_file_process_chv_i
 end
 
 
-reg AESL_REG_chv_o_ap_vld = 0;
-// The signal of port chv_o
-reg [2047: 0] AESL_REG_chv_o = 0;
-always @(posedge AESL_clock)
-begin
-    if(AESL_reset === 0)
-        AESL_REG_chv_o = 0; 
-    else if(chv_o_ap_vld) begin
-        AESL_REG_chv_o <= chv_o;
-        AESL_REG_chv_o_ap_vld <= 1;
-    end
-end 
-
-initial begin : write_file_process_chv_o
-    integer fp;
-    integer fp_size;
-    integer err;
-    integer ret;
-    integer i;
-    integer hls_stream_size;
-    integer proc_rand;
-    integer chv_o_count;
-    reg [4119:0] token;
-    integer transaction_idx;
-    reg [8 * 5:1] str;
-    wait(AESL_reset === 1);
-    fp = $fopen(`AUTOTB_TVOUT_chv_o_out_wrapc,"w");
-    if(fp == 0) begin       // Failed to open file
-        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_chv_o_out_wrapc);
-        $display("ERROR: Simulation using HLS TB failed.");
-        $finish;
-    end
-    $fdisplay(fp,"[[[runtime]]]");
-    transaction_idx = 0;
-    while (transaction_idx != AUTOTB_TRANSACTION_NUM) begin
-        @(posedge AESL_clock);
-          while(AESL_done !== 1) begin
-              @(posedge AESL_clock);
-          end
-        # 0.4;
-        $fdisplay(fp,"[[transaction]] %d", transaction_idx);
-        if(AESL_REG_chv_o_ap_vld)  begin
-          $fdisplay(fp,"0x%x", AESL_REG_chv_o);
-        AESL_REG_chv_o_ap_vld = 0;
-        end
-    transaction_idx = transaction_idx + 1;
-      $fdisplay(fp,"[[/transaction]]");
-    end
-    $fdisplay(fp,"[[[/runtime]]]");
-    $fclose(fp);
-end
-
-
 // The signal of port bhv_i
 reg [63: 0] AESL_REG_bhv_i = 0;
 assign bhv_i = AESL_REG_bhv_i;
@@ -501,7 +382,7 @@ initial begin : read_file_process_bhv_i
     integer err;
     integer ret;
     integer proc_rand;
-    reg [4119  : 0] token;
+    reg [1431  : 0] token;
     integer i;
     reg transaction_finish;
     integer transaction_idx;
@@ -555,7 +436,7 @@ initial begin : read_file_process_lhv_i
     integer err;
     integer ret;
     integer proc_rand;
-    reg [4119  : 0] token;
+    reg [1431  : 0] token;
     integer i;
     reg transaction_finish;
     integer transaction_idx;
@@ -601,60 +482,6 @@ initial begin : read_file_process_lhv_i
 end
 
 
-// The signal of port lable_class_i
-reg [5: 0] AESL_REG_lable_class_i = 0;
-assign lable_class_i = AESL_REG_lable_class_i;
-initial begin : read_file_process_lable_class_i
-    integer fp;
-    integer err;
-    integer ret;
-    integer proc_rand;
-    reg [4119  : 0] token;
-    integer i;
-    reg transaction_finish;
-    integer transaction_idx;
-    transaction_idx = 0;
-    wait(AESL_reset === 1);
-    fp = $fopen(`AUTOTB_TVIN_lable_class_i,"r");
-    if(fp == 0) begin       // Failed to open file
-        $display("Failed to open file \"%s\"!", `AUTOTB_TVIN_lable_class_i);
-        $display("ERROR: Simulation using HLS TB failed.");
-        $finish;
-    end
-    read_token(fp, token);
-    if (token != "[[[runtime]]]") begin
-        $display("ERROR: Simulation using HLS TB failed.");
-        $finish;
-    end
-    read_token(fp, token);
-    while (token != "[[[/runtime]]]") begin
-        if (token != "[[transaction]]") begin
-            $display("ERROR: Simulation using HLS TB failed.");
-              $finish;
-        end
-        read_token(fp, token);  // skip transaction number
-          read_token(fp, token);
-            # 0.2;
-            while(ready_wire !== 1) begin
-                @(posedge AESL_clock);
-                # 0.2;
-            end
-        if(token != "[[/transaction]]") begin
-            ret = $sscanf(token, "0x%x", AESL_REG_lable_class_i);
-              if (ret != 1) begin
-                  $display("Failed to parse token!");
-                $display("ERROR: Simulation using HLS TB failed.");
-                  $finish;
-              end
-            @(posedge AESL_clock);
-              read_token(fp, token);
-        end
-          read_token(fp, token);
-    end
-    $fclose(fp);
-end
-
-
 // The signal of port pred_class_o
 reg [5: 0] AESL_REG_pred_class_o = 0;
 always @(posedge AESL_clock)
@@ -674,7 +501,7 @@ initial begin : write_file_process_pred_class_o
     integer hls_stream_size;
     integer proc_rand;
     integer pred_class_o_count;
-    reg [4119:0] token;
+    reg [1431:0] token;
     integer transaction_idx;
     reg [8 * 5:1] str;
     wait(AESL_reset === 1);
@@ -721,7 +548,7 @@ initial begin : write_file_process_status_o
     integer hls_stream_size;
     integer proc_rand;
     integer status_o_count;
-    reg [4119:0] token;
+    reg [1431:0] token;
     integer transaction_idx;
     reg [8 * 5:1] str;
     wait(AESL_reset === 1);
@@ -844,9 +671,6 @@ end
 reg end_nrst_i;
 reg [31:0] size_nrst_i;
 reg [31:0] size_nrst_i_backup;
-reg end_op_mode_i;
-reg [31:0] size_op_mode_i;
-reg [31:0] size_op_mode_i_backup;
 reg end_frame_in;
 reg [31:0] size_frame_in;
 reg [31:0] size_frame_in_backup;
@@ -880,12 +704,6 @@ reg [31:0] size_bhv_i_backup;
 reg end_lhv_i;
 reg [31:0] size_lhv_i;
 reg [31:0] size_lhv_i_backup;
-reg end_lable_class_i;
-reg [31:0] size_lable_class_i;
-reg [31:0] size_lable_class_i_backup;
-reg end_chv_o;
-reg [31:0] size_chv_o;
-reg [31:0] size_chv_o_backup;
 reg end_pred_class_o;
 reg [31:0] size_pred_class_o;
 reg [31:0] size_pred_class_o_backup;

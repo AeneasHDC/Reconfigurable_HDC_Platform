@@ -360,7 +360,11 @@ if __name__ == '__main__':
     # Export of the generated HyperVectors
     data_exporter = DataExporter(output_dir=extracted_params_dir)
     data_exporter.export_data(BaseHVs_o,  'BaseHVs.csv')
-    data_exporter.export_data(LevelHVs_o, 'LevelHVs.csv')
+    # if config.HD_LV_TYPE == config.APPROX and config.LV_MODE == config.LV_M_LOGIC, just export the first and last LevelHVs
+    if config.HD_LV_TYPE == config.APPROX and config.LV_MODE == config.LV_M_LOGIC:
+        data_exporter.export_data(LevelHVs_o[[0,-1], :], 'LevelHVs.csv')
+    else:
+        data_exporter.export_data(LevelHVs_o, 'LevelHVs.csv')
     data_exporter.export_data(ClassHVs_o, 'ClassHVs.csv')
     
     

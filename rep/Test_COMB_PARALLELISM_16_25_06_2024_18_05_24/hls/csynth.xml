@@ -1,0 +1,1289 @@
+<profile>
+    <ReportVersion>
+        <Version>2023.1</Version>
+    </ReportVersion>
+    <UserAssignments>
+        <unit>ns</unit>
+        <ProductFamily>zynquplus</ProductFamily>
+        <Part>xczu9eg-ffvb1156-2-e</Part>
+        <TopModelName>hdv_engine</TopModelName>
+        <TargetClockPeriod>5.00</TargetClockPeriod>
+        <ClockUncertainty>1.35</ClockUncertainty>
+        <FlowTarget>vivado</FlowTarget>
+    </UserAssignments>
+    <PerformanceEstimates>
+        <PipelineType>no</PipelineType>
+        <SummaryOfTimingAnalysis>
+            <unit>ns</unit>
+            <EstimatedClockPeriod>3.609</EstimatedClockPeriod>
+        </SummaryOfTimingAnalysis>
+        <SummaryOfOverallLatency>
+            <unit>clock cycles</unit>
+            <Best-caseLatency>undef</Best-caseLatency>
+            <Average-caseLatency>undef</Average-caseLatency>
+            <Worst-caseLatency>undef</Worst-caseLatency>
+            <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+            <Interval-min>undef</Interval-min>
+            <Interval-max>undef</Interval-max>
+        </SummaryOfOverallLatency>
+        <SummaryOfLoopLatency>
+            <VITIS_LOOP_809_6>
+                <Slack>3.65</Slack>
+                <TripCount>3</TripCount>
+                <Latency>
+                    <range>
+                        <min>6</min>
+                        <max>147</max>
+                    </range>
+                </Latency>
+                <AbsoluteTimeLatency>
+                    <range>
+                        <min>30</min>
+                        <max>735</max>
+                    </range>
+                </AbsoluteTimeLatency>
+                <IterationLatency>
+                    <range>
+                        <min>2</min>
+                        <max>49</max>
+                    </range>
+                </IterationLatency>
+                <InstanceList/>
+            </VITIS_LOOP_809_6>
+        </SummaryOfLoopLatency>
+    </PerformanceEstimates>
+    <AreaEstimates>
+        <Resources>
+            <FF>5738</FF>
+            <LUT>17339</LUT>
+            <BRAM_18K>0</BRAM_18K>
+            <DSP>0</DSP>
+            <URAM>0</URAM>
+        </Resources>
+        <AvailableResources>
+            <BRAM_18K>1824</BRAM_18K>
+            <DSP>2520</DSP>
+            <FF>548160</FF>
+            <LUT>274080</LUT>
+            <URAM>0</URAM>
+        </AvailableResources>
+    </AreaEstimates>
+    <InterfaceSummary>
+        <RtlPorts>
+            <name>ap_clk</name>
+            <Object>hdv_engine</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_rst_n</name>
+            <Object>hdv_engine</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_start</name>
+            <Object>hdv_engine</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_done</name>
+            <Object>hdv_engine</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_idle</name>
+            <Object>hdv_engine</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_ready</name>
+            <Object>hdv_engine</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>nrst_i</name>
+            <Object>nrst_i</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>bool</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>op_mode_i</name>
+            <Object>op_mode_i</Object>
+            <Type>scalar</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>16</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>frame_in</name>
+            <Object>frame_in</Object>
+            <Type>scalar</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>48</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>sdata_i_TDATA</name>
+            <Object>sdata_i_V_data_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>8</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>sdata_i_TVALID</name>
+            <Object>sdata_i_V_dest_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>sdata_i_TREADY</name>
+            <Object>sdata_i_V_dest_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>sdata_i_TDEST</name>
+            <Object>sdata_i_V_dest_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>sdata_i_TKEEP</name>
+            <Object>sdata_i_V_keep_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>sdata_i_TSTRB</name>
+            <Object>sdata_i_V_strb_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>sdata_i_TUSER</name>
+            <Object>sdata_i_V_user_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>sdata_i_TLAST</name>
+            <Object>sdata_i_V_last_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>sdata_i_TID</name>
+            <Object>sdata_i_V_id_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>chv_i</name>
+            <Object>chv_i</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>384</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>bhv_i</name>
+            <Object>bhv_i</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>128</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>lhv_i</name>
+            <Object>lhv_i</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>128</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>pred_class_o</name>
+            <Object>pred_class_o</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>6</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>status_o</name>
+            <Object>status_o</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>5</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+    </InterfaceSummary>
+    <RTLDesignHierarchy>
+        <TopModule MAX_DEPTH="3">
+            <ModuleName>hdv_engine</ModuleName>
+            <InstancesList>
+                <Instance>
+                    <InstName>grp_hdv_engine_Pipeline_VITIS_LOOP_286_1_fu_1735</InstName>
+                    <ModuleName>hdv_engine_Pipeline_VITIS_LOOP_286_1</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>1735</ID>
+                </Instance>
+                <Instance>
+                    <InstName>grp_hdv_engine_Pipeline_VITIS_LOOP_294_2_fu_1753</InstName>
+                    <ModuleName>hdv_engine_Pipeline_VITIS_LOOP_294_2</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>1753</ID>
+                    <BindInstances>add_ln294_fu_48_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_hdv_engine_Pipeline_VITIS_LOOP_511_4_fu_1763</InstName>
+                    <ModuleName>hdv_engine_Pipeline_VITIS_LOOP_511_4</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>1763</ID>
+                    <BindInstances>state_2_fu_3120_p2 add_ln472_fu_4676_p2 add_ln472_1_fu_4692_p2 add_ln472_2_fu_4708_p2 add_ln472_3_fu_4724_p2 add_ln472_4_fu_4740_p2 add_ln472_5_fu_4756_p2 add_ln472_6_fu_4772_p2 add_ln472_7_fu_4788_p2 add_ln472_8_fu_4804_p2 add_ln472_9_fu_4820_p2 add_ln472_10_fu_4836_p2 add_ln472_11_fu_4852_p2 add_ln472_12_fu_4868_p2 add_ln472_13_fu_4884_p2 add_ln472_14_fu_4900_p2 add_ln472_15_fu_4916_p2 add_ln472_16_fu_4932_p2 add_ln472_17_fu_4948_p2 add_ln472_18_fu_4964_p2 add_ln472_19_fu_4980_p2 add_ln472_20_fu_4996_p2 add_ln472_21_fu_5012_p2 add_ln472_22_fu_5028_p2 add_ln472_23_fu_5044_p2 add_ln472_24_fu_5060_p2 add_ln472_25_fu_5076_p2 add_ln472_26_fu_5092_p2 add_ln472_27_fu_5108_p2 add_ln472_28_fu_5124_p2 add_ln472_29_fu_5140_p2 add_ln472_30_fu_5156_p2 add_ln472_31_fu_5172_p2 add_ln472_32_fu_5188_p2 add_ln472_33_fu_5204_p2 add_ln472_34_fu_5220_p2 add_ln472_35_fu_5236_p2 add_ln472_36_fu_5252_p2 add_ln472_37_fu_5268_p2 add_ln472_38_fu_5284_p2 add_ln472_39_fu_5300_p2 add_ln472_40_fu_5316_p2 add_ln472_41_fu_5332_p2 add_ln472_42_fu_5348_p2 add_ln472_43_fu_5364_p2 add_ln472_44_fu_5380_p2 add_ln472_45_fu_5396_p2 add_ln472_46_fu_5412_p2 add_ln472_47_fu_5428_p2 add_ln472_48_fu_5444_p2 add_ln472_49_fu_5460_p2 add_ln472_50_fu_5476_p2 add_ln472_51_fu_5492_p2 add_ln472_52_fu_5508_p2 add_ln472_53_fu_5524_p2 add_ln472_54_fu_5540_p2 add_ln472_55_fu_5556_p2 add_ln472_56_fu_5572_p2 add_ln472_57_fu_5588_p2 add_ln472_58_fu_5604_p2 add_ln472_59_fu_5620_p2 add_ln472_60_fu_5636_p2 add_ln472_61_fu_5652_p2 add_ln472_62_fu_5668_p2 add_ln472_63_fu_5684_p2 add_ln472_64_fu_5700_p2 add_ln472_65_fu_5716_p2 add_ln472_66_fu_5732_p2 add_ln472_67_fu_5748_p2 add_ln472_68_fu_5764_p2 add_ln472_69_fu_5780_p2 add_ln472_70_fu_5796_p2 add_ln472_71_fu_5812_p2 add_ln472_72_fu_5828_p2 add_ln472_73_fu_5844_p2 add_ln472_74_fu_5860_p2 add_ln472_75_fu_5876_p2 add_ln472_76_fu_5892_p2 add_ln472_77_fu_5908_p2 add_ln472_78_fu_5924_p2 add_ln472_79_fu_5940_p2 add_ln472_80_fu_5956_p2 add_ln472_81_fu_5972_p2 add_ln472_82_fu_5988_p2 add_ln472_83_fu_6004_p2 add_ln472_84_fu_6020_p2 add_ln472_85_fu_6036_p2 add_ln472_86_fu_6052_p2 add_ln472_87_fu_6068_p2 add_ln472_88_fu_6084_p2 add_ln472_89_fu_6100_p2 add_ln472_90_fu_6116_p2 add_ln472_91_fu_6132_p2 add_ln472_92_fu_6148_p2 add_ln472_93_fu_6164_p2 add_ln472_94_fu_6180_p2 add_ln472_95_fu_6196_p2 add_ln472_96_fu_6212_p2 add_ln472_97_fu_6228_p2 add_ln472_98_fu_6244_p2 add_ln472_99_fu_6260_p2 add_ln472_100_fu_6276_p2 add_ln472_101_fu_6292_p2 add_ln472_102_fu_6308_p2 add_ln472_103_fu_6324_p2 add_ln472_104_fu_6340_p2 add_ln472_105_fu_6356_p2 add_ln472_106_fu_6372_p2 add_ln472_107_fu_6388_p2 add_ln472_108_fu_6404_p2 add_ln472_109_fu_6420_p2 add_ln472_110_fu_6436_p2 add_ln472_111_fu_6452_p2 add_ln472_112_fu_6468_p2 add_ln472_113_fu_6484_p2 add_ln472_114_fu_6500_p2 add_ln472_115_fu_6516_p2 add_ln472_116_fu_6532_p2 add_ln472_117_fu_6548_p2 add_ln472_118_fu_6564_p2 add_ln472_119_fu_6580_p2 add_ln472_120_fu_6596_p2 add_ln472_121_fu_6612_p2 add_ln472_122_fu_6628_p2 add_ln472_123_fu_6644_p2 add_ln472_124_fu_6660_p2 add_ln472_125_fu_6676_p2 add_ln472_126_fu_6692_p2 add_ln472_127_fu_6708_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_hdv_engine_Pipeline_VITIS_LOOP_929_8_fu_2536</InstName>
+                    <ModuleName>hdv_engine_Pipeline_VITIS_LOOP_929_8</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>2536</ID>
+                    <BindInstances>i_2_fu_72_p2</BindInstances>
+                </Instance>
+            </InstancesList>
+            <BindInstances>add_ln809_fu_8490_p2 p_frame_index_1_fu_8509_p2 add_ln488_fu_8514_p2 add_ln158_fu_9719_p2 similarity_4_fu_9742_p2 add_ln158_2_fu_9756_p2 similarity_7_fu_9776_p2 add_ln158_4_fu_9794_p2 similarity_10_fu_9816_p2 add_ln158_6_fu_9834_p2 similarity_13_fu_9850_p2 add_ln158_8_fu_9868_p2 similarity_16_fu_9886_p2 add_ln158_10_fu_9902_p2 similarity_19_fu_9920_p2 add_ln158_12_fu_9938_p2 similarity_22_fu_9958_p2 add_ln158_14_fu_9976_p2 similarity_25_fu_9994_p2 add_ln158_16_fu_10010_p2 similarity_28_fu_10028_p2 add_ln158_18_fu_10046_p2 similarity_31_fu_10062_p2 add_ln158_20_fu_10080_p2 similarity_34_fu_10098_p2 add_ln158_22_fu_10114_p2 similarity_37_fu_10132_p2 add_ln158_24_fu_10150_p2 similarity_40_fu_10166_p2 add_ln158_26_fu_10184_p2 similarity_43_fu_10202_p2 add_ln158_28_fu_10218_p2 similarity_46_fu_10240_p2 add_ln158_30_fu_10258_p2 similarity_49_fu_10274_p2 add_ln158_32_fu_10292_p2 similarity_52_fu_10310_p2 add_ln158_34_fu_10326_p2 similarity_55_fu_10344_p2 add_ln158_36_fu_10362_p2 similarity_58_fu_10378_p2 add_ln158_38_fu_10396_p2 similarity_61_fu_10414_p2 add_ln158_40_fu_10430_p2 similarity_64_fu_10448_p2 add_ln158_42_fu_10466_p2 similarity_67_fu_10482_p2 add_ln158_44_fu_10500_p2 similarity_70_fu_10518_p2 add_ln158_46_fu_10534_p2 similarity_73_fu_10552_p2 add_ln158_48_fu_10570_p2 similarity_76_fu_10586_p2 add_ln158_50_fu_10604_p2 similarity_79_fu_10622_p2 add_ln158_52_fu_10638_p2 similarity_82_fu_10656_p2 add_ln158_54_fu_10674_p2 similarity_85_fu_10690_p2 add_ln158_56_fu_10708_p2 similarity_88_fu_10726_p2 add_ln158_58_fu_10742_p2 similarity_91_fu_10760_p2 add_ln158_60_fu_10778_p2 similarity_94_fu_10798_p2 add_ln158_62_fu_10816_p2 similarity_97_fu_10834_p2 add_ln158_64_fu_10850_p2 similarity_100_fu_10868_p2 add_ln158_66_fu_10886_p2 similarity_103_fu_10902_p2 add_ln158_68_fu_10920_p2 similarity_106_fu_10938_p2 add_ln158_70_fu_10954_p2 similarity_109_fu_10972_p2 add_ln158_72_fu_10990_p2 similarity_112_fu_11006_p2 add_ln158_74_fu_11024_p2 similarity_115_fu_11042_p2 add_ln158_76_fu_11058_p2 similarity_118_fu_11076_p2 add_ln158_78_fu_11094_p2 similarity_121_fu_11110_p2 add_ln158_80_fu_11128_p2 similarity_124_fu_11146_p2 add_ln158_82_fu_11162_p2 similarity_127_fu_11180_p2 add_ln158_84_fu_11198_p2 similarity_130_fu_11214_p2 add_ln158_86_fu_11232_p2 similarity_133_fu_11250_p2 add_ln158_88_fu_11266_p2 similarity_136_fu_11284_p2 add_ln158_90_fu_11302_p2 similarity_139_fu_11318_p2 add_ln158_92_fu_11336_p2 similarity_142_fu_11354_p2 add_ln158_94_fu_11370_p2 similarity_145_fu_11388_p2 add_ln158_96_fu_11406_p2 similarity_148_fu_11422_p2 add_ln158_98_fu_11440_p2 similarity_151_fu_11458_p2 add_ln158_100_fu_11474_p2 similarity_154_fu_11492_p2 add_ln158_102_fu_11510_p2 similarity_157_fu_11526_p2 add_ln158_104_fu_11544_p2 similarity_160_fu_11562_p2 add_ln158_106_fu_11578_p2 similarity_163_fu_11596_p2 add_ln158_108_fu_11614_p2 similarity_166_fu_11630_p2 add_ln158_110_fu_11648_p2 similarity_169_fu_11666_p2 add_ln158_112_fu_11682_p2 similarity_172_fu_11700_p2 add_ln158_114_fu_11718_p2 similarity_175_fu_11734_p2 add_ln158_116_fu_11752_p2 similarity_178_fu_11770_p2 add_ln158_118_fu_11786_p2 similarity_181_fu_11804_p2 add_ln158_120_fu_11822_p2 similarity_184_fu_11838_p2 add_ln158_122_fu_11856_p2 similarity_187_fu_11874_p2 add_ln158_124_fu_11890_p2 similarity_190_fu_11912_p2 add_ln888_fu_11952_p2</BindInstances>
+        </TopModule>
+    </RTLDesignHierarchy>
+    <ModuleInformation>
+        <Module>
+            <Name>hdv_engine_Pipeline_VITIS_LOOP_286_1</Name>
+            <Loops>
+                <VITIS_LOOP_286_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>5.00</TargetClockPeriod>
+                    <ClockUncertainty>1.35</ClockUncertainty>
+                    <EstimatedClockPeriod>0.000</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>undef</Best-caseLatency>
+                    <Average-caseLatency>undef</Average-caseLatency>
+                    <Worst-caseLatency>undef</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>undef</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_286_1>
+                        <Name>VITIS_LOOP_286_1</Name>
+                        <Slack>3.65</Slack>
+                        <TripCount>undef</TripCount>
+                        <Latency>undef</Latency>
+                        <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>1</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_286_1>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>2</FF>
+                    <AVAIL_FF>548160</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>22</LUT>
+                    <AVAIL_LUT>274080</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>1824</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>2520</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+        </Module>
+        <Module>
+            <Name>hdv_engine_Pipeline_VITIS_LOOP_294_2</Name>
+            <Loops>
+                <VITIS_LOOP_294_2/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>5.00</TargetClockPeriod>
+                    <ClockUncertainty>1.35</ClockUncertainty>
+                    <EstimatedClockPeriod>0.975</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>5</Best-caseLatency>
+                    <Average-caseLatency>5</Average-caseLatency>
+                    <Worst-caseLatency>5</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>25.000 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>25.000 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>25.000 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>5</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_294_2>
+                        <Name>VITIS_LOOP_294_2</Name>
+                        <Slack>3.65</Slack>
+                        <TripCount>3</TripCount>
+                        <Latency>3</Latency>
+                        <AbsoluteTimeLatency>15.000 ns</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>1</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_294_2>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>4</FF>
+                    <AVAIL_FF>548160</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>45</LUT>
+                    <AVAIL_LUT>274080</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>1824</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>2520</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_294_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln294_fu_48_p2" SOURCE="./../src/hw/hls_xilinx/main.cpp:294" URAM="0" VARIABLE="add_ln294"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>hdv_engine_Pipeline_VITIS_LOOP_929_8</Name>
+            <Loops>
+                <VITIS_LOOP_929_8/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>5.00</TargetClockPeriod>
+                    <ClockUncertainty>1.35</ClockUncertainty>
+                    <EstimatedClockPeriod>1.848</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>5</Best-caseLatency>
+                    <Average-caseLatency>5</Average-caseLatency>
+                    <Worst-caseLatency>5</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>25.000 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>25.000 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>25.000 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>5</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_929_8>
+                        <Name>VITIS_LOOP_929_8</Name>
+                        <Slack>3.65</Slack>
+                        <TripCount>3</TripCount>
+                        <Latency>3</Latency>
+                        <AbsoluteTimeLatency>15.000 ns</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>1</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_929_8>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>4</FF>
+                    <AVAIL_FF>548160</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>139</LUT>
+                    <AVAIL_LUT>274080</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>1824</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>2520</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_929_8" OPTYPE="add" PRAGMA="" RTLNAME="i_2_fu_72_p2" SOURCE="./../src/hw/hls_xilinx/main.cpp:929" URAM="0" VARIABLE="i_2"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>hdv_engine_Pipeline_VITIS_LOOP_511_4</Name>
+            <Loops>
+                <VITIS_LOOP_511_4/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>5.00</TargetClockPeriod>
+                    <ClockUncertainty>1.35</ClockUncertainty>
+                    <EstimatedClockPeriod>1.443</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>4</Best-caseLatency>
+                    <Average-caseLatency>4</Average-caseLatency>
+                    <Worst-caseLatency>4</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>20.000 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>20.000 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>20.000 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>4</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_511_4>
+                        <Name>VITIS_LOOP_511_4</Name>
+                        <Slack>3.65</Slack>
+                        <TripCount>2</TripCount>
+                        <Latency>2</Latency>
+                        <AbsoluteTimeLatency>10.000 ns</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>1</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_511_4>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>132</FF>
+                    <AVAIL_FF>548160</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>7097</LUT>
+                    <AVAIL_LUT>274080</AVAIL_LUT>
+                    <UTIL_LUT>2</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>1824</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>2520</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="state_2_fu_3120_p2" SOURCE="./../src/hw/hls_xilinx/main.cpp:511" URAM="0" VARIABLE="state_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_fu_4676_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_1_fu_4692_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_2_fu_4708_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_3_fu_4724_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_4_fu_4740_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_5_fu_4756_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_6_fu_4772_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_7_fu_4788_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_8_fu_4804_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_8"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_9_fu_4820_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_9"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_10_fu_4836_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_10"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_11_fu_4852_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_11"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_12_fu_4868_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_12"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_13_fu_4884_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_13"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_14_fu_4900_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_14"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_15_fu_4916_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_15"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_16_fu_4932_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_16"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_17_fu_4948_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_17"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_18_fu_4964_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_18"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_19_fu_4980_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_19"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_20_fu_4996_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_20"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_21_fu_5012_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_21"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_22_fu_5028_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_22"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_23_fu_5044_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_23"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_24_fu_5060_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_24"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_25_fu_5076_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_25"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_26_fu_5092_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_26"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_27_fu_5108_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_27"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_28_fu_5124_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_28"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_29_fu_5140_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_29"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_30_fu_5156_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_30"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_31_fu_5172_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_31"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_32_fu_5188_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_32"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_33_fu_5204_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_33"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_34_fu_5220_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_34"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_35_fu_5236_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_35"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_36_fu_5252_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_36"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_37_fu_5268_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_37"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_38_fu_5284_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_38"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_39_fu_5300_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_39"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_40_fu_5316_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_40"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_41_fu_5332_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_41"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_42_fu_5348_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_42"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_43_fu_5364_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_43"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_44_fu_5380_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_44"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_45_fu_5396_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_45"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_46_fu_5412_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_46"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_47_fu_5428_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_47"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_48_fu_5444_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_48"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_49_fu_5460_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_49"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_50_fu_5476_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_50"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_51_fu_5492_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_51"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_52_fu_5508_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_52"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_53_fu_5524_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_53"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_54_fu_5540_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_54"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_55_fu_5556_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_55"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_56_fu_5572_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_56"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_57_fu_5588_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_57"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_58_fu_5604_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_58"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_59_fu_5620_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_59"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_60_fu_5636_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_60"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_61_fu_5652_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_61"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_62_fu_5668_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_62"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_63_fu_5684_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_63"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_64_fu_5700_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_64"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_65_fu_5716_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_65"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_66_fu_5732_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_66"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_67_fu_5748_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_67"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_68_fu_5764_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_68"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_69_fu_5780_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_69"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_70_fu_5796_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_70"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_71_fu_5812_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_71"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_72_fu_5828_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_72"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_73_fu_5844_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_73"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_74_fu_5860_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_74"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_75_fu_5876_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_75"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_76_fu_5892_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_76"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_77_fu_5908_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_77"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_78_fu_5924_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_78"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_79_fu_5940_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_79"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_80_fu_5956_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_80"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_81_fu_5972_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_81"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_82_fu_5988_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_82"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_83_fu_6004_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_83"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_84_fu_6020_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_84"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_85_fu_6036_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_85"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_86_fu_6052_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_86"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_87_fu_6068_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_87"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_88_fu_6084_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_88"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_89_fu_6100_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_89"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_90_fu_6116_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_90"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_91_fu_6132_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_91"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_92_fu_6148_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_92"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_93_fu_6164_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_93"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_94_fu_6180_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_94"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_95_fu_6196_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_95"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_96_fu_6212_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_96"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_97_fu_6228_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_97"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_98_fu_6244_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_98"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_99_fu_6260_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_99"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_100_fu_6276_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_100"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_101_fu_6292_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_101"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_102_fu_6308_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_102"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_103_fu_6324_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_103"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_104_fu_6340_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_104"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_105_fu_6356_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_105"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_106_fu_6372_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_106"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_107_fu_6388_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_107"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_108_fu_6404_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_108"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_109_fu_6420_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_109"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_110_fu_6436_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_110"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_111_fu_6452_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_111"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_112_fu_6468_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_112"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_113_fu_6484_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_113"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_114_fu_6500_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_114"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_115_fu_6516_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_115"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_116_fu_6532_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_116"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_117_fu_6548_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_117"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_118_fu_6564_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_118"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_119_fu_6580_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_119"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_120_fu_6596_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_120"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_121_fu_6612_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_121"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_122_fu_6628_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_122"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_123_fu_6644_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_123"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_124_fu_6660_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_124"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_125_fu_6676_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_125"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_126_fu_6692_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_126"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_511_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln472_127_fu_6708_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:472" URAM="0" VARIABLE="add_ln472_127"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>hdv_engine</Name>
+            <Loops>
+                <VITIS_LOOP_809_6/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>5.00</TargetClockPeriod>
+                    <ClockUncertainty>1.35</ClockUncertainty>
+                    <EstimatedClockPeriod>3.609</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>undef</Best-caseLatency>
+                    <Average-caseLatency>undef</Average-caseLatency>
+                    <Worst-caseLatency>undef</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>undef</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_809_6>
+                        <Name>VITIS_LOOP_809_6</Name>
+                        <Slack>3.65</Slack>
+                        <TripCount>3</TripCount>
+                        <Latency>6 ~ 147</Latency>
+                        <AbsoluteTimeLatency>30.000 ns ~ 0.735 us</AbsoluteTimeLatency>
+                        <IterationLatency>
+                            <range>
+                                <min>2</min>
+                                <max>49</max>
+                            </range>
+                        </IterationLatency>
+                        <PipelineDepth>2 ~ 49</PipelineDepth>
+                        <PipelineType>no</PipelineType>
+                        <InstanceList>
+                            <Instance>grp_hdv_engine_Pipeline_VITIS_LOOP_929_8_fu_2536</Instance>
+                        </InstanceList>
+                    </VITIS_LOOP_809_6>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>5738</FF>
+                    <AVAIL_FF>548160</AVAIL_FF>
+                    <UTIL_FF>1</UTIL_FF>
+                    <LUT>17339</LUT>
+                    <AVAIL_LUT>274080</AVAIL_LUT>
+                    <UTIL_LUT>6</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>1824</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>2520</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln809_fu_8490_p2" SOURCE="./../src/hw/hls_xilinx/main.cpp:809" URAM="0" VARIABLE="add_ln809"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="p_frame_index_1_fu_8509_p2" SOURCE="./../src/hw/hls_xilinx/main.cpp:813" URAM="0" VARIABLE="p_frame_index_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln488_fu_8514_p2" SOURCE="./../src/hw/hls_xilinx/main.cpp:488" URAM="0" VARIABLE="add_ln488"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_fu_9719_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_4_fu_9742_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_2_fu_9756_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_7_fu_9776_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_4_fu_9794_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_10_fu_9816_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_10"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_6_fu_9834_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_13_fu_9850_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_13"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_8_fu_9868_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_8"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_16_fu_9886_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_16"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_10_fu_9902_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_10"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_19_fu_9920_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_19"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_12_fu_9938_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_12"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_22_fu_9958_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_22"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_14_fu_9976_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_14"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_25_fu_9994_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_25"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_16_fu_10010_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_16"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_28_fu_10028_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_28"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_18_fu_10046_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_18"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_31_fu_10062_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_31"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_20_fu_10080_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_20"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_34_fu_10098_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_34"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_22_fu_10114_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_22"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_37_fu_10132_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_37"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_24_fu_10150_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_24"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_40_fu_10166_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_40"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_26_fu_10184_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_26"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_43_fu_10202_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_43"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_28_fu_10218_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_28"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_46_fu_10240_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_46"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_30_fu_10258_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_30"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_49_fu_10274_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_49"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_32_fu_10292_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_32"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_52_fu_10310_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_52"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_34_fu_10326_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_34"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_55_fu_10344_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_55"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_36_fu_10362_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_36"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_58_fu_10378_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_58"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_38_fu_10396_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_38"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_61_fu_10414_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_61"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_40_fu_10430_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_40"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_64_fu_10448_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_64"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_42_fu_10466_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_42"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_67_fu_10482_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_67"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_44_fu_10500_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_44"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_70_fu_10518_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_70"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_46_fu_10534_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_46"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_73_fu_10552_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_73"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_48_fu_10570_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_48"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_76_fu_10586_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_76"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_50_fu_10604_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_50"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_79_fu_10622_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_79"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_52_fu_10638_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_52"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_82_fu_10656_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_82"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_54_fu_10674_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_54"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_85_fu_10690_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_85"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_56_fu_10708_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_56"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_88_fu_10726_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_88"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_58_fu_10742_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_58"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_91_fu_10760_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_91"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_60_fu_10778_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_60"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_94_fu_10798_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_94"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_62_fu_10816_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_62"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_97_fu_10834_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_97"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_64_fu_10850_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_64"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_100_fu_10868_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_100"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_66_fu_10886_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_66"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_103_fu_10902_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_103"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_68_fu_10920_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_68"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_106_fu_10938_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_106"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_70_fu_10954_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_70"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_109_fu_10972_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_109"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_72_fu_10990_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_72"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_112_fu_11006_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_112"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_74_fu_11024_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_74"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_115_fu_11042_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_115"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_76_fu_11058_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_76"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_118_fu_11076_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_118"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_78_fu_11094_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_78"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_121_fu_11110_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_121"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_80_fu_11128_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_80"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_124_fu_11146_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_124"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_82_fu_11162_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_82"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_127_fu_11180_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_127"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_84_fu_11198_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_84"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_130_fu_11214_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_130"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_86_fu_11232_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_86"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_133_fu_11250_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_133"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_88_fu_11266_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_88"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_136_fu_11284_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_136"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_90_fu_11302_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_90"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_139_fu_11318_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_139"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_92_fu_11336_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_92"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_142_fu_11354_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_142"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_94_fu_11370_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_94"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_145_fu_11388_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_145"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_96_fu_11406_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_96"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_148_fu_11422_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_148"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_98_fu_11440_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_98"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_151_fu_11458_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_151"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_100_fu_11474_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_100"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_154_fu_11492_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_154"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_102_fu_11510_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_102"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_157_fu_11526_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_157"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_104_fu_11544_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_104"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_160_fu_11562_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_160"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_106_fu_11578_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_106"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_163_fu_11596_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_163"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_108_fu_11614_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_108"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_166_fu_11630_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_166"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_110_fu_11648_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_110"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_169_fu_11666_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_169"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_112_fu_11682_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_112"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_172_fu_11700_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_172"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_114_fu_11718_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_114"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_175_fu_11734_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_175"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_116_fu_11752_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_116"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_178_fu_11770_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_178"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_118_fu_11786_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_118"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_181_fu_11804_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_181"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_120_fu_11822_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_120"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_184_fu_11838_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_184"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_122_fu_11856_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_122"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_187_fu_11874_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_187"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_124_fu_11890_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="add_ln158_124"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="similarity_190_fu_11912_p2" SOURCE="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:158" URAM="0" VARIABLE="similarity_190"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_809_6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln888_fu_11952_p2" SOURCE="./../src/hw/hls_xilinx/main.cpp:888" URAM="0" VARIABLE="add_ln888"/>
+            </BindNodes>
+        </Module>
+    </ModuleInformation>
+    <FIFOInformation/>
+    <UserConfigCommands/>
+    <Args>
+        <Arg ArgName="nrst_i" index="0" direction="in" srcType="bool&amp;" srcSize="1">
+            <hwRefs>
+                <hwRef type="port" interface="nrst_i" name="nrst_i" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="op_mode_i" index="1" direction="in" srcType="" srcSize="16">
+            <hwRefs>
+                <hwRef type="port" interface="op_mode_i" name="op_mode_i" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="frame_in" index="2" direction="in" srcType="" srcSize="48">
+            <hwRefs>
+                <hwRef type="port" interface="frame_in" name="frame_in" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="sdata_i" index="3" direction="in" srcType="stream&lt;hls::axis&lt;ap_uint&lt;8&gt;, 1, 1, 1&gt;, 0&gt;&amp;" srcSize="56">
+            <hwRefs>
+                <hwRef type="interface" interface="sdata_i" name="" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="chv_i" index="4" direction="in" srcType="&amp;" srcSize="3072">
+            <hwRefs>
+                <hwRef type="port" interface="chv_i" name="chv_i" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="bhv_i" index="5" direction="in" srcType="&amp;" srcSize="1024">
+            <hwRefs>
+                <hwRef type="port" interface="bhv_i" name="bhv_i" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="lhv_i" index="6" direction="in" srcType="&amp;" srcSize="1024">
+            <hwRefs>
+                <hwRef type="port" interface="lhv_i" name="lhv_i" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="pred_class_o" index="7" direction="out" srcType="*" srcSize="8">
+            <hwRefs>
+                <hwRef type="port" interface="pred_class_o" name="pred_class_o" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="status_o" index="8" direction="out" srcType="*" srcSize="8">
+            <hwRefs>
+                <hwRef type="port" interface="status_o" name="status_o" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+    </Args>
+    <Interfaces>
+        <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
+            <busParams>
+                <busParam busParamName="ASSOCIATED_BUSIF">sdata_i</busParam>
+                <busParam busParamName="ASSOCIATED_RESET">ap_rst_n</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_clk">CLK</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_clk</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_rst_n" type="reset" busTypeName="reset" mode="slave">
+            <busParams>
+                <busParam busParamName="POLARITY">ACTIVE_LOW</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_rst_n">RST</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_rst_n</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_ctrl" type="ap_ctrl" busTypeName="acc_handshake" mode="slave">
+            <portMaps>
+                <portMap portMapName="ap_start">start</portMap>
+                <portMap portMapName="ap_done">done</portMap>
+                <portMap portMapName="ap_idle">idle</portMap>
+                <portMap portMapName="ap_ready">ready</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_done</port>
+                <port>ap_idle</port>
+                <port>ap_ready</port>
+                <port>ap_start</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="nrst_i" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="1">
+            <portMaps>
+                <portMap portMapName="nrst_i">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>nrst_i</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="nrst_i"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="op_mode_i" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="16">
+            <portMaps>
+                <portMap portMapName="op_mode_i">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>op_mode_i</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="op_mode_i"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="frame_in" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="48">
+            <portMaps>
+                <portMap portMapName="frame_in">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>frame_in</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="frame_in"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="sdata_i" type="axi4stream" busTypeName="axis" mode="slave" dataWidth="8" portPrefix="sdata_i_">
+            <ports>
+                <port>sdata_i_TDATA</port>
+                <port>sdata_i_TDEST</port>
+                <port>sdata_i_TID</port>
+                <port>sdata_i_TKEEP</port>
+                <port>sdata_i_TLAST</port>
+                <port>sdata_i_TREADY</port>
+                <port>sdata_i_TSTRB</port>
+                <port>sdata_i_TUSER</port>
+                <port>sdata_i_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="0" register_mode="both" argName="sdata_i"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="chv_i" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="384">
+            <portMaps>
+                <portMap portMapName="chv_i">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>chv_i</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="chv_i"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="bhv_i" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="128">
+            <portMaps>
+                <portMap portMapName="bhv_i">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>bhv_i</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="bhv_i"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="lhv_i" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="128">
+            <portMaps>
+                <portMap portMapName="lhv_i">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>lhv_i</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="lhv_i"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="pred_class_o" type="data" busTypeName="data" protocol="ap_none" mode="master" dataWidth="6">
+            <portMaps>
+                <portMap portMapName="pred_class_o">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>pred_class_o</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="pred_class_o"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="status_o" type="data" busTypeName="data" protocol="ap_none" mode="master" dataWidth="5">
+            <portMaps>
+                <portMap portMapName="status_o">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>status_o</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="status_o"/>
+            </constraints>
+        </Interface>
+    </Interfaces>
+    <ReportHWInterface>
+        <section name="HW Interfaces" level="0">
+            <item name="AXIS">
+                <table>
+                    <keys size="12">Interface, Direction, Register Mode, TDATA, TDEST, TID, TKEEP, TLAST, TREADY, TSTRB, TUSER, TVALID</keys>
+                    <column name="sdata_i">in, both, 8, 1, 1, 1, 1, 1, 1, 1, 1</column>
+                </table>
+            </item>
+            <item name="Other Ports">
+                <table>
+                    <keys size="4">Port, Mode, Direction, Bitwidth</keys>
+                    <column name="bhv_i">ap_none, in, 128</column>
+                    <column name="chv_i">ap_none, in, 384</column>
+                    <column name="frame_in">ap_none, in, 48</column>
+                    <column name="lhv_i">ap_none, in, 128</column>
+                    <column name="nrst_i">ap_none, in, 1</column>
+                    <column name="op_mode_i">ap_none, in, 16</column>
+                    <column name="pred_class_o">ap_none, out, 6</column>
+                    <column name="status_o">ap_none, out, 5</column>
+                </table>
+            </item>
+            <item name="TOP LEVEL CONTROL">
+                <table>
+                    <keys size="3">Interface, Type, Ports</keys>
+                    <column name="ap_clk">clock, ap_clk</column>
+                    <column name="ap_rst_n">reset, ap_rst_n</column>
+                    <column name="ap_ctrl">ap_ctrl_hs, ap_done ap_idle ap_ready ap_start</column>
+                </table>
+            </item>
+        </section>
+    </ReportHWInterface>
+    <ReportSWInterface>
+        <section name="SW I/O Information" level="0">
+            <item name="Top Function Arguments">
+                <table>
+                    <keys size="3">Argument, Direction, Datatype</keys>
+                    <column name="nrst_i">in, bool&amp;</column>
+                    <column name="op_mode_i">in, </column>
+                    <column name="frame_in">in, </column>
+                    <column name="sdata_i">in, stream&lt;hls::axis&lt;ap_uint&lt;8&gt; 1 1 1&gt; 0&gt;&amp;</column>
+                    <column name="chv_i">in, &amp;</column>
+                    <column name="bhv_i">in, &amp;</column>
+                    <column name="lhv_i">in, &amp;</column>
+                    <column name="pred_class_o">out, pointer</column>
+                    <column name="status_o">out, pointer</column>
+                </table>
+            </item>
+            <item name="SW-to-HW Mapping">
+                <table>
+                    <keys size="3">Argument, HW Interface, HW Type</keys>
+                    <column name="nrst_i">nrst_i, port</column>
+                    <column name="op_mode_i">op_mode_i, port</column>
+                    <column name="frame_in">frame_in, port</column>
+                    <column name="sdata_i">sdata_i, interface</column>
+                    <column name="chv_i">chv_i, port</column>
+                    <column name="bhv_i">bhv_i, port</column>
+                    <column name="lhv_i">lhv_i, port</column>
+                    <column name="pred_class_o">pred_class_o, port</column>
+                    <column name="status_o">status_o, port</column>
+                </table>
+            </item>
+        </section>
+    </ReportSWInterface>
+    <ResolutionUrl key="ZZZ">www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=ZZZ.html</ResolutionUrl>
+    <ReportBurst>
+        <section name="M_AXI Burst Information" level="0" HEADER_NOTE="Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings."/>
+    </ReportBurst>
+    <PragmaReport>
+        <Pragma type="pipeline" location="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/../headers/sqrt_approx.hpp:46" status="valid" parentFunction="compute" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/./../../lib/hdc_lib/operations.hpp:12" status="valid" parentFunction="add" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/./../../lib/hdc_lib/operations.hpp:14" status="valid" parentFunction="add" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/./../../lib/hdc_lib/operations.hpp:20" status="valid" parentFunction="multiply" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/./../../lib/hdc_lib/operations.hpp:22" status="valid" parentFunction="multiply" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/./../../lib/hdc_lib/operations.hpp:28" status="valid" parentFunction="xor_op" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/./../../lib/hdc_lib/operations.hpp:30" status="valid" parentFunction="xor_op" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/./../../lib/hdc_lib/operations.hpp:36" status="valid" parentFunction="xnor_op" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/./../../lib/hdc_lib/operations.hpp:38" status="valid" parentFunction="xnor_op" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/./../../lib/hdc_lib/operations.hpp:44" status="valid" parentFunction="or_op" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/./../../lib/hdc_lib/operations.hpp:46" status="valid" parentFunction="or_op" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/./../../lib/hdc_lib/operations.hpp:52" status="valid" parentFunction="nand_op" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/./../../lib/hdc_lib/operations.hpp:54" status="valid" parentFunction="nand_op" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:126" status="valid" parentFunction="similarity_phase1" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:133" status="valid" parentFunction="similarity_phase1" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:136" status="valid" parentFunction="similarity_phase1" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:280" status="valid" parentFunction="similarity_phase2" variable="" isDirective="0" options=""/>
+        <Pragma type="array_partition" location="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:368" status="valid" parentFunction="bind" variable="Binded_HV" isDirective="0" options="variable=Binded_HV complete"/>
+        <Pragma type="inline" location="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:370" status="valid" parentFunction="bind" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:373" status="valid" parentFunction="bind" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:398" status="valid" parentFunction="permute" variable="" isDirective="0" options=""/>
+        <Pragma type="array_partition" location="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:453" status="valid" parentFunction="bundle" variable="HV2" isDirective="0" options="variable=HV2 complete"/>
+        <Pragma type="inline" location="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:455" status="valid" parentFunction="bundle" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:462" status="valid" parentFunction="bundle" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:465" status="valid" parentFunction="bundle" variable="" isDirective="0" options=""/>
+        <Pragma type="array_partition" location="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:530" status="valid" parentFunction="clip" variable="clipped_HV" isDirective="0" options="variable=clipped_HV complete"/>
+        <Pragma type="inline" location="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:534" status="valid" parentFunction="clip" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:550" status="valid" parentFunction="clip" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:608" status="valid" parentFunction="clip" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:628" status="valid" parentFunction="clip" variable="" isDirective="0" options=""/>
+        <Pragma type="array_partition" location="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:665" status="valid" parentFunction="generate_basehvs" variable="baseVector" isDirective="0" options="variable=baseVector complete"/>
+        <Pragma type="array_partition" location="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:717" status="valid" parentFunction="generate_levelhvs" variable="levelVector" isDirective="0" options="variable=levelVector complete"/>
+        <Pragma type="unroll" location="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:854" status="valid" parentFunction="random_hv" variable="" isDirective="0" options=""/>
+        <Pragma type="interface" location="./../src/hw/hls_xilinx/main.cpp:146" status="valid" parentFunction="hdv_engine" variable="" isDirective="0" options="ap_none port = nrst_i"/>
+        <Pragma type="interface" location="./../src/hw/hls_xilinx/main.cpp:149" status="valid" parentFunction="hdv_engine" variable="" isDirective="0" options="axis port = sdata_i depth = 1"/>
+        <Pragma type="interface" location="./../src/hw/hls_xilinx/main.cpp:156" status="valid" parentFunction="hdv_engine" variable="" isDirective="0" options="ap_none port = chv_i"/>
+        <Pragma type="interface" location="./../src/hw/hls_xilinx/main.cpp:159" status="valid" parentFunction="hdv_engine" variable="" isDirective="0" options="ap_none port = bhv_i"/>
+        <Pragma type="interface" location="./../src/hw/hls_xilinx/main.cpp:162" status="valid" parentFunction="hdv_engine" variable="" isDirective="0" options="ap_none port = lhv_i"/>
+        <Pragma type="interface" location="./../src/hw/hls_xilinx/main.cpp:177" status="valid" parentFunction="hdv_engine" variable="" isDirective="0" options="ap_none port = pred_class_o"/>
+        <Pragma type="aggregate" location="./../src/hw/hls_xilinx/main.cpp:178" status="valid" parentFunction="hdv_engine" variable="" isDirective="0" options="compact=bit variable = pred_class_o"/>
+        <Pragma type="interface" location="./../src/hw/hls_xilinx/main.cpp:198" status="valid" parentFunction="hdv_engine" variable="" isDirective="0" options="ap_none port = status_o"/>
+        <Pragma type="aggregate" location="./../src/hw/hls_xilinx/main.cpp:199" status="valid" parentFunction="hdv_engine" variable="" isDirective="0" options="compact=bit variable = status_o"/>
+        <Pragma type="array_partition" location="./../src/hw/hls_xilinx/main.cpp:258" status="valid" parentFunction="hdv_engine" variable="" isDirective="0" options="variable = _bhv_i complete"/>
+        <Pragma type="array_partition" location="./../src/hw/hls_xilinx/main.cpp:259" status="valid" parentFunction="hdv_engine" variable="" isDirective="0" options="variable = _lhv_i complete"/>
+        <Pragma type="array_partition" location="./../src/hw/hls_xilinx/main.cpp:260" status="valid" parentFunction="hdv_engine" variable="" isDirective="0" options="variable = _lhv_i0 complete"/>
+        <Pragma type="array_partition" location="./../src/hw/hls_xilinx/main.cpp:261" status="valid" parentFunction="hdv_engine" variable="" isDirective="0" options="variable = _lhv_i1 complete"/>
+        <Pragma type="array_partition" location="./../src/hw/hls_xilinx/main.cpp:262" status="valid" parentFunction="hdv_engine" variable="" isDirective="0" options="variable = _chv_i complete"/>
+        <Pragma type="array_partition" location="./../src/hw/hls_xilinx/main.cpp:263" status="valid" parentFunction="hdv_engine" variable="" isDirective="0" options="variable = _bhv complete"/>
+        <Pragma type="array_partition" location="./../src/hw/hls_xilinx/main.cpp:264" status="valid" parentFunction="hdv_engine" variable="" isDirective="0" options="variable = _lhv complete"/>
+        <Pragma type="array_partition" location="./../src/hw/hls_xilinx/main.cpp:265" status="valid" parentFunction="hdv_engine" variable="" isDirective="0" options="variable = _chv complete"/>
+        <Pragma type="array_partition" location="./../src/hw/hls_xilinx/main.cpp:266" status="valid" parentFunction="hdv_engine" variable="" isDirective="0" options="variable = _n_gram_idx complete"/>
+        <Pragma type="array_partition" location="./../src/hw/hls_xilinx/main.cpp:267" status="valid" parentFunction="hdv_engine" variable="" isDirective="0" options="variable = BundledHV complete"/>
+        <Pragma type="array_partition" location="./../src/hw/hls_xilinx/main.cpp:268" status="valid" parentFunction="hdv_engine" variable="" isDirective="0" options="variable = Clipped_BundledHV complete"/>
+        <Pragma type="array_partition" location="./../src/hw/hls_xilinx/main.cpp:269" status="valid" parentFunction="hdv_engine" variable="" isDirective="0" options="variable = Encoded_HV complete"/>
+        <Pragma type="array_partition" location="./../src/hw/hls_xilinx/main.cpp:270" status="valid" parentFunction="hdv_engine" variable="" isDirective="0" options="variable = similarity_classes complete"/>
+        <Pragma type="array_partition" location="./../src/hw/hls_xilinx/main.cpp:271" status="valid" parentFunction="hdv_engine" variable="" isDirective="0" options="variable = Binded_Features complete"/>
+        <Pragma type="dependence" location="./../src/hw/hls_xilinx/main.cpp:272" status="valid" parentFunction="hdv_engine" variable="" isDirective="0" options="variable = BundledHV type=inter distance=1 true"/>
+        <Pragma type="dependence" location="./../src/hw/hls_xilinx/main.cpp:273" status="valid" parentFunction="hdv_engine" variable="" isDirective="0" options="variable = Clipped_BundledHV type=inter distance=1 true"/>
+        <Pragma type="dependence" location="./../src/hw/hls_xilinx/main.cpp:274" status="valid" parentFunction="hdv_engine" variable="" isDirective="0" options="variable = similarity_classes type=inter distance=16 true"/>
+        <Pragma type="dependence" location="./../src/hw/hls_xilinx/main.cpp:275" status="warning" parentFunction="hdv_engine" variable="" isDirective="0" options="variable = similarity_max type=inter distance=16 true">
+            <Msg msg_id="214-199" msg_severity="WARNING" msg_body="Ignoring dependence pragma on local scalar variable 'similarity_max'."/>
+        </Pragma>
+        <Pragma type="inline" location="./../src/hw/hls_xilinx/main.cpp:278" status="valid" parentFunction="hdv_engine" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="./../src/hw/hls_xilinx/main.cpp:282" status="valid" parentFunction="hdv_engine" variable="" isDirective="0" options="recursive"/>
+        <Pragma type="inline" location="./../src/hw/hls_xilinx/main.cpp:311" status="valid" parentFunction="hdv_engine" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="./../src/hw/hls_xilinx/main.cpp:366" status="valid" parentFunction="hdv_engine" variable="" isDirective="0" options="recursive"/>
+        <Pragma type="inline" location="./../src/hw/hls_xilinx/main.cpp:493" status="valid" parentFunction="hdv_engine" variable="" isDirective="0" options="recursive"/>
+        <Pragma type="unroll" location="./../src/hw/hls_xilinx/main.cpp:507" status="warning" parentFunction="hdv_engine" variable="" isDirective="0" options="">
+            <Msg msg_id="207-5575" msg_severity="WARNING" msg_body="'#pragma HLS unroll' can only be applied inside loop body"/>
+        </Pragma>
+        <Pragma type="inline" location="./../src/hw/hls_xilinx/main.cpp:510" status="valid" parentFunction="hdv_engine" variable="" isDirective="0" options="recursive"/>
+        <Pragma type="pipeline" location="./../src/hw/hls_xilinx/main.cpp:513" status="valid" parentFunction="hdv_engine" variable="" isDirective="0" options="II = 5"/>
+        <Pragma type="inline" location="./../src/hw/hls_xilinx/main.cpp:520" status="valid" parentFunction="hdv_engine" variable="" isDirective="0" options="recursive"/>
+        <Pragma type="inline" location="./../src/hw/hls_xilinx/main.cpp:554" status="valid" parentFunction="hdv_engine" variable="" isDirective="0" options="recursive"/>
+        <Pragma type="inline" location="./../src/hw/hls_xilinx/main.cpp:629" status="valid" parentFunction="hdv_engine" variable="" isDirective="0" options="recursive"/>
+        <Pragma type="inline" location="./../src/hw/hls_xilinx/main.cpp:641" status="valid" parentFunction="hdv_engine" variable="" isDirective="0" options="recursive"/>
+        <Pragma type="unroll" location="./../src/hw/hls_xilinx/main.cpp:645" status="valid" parentFunction="hdv_engine" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="./../src/hw/hls_xilinx/main.cpp:672" status="valid" parentFunction="hdv_engine" variable="" isDirective="0" options="recursive"/>
+        <Pragma type="inline" location="./../src/hw/hls_xilinx/main.cpp:734" status="valid" parentFunction="hdv_engine" variable="" isDirective="0" options=""/>
+        <Pragma type="inline" location="./../src/hw/hls_xilinx/main.cpp:808" status="valid" parentFunction="hdv_engine" variable="" isDirective="0" options="recursive"/>
+        <Pragma type="unroll" location="./../src/hw/hls_xilinx/main.cpp:811" status="warning" parentFunction="hdv_engine" variable="" isDirective="0" options="">
+            <Msg msg_id="207-5575" msg_severity="WARNING" msg_body="'#pragma HLS unroll' can only be applied inside loop body"/>
+        </Pragma>
+        <Pragma type="inline" location="./../src/hw/hls_xilinx/main.cpp:815" status="valid" parentFunction="hdv_engine" variable="" isDirective="0" options="recursive"/>
+        <Pragma type="pipeline" location="./../src/hw/hls_xilinx/main.cpp:835" status="warning" parentFunction="hdv_engine" variable="" isDirective="0" options="II=5">
+            <Msg msg_id="207-5564" msg_severity="WARNING" msg_body="Only for/while/do loop or function body support the pipeline pragma"/>
+        </Pragma>
+        <Pragma type="inline" location="./../src/hw/hls_xilinx/main.cpp:908" status="valid" parentFunction="hdv_engine" variable="" isDirective="0" options="recursive"/>
+        <Pragma type="pipeline" location="./../src/hw/hls_xilinx/main.cpp:918" status="valid" parentFunction="hdv_engine" variable="" isDirective="0" options="II=3"/>
+        <Pragma type="pipeline" location="./../src/hw/hls_xilinx/main.cpp:931" status="valid" parentFunction="hdv_engine" variable="" isDirective="0" options="II=1"/>
+    </PragmaReport>
+    <AutoPragmaReport>
+        <AutoPragma type="array_partition" parentFunction="hdv_engine" options="dim=1 type=cyclic factor=13 variable=_bhv_i599" pragmaLocId="./../src/hw/hls_xilinx/main.cpp:0:1" srcPragmaType="pipeline" srcPragmaLoc="./../src/hw/hls_xilinx/main.cpp:513" srcPragmaSource="pragma" srcIsDirective="0" variable="_bhv_i599" varLoc=""/>
+        <AutoPragma type="array_partition" parentFunction="hdv_engine" options="dim=1 type=cyclic factor=13 variable=_lhv_i600" pragmaLocId="./../src/hw/hls_xilinx/main.cpp:0:2" srcPragmaType="pipeline" srcPragmaLoc="./../src/hw/hls_xilinx/main.cpp:513" srcPragmaSource="pragma" srcIsDirective="0" variable="_lhv_i600" varLoc=""/>
+    </AutoPragmaReport>
+</profile>
+

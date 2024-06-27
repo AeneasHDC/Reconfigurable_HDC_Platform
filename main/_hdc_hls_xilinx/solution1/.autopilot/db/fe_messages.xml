@@ -5,31 +5,16 @@
     <msg msg_groups="" msg_id="207-71" msg_severity="INFO" msg_loc="&lt;built-in&gt;:350:9" msg_body="previous definition is here">
         <args/>
     </msg>
-    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5575" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:490:9" msg_body="'#pragma HLS unroll' can only be applied inside loop body">
+    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5575" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:507:9" msg_body="'#pragma HLS unroll' can only be applied inside loop body">
         <args ClangWarningOption="invalid-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5575" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:794:9" msg_body="'#pragma HLS unroll' can only be applied inside loop body">
+    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5575" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:811:9" msg_body="'#pragma HLS unroll' can only be applied inside loop body">
         <args ClangWarningOption="invalid-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5564" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:818:9" msg_body="Only for/while/do loop or function body support the pipeline pragma">
+    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5564" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:835:9" msg_body="Only for/while/do loop or function body support the pipeline pragma">
         <args ClangWarningOption="ignored-hls-attributes"/>
     </msg>
-    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:121:43" msg_body="unused parameter 'denom_a'">
-        <args ClangWarningOption="unused-parameter"/>
-    </msg>
-    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:121:63" msg_body="unused parameter 'denom_b'">
-        <args ClangWarningOption="unused-parameter"/>
-    </msg>
     <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:121:80" msg_body="unused parameter 'mode'">
-        <args ClangWarningOption="unused-parameter"/>
-    </msg>
-    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:278:35" msg_body="unused parameter 'sim'">
-        <args ClangWarningOption="unused-parameter"/>
-    </msg>
-    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:278:57" msg_body="unused parameter 'denom_a'">
-        <args ClangWarningOption="unused-parameter"/>
-    </msg>
-    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:278:83" msg_body="unused parameter 'denom_b'">
         <args ClangWarningOption="unused-parameter"/>
     </msg>
     <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:278:100" msg_body="unused parameter 'mode'">
@@ -41,13 +26,19 @@
     <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:715:28" msg_body="unused parameter 'frame_index'">
         <args ClangWarningOption="unused-parameter"/>
     </msg>
-    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:816:36" msg_body="unused parameter 'classVector'">
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:715:50" msg_body="unused parameter 'lv_approx_0'">
         <args ClangWarningOption="unused-parameter"/>
     </msg>
-    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:816:68" msg_body="unused parameter 'frame_id'">
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:715:72" msg_body="unused parameter 'lv_approx_1'">
         <args ClangWarningOption="unused-parameter"/>
     </msg>
-    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:817:28" msg_body="unused parameter 'frame_index'">
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:817:36" msg_body="unused parameter 'classVector'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:817:68" msg_body="unused parameter 'frame_id'">
+        <args ClangWarningOption="unused-parameter"/>
+    </msg>
+    <msg msg_groups="" msg_id="207-5292" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:818:28" msg_body="unused parameter 'frame_index'">
         <args ClangWarningOption="unused-parameter"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\ap_axi_sdata.h:76:9" msg_body="HLS pragma dump">
@@ -851,177 +842,177 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:717:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="generate_LevelHVs" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=levelVector complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:853:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:854:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="random_HV" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/script.tcl:11:9" msg_body="HLS pragma dump">
         <args ARG_PragmaContext="directive" ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=hdv_engine" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:141:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:146:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_none port = nrst_i" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:144:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:149:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port = sdata_i depth = 1" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:151:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:156:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_none port = chv_i" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:154:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:159:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_none port = bhv_i" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:157:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:162:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_none port = lhv_i" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:168:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:177:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_none port = pred_class_o" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:169:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:178:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="compact=bit variable = pred_class_o" ARG_PragmaType="aggregate" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:189:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:198:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_none port = status_o" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:190:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:199:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="compact=bit variable = status_o" ARG_PragmaType="aggregate" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:247:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:258:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = _bhv_i complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:248:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:259:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = _lhv_i complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:249:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = _chv_i complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:250:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = _bhv complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:251:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = _lhv complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:252:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = _chv complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:253:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = _n_gram_idx complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:254:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = BundledHV complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:255:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = Clipped_BundledHV complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:256:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = Encoded_HV complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:257:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = similarity_classes complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:258:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = Binded_Features complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:259:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = BundledHV type=inter distance=1 true" ARG_PragmaType="dependence" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:260:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = Clipped_BundledHV type=inter distance=1 true" ARG_PragmaType="dependence" ClangWarningOption="dump-hls-pragmas"/>
+        <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = _lhv_i0 complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:261:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = similarity_classes type=inter distance=16 true" ARG_PragmaType="dependence" ClangWarningOption="dump-hls-pragmas"/>
+        <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = _lhv_i1 complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:262:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = similarity_max type=inter distance=16 true" ARG_PragmaType="dependence" ClangWarningOption="dump-hls-pragmas"/>
+        <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = _chv_i complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:263:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = _bhv complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:264:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = _lhv complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:265:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+        <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = _chv complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:266:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = _n_gram_idx complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:267:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = BundledHV complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:268:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = Clipped_BundledHV complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:269:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="recursive" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+        <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = Encoded_HV complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:298:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:270:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = similarity_classes complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:271:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = Binded_Features complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:272:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = BundledHV type=inter distance=1 true" ARG_PragmaType="dependence" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:273:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = Clipped_BundledHV type=inter distance=1 true" ARG_PragmaType="dependence" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:274:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = similarity_classes type=inter distance=16 true" ARG_PragmaType="dependence" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:275:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = similarity_max type=inter distance=16 true" ARG_PragmaType="dependence" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:278:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:349:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:282:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="recursive" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:476:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="recursive" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:311:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:490:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:366:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="recursive" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:493:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="recursive" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:496:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:507:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:510:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="recursive" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:513:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="II = 5" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:503:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:520:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="recursive" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:537:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:554:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="recursive" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:612:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:629:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="recursive" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:624:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:641:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="recursive" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:628:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:645:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:655:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:672:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="recursive" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:717:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:734:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:791:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:808:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="recursive" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:794:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:811:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:798:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:815:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="recursive" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:818:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:835:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=5" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:891:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:908:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="recursive" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:901:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:918:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=3" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:914:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:931:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="hdv_engine" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_INTERFACE" msg_id="214-387" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:139:0" msg_body="Ignore depth setting for top argument 'sdata_i'"/>
-    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:826:12" msg_body="Inlining function 'void HDC_op&lt;1ul, 1ul, 64ul&gt;::similarity_phase1&lt;ap_uint&lt;32&gt; [64], ap_uint&lt;32&gt; [64], ap_uint&lt;32&gt;, ap_uint&lt;32&gt; &gt;(ap_uint&lt;32&gt; const (&amp;) [64], ap_uint&lt;32&gt; const (&amp;) [64], ap_uint&lt;32&gt;&amp;, ap_uint&lt;32&gt;&amp;, ap_uint&lt;32&gt;&amp;, unsigned char)' into 'hdv_engine(bool&amp;, op_mode_t, frame_in_t, hls::stream&lt;hls::axis&lt;ap_uint&lt;8&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;, chv_p_t&amp;, chv_t*, bhv_p_t&amp;, lhv_p_t&amp;, pred_class_t&amp;, pred_class_t*, sys_status_t*)'">
-        <args Callee="void HDC_op&lt;1ul, 1ul, 64ul&gt;::similarity_phase1&lt;ap_uint&lt;32&gt; [64], ap_uint&lt;32&gt; [64], ap_uint&lt;32&gt;, ap_uint&lt;32&gt; &gt;(ap_uint&lt;32&gt; const (&amp;) [64], ap_uint&lt;32&gt; const (&amp;) [64], ap_uint&lt;32&gt;&amp;, ap_uint&lt;32&gt;&amp;, ap_uint&lt;32&gt;&amp;, unsigned char)" Callee-DebugLoc="File ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp Line 121 Column 0" Caller="hdv_engine(bool&amp;, op_mode_t, frame_in_t, hls::stream&lt;hls::axis&lt;ap_uint&lt;8&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;, chv_p_t&amp;, chv_t*, bhv_p_t&amp;, lhv_p_t&amp;, pred_class_t&amp;, pred_class_t*, sys_status_t*)" Caller-DebugLoc="File ./../src/hw/hls_xilinx/main.cpp Line 139 Column 0"/>
+    <msg msg_groups="PRAGMA_INTERFACE" msg_id="214-387" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:144:0" msg_body="Ignore depth setting for top argument 'sdata_i'"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:921:6" msg_body="Inlining function 'void HDC_op&lt;1ul, 1ul, 64ul&gt;::similarity_phase2&lt;ap_int&lt;32&gt;, ap_uint&lt;32&gt; &gt;(ap_int&lt;32&gt;&amp;, ap_uint&lt;32&gt; const&amp;, ap_uint&lt;32&gt; const&amp;, unsigned char)' into 'hdv_engine(bool&amp;, op_mode_t, frame_in_t, hls::stream&lt;hls::axis&lt;ap_uint&lt;8&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;, chv_p_t&amp;, bhv_p_t&amp;, lhv_p_t&amp;, pred_class_t*, sys_status_t*)'">
+        <args Callee="void HDC_op&lt;1ul, 1ul, 64ul&gt;::similarity_phase2&lt;ap_int&lt;32&gt;, ap_uint&lt;32&gt; &gt;(ap_int&lt;32&gt;&amp;, ap_uint&lt;32&gt; const&amp;, ap_uint&lt;32&gt; const&amp;, unsigned char)" Callee-DebugLoc="File ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp Line 279 Column 0" Caller="hdv_engine(bool&amp;, op_mode_t, frame_in_t, hls::stream&lt;hls::axis&lt;ap_uint&lt;8&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;, chv_p_t&amp;, bhv_p_t&amp;, lhv_p_t&amp;, pred_class_t*, sys_status_t*)" Caller-DebugLoc="File ./../src/hw/hls_xilinx/main.cpp Line 144 Column 0"/>
     </msg>
-    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:740:11" msg_body="Inlining function 'void HDC_op&lt;1ul, 1ul, 64ul&gt;::clip&lt;ap_uint&lt;32&gt; [64], ap_uint&lt;32&gt; [64]&gt;(ap_uint&lt;32&gt; const (&amp;) [64], ap_uint&lt;32&gt; (&amp;) [64], short const&amp;, short const&amp;, ap_int&lt;32&gt;, unsigned char)' into 'hdv_engine(bool&amp;, op_mode_t, frame_in_t, hls::stream&lt;hls::axis&lt;ap_uint&lt;8&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;, chv_p_t&amp;, chv_t*, bhv_p_t&amp;, lhv_p_t&amp;, pred_class_t&amp;, pred_class_t*, sys_status_t*)'">
-        <args Callee="void HDC_op&lt;1ul, 1ul, 64ul&gt;::clip&lt;ap_uint&lt;32&gt; [64], ap_uint&lt;32&gt; [64]&gt;(ap_uint&lt;32&gt; const (&amp;) [64], ap_uint&lt;32&gt; (&amp;) [64], short const&amp;, short const&amp;, ap_int&lt;32&gt;, unsigned char)" Callee-DebugLoc="File ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp Line 529 Column 0" Caller="hdv_engine(bool&amp;, op_mode_t, frame_in_t, hls::stream&lt;hls::axis&lt;ap_uint&lt;8&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;, chv_p_t&amp;, chv_t*, bhv_p_t&amp;, lhv_p_t&amp;, pred_class_t&amp;, pred_class_t*, sys_status_t*)" Caller-DebugLoc="File ./../src/hw/hls_xilinx/main.cpp Line 139 Column 0"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:843:12" msg_body="Inlining function 'void HDC_op&lt;1ul, 1ul, 64ul&gt;::similarity_phase1&lt;ap_uint&lt;11&gt; [64], ap_uint&lt;32&gt; [64], ap_uint&lt;32&gt;, ap_uint&lt;32&gt; &gt;(ap_uint&lt;11&gt; const (&amp;) [64], ap_uint&lt;32&gt; const (&amp;) [64], ap_uint&lt;32&gt;&amp;, ap_uint&lt;32&gt;&amp;, ap_uint&lt;32&gt;&amp;, unsigned char)' into 'hdv_engine(bool&amp;, op_mode_t, frame_in_t, hls::stream&lt;hls::axis&lt;ap_uint&lt;8&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;, chv_p_t&amp;, bhv_p_t&amp;, lhv_p_t&amp;, pred_class_t*, sys_status_t*)'">
+        <args Callee="void HDC_op&lt;1ul, 1ul, 64ul&gt;::similarity_phase1&lt;ap_uint&lt;11&gt; [64], ap_uint&lt;32&gt; [64], ap_uint&lt;32&gt;, ap_uint&lt;32&gt; &gt;(ap_uint&lt;11&gt; const (&amp;) [64], ap_uint&lt;32&gt; const (&amp;) [64], ap_uint&lt;32&gt;&amp;, ap_uint&lt;32&gt;&amp;, ap_uint&lt;32&gt;&amp;, unsigned char)" Callee-DebugLoc="File ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp Line 121 Column 0" Caller="hdv_engine(bool&amp;, op_mode_t, frame_in_t, hls::stream&lt;hls::axis&lt;ap_uint&lt;8&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;, chv_p_t&amp;, bhv_p_t&amp;, lhv_p_t&amp;, pred_class_t*, sys_status_t*)" Caller-DebugLoc="File ./../src/hw/hls_xilinx/main.cpp Line 144 Column 0"/>
     </msg>
-    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:664:6" msg_body="Inlining function 'void HDC_op&lt;1ul, 1ul, 64ul&gt;::bundle&lt;ap_uint&lt;1&gt; [64], ap_uint&lt;32&gt; [64]&gt;(ap_uint&lt;1&gt; const (&amp;) [64], ap_uint&lt;32&gt; (&amp;) [64])' into 'hdv_engine(bool&amp;, op_mode_t, frame_in_t, hls::stream&lt;hls::axis&lt;ap_uint&lt;8&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;, chv_p_t&amp;, chv_t*, bhv_p_t&amp;, lhv_p_t&amp;, pred_class_t&amp;, pred_class_t*, sys_status_t*)'">
-        <args Callee="void HDC_op&lt;1ul, 1ul, 64ul&gt;::bundle&lt;ap_uint&lt;1&gt; [64], ap_uint&lt;32&gt; [64]&gt;(ap_uint&lt;1&gt; const (&amp;) [64], ap_uint&lt;32&gt; (&amp;) [64])" Callee-DebugLoc="File ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp Line 452 Column 0" Caller="hdv_engine(bool&amp;, op_mode_t, frame_in_t, hls::stream&lt;hls::axis&lt;ap_uint&lt;8&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;, chv_p_t&amp;, chv_t*, bhv_p_t&amp;, lhv_p_t&amp;, pred_class_t&amp;, pred_class_t*, sys_status_t*)" Caller-DebugLoc="File ./../src/hw/hls_xilinx/main.cpp Line 139 Column 0"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:757:11" msg_body="Inlining function 'void HDC_op&lt;1ul, 1ul, 64ul&gt;::clip&lt;ap_uint&lt;32&gt; [64], ap_uint&lt;32&gt; [64]&gt;(ap_uint&lt;32&gt; const (&amp;) [64], ap_uint&lt;32&gt; (&amp;) [64], short const&amp;, short const&amp;, ap_int&lt;32&gt;, unsigned char)' into 'hdv_engine(bool&amp;, op_mode_t, frame_in_t, hls::stream&lt;hls::axis&lt;ap_uint&lt;8&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;, chv_p_t&amp;, bhv_p_t&amp;, lhv_p_t&amp;, pred_class_t*, sys_status_t*)'">
+        <args Callee="void HDC_op&lt;1ul, 1ul, 64ul&gt;::clip&lt;ap_uint&lt;32&gt; [64], ap_uint&lt;32&gt; [64]&gt;(ap_uint&lt;32&gt; const (&amp;) [64], ap_uint&lt;32&gt; (&amp;) [64], short const&amp;, short const&amp;, ap_int&lt;32&gt;, unsigned char)" Callee-DebugLoc="File ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp Line 529 Column 0" Caller="hdv_engine(bool&amp;, op_mode_t, frame_in_t, hls::stream&lt;hls::axis&lt;ap_uint&lt;8&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;, chv_p_t&amp;, bhv_p_t&amp;, lhv_p_t&amp;, pred_class_t*, sys_status_t*)" Caller-DebugLoc="File ./../src/hw/hls_xilinx/main.cpp Line 144 Column 0"/>
     </msg>
-    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:541:14" msg_body="Inlining function 'void HDC_op&lt;1ul, 1ul, 64ul&gt;::bind&lt;ap_uint&lt;1&gt; [64]&gt;(ap_uint&lt;1&gt; const (&amp;) [64], ap_uint&lt;1&gt; const (&amp;) [64], ap_uint&lt;1&gt; (&amp;) [64])' into 'hdv_engine(bool&amp;, op_mode_t, frame_in_t, hls::stream&lt;hls::axis&lt;ap_uint&lt;8&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;, chv_p_t&amp;, chv_t*, bhv_p_t&amp;, lhv_p_t&amp;, pred_class_t&amp;, pred_class_t*, sys_status_t*)'">
-        <args Callee="void HDC_op&lt;1ul, 1ul, 64ul&gt;::bind&lt;ap_uint&lt;1&gt; [64]&gt;(ap_uint&lt;1&gt; const (&amp;) [64], ap_uint&lt;1&gt; const (&amp;) [64], ap_uint&lt;1&gt; (&amp;) [64])" Callee-DebugLoc="File ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp Line 366 Column 0" Caller="hdv_engine(bool&amp;, op_mode_t, frame_in_t, hls::stream&lt;hls::axis&lt;ap_uint&lt;8&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;, chv_p_t&amp;, chv_t*, bhv_p_t&amp;, lhv_p_t&amp;, pred_class_t&amp;, pred_class_t*, sys_status_t*)" Caller-DebugLoc="File ./../src/hw/hls_xilinx/main.cpp Line 139 Column 0"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:681:6" msg_body="Inlining function 'void HDC_op&lt;1ul, 1ul, 64ul&gt;::bundle&lt;ap_uint&lt;1&gt; [64], ap_uint&lt;32&gt; [64]&gt;(ap_uint&lt;1&gt; const (&amp;) [64], ap_uint&lt;32&gt; (&amp;) [64])' into 'hdv_engine(bool&amp;, op_mode_t, frame_in_t, hls::stream&lt;hls::axis&lt;ap_uint&lt;8&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;, chv_p_t&amp;, bhv_p_t&amp;, lhv_p_t&amp;, pred_class_t*, sys_status_t*)'">
+        <args Callee="void HDC_op&lt;1ul, 1ul, 64ul&gt;::bundle&lt;ap_uint&lt;1&gt; [64], ap_uint&lt;32&gt; [64]&gt;(ap_uint&lt;1&gt; const (&amp;) [64], ap_uint&lt;32&gt; (&amp;) [64])" Callee-DebugLoc="File ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp Line 452 Column 0" Caller="hdv_engine(bool&amp;, op_mode_t, frame_in_t, hls::stream&lt;hls::axis&lt;ap_uint&lt;8&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;, chv_p_t&amp;, bhv_p_t&amp;, lhv_p_t&amp;, pred_class_t*, sys_status_t*)" Caller-DebugLoc="File ./../src/hw/hls_xilinx/main.cpp Line 144 Column 0"/>
     </msg>
-    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:357:9" msg_body="Inlining function 'void HDC_op&lt;1ul, 1ul, 64ul&gt;::clip&lt;ap_uint&lt;32&gt; [64], ap_uint&lt;32&gt; [64]&gt;(ap_uint&lt;32&gt; const (&amp;) [64], ap_uint&lt;32&gt; (&amp;) [64], short const&amp;, short const&amp;, ap_int&lt;32&gt;, unsigned char)' into 'hdv_engine(bool&amp;, op_mode_t, frame_in_t, hls::stream&lt;hls::axis&lt;ap_uint&lt;8&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;, chv_p_t&amp;, chv_t*, bhv_p_t&amp;, lhv_p_t&amp;, pred_class_t&amp;, pred_class_t*, sys_status_t*)'">
-        <args Callee="void HDC_op&lt;1ul, 1ul, 64ul&gt;::clip&lt;ap_uint&lt;32&gt; [64], ap_uint&lt;32&gt; [64]&gt;(ap_uint&lt;32&gt; const (&amp;) [64], ap_uint&lt;32&gt; (&amp;) [64], short const&amp;, short const&amp;, ap_int&lt;32&gt;, unsigned char)" Callee-DebugLoc="File ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp Line 529 Column 0" Caller="hdv_engine(bool&amp;, op_mode_t, frame_in_t, hls::stream&lt;hls::axis&lt;ap_uint&lt;8&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;, chv_p_t&amp;, chv_t*, bhv_p_t&amp;, lhv_p_t&amp;, pred_class_t&amp;, pred_class_t*, sys_status_t*)" Caller-DebugLoc="File ./../src/hw/hls_xilinx/main.cpp Line 139 Column 0"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:558:14" msg_body="Inlining function 'void HDC_op&lt;1ul, 1ul, 64ul&gt;::bind&lt;ap_uint&lt;1&gt; [64]&gt;(ap_uint&lt;1&gt; const (&amp;) [64], ap_uint&lt;1&gt; const (&amp;) [64], ap_uint&lt;1&gt; (&amp;) [64])' into 'hdv_engine(bool&amp;, op_mode_t, frame_in_t, hls::stream&lt;hls::axis&lt;ap_uint&lt;8&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;, chv_p_t&amp;, bhv_p_t&amp;, lhv_p_t&amp;, pred_class_t*, sys_status_t*)'">
+        <args Callee="void HDC_op&lt;1ul, 1ul, 64ul&gt;::bind&lt;ap_uint&lt;1&gt; [64]&gt;(ap_uint&lt;1&gt; const (&amp;) [64], ap_uint&lt;1&gt; const (&amp;) [64], ap_uint&lt;1&gt; (&amp;) [64])" Callee-DebugLoc="File ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp Line 366 Column 0" Caller="hdv_engine(bool&amp;, op_mode_t, frame_in_t, hls::stream&lt;hls::axis&lt;ap_uint&lt;8&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;, chv_p_t&amp;, bhv_p_t&amp;, lhv_p_t&amp;, pred_class_t*, sys_status_t*)" Caller-DebugLoc="File ./../src/hw/hls_xilinx/main.cpp Line 144 Column 0"/>
     </msg>
-    <msg msg_groups="PRAGMA_DEPENDENCE" msg_id="214-199" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:262:9" msg_body="Ignoring dependence pragma on local scalar variable 'similarity_max'.">
+    <msg msg_groups="PRAGMA_DEPENDENCE" msg_id="214-199" msg_severity="WARNING" msg_loc="./../src/hw/hls_xilinx/main.cpp:275:9" msg_body="Ignoring dependence pragma on local scalar variable 'similarity_max'.">
         <args Value="similarity_max"/>
-    </msg>
-    <msg msg_groups="PRAGMA_DISAGGREGATE" msg_id="214-377" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:530:9" msg_body="Adding '_chv_o' into disaggregation list because there's array-partition pragma applied on the struct field">
-        <args Name="_chv_o"/>
-    </msg>
-    <msg msg_groups="PRAGMA_DISAGGREGATE" msg_id="214-210" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:197:11" msg_body="Disaggregating variable '_chv_o'">
-        <args Name="_chv_o"/>
     </msg>
     <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:459:20" msg_body="Loop 'VITIS_LOOP_459_1' is marked as complete unroll implied by the pipeline pragma">
         <args LoopName="VITIS_LOOP_459_1"/>
@@ -1029,95 +1020,107 @@
     <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:463:20" msg_body="Loop 'VITIS_LOOP_463_2' is marked as complete unroll implied by the pipeline pragma">
         <args LoopName="VITIS_LOOP_463_2"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:626:20" msg_body="Loop 'VITIS_LOOP_626_5' is marked as complete unroll implied by the pipeline pragma">
-        <args LoopName="VITIS_LOOP_626_5"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:643:20" msg_body="Loop 'VITIS_LOOP_643_5' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_643_5"/>
     </msg>
     <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:371:20" msg_body="Loop 'VITIS_LOOP_371_1' is marked as complete unroll implied by the pipeline pragma">
         <args LoopName="VITIS_LOOP_371_1"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:139:0" msg_body="Unrolling loop 'VITIS_LOOP_548_2' (./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:548:24) in function 'hdv_engine' completely with a factor of 64">
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_sqrt_apfixed.h:294:27" msg_body="Loop 'VITIS_LOOP_294_2' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_294_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_sqrt_apfixed.h:266:27" msg_body="Loop 'VITIS_LOOP_266_1' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_266_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:144:0" msg_body="Unrolling loop 'VITIS_LOOP_548_2' (./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:548:24) in function 'hdv_engine' completely with a factor of 64">
         <args Factor="64" LoopLoc="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:548:24" LoopName="VITIS_LOOP_548_2"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:139:0" msg_body="Unrolling loop 'VITIS_LOOP_459_1' (./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:459:20) in function 'hdv_engine' completely with a factor of 1">
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:144:0" msg_body="Unrolling loop 'VITIS_LOOP_459_1' (./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:459:20) in function 'hdv_engine' completely with a factor of 1">
         <args Factor="1" LoopLoc="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:459:20" LoopName="VITIS_LOOP_459_1"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:139:0" msg_body="Unrolling loop 'VITIS_LOOP_463_2' (./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:463:20) in function 'hdv_engine' completely with a factor of 64">
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:144:0" msg_body="Unrolling loop 'VITIS_LOOP_463_2' (./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:463:20) in function 'hdv_engine' completely with a factor of 64">
         <args Factor="64" LoopLoc="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:463:20" LoopName="VITIS_LOOP_463_2"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:139:0" msg_body="Unrolling loop 'VITIS_LOOP_626_5' (./../src/hw/hls_xilinx/main.cpp:626:20) in function 'hdv_engine' completely with a factor of 64">
-        <args Factor="64" LoopLoc="./../src/hw/hls_xilinx/main.cpp:626:20" LoopName="VITIS_LOOP_626_5"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:144:0" msg_body="Unrolling loop 'VITIS_LOOP_643_5' (./../src/hw/hls_xilinx/main.cpp:643:20) in function 'hdv_engine' completely with a factor of 64">
+        <args Factor="64" LoopLoc="./../src/hw/hls_xilinx/main.cpp:643:20" LoopName="VITIS_LOOP_643_5"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:139:0" msg_body="Unrolling loop 'VITIS_LOOP_371_1' (./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:371:20) in function 'hdv_engine' completely with a factor of 64">
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:144:0" msg_body="Unrolling loop 'VITIS_LOOP_371_1' (./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:371:20) in function 'hdv_engine' completely with a factor of 64">
         <args Factor="64" LoopLoc="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:371:20" LoopName="VITIS_LOOP_371_1"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:139:0" msg_body="Unrolling loop 'VITIS_LOOP_130_1' (./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:130:20) in function 'hdv_engine' completely with a factor of 1">
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:144:0" msg_body="Unrolling loop 'VITIS_LOOP_130_1' (./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:130:20) in function 'hdv_engine' completely with a factor of 1">
         <args Factor="1" LoopLoc="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:130:20" LoopName="VITIS_LOOP_130_1"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:139:0" msg_body="Unrolling loop 'VITIS_LOOP_134_2' (./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:134:20) in function 'hdv_engine' completely with a factor of 64">
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:144:0" msg_body="Unrolling loop 'VITIS_LOOP_134_2' (./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:134:20) in function 'hdv_engine' completely with a factor of 64">
         <args Factor="64" LoopLoc="./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:134:20" LoopName="VITIS_LOOP_134_2"/>
     </msg>
-    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:212:0" msg_body="Applying array_partition to '_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tP5chv_tR7bhv_p_tR7lhv_p_tR12pred_class_tPSI_P12sys_status_tE9BundledHV': Complete partitioning on dimension 1.">
-        <args Dim="1" Mode="Complete" UOName="_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tP5chv_tR7bhv_p_tR7lhv_p_tR12pred_class_tPSI_P12sys_status_tE9BundledHV"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_sqrt_apfixed.h:43:0" msg_body="Unrolling loop 'VITIS_LOOP_294_2' (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_sqrt_apfixed.h:294:27) in function 'sqrt_fixed&lt;33, 33&gt;' completely with a factor of 1">
+        <args Factor="1" LoopLoc="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_sqrt_apfixed.h:294:27" LoopName="VITIS_LOOP_294_2"/>
     </msg>
-    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:213:0" msg_body="Applying array_partition to '_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tP5chv_tR7bhv_p_tR7lhv_p_tR12pred_class_tPSI_P12sys_status_tE17Clipped_BundledHV': Complete partitioning on dimension 1.">
-        <args Dim="1" Mode="Complete" UOName="_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tP5chv_tR7bhv_p_tR7lhv_p_tR12pred_class_tPSI_P12sys_status_tE17Clipped_BundledHV"/>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_sqrt_apfixed.h:43:0" msg_body="Unrolling loop 'VITIS_LOOP_266_1' (C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_sqrt_apfixed.h:266:27) in function 'sqrt_fixed&lt;33, 33&gt;' completely with a factor of 17">
+        <args Factor="17" LoopLoc="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_sqrt_apfixed.h:266:27" LoopName="VITIS_LOOP_266_1"/>
     </msg>
-    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:215:0" msg_body="Applying array_partition to '_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tP5chv_tR7bhv_p_tR7lhv_p_tR12pred_class_tPSI_P12sys_status_tE18similarity_classes': Complete partitioning on dimension 1.">
-        <args Dim="1" Mode="Complete" UOName="_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tP5chv_tR7bhv_p_tR7lhv_p_tR12pred_class_tPSI_P12sys_status_tE18similarity_classes"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1291:0" msg_body="Inlining function 'ap_uint&lt;32&gt; sqrt_fixed&lt;32&gt;(ap_uint&lt;32&gt;) (.12)' into 'ap_uint&lt;32&gt; hls::sqrt&lt;32&gt;(ap_uint&lt;32&gt;)'">
+        <args Callee="ap_uint&lt;32&gt; sqrt_fixed&lt;32&gt;(ap_uint&lt;32&gt;) (.12)" Callee-DebugLoc="File C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_sqrt_apfixed.h Line 384 Column 0" Caller="ap_uint&lt;32&gt; hls::sqrt&lt;32&gt;(ap_uint&lt;32&gt;)" Caller-DebugLoc="File {C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h} Line 1291 Column 0"/>
     </msg>
-    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:222:0" msg_body="Applying array_partition to '_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tP5chv_tR7bhv_p_tR7lhv_p_tR12pred_class_tPSI_P12sys_status_tE15Binded_Features': Complete partitioning on dimension 1.">
-        <args Dim="1" Mode="Complete" UOName="_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tP5chv_tR7bhv_p_tR7lhv_p_tR12pred_class_tPSI_P12sys_status_tE15Binded_Features"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:144:0" msg_body="Inlining function 'ap_uint&lt;32&gt; hls::sqrt&lt;32&gt;(ap_uint&lt;32&gt;)' into 'hdv_engine(bool&amp;, op_mode_t, frame_in_t, hls::stream&lt;hls::axis&lt;ap_uint&lt;8&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;, chv_p_t&amp;, bhv_p_t&amp;, lhv_p_t&amp;, pred_class_t*, sys_status_t*)'">
+        <args Callee="ap_uint&lt;32&gt; hls::sqrt&lt;32&gt;(ap_uint&lt;32&gt;)" Callee-DebugLoc="File {C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h} Line 1291 Column 0" Caller="hdv_engine(bool&amp;, op_mode_t, frame_in_t, hls::stream&lt;hls::axis&lt;ap_uint&lt;8&gt;, 1ul, 1ul, 1ul&gt;, 0&gt;&amp;, chv_p_t&amp;, bhv_p_t&amp;, lhv_p_t&amp;, pred_class_t*, sys_status_t*)" Caller-DebugLoc="File ./../src/hw/hls_xilinx/main.cpp Line 144 Column 0"/>
     </msg>
-    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:194:11" msg_body="Applying array_partition to '_bhv': Complete partitioning on dimension 1.">
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:223:0" msg_body="Applying array_partition to '_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tR7bhv_p_tR7lhv_p_tP12pred_class_tP12sys_status_tE9BundledHV': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tR7bhv_p_tR7lhv_p_tP12pred_class_tP12sys_status_tE9BundledHV"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:224:0" msg_body="Applying array_partition to '_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tR7bhv_p_tR7lhv_p_tP12pred_class_tP12sys_status_tE17Clipped_BundledHV': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tR7bhv_p_tR7lhv_p_tP12pred_class_tP12sys_status_tE17Clipped_BundledHV"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:226:0" msg_body="Applying array_partition to '_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tR7bhv_p_tR7lhv_p_tP12pred_class_tP12sys_status_tE18similarity_classes': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tR7bhv_p_tR7lhv_p_tP12pred_class_tP12sys_status_tE18similarity_classes"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:233:0" msg_body="Applying array_partition to '_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tR7bhv_p_tR7lhv_p_tP12pred_class_tP12sys_status_tE15Binded_Features': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZZ10hdv_engineRb9op_mode_t10frame_in_tRN3hls6streamINS2_4axisI7ap_uintILi8EELm1ELm1ELm1EEELi0EEER7chv_p_tR7bhv_p_tR7lhv_p_tP12pred_class_tP12sys_status_tE15Binded_Features"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:203:11" msg_body="Applying array_partition to '_bhv': Complete partitioning on dimension 1.">
         <args Dim="1" Mode="Complete" UOName="_bhv"/>
     </msg>
-    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:195:11" msg_body="Applying array_partition to '_lhv': Complete partitioning on dimension 1.">
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:204:11" msg_body="Applying array_partition to '_lhv': Complete partitioning on dimension 1.">
         <args Dim="1" Mode="Complete" UOName="_lhv"/>
     </msg>
-    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:196:11" msg_body="Applying array_partition to '_chv': Complete partitioning on dimension 1.">
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:205:11" msg_body="Applying array_partition to '_chv': Complete partitioning on dimension 1.">
         <args Dim="1" Mode="Complete" UOName="_chv"/>
     </msg>
-    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:197:11" msg_body="Applying array_partition to '_chv_o': Complete partitioning on dimension 1.">
-        <args Dim="1" Mode="Complete" UOName="_chv_o"/>
-    </msg>
-    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:199:13" msg_body="Applying array_partition to '_bhv_i': Complete partitioning on dimension 1.">
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:208:13" msg_body="Applying array_partition to '_bhv_i': Complete partitioning on dimension 1.">
         <args Dim="1" Mode="Complete" UOName="_bhv_i"/>
     </msg>
-    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:200:13" msg_body="Applying array_partition to '_lhv_i': Complete partitioning on dimension 1.">
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:209:13" msg_body="Applying array_partition to '_lhv_i': Complete partitioning on dimension 1.">
         <args Dim="1" Mode="Complete" UOName="_lhv_i"/>
     </msg>
-    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:201:13" msg_body="Applying array_partition to '_chv_i': Complete partitioning on dimension 1.">
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:212:13" msg_body="Applying array_partition to '_chv_i': Complete partitioning on dimension 1.">
         <args Dim="1" Mode="Complete" UOName="_chv_i"/>
     </msg>
-    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:139:0" msg_body="Aggregating scalar variable 'lhv_i' with compact=bit mode in 64-bits">
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:144:0" msg_body="Aggregating scalar variable 'lhv_i' with compact=bit mode in 64-bits">
         <args AggregateTypeName="compact=bit" Bitwidth="64" HwTyName="scalar" Name="lhv_i"/>
     </msg>
-    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:139:0" msg_body="Aggregating scalar variable 'bhv_i' with compact=bit mode in 64-bits">
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:144:0" msg_body="Aggregating scalar variable 'bhv_i' with compact=bit mode in 64-bits">
         <args AggregateTypeName="compact=bit" Bitwidth="64" HwTyName="scalar" Name="bhv_i"/>
     </msg>
-    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:139:0" msg_body="Aggregating scalar variable 'chv_o' with compact=bit mode in 2048-bits">
-        <args AggregateTypeName="compact=bit" Bitwidth="2048" HwTyName="scalar" Name="chv_o"/>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:144:0" msg_body="Aggregating scalar variable 'chv_i' with compact=bit mode in 704-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="704" HwTyName="scalar" Name="chv_i"/>
     </msg>
-    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:139:0" msg_body="Aggregating scalar variable 'chv_i' with compact=bit mode in 2048-bits">
-        <args AggregateTypeName="compact=bit" Bitwidth="2048" HwTyName="scalar" Name="chv_i"/>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:0:1" msg_body="array_partition dim=1 type=cyclic factor=13 variable=_bhv_i302 1 hdv_engine ./../src/hw/hls_xilinx/main.cpp:208:13 ./../src/hw/hls_xilinx/main.cpp:513:9_bhv_i302">
+        <args PragmaFunction="hdv_engine" PragmaIsAuto="1" PragmaOptions="dim=1 type=cyclic factor=13 variable=_bhv_i302" PragmaSrcLoc="./../src/hw/hls_xilinx/main.cpp:513:9" PragmaSrcLoc-DebugLoc="File ./../src/hw/hls_xilinx/main.cpp Line 513 Column 9" PragmaType="array_partition" VarName="_bhv_i302" varLoc="./../src/hw/hls_xilinx/main.cpp:208:13"/>
     </msg>
-    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:0:1" msg_body="array_partition dim=1 type=cyclic factor=13 variable=_bhv_i313 1 hdv_engine ./../src/hw/hls_xilinx/main.cpp:199:13 ./../src/hw/hls_xilinx/main.cpp:496:9_bhv_i313">
-        <args PragmaFunction="hdv_engine" PragmaIsAuto="1" PragmaOptions="dim=1 type=cyclic factor=13 variable=_bhv_i313" PragmaSrcLoc="./../src/hw/hls_xilinx/main.cpp:496:9" PragmaSrcLoc-DebugLoc="File ./../src/hw/hls_xilinx/main.cpp Line 496 Column 9" PragmaType="array_partition" VarName="_bhv_i313" varLoc="./../src/hw/hls_xilinx/main.cpp:199:13"/>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:513:9" msg_body="Inferring pragma 'array_partition type=cyclic factor=13 dim=1' for array '_bhv_i302' due to pipeline pragma">
+        <args Dim="1" Factor="13" Mode="cyclic" Name="_bhv_i302" PragmaType="array_partition"/>
     </msg>
-    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:496:9" msg_body="Inferring pragma 'array_partition type=cyclic factor=13 dim=1' for array '_bhv_i313' due to pipeline pragma">
-        <args Dim="1" Factor="13" Mode="cyclic" Name="_bhv_i313" PragmaType="array_partition"/>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:0:2" msg_body="array_partition dim=1 type=cyclic factor=13 variable=_lhv_i303 1 hdv_engine ./../src/hw/hls_xilinx/main.cpp:209:13 ./../src/hw/hls_xilinx/main.cpp:513:9_lhv_i303">
+        <args PragmaFunction="hdv_engine" PragmaIsAuto="1" PragmaOptions="dim=1 type=cyclic factor=13 variable=_lhv_i303" PragmaSrcLoc="./../src/hw/hls_xilinx/main.cpp:513:9" PragmaSrcLoc-DebugLoc="File ./../src/hw/hls_xilinx/main.cpp Line 513 Column 9" PragmaType="array_partition" VarName="_lhv_i303" varLoc="./../src/hw/hls_xilinx/main.cpp:209:13"/>
     </msg>
-    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:0:2" msg_body="array_partition dim=1 type=cyclic factor=13 variable=_lhv_i314 1 hdv_engine ./../src/hw/hls_xilinx/main.cpp:200:13 ./../src/hw/hls_xilinx/main.cpp:496:9_lhv_i314">
-        <args PragmaFunction="hdv_engine" PragmaIsAuto="1" PragmaOptions="dim=1 type=cyclic factor=13 variable=_lhv_i314" PragmaSrcLoc="./../src/hw/hls_xilinx/main.cpp:496:9" PragmaSrcLoc-DebugLoc="File ./../src/hw/hls_xilinx/main.cpp Line 496 Column 9" PragmaType="array_partition" VarName="_lhv_i314" varLoc="./../src/hw/hls_xilinx/main.cpp:200:13"/>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:513:9" msg_body="Inferring pragma 'array_partition type=cyclic factor=13 dim=1' for array '_lhv_i303' due to pipeline pragma">
+        <args Dim="1" Factor="13" Mode="cyclic" Name="_lhv_i303" PragmaType="array_partition"/>
     </msg>
-    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:496:9" msg_body="Inferring pragma 'array_partition type=cyclic factor=13 dim=1' for array '_lhv_i314' due to pipeline pragma">
-        <args Dim="1" Factor="13" Mode="cyclic" Name="_lhv_i314" PragmaType="array_partition"/>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:208:13" msg_body="Applying array_partition to '_bhv_i302': Cyclic partitioning with factor 13 on dimension 1.">
+        <args Dim="1" Factor="13" Mode="Cyclic" UOName="_bhv_i302"/>
     </msg>
-    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:199:13" msg_body="Applying array_partition to '_bhv_i313': Cyclic partitioning with factor 13 on dimension 1.">
-        <args Dim="1" Factor="13" Mode="Cyclic" UOName="_bhv_i313"/>
-    </msg>
-    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:200:13" msg_body="Applying array_partition to '_lhv_i314': Cyclic partitioning with factor 13 on dimension 1.">
-        <args Dim="1" Factor="13" Mode="Cyclic" UOName="_lhv_i314"/>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./../src/hw/hls_xilinx/main.cpp:209:13" msg_body="Applying array_partition to '_lhv_i303': Cyclic partitioning with factor 13 on dimension 1.">
+        <args Dim="1" Factor="13" Mode="Cyclic" UOName="_lhv_i303"/>
     </msg>
 </xilinx:hls_fe_msgs>
 

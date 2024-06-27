@@ -1,0 +1,46 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../../src/hw/hls_xilinx/tb/tb.cpp in debug mode
+csim.mk:78: recipe for target 'obj/tb.o' failed
+In file included from C:/Xilinx/Vitis_HLS/2023.1/include/floating_point_v7_1_bitacc_cmodel.h:149:0,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_fpo.h:143,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/hls_half_fpo.h:18,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_half.h:25,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_private.h:52,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_common.h:666,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/ap_int.h:10,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/ap_axi_sdata.h:42,
+                 from ../../../../../src/hw/hls_xilinx/tb/../headers/datatypes.hpp:37,
+                 from ../../../../../src/hw/hls_xilinx/tb/tb.cpp:63:
+C:/Xilinx/Vitis_HLS/2023.1/include/gmp.h:58:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from C:/Xilinx/Vitis_HLS/2023.1/include/hls_fpo.h:143:0,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/hls_half_fpo.h:18,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_half.h:25,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_private.h:52,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_common.h:666,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/ap_int.h:10,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/ap_axi_sdata.h:42,
+                 from ../../../../../src/hw/hls_xilinx/tb/../headers/datatypes.hpp:37,
+                 from ../../../../../src/hw/hls_xilinx/tb/tb.cpp:63:
+C:/Xilinx/Vitis_HLS/2023.1/include/floating_point_v7_1_bitacc_cmodel.h:141:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+../../../../../src/hw/hls_xilinx/tb/tb.cpp: In function 'void run_HdlProcessing()':
+../../../../../src/hw/hls_xilinx/tb/tb.cpp:160:5: error: 'lhv_i0' was not declared in this scope
+     lhv_i0,
+     ^~~~~~
+../../../../../src/hw/hls_xilinx/tb/tb.cpp:161:5: error: 'lhv_i1' was not declared in this scope
+     lhv_i1,
+     ^~~~~~
+../../../../../src/hw/hls_xilinx/tb/tb.cpp: In function 'int main()':
+../../../../../src/hw/hls_xilinx/tb/tb.cpp:559:9: error: 'lhv_i0' was not declared in this scope
+         lhv_i0.el[feature_p_id].lvh[i] = datalvh_0[ frame_id + i ];
+         ^~~~~~
+../../../../../src/hw/hls_xilinx/tb/tb.cpp:560:9: error: 'lhv_i1' was not declared in this scope
+         lhv_i1.el[feature_p_id].lvh[i] = datalvh_1[ frame_id + i ];
+         ^~~~~~
+make: *** [obj/tb.o] Error 1
+ERR: [SIM 100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 3] *************** CSIM finish ***************

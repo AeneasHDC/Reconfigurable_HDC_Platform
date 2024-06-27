@@ -1,0 +1,513 @@
+WARNING: [COSIM-384] This design has internal non-blocking FIFO/Stream accesses, which may result in mismatches or simulation hanging.
+INFO: [COSIM-47] Using XSIM for RTL simulation.
+INFO: [COSIM-14] Instrumenting C test bench ...
+   Build using "C:/Xilinx/Vitis_HLS/2023.1/tps/win64/msys64/mingw64/bin/g++"
+   Compiling tb.cpp_pre.cpp.tb.cpp
+   Compiling main.cpp_pre.cpp.tb.cpp
+   Compiling apatb_hdv_engine_util.cpp
+   Compiling apatb_hdv_engine.cpp
+   Compiling apatb_hdv_engine_ir.ll
+   Generating cosim.tv.exe
+INFO: [COSIM-302] Starting C TB testing ... 
+INFO: [COSIM-333] Generating C post check test bench ...
+INFO: [COSIM-12] Generating RTL test bench ...
+INFO: [COSIM-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM-323] Starting verilog simulation. 
+INFO: [COSIM-15] Starting XSIM ...
+INFO: [COSIM-316] Starting C post checking ...
+Test index: 0, Correct Label: 0, Predicted: 0, Percentage: 0%
+[--------------------]
+Accuracy: 1
+Precision: 0.333333
+Test index: 1, Correct Label: 0, Predicted: 0, Percentage: 50%
+[##########----------]
+Accuracy: 1
+Precision: 0.333333
+Test index: 2, Correct Label: 0, Predicted: 0, Percentage: 100%
+[####################]
+Accuracy: 1
+Precision: 0.333333
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 252
+WARNING [HLS SIM]: hls::stream 'hls::stream<hls::axis<ap_uint<8>, 1ull, 1ull, 1ull>, 0>0' contains leftover data, which may result in RTL simulation hanging.
+
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\sim\verilog>set PATH= 
+
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\sim\verilog>call C:/Xilinx/Vivado/2023.1/bin/xelab xil_defaultlib.apatb_hdv_engine_top glbl -Oenable_linking_all_libraries  -prj hdv_engine.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm  -L floating_point_v7_1_15 -L floating_point_v7_0_20 --lib "ieee_proposed=./ieee_proposed" -s hdv_engine -debug all 
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_hdv_engine_top glbl -Oenable_linking_all_libraries -prj hdv_engine.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_1_15 -L floating_point_v7_0_20 --lib ieee_proposed=./ieee_proposed -s hdv_engine -debug all 
+Multi-threading is on. Using 22 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/AESL_axi_s_sdata_i.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_sdata_i
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/AESL_deadlock_idx0_monitor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_idx0_monitor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/AESL_deadlock_kernel_monitor_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_kernel_monitor_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/AESL_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/hdv_engine.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_hdv_engine_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/hdv_engine.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdv_engine
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/hdv_engine_flow_control_loop_pipe_sequential_init.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdv_engine_flow_control_loop_pipe_sequential_init
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_286_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_286_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_294_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_294_2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_511_4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_511_4
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_929_8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_929_8
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/hdv_engine_mux_3_2_1_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdv_engine_mux_3_2_1_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/hdv_engine_mux_3_2_32_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdv_engine_mux_3_2_32_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/hdv_engine_regslice_both.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdv_engine_regslice_both
+INFO: [VRFC 10-311] analyzing module hdv_engine_regslice_both_w1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataflow_monitor
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3705] select index -1 into 'write_address' is out of bounds [C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/AESL_fifo.v:39]
+WARNING: [VRFC 10-3705] select index -1 into 'write_address' is out of bounds [C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/AESL_fifo.v:40]
+WARNING: [VRFC 10-3705] select index -1 into 'read_address' is out of bounds [C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/AESL_fifo.v:66]
+WARNING: [VRFC 10-3705] select index -1 into 'write_address' is out of bounds [C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/AESL_fifo.v:82]
+WARNING: [VRFC 10-3705] select index -1 into 'read_address' is out of bounds [C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/AESL_fifo.v:83]
+WARNING: [VRFC 10-3705] select index -1 into 'read_address' is out of bounds [C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/AESL_fifo.v:84]
+WARNING: [VRFC 10-3705] select index -1 into 'write_address' is out of bounds [C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/AESL_fifo.v:100]
+WARNING: [VRFC 10-3705] select index -1 into 'read_address' is out of bounds [C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/AESL_fifo.v:101]
+WARNING: [VRFC 10-3705] select index -1 into 'read_address' is out of bounds [C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/AESL_fifo.v:102]
+WARNING: [VRFC 10-3705] select index -1 into 'write_address' is out of bounds [C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/AESL_fifo.v:110]
+WARNING: [VRFC 10-3705] select index -1 into 'read_address' is out of bounds [C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/AESL_fifo.v:112]
+WARNING: [VRFC 10-3705] select index -1 into 'write_address' is out of bounds [C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/AESL_fifo.v:114]
+WARNING: [VRFC 10-3705] select index -1 into 'write_address' is out of bounds [C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/AESL_fifo.v:123]
+WARNING: [VRFC 10-3705] select index -1 into 'read_address' is out of bounds [C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/AESL_fifo.v:124]
+WARNING: [VRFC 10-3705] select index -1 into 'read_address' is out of bounds [C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/AESL_fifo.v:134]
+WARNING: [VRFC 10-3705] select index -1 into 'read_address' is out of bounds [C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/AESL_fifo.v:135]
+WARNING: [VRFC 10-3705] select index -1 into 'write_address' is out of bounds [C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/AESL_fifo.v:144]
+WARNING: [VRFC 10-3705] select index -1 into 'read_address' is out of bounds [C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/AESL_fifo.v:145]
+WARNING: [VRFC 10-3705] select index -1 into 'read_address' is out of bounds [C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/AESL_fifo.v:146]
+WARNING: [VRFC 10-3705] select index -1 into 'write_address' is out of bounds [C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/AESL_fifo.v:189]
+WARNING: [VRFC 10-3705] select index -1 into 'read_address' is out of bounds [C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/AESL_fifo.v:190]
+WARNING: [VRFC 10-3705] select index -1 into 'read_address' is out of bounds [C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/AESL_fifo.v:191]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
+Compiling module xil_defaultlib.hdv_engine_flow_control_loop_pip...
+Compiling module xil_defaultlib.hdv_engine_hdv_engine_Pipeline_V...
+Compiling module xil_defaultlib.hdv_engine_hdv_engine_Pipeline_V...
+Compiling module xil_defaultlib.hdv_engine_hdv_engine_Pipeline_V...
+Compiling module xil_defaultlib.hdv_engine_mux_3_2_32_1_1(ID=1,d...
+Compiling module xil_defaultlib.hdv_engine_hdv_engine_Pipeline_V...
+Compiling module xil_defaultlib.hdv_engine_mux_3_2_1_1_1(ID=1,di...
+Compiling module xil_defaultlib.hdv_engine_regslice_both(DataWid...
+Compiling module xil_defaultlib.hdv_engine_regslice_both(DataWid...
+Compiling module xil_defaultlib.hdv_engine
+Compiling module xil_defaultlib.fifo(DEPTH=0)
+Compiling module xil_defaultlib.fifo(DEPTH=0,WIDTH=1)
+Compiling module xil_defaultlib.AESL_axi_s_sdata_i
+Compiling module xil_defaultlib.AESL_deadlock_idx0_monitor
+Compiling module xil_defaultlib.AESL_deadlock_kernel_monitor_top...
+Compiling module xil_defaultlib.nodf_module_intf
+Compiling module xil_defaultlib.seq_loop_intf(FSM_WIDTH=48)
+Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=1)
+Compiling module xil_defaultlib.dataflow_monitor_1
+Compiling module xil_defaultlib.apatb_hdv_engine_top
+Compiling module work.glbl
+Built simulation snapshot hdv_engine
+
+****** xsim v2023.1 (64-bit)
+  **** SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+  **** IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+  **** SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/hdv_engine/xsim_script.tcl
+# xsim {hdv_engine} -view {{hdv_engine_dataflow_ana.wcfg}} -tclbatch {hdv_engine.tcl} -protoinst {hdv_engine.protoinst}
+INFO: [Wavedata 42-565] Reading protoinst file hdv_engine.protoinst
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_hdv_engine_top/AESL_inst_hdv_engine//AESL_inst_hdv_engine_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_hdv_engine_top/AESL_inst_hdv_engine/grp_hdv_engine_Pipeline_VITIS_LOOP_286_1_fu_1735/grp_hdv_engine_Pipeline_VITIS_LOOP_286_1_fu_1735_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_hdv_engine_top/AESL_inst_hdv_engine/grp_hdv_engine_Pipeline_VITIS_LOOP_294_2_fu_1753/grp_hdv_engine_Pipeline_VITIS_LOOP_294_2_fu_1753_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_hdv_engine_top/AESL_inst_hdv_engine/grp_hdv_engine_Pipeline_VITIS_LOOP_511_4_fu_1763/grp_hdv_engine_Pipeline_VITIS_LOOP_511_4_fu_1763_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_hdv_engine_top/AESL_inst_hdv_engine/grp_hdv_engine_Pipeline_VITIS_LOOP_929_8_fu_2536/grp_hdv_engine_Pipeline_VITIS_LOOP_929_8_fu_2536_activity
+Time resolution is 1 ps
+open_wave_config hdv_engine_dataflow_ana.wcfg
+source hdv_engine.tcl
+## log_wave -r /
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+## set designtopgroup [add_wave_group "Design Top Signals"]
+## set coutputgroup [add_wave_group "C Outputs" -into $designtopgroup]
+## set return_group [add_wave_group return(wire) -into $coutputgroup]
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/status_o -into $return_group -radix hex
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/pred_class_o -into $return_group -radix hex
+## set cinputgroup [add_wave_group "C Inputs" -into $designtopgroup]
+## set return_group [add_wave_group return(wire) -into $cinputgroup]
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/lhv_i -into $return_group -radix hex
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/bhv_i -into $return_group -radix hex
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/chv_i -into $return_group -radix hex
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/sdata_i_TDEST -into $return_group -radix hex
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/sdata_i_TID -into $return_group -radix hex
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/sdata_i_TLAST -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/sdata_i_TUSER -into $return_group -radix hex
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/sdata_i_TSTRB -into $return_group -radix hex
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/sdata_i_TKEEP -into $return_group -radix hex
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/sdata_i_TREADY -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/sdata_i_TVALID -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/sdata_i_TDATA -into $return_group -radix hex
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/frame_in -into $return_group -radix hex
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/op_mode_i -into $return_group -radix hex
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/nrst_i -into $return_group -radix hex
+## set blocksiggroup [add_wave_group "Block-level IO Handshake" -into $designtopgroup]
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/ap_start -into $blocksiggroup
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/ap_done -into $blocksiggroup
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/ap_idle -into $blocksiggroup
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/ap_ready -into $blocksiggroup
+## set resetgroup [add_wave_group "Reset" -into $designtopgroup]
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/ap_rst_n -into $resetgroup
+## set clockgroup [add_wave_group "Clock" -into $designtopgroup]
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/ap_clk -into $clockgroup
+## set testbenchgroup [add_wave_group "Test Bench Signals"]
+## set tbinternalsiggroup [add_wave_group "Internal Signals" -into $testbenchgroup]
+## set tb_simstatus_group [add_wave_group "Simulation Status" -into $tbinternalsiggroup]
+## set tb_portdepth_group [add_wave_group "Port Depth" -into $tbinternalsiggroup]
+## add_wave /apatb_hdv_engine_top/AUTOTB_TRANSACTION_NUM -into $tb_simstatus_group -radix hex
+## add_wave /apatb_hdv_engine_top/ready_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_hdv_engine_top/done_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_hdv_engine_top/LENGTH_bhv_i -into $tb_portdepth_group -radix hex
+## add_wave /apatb_hdv_engine_top/LENGTH_chv_i -into $tb_portdepth_group -radix hex
+## add_wave /apatb_hdv_engine_top/LENGTH_frame_in -into $tb_portdepth_group -radix hex
+## add_wave /apatb_hdv_engine_top/LENGTH_lhv_i -into $tb_portdepth_group -radix hex
+## add_wave /apatb_hdv_engine_top/LENGTH_nrst_i -into $tb_portdepth_group -radix hex
+## add_wave /apatb_hdv_engine_top/LENGTH_op_mode_i -into $tb_portdepth_group -radix hex
+## add_wave /apatb_hdv_engine_top/LENGTH_pred_class_o -into $tb_portdepth_group -radix hex
+## add_wave /apatb_hdv_engine_top/LENGTH_sdata_i_V_data_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_hdv_engine_top/LENGTH_sdata_i_V_dest_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_hdv_engine_top/LENGTH_sdata_i_V_id_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_hdv_engine_top/LENGTH_sdata_i_V_keep_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_hdv_engine_top/LENGTH_sdata_i_V_last_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_hdv_engine_top/LENGTH_sdata_i_V_strb_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_hdv_engine_top/LENGTH_sdata_i_V_user_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_hdv_engine_top/LENGTH_status_o -into $tb_portdepth_group -radix hex
+## set tbcoutputgroup [add_wave_group "C Outputs" -into $testbenchgroup]
+## set tb_return_group [add_wave_group return(wire) -into $tbcoutputgroup]
+## add_wave /apatb_hdv_engine_top/status_o -into $tb_return_group -radix hex
+## add_wave /apatb_hdv_engine_top/pred_class_o -into $tb_return_group -radix hex
+## set tbcinputgroup [add_wave_group "C Inputs" -into $testbenchgroup]
+## set tb_return_group [add_wave_group return(wire) -into $tbcinputgroup]
+## add_wave /apatb_hdv_engine_top/lhv_i -into $tb_return_group -radix hex
+## add_wave /apatb_hdv_engine_top/bhv_i -into $tb_return_group -radix hex
+## add_wave /apatb_hdv_engine_top/chv_i -into $tb_return_group -radix hex
+## add_wave /apatb_hdv_engine_top/sdata_i_TDEST -into $tb_return_group -radix hex
+## add_wave /apatb_hdv_engine_top/sdata_i_TID -into $tb_return_group -radix hex
+## add_wave /apatb_hdv_engine_top/sdata_i_TLAST -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_hdv_engine_top/sdata_i_TUSER -into $tb_return_group -radix hex
+## add_wave /apatb_hdv_engine_top/sdata_i_TSTRB -into $tb_return_group -radix hex
+## add_wave /apatb_hdv_engine_top/sdata_i_TKEEP -into $tb_return_group -radix hex
+## add_wave /apatb_hdv_engine_top/sdata_i_TREADY -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_hdv_engine_top/sdata_i_TVALID -into $tb_return_group -color #ffff00 -radix hex
+## add_wave /apatb_hdv_engine_top/sdata_i_TDATA -into $tb_return_group -radix hex
+## add_wave /apatb_hdv_engine_top/frame_in -into $tb_return_group -radix hex
+## add_wave /apatb_hdv_engine_top/op_mode_i -into $tb_return_group -radix hex
+## add_wave /apatb_hdv_engine_top/nrst_i -into $tb_return_group -radix hex
+## save_wave_config hdv_engine.wcfg
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 266 [n/a] @ "113000"
+// RTL Simulation : 1 / 266 [n/a] @ "148000"
+// RTL Simulation : 2 / 266 [n/a] @ "173000"
+// RTL Simulation : 3 / 266 [n/a] @ "198000"
+// RTL Simulation : 4 / 266 [n/a] @ "223000"
+// RTL Simulation : 5 / 266 [n/a] @ "248000"
+// RTL Simulation : 6 / 266 [n/a] @ "273000"
+// RTL Simulation : 7 / 266 [n/a] @ "298000"
+// RTL Simulation : 8 / 266 [n/a] @ "323000"
+// RTL Simulation : 9 / 266 [n/a] @ "348000"
+// RTL Simulation : 10 / 266 [n/a] @ "373000"
+// RTL Simulation : 11 / 266 [n/a] @ "398000"
+// RTL Simulation : 12 / 266 [n/a] @ "423000"
+// RTL Simulation : 13 / 266 [n/a] @ "448000"
+// RTL Simulation : 14 / 266 [n/a] @ "473000"
+// RTL Simulation : 15 / 266 [n/a] @ "498000"
+// RTL Simulation : 16 / 266 [n/a] @ "523000"
+// RTL Simulation : 17 / 266 [n/a] @ "548000"
+// RTL Simulation : 18 / 266 [n/a] @ "573000"
+// RTL Simulation : 19 / 266 [n/a] @ "598000"
+// RTL Simulation : 20 / 266 [n/a] @ "623000"
+// RTL Simulation : 21 / 266 [n/a] @ "648000"
+// RTL Simulation : 22 / 266 [n/a] @ "673000"
+// RTL Simulation : 23 / 266 [n/a] @ "698000"
+// RTL Simulation : 24 / 266 [n/a] @ "1373000"
+// RTL Simulation : 25 / 266 [n/a] @ "1398000"
+// RTL Simulation : 26 / 266 [n/a] @ "1423000"
+// RTL Simulation : 27 / 266 [n/a] @ "1448000"
+// RTL Simulation : 28 / 266 [n/a] @ "1473000"
+// RTL Simulation : 29 / 266 [n/a] @ "1498000"
+// RTL Simulation : 30 / 266 [n/a] @ "1523000"
+// RTL Simulation : 31 / 266 [n/a] @ "1548000"
+// RTL Simulation : 32 / 266 [n/a] @ "1573000"
+// RTL Simulation : 33 / 266 [n/a] @ "1598000"
+// RTL Simulation : 34 / 266 [n/a] @ "1623000"
+// RTL Simulation : 35 / 266 [n/a] @ "1648000"
+// RTL Simulation : 36 / 266 [n/a] @ "1673000"
+// RTL Simulation : 37 / 266 [n/a] @ "1698000"
+// RTL Simulation : 38 / 266 [n/a] @ "1723000"
+// RTL Simulation : 39 / 266 [n/a] @ "1748000"
+// RTL Simulation : 40 / 266 [n/a] @ "1773000"
+// RTL Simulation : 41 / 266 [n/a] @ "1798000"
+// RTL Simulation : 42 / 266 [n/a] @ "1823000"
+// RTL Simulation : 43 / 266 [n/a] @ "1848000"
+// RTL Simulation : 44 / 266 [n/a] @ "1873000"
+// RTL Simulation : 45 / 266 [n/a] @ "1898000"
+// RTL Simulation : 46 / 266 [n/a] @ "2573000"
+// RTL Simulation : 47 / 266 [n/a] @ "2598000"
+// RTL Simulation : 48 / 266 [n/a] @ "2623000"
+// RTL Simulation : 49 / 266 [n/a] @ "2648000"
+// RTL Simulation : 50 / 266 [n/a] @ "2673000"
+// RTL Simulation : 51 / 266 [n/a] @ "2698000"
+// RTL Simulation : 52 / 266 [n/a] @ "2723000"
+// RTL Simulation : 53 / 266 [n/a] @ "2748000"
+// RTL Simulation : 54 / 266 [n/a] @ "2773000"
+// RTL Simulation : 55 / 266 [n/a] @ "2798000"
+// RTL Simulation : 56 / 266 [n/a] @ "2823000"
+// RTL Simulation : 57 / 266 [n/a] @ "2848000"
+// RTL Simulation : 58 / 266 [n/a] @ "2873000"
+// RTL Simulation : 59 / 266 [n/a] @ "2898000"
+// RTL Simulation : 60 / 266 [n/a] @ "2923000"
+// RTL Simulation : 61 / 266 [n/a] @ "2948000"
+// RTL Simulation : 62 / 266 [n/a] @ "2973000"
+// RTL Simulation : 63 / 266 [n/a] @ "2998000"
+// RTL Simulation : 64 / 266 [n/a] @ "3023000"
+// RTL Simulation : 65 / 266 [n/a] @ "3048000"
+// RTL Simulation : 66 / 266 [n/a] @ "3073000"
+// RTL Simulation : 67 / 266 [n/a] @ "3098000"
+// RTL Simulation : 68 / 266 [n/a] @ "3773000"
+// RTL Simulation : 69 / 266 [n/a] @ "3798000"
+// RTL Simulation : 70 / 266 [n/a] @ "3823000"
+// RTL Simulation : 71 / 266 [n/a] @ "3848000"
+// RTL Simulation : 72 / 266 [n/a] @ "3873000"
+// RTL Simulation : 73 / 266 [n/a] @ "3898000"
+// RTL Simulation : 74 / 266 [n/a] @ "3923000"
+// RTL Simulation : 75 / 266 [n/a] @ "3948000"
+// RTL Simulation : 76 / 266 [n/a] @ "3973000"
+// RTL Simulation : 77 / 266 [n/a] @ "3998000"
+// RTL Simulation : 78 / 266 [n/a] @ "4023000"
+// RTL Simulation : 79 / 266 [n/a] @ "4048000"
+// RTL Simulation : 80 / 266 [n/a] @ "4073000"
+// RTL Simulation : 81 / 266 [n/a] @ "4098000"
+// RTL Simulation : 82 / 266 [n/a] @ "4123000"
+// RTL Simulation : 83 / 266 [n/a] @ "4148000"
+// RTL Simulation : 84 / 266 [n/a] @ "4173000"
+// RTL Simulation : 85 / 266 [n/a] @ "4198000"
+// RTL Simulation : 86 / 266 [n/a] @ "4223000"
+// RTL Simulation : 87 / 266 [n/a] @ "4248000"
+// RTL Simulation : 88 / 266 [n/a] @ "4273000"
+// RTL Simulation : 89 / 266 [n/a] @ "4298000"
+// RTL Simulation : 90 / 266 [n/a] @ "4988000"
+// RTL Simulation : 91 / 266 [n/a] @ "5013000"
+// RTL Simulation : 92 / 266 [n/a] @ "5038000"
+// RTL Simulation : 93 / 266 [n/a] @ "5063000"
+// RTL Simulation : 94 / 266 [n/a] @ "5088000"
+// RTL Simulation : 95 / 266 [n/a] @ "5113000"
+// RTL Simulation : 96 / 266 [n/a] @ "5138000"
+// RTL Simulation : 97 / 266 [n/a] @ "5163000"
+// RTL Simulation : 98 / 266 [n/a] @ "5188000"
+// RTL Simulation : 99 / 266 [n/a] @ "5213000"
+// RTL Simulation : 100 / 266 [n/a] @ "5238000"
+// RTL Simulation : 101 / 266 [n/a] @ "5263000"
+// RTL Simulation : 102 / 266 [n/a] @ "5288000"
+// RTL Simulation : 103 / 266 [n/a] @ "5313000"
+// RTL Simulation : 104 / 266 [n/a] @ "5338000"
+// RTL Simulation : 105 / 266 [n/a] @ "5363000"
+// RTL Simulation : 106 / 266 [n/a] @ "5388000"
+// RTL Simulation : 107 / 266 [n/a] @ "5413000"
+// RTL Simulation : 108 / 266 [n/a] @ "5438000"
+// RTL Simulation : 109 / 266 [n/a] @ "5463000"
+// RTL Simulation : 110 / 266 [n/a] @ "5488000"
+// RTL Simulation : 111 / 266 [n/a] @ "5513000"
+// RTL Simulation : 112 / 266 [n/a] @ "6188000"
+// RTL Simulation : 113 / 266 [n/a] @ "6213000"
+// RTL Simulation : 114 / 266 [n/a] @ "6238000"
+// RTL Simulation : 115 / 266 [n/a] @ "6263000"
+// RTL Simulation : 116 / 266 [n/a] @ "6288000"
+// RTL Simulation : 117 / 266 [n/a] @ "6313000"
+// RTL Simulation : 118 / 266 [n/a] @ "6338000"
+// RTL Simulation : 119 / 266 [n/a] @ "6363000"
+// RTL Simulation : 120 / 266 [n/a] @ "6388000"
+// RTL Simulation : 121 / 266 [n/a] @ "6413000"
+// RTL Simulation : 122 / 266 [n/a] @ "6438000"
+// RTL Simulation : 123 / 266 [n/a] @ "6463000"
+// RTL Simulation : 124 / 266 [n/a] @ "6488000"
+// RTL Simulation : 125 / 266 [n/a] @ "6513000"
+// RTL Simulation : 126 / 266 [n/a] @ "6538000"
+// RTL Simulation : 127 / 266 [n/a] @ "6563000"
+// RTL Simulation : 128 / 266 [n/a] @ "6588000"
+// RTL Simulation : 129 / 266 [n/a] @ "6613000"
+// RTL Simulation : 130 / 266 [n/a] @ "6638000"
+// RTL Simulation : 131 / 266 [n/a] @ "6663000"
+// RTL Simulation : 132 / 266 [n/a] @ "6688000"
+// RTL Simulation : 133 / 266 [n/a] @ "6713000"
+// RTL Simulation : 134 / 266 [n/a] @ "7388000"
+// RTL Simulation : 135 / 266 [n/a] @ "7413000"
+// RTL Simulation : 136 / 266 [n/a] @ "7438000"
+// RTL Simulation : 137 / 266 [n/a] @ "7463000"
+// RTL Simulation : 138 / 266 [n/a] @ "7488000"
+// RTL Simulation : 139 / 266 [n/a] @ "7513000"
+// RTL Simulation : 140 / 266 [n/a] @ "7538000"
+// RTL Simulation : 141 / 266 [n/a] @ "7563000"
+// RTL Simulation : 142 / 266 [n/a] @ "7588000"
+// RTL Simulation : 143 / 266 [n/a] @ "7613000"
+// RTL Simulation : 144 / 266 [n/a] @ "7638000"
+// RTL Simulation : 145 / 266 [n/a] @ "7663000"
+// RTL Simulation : 146 / 266 [n/a] @ "7688000"
+// RTL Simulation : 147 / 266 [n/a] @ "7713000"
+// RTL Simulation : 148 / 266 [n/a] @ "7738000"
+// RTL Simulation : 149 / 266 [n/a] @ "7763000"
+// RTL Simulation : 150 / 266 [n/a] @ "7788000"
+// RTL Simulation : 151 / 266 [n/a] @ "7813000"
+// RTL Simulation : 152 / 266 [n/a] @ "7838000"
+// RTL Simulation : 153 / 266 [n/a] @ "7863000"
+// RTL Simulation : 154 / 266 [n/a] @ "7888000"
+// RTL Simulation : 155 / 266 [n/a] @ "7913000"
+// RTL Simulation : 156 / 266 [n/a] @ "8588000"
+// RTL Simulation : 157 / 266 [n/a] @ "8613000"
+// RTL Simulation : 158 / 266 [n/a] @ "8638000"
+// RTL Simulation : 159 / 266 [n/a] @ "8663000"
+// RTL Simulation : 160 / 266 [n/a] @ "8688000"
+// RTL Simulation : 161 / 266 [n/a] @ "8713000"
+// RTL Simulation : 162 / 266 [n/a] @ "8738000"
+// RTL Simulation : 163 / 266 [n/a] @ "8763000"
+// RTL Simulation : 164 / 266 [n/a] @ "8788000"
+// RTL Simulation : 165 / 266 [n/a] @ "8813000"
+// RTL Simulation : 166 / 266 [n/a] @ "8838000"
+// RTL Simulation : 167 / 266 [n/a] @ "8863000"
+// RTL Simulation : 168 / 266 [n/a] @ "8888000"
+// RTL Simulation : 169 / 266 [n/a] @ "8913000"
+// RTL Simulation : 170 / 266 [n/a] @ "8938000"
+// RTL Simulation : 171 / 266 [n/a] @ "8963000"
+// RTL Simulation : 172 / 266 [n/a] @ "8988000"
+// RTL Simulation : 173 / 266 [n/a] @ "9013000"
+// RTL Simulation : 174 / 266 [n/a] @ "9038000"
+// RTL Simulation : 175 / 266 [n/a] @ "9063000"
+// RTL Simulation : 176 / 266 [n/a] @ "9088000"
+// RTL Simulation : 177 / 266 [n/a] @ "9113000"
+// RTL Simulation : 178 / 266 [n/a] @ "9803000"
+// RTL Simulation : 179 / 266 [n/a] @ "9828000"
+// RTL Simulation : 180 / 266 [n/a] @ "9853000"
+// RTL Simulation : 181 / 266 [n/a] @ "9878000"
+// RTL Simulation : 182 / 266 [n/a] @ "9903000"
+// RTL Simulation : 183 / 266 [n/a] @ "9928000"
+// RTL Simulation : 184 / 266 [n/a] @ "9953000"
+// RTL Simulation : 185 / 266 [n/a] @ "9978000"
+// RTL Simulation : 186 / 266 [n/a] @ "10003000"
+// RTL Simulation : 187 / 266 [n/a] @ "10028000"
+// RTL Simulation : 188 / 266 [n/a] @ "10053000"
+// RTL Simulation : 189 / 266 [n/a] @ "10078000"
+// RTL Simulation : 190 / 266 [n/a] @ "10103000"
+// RTL Simulation : 191 / 266 [n/a] @ "10128000"
+// RTL Simulation : 192 / 266 [n/a] @ "10153000"
+// RTL Simulation : 193 / 266 [n/a] @ "10178000"
+// RTL Simulation : 194 / 266 [n/a] @ "10203000"
+// RTL Simulation : 195 / 266 [n/a] @ "10228000"
+// RTL Simulation : 196 / 266 [n/a] @ "10253000"
+// RTL Simulation : 197 / 266 [n/a] @ "10278000"
+// RTL Simulation : 198 / 266 [n/a] @ "10303000"
+// RTL Simulation : 199 / 266 [n/a] @ "10328000"
+// RTL Simulation : 200 / 266 [n/a] @ "11003000"
+// RTL Simulation : 201 / 266 [n/a] @ "11028000"
+// RTL Simulation : 202 / 266 [n/a] @ "11053000"
+// RTL Simulation : 203 / 266 [n/a] @ "11078000"
+// RTL Simulation : 204 / 266 [n/a] @ "11103000"
+// RTL Simulation : 205 / 266 [n/a] @ "11128000"
+// RTL Simulation : 206 / 266 [n/a] @ "11153000"
+// RTL Simulation : 207 / 266 [n/a] @ "11178000"
+// RTL Simulation : 208 / 266 [n/a] @ "11203000"
+// RTL Simulation : 209 / 266 [n/a] @ "11228000"
+// RTL Simulation : 210 / 266 [n/a] @ "11253000"
+// RTL Simulation : 211 / 266 [n/a] @ "11278000"
+// RTL Simulation : 212 / 266 [n/a] @ "11303000"
+// RTL Simulation : 213 / 266 [n/a] @ "11328000"
+// RTL Simulation : 214 / 266 [n/a] @ "11353000"
+// RTL Simulation : 215 / 266 [n/a] @ "11378000"
+// RTL Simulation : 216 / 266 [n/a] @ "11403000"
+// RTL Simulation : 217 / 266 [n/a] @ "11428000"
+// RTL Simulation : 218 / 266 [n/a] @ "11453000"
+// RTL Simulation : 219 / 266 [n/a] @ "11478000"
+// RTL Simulation : 220 / 266 [n/a] @ "11503000"
+// RTL Simulation : 221 / 266 [n/a] @ "11528000"
+// RTL Simulation : 222 / 266 [n/a] @ "12203000"
+// RTL Simulation : 223 / 266 [n/a] @ "12228000"
+// RTL Simulation : 224 / 266 [n/a] @ "12253000"
+// RTL Simulation : 225 / 266 [n/a] @ "12278000"
+// RTL Simulation : 226 / 266 [n/a] @ "12303000"
+// RTL Simulation : 227 / 266 [n/a] @ "12328000"
+// RTL Simulation : 228 / 266 [n/a] @ "12353000"
+// RTL Simulation : 229 / 266 [n/a] @ "12378000"
+// RTL Simulation : 230 / 266 [n/a] @ "12403000"
+// RTL Simulation : 231 / 266 [n/a] @ "12428000"
+// RTL Simulation : 232 / 266 [n/a] @ "12453000"
+// RTL Simulation : 233 / 266 [n/a] @ "12478000"
+// RTL Simulation : 234 / 266 [n/a] @ "12503000"
+// RTL Simulation : 235 / 266 [n/a] @ "12528000"
+// RTL Simulation : 236 / 266 [n/a] @ "12553000"
+// RTL Simulation : 237 / 266 [n/a] @ "12578000"
+// RTL Simulation : 238 / 266 [n/a] @ "12603000"
+// RTL Simulation : 239 / 266 [n/a] @ "12628000"
+// RTL Simulation : 240 / 266 [n/a] @ "12653000"
+// RTL Simulation : 241 / 266 [n/a] @ "12678000"
+// RTL Simulation : 242 / 266 [n/a] @ "12703000"
+// RTL Simulation : 243 / 266 [n/a] @ "12728000"
+// RTL Simulation : 244 / 266 [n/a] @ "13403000"
+// RTL Simulation : 245 / 266 [n/a] @ "13428000"
+// RTL Simulation : 246 / 266 [n/a] @ "13453000"
+// RTL Simulation : 247 / 266 [n/a] @ "13478000"
+// RTL Simulation : 248 / 266 [n/a] @ "13503000"
+// RTL Simulation : 249 / 266 [n/a] @ "13528000"
+// RTL Simulation : 250 / 266 [n/a] @ "13553000"
+// RTL Simulation : 251 / 266 [n/a] @ "13578000"
+// RTL Simulation : 252 / 266 [n/a] @ "13603000"
+// RTL Simulation : 253 / 266 [n/a] @ "13628000"
+// RTL Simulation : 254 / 266 [n/a] @ "13653000"
+// RTL Simulation : 255 / 266 [n/a] @ "13678000"
+// RTL Simulation : 256 / 266 [n/a] @ "13703000"
+// RTL Simulation : 257 / 266 [n/a] @ "13728000"
+// RTL Simulation : 258 / 266 [n/a] @ "13753000"
+// RTL Simulation : 259 / 266 [n/a] @ "13778000"
+// RTL Simulation : 260 / 266 [n/a] @ "13803000"
+// RTL Simulation : 261 / 266 [n/a] @ "13828000"
+// RTL Simulation : 262 / 266 [n/a] @ "13853000"
+// RTL Simulation : 263 / 266 [n/a] @ "13878000"
+// RTL Simulation : 264 / 266 [n/a] @ "13903000"
+// RTL Simulation : 265 / 266 [n/a] @ "13928000"
+// RTL Simulation : 266 / 266 [n/a] @ "14618000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 14647500 ps : File "C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/hdv_engine.autotb.v" Line 662
+## quit
+INFO: [Common 17-206] Exiting xsim at Tue Jun 25 19:00:12 2024...
+Test index: 0, Correct Label: 0, Predicted: 0, Percentage: 0%
+[--------------------]
+Accuracy: 1
+Precision: 0.333333
+Test index: 1, Correct Label: 0, Predicted: 0, Percentage: 50%
+[##########----------]
+Accuracy: 1
+Precision: 0.333333
+Test index: 2, Correct Label: 0, Predicted: 0, Percentage: 100%
+[####################]
+Accuracy: 1
+Precision: 0.333333
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 252
+WARNING [HLS SIM]: hls::stream 'hls::stream<hls::axis<ap_uint<8>, 1ull, 1ull, 1ull>, 0>0' contains leftover data, which may result in RTL simulation hanging.
+INFO: [COSIM-1000] *** C/RTL co-simulation finished: PASS ***

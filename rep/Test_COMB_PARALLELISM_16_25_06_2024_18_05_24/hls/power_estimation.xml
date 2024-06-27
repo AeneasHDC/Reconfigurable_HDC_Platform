@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<RptDoc cmdline="" designname="" designstate="" partname="" speedfile="" title="Power Report" version="1">
+
+  <section class="" title="Summary">
+    <table class="" style="2" title="" useFootnoteNumbers="0">
+      <footnote text="Specify Design Power Budget using, set_operating_conditions -design_power_budget &lt;value in Watts>"/>
+      <tablerow class="" suppressoutput="0" wordwrap="0">
+        <tablecell class="" contents="Total On-Chip Power (W)" halign="0" type="string"/>
+        <tablecell class="" contents="0.664" halign="0" type="string"/>
+      </tablerow>
+      <tablerow class="" suppressoutput="0" wordwrap="0">
+        <tablecell class="" contents="Design Power Budget (W)" halign="0" type="string"/>
+        <tablecell class="" contents="Unspecified*" halign="0" type="string"/>
+      </tablerow>
+      <tablerow class="" suppressoutput="0" wordwrap="0">
+        <tablecell class="" contents="Power Budget Margin (W)" halign="0" type="string"/>
+        <tablecell class="" contents="NA" halign="0" type="string"/>
+      </tablerow>
+      <tablerow class="" suppressoutput="0" wordwrap="0">
+        <tablecell class="" contents="Dynamic (W)" halign="0" type="string"/>
+        <tablecell class="" contents="0.043" halign="0" type="string"/>
+      </tablerow>
+      <tablerow class="" suppressoutput="0" wordwrap="0">
+        <tablecell class="" contents="Device Static (W)" halign="0" type="string"/>
+        <tablecell class="" contents="0.620" halign="0" type="string"/>
+      </tablerow>
+      <tablerow class="" suppressoutput="0" wordwrap="0">
+        <tablecell class="" contents="Effective TJA (C/W)" halign="0" type="string"/>
+        <tablecell class="" contents="1.0" halign="0" type="string"/>
+      </tablerow>
+      <tablerow class="" suppressoutput="0" wordwrap="0">
+        <tablecell class="" contents="Max Ambient (C)" halign="0" type="string"/>
+        <tablecell class="" contents="99.4" halign="0" type="string"/>
+      </tablerow>
+      <tablerow class="" suppressoutput="0" wordwrap="0">
+        <tablecell class="" contents="Junction Temperature (C)" halign="0" type="string"/>
+        <tablecell class="" contents="25.6" halign="0" type="string"/>
+      </tablerow>
+      <tablerow class="" suppressoutput="0" wordwrap="0">
+        <tablecell class="" contents="Confidence Level" halign="0" type="string"/>
+        <tablecell class="" contents="Low" halign="0" type="string"/>
+      </tablerow>
+      <tablerow class="" suppressoutput="0" wordwrap="0">
+        <tablecell class="" contents="Setting File" halign="0" type="string"/>
+        <tablecell class="" contents="---" halign="0" type="string"/>
+      </tablerow>
+      <tablerow class="" suppressoutput="0" wordwrap="0">
+        <tablecell class="" contents="Simulation Activity File" halign="0" type="string"/>
+        <tablecell class="" contents="---" halign="0" type="string"/>
+      </tablerow>
+      <tablerow class="" suppressoutput="0" wordwrap="0">
+        <tablecell class="" contents="Design Nets Matched" halign="0" type="string"/>
+        <tablecell class="" contents="NA" halign="0" type="string"/>
+      </tablerow>
+    </table>
+    <section class="" title="On-Chip Components">
+      <table class="" style="2" title="" useFootnoteNumbers="0">
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tableheader class="" contents="On-Chip" halign="1" width="-1"/>
+          <tableheader class="" contents="Power (W)" halign="1" width="-1"/>
+          <tableheader class="" contents="Used" halign="1" width="-1"/>
+          <tableheader class="" contents="Available" halign="1" width="-1"/>
+          <tableheader class="" contents="Utilization (%)" halign="1" width="-1"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="Clocks" halign="0" type="string"/>
+          <tablecell class="" contents="    0.000" halign="0" type="string"/>
+          <tablecell class="" contents="       3" halign="0" type="string"/>
+          <tablecell class="" contents="      ---" halign="0" type="string"/>
+          <tablecell class="" contents="            ---" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="CLB Logic" halign="0" type="string"/>
+          <tablecell class="" contents="    0.016" halign="0" type="string"/>
+          <tablecell class="" contents="   16710" halign="0" type="string"/>
+          <tablecell class="" contents="      ---" halign="0" type="string"/>
+          <tablecell class="" contents="            ---" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="  LUT as Logic" halign="0" type="string"/>
+          <tablecell class="" contents="    0.015" halign="0" type="string"/>
+          <tablecell class="" contents="   10188" halign="0" type="string"/>
+          <tablecell class="" contents="   274080" halign="0" type="string"/>
+          <tablecell class="" contents="           3.72" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="  CARRY8" halign="0" type="string"/>
+          <tablecell class="" contents="   &lt;0.001" halign="0" type="string"/>
+          <tablecell class="" contents="     520" halign="0" type="string"/>
+          <tablecell class="" contents="    34260" halign="0" type="string"/>
+          <tablecell class="" contents="           1.52" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="  Register" halign="0" type="string"/>
+          <tablecell class="" contents="   &lt;0.001" halign="0" type="string"/>
+          <tablecell class="" contents="    5773" halign="0" type="string"/>
+          <tablecell class="" contents="   548160" halign="0" type="string"/>
+          <tablecell class="" contents="           1.05" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="  BUFG" halign="0" type="string"/>
+          <tablecell class="" contents="   &lt;0.001" halign="0" type="string"/>
+          <tablecell class="" contents="       1" halign="0" type="string"/>
+          <tablecell class="" contents="       32" halign="0" type="string"/>
+          <tablecell class="" contents="           3.13" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="  Others" halign="0" type="string"/>
+          <tablecell class="" contents="    0.000" halign="0" type="string"/>
+          <tablecell class="" contents="      19" halign="0" type="string"/>
+          <tablecell class="" contents="      ---" halign="0" type="string"/>
+          <tablecell class="" contents="            ---" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="Signals" halign="0" type="string"/>
+          <tablecell class="" contents="    0.013" halign="0" type="string"/>
+          <tablecell class="" contents="   16291" halign="0" type="string"/>
+          <tablecell class="" contents="      ---" halign="0" type="string"/>
+          <tablecell class="" contents="            ---" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="I/O" halign="0" type="string"/>
+          <tablecell class="" contents="    0.015" halign="0" type="string"/>
+          <tablecell class="" contents="     682" halign="0" type="string"/>
+          <tablecell class="" contents="      328" halign="0" type="string"/>
+          <tablecell class="" contents="         207.93" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="Static Power" halign="0" type="string"/>
+          <tablecell class="" contents="    0.620" halign="0" type="string"/>
+          <tablecell class="" contents="" halign="0" type="string"/>
+          <tablecell class="" contents="" halign="0" type="string"/>
+          <tablecell class="" contents="" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="Total" halign="0" type="string"/>
+          <tablecell class="" contents="    0.664" halign="0" type="string"/>
+          <tablecell class="" contents="" halign="0" type="string"/>
+          <tablecell class="" contents="" halign="0" type="string"/>
+          <tablecell class="" contents="" halign="0" type="string"/>
+        </tablerow>
+      </table>
+    </section>
+    <section class="" title="Power Supply Summary">
+      <table class="" style="2" title="" useFootnoteNumbers="0">
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tableheader class="" contents="Source" halign="1" width="-1"/>
+          <tableheader class="" contents="Voltage (V)" halign="1" width="-1"/>
+          <tableheader class="" contents="Total (A)" halign="1" width="-1"/>
+          <tableheader class="" contents="Dynamic (A)" halign="1" width="-1"/>
+          <tableheader class="" contents="Static (A)" halign="1" width="-1"/>
+          <tableheader class="" contents="Powerup (A)" halign="1" width="-1"/>
+          <tableheader class="" contents="Budget (A)" halign="1" width="-1"/>
+          <tableheader class="" contents="Margin (A)" halign="1" width="-1"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="Vccint" halign="0" type="string"/>
+          <tablecell class="" contents="0.850000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.212126" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.033296" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.178830" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="      NA" halign="0" type="string"/>
+          <tablecell class="" contents="Unspecified" halign="0" type="string"/>
+          <tablecell class="" contents="NA" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="Vccint_io" halign="0" type="string"/>
+          <tablecell class="" contents="0.850000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.042047" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.006726" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.035321" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="      NA" halign="0" type="string"/>
+          <tablecell class="" contents="Unspecified" halign="0" type="string"/>
+          <tablecell class="" contents="NA" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="Vccbram" halign="0" type="string"/>
+          <tablecell class="" contents="0.850000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.002651" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.002651" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="      NA" halign="0" type="string"/>
+          <tablecell class="" contents="Unspecified" halign="0" type="string"/>
+          <tablecell class="" contents="NA" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="Vccaux" halign="0" type="string"/>
+          <tablecell class="" contents="1.800000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.194682" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.194682" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="      NA" halign="0" type="string"/>
+          <tablecell class="" contents="Unspecified" halign="0" type="string"/>
+          <tablecell class="" contents="NA" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="Vccaux_io" halign="0" type="string"/>
+          <tablecell class="" contents="1.800000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.035240" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.002625" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.032615" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="      NA" halign="0" type="string"/>
+          <tablecell class="" contents="Unspecified" halign="0" type="string"/>
+          <tablecell class="" contents="NA" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="Vcco33" halign="0" type="string"/>
+          <tablecell class="" contents="3.300000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="      NA" halign="0" type="string"/>
+          <tablecell class="" contents="Unspecified" halign="0" type="string"/>
+          <tablecell class="" contents="NA" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="Vcco25" halign="0" type="string"/>
+          <tablecell class="" contents="2.500000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="      NA" halign="0" type="string"/>
+          <tablecell class="" contents="Unspecified" halign="0" type="string"/>
+          <tablecell class="" contents="NA" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="Vcco18" halign="0" type="string"/>
+          <tablecell class="" contents="1.800000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.002513" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.002505" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000008" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="      NA" halign="0" type="string"/>
+          <tablecell class="" contents="Unspecified" halign="0" type="string"/>
+          <tablecell class="" contents="NA" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="Vcco15" halign="0" type="string"/>
+          <tablecell class="" contents="1.500000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="      NA" halign="0" type="string"/>
+          <tablecell class="" contents="Unspecified" halign="0" type="string"/>
+          <tablecell class="" contents="NA" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="Vcco135" halign="0" type="string"/>
+          <tablecell class="" contents="1.350000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="      NA" halign="0" type="string"/>
+          <tablecell class="" contents="Unspecified" halign="0" type="string"/>
+          <tablecell class="" contents="NA" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="Vcco12" halign="0" type="string"/>
+          <tablecell class="" contents="1.200000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="      NA" halign="0" type="string"/>
+          <tablecell class="" contents="Unspecified" halign="0" type="string"/>
+          <tablecell class="" contents="NA" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="Vcco10" halign="0" type="string"/>
+          <tablecell class="" contents="1.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="      NA" halign="0" type="string"/>
+          <tablecell class="" contents="Unspecified" halign="0" type="string"/>
+          <tablecell class="" contents="NA" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="Vccadc" halign="0" type="string"/>
+          <tablecell class="" contents="1.800000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.008000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.008000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="      NA" halign="0" type="string"/>
+          <tablecell class="" contents="Unspecified" halign="0" type="string"/>
+          <tablecell class="" contents="NA" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="VCC_PSINTFP" halign="0" type="string"/>
+          <tablecell class="" contents="0.850000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="      NA" halign="0" type="string"/>
+          <tablecell class="" contents="Unspecified" halign="0" type="string"/>
+          <tablecell class="" contents="NA" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="VCC_PSINTLP" halign="0" type="string"/>
+          <tablecell class="" contents="0.850000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.004919" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.004919" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="      NA" halign="0" type="string"/>
+          <tablecell class="" contents="Unspecified" halign="0" type="string"/>
+          <tablecell class="" contents="NA" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="VPS_MGTRAVCC" halign="0" type="string"/>
+          <tablecell class="" contents="0.850000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="      NA" halign="0" type="string"/>
+          <tablecell class="" contents="Unspecified" halign="0" type="string"/>
+          <tablecell class="" contents="NA" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="VCC_PSINTFP_DDR" halign="0" type="string"/>
+          <tablecell class="" contents="0.850000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="      NA" halign="0" type="string"/>
+          <tablecell class="" contents="Unspecified" halign="0" type="string"/>
+          <tablecell class="" contents="NA" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="VCC_PSPLL" halign="0" type="string"/>
+          <tablecell class="" contents="1.200000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.001500" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.001500" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="      NA" halign="0" type="string"/>
+          <tablecell class="" contents="Unspecified" halign="0" type="string"/>
+          <tablecell class="" contents="NA" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="VPS_MGTRAVTT" halign="0" type="string"/>
+          <tablecell class="" contents="1.800000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="      NA" halign="0" type="string"/>
+          <tablecell class="" contents="Unspecified" halign="0" type="string"/>
+          <tablecell class="" contents="NA" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="VCCO_PSDDR_504" halign="0" type="string"/>
+          <tablecell class="" contents="1.200000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="      NA" halign="0" type="string"/>
+          <tablecell class="" contents="Unspecified" halign="0" type="string"/>
+          <tablecell class="" contents="NA" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="VCC_PSAUX" halign="0" type="string"/>
+          <tablecell class="" contents="1.800000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.002200" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.002200" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="      NA" halign="0" type="string"/>
+          <tablecell class="" contents="Unspecified" halign="0" type="string"/>
+          <tablecell class="" contents="NA" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="VCC_PSBATT" halign="0" type="string"/>
+          <tablecell class="" contents="1.200000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="      NA" halign="0" type="string"/>
+          <tablecell class="" contents="Unspecified" halign="0" type="string"/>
+          <tablecell class="" contents="NA" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="VCC_PSDDR_PLL" halign="0" type="string"/>
+          <tablecell class="" contents="1.800000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="      NA" halign="0" type="string"/>
+          <tablecell class="" contents="Unspecified" halign="0" type="string"/>
+          <tablecell class="" contents="NA" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="VCCO_PSIO0_500" halign="0" type="string"/>
+          <tablecell class="" contents="3.300000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="      NA" halign="0" type="string"/>
+          <tablecell class="" contents="Unspecified" halign="0" type="string"/>
+          <tablecell class="" contents="NA" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="VCCO_PSIO1_501" halign="0" type="string"/>
+          <tablecell class="" contents="3.300000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="      NA" halign="0" type="string"/>
+          <tablecell class="" contents="Unspecified" halign="0" type="string"/>
+          <tablecell class="" contents="NA" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="VCCO_PSIO2_502" halign="0" type="string"/>
+          <tablecell class="" contents="3.300000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="      NA" halign="0" type="string"/>
+          <tablecell class="" contents="Unspecified" halign="0" type="string"/>
+          <tablecell class="" contents="NA" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="VCCO_PSIO3_503" halign="0" type="string"/>
+          <tablecell class="" contents="3.300000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="      NA" halign="0" type="string"/>
+          <tablecell class="" contents="Unspecified" halign="0" type="string"/>
+          <tablecell class="" contents="NA" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="VCC_PSADC" halign="0" type="string"/>
+          <tablecell class="" contents="1.800000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.001500" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.001500" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="      NA" halign="0" type="string"/>
+          <tablecell class="" contents="Unspecified" halign="0" type="string"/>
+          <tablecell class="" contents="NA" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="MGTAVcc" halign="0" type="string"/>
+          <tablecell class="" contents="0.900000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="      NA" halign="0" type="string"/>
+          <tablecell class="" contents="Unspecified" halign="0" type="string"/>
+          <tablecell class="" contents="NA" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="MGTAVtt" halign="0" type="string"/>
+          <tablecell class="" contents="1.200000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="      NA" halign="0" type="string"/>
+          <tablecell class="" contents="Unspecified" halign="0" type="string"/>
+          <tablecell class="" contents="NA" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="MGTVccaux" halign="0" type="string"/>
+          <tablecell class="" contents="1.800000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="0.000000" decimalplaces="3" halign="0" type="double"/>
+          <tablecell class="" contents="      NA" halign="0" type="string"/>
+          <tablecell class="" contents="Unspecified" halign="0" type="string"/>
+          <tablecell class="" contents="NA" halign="0" type="string"/>
+        </tablerow>
+      </table>
+    </section>
+    <section class="" title="Confidence Level">
+      <table class="" style="2" title="" useFootnoteNumbers="0">
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tableheader class="" contents="User Input Data" halign="1" width="-1"/>
+          <tableheader class="" contents="Confidence" halign="1" width="-1"/>
+          <tableheader class="" contents="Details" halign="1" width="-1"/>
+          <tableheader class="" contents="Action" halign="1" width="-1"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="Design implementation state" halign="0" type="string"/>
+          <tablecell class="" contents="Low" halign="0" type="string"/>
+          <tablecell class="" contents="Design is synthesized" halign="0" type="string"/>
+          <tablecell class="" contents="Accuracy of the tool is not optimal until design is fully placed and routed" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="Clock nodes activity" halign="0" type="string"/>
+          <tablecell class="" contents="Low" halign="0" type="string"/>
+          <tablecell class="" contents="User specified less than 75% of clocks" halign="0" type="string"/>
+          <tablecell class="" contents="Provide missing clock activity with a constraint file, simulation results or by editing the &quot;By Clock Domain&quot; view" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="I/O nodes activity" halign="0" type="string"/>
+          <tablecell class="" contents="Low" halign="0" type="string"/>
+          <tablecell class="" contents="More than 75% of inputs are missing user specification" halign="0" type="string"/>
+          <tablecell class="" contents="Provide missing input activity with simulation results or by editing the &quot;By Resource Type -> I/Os&quot; view" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="Internal nodes activity" halign="0" type="string"/>
+          <tablecell class="" contents="Medium" halign="0" type="string"/>
+          <tablecell class="" contents="User specified less than 25% of internal nodes" halign="0" type="string"/>
+          <tablecell class="" contents="Provide missing internal nodes activity with simulation results or by editing the &quot;By Resource Type&quot; views" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="Device models" halign="0" type="string"/>
+          <tablecell class="" contents="High" halign="0" type="string"/>
+          <tablecell class="" contents="Device models are Production" halign="0" type="string"/>
+          <tablecell class="" contents="" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="" halign="0" type="string"/>
+          <tablecell class="" contents="" halign="0" type="string"/>
+          <tablecell class="" contents="" halign="0" type="string"/>
+          <tablecell class="" contents="" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="Overall confidence level" halign="0" type="string"/>
+          <tablecell class="" contents="Low" halign="0" type="string"/>
+          <tablecell class="" contents="" halign="0" type="string"/>
+          <tablecell class="" contents="" halign="0" type="string"/>
+        </tablerow>
+      </table>
+    </section>
+  </section>
+
+  <section class="" title="Settings">
+    <section class="" title="Environment">
+      <table class="" style="2" title="" useFootnoteNumbers="0">
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="Ambient Temp (C)" halign="0" type="string"/>
+          <tablecell class="" contents="25.0" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="ThetaJA (C/W)" halign="0" type="string"/>
+          <tablecell class="" contents="1.0" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="Airflow (LFM)" halign="0" type="string"/>
+          <tablecell class="" contents="250" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="Heat Sink" halign="0" type="string"/>
+          <tablecell class="" contents="medium (Medium Profile)" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="ThetaSA (C/W)" halign="0" type="string"/>
+          <tablecell class="" contents="1.5" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="Board Selection" halign="0" type="string"/>
+          <tablecell class="" contents="medium (10&quot;x10&quot;)" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="# of Board Layers" halign="0" type="string"/>
+          <tablecell class="" contents="12to15 (12 to 15 Layers)" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="Board Temperature (C)" halign="0" type="string"/>
+          <tablecell class="" contents="25.0" halign="0" type="string"/>
+        </tablerow>
+      </table>
+    </section>
+    <section class="" title="Clock Constraints">
+      <table class="" style="2" title="" useFootnoteNumbers="0">
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tableheader class="" contents="Clock" halign="1" width="-1"/>
+          <tableheader class="" contents="Domain" halign="1" width="-1"/>
+          <tableheader class="" contents="Constraint (ns)" halign="1" width="-1"/>
+        </tablerow>
+      </table>
+    </section>
+  </section>
+
+  <section class="" title="Detailed Reports">
+    <section class="" title="By Hierarchy">
+      <table class="" style="2" title="" useFootnoteNumbers="0">
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tableheader class="" contents="Name" halign="1" width="-1"/>
+          <tableheader class="" contents="Power (W)" halign="1" width="-1"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="hdv_engine" halign="0" type="string"/>
+          <tablecell class="" contents="    0.043" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="  grp_hdv_engine_Pipeline_VITIS_LOOP_511_4_fu_1763" halign="0" type="string"/>
+          <tablecell class="" contents="    0.022" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="    flow_control_loop_pipe_sequential_init_U" halign="0" type="string"/>
+          <tablecell class="" contents="    0.014" halign="0" type="string"/>
+        </tablerow>
+        <tablerow class="" suppressoutput="0" wordwrap="0">
+          <tablecell class="" contents="  mux_3_2_32_1_1_U531" halign="0" type="string"/>
+          <tablecell class="" contents="    0.001" halign="0" type="string"/>
+        </tablerow>
+      </table>
+    </section>
+  </section>
+
+</RptDoc>

@@ -101,7 +101,7 @@
             "description": "Training Information",
             "TRAIN_ON_HW": 0,
             "RETRAIN_ON_HW": 0,
-            "EPOCH": 10
+            "EPOCH": 1
         }
     },
     "HDC": {
@@ -128,7 +128,7 @@
                     "SIMI_DPROD": 1,
                     "SIMI_HAM": 2
                 },
-                "selected": "SIMI_DPROD"
+                "selected": "SIMI_HAM"
             },
             "APPROX_SQRT": {
                 "APPROX_SQRT_ON_HW": 0,

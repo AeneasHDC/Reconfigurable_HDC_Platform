@@ -1,0 +1,295 @@
+{
+    "general": {
+        "VERBOS": {
+            "description": "Verbosity level",
+            "options": {
+                "VERBOS_DISABLE": 0,
+                "VERBOS_L1": 1,
+                "VERBOS_L2": 2
+            },
+            "selected": "VERBOS_L1"
+        },
+        "OS": {
+            "description": "Operating System",
+            "options": {
+                "WINDOWS": 0,
+                "LINUX": 1,
+                "MAC": 2
+            },
+            "selected": "WINDOWS"
+        }
+    },
+    "target": {
+        "DEVICE_TYPE": {
+            "description": "Target Device or Board Type",
+            "options": {
+                "FPGA": 0,
+                "MICROCONTROLER": 1,
+                "SOFT_PROCESSOR": 2
+            },
+            "selected": "MICROCONTROLER"
+        },
+        "DEVICE_INFO": {
+            "description": "Specific Target Device Information",
+            "TARGET_DEVICE": "xczu9eg-ffvb1156-2-e",
+            "TARGET_BOARD": {
+                "options": {
+                    "AMD_ZYBO": 0,
+                    "AMD_ZEDBOARD": 1,
+                    "AMD_ZCU106": 2,
+                    "AMD_ZCU102": 3,
+                    "AMD_VCU108": 4
+                },
+                "selected": "AMD_ZCU102"
+            }
+        },
+        "VIVADO": {
+            "description": "Vivado Configuration",
+            "OP_FREQ": 200,
+            "USE_VIV_EN": 1,
+            "VIV_OPT_METHOD": {
+                "options": {
+                    "VIV_OPT_DEFAULT": 0,
+                    "VIV_OPT_RESOURCE": 1,
+                    "VIV_OPT_SPEED": 2,
+                    "VIV_OPT_PERFORMANCE": 3
+                },
+                "selected": "VIV_OPT_DEFAULT"
+            }
+        }
+    },
+    "languages": {
+        "HDL_LANG": {
+            "description": "Hardware Description Language",
+            "options": {
+                "HLS": 0,
+                "SYSTEM_VERILOG": 1,
+                "VHDL": 2,
+                "VERILOG": 3
+            },
+            "selected": "HLS"
+        },
+        "MODEL_LANG": {
+            "description": "Modeling Language",
+            "options": {
+                "PYTHON": 4,
+                "MATLAB": 5,
+                "CPP": 6,
+                "C": 7,
+                "RUST": 8
+            },
+            "selected": "PYTHON"
+        }
+    },
+    "dataset": {
+        "DS_INFO": {
+            "description": "Dataset Information",
+            "DS_NAME": "CARDIO",
+            "DS_SIZE": 2126,
+            "DS_TRAIN_SIZE": 1594,
+            "DS_TEST_SIZE": 532,
+            "DS_VALIDATION_SIZE": 500,
+            "DS_FEATURE_SIZE": 21,
+            "DS_DATA_TYPE": "FP",
+            "DS_DATA_RANGE_MIN": 0,
+            "DS_DATA_RANGE_MAX": 1,
+            "DS_CLASSES_SIZE": 3
+        }
+    },
+    "train": {
+        "TRAINING_INFO": {
+            "description": "Training Information",
+            "TRAIN_ON_HW": 0,
+            "RETRAIN_ON_HW": 0,
+            "EPOCH": 10
+        }
+    },
+    "HDC": {
+        "HD_INFO": {
+            "description": "HDC Model Configuration",
+            "HD_DIM": 512,
+            "HD_DATA_TYPE": {
+                "options": {
+                    "BINARY": 0,
+                    "BIPOLAR": 1
+                },
+                "selected": "BIPOLAR"
+            },
+            "HD_MODE": {
+                "options": {
+                    "DENSE": 0,
+                    "SPARSE": 1
+                },
+                "selected": "DENSE"
+            },
+            "HD_SIMI_METHOD": {
+                "options": {
+                    "SIMI_COS": 0,
+                    "SIMI_DPROD": 1,
+                    "SIMI_HAM": 2
+                },
+                "selected": "SIMI_COS"
+            },
+            "APPROX_SQRT": {
+                "APPROX_SQRT_ON_HW": 0,
+                "APPROX_SQRT_ON_MODEL": 0
+            },
+            "HD_SIMI_W_BITS": 32,
+            "HD_LV_TYPE": {
+                "options": {
+                    "LINEAR": 0,
+                    "APPROX": 1,
+                    "THERMOMETER": 2
+                },
+                "selected": "LINEAR"
+            },
+            "HD_LV_LEN": 32,
+            "SPARSITY_FACTOR_X10": 10,
+            "PROBLEM_TYPE": {
+                "options": {
+                    "PROBLEM_TYPE_CLASSIFICATION": 0,
+                    "PROBLEM_TYPE_CLUSTERING": 1,
+                    "PROBLEM_TYPE_REGRESSION": 2
+                },
+                "selected": "PROBLEM_TYPE_CLASSIFICATION"
+            }
+        }
+    },
+    "hw_interface": {
+        "DATA_INTERFACE": {
+            "description": "Data Interface Modes",
+            "IN_DATA_MODE": {
+                "options": {
+                    "DI_M_STREAM": 0,
+                    "DI_M_PARTIAL_PARALLEL": 1,
+                    "DI_M_PARALLEL": 2
+                },
+                "selected": "DI_M_STREAM"
+            },
+            "AXI_CNTR_PORT_EN": 0,
+            "PARALLELISM_FEATURES": 1,
+            "PARALLELISM_CLASS": 1,
+            "DI_PARALLEL_W_BITS": 64,
+            "FRAME_SIZE_MIN": 64,
+            "DI_QUANT_BITS": 6,
+            "HD_DATA_W_BITS": 1
+        },
+        "BV_MODES": {
+            "description": "Base Vector Modes and Configurations",
+            "BV_MODE": {
+                "options": {
+                    "BV_M_INT_MEM": 0,
+                    "BV_M_EXT": 1,
+                    "BV_M_PERMUTATION": 2,
+                    "BV_M_RND_GEN": 3
+                },
+                "selected": "BV_M_INT_MEM"
+            },
+            "BV_DATA_W_BITS": 1,
+            "BV_IN_DATA_W_BITS": 64,
+            "BV_RND_GEN_W_BITS": 64
+        },
+        "LV_MODES": {
+            "description": "Level Vector Modes and Configurations",
+            "LV_MODE": {
+                "options": {
+                    "LV_M_INT_MEM": 0,
+                    "LV_M_EXT": 1,
+                    "LV_M_LOGIC": 2,
+                    "LV_M_HDL_GEN": 3
+                },
+                "selected": "LV_M_INT_MEM"
+            },
+            "LV_DATA_W_BITS": 1,
+            "LV_IN_DATA_W_BITS": 64,
+            "LV_M_APPROX_RND_GEN_W_BITS": 64
+        },
+        "CV_MODES": {
+            "description": "Class Vector Modes and Configurations",
+            "CV_MODE": {
+                "options": {
+                    "CV_M_INT_MEM": 0,
+                    "CV_M_EXT": 1,
+                    "CV_M_HDL_GEN": 2
+                },
+                "selected": "CV_M_INT_MEM"
+            },
+            "CV_DATA_W_BITS": 1,
+            "CV_IN_DATA_W_BITS": 64
+        }
+    },
+    "INTERFACE_DETAILS": {
+        "DI_FEATUREID_W_BITS": 10,
+        "DI_FRAMEID_W_BITS": 10,
+        "DO_CLASS_W_BITS": 6,
+        "DO_STATUS_W_BITS": 5
+    },
+    "HD_ENCODING": {
+        "HD_BUNDLE_W_BITS": 32,
+        "SPARSITY_FACTOR_X10": 5,
+        "ENCODING_TECHNIQUE": {
+            "options": {
+                "ENCODING_RECORD": 0,
+                "ENCODING_NGRAM": 1
+            },
+            "selected": "ENCODING_RECORD"
+        },
+        "N_GRAM_SIZE": 1,
+        "N_GRAM": 0
+    },
+    "CLIPPING": {
+        "CLIPPING_ENCODING": {
+            "options": {
+                "CLIPPING_DISABLE": 0,
+                "CLIPPING_BINARY": 1,
+                "CLIPPING_TERNARY": 2,
+                "CLIPPING_QUANTIZED": 3,
+                "CLIPPING_POWERTWO": 4,
+                "CLIPPING_QUANTIZED_POWERTWO": 5,
+                "CLIPPING_THRESHOLD": 6
+            },
+            "selected": "CLIPPING_BINARY"
+        },
+        "CLIPPING_CLASS": {
+            "options": {
+                "CLIPPING_DISABLE": 0,
+                "CLIPPING_BINARY": 1,
+                "CLIPPING_TERNARY": 2,
+                "CLIPPING_QUANTIZED": 3,
+                "CLIPPING_POWERTWO": 4,
+                "CLIPPING_QUANTIZED_POWERTWO": 5,
+                "CLIPPING_THRESHOLD": 6
+            },
+            "selected": "CLIPPING_BINARY"
+        },
+        "CLIPPING_BINARY_METHOD_FOR_VALUE_EQ_HALF_HD_DIM": {
+            "options": {
+                "CLIPPING_BINARY_FOR_VALUE_EQ_HALF_HD_DIM_USE_TOGGLING": 0,
+                "CLIPPING_BINARY_FOR_VALUE_EQ_HALF_HD_DIM_SET_ZERO": 1
+            },
+            "selected": "CLIPPING_BINARY_FOR_VALUE_EQ_HALF_HD_DIM_SET_ZERO"
+        },
+        "HW_CLIPPING_AFTER_TRAIN": 0,
+        "QUANT_MIN": 0,
+        "QUANT_MAX": 1
+    },
+    "LEARNING_RATE": {
+        "LR_DECAY": {
+            "options": {
+                "LR_CONSTANT": 0,
+                "LR_ITER": 1,
+                "LR_DATA": 2,
+                "LR_HYBRID": 3
+            },
+            "selected": "LR_CONSTANT"
+        },
+        "MAX_LEARNING_RATE": 10,
+        "BETA_LR": 3,
+        "RETRAIN": 0
+    },
+    "TOOLS": {
+        "VITIS_HLS_XILINX_PATH": "C:/Xilinx/Vitis_HLS/2023.1/bin/vitis_hls.bat",
+        "VIVADO_XILINX_PATH": "C:/Xilinx/Vivado/2023.1/bin/vivado.bat",
+        "VITIS_XILINX_PATH": "C:/Xilinx/Vitis/2023.1/bin/vitis.bat"
+    }
+}

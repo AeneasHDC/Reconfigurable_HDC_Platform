@@ -54,14 +54,10 @@ using namespace std;
 #define WRAPC_STREAM_INGRESS_STATUS_sdata_i_V_dest_V "../tv/stream_size/stream_ingress_status_sdata_i_V_dest_V.dat"
 #define AUTOTB_TVIN_chv_i "../tv/cdatafile/c.hdv_engine.autotvin_chv_i.dat"
 #define AUTOTB_TVOUT_chv_i "../tv/cdatafile/c.hdv_engine.autotvout_chv_i.dat"
-#define AUTOTB_TVIN_chv_o "../tv/cdatafile/c.hdv_engine.autotvin_chv_o.dat"
-#define AUTOTB_TVOUT_chv_o "../tv/cdatafile/c.hdv_engine.autotvout_chv_o.dat"
 #define AUTOTB_TVIN_bhv_i "../tv/cdatafile/c.hdv_engine.autotvin_bhv_i.dat"
 #define AUTOTB_TVOUT_bhv_i "../tv/cdatafile/c.hdv_engine.autotvout_bhv_i.dat"
 #define AUTOTB_TVIN_lhv_i "../tv/cdatafile/c.hdv_engine.autotvin_lhv_i.dat"
 #define AUTOTB_TVOUT_lhv_i "../tv/cdatafile/c.hdv_engine.autotvout_lhv_i.dat"
-#define AUTOTB_TVIN_lable_class_i "../tv/cdatafile/c.hdv_engine.autotvin_lable_class_i.dat"
-#define AUTOTB_TVOUT_lable_class_i "../tv/cdatafile/c.hdv_engine.autotvout_lable_class_i.dat"
 #define AUTOTB_TVIN_pred_class_o "../tv/cdatafile/c.hdv_engine.autotvin_pred_class_o.dat"
 #define AUTOTB_TVOUT_pred_class_o "../tv/cdatafile/c.hdv_engine.autotvout_pred_class_o.dat"
 #define AUTOTB_TVIN_status_o "../tv/cdatafile/c.hdv_engine.autotvin_status_o.dat"
@@ -76,7 +72,6 @@ using namespace std;
 #define AUTOTB_TVOUT_PC_sdata_i_V_last_V "../tv/rtldatafile/rtl.hdv_engine.autotvout_sdata_i_V_last_V.dat"
 #define AUTOTB_TVOUT_PC_sdata_i_V_id_V "../tv/rtldatafile/rtl.hdv_engine.autotvout_sdata_i_V_id_V.dat"
 #define AUTOTB_TVOUT_PC_sdata_i_V_dest_V "../tv/rtldatafile/rtl.hdv_engine.autotvout_sdata_i_V_dest_V.dat"
-#define AUTOTB_TVOUT_PC_chv_o "../tv/rtldatafile/rtl.hdv_engine.autotvout_chv_o.dat"
 #define AUTOTB_TVOUT_PC_pred_class_o "../tv/rtldatafile/rtl.hdv_engine.autotvout_pred_class_o.dat"
 #define AUTOTB_TVOUT_PC_status_o "../tv/rtldatafile/rtl.hdv_engine.autotvout_status_o.dat"
 
@@ -1187,10 +1182,10 @@ namespace hls::sim
 
 
 extern "C"
-void hdv_engine_hw_stub_wrapper(void*, hls::sim::Byte<2>*, hls::sim::Byte<6>*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*);
+void hdv_engine_hw_stub_wrapper(void*, hls::sim::Byte<2>*, hls::sim::Byte<6>*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*, void*);
 
 extern "C"
-void apatb_hdv_engine_hw(void* __xlx_apatb_param_nrst_i, hls::sim::Byte<2>* __xlx_apatb_param_op_mode_i, hls::sim::Byte<6>* __xlx_apatb_param_frame_in, void* __xlx_apatb_param_sdata_i_V_data_V, void* __xlx_apatb_param_sdata_i_V_keep_V, void* __xlx_apatb_param_sdata_i_V_strb_V, void* __xlx_apatb_param_sdata_i_V_user_V, void* __xlx_apatb_param_sdata_i_V_last_V, void* __xlx_apatb_param_sdata_i_V_id_V, void* __xlx_apatb_param_sdata_i_V_dest_V, void* __xlx_apatb_param_chv_i, void* __xlx_apatb_param_chv_o, void* __xlx_apatb_param_bhv_i, void* __xlx_apatb_param_lhv_i, void* __xlx_apatb_param_lable_class_i, void* __xlx_apatb_param_pred_class_o, void* __xlx_apatb_param_status_o)
+void apatb_hdv_engine_hw(void* __xlx_apatb_param_nrst_i, hls::sim::Byte<2>* __xlx_apatb_param_op_mode_i, hls::sim::Byte<6>* __xlx_apatb_param_frame_in, void* __xlx_apatb_param_sdata_i_V_data_V, void* __xlx_apatb_param_sdata_i_V_keep_V, void* __xlx_apatb_param_sdata_i_V_strb_V, void* __xlx_apatb_param_sdata_i_V_user_V, void* __xlx_apatb_param_sdata_i_V_last_V, void* __xlx_apatb_param_sdata_i_V_id_V, void* __xlx_apatb_param_sdata_i_V_dest_V, void* __xlx_apatb_param_chv_i, void* __xlx_apatb_param_bhv_i, void* __xlx_apatb_param_lhv_i, void* __xlx_apatb_param_pred_class_o, void* __xlx_apatb_param_status_o)
 {
   static hls::sim::Register port0 {
     .name = "nrst_i",
@@ -1325,7 +1320,7 @@ void apatb_hdv_engine_hw(void* __xlx_apatb_param_nrst_i, hls::sim::Byte<2>* __xl
 
   static hls::sim::Register port10 {
     .name = "chv_i",
-    .width = 2048,
+    .width = 704,
 #ifdef POST_CHECK
 #else
     .owriter = nullptr,
@@ -1335,18 +1330,6 @@ void apatb_hdv_engine_hw(void* __xlx_apatb_param_nrst_i, hls::sim::Byte<2>* __xl
   port10.param = __xlx_apatb_param_chv_i;
 
   static hls::sim::Register port11 {
-    .name = "chv_o",
-    .width = 2048,
-#ifdef POST_CHECK
-    .reader = new hls::sim::Reader(AUTOTB_TVOUT_PC_chv_o),
-#else
-    .owriter = new hls::sim::Writer(AUTOTB_TVOUT_chv_o),
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_chv_o),
-#endif
-  };
-  port11.param = __xlx_apatb_param_chv_o;
-
-  static hls::sim::Register port12 {
     .name = "bhv_i",
     .width = 64,
 #ifdef POST_CHECK
@@ -1355,9 +1338,9 @@ void apatb_hdv_engine_hw(void* __xlx_apatb_param_nrst_i, hls::sim::Byte<2>* __xl
     .iwriter = new hls::sim::Writer(AUTOTB_TVIN_bhv_i),
 #endif
   };
-  port12.param = __xlx_apatb_param_bhv_i;
+  port11.param = __xlx_apatb_param_bhv_i;
 
-  static hls::sim::Register port13 {
+  static hls::sim::Register port12 {
     .name = "lhv_i",
     .width = 64,
 #ifdef POST_CHECK
@@ -1366,20 +1349,9 @@ void apatb_hdv_engine_hw(void* __xlx_apatb_param_nrst_i, hls::sim::Byte<2>* __xl
     .iwriter = new hls::sim::Writer(AUTOTB_TVIN_lhv_i),
 #endif
   };
-  port13.param = __xlx_apatb_param_lhv_i;
+  port12.param = __xlx_apatb_param_lhv_i;
 
-  static hls::sim::Register port14 {
-    .name = "lable_class_i",
-    .width = 6,
-#ifdef POST_CHECK
-#else
-    .owriter = nullptr,
-    .iwriter = new hls::sim::Writer(AUTOTB_TVIN_lable_class_i),
-#endif
-  };
-  port14.param = __xlx_apatb_param_lable_class_i;
-
-  static hls::sim::Register port15 {
+  static hls::sim::Register port13 {
     .name = "pred_class_o",
     .width = 6,
 #ifdef POST_CHECK
@@ -1389,9 +1361,9 @@ void apatb_hdv_engine_hw(void* __xlx_apatb_param_nrst_i, hls::sim::Byte<2>* __xl
     .iwriter = new hls::sim::Writer(AUTOTB_TVIN_pred_class_o),
 #endif
   };
-  port15.param = __xlx_apatb_param_pred_class_o;
+  port13.param = __xlx_apatb_param_pred_class_o;
 
-  static hls::sim::Register port16 {
+  static hls::sim::Register port14 {
     .name = "status_o",
     .width = 5,
 #ifdef POST_CHECK
@@ -1401,14 +1373,13 @@ void apatb_hdv_engine_hw(void* __xlx_apatb_param_nrst_i, hls::sim::Byte<2>* __xl
     .iwriter = new hls::sim::Writer(AUTOTB_TVIN_status_o),
 #endif
   };
-  port16.param = __xlx_apatb_param_status_o;
+  port14.param = __xlx_apatb_param_status_o;
 
   try {
 #ifdef POST_CHECK
     CodeState = ENTER_WRAPC_PC;
-    check(port11);
-    check(port15);
-    check(port16);
+    check(port13);
+    check(port14);
     check(port3);
     check(port4);
     check(port5);
@@ -1427,8 +1398,6 @@ void apatb_hdv_engine_hw(void* __xlx_apatb_param_nrst_i, hls::sim::Byte<2>* __xl
     dump(port12, port12.iwriter, tcl.AESL_transaction);
     dump(port13, port13.iwriter, tcl.AESL_transaction);
     dump(port14, port14.iwriter, tcl.AESL_transaction);
-    dump(port15, port15.iwriter, tcl.AESL_transaction);
-    dump(port16, port16.iwriter, tcl.AESL_transaction);
     port0.doTCL(tcl);
     port1.doTCL(tcl);
     port2.doTCL(tcl);
@@ -1437,8 +1406,6 @@ void apatb_hdv_engine_hw(void* __xlx_apatb_param_nrst_i, hls::sim::Byte<2>* __xl
     port12.doTCL(tcl);
     port13.doTCL(tcl);
     port14.doTCL(tcl);
-    port15.doTCL(tcl);
-    port16.doTCL(tcl);
     port3.markSize();
     port4.markSize();
     port5.markSize();
@@ -1454,7 +1421,7 @@ void apatb_hdv_engine_hw(void* __xlx_apatb_param_nrst_i, hls::sim::Byte<2>* __xl
     port8.buffer();
     port9.buffer();
     CodeState = CALL_C_DUT;
-    hdv_engine_hw_stub_wrapper(__xlx_apatb_param_nrst_i, __xlx_apatb_param_op_mode_i, __xlx_apatb_param_frame_in, __xlx_apatb_param_sdata_i_V_data_V, __xlx_apatb_param_sdata_i_V_keep_V, __xlx_apatb_param_sdata_i_V_strb_V, __xlx_apatb_param_sdata_i_V_user_V, __xlx_apatb_param_sdata_i_V_last_V, __xlx_apatb_param_sdata_i_V_id_V, __xlx_apatb_param_sdata_i_V_dest_V, __xlx_apatb_param_chv_i, __xlx_apatb_param_chv_o, __xlx_apatb_param_bhv_i, __xlx_apatb_param_lhv_i, __xlx_apatb_param_lable_class_i, __xlx_apatb_param_pred_class_o, __xlx_apatb_param_status_o);
+    hdv_engine_hw_stub_wrapper(__xlx_apatb_param_nrst_i, __xlx_apatb_param_op_mode_i, __xlx_apatb_param_frame_in, __xlx_apatb_param_sdata_i_V_data_V, __xlx_apatb_param_sdata_i_V_keep_V, __xlx_apatb_param_sdata_i_V_strb_V, __xlx_apatb_param_sdata_i_V_user_V, __xlx_apatb_param_sdata_i_V_last_V, __xlx_apatb_param_sdata_i_V_id_V, __xlx_apatb_param_sdata_i_V_dest_V, __xlx_apatb_param_chv_i, __xlx_apatb_param_bhv_i, __xlx_apatb_param_lhv_i, __xlx_apatb_param_pred_class_o, __xlx_apatb_param_status_o);
     dump(port3, tcl.AESL_transaction);
     dump(port4, tcl.AESL_transaction);
     dump(port5, tcl.AESL_transaction);
@@ -1470,9 +1437,8 @@ void apatb_hdv_engine_hw(void* __xlx_apatb_param_nrst_i, hls::sim::Byte<2>* __xl
     port8.doTCL(tcl);
     port9.doTCL(tcl);
     CodeState = DUMP_OUTPUTS;
-    dump(port11, port11.owriter, tcl.AESL_transaction);
-    dump(port15, port15.owriter, tcl.AESL_transaction);
-    dump(port16, port16.owriter, tcl.AESL_transaction);
+    dump(port13, port13.owriter, tcl.AESL_transaction);
+    dump(port14, port14.owriter, tcl.AESL_transaction);
     tcl.AESL_transaction++;
 #endif
   } catch (const hls::sim::SimException &e) {

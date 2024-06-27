@@ -1,0 +1,362 @@
+
+
+================================================================
+== Synthesis Summary Report of 'hdv_engine'
+================================================================
++ General Information: 
+    * Date:           Mon Jun 24 10:12:52 2024
+    * Version:        2023.1 (Build 3854077 on May  4 2023)
+    * Project:        _hdc_hls_xilinx
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynquplus
+    * Target device:  xczu9eg-ffvb1156-2-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +----------------------------------------------------------+------+------+---------+---------+----------+---------+------+----------+------+----+------------+------------+-----+
+    |                          Modules                         | Issue|      | Latency | Latency | Iteration|         | Trip |          |      |    |            |            |     |
+    |                          & Loops                         | Type | Slack| (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined| BRAM | DSP|     FF     |     LUT    | URAM|
+    +----------------------------------------------------------+------+------+---------+---------+----------+---------+------+----------+------+----+------------+------------+-----+
+    |+ hdv_engine                                              |     -|  0.04|       28|  140.000|         -|       29|     -|        no|     -|   -|  3570 (~0%)|  12738 (4%)|    -|
+    | + hdv_engine_Pipeline_VITIS_LOOP_281_1                   |     -|  2.68|        5|   25.000|         -|        5|     -|        no|     -|   -|     4 (~0%)|    45 (~0%)|    -|
+    |  o VITIS_LOOP_281_1                                      |     -|  3.65|        3|   15.000|         1|        1|     3|       yes|     -|   -|           -|           -|    -|
+    | + hdv_engine_Pipeline_VITIS_LOOP_488_2_VITIS_LOOP_494_3  |     -|  0.62|       16|   80.000|         -|       16|     -|        no|     -|   -|    75 (~0%)|   8448 (3%)|    -|
+    |  o VITIS_LOOP_488_2_VITIS_LOOP_494_3                     |     -|  3.65|       14|   70.000|         1|        1|    14|       yes|     -|   -|           -|           -|    -|
+    | + hdv_engine_Pipeline_VITIS_LOOP_912_7                   |     -|  1.38|        5|   25.000|         -|        5|     -|        no|     -|   -|    69 (~0%)|   143 (~0%)|    -|
+    |  o VITIS_LOOP_912_7                                      |     -|  3.65|        3|   15.000|         1|        1|     3|       yes|     -|   -|           -|           -|    -|
+    +----------------------------------------------------------+------+------+---------+---------+----------+---------+------+----------+------+----+------------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* Other Ports
++--------------+---------+-----------+----------+
+| Port         | Mode    | Direction | Bitwidth |
++--------------+---------+-----------+----------+
+| bhv_i        | ap_none | in        | 448      |
+| chv_i        | ap_none | in        | 64       |
+| df_i         | ap_none | in        | 3584     |
+| frame_in     | ap_none | in        | 48       |
+| lhv_i        | ap_none | in        | 448      |
+| nrst_i       | ap_none | in        | 1        |
+| op_mode_i    | ap_none | in        | 16       |
+| pred_class_o | ap_none | out       | 6        |
+| status_o     | ap_none | out       | 5        |
++--------------+---------+-----------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++--------------+-----------+----------+
+| Argument     | Direction | Datatype |
++--------------+-----------+----------+
+| nrst_i       | in        | bool&    |
+| op_mode_i    | in        |          |
+| frame_in     | in        |          |
+| df_i         | unused    | &        |
+| chv_i        | in        | &        |
+| bhv_i        | in        | &        |
+| lhv_i        | in        | &        |
+| pred_class_o | out       | pointer  |
+| status_o     | out       | pointer  |
++--------------+-----------+----------+
+
+* SW-to-HW Mapping
++--------------+--------------+---------+
+| Argument     | HW Interface | HW Type |
++--------------+--------------+---------+
+| nrst_i       | nrst_i       | port    |
+| op_mode_i    | op_mode_i    | port    |
+| frame_in     | frame_in     | port    |
+| df_i         | df_i         | port    |
+| chv_i        | chv_i        | port    |
+| bhv_i        | bhv_i        | port    |
+| lhv_i        | lhv_i        | port    |
+| pred_class_o | pred_class_o | port    |
+| status_o     | status_o     | port    |
++--------------+--------------+---------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++----------------------------------------------------------+-----+--------+-----------------+-----+--------+---------+
+| Name                                                     | DSP | Pragma | Variable        | Op  | Impl   | Latency |
++----------------------------------------------------------+-----+--------+-----------------+-----+--------+---------+
+| + hdv_engine                                             | 0   |        |                 |     |        |         |
+|   add_ln158_fu_11280_p2                                  | -   |        | add_ln158       | add | fabric | 0       |
+|   similarity_4_fu_11308_p2                               | -   |        | similarity_4    | add | fabric | 0       |
+|   add_ln158_2_fu_11332_p2                                | -   |        | add_ln158_2     | add | fabric | 0       |
+|   similarity_7_fu_11355_p2                               | -   |        | similarity_7    | add | fabric | 0       |
+|   add_ln158_4_fu_11376_p2                                | -   |        | add_ln158_4     | add | fabric | 0       |
+|   similarity_10_fu_11403_p2                              | -   |        | similarity_10   | add | fabric | 0       |
+|   add_ln158_6_fu_11426_p2                                | -   |        | add_ln158_6     | add | fabric | 0       |
+|   similarity_13_fu_11447_p2                              | -   |        | similarity_13   | add | fabric | 0       |
+|   add_ln158_8_fu_11470_p2                                | -   |        | add_ln158_8     | add | fabric | 0       |
+|   similarity_16_fu_11493_p2                              | -   |        | similarity_16   | add | fabric | 0       |
+|   add_ln158_10_fu_11514_p2                               | -   |        | add_ln158_10    | add | fabric | 0       |
+|   similarity_19_fu_11537_p2                              | -   |        | similarity_19   | add | fabric | 0       |
+|   add_ln158_12_fu_11560_p2                               | -   |        | add_ln158_12    | add | fabric | 0       |
+|   similarity_22_fu_11585_p2                              | -   |        | similarity_22   | add | fabric | 0       |
+|   add_ln158_14_fu_11608_p2                               | -   |        | add_ln158_14    | add | fabric | 0       |
+|   similarity_25_fu_11631_p2                              | -   |        | similarity_25   | add | fabric | 0       |
+|   add_ln158_16_fu_11652_p2                               | -   |        | add_ln158_16    | add | fabric | 0       |
+|   similarity_28_fu_11675_p2                              | -   |        | similarity_28   | add | fabric | 0       |
+|   add_ln158_18_fu_11698_p2                               | -   |        | add_ln158_18    | add | fabric | 0       |
+|   similarity_31_fu_11719_p2                              | -   |        | similarity_31   | add | fabric | 0       |
+|   add_ln158_20_fu_11742_p2                               | -   |        | add_ln158_20    | add | fabric | 0       |
+|   similarity_34_fu_11765_p2                              | -   |        | similarity_34   | add | fabric | 0       |
+|   add_ln158_22_fu_11786_p2                               | -   |        | add_ln158_22    | add | fabric | 0       |
+|   similarity_37_fu_11809_p2                              | -   |        | similarity_37   | add | fabric | 0       |
+|   add_ln158_24_fu_11832_p2                               | -   |        | add_ln158_24    | add | fabric | 0       |
+|   similarity_40_fu_11853_p2                              | -   |        | similarity_40   | add | fabric | 0       |
+|   add_ln158_26_fu_11876_p2                               | -   |        | add_ln158_26    | add | fabric | 0       |
+|   similarity_43_fu_11899_p2                              | -   |        | similarity_43   | add | fabric | 0       |
+|   add_ln158_28_fu_11920_p2                               | -   |        | add_ln158_28    | add | fabric | 0       |
+|   similarity_46_fu_11947_p2                              | -   |        | similarity_46   | add | fabric | 0       |
+|   add_ln158_30_fu_11970_p2                               | -   |        | add_ln158_30    | add | fabric | 0       |
+|   similarity_49_fu_11991_p2                              | -   |        | similarity_49   | add | fabric | 0       |
+|   add_ln158_32_fu_12014_p2                               | -   |        | add_ln158_32    | add | fabric | 0       |
+|   similarity_52_fu_12037_p2                              | -   |        | similarity_52   | add | fabric | 0       |
+|   add_ln158_34_fu_12058_p2                               | -   |        | add_ln158_34    | add | fabric | 0       |
+|   similarity_55_fu_12081_p2                              | -   |        | similarity_55   | add | fabric | 0       |
+|   add_ln158_36_fu_12104_p2                               | -   |        | add_ln158_36    | add | fabric | 0       |
+|   similarity_58_fu_12125_p2                              | -   |        | similarity_58   | add | fabric | 0       |
+|   add_ln158_38_fu_12148_p2                               | -   |        | add_ln158_38    | add | fabric | 0       |
+|   similarity_61_fu_12171_p2                              | -   |        | similarity_61   | add | fabric | 0       |
+|   add_ln158_40_fu_12192_p2                               | -   |        | add_ln158_40    | add | fabric | 0       |
+|   similarity_64_fu_12215_p2                              | -   |        | similarity_64   | add | fabric | 0       |
+|   add_ln158_42_fu_12238_p2                               | -   |        | add_ln158_42    | add | fabric | 0       |
+|   similarity_67_fu_12259_p2                              | -   |        | similarity_67   | add | fabric | 0       |
+|   add_ln158_44_fu_12282_p2                               | -   |        | add_ln158_44    | add | fabric | 0       |
+|   similarity_70_fu_12305_p2                              | -   |        | similarity_70   | add | fabric | 0       |
+|   add_ln158_46_fu_12326_p2                               | -   |        | add_ln158_46    | add | fabric | 0       |
+|   similarity_73_fu_12349_p2                              | -   |        | similarity_73   | add | fabric | 0       |
+|   add_ln158_48_fu_12372_p2                               | -   |        | add_ln158_48    | add | fabric | 0       |
+|   similarity_76_fu_12393_p2                              | -   |        | similarity_76   | add | fabric | 0       |
+|   add_ln158_50_fu_12416_p2                               | -   |        | add_ln158_50    | add | fabric | 0       |
+|   similarity_79_fu_12439_p2                              | -   |        | similarity_79   | add | fabric | 0       |
+|   add_ln158_52_fu_12460_p2                               | -   |        | add_ln158_52    | add | fabric | 0       |
+|   similarity_82_fu_12483_p2                              | -   |        | similarity_82   | add | fabric | 0       |
+|   add_ln158_54_fu_12506_p2                               | -   |        | add_ln158_54    | add | fabric | 0       |
+|   similarity_85_fu_12527_p2                              | -   |        | similarity_85   | add | fabric | 0       |
+|   add_ln158_56_fu_12550_p2                               | -   |        | add_ln158_56    | add | fabric | 0       |
+|   similarity_88_fu_12573_p2                              | -   |        | similarity_88   | add | fabric | 0       |
+|   add_ln158_58_fu_12594_p2                               | -   |        | add_ln158_58    | add | fabric | 0       |
+|   similarity_91_fu_12617_p2                              | -   |        | similarity_91   | add | fabric | 0       |
+|   add_ln158_60_fu_12640_p2                               | -   |        | add_ln158_60    | add | fabric | 0       |
+|   similarity_94_fu_12664_p2                              | -   |        | similarity_94   | add | fabric | 0       |
+|   add_ln871_fu_12705_p2                                  | -   |        | add_ln871       | add | fabric | 0       |
+|  + hdv_engine_Pipeline_VITIS_LOOP_281_1                  | 0   |        |                 |     |        |         |
+|    add_ln281_fu_48_p2                                    | -   |        | add_ln281       | add | fabric | 0       |
+|  + hdv_engine_Pipeline_VITIS_LOOP_488_2_VITIS_LOOP_494_3 | 0   |        |                 |     |        |         |
+|    add_i_i186_fu_7763_p2                                 | -   |        | add_i_i186      | sub | fabric | 0       |
+|    add_ln488_fu_7785_p2                                  | -   |        | add_ln488       | add | fabric | 0       |
+|    add_ln488_1_fu_7808_p2                                | -   |        | add_ln488_1     | add | fabric | 0       |
+|    add_i_i186_mid1_fu_7818_p2                            | -   |        | add_i_i186_mid1 | sub | fabric | 0       |
+|    add_ln472_fu_11192_p2                                 | -   |        | add_ln472       | add | fabric | 0       |
+|    add_ln472_1_fu_11208_p2                               | -   |        | add_ln472_1     | add | fabric | 0       |
+|    add_ln472_2_fu_11224_p2                               | -   |        | add_ln472_2     | add | fabric | 0       |
+|    add_ln472_3_fu_11240_p2                               | -   |        | add_ln472_3     | add | fabric | 0       |
+|    add_ln472_4_fu_11256_p2                               | -   |        | add_ln472_4     | add | fabric | 0       |
+|    add_ln472_5_fu_11272_p2                               | -   |        | add_ln472_5     | add | fabric | 0       |
+|    add_ln472_6_fu_11288_p2                               | -   |        | add_ln472_6     | add | fabric | 0       |
+|    add_ln472_7_fu_11304_p2                               | -   |        | add_ln472_7     | add | fabric | 0       |
+|    add_ln472_8_fu_11320_p2                               | -   |        | add_ln472_8     | add | fabric | 0       |
+|    add_ln472_9_fu_11336_p2                               | -   |        | add_ln472_9     | add | fabric | 0       |
+|    add_ln472_10_fu_11352_p2                              | -   |        | add_ln472_10    | add | fabric | 0       |
+|    add_ln472_11_fu_11368_p2                              | -   |        | add_ln472_11    | add | fabric | 0       |
+|    add_ln472_12_fu_11384_p2                              | -   |        | add_ln472_12    | add | fabric | 0       |
+|    add_ln472_13_fu_11400_p2                              | -   |        | add_ln472_13    | add | fabric | 0       |
+|    add_ln472_14_fu_11416_p2                              | -   |        | add_ln472_14    | add | fabric | 0       |
+|    add_ln472_15_fu_11432_p2                              | -   |        | add_ln472_15    | add | fabric | 0       |
+|    add_ln472_16_fu_11448_p2                              | -   |        | add_ln472_16    | add | fabric | 0       |
+|    add_ln472_17_fu_11464_p2                              | -   |        | add_ln472_17    | add | fabric | 0       |
+|    add_ln472_18_fu_11480_p2                              | -   |        | add_ln472_18    | add | fabric | 0       |
+|    add_ln472_19_fu_11496_p2                              | -   |        | add_ln472_19    | add | fabric | 0       |
+|    add_ln472_20_fu_11512_p2                              | -   |        | add_ln472_20    | add | fabric | 0       |
+|    add_ln472_21_fu_11528_p2                              | -   |        | add_ln472_21    | add | fabric | 0       |
+|    add_ln472_22_fu_11544_p2                              | -   |        | add_ln472_22    | add | fabric | 0       |
+|    add_ln472_23_fu_11560_p2                              | -   |        | add_ln472_23    | add | fabric | 0       |
+|    add_ln472_24_fu_11576_p2                              | -   |        | add_ln472_24    | add | fabric | 0       |
+|    add_ln472_25_fu_11592_p2                              | -   |        | add_ln472_25    | add | fabric | 0       |
+|    add_ln472_26_fu_11608_p2                              | -   |        | add_ln472_26    | add | fabric | 0       |
+|    add_ln472_27_fu_11624_p2                              | -   |        | add_ln472_27    | add | fabric | 0       |
+|    add_ln472_28_fu_11640_p2                              | -   |        | add_ln472_28    | add | fabric | 0       |
+|    add_ln472_29_fu_11656_p2                              | -   |        | add_ln472_29    | add | fabric | 0       |
+|    add_ln472_30_fu_11672_p2                              | -   |        | add_ln472_30    | add | fabric | 0       |
+|    add_ln472_31_fu_11688_p2                              | -   |        | add_ln472_31    | add | fabric | 0       |
+|    add_ln472_32_fu_11704_p2                              | -   |        | add_ln472_32    | add | fabric | 0       |
+|    add_ln472_33_fu_11720_p2                              | -   |        | add_ln472_33    | add | fabric | 0       |
+|    add_ln472_34_fu_11736_p2                              | -   |        | add_ln472_34    | add | fabric | 0       |
+|    add_ln472_35_fu_11752_p2                              | -   |        | add_ln472_35    | add | fabric | 0       |
+|    add_ln472_36_fu_11768_p2                              | -   |        | add_ln472_36    | add | fabric | 0       |
+|    add_ln472_37_fu_11784_p2                              | -   |        | add_ln472_37    | add | fabric | 0       |
+|    add_ln472_38_fu_11800_p2                              | -   |        | add_ln472_38    | add | fabric | 0       |
+|    add_ln472_39_fu_11816_p2                              | -   |        | add_ln472_39    | add | fabric | 0       |
+|    add_ln472_40_fu_11832_p2                              | -   |        | add_ln472_40    | add | fabric | 0       |
+|    add_ln472_41_fu_11848_p2                              | -   |        | add_ln472_41    | add | fabric | 0       |
+|    add_ln472_42_fu_11864_p2                              | -   |        | add_ln472_42    | add | fabric | 0       |
+|    add_ln472_43_fu_11880_p2                              | -   |        | add_ln472_43    | add | fabric | 0       |
+|    add_ln472_44_fu_11896_p2                              | -   |        | add_ln472_44    | add | fabric | 0       |
+|    add_ln472_45_fu_11912_p2                              | -   |        | add_ln472_45    | add | fabric | 0       |
+|    add_ln472_46_fu_11928_p2                              | -   |        | add_ln472_46    | add | fabric | 0       |
+|    add_ln472_47_fu_11944_p2                              | -   |        | add_ln472_47    | add | fabric | 0       |
+|    add_ln472_48_fu_11960_p2                              | -   |        | add_ln472_48    | add | fabric | 0       |
+|    add_ln472_49_fu_11976_p2                              | -   |        | add_ln472_49    | add | fabric | 0       |
+|    add_ln472_50_fu_11992_p2                              | -   |        | add_ln472_50    | add | fabric | 0       |
+|    add_ln472_51_fu_12008_p2                              | -   |        | add_ln472_51    | add | fabric | 0       |
+|    add_ln472_52_fu_12024_p2                              | -   |        | add_ln472_52    | add | fabric | 0       |
+|    add_ln472_53_fu_12040_p2                              | -   |        | add_ln472_53    | add | fabric | 0       |
+|    add_ln472_54_fu_12056_p2                              | -   |        | add_ln472_54    | add | fabric | 0       |
+|    add_ln472_55_fu_12072_p2                              | -   |        | add_ln472_55    | add | fabric | 0       |
+|    add_ln472_56_fu_12088_p2                              | -   |        | add_ln472_56    | add | fabric | 0       |
+|    add_ln472_57_fu_12104_p2                              | -   |        | add_ln472_57    | add | fabric | 0       |
+|    add_ln472_58_fu_12120_p2                              | -   |        | add_ln472_58    | add | fabric | 0       |
+|    add_ln472_59_fu_12136_p2                              | -   |        | add_ln472_59    | add | fabric | 0       |
+|    add_ln472_60_fu_12152_p2                              | -   |        | add_ln472_60    | add | fabric | 0       |
+|    add_ln472_61_fu_12168_p2                              | -   |        | add_ln472_61    | add | fabric | 0       |
+|    add_ln472_62_fu_12184_p2                              | -   |        | add_ln472_62    | add | fabric | 0       |
+|    add_ln472_63_fu_12200_p2                              | -   |        | add_ln472_63    | add | fabric | 0       |
+|    state_1_fu_12852_p2                                   | -   |        | state_1         | add | fabric | 0       |
+|  + hdv_engine_Pipeline_VITIS_LOOP_912_7                  | 0   |        |                 |     |        |         |
+|    i_2_fu_81_p2                                          | -   |        | i_2             | add | fabric | 0       |
++----------------------------------------------------------+-----+--------+-----------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Pragmas with Warnings
++------------+-------------------------------------------------------+---------------------------------------------------+-----------------------------------------------------------------------+
+| Type       | Options                                               | Location                                          | Messages                                                              |
++------------+-------------------------------------------------------+---------------------------------------------------+-----------------------------------------------------------------------+
+| dependence | variable = similarity_max type=inter distance=16 true | ./../src/hw/hls_xilinx/main.cpp:262 in hdv_engine | Ignoring dependence pragma on local scalar variable 'similarity_max'. |
+| unroll     |                                                       | ./../src/hw/hls_xilinx/main.cpp:490 in hdv_engine | '#pragma HLS unroll' can only be applied inside loop body             |
+| unroll     |                                                       | ./../src/hw/hls_xilinx/main.cpp:794 in hdv_engine | '#pragma HLS unroll' can only be applied inside loop body             |
+| pipeline   | II=5                                                  | ./../src/hw/hls_xilinx/main.cpp:818 in hdv_engine | Only for/while/do loop or function body support the pipeline pragma   |
++------------+-------------------------------------------------------+---------------------------------------------------+-----------------------------------------------------------------------+
+
+* Valid Pragma Syntax
++-----------------+-----------------------------------------------------------+---------------------------------------------------------------------------------------------------+
+| Type            | Options                                                   | Location                                                                                          |
++-----------------+-----------------------------------------------------------+---------------------------------------------------------------------------------------------------+
+| pipeline        |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/../headers/sqrt_approx.hpp:46 in compute            |
+| inline          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/./../../lib/hdc_lib/operations.hpp:12 in add        |
+| unroll          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/./../../lib/hdc_lib/operations.hpp:14 in add        |
+| inline          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/./../../lib/hdc_lib/operations.hpp:20 in multiply   |
+| unroll          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/./../../lib/hdc_lib/operations.hpp:22 in multiply   |
+| inline          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/./../../lib/hdc_lib/operations.hpp:28 in xor_op     |
+| unroll          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/./../../lib/hdc_lib/operations.hpp:30 in xor_op     |
+| inline          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/./../../lib/hdc_lib/operations.hpp:36 in xnor_op    |
+| unroll          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/./../../lib/hdc_lib/operations.hpp:38 in xnor_op    |
+| inline          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/./../../lib/hdc_lib/operations.hpp:44 in or_op      |
+| unroll          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/./../../lib/hdc_lib/operations.hpp:46 in or_op      |
+| inline          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/./../../lib/hdc_lib/operations.hpp:52 in nand_op    |
+| unroll          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/./../../lib/hdc_lib/operations.hpp:54 in nand_op    |
+| inline          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:126 in similarity_phase1              |
+| unroll          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:133 in similarity_phase1              |
+| unroll          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:136 in similarity_phase1              |
+| inline          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:280 in similarity_phase2              |
+| array_partition | variable=Binded_HV complete                               | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:368 in bind, Binded_HV                |
+| inline          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:370 in bind                           |
+| unroll          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:373 in bind                           |
+| inline          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:398 in permute                        |
+| array_partition | variable=HV2 complete                                     | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:453 in bundle, HV2                    |
+| inline          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:455 in bundle                         |
+| unroll          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:462 in bundle                         |
+| unroll          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:465 in bundle                         |
+| array_partition | variable=clipped_HV complete                              | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:530 in clip, clipped_HV               |
+| inline          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:534 in clip                           |
+| unroll          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:550 in clip                           |
+| unroll          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:608 in clip                           |
+| unroll          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:628 in clip                           |
+| array_partition | variable=baseVector complete                              | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:665 in generate_basehvs, baseVector   |
+| array_partition | variable=levelVector complete                             | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:717 in generate_levelhvs, levelVector |
+| unroll          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:853 in random_hv                      |
+| interface       | ap_none port = nrst_i                                     | ./../src/hw/hls_xilinx/main.cpp:141 in hdv_engine                                                 |
+| interface       | ap_none port = df_i                                       | ./../src/hw/hls_xilinx/main.cpp:146 in hdv_engine                                                 |
+| aggregate       | compact = bit variable = df_i                             | ./../src/hw/hls_xilinx/main.cpp:147 in hdv_engine                                                 |
+| interface       | ap_none port = chv_i                                      | ./../src/hw/hls_xilinx/main.cpp:151 in hdv_engine                                                 |
+| interface       | ap_none port = bhv_i                                      | ./../src/hw/hls_xilinx/main.cpp:154 in hdv_engine                                                 |
+| interface       | ap_none port = lhv_i                                      | ./../src/hw/hls_xilinx/main.cpp:157 in hdv_engine                                                 |
+| interface       | ap_none port = pred_class_o                               | ./../src/hw/hls_xilinx/main.cpp:168 in hdv_engine                                                 |
+| aggregate       | compact=bit variable = pred_class_o                       | ./../src/hw/hls_xilinx/main.cpp:169 in hdv_engine                                                 |
+| interface       | ap_none port = status_o                                   | ./../src/hw/hls_xilinx/main.cpp:189 in hdv_engine                                                 |
+| aggregate       | compact=bit variable = status_o                           | ./../src/hw/hls_xilinx/main.cpp:190 in hdv_engine                                                 |
+| array_partition | variable = _bhv_i complete                                | ./../src/hw/hls_xilinx/main.cpp:247 in hdv_engine                                                 |
+| array_partition | variable = _lhv_i complete                                | ./../src/hw/hls_xilinx/main.cpp:248 in hdv_engine                                                 |
+| array_partition | variable = _chv_i complete                                | ./../src/hw/hls_xilinx/main.cpp:249 in hdv_engine                                                 |
+| array_partition | variable = _bhv complete                                  | ./../src/hw/hls_xilinx/main.cpp:250 in hdv_engine                                                 |
+| array_partition | variable = _lhv complete                                  | ./../src/hw/hls_xilinx/main.cpp:251 in hdv_engine                                                 |
+| array_partition | variable = _chv complete                                  | ./../src/hw/hls_xilinx/main.cpp:252 in hdv_engine                                                 |
+| array_partition | variable = _n_gram_idx complete                           | ./../src/hw/hls_xilinx/main.cpp:253 in hdv_engine                                                 |
+| array_partition | variable = BundledHV complete                             | ./../src/hw/hls_xilinx/main.cpp:254 in hdv_engine                                                 |
+| array_partition | variable = Clipped_BundledHV complete                     | ./../src/hw/hls_xilinx/main.cpp:255 in hdv_engine                                                 |
+| array_partition | variable = Encoded_HV complete                            | ./../src/hw/hls_xilinx/main.cpp:256 in hdv_engine                                                 |
+| array_partition | variable = similarity_classes complete                    | ./../src/hw/hls_xilinx/main.cpp:257 in hdv_engine                                                 |
+| array_partition | variable = Binded_Features complete                       | ./../src/hw/hls_xilinx/main.cpp:258 in hdv_engine                                                 |
+| dependence      | variable = BundledHV type=inter distance=1 true           | ./../src/hw/hls_xilinx/main.cpp:259 in hdv_engine                                                 |
+| dependence      | variable = Clipped_BundledHV type=inter distance=1 true   | ./../src/hw/hls_xilinx/main.cpp:260 in hdv_engine                                                 |
+| dependence      | variable = similarity_classes type=inter distance=16 true | ./../src/hw/hls_xilinx/main.cpp:261 in hdv_engine                                                 |
+| inline          |                                                           | ./../src/hw/hls_xilinx/main.cpp:265 in hdv_engine                                                 |
+| inline          | recursive                                                 | ./../src/hw/hls_xilinx/main.cpp:269 in hdv_engine                                                 |
+| inline          |                                                           | ./../src/hw/hls_xilinx/main.cpp:298 in hdv_engine                                                 |
+| inline          | recursive                                                 | ./../src/hw/hls_xilinx/main.cpp:349 in hdv_engine                                                 |
+| inline          | recursive                                                 | ./../src/hw/hls_xilinx/main.cpp:476 in hdv_engine                                                 |
+| inline          | recursive                                                 | ./../src/hw/hls_xilinx/main.cpp:493 in hdv_engine                                                 |
+| pipeline        | II = 5                                                    | ./../src/hw/hls_xilinx/main.cpp:496 in hdv_engine                                                 |
+| inline          | recursive                                                 | ./../src/hw/hls_xilinx/main.cpp:503 in hdv_engine                                                 |
+| inline          | recursive                                                 | ./../src/hw/hls_xilinx/main.cpp:537 in hdv_engine                                                 |
+| inline          | recursive                                                 | ./../src/hw/hls_xilinx/main.cpp:612 in hdv_engine                                                 |
+| inline          | recursive                                                 | ./../src/hw/hls_xilinx/main.cpp:624 in hdv_engine                                                 |
+| unroll          |                                                           | ./../src/hw/hls_xilinx/main.cpp:628 in hdv_engine                                                 |
+| inline          | recursive                                                 | ./../src/hw/hls_xilinx/main.cpp:655 in hdv_engine                                                 |
+| inline          |                                                           | ./../src/hw/hls_xilinx/main.cpp:717 in hdv_engine                                                 |
+| inline          | recursive                                                 | ./../src/hw/hls_xilinx/main.cpp:791 in hdv_engine                                                 |
+| inline          | recursive                                                 | ./../src/hw/hls_xilinx/main.cpp:798 in hdv_engine                                                 |
+| inline          | recursive                                                 | ./../src/hw/hls_xilinx/main.cpp:891 in hdv_engine                                                 |
+| pipeline        | II=3                                                      | ./../src/hw/hls_xilinx/main.cpp:901 in hdv_engine                                                 |
+| pipeline        | II=1                                                      | ./../src/hw/hls_xilinx/main.cpp:914 in hdv_engine                                                 |
++-----------------+-----------------------------------------------------------+---------------------------------------------------------------------------------------------------+
+
+* Inferred Pragmas
++----------------------------------------------+-----------------+-----------------------------------------------+---------------------------------+
+| Source Pragma                                | Inferred Pragma | Options                                       | Location                        |
++----------------------------------------------+-----------------+-----------------------------------------------+---------------------------------+
+| pipeline ./../src/hw/hls_xilinx/main.cpp:496 | array_partition | dim=1 type=cyclic factor=13 variable=_bhv_i_0 | variable _bhv_i_0 in hdv_engine |
+| pipeline ./../src/hw/hls_xilinx/main.cpp:496 | array_partition | dim=1 type=cyclic factor=13 variable=_bhv_i_1 | variable _bhv_i_1 in hdv_engine |
+| pipeline ./../src/hw/hls_xilinx/main.cpp:496 | array_partition | dim=1 type=cyclic factor=13 variable=_bhv_i_2 | variable _bhv_i_2 in hdv_engine |
+| pipeline ./../src/hw/hls_xilinx/main.cpp:496 | array_partition | dim=1 type=cyclic factor=13 variable=_bhv_i_3 | variable _bhv_i_3 in hdv_engine |
+| pipeline ./../src/hw/hls_xilinx/main.cpp:496 | array_partition | dim=1 type=cyclic factor=13 variable=_bhv_i_4 | variable _bhv_i_4 in hdv_engine |
+| pipeline ./../src/hw/hls_xilinx/main.cpp:496 | array_partition | dim=1 type=cyclic factor=13 variable=_bhv_i_5 | variable _bhv_i_5 in hdv_engine |
+| pipeline ./../src/hw/hls_xilinx/main.cpp:496 | array_partition | dim=1 type=cyclic factor=13 variable=_bhv_i_6 | variable _bhv_i_6 in hdv_engine |
+| pipeline ./../src/hw/hls_xilinx/main.cpp:496 | array_partition | dim=1 type=cyclic factor=13 variable=_lhv_i_0 | variable _lhv_i_0 in hdv_engine |
+| pipeline ./../src/hw/hls_xilinx/main.cpp:496 | array_partition | dim=1 type=cyclic factor=13 variable=_lhv_i_1 | variable _lhv_i_1 in hdv_engine |
+| pipeline ./../src/hw/hls_xilinx/main.cpp:496 | array_partition | dim=1 type=cyclic factor=13 variable=_lhv_i_2 | variable _lhv_i_2 in hdv_engine |
+| pipeline ./../src/hw/hls_xilinx/main.cpp:496 | array_partition | dim=1 type=cyclic factor=13 variable=_lhv_i_3 | variable _lhv_i_3 in hdv_engine |
+| pipeline ./../src/hw/hls_xilinx/main.cpp:496 | array_partition | dim=1 type=cyclic factor=13 variable=_lhv_i_4 | variable _lhv_i_4 in hdv_engine |
+| pipeline ./../src/hw/hls_xilinx/main.cpp:496 | array_partition | dim=1 type=cyclic factor=13 variable=_lhv_i_5 | variable _lhv_i_5 in hdv_engine |
+| pipeline ./../src/hw/hls_xilinx/main.cpp:496 | array_partition | dim=1 type=cyclic factor=13 variable=_lhv_i_6 | variable _lhv_i_6 in hdv_engine |
++----------------------------------------------+-----------------+-----------------------------------------------+---------------------------------+
+
+

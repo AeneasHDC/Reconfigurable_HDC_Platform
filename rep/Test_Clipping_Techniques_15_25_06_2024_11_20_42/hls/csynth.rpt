@@ -1,0 +1,594 @@
+
+
+================================================================
+== Synthesis Summary Report of 'hdv_engine'
+================================================================
++ General Information: 
+    * Date:           Tue Jun 25 11:23:21 2024
+    * Version:        2023.1 (Build 3854077 on May  4 2023)
+    * Project:        _hdc_hls_xilinx
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynquplus
+    * Target device:  xczu9eg-ffvb1156-2-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-----------------------------------------+------+------+---------+---------+----------+---------+------+----------+------+---------+------------+------------+-----+
+    |                 Modules                 | Issue|      | Latency | Latency | Iteration|         | Trip |          |      |         |            |            |     |
+    |                 & Loops                 | Type | Slack| (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined| BRAM |   DSP   |     FF     |     LUT    | URAM|
+    +-----------------------------------------+------+------+---------+---------+----------+---------+------+----------+------+---------+------------+------------+-----+
+    |+ hdv_engine                             |     -|  0.01|        -|        -|         -|        -|     -|        no|     -|  35 (1%)|  13395 (2%)|  21362 (7%)|    -|
+    | + hdv_engine_Pipeline_VITIS_LOOP_286_1  |     -|  3.65|        -|        -|         -|        -|     -|        no|     -|        -|     2 (~0%)|    22 (~0%)|    -|
+    |  o VITIS_LOOP_286_1                     |     -|  3.65|        -|        -|         1|        1|     -|       yes|     -|        -|           -|           -|    -|
+    | + hdv_engine_Pipeline_VITIS_LOOP_294_2  |     -|  2.68|        5|   25.000|         -|        5|     -|        no|     -|        -|     4 (~0%)|    45 (~0%)|    -|
+    |  o VITIS_LOOP_294_2                     |     -|  3.65|        3|   15.000|         1|        1|     3|       yes|     -|        -|           -|           -|    -|
+    | + hdv_engine_Pipeline_VITIS_LOOP_511_4  |     -|  2.21|        4|   20.000|         -|        4|     -|        no|     -|        -|    68 (~0%)|   3577 (1%)|    -|
+    |  o VITIS_LOOP_511_4                     |     -|  3.65|        2|   10.000|         1|        1|     2|       yes|     -|        -|           -|           -|    -|
+    | + hdv_engine_Pipeline_VITIS_LOOP_916_7  |     -|  0.01|       87|  435.000|         -|       87|     -|        no|     -|  3 (~0%)|  10043 (1%)|  10102 (3%)|    -|
+    |  o VITIS_LOOP_916_7                     |    II|  3.65|       85|  425.000|        76|        5|     3|       yes|     -|        -|           -|           -|    -|
+    | + hdv_engine_Pipeline_VITIS_LOOP_929_8  |     -|  1.38|        5|   25.000|         -|        5|     -|        no|     -|        -|    69 (~0%)|   143 (~0%)|    -|
+    |  o VITIS_LOOP_929_8                     |     -|  3.65|        3|   15.000|         1|        1|     3|       yes|     -|        -|           -|           -|    -|
+    +-----------------------------------------+------+------+---------+---------+----------+---------+------+----------+------+---------+------------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AXIS
++-----------+-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+| Interface | Direction | Register Mode | TDATA | TDEST | TID | TKEEP | TLAST | TREADY | TSTRB | TUSER | TVALID |
++-----------+-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+| sdata_i   | in        | both          | 8     | 1     | 1   | 1     | 1     | 1      | 1     | 1     | 1      |
++-----------+-----------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+
+* Other Ports
++--------------+---------+-----------+----------+
+| Port         | Mode    | Direction | Bitwidth |
++--------------+---------+-----------+----------+
+| bhv_i        | ap_none | in        | 64       |
+| chv_i        | ap_none | in        | 512      |
+| frame_in     | ap_none | in        | 48       |
+| lhv_i        | ap_none | in        | 64       |
+| nrst_i       | ap_none | in        | 1        |
+| op_mode_i    | ap_none | in        | 16       |
+| pred_class_o | ap_none | out       | 6        |
+| status_o     | ap_none | out       | 5        |
++--------------+---------+-----------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst_n  | reset      | ap_rst_n                          |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++--------------+-----------+--------------------------------------------+
+| Argument     | Direction | Datatype                                   |
++--------------+-----------+--------------------------------------------+
+| nrst_i       | in        | bool&                                      |
+| op_mode_i    | in        |                                            |
+| frame_in     | in        |                                            |
+| sdata_i      | in        | stream<hls::axis<ap_uint<8>, 1, 1, 1>, 0>& |
+| chv_i        | in        | &                                          |
+| bhv_i        | in        | &                                          |
+| lhv_i        | in        | &                                          |
+| pred_class_o | out       | pointer                                    |
+| status_o     | out       | pointer                                    |
++--------------+-----------+--------------------------------------------+
+
+* SW-to-HW Mapping
++--------------+--------------+-----------+
+| Argument     | HW Interface | HW Type   |
++--------------+--------------+-----------+
+| nrst_i       | nrst_i       | port      |
+| op_mode_i    | op_mode_i    | port      |
+| frame_in     | frame_in     | port      |
+| sdata_i      | sdata_i      | interface |
+| chv_i        | chv_i        | port      |
+| bhv_i        | bhv_i        | port      |
+| lhv_i        | lhv_i        | port      |
+| pred_class_o | pred_class_o | port      |
+| status_o     | status_o     | port      |
++--------------+--------------+-----------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+
+================================================================
+== Bind Op Report
+================================================================
++-----------------------------------------+-----+--------+--------------+-----+--------+---------+
+| Name                                    | DSP | Pragma | Variable     | Op  | Impl   | Latency |
++-----------------------------------------+-----+--------+--------------+-----+--------+---------+
+| + hdv_engine                            | 35  |        |              |     |        |         |
+|   mul_8ns_8ns_16_1_1_U237               | -   |        | denom_a      | mul | auto   | 0       |
+|   mul_8ns_8ns_16_1_1_U238               | -   |        | mul_ln212    | mul | auto   | 0       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U272   | 1   |        | mul_ln212_1  | mul | dsp48  | 3       |
+|   mul_8ns_8ns_16_1_1_U239               | -   |        | mul_ln212_2  | mul | auto   | 0       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U273   | 1   |        | mul_ln212_3  | mul | dsp48  | 3       |
+|   mul_8ns_8ns_16_1_1_U240               | -   |        | mul_ln212_4  | mul | auto   | 0       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U274   | 1   |        | mul_ln212_5  | mul | dsp48  | 3       |
+|   mul_8ns_8ns_16_1_1_U241               | -   |        | mul_ln212_6  | mul | auto   | 0       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U275   | 1   |        | mul_ln212_7  | mul | dsp48  | 3       |
+|   mul_8ns_8ns_16_1_1_U242               | -   |        | mul_ln212_8  | mul | auto   | 0       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U276   | 1   |        | mul_ln212_9  | mul | dsp48  | 3       |
+|   mul_8ns_8ns_16_1_1_U243               | -   |        | mul_ln212_10 | mul | auto   | 0       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U277   | 1   |        | mul_ln212_11 | mul | dsp48  | 3       |
+|   mul_8ns_8ns_16_1_1_U244               | -   |        | mul_ln212_12 | mul | auto   | 0       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U278   | 1   |        | mul_ln212_13 | mul | dsp48  | 3       |
+|   mul_8ns_8ns_16_1_1_U245               | -   |        | mul_ln212_14 | mul | auto   | 0       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U279   | 1   |        | mul_ln212_15 | mul | dsp48  | 3       |
+|   mul_8ns_8ns_16_1_1_U246               | -   |        | mul_ln212_16 | mul | auto   | 0       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U280   | 1   |        | mul_ln212_17 | mul | dsp48  | 3       |
+|   mul_8ns_8ns_16_1_1_U247               | -   |        | mul_ln212_18 | mul | auto   | 0       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U281   | 1   |        | mul_ln212_19 | mul | dsp48  | 3       |
+|   mul_8ns_8ns_16_1_1_U248               | -   |        | mul_ln212_20 | mul | auto   | 0       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U282   | 1   |        | mul_ln212_21 | mul | dsp48  | 3       |
+|   mul_8ns_8ns_16_1_1_U249               | -   |        | mul_ln212_22 | mul | auto   | 0       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U283   | 1   |        | mul_ln212_23 | mul | dsp48  | 3       |
+|   mul_8ns_8ns_16_1_1_U250               | -   |        | mul_ln212_24 | mul | auto   | 0       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U284   | 1   |        | mul_ln212_25 | mul | dsp48  | 3       |
+|   mul_8ns_8ns_16_1_1_U251               | -   |        | mul_ln212_26 | mul | auto   | 0       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U285   | 1   |        | mul_ln212_27 | mul | dsp48  | 3       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U286   | 1   |        | mul_ln212_28 | mul | dsp48  | 3       |
+|   mul_8ns_8ns_16_1_1_U252               | -   |        | mul_ln212_29 | mul | auto   | 0       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U287   | 1   |        | mul_ln212_30 | mul | dsp48  | 3       |
+|   mul_8ns_8ns_16_1_1_U253               | -   |        | mul_ln212_31 | mul | auto   | 0       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U288   | 1   |        | mul_ln212_32 | mul | dsp48  | 3       |
+|   mul_8ns_8ns_16_1_1_U254               | -   |        | mul_ln212_33 | mul | auto   | 0       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U289   | 1   |        | mul_ln212_34 | mul | dsp48  | 3       |
+|   mul_8ns_8ns_16_1_1_U255               | -   |        | mul_ln212_35 | mul | auto   | 0       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U290   | 1   |        | mul_ln212_36 | mul | dsp48  | 3       |
+|   mul_8ns_8ns_16_1_1_U256               | -   |        | mul_ln212_37 | mul | auto   | 0       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U291   | 1   |        | mul_ln212_38 | mul | dsp48  | 3       |
+|   mul_8ns_8ns_16_1_1_U257               | -   |        | mul_ln212_39 | mul | auto   | 0       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U292   | 1   |        | mul_ln212_40 | mul | dsp48  | 3       |
+|   mul_8ns_8ns_16_1_1_U258               | -   |        | mul_ln212_41 | mul | auto   | 0       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U293   | 1   |        | mul_ln212_42 | mul | dsp48  | 3       |
+|   mul_8ns_8ns_16_1_1_U259               | -   |        | mul_ln212_43 | mul | auto   | 0       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U294   | 1   |        | mul_ln212_44 | mul | dsp48  | 3       |
+|   mul_8ns_8ns_16_1_1_U260               | -   |        | mul_ln212_45 | mul | auto   | 0       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U295   | 1   |        | mul_ln212_46 | mul | dsp48  | 3       |
+|   mul_8ns_8ns_16_1_1_U261               | -   |        | mul_ln212_47 | mul | auto   | 0       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U296   | 1   |        | mul_ln212_48 | mul | dsp48  | 3       |
+|   mul_8ns_8ns_16_1_1_U262               | -   |        | mul_ln212_49 | mul | auto   | 0       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U297   | 1   |        | mul_ln212_50 | mul | dsp48  | 3       |
+|   mul_8ns_8ns_16_1_1_U263               | -   |        | mul_ln212_51 | mul | auto   | 0       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U298   | 1   |        | mul_ln212_52 | mul | dsp48  | 3       |
+|   mul_8ns_8ns_16_1_1_U264               | -   |        | mul_ln212_53 | mul | auto   | 0       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U299   | 1   |        | mul_ln212_54 | mul | dsp48  | 3       |
+|   mul_8ns_8ns_16_1_1_U265               | -   |        | mul_ln212_55 | mul | auto   | 0       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U300   | 1   |        | mul_ln212_56 | mul | dsp48  | 3       |
+|   mul_8ns_8ns_16_1_1_U266               | -   |        | mul_ln212_57 | mul | auto   | 0       |
+|   mul_8ns_8ns_16_1_1_U267               | -   |        | mul_ln212_58 | mul | auto   | 0       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U301   | 1   |        | mul_ln212_59 | mul | dsp48  | 3       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U302   | 1   |        | mul_ln212_60 | mul | dsp48  | 3       |
+|   mul_8ns_8ns_16_1_1_U268               | -   |        | mul_ln212_61 | mul | auto   | 0       |
+|   add_ln208_fu_5049_p2                  | -   |        | add_ln208    | add | fabric | 0       |
+|   add_ln208_1_fu_5059_p2                | -   |        | add_ln208_1  | add | fabric | 0       |
+|   add_ln208_2_fu_5069_p2                | -   |        | add_ln208_2  | add | fabric | 0       |
+|   add_ln208_3_fu_5079_p2                | -   |        | add_ln208_3  | add | fabric | 0       |
+|   add_ln208_4_fu_5089_p2                | -   |        | add_ln208_4  | add | fabric | 0       |
+|   add_ln208_5_fu_5099_p2                | -   |        | add_ln208_5  | add | fabric | 0       |
+|   add_ln208_6_fu_5109_p2                | -   |        | add_ln208_6  | add | fabric | 0       |
+|   add_ln208_7_fu_5119_p2                | -   |        | add_ln208_7  | add | fabric | 0       |
+|   add_ln208_8_fu_5129_p2                | -   |        | add_ln208_8  | add | fabric | 0       |
+|   add_ln208_9_fu_5139_p2                | -   |        | add_ln208_9  | add | fabric | 0       |
+|   add_ln208_10_fu_5149_p2               | -   |        | add_ln208_10 | add | fabric | 0       |
+|   add_ln208_11_fu_5159_p2               | -   |        | add_ln208_11 | add | fabric | 0       |
+|   add_ln208_12_fu_5169_p2               | -   |        | add_ln208_12 | add | fabric | 0       |
+|   add_ln208_13_fu_5179_p2               | -   |        | add_ln208_13 | add | fabric | 0       |
+|   add_ln208_14_fu_5189_p2               | -   |        | add_ln208_14 | add | fabric | 0       |
+|   add_ln208_15_fu_5195_p2               | -   |        | add_ln208_15 | add | fabric | 0       |
+|   add_ln208_16_fu_5205_p2               | -   |        | add_ln208_16 | add | fabric | 0       |
+|   add_ln208_17_fu_5215_p2               | -   |        | add_ln208_17 | add | fabric | 0       |
+|   add_ln208_18_fu_5225_p2               | -   |        | add_ln208_18 | add | fabric | 0       |
+|   add_ln208_19_fu_5235_p2               | -   |        | add_ln208_19 | add | fabric | 0       |
+|   add_ln208_20_fu_5245_p2               | -   |        | add_ln208_20 | add | fabric | 0       |
+|   add_ln208_21_fu_5255_p2               | -   |        | add_ln208_21 | add | fabric | 0       |
+|   add_ln208_22_fu_5265_p2               | -   |        | add_ln208_22 | add | fabric | 0       |
+|   add_ln208_23_fu_5275_p2               | -   |        | add_ln208_23 | add | fabric | 0       |
+|   add_ln208_24_fu_5285_p2               | -   |        | add_ln208_24 | add | fabric | 0       |
+|   add_ln208_25_fu_5295_p2               | -   |        | add_ln208_25 | add | fabric | 0       |
+|   add_ln208_26_fu_5305_p2               | -   |        | add_ln208_26 | add | fabric | 0       |
+|   add_ln208_27_fu_5315_p2               | -   |        | add_ln208_27 | add | fabric | 0       |
+|   add_ln208_28_fu_5325_p2               | -   |        | add_ln208_28 | add | fabric | 0       |
+|   add_ln208_29_fu_5335_p2               | -   |        | add_ln208_29 | add | fabric | 0       |
+|   add_ln208_30_fu_6266_p2               | -   |        | add_ln208_30 | add | fabric | 0       |
+|   add_ln208_31_fu_5341_p2               | -   |        | add_ln208_31 | add | fabric | 0       |
+|   add_ln208_32_fu_5351_p2               | -   |        | add_ln208_32 | add | fabric | 0       |
+|   add_ln208_33_fu_5361_p2               | -   |        | add_ln208_33 | add | fabric | 0       |
+|   add_ln208_34_fu_5371_p2               | -   |        | add_ln208_34 | add | fabric | 0       |
+|   add_ln208_35_fu_5381_p2               | -   |        | add_ln208_35 | add | fabric | 0       |
+|   add_ln208_36_fu_5391_p2               | -   |        | add_ln208_36 | add | fabric | 0       |
+|   add_ln208_37_fu_5401_p2               | -   |        | add_ln208_37 | add | fabric | 0       |
+|   add_ln208_38_fu_5411_p2               | -   |        | add_ln208_38 | add | fabric | 0       |
+|   add_ln208_39_fu_5421_p2               | -   |        | add_ln208_39 | add | fabric | 0       |
+|   add_ln208_40_fu_5431_p2               | -   |        | add_ln208_40 | add | fabric | 0       |
+|   add_ln208_41_fu_5441_p2               | -   |        | add_ln208_41 | add | fabric | 0       |
+|   add_ln208_42_fu_5451_p2               | -   |        | add_ln208_42 | add | fabric | 0       |
+|   add_ln208_43_fu_5461_p2               | -   |        | add_ln208_43 | add | fabric | 0       |
+|   add_ln208_44_fu_5471_p2               | -   |        | add_ln208_44 | add | fabric | 0       |
+|   add_ln208_45_fu_5481_p2               | -   |        | add_ln208_45 | add | fabric | 0       |
+|   add_ln208_46_fu_5487_p2               | -   |        | add_ln208_46 | add | fabric | 0       |
+|   add_ln208_47_fu_5497_p2               | -   |        | add_ln208_47 | add | fabric | 0       |
+|   add_ln208_48_fu_5507_p2               | -   |        | add_ln208_48 | add | fabric | 0       |
+|   add_ln208_49_fu_5517_p2               | -   |        | add_ln208_49 | add | fabric | 0       |
+|   add_ln208_50_fu_5527_p2               | -   |        | add_ln208_50 | add | fabric | 0       |
+|   add_ln208_51_fu_5537_p2               | -   |        | add_ln208_51 | add | fabric | 0       |
+|   add_ln208_52_fu_5547_p2               | -   |        | add_ln208_52 | add | fabric | 0       |
+|   add_ln208_53_fu_5557_p2               | -   |        | add_ln208_53 | add | fabric | 0       |
+|   add_ln208_54_fu_5567_p2               | -   |        | add_ln208_54 | add | fabric | 0       |
+|   add_ln208_55_fu_5577_p2               | -   |        | add_ln208_55 | add | fabric | 0       |
+|   add_ln208_56_fu_5587_p2               | -   |        | add_ln208_56 | add | fabric | 0       |
+|   add_ln208_57_fu_5597_p2               | -   |        | add_ln208_57 | add | fabric | 0       |
+|   add_ln208_58_fu_5607_p2               | -   |        | add_ln208_58 | add | fabric | 0       |
+|   add_ln208_59_fu_5617_p2               | -   |        | add_ln208_59 | add | fabric | 0       |
+|   add_ln208_60_fu_5627_p2               | -   |        | add_ln208_60 | add | fabric | 0       |
+|   add_ln208_61_fu_6282_p2               | -   |        | add_ln208_61 | add | fabric | 0       |
+|   similarity_1_fu_6292_p2               | -   |        | similarity_1 | add | fabric | 0       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U303   | 1   |        | mul_ln212_62 | mul | dsp48  | 3       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U301   | 1   |        | add_ln212    | add | dsp48  | 3       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U300   | 1   |        | add_ln212_1  | add | dsp48  | 3       |
+|   add_ln212_2_fu_6727_p2                | -   |        | add_ln212_2  | add | fabric | 0       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U298   | 1   |        | add_ln212_3  | add | dsp48  | 3       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U299   | 1   |        | add_ln212_4  | add | dsp48  | 3       |
+|   add_ln212_5_fu_6743_p2                | -   |        | add_ln212_5  | add | fabric | 0       |
+|   add_ln212_6_fu_6753_p2                | -   |        | add_ln212_6  | add | fabric | 0       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U294   | 1   |        | add_ln212_7  | add | dsp48  | 3       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U295   | 1   |        | add_ln212_8  | add | dsp48  | 3       |
+|   add_ln212_9_fu_6769_p2                | -   |        | add_ln212_9  | add | fabric | 0       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U296   | 1   |        | add_ln212_10 | add | dsp48  | 3       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U297   | 1   |        | add_ln212_11 | add | dsp48  | 3       |
+|   add_ln212_12_fu_6785_p2               | -   |        | add_ln212_12 | add | fabric | 0       |
+|   add_ln212_13_fu_6795_p2               | -   |        | add_ln212_13 | add | fabric | 0       |
+|   add_ln212_14_fu_6805_p2               | -   |        | add_ln212_14 | add | fabric | 0       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U286   | 1   |        | add_ln212_15 | add | dsp48  | 3       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U287   | 1   |        | add_ln212_16 | add | dsp48  | 3       |
+|   add_ln212_17_fu_6817_p2               | -   |        | add_ln212_17 | add | fabric | 0       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U288   | 1   |        | add_ln212_18 | add | dsp48  | 3       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U289   | 1   |        | add_ln212_19 | add | dsp48  | 3       |
+|   add_ln212_20_fu_6833_p2               | -   |        | add_ln212_20 | add | fabric | 0       |
+|   add_ln212_21_fu_6843_p2               | -   |        | add_ln212_21 | add | fabric | 0       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U290   | 1   |        | add_ln212_22 | add | dsp48  | 3       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U291   | 1   |        | add_ln212_23 | add | dsp48  | 3       |
+|   add_ln212_24_fu_6859_p2               | -   |        | add_ln212_24 | add | fabric | 0       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U292   | 1   |        | add_ln212_25 | add | dsp48  | 3       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U293   | 1   |        | add_ln212_26 | add | dsp48  | 3       |
+|   add_ln212_27_fu_6875_p2               | -   |        | add_ln212_27 | add | fabric | 0       |
+|   add_ln212_28_fu_6885_p2               | -   |        | add_ln212_28 | add | fabric | 0       |
+|   add_ln212_29_fu_6895_p2               | -   |        | add_ln212_29 | add | fabric | 0       |
+|   add_ln212_30_fu_7090_p2               | -   |        | add_ln212_30 | add | fabric | 0       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U303   | 1   |        | add_ln212_31 | add | dsp48  | 3       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U272   | 1   |        | add_ln212_32 | add | dsp48  | 3       |
+|   add_ln212_33_fu_6907_p2               | -   |        | add_ln212_33 | add | fabric | 0       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U273   | 1   |        | add_ln212_34 | add | dsp48  | 3       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U274   | 1   |        | add_ln212_35 | add | dsp48  | 3       |
+|   add_ln212_36_fu_6923_p2               | -   |        | add_ln212_36 | add | fabric | 0       |
+|   add_ln212_37_fu_6933_p2               | -   |        | add_ln212_37 | add | fabric | 0       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U275   | 1   |        | add_ln212_38 | add | dsp48  | 3       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U276   | 1   |        | add_ln212_39 | add | dsp48  | 3       |
+|   add_ln212_40_fu_6949_p2               | -   |        | add_ln212_40 | add | fabric | 0       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U277   | 1   |        | add_ln212_41 | add | dsp48  | 3       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U278   | 1   |        | add_ln212_42 | add | dsp48  | 3       |
+|   add_ln212_43_fu_6965_p2               | -   |        | add_ln212_43 | add | fabric | 0       |
+|   add_ln212_44_fu_6975_p2               | -   |        | add_ln212_44 | add | fabric | 0       |
+|   add_ln212_45_fu_6985_p2               | -   |        | add_ln212_45 | add | fabric | 0       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U279   | 1   |        | add_ln212_46 | add | dsp48  | 3       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U280   | 1   |        | add_ln212_47 | add | dsp48  | 3       |
+|   add_ln212_48_fu_6997_p2               | -   |        | add_ln212_48 | add | fabric | 0       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U281   | 1   |        | add_ln212_49 | add | dsp48  | 3       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U282   | 1   |        | add_ln212_50 | add | dsp48  | 3       |
+|   add_ln212_51_fu_7013_p2               | -   |        | add_ln212_51 | add | fabric | 0       |
+|   add_ln212_52_fu_7023_p2               | -   |        | add_ln212_52 | add | fabric | 0       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U283   | 1   |        | add_ln212_53 | add | dsp48  | 3       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U284   | 1   |        | add_ln212_54 | add | dsp48  | 3       |
+|   add_ln212_55_fu_7039_p2               | -   |        | add_ln212_55 | add | fabric | 0       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U285   | 1   |        | add_ln212_56 | add | dsp48  | 3       |
+|   mac_muladd_8ns_8ns_16ns_17_4_1_U302   | 1   |        | add_ln212_57 | add | dsp48  | 3       |
+|   add_ln212_58_fu_7055_p2               | -   |        | add_ln212_58 | add | fabric | 0       |
+|   add_ln212_59_fu_7065_p2               | -   |        | add_ln212_59 | add | fabric | 0       |
+|   add_ln212_60_fu_7075_p2               | -   |        | add_ln212_60 | add | fabric | 0       |
+|   add_ln212_61_fu_7106_p2               | -   |        | add_ln212_61 | add | fabric | 0       |
+|   denom_a_1_fu_7116_p2                  | -   |        | denom_a_1    | add | fabric | 0       |
+|   add_ln213_fu_5641_p2                  | -   |        | add_ln213    | add | fabric | 0       |
+|   add_ln213_1_fu_5651_p2                | -   |        | add_ln213_1  | add | fabric | 0       |
+|   add_ln213_2_fu_5661_p2                | -   |        | add_ln213_2  | add | fabric | 0       |
+|   add_ln213_3_fu_5671_p2                | -   |        | add_ln213_3  | add | fabric | 0       |
+|   add_ln213_4_fu_5681_p2                | -   |        | add_ln213_4  | add | fabric | 0       |
+|   add_ln213_5_fu_5691_p2                | -   |        | add_ln213_5  | add | fabric | 0       |
+|   add_ln213_6_fu_5701_p2                | -   |        | add_ln213_6  | add | fabric | 0       |
+|   add_ln213_7_fu_5711_p2                | -   |        | add_ln213_7  | add | fabric | 0       |
+|   add_ln213_8_fu_5721_p2                | -   |        | add_ln213_8  | add | fabric | 0       |
+|   add_ln213_9_fu_5731_p2                | -   |        | add_ln213_9  | add | fabric | 0       |
+|   add_ln213_10_fu_5741_p2               | -   |        | add_ln213_10 | add | fabric | 0       |
+|   add_ln213_11_fu_5751_p2               | -   |        | add_ln213_11 | add | fabric | 0       |
+|   add_ln213_12_fu_5761_p2               | -   |        | add_ln213_12 | add | fabric | 0       |
+|   add_ln213_13_fu_5771_p2               | -   |        | add_ln213_13 | add | fabric | 0       |
+|   add_ln213_14_fu_5781_p2               | -   |        | add_ln213_14 | add | fabric | 0       |
+|   add_ln213_15_fu_5791_p2               | -   |        | add_ln213_15 | add | fabric | 0       |
+|   add_ln213_16_fu_5801_p2               | -   |        | add_ln213_16 | add | fabric | 0       |
+|   add_ln213_17_fu_5811_p2               | -   |        | add_ln213_17 | add | fabric | 0       |
+|   add_ln213_18_fu_5821_p2               | -   |        | add_ln213_18 | add | fabric | 0       |
+|   add_ln213_19_fu_5831_p2               | -   |        | add_ln213_19 | add | fabric | 0       |
+|   add_ln213_20_fu_5841_p2               | -   |        | add_ln213_20 | add | fabric | 0       |
+|   add_ln213_21_fu_5851_p2               | -   |        | add_ln213_21 | add | fabric | 0       |
+|   add_ln213_22_fu_5861_p2               | -   |        | add_ln213_22 | add | fabric | 0       |
+|   add_ln213_23_fu_5871_p2               | -   |        | add_ln213_23 | add | fabric | 0       |
+|   add_ln213_24_fu_5881_p2               | -   |        | add_ln213_24 | add | fabric | 0       |
+|   add_ln213_25_fu_5891_p2               | -   |        | add_ln213_25 | add | fabric | 0       |
+|   add_ln213_26_fu_5901_p2               | -   |        | add_ln213_26 | add | fabric | 0       |
+|   add_ln213_27_fu_5911_p2               | -   |        | add_ln213_27 | add | fabric | 0       |
+|   add_ln213_28_fu_5921_p2               | -   |        | add_ln213_28 | add | fabric | 0       |
+|   add_ln213_29_fu_5931_p2               | -   |        | add_ln213_29 | add | fabric | 0       |
+|   add_ln213_30_fu_5941_p2               | -   |        | add_ln213_30 | add | fabric | 0       |
+|   add_ln213_31_fu_5947_p2               | -   |        | add_ln213_31 | add | fabric | 0       |
+|   add_ln213_32_fu_5957_p2               | -   |        | add_ln213_32 | add | fabric | 0       |
+|   add_ln213_33_fu_5967_p2               | -   |        | add_ln213_33 | add | fabric | 0       |
+|   add_ln213_34_fu_5977_p2               | -   |        | add_ln213_34 | add | fabric | 0       |
+|   add_ln213_35_fu_5987_p2               | -   |        | add_ln213_35 | add | fabric | 0       |
+|   add_ln213_36_fu_5997_p2               | -   |        | add_ln213_36 | add | fabric | 0       |
+|   add_ln213_37_fu_6007_p2               | -   |        | add_ln213_37 | add | fabric | 0       |
+|   add_ln213_38_fu_6017_p2               | -   |        | add_ln213_38 | add | fabric | 0       |
+|   add_ln213_39_fu_6027_p2               | -   |        | add_ln213_39 | add | fabric | 0       |
+|   add_ln213_40_fu_6037_p2               | -   |        | add_ln213_40 | add | fabric | 0       |
+|   add_ln213_41_fu_6047_p2               | -   |        | add_ln213_41 | add | fabric | 0       |
+|   add_ln213_42_fu_6057_p2               | -   |        | add_ln213_42 | add | fabric | 0       |
+|   add_ln213_43_fu_6067_p2               | -   |        | add_ln213_43 | add | fabric | 0       |
+|   add_ln213_44_fu_6077_p2               | -   |        | add_ln213_44 | add | fabric | 0       |
+|   add_ln213_45_fu_6087_p2               | -   |        | add_ln213_45 | add | fabric | 0       |
+|   add_ln213_46_fu_6097_p2               | -   |        | add_ln213_46 | add | fabric | 0       |
+|   add_ln213_47_fu_6107_p2               | -   |        | add_ln213_47 | add | fabric | 0       |
+|   add_ln213_48_fu_6117_p2               | -   |        | add_ln213_48 | add | fabric | 0       |
+|   add_ln213_49_fu_6127_p2               | -   |        | add_ln213_49 | add | fabric | 0       |
+|   add_ln213_50_fu_6137_p2               | -   |        | add_ln213_50 | add | fabric | 0       |
+|   add_ln213_51_fu_6147_p2               | -   |        | add_ln213_51 | add | fabric | 0       |
+|   add_ln213_52_fu_6157_p2               | -   |        | add_ln213_52 | add | fabric | 0       |
+|   add_ln213_53_fu_6167_p2               | -   |        | add_ln213_53 | add | fabric | 0       |
+|   add_ln213_54_fu_6177_p2               | -   |        | add_ln213_54 | add | fabric | 0       |
+|   add_ln213_55_fu_6187_p2               | -   |        | add_ln213_55 | add | fabric | 0       |
+|   add_ln213_56_fu_6197_p2               | -   |        | add_ln213_56 | add | fabric | 0       |
+|   add_ln213_57_fu_6207_p2               | -   |        | add_ln213_57 | add | fabric | 0       |
+|   add_ln213_58_fu_6217_p2               | -   |        | add_ln213_58 | add | fabric | 0       |
+|   add_ln213_59_fu_6227_p2               | -   |        | add_ln213_59 | add | fabric | 0       |
+|   add_ln213_60_fu_6237_p2               | -   |        | add_ln213_60 | add | fabric | 0       |
+|   add_ln213_61_fu_6247_p2               | -   |        | add_ln213_61 | add | fabric | 0       |
+|   denom_b_1_fu_6304_p2                  | -   |        | denom_b_1    | add | fabric | 0       |
+|   add_ln865_fu_7152_p2                  | -   |        | add_ln865    | add | fabric | 0       |
+|   add_ln866_fu_7187_p2                  | -   |        | add_ln866    | add | fabric | 0       |
+|   add_ln867_fu_7222_p2                  | -   |        | add_ln867    | add | fabric | 0       |
+|  + hdv_engine_Pipeline_VITIS_LOOP_294_2 | 0   |        |              |     |        |         |
+|    add_ln294_fu_60_p2                   | -   |        | add_ln294    | add | fabric | 0       |
+|  + hdv_engine_Pipeline_VITIS_LOOP_511_4 | 0   |        |              |     |        |         |
+|    state_2_fu_1584_p2                   | -   |        | state_2      | add | fabric | 0       |
+|    add_ln472_fu_2372_p2                 | -   |        | add_ln472    | add | fabric | 0       |
+|    add_ln472_1_fu_2388_p2               | -   |        | add_ln472_1  | add | fabric | 0       |
+|    add_ln472_2_fu_2404_p2               | -   |        | add_ln472_2  | add | fabric | 0       |
+|    add_ln472_3_fu_2420_p2               | -   |        | add_ln472_3  | add | fabric | 0       |
+|    add_ln472_4_fu_2436_p2               | -   |        | add_ln472_4  | add | fabric | 0       |
+|    add_ln472_5_fu_2452_p2               | -   |        | add_ln472_5  | add | fabric | 0       |
+|    add_ln472_6_fu_2468_p2               | -   |        | add_ln472_6  | add | fabric | 0       |
+|    add_ln472_7_fu_2484_p2               | -   |        | add_ln472_7  | add | fabric | 0       |
+|    add_ln472_8_fu_2500_p2               | -   |        | add_ln472_8  | add | fabric | 0       |
+|    add_ln472_9_fu_2516_p2               | -   |        | add_ln472_9  | add | fabric | 0       |
+|    add_ln472_10_fu_2532_p2              | -   |        | add_ln472_10 | add | fabric | 0       |
+|    add_ln472_11_fu_2548_p2              | -   |        | add_ln472_11 | add | fabric | 0       |
+|    add_ln472_12_fu_2564_p2              | -   |        | add_ln472_12 | add | fabric | 0       |
+|    add_ln472_13_fu_2580_p2              | -   |        | add_ln472_13 | add | fabric | 0       |
+|    add_ln472_14_fu_2596_p2              | -   |        | add_ln472_14 | add | fabric | 0       |
+|    add_ln472_15_fu_2612_p2              | -   |        | add_ln472_15 | add | fabric | 0       |
+|    add_ln472_16_fu_2628_p2              | -   |        | add_ln472_16 | add | fabric | 0       |
+|    add_ln472_17_fu_2644_p2              | -   |        | add_ln472_17 | add | fabric | 0       |
+|    add_ln472_18_fu_2660_p2              | -   |        | add_ln472_18 | add | fabric | 0       |
+|    add_ln472_19_fu_2676_p2              | -   |        | add_ln472_19 | add | fabric | 0       |
+|    add_ln472_20_fu_2692_p2              | -   |        | add_ln472_20 | add | fabric | 0       |
+|    add_ln472_21_fu_2708_p2              | -   |        | add_ln472_21 | add | fabric | 0       |
+|    add_ln472_22_fu_2724_p2              | -   |        | add_ln472_22 | add | fabric | 0       |
+|    add_ln472_23_fu_2740_p2              | -   |        | add_ln472_23 | add | fabric | 0       |
+|    add_ln472_24_fu_2756_p2              | -   |        | add_ln472_24 | add | fabric | 0       |
+|    add_ln472_25_fu_2772_p2              | -   |        | add_ln472_25 | add | fabric | 0       |
+|    add_ln472_26_fu_2788_p2              | -   |        | add_ln472_26 | add | fabric | 0       |
+|    add_ln472_27_fu_2804_p2              | -   |        | add_ln472_27 | add | fabric | 0       |
+|    add_ln472_28_fu_2820_p2              | -   |        | add_ln472_28 | add | fabric | 0       |
+|    add_ln472_29_fu_2836_p2              | -   |        | add_ln472_29 | add | fabric | 0       |
+|    add_ln472_30_fu_2852_p2              | -   |        | add_ln472_30 | add | fabric | 0       |
+|    add_ln472_31_fu_2868_p2              | -   |        | add_ln472_31 | add | fabric | 0       |
+|    add_ln472_32_fu_2884_p2              | -   |        | add_ln472_32 | add | fabric | 0       |
+|    add_ln472_33_fu_2900_p2              | -   |        | add_ln472_33 | add | fabric | 0       |
+|    add_ln472_34_fu_2916_p2              | -   |        | add_ln472_34 | add | fabric | 0       |
+|    add_ln472_35_fu_2932_p2              | -   |        | add_ln472_35 | add | fabric | 0       |
+|    add_ln472_36_fu_2948_p2              | -   |        | add_ln472_36 | add | fabric | 0       |
+|    add_ln472_37_fu_2964_p2              | -   |        | add_ln472_37 | add | fabric | 0       |
+|    add_ln472_38_fu_2980_p2              | -   |        | add_ln472_38 | add | fabric | 0       |
+|    add_ln472_39_fu_2996_p2              | -   |        | add_ln472_39 | add | fabric | 0       |
+|    add_ln472_40_fu_3012_p2              | -   |        | add_ln472_40 | add | fabric | 0       |
+|    add_ln472_41_fu_3028_p2              | -   |        | add_ln472_41 | add | fabric | 0       |
+|    add_ln472_42_fu_3044_p2              | -   |        | add_ln472_42 | add | fabric | 0       |
+|    add_ln472_43_fu_3060_p2              | -   |        | add_ln472_43 | add | fabric | 0       |
+|    add_ln472_44_fu_3076_p2              | -   |        | add_ln472_44 | add | fabric | 0       |
+|    add_ln472_45_fu_3092_p2              | -   |        | add_ln472_45 | add | fabric | 0       |
+|    add_ln472_46_fu_3108_p2              | -   |        | add_ln472_46 | add | fabric | 0       |
+|    add_ln472_47_fu_3124_p2              | -   |        | add_ln472_47 | add | fabric | 0       |
+|    add_ln472_48_fu_3140_p2              | -   |        | add_ln472_48 | add | fabric | 0       |
+|    add_ln472_49_fu_3156_p2              | -   |        | add_ln472_49 | add | fabric | 0       |
+|    add_ln472_50_fu_3172_p2              | -   |        | add_ln472_50 | add | fabric | 0       |
+|    add_ln472_51_fu_3188_p2              | -   |        | add_ln472_51 | add | fabric | 0       |
+|    add_ln472_52_fu_3204_p2              | -   |        | add_ln472_52 | add | fabric | 0       |
+|    add_ln472_53_fu_3220_p2              | -   |        | add_ln472_53 | add | fabric | 0       |
+|    add_ln472_54_fu_3236_p2              | -   |        | add_ln472_54 | add | fabric | 0       |
+|    add_ln472_55_fu_3252_p2              | -   |        | add_ln472_55 | add | fabric | 0       |
+|    add_ln472_56_fu_3268_p2              | -   |        | add_ln472_56 | add | fabric | 0       |
+|    add_ln472_57_fu_3284_p2              | -   |        | add_ln472_57 | add | fabric | 0       |
+|    add_ln472_58_fu_3300_p2              | -   |        | add_ln472_58 | add | fabric | 0       |
+|    add_ln472_59_fu_3316_p2              | -   |        | add_ln472_59 | add | fabric | 0       |
+|    add_ln472_60_fu_3332_p2              | -   |        | add_ln472_60 | add | fabric | 0       |
+|    add_ln472_61_fu_3348_p2              | -   |        | add_ln472_61 | add | fabric | 0       |
+|    add_ln472_62_fu_3364_p2              | -   |        | add_ln472_62 | add | fabric | 0       |
+|    add_ln472_63_fu_3380_p2              | -   |        | add_ln472_63 | add | fabric | 0       |
+|  + hdv_engine_Pipeline_VITIS_LOOP_916_7 | 3   |        |              |     |        |         |
+|    add_ln916_fu_375_p2                  | -   |        | add_ln916    | add | fabric | 0       |
+|    mul_32s_15ns_47_1_1_U17              | 2   |        | mul_ln327    | mul | auto   | 0       |
+|    add_ln286_fu_414_p2                  | -   |        | add_ln286    | add | fabric | 0       |
+|    sub_ln286_fu_488_p2                  | -   |        | sub_ln286    | sub | fabric | 0       |
+|    sub_ln286_1_fu_570_p2                | -   |        | sub_ln286_1  | sub | fabric | 0       |
+|    sub_ln286_2_fu_845_p2                | -   |        | sub_ln286_2  | sub | fabric | 0       |
+|    sub_ln286_3_fu_927_p2                | -   |        | sub_ln286_3  | sub | fabric | 0       |
+|    sub_ln286_4_fu_1009_p2               | -   |        | sub_ln286_4  | sub | fabric | 0       |
+|    sub_ln286_5_fu_1323_p2               | -   |        | sub_ln286_5  | sub | fabric | 0       |
+|    sub_ln286_6_fu_1405_p2               | -   |        | sub_ln286_6  | sub | fabric | 0       |
+|    sub_ln286_7_fu_1487_p2               | -   |        | sub_ln286_7  | sub | fabric | 0       |
+|    sub_ln286_8_fu_1801_p2               | -   |        | sub_ln286_8  | sub | fabric | 0       |
+|    sub_ln286_9_fu_1883_p2               | -   |        | sub_ln286_9  | sub | fabric | 0       |
+|    sub_ln286_10_fu_1965_p2              | -   |        | sub_ln286_10 | sub | fabric | 0       |
+|    sub_ln286_11_fu_2302_p2              | -   |        | sub_ln286_11 | sub | fabric | 0       |
+|    sub_ln286_12_fu_2384_p2              | -   |        | sub_ln286_12 | sub | fabric | 0       |
+|    sub_ln286_13_fu_2683_p2              | -   |        | sub_ln286_13 | sub | fabric | 0       |
+|    sub_ln286_14_fu_2744_p2              | -   |        | sub_ln286_14 | sub | fabric | 0       |
+|    res_I_30_fu_2945_p2                  | -   |        | res_I_30     | add | fabric | 0       |
+|    add_ln286_1_fu_609_p2                | -   |        | add_ln286_1  | add | fabric | 0       |
+|    sub_ln286_15_fu_683_p2               | -   |        | sub_ln286_15 | sub | fabric | 0       |
+|    sub_ln286_16_fu_765_p2               | -   |        | sub_ln286_16 | sub | fabric | 0       |
+|    sub_ln286_17_fu_1084_p2              | -   |        | sub_ln286_17 | sub | fabric | 0       |
+|    sub_ln286_18_fu_1166_p2              | -   |        | sub_ln286_18 | sub | fabric | 0       |
+|    sub_ln286_19_fu_1248_p2              | -   |        | sub_ln286_19 | sub | fabric | 0       |
+|    sub_ln286_20_fu_1562_p2              | -   |        | sub_ln286_20 | sub | fabric | 0       |
+|    sub_ln286_21_fu_1644_p2              | -   |        | sub_ln286_21 | sub | fabric | 0       |
+|    sub_ln286_22_fu_1726_p2              | -   |        | sub_ln286_22 | sub | fabric | 0       |
+|    sub_ln286_23_fu_2040_p2              | -   |        | sub_ln286_23 | sub | fabric | 0       |
+|    sub_ln286_24_fu_2122_p2              | -   |        | sub_ln286_24 | sub | fabric | 0       |
+|    sub_ln286_25_fu_2204_p2              | -   |        | sub_ln286_25 | sub | fabric | 0       |
+|    sub_ln286_26_fu_2517_p2              | -   |        | sub_ln286_26 | sub | fabric | 0       |
+|    sub_ln286_27_fu_2599_p2              | -   |        | sub_ln286_27 | sub | fabric | 0       |
+|    sub_ln286_28_fu_2822_p2              | -   |        | sub_ln286_28 | sub | fabric | 0       |
+|    sub_ln286_29_fu_2883_p2              | -   |        | sub_ln286_29 | sub | fabric | 0       |
+|    res_I_62_fu_2956_p2                  | -   |        | res_I_62     | add | fabric | 0       |
+|    mul_17ns_17ns_34_1_1_U21             | 1   |        | mul_ln327_1  | mul | auto   | 0       |
+|  + hdv_engine_Pipeline_VITIS_LOOP_929_8 | 0   |        |              |     |        |         |
+|    i_2_fu_81_p2                         | -   |        | i_2          | add | fabric | 0       |
++-----------------------------------------+-----+--------+--------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Pragmas with Warnings
++------------+-------------------------------------------------------+---------------------------------------------------+-----------------------------------------------------------------------+
+| Type       | Options                                               | Location                                          | Messages                                                              |
++------------+-------------------------------------------------------+---------------------------------------------------+-----------------------------------------------------------------------+
+| dependence | variable = similarity_max type=inter distance=16 true | ./../src/hw/hls_xilinx/main.cpp:275 in hdv_engine | Ignoring dependence pragma on local scalar variable 'similarity_max'. |
+| unroll     |                                                       | ./../src/hw/hls_xilinx/main.cpp:507 in hdv_engine | '#pragma HLS unroll' can only be applied inside loop body             |
+| unroll     |                                                       | ./../src/hw/hls_xilinx/main.cpp:811 in hdv_engine | '#pragma HLS unroll' can only be applied inside loop body             |
+| pipeline   | II=5                                                  | ./../src/hw/hls_xilinx/main.cpp:835 in hdv_engine | Only for/while/do loop or function body support the pipeline pragma   |
++------------+-------------------------------------------------------+---------------------------------------------------+-----------------------------------------------------------------------+
+
+* Valid Pragma Syntax
++-----------------+-----------------------------------------------------------+---------------------------------------------------------------------------------------------------+
+| Type            | Options                                                   | Location                                                                                          |
++-----------------+-----------------------------------------------------------+---------------------------------------------------------------------------------------------------+
+| pipeline        |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/../headers/sqrt_approx.hpp:46 in compute            |
+| inline          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/./../../lib/hdc_lib/operations.hpp:12 in add        |
+| unroll          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/./../../lib/hdc_lib/operations.hpp:14 in add        |
+| inline          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/./../../lib/hdc_lib/operations.hpp:20 in multiply   |
+| unroll          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/./../../lib/hdc_lib/operations.hpp:22 in multiply   |
+| inline          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/./../../lib/hdc_lib/operations.hpp:28 in xor_op     |
+| unroll          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/./../../lib/hdc_lib/operations.hpp:30 in xor_op     |
+| inline          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/./../../lib/hdc_lib/operations.hpp:36 in xnor_op    |
+| unroll          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/./../../lib/hdc_lib/operations.hpp:38 in xnor_op    |
+| inline          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/./../../lib/hdc_lib/operations.hpp:44 in or_op      |
+| unroll          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/./../../lib/hdc_lib/operations.hpp:46 in or_op      |
+| inline          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/./../../lib/hdc_lib/operations.hpp:52 in nand_op    |
+| unroll          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/./../../lib/hdc_lib/operations.hpp:54 in nand_op    |
+| inline          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:126 in similarity_phase1              |
+| unroll          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:133 in similarity_phase1              |
+| unroll          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:136 in similarity_phase1              |
+| inline          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:280 in similarity_phase2              |
+| array_partition | variable=Binded_HV complete                               | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:368 in bind, Binded_HV                |
+| inline          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:370 in bind                           |
+| unroll          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:373 in bind                           |
+| inline          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:398 in permute                        |
+| array_partition | variable=HV2 complete                                     | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:453 in bundle, HV2                    |
+| inline          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:455 in bundle                         |
+| unroll          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:462 in bundle                         |
+| unroll          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:465 in bundle                         |
+| array_partition | variable=clipped_HV complete                              | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:530 in clip, clipped_HV               |
+| inline          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:534 in clip                           |
+| unroll          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:550 in clip                           |
+| unroll          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:608 in clip                           |
+| unroll          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:628 in clip                           |
+| array_partition | variable=baseVector complete                              | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:665 in generate_basehvs, baseVector   |
+| array_partition | variable=levelVector complete                             | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:717 in generate_levelhvs, levelVector |
+| unroll          |                                                           | ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:854 in random_hv                      |
+| interface       | ap_none port = nrst_i                                     | ./../src/hw/hls_xilinx/main.cpp:146 in hdv_engine                                                 |
+| interface       | axis port = sdata_i depth = 1                             | ./../src/hw/hls_xilinx/main.cpp:149 in hdv_engine                                                 |
+| interface       | ap_none port = chv_i                                      | ./../src/hw/hls_xilinx/main.cpp:156 in hdv_engine                                                 |
+| interface       | ap_none port = bhv_i                                      | ./../src/hw/hls_xilinx/main.cpp:159 in hdv_engine                                                 |
+| interface       | ap_none port = lhv_i                                      | ./../src/hw/hls_xilinx/main.cpp:162 in hdv_engine                                                 |
+| interface       | ap_none port = pred_class_o                               | ./../src/hw/hls_xilinx/main.cpp:177 in hdv_engine                                                 |
+| aggregate       | compact=bit variable = pred_class_o                       | ./../src/hw/hls_xilinx/main.cpp:178 in hdv_engine                                                 |
+| interface       | ap_none port = status_o                                   | ./../src/hw/hls_xilinx/main.cpp:198 in hdv_engine                                                 |
+| aggregate       | compact=bit variable = status_o                           | ./../src/hw/hls_xilinx/main.cpp:199 in hdv_engine                                                 |
+| array_partition | variable = _bhv_i complete                                | ./../src/hw/hls_xilinx/main.cpp:258 in hdv_engine                                                 |
+| array_partition | variable = _lhv_i complete                                | ./../src/hw/hls_xilinx/main.cpp:259 in hdv_engine                                                 |
+| array_partition | variable = _lhv_i0 complete                               | ./../src/hw/hls_xilinx/main.cpp:260 in hdv_engine                                                 |
+| array_partition | variable = _lhv_i1 complete                               | ./../src/hw/hls_xilinx/main.cpp:261 in hdv_engine                                                 |
+| array_partition | variable = _chv_i complete                                | ./../src/hw/hls_xilinx/main.cpp:262 in hdv_engine                                                 |
+| array_partition | variable = _bhv complete                                  | ./../src/hw/hls_xilinx/main.cpp:263 in hdv_engine                                                 |
+| array_partition | variable = _lhv complete                                  | ./../src/hw/hls_xilinx/main.cpp:264 in hdv_engine                                                 |
+| array_partition | variable = _chv complete                                  | ./../src/hw/hls_xilinx/main.cpp:265 in hdv_engine                                                 |
+| array_partition | variable = _n_gram_idx complete                           | ./../src/hw/hls_xilinx/main.cpp:266 in hdv_engine                                                 |
+| array_partition | variable = BundledHV complete                             | ./../src/hw/hls_xilinx/main.cpp:267 in hdv_engine                                                 |
+| array_partition | variable = Clipped_BundledHV complete                     | ./../src/hw/hls_xilinx/main.cpp:268 in hdv_engine                                                 |
+| array_partition | variable = Encoded_HV complete                            | ./../src/hw/hls_xilinx/main.cpp:269 in hdv_engine                                                 |
+| array_partition | variable = similarity_classes complete                    | ./../src/hw/hls_xilinx/main.cpp:270 in hdv_engine                                                 |
+| array_partition | variable = Binded_Features complete                       | ./../src/hw/hls_xilinx/main.cpp:271 in hdv_engine                                                 |
+| dependence      | variable = BundledHV type=inter distance=1 true           | ./../src/hw/hls_xilinx/main.cpp:272 in hdv_engine                                                 |
+| dependence      | variable = Clipped_BundledHV type=inter distance=1 true   | ./../src/hw/hls_xilinx/main.cpp:273 in hdv_engine                                                 |
+| dependence      | variable = similarity_classes type=inter distance=16 true | ./../src/hw/hls_xilinx/main.cpp:274 in hdv_engine                                                 |
+| inline          |                                                           | ./../src/hw/hls_xilinx/main.cpp:278 in hdv_engine                                                 |
+| inline          | recursive                                                 | ./../src/hw/hls_xilinx/main.cpp:282 in hdv_engine                                                 |
+| inline          |                                                           | ./../src/hw/hls_xilinx/main.cpp:311 in hdv_engine                                                 |
+| inline          | recursive                                                 | ./../src/hw/hls_xilinx/main.cpp:366 in hdv_engine                                                 |
+| inline          | recursive                                                 | ./../src/hw/hls_xilinx/main.cpp:493 in hdv_engine                                                 |
+| inline          | recursive                                                 | ./../src/hw/hls_xilinx/main.cpp:510 in hdv_engine                                                 |
+| pipeline        | II = 5                                                    | ./../src/hw/hls_xilinx/main.cpp:513 in hdv_engine                                                 |
+| inline          | recursive                                                 | ./../src/hw/hls_xilinx/main.cpp:520 in hdv_engine                                                 |
+| inline          | recursive                                                 | ./../src/hw/hls_xilinx/main.cpp:554 in hdv_engine                                                 |
+| inline          | recursive                                                 | ./../src/hw/hls_xilinx/main.cpp:629 in hdv_engine                                                 |
+| inline          | recursive                                                 | ./../src/hw/hls_xilinx/main.cpp:641 in hdv_engine                                                 |
+| unroll          |                                                           | ./../src/hw/hls_xilinx/main.cpp:645 in hdv_engine                                                 |
+| inline          | recursive                                                 | ./../src/hw/hls_xilinx/main.cpp:672 in hdv_engine                                                 |
+| inline          |                                                           | ./../src/hw/hls_xilinx/main.cpp:734 in hdv_engine                                                 |
+| inline          | recursive                                                 | ./../src/hw/hls_xilinx/main.cpp:808 in hdv_engine                                                 |
+| inline          | recursive                                                 | ./../src/hw/hls_xilinx/main.cpp:815 in hdv_engine                                                 |
+| inline          | recursive                                                 | ./../src/hw/hls_xilinx/main.cpp:908 in hdv_engine                                                 |
+| pipeline        | II=3                                                      | ./../src/hw/hls_xilinx/main.cpp:918 in hdv_engine                                                 |
+| pipeline        | II=1                                                      | ./../src/hw/hls_xilinx/main.cpp:931 in hdv_engine                                                 |
++-----------------+-----------------------------------------------------------+---------------------------------------------------------------------------------------------------+
+
+* Inferred Pragmas
++----------------------------------------------+-----------------+------------------------------------------------+----------------------------------+
+| Source Pragma                                | Inferred Pragma | Options                                        | Location                         |
++----------------------------------------------+-----------------+------------------------------------------------+----------------------------------+
+| pipeline ./../src/hw/hls_xilinx/main.cpp:513 | array_partition | dim=1 type=cyclic factor=13 variable=_bhv_i302 | variable _bhv_i302 in hdv_engine |
+| pipeline ./../src/hw/hls_xilinx/main.cpp:513 | array_partition | dim=1 type=cyclic factor=13 variable=_lhv_i303 | variable _lhv_i303 in hdv_engine |
++----------------------------------------------+-----------------+------------------------------------------------+----------------------------------+
+
+

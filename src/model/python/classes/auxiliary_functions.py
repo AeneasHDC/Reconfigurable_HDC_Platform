@@ -66,37 +66,38 @@ def create_lut_efficient(bits):
 
     for i in range(0, max_val + 1):
         # Check if we should move to the next exponent
-        if i > next_power_of_two:
+        if i == next_power_of_two:
             current_exponent += 1
-            next_power_of_two *= 2
+            next_power_of_two = 2 ** current_exponent
 
         # Check for the nearest power of two
-        if abs(i - next_power_of_two) < abs(i - next_power_of_two / 2):
-            nearest_exponent = current_exponent
-        else:
+        lower_power_of_two = 2 ** (current_exponent - 1) if current_exponent > 0 else 0
+        higher_power_of_two = 2 ** current_exponent
+
+        if i - lower_power_of_two <= higher_power_of_two - i:
             nearest_exponent = current_exponent - 1
+        else:
+            nearest_exponent = current_exponent
+
+        # Correct handling for the case when i = 0
+        if i == 0:
+            nearest_exponent = 0
 
         # Update the range in the lookup table
         if nearest_exponent not in lookup_table:
-            lookup_table[nearest_exponent] = (i, i)
+            lookup_table[nearest_exponent] = [i, i]
         else:
-            start, _ = lookup_table[nearest_exponent]
-            lookup_table[nearest_exponent] = (start, i)
+            lookup_table[nearest_exponent][1] = i
 
     return lookup_table
 
 def get_closest_poweroftwo_using_lut(lookup_table, value):
+    if value == 0:
+        return 0
 
-    # Find the appropriate range for the value
     for power_of_two, (start, end) in lookup_table.items():
-        if value==0:
-            quantized_value=0
-            break
         if start <= value <= end:
-            quantized_value=(power_of_two)
-            break
-    else:
-        # If the value is larger than the largest key, set it to the largest power of two
-        quantized_value=max(lookup_table.keys())
-    print("mapped ", value, "in:", quantized_value)
-    return quantized_value
+            return power_of_two
+    
+    # If the value is larger than the largest key, set it to the largest power of two
+    return max(lookup_table.keys())

@@ -23,10 +23,10 @@ target triple = "fpga64-xilinx-none"
 %"struct.ap_int_base<1, false>" = type { %"struct.ssdm_int<1, false>" }
 %"struct.ssdm_int<1, false>" = type { i1 }
 %struct.chv_p_t = type { [1 x %struct.chv_t] }
-%struct.chv_t = type { [64 x %"struct.ap_uint<32>"] }
-%"struct.ap_uint<32>" = type { %"struct.ap_int_base<32, false>" }
-%"struct.ap_int_base<32, false>" = type { %"struct.ssdm_int<32, false>" }
-%"struct.ssdm_int<32, false>" = type { i32 }
+%struct.chv_t = type { [64 x %"struct.ap_uint<11>"] }
+%"struct.ap_uint<11>" = type { %"struct.ap_int_base<11, false>" }
+%"struct.ap_int_base<11, false>" = type { %"struct.ssdm_int<11, false>" }
+%"struct.ssdm_int<11, false>" = type { i11 }
 %struct.bhv_p_t = type { [1 x %struct.bhv_t] }
 %struct.bhv_t = type { [64 x %"struct.ap_uint<1>"] }
 %struct.pred_class_t = type { %"struct.ap_uint<6>" }
@@ -39,7 +39,7 @@ target triple = "fpga64-xilinx-none"
 %"struct.ssdm_int<5, false>" = type { i5 }
 
 ; Function Attrs: noinline
-define void @apatb_hdv_engine_ir(i1* noalias nocapture nonnull readonly dereferenceable(1) %nrst_i, %struct.op_mode_t* nocapture readonly %op_mode_i, %struct.frame_in_t* nocapture readonly %frame_in, %"class.hls::stream<hls::axis<ap_uint<8>, 1, 1, 1>, 0>"* noalias nonnull dereferenceable(7) %sdata_i, %struct.chv_p_t* noalias nocapture nonnull readonly dereferenceable(256) %chv_i, %struct.chv_t* noalias nocapture nonnull %chv_o, %struct.bhv_p_t* noalias nocapture nonnull readonly dereferenceable(64) %bhv_i, %struct.bhv_p_t* noalias nocapture nonnull readonly dereferenceable(64) %lhv_i, %struct.pred_class_t* noalias nocapture nonnull readonly dereferenceable(1) %lable_class_i, %struct.pred_class_t* noalias nocapture nonnull %pred_class_o, %struct.sys_status_t* noalias nocapture nonnull %status_o) local_unnamed_addr #0 {
+define void @apatb_hdv_engine_ir(i1* noalias nocapture nonnull readonly dereferenceable(1) %nrst_i, %struct.op_mode_t* nocapture readonly %op_mode_i, %struct.frame_in_t* nocapture readonly %frame_in, %"class.hls::stream<hls::axis<ap_uint<8>, 1, 1, 1>, 0>"* noalias nonnull dereferenceable(7) %sdata_i, %struct.chv_p_t* noalias nocapture nonnull readonly dereferenceable(128) %chv_i, %struct.bhv_p_t* noalias nocapture nonnull readonly dereferenceable(64) %bhv_i, %struct.bhv_p_t* noalias nocapture nonnull readonly dereferenceable(64) %lhv_i, %struct.pred_class_t* noalias nocapture nonnull %pred_class_o, %struct.sys_status_t* noalias nocapture nonnull %status_o) local_unnamed_addr #0 {
 entry:
   %nrst_i_copy = alloca i1, align 512
   %sdata_i_copy.data = alloca i8
@@ -49,31 +49,27 @@ entry:
   %sdata_i_copy.last = alloca i1
   %sdata_i_copy.id = alloca i1
   %sdata_i_copy.dest = alloca i1
-  %chv_i_copy = alloca i2048, align 512
-  %chv_o_copy = alloca i2048, align 512
+  %chv_i_copy = alloca i704, align 512
   %bhv_i_copy = alloca i64, align 512
   %lhv_i_copy = alloca i64, align 512
-  %lable_class_i_copy = alloca i6, align 512
   %pred_class_o_copy = alloca i6, align 512
   %status_o_copy = alloca i5, align 512
-  call fastcc void @copy_in(i1* nonnull %nrst_i, i1* nonnull align 512 %nrst_i_copy, %"class.hls::stream<hls::axis<ap_uint<8>, 1, 1, 1>, 0>"* nonnull %sdata_i, i8* %sdata_i_copy.data, i1* %sdata_i_copy.keep, i1* %sdata_i_copy.strb, i1* %sdata_i_copy.user, i1* %sdata_i_copy.last, i1* %sdata_i_copy.id, i1* %sdata_i_copy.dest, %struct.chv_p_t* nonnull %chv_i, i2048* nonnull align 512 %chv_i_copy, %struct.chv_t* nonnull %chv_o, i2048* nonnull align 512 %chv_o_copy, %struct.bhv_p_t* nonnull %bhv_i, i64* nonnull align 512 %bhv_i_copy, %struct.bhv_p_t* nonnull %lhv_i, i64* nonnull align 512 %lhv_i_copy, %struct.pred_class_t* nonnull %lable_class_i, i6* nonnull align 512 %lable_class_i_copy, %struct.pred_class_t* nonnull %pred_class_o, i6* nonnull align 512 %pred_class_o_copy, %struct.sys_status_t* nonnull %status_o, i5* nonnull align 512 %status_o_copy)
-  call void @apatb_hdv_engine_hw(i1* %nrst_i_copy, %struct.op_mode_t* %op_mode_i, %struct.frame_in_t* %frame_in, i8* %sdata_i_copy.data, i1* %sdata_i_copy.keep, i1* %sdata_i_copy.strb, i1* %sdata_i_copy.user, i1* %sdata_i_copy.last, i1* %sdata_i_copy.id, i1* %sdata_i_copy.dest, i2048* %chv_i_copy, i2048* %chv_o_copy, i64* %bhv_i_copy, i64* %lhv_i_copy, i6* %lable_class_i_copy, i6* %pred_class_o_copy, i5* %status_o_copy)
-  call void @copy_back(i1* %nrst_i, i1* %nrst_i_copy, %"class.hls::stream<hls::axis<ap_uint<8>, 1, 1, 1>, 0>"* %sdata_i, i8* %sdata_i_copy.data, i1* %sdata_i_copy.keep, i1* %sdata_i_copy.strb, i1* %sdata_i_copy.user, i1* %sdata_i_copy.last, i1* %sdata_i_copy.id, i1* %sdata_i_copy.dest, %struct.chv_p_t* %chv_i, i2048* %chv_i_copy, %struct.chv_t* %chv_o, i2048* %chv_o_copy, %struct.bhv_p_t* %bhv_i, i64* %bhv_i_copy, %struct.bhv_p_t* %lhv_i, i64* %lhv_i_copy, %struct.pred_class_t* %lable_class_i, i6* %lable_class_i_copy, %struct.pred_class_t* %pred_class_o, i6* %pred_class_o_copy, %struct.sys_status_t* %status_o, i5* %status_o_copy)
+  call fastcc void @copy_in(i1* nonnull %nrst_i, i1* nonnull align 512 %nrst_i_copy, %"class.hls::stream<hls::axis<ap_uint<8>, 1, 1, 1>, 0>"* nonnull %sdata_i, i8* %sdata_i_copy.data, i1* %sdata_i_copy.keep, i1* %sdata_i_copy.strb, i1* %sdata_i_copy.user, i1* %sdata_i_copy.last, i1* %sdata_i_copy.id, i1* %sdata_i_copy.dest, %struct.chv_p_t* nonnull %chv_i, i704* nonnull align 512 %chv_i_copy, %struct.bhv_p_t* nonnull %bhv_i, i64* nonnull align 512 %bhv_i_copy, %struct.bhv_p_t* nonnull %lhv_i, i64* nonnull align 512 %lhv_i_copy, %struct.pred_class_t* nonnull %pred_class_o, i6* nonnull align 512 %pred_class_o_copy, %struct.sys_status_t* nonnull %status_o, i5* nonnull align 512 %status_o_copy)
+  call void @apatb_hdv_engine_hw(i1* %nrst_i_copy, %struct.op_mode_t* %op_mode_i, %struct.frame_in_t* %frame_in, i8* %sdata_i_copy.data, i1* %sdata_i_copy.keep, i1* %sdata_i_copy.strb, i1* %sdata_i_copy.user, i1* %sdata_i_copy.last, i1* %sdata_i_copy.id, i1* %sdata_i_copy.dest, i704* %chv_i_copy, i64* %bhv_i_copy, i64* %lhv_i_copy, i6* %pred_class_o_copy, i5* %status_o_copy)
+  call void @copy_back(i1* %nrst_i, i1* %nrst_i_copy, %"class.hls::stream<hls::axis<ap_uint<8>, 1, 1, 1>, 0>"* %sdata_i, i8* %sdata_i_copy.data, i1* %sdata_i_copy.keep, i1* %sdata_i_copy.strb, i1* %sdata_i_copy.user, i1* %sdata_i_copy.last, i1* %sdata_i_copy.id, i1* %sdata_i_copy.dest, %struct.chv_p_t* %chv_i, i704* %chv_i_copy, %struct.bhv_p_t* %bhv_i, i64* %bhv_i_copy, %struct.bhv_p_t* %lhv_i, i64* %lhv_i_copy, %struct.pred_class_t* %pred_class_o, i6* %pred_class_o_copy, %struct.sys_status_t* %status_o, i5* %status_o_copy)
   ret void
 }
 
 ; Function Attrs: argmemonly noinline
-define internal fastcc void @copy_in(i1* noalias readonly "unpacked"="0", i1* noalias align 512 "unpacked"="1", %"class.hls::stream<hls::axis<ap_uint<8>, 1, 1, 1>, 0>"* noalias "unpacked"="2", i8* noalias "unpacked"="3.0" %_V_data_V, i1* noalias "unpacked"="3.1" %_V_keep_V, i1* noalias "unpacked"="3.2" %_V_strb_V, i1* noalias "unpacked"="3.3" %_V_user_V, i1* noalias "unpacked"="3.4" %_V_last_V, i1* noalias "unpacked"="3.5" %_V_id_V, i1* noalias "unpacked"="3.6" %_V_dest_V, %struct.chv_p_t* noalias readonly "unpacked"="4", i2048* noalias align 512 "unpacked"="5", %struct.chv_t* noalias readonly "unpacked"="6", i2048* noalias align 512 "unpacked"="7", %struct.bhv_p_t* noalias readonly "unpacked"="8", i64* noalias align 512 "unpacked"="9", %struct.bhv_p_t* noalias readonly "unpacked"="10", i64* noalias align 512 "unpacked"="11", %struct.pred_class_t* noalias readonly "unpacked"="12", i6* noalias nocapture align 512 "unpacked"="13.0", %struct.pred_class_t* noalias readonly "unpacked"="14", i6* noalias nocapture align 512 "unpacked"="15.0", %struct.sys_status_t* noalias readonly "unpacked"="16", i5* noalias nocapture align 512 "unpacked"="17.0") unnamed_addr #1 {
+define internal fastcc void @copy_in(i1* noalias readonly "unpacked"="0", i1* noalias align 512 "unpacked"="1", %"class.hls::stream<hls::axis<ap_uint<8>, 1, 1, 1>, 0>"* noalias "unpacked"="2", i8* noalias "unpacked"="3.0" %_V_data_V, i1* noalias "unpacked"="3.1" %_V_keep_V, i1* noalias "unpacked"="3.2" %_V_strb_V, i1* noalias "unpacked"="3.3" %_V_user_V, i1* noalias "unpacked"="3.4" %_V_last_V, i1* noalias "unpacked"="3.5" %_V_id_V, i1* noalias "unpacked"="3.6" %_V_dest_V, %struct.chv_p_t* noalias readonly "unpacked"="4", i704* noalias align 512 "unpacked"="5", %struct.bhv_p_t* noalias readonly "unpacked"="6", i64* noalias align 512 "unpacked"="7", %struct.bhv_p_t* noalias readonly "unpacked"="8", i64* noalias align 512 "unpacked"="9", %struct.pred_class_t* noalias readonly "unpacked"="10", i6* noalias nocapture align 512 "unpacked"="11.0", %struct.sys_status_t* noalias readonly "unpacked"="12", i5* noalias nocapture align 512 "unpacked"="13.0") unnamed_addr #1 {
 entry:
   call fastcc void @onebyonecpy_hls.p0i1(i1* align 512 %1, i1* %0)
   call fastcc void @"onebyonecpy_hls.p0class.hls::stream<hls::axis<ap_uint<8>, 1, 1, 1>, 0>.80"(i8* %_V_data_V, i1* %_V_keep_V, i1* %_V_strb_V, i1* %_V_user_V, i1* %_V_last_V, i1* %_V_id_V, i1* %_V_dest_V, %"class.hls::stream<hls::axis<ap_uint<8>, 1, 1, 1>, 0>"* %2)
-  call fastcc void @onebyonecpy_hls.p0struct.chv_p_t(i2048* align 512 %4, %struct.chv_p_t* %3)
-  call fastcc void @onebyonecpy_hls.p0struct.chv_t.55(i2048* align 512 %6, %struct.chv_t* %5)
-  call fastcc void @onebyonecpy_hls.p0struct.bhv_p_t(i64* align 512 %8, %struct.bhv_p_t* %7)
-  call fastcc void @onebyonecpy_hls.p0struct.bhv_p_t(i64* align 512 %10, %struct.bhv_p_t* %9)
-  call fastcc void @onebyonecpy_hls.p0struct.pred_class_t(i6* align 512 %12, %struct.pred_class_t* %11)
-  call fastcc void @onebyonecpy_hls.p0struct.pred_class_t(i6* align 512 %14, %struct.pred_class_t* %13)
-  call fastcc void @onebyonecpy_hls.p0struct.sys_status_t(i5* align 512 %16, %struct.sys_status_t* %15)
+  call fastcc void @onebyonecpy_hls.p0struct.chv_p_t(i704* align 512 %4, %struct.chv_p_t* %3)
+  call fastcc void @onebyonecpy_hls.p0struct.bhv_p_t.50(i64* align 512 %6, %struct.bhv_p_t* %5)
+  call fastcc void @onebyonecpy_hls.p0struct.bhv_p_t.50(i64* align 512 %8, %struct.bhv_p_t* %7)
+  call fastcc void @onebyonecpy_hls.p0struct.pred_class_t.32(i6* align 512 %10, %struct.pred_class_t* %9)
+  call fastcc void @onebyonecpy_hls.p0struct.sys_status_t(i5* align 512 %12, %struct.sys_status_t* %11)
   ret void
 }
 
@@ -198,16 +194,16 @@ ret:                                              ; preds = %empty
 }
 
 ; Function Attrs: argmemonly noinline norecurse
-define internal fastcc void @onebyonecpy_hls.p0struct.chv_p_t(i2048* noalias align 512 %dst, %struct.chv_p_t* noalias readonly %src) unnamed_addr #2 {
+define internal fastcc void @onebyonecpy_hls.p0struct.chv_p_t(i704* noalias align 512 %dst, %struct.chv_p_t* noalias readonly %src) unnamed_addr #2 {
 entry:
-  %0 = icmp eq i2048* %dst, null
+  %0 = icmp eq i704* %dst, null
   %1 = icmp eq %struct.chv_p_t* %src, null
   %2 = or i1 %0, %1
   br i1 %2, label %ret, label %copy
 
 copy:                                             ; preds = %entry
   %src.0 = getelementptr %struct.chv_p_t, %struct.chv_p_t* %src, i64 0, i32 0
-  call void @arraycpy_hls.p0a1struct.chv_t(i2048* nonnull %dst, i64 0, [1 x %struct.chv_t]* %src.0, i64 1)
+  call void @arraycpy_hls.p0a1struct.chv_t(i704* nonnull %dst, i64 0, [1 x %struct.chv_t]* %src.0, i64 1)
   br label %ret
 
 ret:                                              ; preds = %copy, %entry
@@ -215,10 +211,10 @@ ret:                                              ; preds = %copy, %entry
 }
 
 ; Function Attrs: argmemonly noinline norecurse
-define void @arraycpy_hls.p0a1struct.chv_t(i2048* %dst, i64 %dst_idx, [1 x %struct.chv_t]* readonly %src, i64 %num) local_unnamed_addr #5 {
+define void @arraycpy_hls.p0a1struct.chv_t(i704* %dst, i64 %dst_idx, [1 x %struct.chv_t]* readonly %src, i64 %num) local_unnamed_addr #5 {
 entry:
   %0 = icmp eq [1 x %struct.chv_t]* %src, null
-  %1 = icmp eq i2048* %dst, null
+  %1 = icmp eq i704* %dst, null
   %2 = or i1 %1, %0
   br i1 %2, label %ret, label %copy
 
@@ -232,9 +228,9 @@ for.loop.lr.ph:                                   ; preds = %copy
 for.loop:                                         ; preds = %for.loop, %for.loop.lr.ph
   %for.loop.idx4 = phi i64 [ 0, %for.loop.lr.ph ], [ %for.loop.idx.next, %for.loop ]
   %src.addr.01 = getelementptr [1 x %struct.chv_t], [1 x %struct.chv_t]* %src, i64 0, i64 %for.loop.idx4, i32 0
-  %3 = mul i64 2048, %for.loop.idx4
+  %3 = mul i64 704, %for.loop.idx4
   %4 = add i64 %dst_idx, %3
-  call void @"arraycpy_hls.p0a64struct.ap_uint<32>"(i2048* %dst, i64 %4, [64 x %"struct.ap_uint<32>"]* %src.addr.01, i64 64)
+  call void @"arraycpy_hls.p0a64struct.ap_uint<11>"(i704* %dst, i64 %4, [64 x %"struct.ap_uint<11>"]* %src.addr.01, i64 64)
   %for.loop.idx.next = add nuw nsw i64 %for.loop.idx4, 1
   %exitcond = icmp ne i64 %for.loop.idx.next, %num
   br i1 %exitcond, label %for.loop, label %copy.split
@@ -247,16 +243,94 @@ ret:                                              ; preds = %copy.split, %entry
 }
 
 ; Function Attrs: argmemonly noinline norecurse
-define internal fastcc void @onebyonecpy_hls.p0struct.chv_t(%struct.chv_t* noalias %dst, i2048* noalias readonly align 512 %src) unnamed_addr #2 {
+define void @"arraycpy_hls.p0a64struct.ap_uint<11>"(i704* %dst, i64 %dst_idx, [64 x %"struct.ap_uint<11>"]* readonly %src, i64 %num) local_unnamed_addr #5 {
 entry:
-  %0 = icmp eq %struct.chv_t* %dst, null
-  %1 = icmp eq i2048* %src, null
-  %2 = or i1 %0, %1
+  %0 = icmp eq [64 x %"struct.ap_uint<11>"]* %src, null
+  %1 = icmp eq i704* %dst, null
+  %2 = or i1 %1, %0
   br i1 %2, label %ret, label %copy
 
 copy:                                             ; preds = %entry
-  %dst.0 = getelementptr %struct.chv_t, %struct.chv_t* %dst, i64 0, i32 0
-  call void @"arraycpy_hls.p0a64struct.ap_uint<32>.64"([64 x %"struct.ap_uint<32>"]* %dst.0, i2048* nonnull %src, i64 0, i64 64)
+  %for.loop.cond7 = icmp sgt i64 %num, 0
+  br i1 %for.loop.cond7, label %for.loop.lr.ph, label %copy.split
+
+for.loop.lr.ph:                                   ; preds = %copy
+  br label %for.loop
+
+for.loop:                                         ; preds = %for.loop, %for.loop.lr.ph
+  %for.loop.idx8 = phi i64 [ 0, %for.loop.lr.ph ], [ %for.loop.idx.next, %for.loop ]
+  %src.addr.0.0.05 = getelementptr [64 x %"struct.ap_uint<11>"], [64 x %"struct.ap_uint<11>"]* %src, i64 0, i64 %for.loop.idx8, i32 0, i32 0, i32 0
+  %3 = mul i64 11, %for.loop.idx8
+  %4 = add i64 %dst_idx, %3
+  %5 = bitcast i11* %src.addr.0.0.05 to i16*
+  %6 = load i16, i16* %5
+  %7 = trunc i16 %6 to i11
+  %8 = load i704, i704* %dst, align 2
+  %9 = zext i64 %4 to i704
+  %10 = shl i704 2047, %9
+  %11 = zext i11 %7 to i704
+  %12 = shl i704 %11, %9
+  %thr.xor1 = xor i704 %10, -1
+  %thr.and2 = and i704 %8, %thr.xor1
+  %thr.or3 = or i704 %thr.and2, %12
+  store i704 %thr.or3, i704* %dst, align 2
+  %for.loop.idx.next = add nuw nsw i64 %for.loop.idx8, 1
+  %exitcond = icmp ne i64 %for.loop.idx.next, %num
+  br i1 %exitcond, label %for.loop, label %copy.split
+
+copy.split:                                       ; preds = %for.loop, %copy
+  br label %ret
+
+ret:                                              ; preds = %copy.split, %entry
+  ret void
+}
+
+; Function Attrs: argmemonly noinline norecurse
+define void @"arraycpy_hls.p0a64struct.ap_uint<1>"([64 x %"struct.ap_uint<1>"]* %dst, [64 x %"struct.ap_uint<1>"]* readonly %src, i64 %num) local_unnamed_addr #5 {
+entry:
+  %0 = icmp eq [64 x %"struct.ap_uint<1>"]* %src, null
+  %1 = icmp eq [64 x %"struct.ap_uint<1>"]* %dst, null
+  %2 = or i1 %1, %0
+  br i1 %2, label %ret, label %copy
+
+copy:                                             ; preds = %entry
+  %for.loop.cond7 = icmp sgt i64 %num, 0
+  br i1 %for.loop.cond7, label %for.loop.lr.ph, label %copy.split
+
+for.loop.lr.ph:                                   ; preds = %copy
+  br label %for.loop
+
+for.loop:                                         ; preds = %for.loop, %for.loop.lr.ph
+  %for.loop.idx8 = phi i64 [ 0, %for.loop.lr.ph ], [ %for.loop.idx.next, %for.loop ]
+  %src.addr.0.0.05 = getelementptr [64 x %"struct.ap_uint<1>"], [64 x %"struct.ap_uint<1>"]* %src, i64 0, i64 %for.loop.idx8, i32 0, i32 0, i32 0
+  %dst.addr.0.0.06 = getelementptr [64 x %"struct.ap_uint<1>"], [64 x %"struct.ap_uint<1>"]* %dst, i64 0, i64 %for.loop.idx8, i32 0, i32 0, i32 0
+  %3 = bitcast i1* %src.addr.0.0.05 to i8*
+  %4 = load i8, i8* %3
+  %5 = trunc i8 %4 to i1
+  store i1 %5, i1* %dst.addr.0.0.06, align 1
+  %for.loop.idx.next = add nuw nsw i64 %for.loop.idx8, 1
+  %exitcond = icmp ne i64 %for.loop.idx.next, %num
+  br i1 %exitcond, label %for.loop, label %copy.split
+
+copy.split:                                       ; preds = %for.loop, %copy
+  br label %ret
+
+ret:                                              ; preds = %copy.split, %entry
+  ret void
+}
+
+; Function Attrs: argmemonly noinline norecurse
+define internal fastcc void @onebyonecpy_hls.p0struct.pred_class_t(%struct.pred_class_t* noalias "unpacked"="0" %dst, i6* noalias nocapture readonly align 512 "unpacked"="1.0" %src) unnamed_addr #2 {
+entry:
+  %0 = icmp eq %struct.pred_class_t* %dst, null
+  br i1 %0, label %ret, label %copy
+
+copy:                                             ; preds = %entry
+  %dst.0.0.0.06 = getelementptr %struct.pred_class_t, %struct.pred_class_t* %dst, i64 0, i32 0, i32 0, i32 0, i32 0
+  %1 = bitcast i6* %src to i8*
+  %2 = load i8, i8* %1
+  %3 = trunc i8 %2 to i6
+  store i6 %3, i6* %dst.0.0.0.06, align 1
   br label %ret
 
 ret:                                              ; preds = %copy, %entry
@@ -282,22 +356,20 @@ ret:                                              ; preds = %copy, %entry
 }
 
 ; Function Attrs: argmemonly noinline
-define internal fastcc void @copy_out(i1* noalias "unpacked"="0", i1* noalias readonly align 512 "unpacked"="1", %"class.hls::stream<hls::axis<ap_uint<8>, 1, 1, 1>, 0>"* noalias "unpacked"="2", i8* noalias "unpacked"="3.0" %_V_data_V, i1* noalias "unpacked"="3.1" %_V_keep_V, i1* noalias "unpacked"="3.2" %_V_strb_V, i1* noalias "unpacked"="3.3" %_V_user_V, i1* noalias "unpacked"="3.4" %_V_last_V, i1* noalias "unpacked"="3.5" %_V_id_V, i1* noalias "unpacked"="3.6" %_V_dest_V, %struct.chv_p_t* noalias "unpacked"="4", i2048* noalias readonly align 512 "unpacked"="5", %struct.chv_t* noalias "unpacked"="6", i2048* noalias readonly align 512 "unpacked"="7", %struct.bhv_p_t* noalias "unpacked"="8", i64* noalias readonly align 512 "unpacked"="9", %struct.bhv_p_t* noalias "unpacked"="10", i64* noalias readonly align 512 "unpacked"="11", %struct.pred_class_t* noalias "unpacked"="12", i6* noalias nocapture readonly align 512 "unpacked"="13.0", %struct.pred_class_t* noalias "unpacked"="14", i6* noalias nocapture readonly align 512 "unpacked"="15.0", %struct.sys_status_t* noalias "unpacked"="16", i5* noalias nocapture readonly align 512 "unpacked"="17.0") unnamed_addr #6 {
+define internal fastcc void @copy_out(i1* noalias "unpacked"="0", i1* noalias readonly align 512 "unpacked"="1", %"class.hls::stream<hls::axis<ap_uint<8>, 1, 1, 1>, 0>"* noalias "unpacked"="2", i8* noalias "unpacked"="3.0" %_V_data_V, i1* noalias "unpacked"="3.1" %_V_keep_V, i1* noalias "unpacked"="3.2" %_V_strb_V, i1* noalias "unpacked"="3.3" %_V_user_V, i1* noalias "unpacked"="3.4" %_V_last_V, i1* noalias "unpacked"="3.5" %_V_id_V, i1* noalias "unpacked"="3.6" %_V_dest_V, %struct.chv_p_t* noalias "unpacked"="4", i704* noalias readonly align 512 "unpacked"="5", %struct.bhv_p_t* noalias "unpacked"="6", i64* noalias readonly align 512 "unpacked"="7", %struct.bhv_p_t* noalias "unpacked"="8", i64* noalias readonly align 512 "unpacked"="9", %struct.pred_class_t* noalias "unpacked"="10", i6* noalias nocapture readonly align 512 "unpacked"="11.0", %struct.sys_status_t* noalias "unpacked"="12", i5* noalias nocapture readonly align 512 "unpacked"="13.0") unnamed_addr #6 {
 entry:
   call fastcc void @onebyonecpy_hls.p0i1(i1* %0, i1* align 512 %1)
   call fastcc void @"onebyonecpy_hls.p0class.hls::stream<hls::axis<ap_uint<8>, 1, 1, 1>, 0>"(%"class.hls::stream<hls::axis<ap_uint<8>, 1, 1, 1>, 0>"* %2, i8* %_V_data_V, i1* %_V_keep_V, i1* %_V_strb_V, i1* %_V_user_V, i1* %_V_last_V, i1* %_V_id_V, i1* %_V_dest_V)
-  call fastcc void @onebyonecpy_hls.p0struct.chv_p_t.68(%struct.chv_p_t* %3, i2048* align 512 %4)
-  call fastcc void @onebyonecpy_hls.p0struct.chv_t(%struct.chv_t* %5, i2048* align 512 %6)
-  call fastcc void @onebyonecpy_hls.p0struct.bhv_p_t.41(%struct.bhv_p_t* %7, i64* align 512 %8)
-  call fastcc void @onebyonecpy_hls.p0struct.bhv_p_t.41(%struct.bhv_p_t* %9, i64* align 512 %10)
-  call fastcc void @onebyonecpy_hls.p0struct.pred_class_t.22(%struct.pred_class_t* %11, i6* align 512 %12)
-  call fastcc void @onebyonecpy_hls.p0struct.pred_class_t.22(%struct.pred_class_t* %13, i6* align 512 %14)
-  call fastcc void @onebyonecpy_hls.p0struct.sys_status_t.10(%struct.sys_status_t* %15, i5* align 512 %16)
+  call fastcc void @onebyonecpy_hls.p0struct.chv_p_t.64(%struct.chv_p_t* %3, i704* align 512 %4)
+  call fastcc void @onebyonecpy_hls.p0struct.bhv_p_t(%struct.bhv_p_t* %5, i64* align 512 %6)
+  call fastcc void @onebyonecpy_hls.p0struct.bhv_p_t(%struct.bhv_p_t* %7, i64* align 512 %8)
+  call fastcc void @onebyonecpy_hls.p0struct.pred_class_t(%struct.pred_class_t* %9, i6* align 512 %10)
+  call fastcc void @onebyonecpy_hls.p0struct.sys_status_t.25(%struct.sys_status_t* %11, i5* align 512 %12)
   ret void
 }
 
 ; Function Attrs: argmemonly noinline norecurse
-define internal fastcc void @onebyonecpy_hls.p0struct.sys_status_t.10(%struct.sys_status_t* noalias "unpacked"="0" %dst, i5* noalias nocapture readonly align 512 "unpacked"="1.0" %src) unnamed_addr #2 {
+define internal fastcc void @onebyonecpy_hls.p0struct.sys_status_t.25(%struct.sys_status_t* noalias "unpacked"="0" %dst, i5* noalias nocapture readonly align 512 "unpacked"="1.0" %src) unnamed_addr #2 {
 entry:
   %0 = icmp eq %struct.sys_status_t* %dst, null
   br i1 %0, label %ret, label %copy
@@ -315,7 +387,7 @@ ret:                                              ; preds = %copy, %entry
 }
 
 ; Function Attrs: argmemonly noinline norecurse
-define internal fastcc void @onebyonecpy_hls.p0struct.pred_class_t(i6* noalias nocapture align 512 "unpacked"="0.0" %dst, %struct.pred_class_t* noalias readonly "unpacked"="1" %src) unnamed_addr #2 {
+define internal fastcc void @onebyonecpy_hls.p0struct.pred_class_t.32(i6* noalias nocapture align 512 "unpacked"="0.0" %dst, %struct.pred_class_t* noalias readonly "unpacked"="1" %src) unnamed_addr #2 {
 entry:
   %0 = icmp eq %struct.pred_class_t* %src, null
   br i1 %0, label %ret, label %copy
@@ -333,17 +405,16 @@ ret:                                              ; preds = %copy, %entry
 }
 
 ; Function Attrs: argmemonly noinline norecurse
-define internal fastcc void @onebyonecpy_hls.p0struct.pred_class_t.22(%struct.pred_class_t* noalias "unpacked"="0" %dst, i6* noalias nocapture readonly align 512 "unpacked"="1.0" %src) unnamed_addr #2 {
+define internal fastcc void @onebyonecpy_hls.p0struct.bhv_p_t(%struct.bhv_p_t* noalias %dst, i64* noalias readonly align 512 %src) unnamed_addr #2 {
 entry:
-  %0 = icmp eq %struct.pred_class_t* %dst, null
-  br i1 %0, label %ret, label %copy
+  %0 = icmp eq %struct.bhv_p_t* %dst, null
+  %1 = icmp eq i64* %src, null
+  %2 = or i1 %0, %1
+  br i1 %2, label %ret, label %copy
 
 copy:                                             ; preds = %entry
-  %dst.0.0.0.06 = getelementptr %struct.pred_class_t, %struct.pred_class_t* %dst, i64 0, i32 0, i32 0, i32 0, i32 0
-  %1 = bitcast i6* %src to i8*
-  %2 = load i8, i8* %1
-  %3 = trunc i8 %2 to i6
-  store i6 %3, i6* %dst.0.0.0.06, align 1
+  %dst.0 = getelementptr %struct.bhv_p_t, %struct.bhv_p_t* %dst, i64 0, i32 0
+  call void @arraycpy_hls.p0a1struct.bhv_t.42([1 x %struct.bhv_t]* %dst.0, i64* nonnull %src, i64 0, i64 1)
   br label %ret
 
 ret:                                              ; preds = %copy, %entry
@@ -351,7 +422,73 @@ ret:                                              ; preds = %copy, %entry
 }
 
 ; Function Attrs: argmemonly noinline norecurse
-define internal fastcc void @onebyonecpy_hls.p0struct.bhv_p_t(i64* noalias align 512 %dst, %struct.bhv_p_t* noalias readonly %src) unnamed_addr #2 {
+define void @arraycpy_hls.p0a1struct.bhv_t.42([1 x %struct.bhv_t]* %dst, i64* readonly %src, i64 %src_idx, i64 %num) local_unnamed_addr #5 {
+entry:
+  %0 = icmp eq i64* %src, null
+  %1 = icmp eq [1 x %struct.bhv_t]* %dst, null
+  %2 = or i1 %1, %0
+  br i1 %2, label %ret, label %copy
+
+copy:                                             ; preds = %entry
+  %for.loop.cond3 = icmp sgt i64 %num, 0
+  br i1 %for.loop.cond3, label %for.loop.lr.ph, label %copy.split
+
+for.loop.lr.ph:                                   ; preds = %copy
+  br label %for.loop
+
+for.loop:                                         ; preds = %for.loop, %for.loop.lr.ph
+  %for.loop.idx4 = phi i64 [ 0, %for.loop.lr.ph ], [ %for.loop.idx.next, %for.loop ]
+  %3 = mul i64 64, %for.loop.idx4
+  %4 = add i64 %src_idx, %3
+  %dst.addr.02 = getelementptr [1 x %struct.bhv_t], [1 x %struct.bhv_t]* %dst, i64 0, i64 %for.loop.idx4, i32 0
+  call void @"arraycpy_hls.p0a64struct.ap_uint<1>.45"([64 x %"struct.ap_uint<1>"]* %dst.addr.02, i64* %src, i64 %4, i64 64)
+  %for.loop.idx.next = add nuw nsw i64 %for.loop.idx4, 1
+  %exitcond = icmp ne i64 %for.loop.idx.next, %num
+  br i1 %exitcond, label %for.loop, label %copy.split
+
+copy.split:                                       ; preds = %for.loop, %copy
+  br label %ret
+
+ret:                                              ; preds = %copy.split, %entry
+  ret void
+}
+
+; Function Attrs: argmemonly noinline norecurse
+define void @"arraycpy_hls.p0a64struct.ap_uint<1>.45"([64 x %"struct.ap_uint<1>"]* %dst, i64* readonly %src, i64 %src_idx, i64 %num) local_unnamed_addr #5 {
+entry:
+  %0 = icmp eq i64* %src, null
+  %1 = icmp eq [64 x %"struct.ap_uint<1>"]* %dst, null
+  %2 = or i1 %1, %0
+  br i1 %2, label %ret, label %copy
+
+copy:                                             ; preds = %entry
+  %for.loop.cond7 = icmp sgt i64 %num, 0
+  br i1 %for.loop.cond7, label %for.loop.lr.ph, label %copy.split
+
+for.loop.lr.ph:                                   ; preds = %copy
+  br label %for.loop
+
+for.loop:                                         ; preds = %for.loop, %for.loop.lr.ph
+  %for.loop.idx8 = phi i64 [ 0, %for.loop.lr.ph ], [ %for.loop.idx.next, %for.loop ]
+  %3 = add i64 %src_idx, %for.loop.idx8
+  %dst.addr.0.0.06 = getelementptr [64 x %"struct.ap_uint<1>"], [64 x %"struct.ap_uint<1>"]* %dst, i64 0, i64 %for.loop.idx8, i32 0, i32 0, i32 0
+  %4 = load i64, i64* %src, align 1
+  %5 = lshr i64 %4, %3
+  %.partselect = trunc i64 %5 to i1
+  store i1 %.partselect, i1* %dst.addr.0.0.06, align 1
+  %for.loop.idx.next = add nuw nsw i64 %for.loop.idx8, 1
+  %exitcond = icmp ne i64 %for.loop.idx.next, %num
+  br i1 %exitcond, label %for.loop, label %copy.split
+
+copy.split:                                       ; preds = %for.loop, %copy
+  br label %ret
+
+ret:                                              ; preds = %copy.split, %entry
+  ret void
+}
+
+; Function Attrs: argmemonly noinline norecurse
+define internal fastcc void @onebyonecpy_hls.p0struct.bhv_p_t.50(i64* noalias align 512 %dst, %struct.bhv_p_t* noalias readonly %src) unnamed_addr #2 {
 entry:
   %0 = icmp eq i64* %dst, null
   %1 = icmp eq %struct.bhv_p_t* %src, null
@@ -360,7 +497,7 @@ entry:
 
 copy:                                             ; preds = %entry
   %src.0 = getelementptr %struct.bhv_p_t, %struct.bhv_p_t* %src, i64 0, i32 0
-  call void @arraycpy_hls.p0a1struct.bhv_t.33(i64* nonnull %dst, i64 0, [1 x %struct.bhv_t]* %src.0, i64 1)
+  call void @arraycpy_hls.p0a1struct.bhv_t.53(i64* nonnull %dst, i64 0, [1 x %struct.bhv_t]* %src.0, i64 1)
   br label %ret
 
 ret:                                              ; preds = %copy, %entry
@@ -368,7 +505,7 @@ ret:                                              ; preds = %copy, %entry
 }
 
 ; Function Attrs: argmemonly noinline norecurse
-define void @arraycpy_hls.p0a1struct.bhv_t.33(i64* %dst, i64 %dst_idx, [1 x %struct.bhv_t]* readonly %src, i64 %num) local_unnamed_addr #5 {
+define void @arraycpy_hls.p0a1struct.bhv_t.53(i64* %dst, i64 %dst_idx, [1 x %struct.bhv_t]* readonly %src, i64 %num) local_unnamed_addr #5 {
 entry:
   %0 = icmp eq [1 x %struct.bhv_t]* %src, null
   %1 = icmp eq i64* %dst, null
@@ -387,7 +524,7 @@ for.loop:                                         ; preds = %for.loop, %for.loop
   %src.addr.01 = getelementptr [1 x %struct.bhv_t], [1 x %struct.bhv_t]* %src, i64 0, i64 %for.loop.idx4, i32 0
   %3 = mul i64 64, %for.loop.idx4
   %4 = add i64 %dst_idx, %3
-  call void @"arraycpy_hls.p0a64struct.ap_uint<1>.36"(i64* %dst, i64 %4, [64 x %"struct.ap_uint<1>"]* %src.addr.01, i64 64)
+  call void @"arraycpy_hls.p0a64struct.ap_uint<1>.56"(i64* %dst, i64 %4, [64 x %"struct.ap_uint<1>"]* %src.addr.01, i64 64)
   %for.loop.idx.next = add nuw nsw i64 %for.loop.idx4, 1
   %exitcond = icmp ne i64 %for.loop.idx.next, %num
   br i1 %exitcond, label %for.loop, label %copy.split
@@ -400,7 +537,7 @@ ret:                                              ; preds = %copy.split, %entry
 }
 
 ; Function Attrs: argmemonly noinline norecurse
-define void @"arraycpy_hls.p0a64struct.ap_uint<1>.36"(i64* %dst, i64 %dst_idx, [64 x %"struct.ap_uint<1>"]* readonly %src, i64 %num) local_unnamed_addr #5 {
+define void @"arraycpy_hls.p0a64struct.ap_uint<1>.56"(i64* %dst, i64 %dst_idx, [64 x %"struct.ap_uint<1>"]* readonly %src, i64 %num) local_unnamed_addr #5 {
 entry:
   %0 = icmp eq [64 x %"struct.ap_uint<1>"]* %src, null
   %1 = icmp eq i64* %dst, null
@@ -441,193 +578,16 @@ ret:                                              ; preds = %copy.split, %entry
 }
 
 ; Function Attrs: argmemonly noinline norecurse
-define internal fastcc void @onebyonecpy_hls.p0struct.bhv_p_t.41(%struct.bhv_p_t* noalias %dst, i64* noalias readonly align 512 %src) unnamed_addr #2 {
-entry:
-  %0 = icmp eq %struct.bhv_p_t* %dst, null
-  %1 = icmp eq i64* %src, null
-  %2 = or i1 %0, %1
-  br i1 %2, label %ret, label %copy
-
-copy:                                             ; preds = %entry
-  %dst.0 = getelementptr %struct.bhv_p_t, %struct.bhv_p_t* %dst, i64 0, i32 0
-  call void @arraycpy_hls.p0a1struct.bhv_t.44([1 x %struct.bhv_t]* %dst.0, i64* nonnull %src, i64 0, i64 1)
-  br label %ret
-
-ret:                                              ; preds = %copy, %entry
-  ret void
-}
-
-; Function Attrs: argmemonly noinline norecurse
-define void @arraycpy_hls.p0a1struct.bhv_t.44([1 x %struct.bhv_t]* %dst, i64* readonly %src, i64 %src_idx, i64 %num) local_unnamed_addr #5 {
-entry:
-  %0 = icmp eq i64* %src, null
-  %1 = icmp eq [1 x %struct.bhv_t]* %dst, null
-  %2 = or i1 %1, %0
-  br i1 %2, label %ret, label %copy
-
-copy:                                             ; preds = %entry
-  %for.loop.cond3 = icmp sgt i64 %num, 0
-  br i1 %for.loop.cond3, label %for.loop.lr.ph, label %copy.split
-
-for.loop.lr.ph:                                   ; preds = %copy
-  br label %for.loop
-
-for.loop:                                         ; preds = %for.loop, %for.loop.lr.ph
-  %for.loop.idx4 = phi i64 [ 0, %for.loop.lr.ph ], [ %for.loop.idx.next, %for.loop ]
-  %3 = mul i64 64, %for.loop.idx4
-  %4 = add i64 %src_idx, %3
-  %dst.addr.02 = getelementptr [1 x %struct.bhv_t], [1 x %struct.bhv_t]* %dst, i64 0, i64 %for.loop.idx4, i32 0
-  call void @"arraycpy_hls.p0a64struct.ap_uint<1>.47"([64 x %"struct.ap_uint<1>"]* %dst.addr.02, i64* %src, i64 %4, i64 64)
-  %for.loop.idx.next = add nuw nsw i64 %for.loop.idx4, 1
-  %exitcond = icmp ne i64 %for.loop.idx.next, %num
-  br i1 %exitcond, label %for.loop, label %copy.split
-
-copy.split:                                       ; preds = %for.loop, %copy
-  br label %ret
-
-ret:                                              ; preds = %copy.split, %entry
-  ret void
-}
-
-; Function Attrs: argmemonly noinline norecurse
-define void @"arraycpy_hls.p0a64struct.ap_uint<1>.47"([64 x %"struct.ap_uint<1>"]* %dst, i64* readonly %src, i64 %src_idx, i64 %num) local_unnamed_addr #5 {
-entry:
-  %0 = icmp eq i64* %src, null
-  %1 = icmp eq [64 x %"struct.ap_uint<1>"]* %dst, null
-  %2 = or i1 %1, %0
-  br i1 %2, label %ret, label %copy
-
-copy:                                             ; preds = %entry
-  %for.loop.cond7 = icmp sgt i64 %num, 0
-  br i1 %for.loop.cond7, label %for.loop.lr.ph, label %copy.split
-
-for.loop.lr.ph:                                   ; preds = %copy
-  br label %for.loop
-
-for.loop:                                         ; preds = %for.loop, %for.loop.lr.ph
-  %for.loop.idx8 = phi i64 [ 0, %for.loop.lr.ph ], [ %for.loop.idx.next, %for.loop ]
-  %3 = add i64 %src_idx, %for.loop.idx8
-  %dst.addr.0.0.06 = getelementptr [64 x %"struct.ap_uint<1>"], [64 x %"struct.ap_uint<1>"]* %dst, i64 0, i64 %for.loop.idx8, i32 0, i32 0, i32 0
-  %4 = load i64, i64* %src, align 1
-  %5 = lshr i64 %4, %3
-  %.partselect = trunc i64 %5 to i1
-  store i1 %.partselect, i1* %dst.addr.0.0.06, align 1
-  %for.loop.idx.next = add nuw nsw i64 %for.loop.idx8, 1
-  %exitcond = icmp ne i64 %for.loop.idx.next, %num
-  br i1 %exitcond, label %for.loop, label %copy.split
-
-copy.split:                                       ; preds = %for.loop, %copy
-  br label %ret
-
-ret:                                              ; preds = %copy.split, %entry
-  ret void
-}
-
-; Function Attrs: argmemonly noinline norecurse
-define internal fastcc void @onebyonecpy_hls.p0struct.chv_t.55(i2048* noalias align 512 %dst, %struct.chv_t* noalias readonly %src) unnamed_addr #2 {
-entry:
-  %0 = icmp eq i2048* %dst, null
-  %1 = icmp eq %struct.chv_t* %src, null
-  %2 = or i1 %0, %1
-  br i1 %2, label %ret, label %copy
-
-copy:                                             ; preds = %entry
-  %src.0 = getelementptr %struct.chv_t, %struct.chv_t* %src, i64 0, i32 0
-  call void @"arraycpy_hls.p0a64struct.ap_uint<32>"(i2048* nonnull %dst, i64 0, [64 x %"struct.ap_uint<32>"]* %src.0, i64 64)
-  br label %ret
-
-ret:                                              ; preds = %copy, %entry
-  ret void
-}
-
-; Function Attrs: argmemonly noinline norecurse
-define void @"arraycpy_hls.p0a64struct.ap_uint<32>"(i2048* %dst, i64 %dst_idx, [64 x %"struct.ap_uint<32>"]* readonly %src, i64 %num) local_unnamed_addr #5 {
-entry:
-  %0 = icmp eq [64 x %"struct.ap_uint<32>"]* %src, null
-  %1 = icmp eq i2048* %dst, null
-  %2 = or i1 %1, %0
-  br i1 %2, label %ret, label %copy
-
-copy:                                             ; preds = %entry
-  %for.loop.cond7 = icmp sgt i64 %num, 0
-  br i1 %for.loop.cond7, label %for.loop.lr.ph, label %copy.split
-
-for.loop.lr.ph:                                   ; preds = %copy
-  br label %for.loop
-
-for.loop:                                         ; preds = %for.loop, %for.loop.lr.ph
-  %for.loop.idx8 = phi i64 [ 0, %for.loop.lr.ph ], [ %for.loop.idx.next, %for.loop ]
-  %src.addr.0.0.05 = getelementptr [64 x %"struct.ap_uint<32>"], [64 x %"struct.ap_uint<32>"]* %src, i64 0, i64 %for.loop.idx8, i32 0, i32 0, i32 0
-  %3 = mul i64 32, %for.loop.idx8
-  %4 = add i64 %dst_idx, %3
-  %5 = load i32, i32* %src.addr.0.0.05, align 4
-  %6 = load i2048, i2048* %dst, align 4
-  %7 = zext i64 %4 to i2048
-  %8 = shl i2048 4294967295, %7
-  %9 = zext i32 %5 to i2048
-  %10 = shl i2048 %9, %7
-  %thr.xor1 = xor i2048 %8, -1
-  %thr.and2 = and i2048 %6, %thr.xor1
-  %thr.or3 = or i2048 %thr.and2, %10
-  store i2048 %thr.or3, i2048* %dst, align 4
-  %for.loop.idx.next = add nuw nsw i64 %for.loop.idx8, 1
-  %exitcond = icmp ne i64 %for.loop.idx.next, %num
-  br i1 %exitcond, label %for.loop, label %copy.split
-
-copy.split:                                       ; preds = %for.loop, %copy
-  br label %ret
-
-ret:                                              ; preds = %copy.split, %entry
-  ret void
-}
-
-; Function Attrs: argmemonly noinline norecurse
-define void @"arraycpy_hls.p0a64struct.ap_uint<32>.64"([64 x %"struct.ap_uint<32>"]* %dst, i2048* readonly %src, i64 %src_idx, i64 %num) local_unnamed_addr #5 {
-entry:
-  %0 = icmp eq i2048* %src, null
-  %1 = icmp eq [64 x %"struct.ap_uint<32>"]* %dst, null
-  %2 = or i1 %1, %0
-  br i1 %2, label %ret, label %copy
-
-copy:                                             ; preds = %entry
-  %for.loop.cond7 = icmp sgt i64 %num, 0
-  br i1 %for.loop.cond7, label %for.loop.lr.ph, label %copy.split
-
-for.loop.lr.ph:                                   ; preds = %copy
-  br label %for.loop
-
-for.loop:                                         ; preds = %for.loop, %for.loop.lr.ph
-  %for.loop.idx8 = phi i64 [ 0, %for.loop.lr.ph ], [ %for.loop.idx.next, %for.loop ]
-  %3 = mul i64 32, %for.loop.idx8
-  %4 = add i64 %src_idx, %3
-  %dst.addr.0.0.06 = getelementptr [64 x %"struct.ap_uint<32>"], [64 x %"struct.ap_uint<32>"]* %dst, i64 0, i64 %for.loop.idx8, i32 0, i32 0, i32 0
-  %5 = load i2048, i2048* %src, align 4
-  %6 = zext i64 %4 to i2048
-  %7 = lshr i2048 %5, %6
-  %.partselect = trunc i2048 %7 to i32
-  store i32 %.partselect, i32* %dst.addr.0.0.06, align 4
-  %for.loop.idx.next = add nuw nsw i64 %for.loop.idx8, 1
-  %exitcond = icmp ne i64 %for.loop.idx.next, %num
-  br i1 %exitcond, label %for.loop, label %copy.split
-
-copy.split:                                       ; preds = %for.loop, %copy
-  br label %ret
-
-ret:                                              ; preds = %copy.split, %entry
-  ret void
-}
-
-; Function Attrs: argmemonly noinline norecurse
-define internal fastcc void @onebyonecpy_hls.p0struct.chv_p_t.68(%struct.chv_p_t* noalias %dst, i2048* noalias readonly align 512 %src) unnamed_addr #2 {
+define internal fastcc void @onebyonecpy_hls.p0struct.chv_p_t.64(%struct.chv_p_t* noalias %dst, i704* noalias readonly align 512 %src) unnamed_addr #2 {
 entry:
   %0 = icmp eq %struct.chv_p_t* %dst, null
-  %1 = icmp eq i2048* %src, null
+  %1 = icmp eq i704* %src, null
   %2 = or i1 %0, %1
   br i1 %2, label %ret, label %copy
 
 copy:                                             ; preds = %entry
   %dst.0 = getelementptr %struct.chv_p_t, %struct.chv_p_t* %dst, i64 0, i32 0
-  call void @arraycpy_hls.p0a1struct.chv_t.71([1 x %struct.chv_t]* %dst.0, i2048* nonnull %src, i64 0, i64 1)
+  call void @arraycpy_hls.p0a1struct.chv_t.67([1 x %struct.chv_t]* %dst.0, i704* nonnull %src, i64 0, i64 1)
   br label %ret
 
 ret:                                              ; preds = %copy, %entry
@@ -635,9 +595,9 @@ ret:                                              ; preds = %copy, %entry
 }
 
 ; Function Attrs: argmemonly noinline norecurse
-define void @arraycpy_hls.p0a1struct.chv_t.71([1 x %struct.chv_t]* %dst, i2048* readonly %src, i64 %src_idx, i64 %num) local_unnamed_addr #5 {
+define void @arraycpy_hls.p0a1struct.chv_t.67([1 x %struct.chv_t]* %dst, i704* readonly %src, i64 %src_idx, i64 %num) local_unnamed_addr #5 {
 entry:
-  %0 = icmp eq i2048* %src, null
+  %0 = icmp eq i704* %src, null
   %1 = icmp eq [1 x %struct.chv_t]* %dst, null
   %2 = or i1 %1, %0
   br i1 %2, label %ret, label %copy
@@ -651,11 +611,47 @@ for.loop.lr.ph:                                   ; preds = %copy
 
 for.loop:                                         ; preds = %for.loop, %for.loop.lr.ph
   %for.loop.idx4 = phi i64 [ 0, %for.loop.lr.ph ], [ %for.loop.idx.next, %for.loop ]
-  %3 = mul i64 2048, %for.loop.idx4
+  %3 = mul i64 704, %for.loop.idx4
   %4 = add i64 %src_idx, %3
   %dst.addr.02 = getelementptr [1 x %struct.chv_t], [1 x %struct.chv_t]* %dst, i64 0, i64 %for.loop.idx4, i32 0
-  call void @"arraycpy_hls.p0a64struct.ap_uint<32>.64"([64 x %"struct.ap_uint<32>"]* %dst.addr.02, i2048* %src, i64 %4, i64 64)
+  call void @"arraycpy_hls.p0a64struct.ap_uint<11>.70"([64 x %"struct.ap_uint<11>"]* %dst.addr.02, i704* %src, i64 %4, i64 64)
   %for.loop.idx.next = add nuw nsw i64 %for.loop.idx4, 1
+  %exitcond = icmp ne i64 %for.loop.idx.next, %num
+  br i1 %exitcond, label %for.loop, label %copy.split
+
+copy.split:                                       ; preds = %for.loop, %copy
+  br label %ret
+
+ret:                                              ; preds = %copy.split, %entry
+  ret void
+}
+
+; Function Attrs: argmemonly noinline norecurse
+define void @"arraycpy_hls.p0a64struct.ap_uint<11>.70"([64 x %"struct.ap_uint<11>"]* %dst, i704* readonly %src, i64 %src_idx, i64 %num) local_unnamed_addr #5 {
+entry:
+  %0 = icmp eq i704* %src, null
+  %1 = icmp eq [64 x %"struct.ap_uint<11>"]* %dst, null
+  %2 = or i1 %1, %0
+  br i1 %2, label %ret, label %copy
+
+copy:                                             ; preds = %entry
+  %for.loop.cond7 = icmp sgt i64 %num, 0
+  br i1 %for.loop.cond7, label %for.loop.lr.ph, label %copy.split
+
+for.loop.lr.ph:                                   ; preds = %copy
+  br label %for.loop
+
+for.loop:                                         ; preds = %for.loop, %for.loop.lr.ph
+  %for.loop.idx8 = phi i64 [ 0, %for.loop.lr.ph ], [ %for.loop.idx.next, %for.loop ]
+  %3 = mul i64 11, %for.loop.idx8
+  %4 = add i64 %src_idx, %3
+  %dst.addr.0.0.06 = getelementptr [64 x %"struct.ap_uint<11>"], [64 x %"struct.ap_uint<11>"]* %dst, i64 0, i64 %for.loop.idx8, i32 0, i32 0, i32 0
+  %5 = load i704, i704* %src, align 2
+  %6 = zext i64 %4 to i704
+  %7 = lshr i704 %5, %6
+  %.partselect = trunc i704 %7 to i11
+  store i11 %.partselect, i11* %dst.addr.0.0.06, align 2
+  %for.loop.idx.next = add nuw nsw i64 %for.loop.idx8, 1
   %exitcond = icmp ne i64 %for.loop.idx.next, %num
   br i1 %exitcond, label %for.loop, label %copy.split
 
@@ -738,35 +734,32 @@ ret:                                              ; preds = %empty
   ret void
 }
 
-declare void @apatb_hdv_engine_hw(i1*, %struct.op_mode_t*, %struct.frame_in_t*, i8*, i1*, i1*, i1*, i1*, i1*, i1*, i2048*, i2048*, i64*, i64*, i6*, i6*, i5*)
+declare void @apatb_hdv_engine_hw(i1*, %struct.op_mode_t*, %struct.frame_in_t*, i8*, i1*, i1*, i1*, i1*, i1*, i1*, i704*, i64*, i64*, i6*, i5*)
 
 ; Function Attrs: argmemonly noinline
-define internal fastcc void @copy_back(i1* noalias "unpacked"="0", i1* noalias readonly align 512 "unpacked"="1", %"class.hls::stream<hls::axis<ap_uint<8>, 1, 1, 1>, 0>"* noalias "unpacked"="2", i8* noalias "unpacked"="3.0" %_V_data_V, i1* noalias "unpacked"="3.1" %_V_keep_V, i1* noalias "unpacked"="3.2" %_V_strb_V, i1* noalias "unpacked"="3.3" %_V_user_V, i1* noalias "unpacked"="3.4" %_V_last_V, i1* noalias "unpacked"="3.5" %_V_id_V, i1* noalias "unpacked"="3.6" %_V_dest_V, %struct.chv_p_t* noalias "unpacked"="4", i2048* noalias readonly align 512 "unpacked"="5", %struct.chv_t* noalias "unpacked"="6", i2048* noalias readonly align 512 "unpacked"="7", %struct.bhv_p_t* noalias "unpacked"="8", i64* noalias readonly align 512 "unpacked"="9", %struct.bhv_p_t* noalias "unpacked"="10", i64* noalias readonly align 512 "unpacked"="11", %struct.pred_class_t* noalias "unpacked"="12", i6* noalias nocapture readonly align 512 "unpacked"="13.0", %struct.pred_class_t* noalias "unpacked"="14", i6* noalias nocapture readonly align 512 "unpacked"="15.0", %struct.sys_status_t* noalias "unpacked"="16", i5* noalias nocapture readonly align 512 "unpacked"="17.0") unnamed_addr #6 {
+define internal fastcc void @copy_back(i1* noalias "unpacked"="0", i1* noalias readonly align 512 "unpacked"="1", %"class.hls::stream<hls::axis<ap_uint<8>, 1, 1, 1>, 0>"* noalias "unpacked"="2", i8* noalias "unpacked"="3.0" %_V_data_V, i1* noalias "unpacked"="3.1" %_V_keep_V, i1* noalias "unpacked"="3.2" %_V_strb_V, i1* noalias "unpacked"="3.3" %_V_user_V, i1* noalias "unpacked"="3.4" %_V_last_V, i1* noalias "unpacked"="3.5" %_V_id_V, i1* noalias "unpacked"="3.6" %_V_dest_V, %struct.chv_p_t* noalias "unpacked"="4", i704* noalias readonly align 512 "unpacked"="5", %struct.bhv_p_t* noalias "unpacked"="6", i64* noalias readonly align 512 "unpacked"="7", %struct.bhv_p_t* noalias "unpacked"="8", i64* noalias readonly align 512 "unpacked"="9", %struct.pred_class_t* noalias "unpacked"="10", i6* noalias nocapture readonly align 512 "unpacked"="11.0", %struct.sys_status_t* noalias "unpacked"="12", i5* noalias nocapture readonly align 512 "unpacked"="13.0") unnamed_addr #6 {
 entry:
   call fastcc void @"onebyonecpy_hls.p0class.hls::stream<hls::axis<ap_uint<8>, 1, 1, 1>, 0>"(%"class.hls::stream<hls::axis<ap_uint<8>, 1, 1, 1>, 0>"* %2, i8* %_V_data_V, i1* %_V_keep_V, i1* %_V_strb_V, i1* %_V_user_V, i1* %_V_last_V, i1* %_V_id_V, i1* %_V_dest_V)
-  call fastcc void @onebyonecpy_hls.p0struct.chv_t(%struct.chv_t* %5, i2048* align 512 %6)
-  call fastcc void @onebyonecpy_hls.p0struct.pred_class_t.22(%struct.pred_class_t* %13, i6* align 512 %14)
-  call fastcc void @onebyonecpy_hls.p0struct.sys_status_t.10(%struct.sys_status_t* %15, i5* align 512 %16)
+  call fastcc void @onebyonecpy_hls.p0struct.pred_class_t(%struct.pred_class_t* %9, i6* align 512 %10)
+  call fastcc void @onebyonecpy_hls.p0struct.sys_status_t.25(%struct.sys_status_t* %11, i5* align 512 %12)
   ret void
 }
 
-define void @hdv_engine_hw_stub_wrapper(i1*, %struct.op_mode_t*, %struct.frame_in_t*, i8*, i1*, i1*, i1*, i1*, i1*, i1*, i2048*, i2048*, i64*, i64*, i6*, i6*, i5*) #7 {
+define void @hdv_engine_hw_stub_wrapper(i1*, %struct.op_mode_t*, %struct.frame_in_t*, i8*, i1*, i1*, i1*, i1*, i1*, i1*, i704*, i64*, i64*, i6*, i5*) #7 {
 entry:
-  %17 = alloca %"class.hls::stream<hls::axis<ap_uint<8>, 1, 1, 1>, 0>"
-  %18 = alloca %struct.chv_p_t
-  %19 = alloca %struct.chv_t
-  %20 = alloca %struct.bhv_p_t
-  %21 = alloca %struct.bhv_p_t
-  %22 = alloca %struct.pred_class_t
-  %23 = alloca %struct.pred_class_t
-  %24 = alloca %struct.sys_status_t
-  call void @copy_out(i1* null, i1* %0, %"class.hls::stream<hls::axis<ap_uint<8>, 1, 1, 1>, 0>"* %17, i8* %3, i1* %4, i1* %5, i1* %6, i1* %7, i1* %8, i1* %9, %struct.chv_p_t* %18, i2048* %10, %struct.chv_t* %19, i2048* %11, %struct.bhv_p_t* %20, i64* %12, %struct.bhv_p_t* %21, i64* %13, %struct.pred_class_t* %22, i6* %14, %struct.pred_class_t* %23, i6* %15, %struct.sys_status_t* %24, i5* %16)
-  call void @hdv_engine_hw_stub(i1* %0, %struct.op_mode_t* %1, %struct.frame_in_t* %2, %"class.hls::stream<hls::axis<ap_uint<8>, 1, 1, 1>, 0>"* %17, %struct.chv_p_t* %18, %struct.chv_t* %19, %struct.bhv_p_t* %20, %struct.bhv_p_t* %21, %struct.pred_class_t* %22, %struct.pred_class_t* %23, %struct.sys_status_t* %24)
-  call void @copy_in(i1* null, i1* %0, %"class.hls::stream<hls::axis<ap_uint<8>, 1, 1, 1>, 0>"* %17, i8* %3, i1* %4, i1* %5, i1* %6, i1* %7, i1* %8, i1* %9, %struct.chv_p_t* %18, i2048* %10, %struct.chv_t* %19, i2048* %11, %struct.bhv_p_t* %20, i64* %12, %struct.bhv_p_t* %21, i64* %13, %struct.pred_class_t* %22, i6* %14, %struct.pred_class_t* %23, i6* %15, %struct.sys_status_t* %24, i5* %16)
+  %15 = alloca %"class.hls::stream<hls::axis<ap_uint<8>, 1, 1, 1>, 0>"
+  %16 = alloca %struct.chv_p_t
+  %17 = alloca %struct.bhv_p_t
+  %18 = alloca %struct.bhv_p_t
+  %19 = alloca %struct.pred_class_t
+  %20 = alloca %struct.sys_status_t
+  call void @copy_out(i1* null, i1* %0, %"class.hls::stream<hls::axis<ap_uint<8>, 1, 1, 1>, 0>"* %15, i8* %3, i1* %4, i1* %5, i1* %6, i1* %7, i1* %8, i1* %9, %struct.chv_p_t* %16, i704* %10, %struct.bhv_p_t* %17, i64* %11, %struct.bhv_p_t* %18, i64* %12, %struct.pred_class_t* %19, i6* %13, %struct.sys_status_t* %20, i5* %14)
+  call void @hdv_engine_hw_stub(i1* %0, %struct.op_mode_t* %1, %struct.frame_in_t* %2, %"class.hls::stream<hls::axis<ap_uint<8>, 1, 1, 1>, 0>"* %15, %struct.chv_p_t* %16, %struct.bhv_p_t* %17, %struct.bhv_p_t* %18, %struct.pred_class_t* %19, %struct.sys_status_t* %20)
+  call void @copy_in(i1* null, i1* %0, %"class.hls::stream<hls::axis<ap_uint<8>, 1, 1, 1>, 0>"* %15, i8* %3, i1* %4, i1* %5, i1* %6, i1* %7, i1* %8, i1* %9, %struct.chv_p_t* %16, i704* %10, %struct.bhv_p_t* %17, i64* %11, %struct.bhv_p_t* %18, i64* %12, %struct.pred_class_t* %19, i6* %13, %struct.sys_status_t* %20, i5* %14)
   ret void
 }
 
-declare void @hdv_engine_hw_stub(i1*, %struct.op_mode_t*, %struct.frame_in_t*, %"class.hls::stream<hls::axis<ap_uint<8>, 1, 1, 1>, 0>"*, %struct.chv_p_t*, %struct.chv_t*, %struct.bhv_p_t*, %struct.bhv_p_t*, %struct.pred_class_t*, %struct.pred_class_t*, %struct.sys_status_t*)
+declare void @hdv_engine_hw_stub(i1*, %struct.op_mode_t*, %struct.frame_in_t*, %"class.hls::stream<hls::axis<ap_uint<8>, 1, 1, 1>, 0>"*, %struct.chv_p_t*, %struct.bhv_p_t*, %struct.bhv_p_t*, %struct.pred_class_t*, %struct.sys_status_t*)
 
 declare i1 @fpga_fifo_not_empty_7(i8*)
 

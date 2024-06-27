@@ -84,7 +84,6 @@ proc check_tvin_file {} {
 	}
     set rtlfilelist {
          "c.hdv_engine.autotvin_nrst_i.dat"
-         "c.hdv_engine.autotvin_op_mode_i.dat"
          "c.hdv_engine.autotvin_frame_in.dat"
          "c.hdv_engine.autotvin_sdata_i_V_data_V.dat"
          "c.hdv_engine.autotvin_sdata_i_V_keep_V.dat"
@@ -96,7 +95,6 @@ proc check_tvin_file {} {
          "c.hdv_engine.autotvin_chv_i.dat"
          "c.hdv_engine.autotvin_bhv_i.dat"
          "c.hdv_engine.autotvin_lhv_i.dat"
-         "c.hdv_engine.autotvin_lable_class_i.dat"
     }
     foreach rtlfile $rtlfilelist {
         if {[file isfile $rtlfile]} {
@@ -116,7 +114,6 @@ proc check_tvout_file {} {
 		puts stdout "[debug_prompt arg check_sim.tcl] start...";
 	}
     set rtlfilelist {
-         "rtl.hdv_engine.autotvout_chv_o.dat"
          "rtl.hdv_engine.autotvout_pred_class_o.dat"
          "rtl.hdv_engine.autotvout_status_o.dat"
     }

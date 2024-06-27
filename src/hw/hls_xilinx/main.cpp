@@ -106,6 +106,11 @@ void hdv_engine(
         lhv_p_t &lhv_i,
     #endif
 
+	#if ( LV_MODE == LV_M_LOGIC &&  HD_LV_TYPE == APPROX )
+        lhv_p_t &lhv_i0,
+        lhv_p_t &lhv_i1,
+    #endif
+
 	#if ( AXI_CNTR_PORT_EN )
 		if_axi_cmd_t &axi_if_cmd,
 		if_axi_data_t *axi_if_data,
@@ -156,6 +161,10 @@ void hdv_engine(
     #if ( LV_MODE == LV_M_INT_MEM )
 		#pragma HLS INTERFACE ap_none port = lhv_i
     #endif
+	#if ( LV_MODE == LV_M_LOGIC &&  HD_LV_TYPE == APPROX )
+		#pragma HLS INTERFACE ap_none port = lhv_i0
+		#pragma HLS INTERFACE ap_none port = lhv_i1
+	#endif
 
 	#if ( AXI_CNTR_PORT_EN )
 		#pragma HLS INTERFACE mode=s_axilite port  = axi_if_cmd
@@ -198,6 +207,8 @@ void hdv_engine(
 
     bhv_p_t _bhv_i;
     lhv_p_t _lhv_i;
+	lhv_p_t _lhv_i0;
+	lhv_p_t _lhv_i1;
     chv_p_t _chv_i;
     uint8_t _n_gram_idx;
     static pred_class_t _pred_class_o;
@@ -246,6 +257,8 @@ void hdv_engine(
 
 	#pragma HLS ARRAY_PARTITION variable = _bhv_i complete
 	#pragma HLS ARRAY_PARTITION variable = _lhv_i complete
+	#pragma HLS ARRAY_PARTITION variable = _lhv_i0 complete
+	#pragma HLS ARRAY_PARTITION variable = _lhv_i1 complete
 	#pragma HLS ARRAY_PARTITION variable = _chv_i complete
 	#pragma HLS ARRAY_PARTITION variable = _bhv complete
 	#pragma HLS ARRAY_PARTITION variable = _lhv complete
@@ -304,6 +317,10 @@ void hdv_engine(
 		#endif
 		#if ( LV_MODE == LV_M_INT_MEM )
 			_lhv_i = lhv_i;
+		#endif
+		#if ( LV_MODE == LV_M_LOGIC &&  HD_LV_TYPE == APPROX )
+			_lhv_i0 = lhv_i0;
+			_lhv_i1 = lhv_i1;
 		#endif
 		#if ( N_GRAM == 1 )
 			_n_gram_idx = n_gram_idx;
@@ -522,11 +539,11 @@ void hdv_engine(
 								#if ( LV_MODE == LV_M_INT_MEM )
 								{
 									_lhv = _lhv_i.el[feature_p_id];
-
 								}
 								#else
 								{
-									HDC.generate_LevelHVs( _lhv.lvh, frame_in.id, _aValue[feature_p_id].data );
+									HDC.generate_LevelHVs( _lhv.lvh, frame_in.id, _aValue[feature_p_id].data, _lhv_i0.el[feature_p_id].lvh, _lhv_i1.el[feature_p_id].lvh );
+									
 								}
 								#endif
 								//printf( "0frame_in.id: %d, frame_in.index: %d, _lhv:\n", frame_in.id, _aValue.data );

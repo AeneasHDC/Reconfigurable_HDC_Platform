@@ -85,15 +85,18 @@ OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib {
   C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_flow_control_loop_pipe_sequential_init.vhd
-  C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_273_1.vhd
-  C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_281_2.vhd
-  C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_494_4.vhd
-  C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_766_6.vhd
-  C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_912_9.vhd
+  C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_286_1.vhd
+  C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_294_2.vhd
+  C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_511_4.vhd
+  C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_916_7.vhd
+  C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_929_8.vhd
+  C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_mac_muladd_11ns_11ns_22ns_23_4_1.vhd
+  C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_mul_11ns_11ns_22_1_1.vhd
+  C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_mul_17ns_17ns_34_1_1.vhd
+  C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_mul_32s_15ns_47_1_1.vhd
   C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_mux_3_2_32_1_1.vhd
-  C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_mux_64_6_1_1_1.vhd
-  C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_mux_64_6_32_1_1.vhd
   C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_regslice_both.vhd
+  C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine_udiv_64s_34ns_32_68_1.vhd
   C:/Reconfigurable_HDC_Platform-1/out/hls/ip/hdv_engine.vhd
 }
 OPTRACE "Adding files" END { }

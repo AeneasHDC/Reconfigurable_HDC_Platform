@@ -50,7 +50,7 @@
 #define DS_CLASSES_SIZE 3
 #define TRAIN_ON_HW 0
 #define RETRAIN_ON_HW 0
-#define EPOCH 10
+#define EPOCH 1
 #define HD_DIM 512
 #define BINARY 0
 #define BIPOLAR 1
@@ -61,7 +61,7 @@
 #define SIMI_COS 0
 #define SIMI_DPROD 1
 #define SIMI_HAM 2
-#define HD_SIMI_METHOD SIMI_DPROD
+#define HD_SIMI_METHOD SIMI_HAM
 #define APPROX_SQRT_ON_HW 0
 #define APPROX_SQRT_ON_MODEL 0
 #define HD_SIMI_W_BITS 32

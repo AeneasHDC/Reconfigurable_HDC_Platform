@@ -1,0 +1,12 @@
+{
+    "powerConsumptionInfo": [
+        {
+            "category": "Static Power Consumption",
+            "value": 0.01
+        },
+        {
+            "category": "Dynamic Power Consumption",
+            "value": 0.62
+        }
+    ]
+}

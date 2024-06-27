@@ -39,10 +39,10 @@ import time
 import webbrowser
 import signal
 import datetime
-from PyQt5.QtWidgets import QApplication
-from PyQt5.QtWebEngineWidgets import QWebEngineView
-from PyQt5.QtCore import QUrl, Qt
-from PyQt5.QtGui import QIcon
+# from PyQt5.QtWidgets import QApplication
+# from PyQt5.QtWebEngineWidgets import QWebEngineView
+# from PyQt5.QtCore import QUrl, Qt
+# from PyQt5.QtGui import QIcon
 
 
 
@@ -51,22 +51,23 @@ import config_py as config
 
 
 def change_configuration():
-    try:
-        result = subprocess.run(["python", "main//update_config_ui.py"], check=True, text=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        print(result.stdout)
-        app = QApplication([])
-        view = QWebEngineView()
-        view.setWindowTitle("Configuration")
-        view.setWindowIcon(QIcon('./doc/.img/ico/conf_16.png'))  
-        view.load(QUrl("http://localhost:3000/usr_config.html"))
-        view.showMaximized()
-        app.exec_()
-        result = subprocess.run(["python", "main//update_config_ui.py"], check=True, text=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        print(result.stdout)
-    except subprocess.CalledProcessError as e:
-        print(f"Error occurred while updating configuration gui: {e}")
-        print("Error Output:")
-        print(e.stderr)
+    # try:
+    print("Disabled")
+        # result = subprocess.run(["python", "main//update_config_ui.py"], check=True, text=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        # print(result.stdout)
+        # # app = QApplication([])
+        # # view = QWebEngineView()
+        # # view.setWindowTitle("Configuration")
+        # # view.setWindowIcon(QIcon('./doc/.img/ico/conf_16.png'))  
+        # # view.load(QUrl("http://localhost:3000/usr_config.html"))
+        # view.showMaximized()
+        # app.exec_()
+        # result = subprocess.run(["python", "main//update_config_ui.py"], check=True, text=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        # print(result.stdout)
+    # except subprocess.CalledProcessError as e:
+    #     print(f"Error occurred while updating configuration gui: {e}")
+    #     print("Error Output:")
+    #     print(e.stderr)
     
 def generate_configurations():
     print("Generating configurations...")

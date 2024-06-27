@@ -1,0 +1,139 @@
+
+
+================================================================
+== Vitis HLS Report for 'hdv_engine_Pipeline_VITIS_LOOP_245_1'
+================================================================
+* Date:           Wed Jan 10 18:57:44 2024
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        _hdc_hls_xilinx
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu9eg-ffvb1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  50.00 ns|      0 ns|    13.50 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_245_1  |        ?|        ?|         1|          1|          1|     ?|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|       4|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|       -|       -|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|      18|    -|
+|Register         |        -|     -|       2|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|       2|      22|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     1824|  2520|  548160|  274080|    0|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |tmp_nbreadreq_fu_44_p9            |       and|   0|  0|   2|           1|           0|
+    |ap_block_state1_pp0_stage0_iter0  |        or|   0|  0|   2|           1|           1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0|   4|           2|           1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------+----+-----------+-----+-----------+
+    |         Name        | LUT| Input Size| Bits| Total Bits|
+    +---------------------+----+-----------+-----+-----------+
+    |ap_done_int          |   9|          2|    1|          2|
+    |sdata_i_TDATA_blk_n  |   9|          2|    1|          2|
+    +---------------------+----+-----------+-----+-----------+
+    |Total                |  18|          4|    2|          4|
+    +---------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------+---+----+-----+-----------+
+    |     Name    | FF| LUT| Bits| Const Bits|
+    +-------------+---+----+-----+-----------+
+    |ap_CS_fsm    |  1|   0|    1|          0|
+    |ap_done_reg  |  1|   0|    1|          0|
+    +-------------+---+----+-----+-----------+
+    |Total        |  2|   0|    2|          0|
+    +-------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------+-----+-----+------------+--------------------------------------+--------------+
+|    RTL Ports   | Dir | Bits|  Protocol  |             Source Object            |    C Type    |
++----------------+-----+-----+------------+--------------------------------------+--------------+
+|ap_clk          |   in|    1|  ap_ctrl_hs|  hdv_engine_Pipeline_VITIS_LOOP_245_1|  return value|
+|ap_rst          |   in|    1|  ap_ctrl_hs|  hdv_engine_Pipeline_VITIS_LOOP_245_1|  return value|
+|ap_start        |   in|    1|  ap_ctrl_hs|  hdv_engine_Pipeline_VITIS_LOOP_245_1|  return value|
+|ap_done         |  out|    1|  ap_ctrl_hs|  hdv_engine_Pipeline_VITIS_LOOP_245_1|  return value|
+|ap_idle         |  out|    1|  ap_ctrl_hs|  hdv_engine_Pipeline_VITIS_LOOP_245_1|  return value|
+|ap_ready        |  out|    1|  ap_ctrl_hs|  hdv_engine_Pipeline_VITIS_LOOP_245_1|  return value|
+|sdata_i_TVALID  |   in|    1|        axis|                      sdata_i_V_data_V|       pointer|
+|sdata_i_TDATA   |   in|    8|        axis|                      sdata_i_V_data_V|       pointer|
+|sdata_i_TREADY  |  out|    1|        axis|                      sdata_i_V_dest_V|       pointer|
+|sdata_i_TDEST   |   in|    1|        axis|                      sdata_i_V_dest_V|       pointer|
+|sdata_i_TKEEP   |   in|    1|        axis|                      sdata_i_V_keep_V|       pointer|
+|sdata_i_TSTRB   |   in|    1|        axis|                      sdata_i_V_strb_V|       pointer|
+|sdata_i_TUSER   |   in|    1|        axis|                      sdata_i_V_user_V|       pointer|
+|sdata_i_TLAST   |   in|    1|        axis|                      sdata_i_V_last_V|       pointer|
+|sdata_i_TID     |   in|    1|        axis|                        sdata_i_V_id_V|       pointer|
++----------------+-----+-----+------------+--------------------------------------+--------------+
+

@@ -78496,10 +78496,12 @@ typedef struct {
 
 
 typedef struct {
+# 153 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/headers/datatypes.hpp"
+      ap_uint<11> cvh1[64];
 
 
-      ap_uint<32> cvh1[64];
-# 158 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/headers/datatypes.hpp"
+
+
 } chv_t;
 
 typedef struct {
@@ -105311,11 +105313,11 @@ class HDC_op
 
 
     public:
-  typedef struct{
-   HV_HD_DIM element;
-  }lv_approx_t;
 
-  lv_approx_t lv_approx[2];
+
+
+
+
 
 
   HDC_op()
@@ -105349,15 +105351,18 @@ class HDC_op
       {
 
        {
-
+# 207 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/lib/hdc_lib/HDC_class.hpp"
         {
-         if ( HV1[i+j] == HV2[i+j] )
+         sim += HV1[i+j] * HV2[i+j];
+
+
          {
-          sim += 1;
+          denom_a = denom_a + (HV1[i+j]*HV1[i+j]);
+          denom_b = denom_b + (HV2[i+j]*HV2[i+j]);
          }
-# 183 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/lib/hdc_lib/HDC_class.hpp"
+
         }
-# 218 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/lib/hdc_lib/HDC_class.hpp"
+
        }
 # 250 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/lib/hdc_lib/HDC_class.hpp"
       }
@@ -105374,7 +105379,32 @@ class HDC_op
   void similarity_phase2(SimType &sim, const DenomType &denom_a, const DenomType &denom_b, uint8_t mode)
   {
 #pragma HLS INLINE
-# 344 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/lib/hdc_lib/HDC_class.hpp"
+# 300 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/lib/hdc_lib/HDC_class.hpp"
+      {
+# 321 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/lib/hdc_lib/HDC_class.hpp"
+    {
+
+     {
+
+
+
+      sim = ( sim * 10000 )/( hls::sqrt(denom_b) * hls::sqrt(denom_a) );
+
+
+
+     }
+
+
+
+
+
+    }
+
+      }
+
+
+
+
   }
 # 364 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/lib/hdc_lib/HDC_class.hpp"
   template < typename HVType >
@@ -105596,35 +105626,19 @@ class HDC_op
 # 713 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/lib/hdc_lib/HDC_class.hpp"
   template < typename HV_Type >
   void generate_LevelHVs( HV_Type& levelVector, const ap_uint<10>& frame_id,
-        const ap_uint<10>& frame_index )
+        const ap_uint<10>& frame_index, HV_Type& lv_approx_0, HV_Type& lv_approx_1 )
   {
 #pragma HLS ARRAY_PARTITION variable=levelVector complete
 # 778 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/lib/hdc_lib/HDC_class.hpp"
   }
-
-
-
-
-
-
-
-  void init_approx_level_vector_generator()
-  {
-   rnd_lv_approx_gen_t rnd_gen;
-   rnd_gen.reset();
-   for ( auto lv_i = 0; lv_i < 2; lv_i++ )
-   {
-    random_HV( lv_approx[lv_i].element, rnd_gen, 512, 64 );
-   }
-  }
-# 815 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/lib/hdc_lib/HDC_class.hpp"
+# 816 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/lib/hdc_lib/HDC_class.hpp"
   template < typename HV_Type >
   void generate_ClassHVs( HV_Type& classVector, const ap_uint<10>& frame_id,
         const ap_uint<10>& frame_index )
   {
-# 830 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/lib/hdc_lib/HDC_class.hpp"
+# 831 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/lib/hdc_lib/HDC_class.hpp"
   }
-# 845 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/lib/hdc_lib/HDC_class.hpp"
+# 846 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/lib/hdc_lib/HDC_class.hpp"
   template < typename HVType, typename RndGenType >
   void random_HV( HVType &in_HV, RndGenType &lfsr_instance, const int in_HV_LEN, const int RND_GEN_LEN )
   {
@@ -105639,7 +105653,7 @@ class HDC_op
     }
       }
   }
-# 873 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/lib/hdc_lib/HDC_class.hpp"
+# 874 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/lib/hdc_lib/HDC_class.hpp"
   template < typename HypervectorType >
   void print_HV( const HypervectorType& hv )
   {
@@ -105669,7 +105683,7 @@ void hdv_engine(
 
    chv_p_t &chv_i,
 
-    chv_t *chv_o,
+
 
 
 
@@ -105677,9 +105691,7 @@ void hdv_engine(
 
 
    lhv_p_t &lhv_i,
-# 83 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/headers/main.hpp"
-   pred_class_t &lable_class_i,
-# 98 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/headers/main.hpp"
+# 102 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/headers/main.hpp"
    pred_class_t *pred_class_o,
 
 
@@ -105720,7 +105732,7 @@ void hdv_engine(
 
   chv_p_t &chv_i,
 
-   chv_t *chv_o,
+
 
 
 
@@ -105730,9 +105742,7 @@ void hdv_engine(
 
 
         lhv_p_t &lhv_i,
-# 115 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/main.cpp"
-  pred_class_t &lable_class_i,
-# 131 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/main.cpp"
+# 136 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/main.cpp"
      pred_class_t *pred_class_o,
 
 
@@ -105760,10 +105770,10 @@ void hdv_engine(
 
 
 #pragma HLS INTERFACE ap_none port = lhv_i
-# 168 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/main.cpp"
+# 177 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/main.cpp"
 #pragma HLS INTERFACE ap_none port = pred_class_o
 #pragma HLS AGGREGATE compact=bit variable = pred_class_o
-# 189 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/main.cpp"
+# 198 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/main.cpp"
 #pragma HLS INTERFACE ap_none port = status_o
 #pragma HLS AGGREGATE compact=bit variable = status_o
 
@@ -105776,6 +105786,8 @@ void hdv_engine(
 
     bhv_p_t _bhv_i;
     lhv_p_t _lhv_i;
+ lhv_p_t _lhv_i0;
+ lhv_p_t _lhv_i1;
     chv_p_t _chv_i;
     uint8_t _n_gram_idx;
     static pred_class_t _pred_class_o;
@@ -105793,8 +105805,8 @@ void hdv_engine(
     static ap_int<32> similarity_classes[3];
 
 
-
-
+  static ap_uint<32> denom_a_classes[3];
+  static ap_uint<32> denom_b_classes[3];
 
 
     static HV Binded_Features;
@@ -105809,9 +105821,11 @@ void hdv_engine(
 
 
     static bunded_clip_t bunded_train_chv[3];
-# 247 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/main.cpp"
+# 258 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/main.cpp"
 #pragma HLS ARRAY_PARTITION variable = _bhv_i complete
 #pragma HLS ARRAY_PARTITION variable = _lhv_i complete
+#pragma HLS ARRAY_PARTITION variable = _lhv_i0 complete
+#pragma HLS ARRAY_PARTITION variable = _lhv_i1 complete
 #pragma HLS ARRAY_PARTITION variable = _chv_i complete
 #pragma HLS ARRAY_PARTITION variable = _bhv complete
 #pragma HLS ARRAY_PARTITION variable = _lhv complete
@@ -105848,8 +105862,8 @@ void hdv_engine(
    {
     bunded_train_chv[i] = 0;
 
-
-
+     denom_a_classes[i] = 0;
+     denom_b_classes[i] = 0;
 
     similarity_classes[i] = 0;
    }
@@ -105870,35 +105884,21 @@ void hdv_engine(
 
 
    _lhv_i = lhv_i;
-
-
-
-
-
+# 329 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/main.cpp"
   _chv = _chv_i.el[0];
-# 331 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/main.cpp"
+# 348 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/main.cpp"
  }
 
 
  check_cmd:{
-# 344 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/main.cpp"
+# 361 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/main.cpp"
  }
 
 
     main:
  {
 #pragma HLS INLINE recursive
-
-
-
-
-  if ( op_mode_i.phase == 3 )
-  {
-    int32_t threshold = bunded_train_chv[lable_class_i.c1]/2;
-    HDC.clip( _chv.cvh1, _chv_o.cvh1, 0, 1, threshold, 1);
-    goto exit;
-  }
-# 471 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/main.cpp"
+# 488 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/main.cpp"
   auto _frame_index = frame_in.index;
   if ( frame_in.type == 0 )
   {
@@ -105906,7 +105906,7 @@ void hdv_engine(
    {
 #pragma HLS INLINE recursive
     auto paralled_feature_inx_end = 1;
-# 488 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/main.cpp"
+# 505 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/main.cpp"
     for ( auto feature_p_id = 0; feature_p_id < paralled_feature_inx_end; feature_p_id+=1 )
     {
 #pragma HLS UNROLL
@@ -105929,18 +105929,11 @@ void hdv_engine(
          _bhv = _bhv_i.el[feature_p_id];
 
         }
-# 523 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/main.cpp"
+# 540 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/main.cpp"
         {
          _lhv = _lhv_i.el[feature_p_id];
-
         }
-
-
-
-
-
-
-
+# 551 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/main.cpp"
        }
        ____phase_2_process_input_features:
        {
@@ -105949,9 +105942,9 @@ void hdv_engine(
         {
 
          HDC.bind( _lhv.lvh, _bhv.bvh, Binded_Features );
-# 573 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/main.cpp"
+# 590 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/main.cpp"
         }
-# 605 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/main.cpp"
+# 622 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/main.cpp"
        }
       break;
       case 1:
@@ -105977,7 +105970,7 @@ void hdv_engine(
           {
 #pragma HLS UNROLL
            hv_class_t tmp_chv_val;
-# 640 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/main.cpp"
+# 657 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/main.cpp"
             if (Binded_Features[i] == 0)
             {
              BundledHV[i] = 0;
@@ -105994,9 +105987,9 @@ void hdv_engine(
          ____sub_bundling:
          {
 #pragma HLS INLINE recursive
-# 664 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/main.cpp"
+# 681 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/main.cpp"
           HDC.bundle(Binded_Features, BundledHV);
-# 686 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/main.cpp"
+# 703 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/main.cpp"
          }
         }
        }
@@ -106004,27 +105997,7 @@ void hdv_engine(
       }
      }
     }
-
-
-     if ( op_mode_i.mode == 0)
-     {
-
-
-
-
-
-       if ( _frame_index==(21 - 1) && frame_in.id == 0 )
-
-       {
-        bunded_train_chv[lable_class_i.c1]++;
-
-
-
-
-       }
-
-     }
-
+# 731 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/main.cpp"
    }
    ____phase_4_clipping:
    {
@@ -106036,17 +106009,12 @@ void hdv_engine(
     if ( _frame_index == 21 - 1 )
 
     {
-# 740 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/main.cpp"
+# 757 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/main.cpp"
       HDC.clip( BundledHV, Clipped_BundledHV, 0, 1, 21 / 2, 1 );
-# 753 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/main.cpp"
+# 770 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/main.cpp"
      if ( op_mode_i.mode == 0 )
      {
-# 766 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/main.cpp"
-       for ( auto i = 0; i < 64; i++ )
-       {
-        _chv_o.cvh1[i] = _chv.cvh1[i] + Clipped_BundledHV[i];
-       }
-# 780 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/main.cpp"
+# 797 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/main.cpp"
      }
     }
    }
@@ -106072,7 +106040,7 @@ void hdv_engine(
       {
        _chv = _chv_i.el[class_p_id];
       }
-# 816 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/main.cpp"
+# 833 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/main.cpp"
       ____similarity_functions:
       {
 #pragma HLS PIPELINE II=5
@@ -106084,28 +106052,35 @@ void hdv_engine(
        ap_uint<32> denom_a= 0; ap_uint<32> denom_b = 0;
 
        HDC.similarity_phase1( _chv.cvh1, Clipped_BundledHV, similarity, denom_a, denom_b, op_mode_i.mode );
-# 856 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/main.cpp"
-       {
 
+
+
+
+
+       {
 
 
 
          if ( frame_in.id == 0 )
 
-         {
+        {
 
 
 
-          similarity_classes[_frame_index] = similarity;
+         similarity_classes[_frame_index] = similarity;
+         denom_a_classes[_frame_index] = denom_a;
+         denom_b_classes[_frame_index] = denom_b;
+        }
+        else
+        {
+         similarity_classes[_frame_index] += similarity;
+         denom_a_classes[_frame_index] += denom_a;
+         denom_b_classes[_frame_index] += denom_b;
+        }
 
-         }else
-         {
-          similarity_classes[_frame_index] += similarity;
-         }
 
        }
-
-
+# 894 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/main.cpp"
       }
 
 
@@ -106131,7 +106106,14 @@ void hdv_engine(
          for ( auto i = 0; i < 3; i++ )
          {
 #pragma HLS PIPELINE II=DS_CLASSES_SIZE
-# 910 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/main.cpp"
+
+
+           HDC.similarity_phase2( similarity_classes[i], denom_a_classes[i], denom_b_classes[i],op_mode_i.mode );
+
+
+
+
+
          }
 
          for ( auto i = 0; i < 3; i++ )
@@ -106152,7 +106134,7 @@ void hdv_engine(
 
 
        }
-# 939 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/main.cpp"
+# 956 "C:/Reconfigurable_HDC_Platform-1/src/hw/hls_xilinx/main.cpp"
       }
 
 
@@ -106174,7 +106156,7 @@ exit:
 
     *status_o = _status;
 
-  *chv_o = _chv_o;
+
 
 
 }

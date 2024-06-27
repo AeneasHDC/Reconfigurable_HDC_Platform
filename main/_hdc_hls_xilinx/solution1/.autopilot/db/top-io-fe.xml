@@ -21,37 +21,27 @@
           <constraint constraint_type="pragma interface" mode="axis" register_option="0" register_mode="both"/>
         </hw>
       </arg>
-      <arg id="4" access_type="r" src_name="chv_i" src_type="&amp;" src_isptr="1" src_bitwidth="2048" src_size_or_depth="1">
-        <hw hw_usage="data" hw_interface="Register" hw_name="chv_i" hw_bitwidth="2048" hw_size_or_depth="1" hw_kernel_support="false">
+      <arg id="4" access_type="r" src_name="chv_i" src_type="&amp;" src_isptr="1" src_bitwidth="1024" src_size_or_depth="1">
+        <hw hw_usage="data" hw_interface="Register" hw_name="chv_i" hw_bitwidth="704" hw_size_or_depth="1" hw_kernel_support="false">
           <constraint constraint_type="pragma interface" mode="ap_none" register_option="0"/>
         </hw>
       </arg>
-      <arg id="5" access_type="w" src_name="chv_o" src_type="*" src_isptr="1" src_bitwidth="2048" src_size_or_depth="1">
-        <hw hw_usage="data" hw_interface="Register" hw_name="chv_o" hw_bitwidth="2048" hw_size_or_depth="1" hw_kernel_support="false">
-          <constraint constraint_type="pragma interface" mode="ap_none" register_option="0"/>
-        </hw>
-      </arg>
-      <arg id="6" access_type="r" src_name="bhv_i" src_type="&amp;" src_isptr="1" src_bitwidth="512" src_size_or_depth="1">
+      <arg id="5" access_type="r" src_name="bhv_i" src_type="&amp;" src_isptr="1" src_bitwidth="512" src_size_or_depth="1">
         <hw hw_usage="data" hw_interface="Register" hw_name="bhv_i" hw_bitwidth="64" hw_size_or_depth="1" hw_kernel_support="false">
           <constraint constraint_type="pragma interface" mode="ap_none" register_option="0"/>
         </hw>
       </arg>
-      <arg id="7" access_type="r" src_name="lhv_i" src_type="&amp;" src_isptr="1" src_bitwidth="512" src_size_or_depth="1">
+      <arg id="6" access_type="r" src_name="lhv_i" src_type="&amp;" src_isptr="1" src_bitwidth="512" src_size_or_depth="1">
         <hw hw_usage="data" hw_interface="Register" hw_name="lhv_i" hw_bitwidth="64" hw_size_or_depth="1" hw_kernel_support="false">
           <constraint constraint_type="pragma interface" mode="ap_none" register_option="0"/>
         </hw>
       </arg>
-      <arg id="8" access_type="r" src_name="lable_class_i" src_type="&amp;" src_isptr="1" src_bitwidth="8" src_size_or_depth="1">
-        <hw hw_usage="data" hw_interface="Register" hw_name="lable_class_i" hw_bitwidth="6" hw_size_or_depth="1" hw_kernel_support="false">
-          <constraint constraint_type="pragma interface" mode="ap_none" register_option="0"/>
-        </hw>
-      </arg>
-      <arg id="9" access_type="w" src_name="pred_class_o" src_type="*" src_isptr="1" src_bitwidth="8" src_size_or_depth="1">
+      <arg id="7" access_type="w" src_name="pred_class_o" src_type="*" src_isptr="1" src_bitwidth="8" src_size_or_depth="1">
         <hw hw_usage="data" hw_interface="Register" hw_name="pred_class_o" hw_bitwidth="6" hw_size_or_depth="1" hw_kernel_support="false">
           <constraint constraint_type="pragma interface" mode="ap_none" register_option="0"/>
         </hw>
       </arg>
-      <arg id="10" access_type="w" src_name="status_o" src_type="*" src_isptr="1" src_bitwidth="8" src_size_or_depth="1">
+      <arg id="8" access_type="w" src_name="status_o" src_type="*" src_isptr="1" src_bitwidth="8" src_size_or_depth="1">
         <hw hw_usage="data" hw_interface="Register" hw_name="status_o" hw_bitwidth="5" hw_size_or_depth="1" hw_kernel_support="false">
           <constraint constraint_type="pragma interface" mode="ap_none" register_option="0"/>
         </hw>

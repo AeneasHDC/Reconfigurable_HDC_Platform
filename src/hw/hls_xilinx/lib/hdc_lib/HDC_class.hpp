@@ -83,20 +83,20 @@ class HDC_op
 
 
     public:
-		typedef struct{
-			HV_HD_DIM element;
-		}lv_approx_t;
+		// typedef struct{
+		// 	HV_HD_DIM element;
+		// }lv_approx_t;
 
-		lv_approx_t lv_approx[2];
+		// lv_approx_t lv_approx[2];
 
 
 		HDC_op()
 		{
-			#if ( LV_MODE == LV_M_LOGIC &&  HD_LV_TYPE == APPROX )
-			{
-				init_approx_level_vector_generator();
-			}
-			#endif
+			// #if ( LV_MODE == LV_M_LOGIC &&  HD_LV_TYPE == APPROX )
+			// {
+			// 	init_approx_level_vector_generator();
+			// }
+			// #endif
 		}
 
 
@@ -187,7 +187,7 @@ class HDC_op
 								{
 									// In CLIPPING_POWERTWO mode, all the elements of the hypervector are powers of two.
 									// Therefore, the multiplication is replace by a shift operation.
-									sim += ((SimType)HV2[i+j] << HV1[i+j]); // sim += HV1[i+j] << HV2[i+j];
+									sim += ((SimType)1 << (HV1[i+j] + HV2[i+j])); // Corrected to sum the exponents
 
 									#if ( HD_SIMI_METHOD == SIMI_COS )
 									{
@@ -196,7 +196,7 @@ class HDC_op
 										{
 											denom_a = denom_a + (1 << (HV1[i+j]<<1)); //denom_a = denom_a + (HV1[i+j] << HV1[i+j]);  CHANGED
 										}
-										denom_b = denom_b + (HV2[i+j] * HV2[i+j]);    // denom_b = denom_b + (HV2[i+j] << HV2[i+j]); CHANGED
+										denom_b = denom_b + (1 << (HV2[i+j]<<1));    // denom_b = denom_b + (HV2[i+j] << HV2[i+j]); CHANGED
 									}
 									#endif
 
@@ -712,7 +712,7 @@ class HDC_op
 		 */
 		template < typename HV_Type >
 		void generate_LevelHVs( HV_Type& levelVector, const ap_uint<DI_FRAMEID_W_BITS>& frame_id,
-								const ap_uint<DI_FRAMEID_W_BITS>& frame_index )
+								const ap_uint<DI_FRAMEID_W_BITS>& frame_index, HV_Type& lv_approx_0, HV_Type& lv_approx_1 )
 		{
 			#pragma HLS ARRAY_PARTITION variable=levelVector complete
 		    #if ( LV_MODE == LV_M_HDL_GEN )
@@ -727,7 +727,7 @@ class HDC_op
 		    }
 		    #elif ( LV_MODE == LV_M_LOGIC &&  HD_LV_TYPE == LINEAR )
 		    {
-		        // TODO: Implementation for LINEAR type.
+		        // Not supported, generate it by software and save it in the memory
 		    }
 		    #elif ( LV_MODE == LV_M_LOGIC &&  HD_LV_TYPE == APPROX )
 		    {
@@ -743,11 +743,11 @@ class HDC_op
 					#pragma HLS unroll
 					if ( (i < limit ) && frame_index != HD_LV_LEN-1 )
 					{
-						levelVector[i] = lv_approx[0].element[i+inx_st]; // fill level vector by using first level vector
+						levelVector[i] = lv_approx_0[i]; // fill level vector by using first level vector
 					}
 					else
 					{
-						levelVector[i] = lv_approx[1].element[i+inx_st]; // fill level vector by using last level vector
+						levelVector[i] = lv_approx_1[i]; // fill level vector by using last level vector
 					}
 				}
 		    }
@@ -783,7 +783,7 @@ class HDC_op
 		 * It specifically initializes the first and last vectors of the level using a random generator.
 		 *
 		 */
-		void init_approx_level_vector_generator()
+		/*void init_approx_level_vector_generator()
 		{
 			rnd_lv_approx_gen_t rnd_gen;
 			rnd_gen.reset();
@@ -792,6 +792,7 @@ class HDC_op
 				random_HV( lv_approx[lv_i].element, rnd_gen, HD_DIM, LV_M_APPROX_RND_GEN_W_BITS );
 			}
 		}
+		*/
 
 		//--------------------------------------------------------------------------------------
 		// Class Vector Generator Functions

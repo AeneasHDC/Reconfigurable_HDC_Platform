@@ -1,0 +1,320 @@
+INFO: [COSIM-47] Using XSIM for RTL simulation.
+INFO: [COSIM-14] Instrumenting C test bench ...
+   Build using "C:/Xilinx/Vitis_HLS/2023.1/tps/win64/msys64/mingw64/bin/g++"
+   Compiling tb.cpp_pre.cpp.tb.cpp
+   Compiling main.cpp_pre.cpp.tb.cpp
+   Compiling apatb_hdv_engine.cpp
+   Compiling apatb_hdv_engine_ir.ll
+   Generating cosim.tv.exe
+INFO: [COSIM-302] Starting C TB testing ... 
+INFO: [COSIM-333] Generating C post check test bench ...
+INFO: [COSIM-12] Generating RTL test bench ...
+INFO: [COSIM-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM-323] Starting verilog simulation. 
+INFO: [COSIM-15] Starting XSIM ...
+INFO: [COSIM-316] Starting C post checking ...
+Test index: 0, Correct Label: 0, Predicted: 0, Percentage: 0%
+[--------------------]
+Accuracy: 1
+Precision: 0.333333
+Test index: 1, Correct Label: 0, Predicted: 0, Percentage: 50%
+[##########----------]
+Accuracy: 1
+Precision: 0.333333
+Test index: 2, Correct Label: 0, Predicted: 0, Percentage: 100%
+[####################]
+Accuracy: 1
+Precision: 0.333333
+
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\sim\verilog>set PATH= 
+
+C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\sim\verilog>call C:/Xilinx/Vivado/2023.1/bin/xelab xil_defaultlib.apatb_hdv_engine_top glbl -Oenable_linking_all_libraries  -prj hdv_engine.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm  -L floating_point_v7_1_15 -L floating_point_v7_0_20 --lib "ieee_proposed=./ieee_proposed" -s hdv_engine -debug all 
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_hdv_engine_top glbl -Oenable_linking_all_libraries -prj hdv_engine.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_1_15 -L floating_point_v7_0_20 --lib ieee_proposed=./ieee_proposed -s hdv_engine -debug all 
+Multi-threading is on. Using 22 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/hdv_engine.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_hdv_engine_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/hdv_engine.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdv_engine
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/hdv_engine_flow_control_loop_pipe_sequential_init.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdv_engine_flow_control_loop_pipe_sequential_init
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_281_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_281_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_488_2_VITIS_LOOP_494_3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_488_2_VITIS_LOOP_494_3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_912_7.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_912_7
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/hdv_engine_mux_3_2_32_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdv_engine_mux_3_2_32_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/hdv_engine_mux_7_3_1_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdv_engine_mux_7_3_1_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataflow_monitor
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
+Compiling module xil_defaultlib.hdv_engine_flow_control_loop_pip...
+Compiling module xil_defaultlib.hdv_engine_hdv_engine_Pipeline_V...
+Compiling module xil_defaultlib.hdv_engine_mux_7_3_1_1_1(ID=1,di...
+Compiling module xil_defaultlib.hdv_engine_hdv_engine_Pipeline_V...
+Compiling module xil_defaultlib.hdv_engine_mux_3_2_32_1_1(ID=1,d...
+Compiling module xil_defaultlib.hdv_engine_hdv_engine_Pipeline_V...
+Compiling module xil_defaultlib.hdv_engine
+Compiling module xil_defaultlib.nodf_module_intf
+Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=1)
+Compiling module xil_defaultlib.dataflow_monitor_1
+Compiling module xil_defaultlib.apatb_hdv_engine_top
+Compiling module work.glbl
+Built simulation snapshot hdv_engine
+
+****** xsim v2023.1 (64-bit)
+  **** SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+  **** IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+  **** SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/hdv_engine/xsim_script.tcl
+# xsim {hdv_engine} -view {{hdv_engine_dataflow_ana.wcfg}} -tclbatch {hdv_engine.tcl} -protoinst {hdv_engine.protoinst}
+INFO: [Wavedata 42-565] Reading protoinst file hdv_engine.protoinst
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_hdv_engine_top/AESL_inst_hdv_engine//AESL_inst_hdv_engine_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_hdv_engine_top/AESL_inst_hdv_engine/grp_hdv_engine_Pipeline_VITIS_LOOP_281_1_fu_1425/grp_hdv_engine_Pipeline_VITIS_LOOP_281_1_fu_1425_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_hdv_engine_top/AESL_inst_hdv_engine/grp_hdv_engine_Pipeline_VITIS_LOOP_488_2_VITIS_LOOP_494_3_fu_1435/grp_hdv_engine_Pipeline_VITIS_LOOP_488_2_VITIS_LOOP_494_3_fu_1435_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_hdv_engine_top/AESL_inst_hdv_engine/grp_hdv_engine_Pipeline_VITIS_LOOP_912_7_fu_2592/grp_hdv_engine_Pipeline_VITIS_LOOP_912_7_fu_2592_activity
+Time resolution is 1 ps
+open_wave_config hdv_engine_dataflow_ana.wcfg
+source hdv_engine.tcl
+## log_wave -r /
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+## set designtopgroup [add_wave_group "Design Top Signals"]
+## set coutputgroup [add_wave_group "C Outputs" -into $designtopgroup]
+## set return_group [add_wave_group return(wire) -into $coutputgroup]
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/status_o -into $return_group -radix hex
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/pred_class_o -into $return_group -radix hex
+## set cinputgroup [add_wave_group "C Inputs" -into $designtopgroup]
+## set return_group [add_wave_group return(wire) -into $cinputgroup]
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/lhv_i -into $return_group -radix hex
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/bhv_i -into $return_group -radix hex
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/chv_i -into $return_group -radix hex
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/df_i -into $return_group -radix hex
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/frame_in -into $return_group -radix hex
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/op_mode_i -into $return_group -radix hex
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/nrst_i -into $return_group -radix hex
+## set blocksiggroup [add_wave_group "Block-level IO Handshake" -into $designtopgroup]
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/ap_start -into $blocksiggroup
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/ap_done -into $blocksiggroup
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/ap_idle -into $blocksiggroup
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/ap_ready -into $blocksiggroup
+## set resetgroup [add_wave_group "Reset" -into $designtopgroup]
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/ap_rst -into $resetgroup
+## set clockgroup [add_wave_group "Clock" -into $designtopgroup]
+## add_wave /apatb_hdv_engine_top/AESL_inst_hdv_engine/ap_clk -into $clockgroup
+## set testbenchgroup [add_wave_group "Test Bench Signals"]
+## set tbinternalsiggroup [add_wave_group "Internal Signals" -into $testbenchgroup]
+## set tb_simstatus_group [add_wave_group "Simulation Status" -into $tbinternalsiggroup]
+## set tb_portdepth_group [add_wave_group "Port Depth" -into $tbinternalsiggroup]
+## add_wave /apatb_hdv_engine_top/AUTOTB_TRANSACTION_NUM -into $tb_simstatus_group -radix hex
+## add_wave /apatb_hdv_engine_top/ready_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_hdv_engine_top/done_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_hdv_engine_top/LENGTH_bhv_i -into $tb_portdepth_group -radix hex
+## add_wave /apatb_hdv_engine_top/LENGTH_chv_i -into $tb_portdepth_group -radix hex
+## add_wave /apatb_hdv_engine_top/LENGTH_df_i -into $tb_portdepth_group -radix hex
+## add_wave /apatb_hdv_engine_top/LENGTH_frame_in -into $tb_portdepth_group -radix hex
+## add_wave /apatb_hdv_engine_top/LENGTH_lhv_i -into $tb_portdepth_group -radix hex
+## add_wave /apatb_hdv_engine_top/LENGTH_nrst_i -into $tb_portdepth_group -radix hex
+## add_wave /apatb_hdv_engine_top/LENGTH_op_mode_i -into $tb_portdepth_group -radix hex
+## add_wave /apatb_hdv_engine_top/LENGTH_pred_class_o -into $tb_portdepth_group -radix hex
+## add_wave /apatb_hdv_engine_top/LENGTH_status_o -into $tb_portdepth_group -radix hex
+## set tbcoutputgroup [add_wave_group "C Outputs" -into $testbenchgroup]
+## set tb_return_group [add_wave_group return(wire) -into $tbcoutputgroup]
+## add_wave /apatb_hdv_engine_top/status_o -into $tb_return_group -radix hex
+## add_wave /apatb_hdv_engine_top/pred_class_o -into $tb_return_group -radix hex
+## set tbcinputgroup [add_wave_group "C Inputs" -into $testbenchgroup]
+## set tb_return_group [add_wave_group return(wire) -into $tbcinputgroup]
+## add_wave /apatb_hdv_engine_top/lhv_i -into $tb_return_group -radix hex
+## add_wave /apatb_hdv_engine_top/bhv_i -into $tb_return_group -radix hex
+## add_wave /apatb_hdv_engine_top/chv_i -into $tb_return_group -radix hex
+## add_wave /apatb_hdv_engine_top/df_i -into $tb_return_group -radix hex
+## add_wave /apatb_hdv_engine_top/frame_in -into $tb_return_group -radix hex
+## add_wave /apatb_hdv_engine_top/op_mode_i -into $tb_return_group -radix hex
+## add_wave /apatb_hdv_engine_top/nrst_i -into $tb_return_group -radix hex
+## save_wave_config hdv_engine.wcfg
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 146 [0.00%] @ "113000"
+// RTL Simulation : 1 / 146 [100.00%] @ "148000"
+// RTL Simulation : 2 / 146 [100.00%] @ "243000"
+// RTL Simulation : 3 / 146 [100.00%] @ "338000"
+// RTL Simulation : 4 / 146 [100.00%] @ "433000"
+// RTL Simulation : 5 / 146 [100.00%] @ "528000"
+// RTL Simulation : 6 / 146 [100.00%] @ "648000"
+// RTL Simulation : 7 / 146 [100.00%] @ "768000"
+// RTL Simulation : 8 / 146 [100.00%] @ "888000"
+// RTL Simulation : 9 / 146 [100.00%] @ "983000"
+// RTL Simulation : 10 / 146 [100.00%] @ "1078000"
+// RTL Simulation : 11 / 146 [100.00%] @ "1173000"
+// RTL Simulation : 12 / 146 [100.00%] @ "1293000"
+// RTL Simulation : 13 / 146 [100.00%] @ "1413000"
+// RTL Simulation : 14 / 146 [100.00%] @ "1533000"
+// RTL Simulation : 15 / 146 [100.00%] @ "1628000"
+// RTL Simulation : 16 / 146 [100.00%] @ "1723000"
+// RTL Simulation : 17 / 146 [100.00%] @ "1818000"
+// RTL Simulation : 18 / 146 [100.00%] @ "1938000"
+// RTL Simulation : 19 / 146 [100.00%] @ "2058000"
+// RTL Simulation : 20 / 146 [100.00%] @ "2178000"
+// RTL Simulation : 21 / 146 [100.00%] @ "2273000"
+// RTL Simulation : 22 / 146 [100.00%] @ "2368000"
+// RTL Simulation : 23 / 146 [100.00%] @ "2463000"
+// RTL Simulation : 24 / 146 [100.00%] @ "2583000"
+// RTL Simulation : 25 / 146 [100.00%] @ "2703000"
+// RTL Simulation : 26 / 146 [100.00%] @ "2823000"
+// RTL Simulation : 27 / 146 [100.00%] @ "2918000"
+// RTL Simulation : 28 / 146 [100.00%] @ "3013000"
+// RTL Simulation : 29 / 146 [100.00%] @ "3108000"
+// RTL Simulation : 30 / 146 [100.00%] @ "3228000"
+// RTL Simulation : 31 / 146 [100.00%] @ "3348000"
+// RTL Simulation : 32 / 146 [100.00%] @ "3468000"
+// RTL Simulation : 33 / 146 [100.00%] @ "3563000"
+// RTL Simulation : 34 / 146 [100.00%] @ "3658000"
+// RTL Simulation : 35 / 146 [100.00%] @ "3753000"
+// RTL Simulation : 36 / 146 [100.00%] @ "3873000"
+// RTL Simulation : 37 / 146 [100.00%] @ "3993000"
+// RTL Simulation : 38 / 146 [100.00%] @ "4113000"
+// RTL Simulation : 39 / 146 [100.00%] @ "4208000"
+// RTL Simulation : 40 / 146 [100.00%] @ "4303000"
+// RTL Simulation : 41 / 146 [100.00%] @ "4398000"
+// RTL Simulation : 42 / 146 [100.00%] @ "4518000"
+// RTL Simulation : 43 / 146 [100.00%] @ "4638000"
+// RTL Simulation : 44 / 146 [100.00%] @ "4758000"
+// RTL Simulation : 45 / 146 [100.00%] @ "4853000"
+// RTL Simulation : 46 / 146 [100.00%] @ "4948000"
+// RTL Simulation : 47 / 146 [100.00%] @ "5043000"
+// RTL Simulation : 48 / 146 [100.00%] @ "5163000"
+// RTL Simulation : 49 / 146 [100.00%] @ "5283000"
+// RTL Simulation : 50 / 146 [100.00%] @ "5423000"
+// RTL Simulation : 51 / 146 [100.00%] @ "5518000"
+// RTL Simulation : 52 / 146 [100.00%] @ "5613000"
+// RTL Simulation : 53 / 146 [100.00%] @ "5708000"
+// RTL Simulation : 54 / 146 [100.00%] @ "5828000"
+// RTL Simulation : 55 / 146 [100.00%] @ "5948000"
+// RTL Simulation : 56 / 146 [100.00%] @ "6068000"
+// RTL Simulation : 57 / 146 [100.00%] @ "6163000"
+// RTL Simulation : 58 / 146 [100.00%] @ "6258000"
+// RTL Simulation : 59 / 146 [100.00%] @ "6353000"
+// RTL Simulation : 60 / 146 [100.00%] @ "6473000"
+// RTL Simulation : 61 / 146 [100.00%] @ "6593000"
+// RTL Simulation : 62 / 146 [100.00%] @ "6713000"
+// RTL Simulation : 63 / 146 [100.00%] @ "6808000"
+// RTL Simulation : 64 / 146 [100.00%] @ "6903000"
+// RTL Simulation : 65 / 146 [100.00%] @ "6998000"
+// RTL Simulation : 66 / 146 [100.00%] @ "7118000"
+// RTL Simulation : 67 / 146 [100.00%] @ "7238000"
+// RTL Simulation : 68 / 146 [100.00%] @ "7358000"
+// RTL Simulation : 69 / 146 [100.00%] @ "7453000"
+// RTL Simulation : 70 / 146 [100.00%] @ "7548000"
+// RTL Simulation : 71 / 146 [100.00%] @ "7643000"
+// RTL Simulation : 72 / 146 [100.00%] @ "7763000"
+// RTL Simulation : 73 / 146 [100.00%] @ "7883000"
+// RTL Simulation : 74 / 146 [100.00%] @ "8003000"
+// RTL Simulation : 75 / 146 [100.00%] @ "8098000"
+// RTL Simulation : 76 / 146 [100.00%] @ "8193000"
+// RTL Simulation : 77 / 146 [100.00%] @ "8288000"
+// RTL Simulation : 78 / 146 [100.00%] @ "8408000"
+// RTL Simulation : 79 / 146 [100.00%] @ "8528000"
+// RTL Simulation : 80 / 146 [100.00%] @ "8648000"
+// RTL Simulation : 81 / 146 [100.00%] @ "8743000"
+// RTL Simulation : 82 / 146 [100.00%] @ "8838000"
+// RTL Simulation : 83 / 146 [100.00%] @ "8933000"
+// RTL Simulation : 84 / 146 [100.00%] @ "9053000"
+// RTL Simulation : 85 / 146 [100.00%] @ "9173000"
+// RTL Simulation : 86 / 146 [100.00%] @ "9293000"
+// RTL Simulation : 87 / 146 [100.00%] @ "9388000"
+// RTL Simulation : 88 / 146 [100.00%] @ "9483000"
+// RTL Simulation : 89 / 146 [100.00%] @ "9578000"
+// RTL Simulation : 90 / 146 [100.00%] @ "9698000"
+// RTL Simulation : 91 / 146 [100.00%] @ "9818000"
+// RTL Simulation : 92 / 146 [100.00%] @ "9938000"
+// RTL Simulation : 93 / 146 [100.00%] @ "10033000"
+// RTL Simulation : 94 / 146 [100.00%] @ "10128000"
+// RTL Simulation : 95 / 146 [100.00%] @ "10223000"
+// RTL Simulation : 96 / 146 [100.00%] @ "10343000"
+// RTL Simulation : 97 / 146 [100.00%] @ "10463000"
+// RTL Simulation : 98 / 146 [100.00%] @ "10603000"
+// RTL Simulation : 99 / 146 [100.00%] @ "10698000"
+// RTL Simulation : 100 / 146 [100.00%] @ "10793000"
+// RTL Simulation : 101 / 146 [100.00%] @ "10888000"
+// RTL Simulation : 102 / 146 [100.00%] @ "11008000"
+// RTL Simulation : 103 / 146 [100.00%] @ "11128000"
+// RTL Simulation : 104 / 146 [100.00%] @ "11248000"
+// RTL Simulation : 105 / 146 [100.00%] @ "11343000"
+// RTL Simulation : 106 / 146 [100.00%] @ "11438000"
+// RTL Simulation : 107 / 146 [100.00%] @ "11533000"
+// RTL Simulation : 108 / 146 [100.00%] @ "11653000"
+// RTL Simulation : 109 / 146 [100.00%] @ "11773000"
+// RTL Simulation : 110 / 146 [100.00%] @ "11893000"
+// RTL Simulation : 111 / 146 [100.00%] @ "11988000"
+// RTL Simulation : 112 / 146 [100.00%] @ "12083000"
+// RTL Simulation : 113 / 146 [100.00%] @ "12178000"
+// RTL Simulation : 114 / 146 [100.00%] @ "12298000"
+// RTL Simulation : 115 / 146 [100.00%] @ "12418000"
+// RTL Simulation : 116 / 146 [100.00%] @ "12538000"
+// RTL Simulation : 117 / 146 [100.00%] @ "12633000"
+// RTL Simulation : 118 / 146 [100.00%] @ "12728000"
+// RTL Simulation : 119 / 146 [100.00%] @ "12823000"
+// RTL Simulation : 120 / 146 [100.00%] @ "12943000"
+// RTL Simulation : 121 / 146 [100.00%] @ "13063000"
+// RTL Simulation : 122 / 146 [100.00%] @ "13183000"
+// RTL Simulation : 123 / 146 [100.00%] @ "13278000"
+// RTL Simulation : 124 / 146 [100.00%] @ "13373000"
+// RTL Simulation : 125 / 146 [100.00%] @ "13468000"
+// RTL Simulation : 126 / 146 [100.00%] @ "13588000"
+// RTL Simulation : 127 / 146 [100.00%] @ "13708000"
+// RTL Simulation : 128 / 146 [100.00%] @ "13828000"
+// RTL Simulation : 129 / 146 [100.00%] @ "13923000"
+// RTL Simulation : 130 / 146 [100.00%] @ "14018000"
+// RTL Simulation : 131 / 146 [100.00%] @ "14113000"
+// RTL Simulation : 132 / 146 [100.00%] @ "14233000"
+// RTL Simulation : 133 / 146 [100.00%] @ "14353000"
+// RTL Simulation : 134 / 146 [100.00%] @ "14473000"
+// RTL Simulation : 135 / 146 [100.00%] @ "14568000"
+// RTL Simulation : 136 / 146 [100.00%] @ "14663000"
+// RTL Simulation : 137 / 146 [100.00%] @ "14758000"
+// RTL Simulation : 138 / 146 [100.00%] @ "14878000"
+// RTL Simulation : 139 / 146 [100.00%] @ "14998000"
+// RTL Simulation : 140 / 146 [100.00%] @ "15118000"
+// RTL Simulation : 141 / 146 [100.00%] @ "15213000"
+// RTL Simulation : 142 / 146 [100.00%] @ "15308000"
+// RTL Simulation : 143 / 146 [100.00%] @ "15403000"
+// RTL Simulation : 144 / 146 [100.00%] @ "15523000"
+// RTL Simulation : 145 / 146 [100.00%] @ "15643000"
+// RTL Simulation : 146 / 146 [100.00%] @ "15783000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 15812500 ps : File "C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/solution1/sim/verilog/hdv_engine.autotb.v" Line 584
+## quit
+INFO: [Common 17-206] Exiting xsim at Mon Jun 24 10:13:25 2024...
+Test index: 0, Correct Label: 0, Predicted: 0, Percentage: 0%
+[--------------------]
+Accuracy: 1
+Precision: 0.333333
+Test index: 1, Correct Label: 0, Predicted: 0, Percentage: 50%
+[##########----------]
+Accuracy: 1
+Precision: 0.333333
+Test index: 2, Correct Label: 0, Predicted: 0, Percentage: 100%
+[####################]
+Accuracy: 1
+Precision: 0.333333
+INFO: [COSIM-1000] *** C/RTL co-simulation finished: PASS ***

@@ -1,9 +1,7 @@
 set depth_list {
   {bhv_i 1}
   {chv_i 1}
-  {chv_o 1}
   {frame_in 1}
-  {lable_class_i 1}
   {lhv_i 1}
   {nrst_i 1}
   {op_mode_i 1}

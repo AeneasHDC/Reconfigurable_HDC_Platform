@@ -1,0 +1,3278 @@
+{
+    "RptDoc": {
+        "@cmdline": "",
+        "@designname": "",
+        "@designstate": "",
+        "@partname": "",
+        "@speedfile": "",
+        "@title": "Power Report",
+        "@version": "1",
+        "section": [
+            {
+                "@class": "",
+                "@title": "Summary",
+                "table": {
+                    "@class": "",
+                    "@style": "2",
+                    "@title": "",
+                    "@useFootnoteNumbers": "0",
+                    "footnote": {
+                        "@text": "Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>"
+                    },
+                    "tablerow": [
+                        {
+                            "@class": "",
+                            "@suppressoutput": "0",
+                            "@wordwrap": "0",
+                            "tablecell": [
+                                {
+                                    "@class": "",
+                                    "@contents": "Total On-Chip Power (W)",
+                                    "@halign": "0",
+                                    "@type": "string"
+                                },
+                                {
+                                    "@class": "",
+                                    "@contents": "0.639",
+                                    "@halign": "0",
+                                    "@type": "string"
+                                }
+                            ]
+                        },
+                        {
+                            "@class": "",
+                            "@suppressoutput": "0",
+                            "@wordwrap": "0",
+                            "tablecell": [
+                                {
+                                    "@class": "",
+                                    "@contents": "Design Power Budget (W)",
+                                    "@halign": "0",
+                                    "@type": "string"
+                                },
+                                {
+                                    "@class": "",
+                                    "@contents": "Unspecified*",
+                                    "@halign": "0",
+                                    "@type": "string"
+                                }
+                            ]
+                        },
+                        {
+                            "@class": "",
+                            "@suppressoutput": "0",
+                            "@wordwrap": "0",
+                            "tablecell": [
+                                {
+                                    "@class": "",
+                                    "@contents": "Power Budget Margin (W)",
+                                    "@halign": "0",
+                                    "@type": "string"
+                                },
+                                {
+                                    "@class": "",
+                                    "@contents": "NA",
+                                    "@halign": "0",
+                                    "@type": "string"
+                                }
+                            ]
+                        },
+                        {
+                            "@class": "",
+                            "@suppressoutput": "0",
+                            "@wordwrap": "0",
+                            "tablecell": [
+                                {
+                                    "@class": "",
+                                    "@contents": "Dynamic (W)",
+                                    "@halign": "0",
+                                    "@type": "string"
+                                },
+                                {
+                                    "@class": "",
+                                    "@contents": "0.018",
+                                    "@halign": "0",
+                                    "@type": "string"
+                                }
+                            ]
+                        },
+                        {
+                            "@class": "",
+                            "@suppressoutput": "0",
+                            "@wordwrap": "0",
+                            "tablecell": [
+                                {
+                                    "@class": "",
+                                    "@contents": "Device Static (W)",
+                                    "@halign": "0",
+                                    "@type": "string"
+                                },
+                                {
+                                    "@class": "",
+                                    "@contents": "0.620",
+                                    "@halign": "0",
+                                    "@type": "string"
+                                }
+                            ]
+                        },
+                        {
+                            "@class": "",
+                            "@suppressoutput": "0",
+                            "@wordwrap": "0",
+                            "tablecell": [
+                                {
+                                    "@class": "",
+                                    "@contents": "Effective TJA (C/W)",
+                                    "@halign": "0",
+                                    "@type": "string"
+                                },
+                                {
+                                    "@class": "",
+                                    "@contents": "1.0",
+                                    "@halign": "0",
+                                    "@type": "string"
+                                }
+                            ]
+                        },
+                        {
+                            "@class": "",
+                            "@suppressoutput": "0",
+                            "@wordwrap": "0",
+                            "tablecell": [
+                                {
+                                    "@class": "",
+                                    "@contents": "Max Ambient (C)",
+                                    "@halign": "0",
+                                    "@type": "string"
+                                },
+                                {
+                                    "@class": "",
+                                    "@contents": "99.4",
+                                    "@halign": "0",
+                                    "@type": "string"
+                                }
+                            ]
+                        },
+                        {
+                            "@class": "",
+                            "@suppressoutput": "0",
+                            "@wordwrap": "0",
+                            "tablecell": [
+                                {
+                                    "@class": "",
+                                    "@contents": "Junction Temperature (C)",
+                                    "@halign": "0",
+                                    "@type": "string"
+                                },
+                                {
+                                    "@class": "",
+                                    "@contents": "25.6",
+                                    "@halign": "0",
+                                    "@type": "string"
+                                }
+                            ]
+                        },
+                        {
+                            "@class": "",
+                            "@suppressoutput": "0",
+                            "@wordwrap": "0",
+                            "tablecell": [
+                                {
+                                    "@class": "",
+                                    "@contents": "Confidence Level",
+                                    "@halign": "0",
+                                    "@type": "string"
+                                },
+                                {
+                                    "@class": "",
+                                    "@contents": "Low",
+                                    "@halign": "0",
+                                    "@type": "string"
+                                }
+                            ]
+                        },
+                        {
+                            "@class": "",
+                            "@suppressoutput": "0",
+                            "@wordwrap": "0",
+                            "tablecell": [
+                                {
+                                    "@class": "",
+                                    "@contents": "Setting File",
+                                    "@halign": "0",
+                                    "@type": "string"
+                                },
+                                {
+                                    "@class": "",
+                                    "@contents": "---",
+                                    "@halign": "0",
+                                    "@type": "string"
+                                }
+                            ]
+                        },
+                        {
+                            "@class": "",
+                            "@suppressoutput": "0",
+                            "@wordwrap": "0",
+                            "tablecell": [
+                                {
+                                    "@class": "",
+                                    "@contents": "Simulation Activity File",
+                                    "@halign": "0",
+                                    "@type": "string"
+                                },
+                                {
+                                    "@class": "",
+                                    "@contents": "---",
+                                    "@halign": "0",
+                                    "@type": "string"
+                                }
+                            ]
+                        },
+                        {
+                            "@class": "",
+                            "@suppressoutput": "0",
+                            "@wordwrap": "0",
+                            "tablecell": [
+                                {
+                                    "@class": "",
+                                    "@contents": "Design Nets Matched",
+                                    "@halign": "0",
+                                    "@type": "string"
+                                },
+                                {
+                                    "@class": "",
+                                    "@contents": "NA",
+                                    "@halign": "0",
+                                    "@type": "string"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "section": [
+                    {
+                        "@class": "",
+                        "@title": "On-Chip Components",
+                        "table": {
+                            "@class": "",
+                            "@style": "2",
+                            "@title": "",
+                            "@useFootnoteNumbers": "0",
+                            "tablerow": [
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tableheader": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "On-Chip",
+                                            "@halign": "1",
+                                            "@width": "-1"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Power (W)",
+                                            "@halign": "1",
+                                            "@width": "-1"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Used",
+                                            "@halign": "1",
+                                            "@width": "-1"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Available",
+                                            "@halign": "1",
+                                            "@width": "-1"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Utilization (%)",
+                                            "@halign": "1",
+                                            "@width": "-1"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "Clocks",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "    0.000",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "       3",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "      ---",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "            ---",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "CLB Logic",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "    0.006",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "    7872",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "      ---",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "            ---",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "  LUT as Logic",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "    0.006",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "    3043",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "   274080",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "           1.11",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "  Register",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "   <0.001",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "    3291",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "   548160",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "           0.60",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "  CARRY8",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "   <0.001",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "     266",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "    34260",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "           0.78",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "  LUT as Distributed RAM",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "   <0.001",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "       2",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "   144000",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "          <0.01",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "  BUFG",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "   <0.001",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "       1",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "       32",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "           3.13",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "  Others",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "    0.000",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "      24",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "      ---",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "            ---",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "  F7/F8 Muxes",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "    0.000",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "      32",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "   274080",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "           0.01",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "Signals",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "    0.005",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "    9507",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "      ---",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "            ---",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "Block RAM",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "   <0.001",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "     0.5",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "      912",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "           0.05",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "I/O",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "    0.008",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "     243",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "      328",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "          74.09",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "Static Power",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "    0.620",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "Total",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "    0.639",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "@class": "",
+                        "@title": "Power Supply Summary",
+                        "table": {
+                            "@class": "",
+                            "@style": "2",
+                            "@title": "",
+                            "@useFootnoteNumbers": "0",
+                            "tablerow": [
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tableheader": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "Source",
+                                            "@halign": "1",
+                                            "@width": "-1"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Voltage (V)",
+                                            "@halign": "1",
+                                            "@width": "-1"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Total (A)",
+                                            "@halign": "1",
+                                            "@width": "-1"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Dynamic (A)",
+                                            "@halign": "1",
+                                            "@width": "-1"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Static (A)",
+                                            "@halign": "1",
+                                            "@width": "-1"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Powerup (A)",
+                                            "@halign": "1",
+                                            "@width": "-1"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Budget (A)",
+                                            "@halign": "1",
+                                            "@width": "-1"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Margin (A)",
+                                            "@halign": "1",
+                                            "@width": "-1"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "Vccint",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.850000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.191233",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.012583",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.178651",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "      NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Unspecified",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "Vccint_io",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.850000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.037600",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.002283",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.035317",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "      NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Unspecified",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "Vccbram",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.850000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.002653",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000004",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.002649",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "      NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Unspecified",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "Vccaux",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "1.800000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.194696",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.194696",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "      NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Unspecified",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "Vccaux_io",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "1.800000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.035059",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.002444",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.032615",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "      NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Unspecified",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "Vcco33",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "3.300000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "      NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Unspecified",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "Vcco25",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "2.500000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "      NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Unspecified",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "Vcco18",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "1.800000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000764",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000756",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000008",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "      NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Unspecified",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "Vcco15",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "1.500000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "      NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Unspecified",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "Vcco135",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "1.350000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "      NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Unspecified",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "Vcco12",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "1.200000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "      NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Unspecified",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "Vcco10",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "1.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "      NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Unspecified",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "Vccadc",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "1.800000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.008000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.008000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "      NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Unspecified",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "VCC_PSINTFP",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.850000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "      NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Unspecified",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "VCC_PSINTLP",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.850000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.004915",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.004915",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "      NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Unspecified",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "VPS_MGTRAVCC",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.850000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "      NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Unspecified",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "VCC_PSINTFP_DDR",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.850000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "      NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Unspecified",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "VCC_PSPLL",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "1.200000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.001500",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.001500",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "      NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Unspecified",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "VPS_MGTRAVTT",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "1.800000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "      NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Unspecified",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "VCCO_PSDDR_504",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "1.200000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "      NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Unspecified",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "VCC_PSAUX",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "1.800000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.002200",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.002200",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "      NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Unspecified",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "VCC_PSBATT",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "1.200000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "      NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Unspecified",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "VCC_PSDDR_PLL",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "1.800000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "      NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Unspecified",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "VCCO_PSIO0_500",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "3.300000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "      NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Unspecified",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "VCCO_PSIO1_501",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "3.300000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "      NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Unspecified",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "VCCO_PSIO2_502",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "3.300000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "      NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Unspecified",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "VCCO_PSIO3_503",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "3.300000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "      NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Unspecified",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "VCC_PSADC",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "1.800000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.001500",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.001500",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "      NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Unspecified",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "MGTAVcc",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.900000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "      NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Unspecified",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "MGTAVtt",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "1.200000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "      NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Unspecified",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "MGTVccaux",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "1.800000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "0.000000",
+                                            "@decimalplaces": "3",
+                                            "@halign": "0",
+                                            "@type": "double"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "      NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Unspecified",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "NA",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "@class": "",
+                        "@title": "Confidence Level",
+                        "table": {
+                            "@class": "",
+                            "@style": "2",
+                            "@title": "",
+                            "@useFootnoteNumbers": "0",
+                            "tablerow": [
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tableheader": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "User Input Data",
+                                            "@halign": "1",
+                                            "@width": "-1"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Confidence",
+                                            "@halign": "1",
+                                            "@width": "-1"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Details",
+                                            "@halign": "1",
+                                            "@width": "-1"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Action",
+                                            "@halign": "1",
+                                            "@width": "-1"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "Design implementation state",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Low",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Design is synthesized",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Accuracy of the tool is not optimal until design is fully placed and routed",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "Clock nodes activity",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Low",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "User specified less than 75% of clocks",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Provide missing clock activity with a constraint file, simulation results or by editing the \"By Clock Domain\" view",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "I/O nodes activity",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Low",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "More than 75% of inputs are missing user specification",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Provide missing input activity with simulation results or by editing the \"By Resource Type -> I/Os\" view",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "Internal nodes activity",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Medium",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "User specified less than 25% of internal nodes",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Provide missing internal nodes activity with simulation results or by editing the \"By Resource Type\" views",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "Device models",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "High",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Device models are Production",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "Overall confidence level",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "Low",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "@class": "",
+                "@title": "Settings",
+                "section": [
+                    {
+                        "@class": "",
+                        "@title": "Environment",
+                        "table": {
+                            "@class": "",
+                            "@style": "2",
+                            "@title": "",
+                            "@useFootnoteNumbers": "0",
+                            "tablerow": [
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "Ambient Temp (C)",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "25.0",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "ThetaJA (C/W)",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "1.0",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "Airflow (LFM)",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "250",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "Heat Sink",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "medium (Medium Profile)",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "ThetaSA (C/W)",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "1.5",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "Board Selection",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "medium (10\"x10\")",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "# of Board Layers",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "12to15 (12 to 15 Layers)",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "@class": "",
+                                    "@suppressoutput": "0",
+                                    "@wordwrap": "0",
+                                    "tablecell": [
+                                        {
+                                            "@class": "",
+                                            "@contents": "Board Temperature (C)",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        },
+                                        {
+                                            "@class": "",
+                                            "@contents": "25.0",
+                                            "@halign": "0",
+                                            "@type": "string"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "@class": "",
+                        "@title": "Clock Constraints",
+                        "table": {
+                            "@class": "",
+                            "@style": "2",
+                            "@title": "",
+                            "@useFootnoteNumbers": "0",
+                            "tablerow": {
+                                "@class": "",
+                                "@suppressoutput": "0",
+                                "@wordwrap": "0",
+                                "tableheader": [
+                                    {
+                                        "@class": "",
+                                        "@contents": "Clock",
+                                        "@halign": "1",
+                                        "@width": "-1"
+                                    },
+                                    {
+                                        "@class": "",
+                                        "@contents": "Domain",
+                                        "@halign": "1",
+                                        "@width": "-1"
+                                    },
+                                    {
+                                        "@class": "",
+                                        "@contents": "Constraint (ns)",
+                                        "@halign": "1",
+                                        "@width": "-1"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "@class": "",
+                "@title": "Detailed Reports",
+                "section": {
+                    "@class": "",
+                    "@title": "By Hierarchy",
+                    "table": {
+                        "@class": "",
+                        "@style": "2",
+                        "@title": "",
+                        "@useFootnoteNumbers": "0",
+                        "tablerow": [
+                            {
+                                "@class": "",
+                                "@suppressoutput": "0",
+                                "@wordwrap": "0",
+                                "tableheader": [
+                                    {
+                                        "@class": "",
+                                        "@contents": "Name",
+                                        "@halign": "1",
+                                        "@width": "-1"
+                                    },
+                                    {
+                                        "@class": "",
+                                        "@contents": "Power (W)",
+                                        "@halign": "1",
+                                        "@width": "-1"
+                                    }
+                                ]
+                            },
+                            {
+                                "@class": "",
+                                "@suppressoutput": "0",
+                                "@wordwrap": "0",
+                                "tablecell": [
+                                    {
+                                        "@class": "",
+                                        "@contents": "hdv_engine",
+                                        "@halign": "0",
+                                        "@type": "string"
+                                    },
+                                    {
+                                        "@class": "",
+                                        "@contents": "    0.018",
+                                        "@halign": "0",
+                                        "@type": "string"
+                                    }
+                                ]
+                            },
+                            {
+                                "@class": "",
+                                "@suppressoutput": "0",
+                                "@wordwrap": "0",
+                                "tablecell": [
+                                    {
+                                        "@class": "",
+                                        "@contents": "  mul_7s_7ns_7_1_1_U17",
+                                        "@halign": "0",
+                                        "@type": "string"
+                                    },
+                                    {
+                                        "@class": "",
+                                        "@contents": "    0.002",
+                                        "@halign": "0",
+                                        "@type": "string"
+                                    }
+                                ]
+                            },
+                            {
+                                "@class": "",
+                                "@suppressoutput": "0",
+                                "@wordwrap": "0",
+                                "tablecell": [
+                                    {
+                                        "@class": "",
+                                        "@contents": "  shifted_bits_U",
+                                        "@halign": "0",
+                                        "@type": "string"
+                                    },
+                                    {
+                                        "@class": "",
+                                        "@contents": "    0.001",
+                                        "@halign": "0",
+                                        "@type": "string"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

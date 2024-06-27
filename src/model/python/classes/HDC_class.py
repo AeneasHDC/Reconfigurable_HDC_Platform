@@ -121,7 +121,7 @@ class HDC_op:
             'seed': 0
         }
     
-        self.lookup_table = auxiliary_functions.create_lut_efficient(config.DO_CLASS_W_BITS)
+        self.lookup_table = auxiliary_functions.create_lut_efficient(config.CV_DATA_W_BITS)
         # print the lut
         for key, value in self.lookup_table.items():
             print(key, ' : ', value)
@@ -390,7 +390,7 @@ class HDC_op:
                     # Calculate dot product with bitwise shift
                     HV1     = HV1.astype(int)
                     HV2     = HV2.astype(int)
-                    dot     = sum((HV1[i] << HV2[i]) if HV1[i] != 0 and HV2[i] != 0 else 0 for i in range(len(HV1)))
+                    dot = sum((1 << (HV1[i] + HV2[i])) if HV1[i] != 0 and HV2[i] != 0 else 0 for i in range(len(HV1)))
                     denom_a = np.sqrt(sum(1 << (x<<1) if x != 0 else 0 for x in HV1))
                     denom_b = np.sqrt(sum(1 << (x<<1) if x != 0 else 0 for x in HV2))
                 else:
@@ -463,7 +463,7 @@ class HDC_op:
         elif clipping_type == config.CLIPPING_QUANTIZED:
             # Quantized clipping
             print("Clipping mode --> Quantized clipping mode")
-            
+
             # Max value that can be represented with the given number of bits
             max_val = 2**config.CV_DATA_W_BITS - 1
             max_ds_val=config.DS_TRAIN_SIZE*config.EPOCH
@@ -477,8 +477,7 @@ class HDC_op:
         elif clipping_type == config.CLIPPING_POWERTWO:
             print("Clipping mode --> Power of two clipping mode")
             result = [auxiliary_functions.get_closest_poweroftwo_using_lut(self.lookup_table,num.astype(int)) for num in HV1]
-            
-        
+
         elif clipping_type == config.CLIPPING_QUANTIZED_POWERTWO: 
             print("Clipping mode --> Quantized Power of Two clipping mode")
             

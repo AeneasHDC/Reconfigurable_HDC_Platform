@@ -83,6 +83,10 @@ bhv_p_t bhv_i;                     ///< Input data structure containing base hyp
 
 lhv_p_t lhv_i;                     ///< Input data structure containing level hyperdimensional vectors.
 
+#if ( LV_MODE == LV_M_LOGIC &&  HD_LV_TYPE == APPROX )
+	lhv_p_t lhv_i0;                     ///< Input data structure containing level hyperdimensional vectors.
+	lhv_p_t lhv_i1;                     ///< Input data structure containing level hyperdimensional vectors.
+#endif
 chv_p_t chv_i;                     ///< Input data structure containing class hyperdimensional vectors.
 chv_t chv_o;                     ///< Output data structure containing class hyperdimensional vectors.
 
@@ -156,7 +160,10 @@ void run_HdlProcessing()
 			#if ( LV_MODE == LV_M_INT_MEM )
 			     lhv_i,
 			#endif
-
+			#if ( LV_MODE == LV_M_LOGIC &&  HD_LV_TYPE == APPROX )
+				lhv_i0,
+				lhv_i1,
+			#endif
 			#if ( AXI_CNTR_PORT_EN )
 				axi_if_cmd,
 				&axi_if_data,
@@ -242,6 +249,10 @@ int main( )
 
 	// Vectors for reading BV, LV, and CV from memory (used when BV_MODE, LV_MODE, and CV_MODE are set to *_M_INT_MEM)
     std::vector<int> datalvh;
+	#if ( LV_MODE == LV_M_LOGIC &&  HD_LV_TYPE == APPROX )
+		std::vector<int> datalvh_0;
+		std::vector<int> datalvh_1;
+	#endif
     std::vector<int> databvh;
     std::vector<int> datacvh;
 
@@ -464,6 +475,7 @@ int main( )
 						}
 					#endif
 
+
 					AXI_VALUE aValue;
 					for ( int feature_p_id = 0; feature_p_id < end_index; feature_p_id+=1 )
 					{
@@ -503,6 +515,15 @@ int main( )
 						}
 						#endif
 
+						#if ( LV_MODE == LV_M_LOGIC &&  HD_LV_TYPE == APPROX )
+						{
+								CSVReader<int> file_lvh(TB_LEVELHVS_FILE);
+								datalvh_0 = file_lvh.readRow();
+								datalvh_1 = file_lvh.readRow();
+								file_lvh.closeFile();
+						}
+						#endif
+
 						// For each feature, read the corresponding index BV from memory. (Only for the Record encoding technique)
 						#if ( ENCODING_TECHNIQUE==ENCODING_RECORD && BV_MODE == BV_M_INT_MEM )			
 						{
@@ -531,6 +552,16 @@ int main( )
 							for ( int i = 0; i < DI_PARALLEL_W_BITS; i++ )
 							{
 								lhv_i.el[feature_p_id].lvh[i] = datalvh[ frame_id + i ];
+							}
+						}
+						#endif
+						#if ( LV_MODE == LV_M_LOGIC &&  HD_LV_TYPE == APPROX )
+						{
+							// Process the data.
+							for ( int i = 0; i < DI_PARALLEL_W_BITS; i++ )
+							{
+								lhv_i0.el[feature_p_id].lvh[i] = datalvh_0[ frame_id + i ];
+								lhv_i1.el[feature_p_id].lvh[i] = datalvh_1[ frame_id + i ];
 							}
 						}
 						#endif

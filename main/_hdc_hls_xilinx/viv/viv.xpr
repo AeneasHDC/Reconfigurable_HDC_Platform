@@ -7,7 +7,7 @@
 <Project Product="Vivado" Version="7" Minor="63" Path="C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/viv/viv.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="d8792b4735cf499f9690d9b2ea7a5c6c"/>
+    <Option Name="Id" Val="9ace7107f2b4479ea686288eeb787319"/>
     <Option Name="Part" Val="xczu9eg-ffvb1156-2-e"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -94,31 +94,55 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../out/hls/ip/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_273_1.vhd">
+      <File Path="$PPRDIR/../../../out/hls/ip/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_286_1.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../out/hls/ip/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_281_2.vhd">
+      <File Path="$PPRDIR/../../../out/hls/ip/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_294_2.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../out/hls/ip/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_494_4.vhd">
+      <File Path="$PPRDIR/../../../out/hls/ip/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_511_4.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../out/hls/ip/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_766_6.vhd">
+      <File Path="$PPRDIR/../../../out/hls/ip/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_916_7.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../out/hls/ip/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_912_9.vhd">
+      <File Path="$PPRDIR/../../../out/hls/ip/hdv_engine_hdv_engine_Pipeline_VITIS_LOOP_929_8.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../out/hls/ip/hdv_engine_mac_muladd_11ns_11ns_22ns_23_4_1.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../out/hls/ip/hdv_engine_mul_11ns_11ns_22_1_1.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../out/hls/ip/hdv_engine_mul_17ns_17ns_34_1_1.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../out/hls/ip/hdv_engine_mul_32s_15ns_47_1_1.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -130,19 +154,13 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../out/hls/ip/hdv_engine_mux_64_6_1_1_1.vhd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../out/hls/ip/hdv_engine_mux_64_6_32_1_1.vhd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PPRDIR/../../../out/hls/ip/hdv_engine_regslice_both.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../out/hls/ip/hdv_engine_udiv_64s_34ns_32_68_1.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>

@@ -1,5 +1,70 @@
 # This script segment is generated automatically by AutoPilot
 
+set name hdv_engine_mul_11ns_11ns_22_1_1
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 0 ALLOW_PRAGMA 1
+}
+
+
+set id 272
+set name hdv_engine_mac_muladd_11ns_11ns_22ns_23_4_1
+set corename simcore_mac
+set op mac
+set stage_num 4
+set clk_width 1
+set clk_signed 0
+set reset_width 1
+set reset_signed 0
+set in0_width 11
+set in0_signed 0
+set in1_width 11
+set in1_signed 0
+set in2_width 22
+set in2_signed 0
+set ce_width 1
+set ce_signed 0
+set out_width 23
+set arg_lists {i0 {11 0 +} i1 {11 0 +} m {22 0 +} i2 {22 0 +} p {23 0 +} c_reg {1} rnd {0} acc {0} }
+set TrueReset 0
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {all} IMPL {dsp48} LATENCY 3 ALLOW_PRAGMA 1
+}
+
+
+set op mac
+set corename DSP48
+if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
+if {[info proc ::AESL_LIB_VIRTEX::xil_gen_dsp48] == "::AESL_LIB_VIRTEX::xil_gen_dsp48"} {
+eval "::AESL_LIB_VIRTEX::xil_gen_dsp48 { \
+    id ${id} \
+    name ${name} \
+    corename ${corename} \
+    op ${op} \
+    reset_level 1 \
+    sync_rst true \
+    true_reset ${TrueReset} \
+    stage_num ${stage_num} \
+    clk_width ${clk_width} \
+    clk_signed ${clk_signed} \
+    reset_width ${reset_width} \
+    reset_signed ${reset_signed} \
+    in0_width ${in0_width} \
+    in0_signed ${in0_signed} \
+    in1_width ${in1_width} \
+    in1_signed ${in1_signed} \
+    in2_width ${in2_width} \
+    in2_signed ${in2_signed} \
+    ce_width ${ce_width} \
+    ce_signed ${ce_signed} \
+    out_width ${out_width} \
+    arg_lists {${arg_lists}} \
+}"
+} else {
+puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_dsp48, check your platform lib"
+}
+}
+
+
 # clear list
 if {${::AESL::PGuard_autoexp_gen}} {
     cg_default_interface_gen_dc_begin
@@ -12,7 +77,7 @@ set axilite_register_dict [dict create]
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 413 \
+    id 308 \
     name sdata_i_V_data_V \
     reset_level 0 \
     sync_rst true \
@@ -31,7 +96,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 414 \
+    id 309 \
     name sdata_i_V_keep_V \
     reset_level 0 \
     sync_rst true \
@@ -50,7 +115,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 415 \
+    id 310 \
     name sdata_i_V_strb_V \
     reset_level 0 \
     sync_rst true \
@@ -69,7 +134,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 416 \
+    id 311 \
     name sdata_i_V_user_V \
     reset_level 0 \
     sync_rst true \
@@ -88,7 +153,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 417 \
+    id 312 \
     name sdata_i_V_last_V \
     reset_level 0 \
     sync_rst true \
@@ -107,7 +172,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 418 \
+    id 313 \
     name sdata_i_V_id_V \
     reset_level 0 \
     sync_rst true \
@@ -126,7 +191,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::native_axis_add] == "::AESL_LIB_XILADAPTER::native_axis_add"} {
 eval "::AESL_LIB_XILADAPTER::native_axis_add { \
-    id 419 \
+    id 314 \
     name sdata_i_V_dest_V \
     reset_level 0 \
     sync_rst true \
@@ -144,7 +209,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 410 \
+    id 306 \
     name nrst_i \
     type other \
     dir I \
@@ -159,22 +224,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 411 \
-    name op_mode_i \
-    type other \
-    dir I \
-    reset_level 0 \
-    sync_rst true \
-    corename dc_op_mode_i \
-    op interface \
-    ports { op_mode_i { I 16 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 412 \
+    id 307 \
     name frame_in \
     type other \
     dir I \
@@ -189,7 +239,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 420 \
+    id 315 \
     name chv_i \
     type other \
     dir I \
@@ -197,29 +247,14 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_chv_i \
     op interface \
-    ports { chv_i { I 2048 vector } } \
+    ports { chv_i { I 704 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 421 \
-    name chv_o \
-    type other \
-    dir O \
-    reset_level 0 \
-    sync_rst true \
-    corename dc_chv_o \
-    op interface \
-    ports { chv_o { O 2048 vector } chv_o_ap_vld { O 1 bit } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 422 \
+    id 316 \
     name bhv_i \
     type other \
     dir I \
@@ -234,7 +269,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 423 \
+    id 317 \
     name lhv_i \
     type other \
     dir I \
@@ -249,22 +284,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 424 \
-    name lable_class_i \
-    type other \
-    dir I \
-    reset_level 0 \
-    sync_rst true \
-    corename dc_lable_class_i \
-    op interface \
-    ports { lable_class_i { I 6 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 425 \
+    id 318 \
     name pred_class_o \
     type other \
     dir O \
@@ -279,7 +299,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 426 \
+    id 319 \
     name status_o \
     type other \
     dir O \
@@ -356,7 +376,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 
 
 # RegSlice definition:
-set ID 427
+set ID 320
 set RegSliceName hdv_engine_regslice_both
 set RegSliceInstName hdv_engine_regslice_both_U
 set CoreName ap_simcore_hdv_engine_regslice_both
@@ -379,7 +399,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 
 # RegSlice definition:
-set ID 428
+set ID 321
 set RegSliceName hdv_engine_regslice_both
 set RegSliceInstName hdv_engine_regslice_both_U
 set CoreName ap_simcore_hdv_engine_regslice_both
@@ -402,7 +422,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 
 # RegSlice definition:
-set ID 429
+set ID 322
 set RegSliceName hdv_engine_regslice_both
 set RegSliceInstName hdv_engine_regslice_both_U
 set CoreName ap_simcore_hdv_engine_regslice_both
@@ -425,7 +445,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 
 # RegSlice definition:
-set ID 430
+set ID 323
 set RegSliceName hdv_engine_regslice_both
 set RegSliceInstName hdv_engine_regslice_both_U
 set CoreName ap_simcore_hdv_engine_regslice_both
@@ -448,7 +468,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 
 # RegSlice definition:
-set ID 431
+set ID 324
 set RegSliceName hdv_engine_regslice_both
 set RegSliceInstName hdv_engine_regslice_both_U
 set CoreName ap_simcore_hdv_engine_regslice_both
@@ -471,7 +491,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 
 # RegSlice definition:
-set ID 432
+set ID 325
 set RegSliceName hdv_engine_regslice_both
 set RegSliceInstName hdv_engine_regslice_both_U
 set CoreName ap_simcore_hdv_engine_regslice_both
@@ -494,7 +514,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_regSlice, check you
 
 
 # RegSlice definition:
-set ID 433
+set ID 326
 set RegSliceName hdv_engine_regslice_both
 set RegSliceInstName hdv_engine_regslice_both_U
 set CoreName ap_simcore_hdv_engine_regslice_both

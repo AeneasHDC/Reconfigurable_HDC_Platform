@@ -35,6 +35,7 @@ import subprocess
 import sys
 import webbrowser
 import time
+import json
 
 CONFIG_FILE = "anaconda_config.json"
 

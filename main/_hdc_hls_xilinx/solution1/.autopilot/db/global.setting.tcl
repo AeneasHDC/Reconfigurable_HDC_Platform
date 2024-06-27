@@ -13,7 +13,7 @@ set FftOrFirFlag 0
 set NbRWValue 1
 set intNbAccess 1
 set NewDSPMapping 1
-set HasDSPModule 0
+set HasDSPModule 1
 set ResetLevelFlag 0
 set ResetStyle control
 set ResetSyncFlag 1

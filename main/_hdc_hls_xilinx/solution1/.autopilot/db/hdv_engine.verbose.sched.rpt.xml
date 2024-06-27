@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'hdv_engine'" level="0">
-<item name = "Date">Fri Jun 21 16:47:15 2024
+<item name = "Date">Wed Jun 26 20:23:23 2024
 </item>
 <item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
 <item name = "Project">_hdc_hls_xilinx</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">5.00 ns, 3.622 ns, 1.35 ns</column>
+<column name="ap_clk">5.00 ns, 3.639 ns, 1.35 ns</column>
 </table>
 </item>
 </section>

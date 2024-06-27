@@ -223,7 +223,7 @@ module AESL_axi_s_sdata_i (
         end
     endfunction
     
-    function [4119:0] read_token(input integer fp);
+    function [1431:0] read_token(input integer fp);
         integer ret;
         begin
             read_token = "";
@@ -232,8 +232,8 @@ module AESL_axi_s_sdata_i (
         end
     endfunction
     
-    function [4119:0] rm_0x(input [4119:0] token);
-        reg [4119:0] token_tmp;
+    function [1431:0] rm_0x(input [1431:0] token);
+        reg [1431:0] token_tmp;
         integer i;
         begin
             token_tmp = "";

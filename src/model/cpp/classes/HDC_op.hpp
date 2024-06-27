@@ -1,77 +1,88 @@
-/**
- * @file HDC_class.hpp
- * @brief C++ class for instantiating and handling classification problems
- *        in the Hyperdimensional Computing (HDC) framework.
- *        This class instantiates the HDC model according to the configuration
- *        parameters specified in the config_cpp.hpp file and provides all the necessary
- *        methods to train, retrain and test the model.
- *        The class is highly customizable, allowing the user to verify the
- *        performance of the HDC model with different configurations in terms of:
- *        - HV dimensionality
- *        - HV data type (binary or bipolar)
- *        - HV mode (dense or sparse)
- *        - HV level type (linear, approximately linear, thermometer)
- *        - HV similarity method (Hamming, DotProduct, Cosine)
- *        - HV Encoding techniques:
- *             - BaseHV+LevelHV, denoted as record-based.          
- *             - LevelHV+Permutation, denoted as N-gram based      # NEW
- *        - Encoding of temporal sequences (N-gram encoding)       # NEW
- *        - HV clipping techniques(both for encoding and classification):
- *             - Binary clipping
- *             - Bipolar clipping
- *             - Ternary clipping
- *             - Quantized clipping
- *             - Power of Two clipping                             # NEW
- *             - No clipping
- *        - Retraining                                             # NEW
- *        - Learning rate                                          # NEW
- *        - Learning Rate decay:
- *             - data-dependent decay (different learning rate as a function of similarity)                     # NEW
- *             - iteration-dependent decay (different learning rate as a function of the number of iterations)  # NEW
- *        - etc.
- *        More information about the HDC model can be found in the following
- *        accompanying research paper: paper_citation
-
- * @author Marco Angioli and Saeid Jamili
- * @email marco.angioli@uniroma1.it and saeid.jamili@uniroma1.it
- * @date Created on: 21th August 2023
- * @date Last updated on: 6th January 2024
- * @institution Sapienza University of Rome
- * @ref :
- * https://doi.org/10.xxxx/yyyyy
- *
- * @section LICENSE
- * Copyright [2023] Sapienza University of Rome
- *  SPDX-License-Identifier: Apache-2.0 WITH SHL-2.1
- *  Licensed under the Solderpad Hardware License v 2.1 (the “License”); you
- *  may not use this file except in compliance with the License, or, at your
- *  option, the Apache License version 2.0. You may obtain a copy of the
- *  License at
- *  https://solderpad.org/licenses/SHL-2.1/
- *  Unless required by applicable law or agreed to in writing, any work
- *  distributed under the License is distributed on an “AS IS” BASIS,
- *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *  See the License for the specific language governing permissions and
- *  limitations under the License.
- *
- * @section CHANGELOG
- * @version 1
- * @date 16th August  2023
- * - Initial release by MA
- * - Added the generate_BaseHVs method to use the LFSR random generator for 
- *   base vector generation on hardware by SJ 
- *
- */
-#ifndef HDC_CLASS_HPP
-#define HDC_CLASS_HPP
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
+#include <fstream>
+#include <math.h>
+#include <random>
+#include <iostream>
+#include <string>   
+#include <sstream>  
+#include <ctime>
 #include "../../config/config_cpp.hpp"
-#include "auxiliary_functions.hpp"
 #include "load_datasets.hpp"
-#include "rnd_gen.hpp"
-#include <map>
 #define HV_ELEMENT_BIT_WIDTH 8                  // Hyper Dimensional Vector element width in bits
 #define TEST 0
 
+
+struct HV {
+    int data[HD_DIM];
+
+    // Default constructor: Initializes all data elements to zero
+    HV() {
+        for (int i = 0; i < HD_DIM; ++i) {
+            data[i] = 0;
+        }
+    }
+
+    // Define the assignment operator
+    HV& operator=(const HV& other) {
+        if (this != &other) {
+            for (int i = 0; i < HD_DIM; ++i) {
+                data[i] = other.data[i];
+            }
+        }
+        return *this;
+    }
+};
+
+// ----------------------------
+// OTHER FUNCTIONS
+// Function to generate the quantization levels
+// Input: min, max, levels
+// Output: LevelList (array of thresholds for each quantization level)
+// Example: min = 0, max = 1, levels = 4
+//-----------------------------
+void generate_quantization_levels(float min, float max,int levels, float LevelList[HD_LV_LEN])
+{
+    double length = max - min;
+    double gap = length / levels;
+    for (int level = 0; level < levels-1; ++level) {
+        LevelList[level] = min + level * gap;
+    }
+    LevelList[levels-1] = max;
+}
+
+// Function to get the quantized level for a given value
+int get_quantized_level(float value, float quantization_levels[HD_LV_LEN], int levels) {
+    
+    if (value <= quantization_levels[0]) 
+        return 0;
+
+    for (int i = 1; i < levels; ++i) 
+        if (value <= quantization_levels[i]) 
+            return i-1;
+
+    return levels - 1;
+}
+
+
+HV rollIntArray(HV arr, int positions) {
+    HV temp;
+
+    // Calculate the index from which the rolling starts
+    int startIndex = (HD_DIM - positions) % HD_DIM;
+
+    // Copy the elements after the rolled section to the temporary array
+    for (int i = 0; i < HD_DIM; ++i) {
+        temp.data[i] = arr.data[(startIndex + i) % HD_DIM];
+    }
+
+    // Copy the rolled values back to the original array
+    for (int i = 0; i < HD_DIM; ++i) {
+        arr.data[i] = temp.data[i];
+    }
+    return arr;
+}
 
 // Hyper Dimensional Vector
 class HDC_op
@@ -81,67 +92,43 @@ class HDC_op
         int HV_type;                  // HV type: binary or bipolar
         int num_levels;               // Number of levels used in the model
         int num_features;             // Number of features used in the model
-        int num_classes;              // Number of classes used in the model
         int lv_technique;             // Level vector technique: 0: linear, 1: approximately linear, 2: thermometer encoding
-        int density;                  // Density of the HV: 0: dense, 1: sparse
+        int density;                  // Density of the HV (dense or sparse)
         float sparsity_factor;        // Sparsity factor of the HV (used only for sparse HVs)
-        int HV_similarity;            // HV similarity: 0: Hamming distance, 1: Cosine similarity
-
-        // NEW
-        int encoding_technique;       // Encoding technique: 0: record-based, 1: ngram-based
-        int n_gram;                   // Temporal encoding: 0: no temporal encoding, 1: temporal encoding
-        int n_gram_size;              // Size of the temporal window adopted in temporal encoding
-        int clipping_encoding;        // Clipping technique for encoding: 0: no clipping, 1: binary clipping, 2: bipolar clipping, 3: quantized clipping
-        int clipping_class;           // Clipping technique for classification: 0: no clipping, 1: binary clipping, 2: bipolar clipping, 3: quantized clipping
-        int quant_min;                // Minimum value for quantization
-        int quant_max;                // Maximum value for quantization
-        int epochs;                   // Number of epochs for retraining
-        int lr_max;                   // Maximum learning rate
-        int lr_decay;                 // Learning rate decay: 0: no decay, 1: data-dependent decay, 2: iteration-dependent decay
-        int beta_lr;                  // Number of iterations for learning rate decay
+        int HV_similarity;            // HV similarity: 0: Cosine, 1: Dot product, 2: Hamming distance
+        int quant_min;
+        int quant_max;
         int base_value;               // Base value of the HV (used only for bipolar HVs)
         
-        // New LFSR related attributes
-        LFSRParams lfsr_params_bhv_gen;
-        LFSRParams lfsr_params_lhv_gen;
-        LFSRParams approximate_lv_lsfr;
-
-        // New LUT for power of two clipping
-        std::map<int, std::pair<int, int>> lookupTable;
-
-
-        // Class Constructor through initialization list
-        HDC_op(int dimensionality=10000, int HV_type=1, int density=0, float sparsity_factor=0.5, 
-               int num_features=4, int num_levels=10, int lv_tech=0, int similarity=0, 
-               int quant_min=-1, int quant_max=1, int encoding_technique=0,
-               int n_gram=0, int n_gram_size=2, int num_classes=10,
-               int clipping_encoding=0, int clipping_class=1, int epochs=100,
-               float lr_max=0.1, int lr_decay=0, int beta_lr=10)
-
-        : D(dimensionality), HV_type(HV_type), density(density), sparsity_factor(sparsity_factor),
-          num_features(num_features), num_levels(num_levels), lv_technique(lv_tech), HV_similarity(similarity),
-          quant_min(quant_min), quant_max(quant_max), encoding_technique(encoding_technique),
-          n_gram(n_gram), n_gram_size(n_gram_size), num_classes(num_classes), 
-          clipping_encoding(clipping_encoding), clipping_class(clipping_class),
-          epochs(epochs), lr_max(lr_max), lr_decay(lr_decay), beta_lr(beta_lr), 
-          lfsr_params_bhv_gen(BV_RND_GEN_W_BITS, 3, 0, 2, 3, 4, 0),
-          lfsr_params_lhv_gen(BV_RND_GEN_W_BITS, 3, 0, 2, 3, 4, 0),
-          approximate_lv_lsfr(lfsr_params_lhv_gen),
-          base_value(HV_type == 1 ? -1 : 0)
+        // Constructor
+        HDC_op( int dimensionality, int type, int dense, float sparsity,  int features, int levels, int lv_tech,  int similarity, int q_min, int q_max)
         {
-            if (clipping_class==4 || clipping_class==5)
-                generateExponentLookupTable(DO_CLASS_W_BITS);
+            D = dimensionality;
+            HV_type = type;
+            num_levels = levels;
+            num_features = features;
+            lv_technique = lv_tech;
+            density = dense;
+            sparsity_factor = sparsity;
+            HV_similarity = similarity;
+            quant_min = q_min;
+            quant_max = q_max;
+
+            // The base constructur initializes the HV to all 1s or all -1s (according to the HD_DATA_TYPE)
+            if (HV_type == 1)                
+                base_value = -1;                     // Bipolar
+            else
+                base_value= 0;                       // Binary
+            
         }
 
-        // Method for generating the random HVs
         HV random_HV()
         {
             HV HV1;
             std::random_device rd;
             std::mt19937 gen(rd());
-
-            // Create a uniform distribution for integer values between 0 and D-1
-            std::uniform_int_distribution<int> dis(0, D - 1);
+            // Create a uniform distribution for integer values between 0 and HD_DIM-1
+            std::uniform_int_distribution<int> dis(0, HD_DIM - 1);
 
             // initialize the HV to base values
             for (int i = 0; i < D; i++)
@@ -162,126 +149,206 @@ class HDC_op
             }                
             return HV1;
         }
+    
 
-    
-    
         // Print the HV
-        void print_HV(const HV& HV1)
+        void print_HV(HV HV1)
         {
-            std::cout << "= [";
-            for (int i = 0; i < D; i++)
-                std::cout << HV1.data[i] << " ";
-            std::cout << "]\n";
+            printf("= [");
+            for (int i = 0; i < HD_DIM; i++)
+                printf("%d ", HV1.data[i]);
+            printf("]\n");
         }
 
-        
-        // Function to generate the exponent lookup table
-        std::map<int, std::pair<int, int>> generateExponentLookupTable(int bits) {
-            
-            int maxVal = 1 << bits;
-            int currentExponent = 0;
-            int nextPowerOfTwo = 1;
 
-            for (int i = 1; i <= maxVal; ++i) {
-                if (i > nextPowerOfTwo) {
-                    currentExponent++;
-                    nextPowerOfTwo *= 2;
-                }
-
-                int nearestExponent = (std::abs(i - nextPowerOfTwo) < std::abs(i - (nextPowerOfTwo / 2))) ? currentExponent : currentExponent - 1;
-
-                if (lookupTable.find(nearestExponent) == lookupTable.end()) {
-                    lookupTable[nearestExponent] = std::make_pair(i, i);
-                } else {
-                    lookupTable[nearestExponent].second = i;
-                }
-            }
-
-            return lookupTable;
-        }
-
-        // Function to quantize a single value to its exponent using the lookup table
-        int quantizeToExponent(int value) {
-            printf("Quantizing value: %d ---->",value);
-            // If the value is 0, return 0
-            if (value == 0){
-                printf("0\n");
-                return 0;
-            }
-    
-            // Standard values
-            for (const auto& kvp : lookupTable) {
-                if (value >= kvp.second.first && value <= kvp.second.second) {
-                    printf("%d\n",kvp.first);
-                    return kvp.first;
-                }
-            }
-
-            // Return the exponent of the last element in the lookup table if out of range
-            printf("%d\n",lookupTable.rbegin()->first);
-            return lookupTable.rbegin()->first;
-        }
-
-        /* --------------------Base HVs----------------------
-            @brief Function to generate the BaseHVs.
-            
-            The BaseHVs are the hypervectors that will be used to encode the features.
-            They are generated randomly to result in orthogonal hypervectors.
-        
-            @note Using the LFSR random generator for generating base vector on hardware 
-            is a new approach, for more details, refer to our paper: 
-                https://doi.org/10.xxxx/yyyyy
-
-            @param BaseVectors: The array of BaseHVs.
-        -------------------------------------------------- */
+        // --------------------Base HVs----------------------
+        // Base Vectors: define the base vectors
+        // If READ_HVs_FROM_FILE == 1, the base vectors are read from a file
+        // If READ_HVs_FROM_FILE == 0, the base vectors are initialized randomly,
+        // by instantiating HV elements and flipping a number of bits equal to HD_DIM * SPARSITY_FACTOR
+        // --------------------------------------------------   
         void generate_BaseHVs(HV baseVectors[DS_FEATURE_SIZE])
-        {                     
+        {                    
+            //printf("Generating random base vectors...\n");  
             // The base vectors are obtained randomly flipping a number of bits dependent on the SPARSITY_FACTOR
-            #if (BV_MODE == BV_M_RND_GEN)
-                // Setting a random seed for the LFSR
+            for (int vec = 0; vec < DS_FEATURE_SIZE; vec++)
+                baseVectors[vec]=random_HV();
+        }     
+   
+
+        // -----------------SIMILARITY--------------------
+        // Computes the similarity between two HVs
+        // that is Hamming distance for binary HVs
+        // and cosine similarity for bipolar HVs
+        // --------------------------------------------------
+        float similarity(HV HV1, HV HV2, int technique=HD_SIMI_METHOD)
+        {
+            float sim = 0;
+            if (technique == 2)
+            {   
+                // Hamming distance
+                int hammingDistance = 0;
+                for (int i = 0; i < HD_DIM; i++) {
+                    if (HV1.data[i] != HV2.data[i]) {
+                        hammingDistance++;
+                    }
+                }
+                sim = (float)(hammingDistance) / HD_DIM;
+            }
+            else
+            {
+                float dot = 0.0, denom_a = 0.0, denom_b = 0.0 ;
+                for (int i = 0; i < HD_DIM; i++)
+                {
+                    dot     += HV1.data[i] * HV2.data[i] ;
+                    denom_a += HV1.data[i] * HV1.data[i] ;
+                    denom_b += HV2.data[i] * HV2.data[i] ;
+                }
+
+                // Cosine or dot product
+                if (technique==1)
+                    sim=dot;
+                else
+                    sim = dot / (sqrt(denom_a) * sqrt(denom_b)) ;
+            }
+            return sim;
+        }
+
+
+
+        // Binding operator:
+        // For Binary HVs, the binding is just a XOR operation
+        // For Bipolar HVs, the binding is a vector element-wise multiplication operation
+        HV bind(HV HV1,HV HV2)
+        {
+            HV Binded_HV;
+            if (HV_type == 0)
+            {
+                // Binary binding
+                for (int i = 0; i < D; i++)
+                    Binded_HV.data[i] = HV1.data[i] ^ HV2.data[i];
+            }
+            else
+            {
+                // Bipolar binding
+                for (int i = 0; i < D; i++)
+                    Binded_HV.data[i] = HV1.data[i] * HV2.data[i];
+            }
+            return Binded_HV;
+        }
+
+
+        // Bundling operator:
+        // For Binary HVs, the bundling is just a OR operation
+        // For Bipolar HVs, the bundling is a vector element-wise addition operation
+        HV bundle(HV HV1, HV HV2)
+        {
+            HV Bundled_HV;
+            // Bipolar bundling
+            for (int i = 0; i < D; i++)
+                Bundled_HV.data[i] = HV1.data[i] + HV2.data[i];
+            return Bundled_HV;
+        }
+
+        HV permutation(HV HV1, int positions)
+        {
+            HV Permuted_HV;
+            Permuted_HV=rollIntArray(HV1, positions);
+            return Permuted_HV;
+        }
+
+        // --------------------CLIPPING-----------------------
+        // Cliping operator:
+        // Function applied to the HV to clip the values in a custom range
+        // From the integer ClassHVs you can:
+        // - Generate a binary vector by clipping the values in the range [0, 1]. This is done through a thresholding operation
+        // - Generate a bipolar vector by clipping the values in the range [-1, 1]. This is done through a modified sign function
+        // - Generate a ternary vector by clipping the values in the range [-1, 0, 1]. This is done through a sign function
+        // - Generate a quantized vector by clipping the values in the range [min, max]. This is done through a thresholding operation
+        // --------------------------------------------------
+        HV clip(HV HV1, int min, int max, int clipping_type, int total_HVs)
+        {
+            if (clipping_type==0)
+                printf("\e[93mClipping mode:\e[39m No clipping mode, integer output HVs\n");
+            else if(clipping_type==1)
+            {
+                //printf("\e[93mClipping mode:\e[39m Binary clipping mode\n");
                 std::random_device rd;
                 std::mt19937 gen(rd());
-                std::uniform_int_distribution<uint64_t> dist(1LL << (BV_RND_GEN_W_BITS - 2), 1LL << (BV_RND_GEN_W_BITS - 1));
-                lfsr_params_bhv_gen.seed = dist(gen);
-
-                // Initialize the LFSR with the generated seed
-                LFSR<BV_RND_GEN_W_BITS, 3, 0, 2, 3, 4, 0>lfsr;
-                lfsr.set_seed(lfsr_params_bhv_gen.seed);
-
-                for (int i = 0; i < D; i += BV_RND_GEN_W_BITS) {
-                    for (int j = 0; j < DS_FEATURE_SIZE; ++j) {
-                        lfsr.randomize();
-                        
-                        for (int k = 0; k < BV_RND_GEN_W_BITS; ++k) {
-                            std::cout << "Random number: " << lfsr.rnd_o[k] << std::endl;
-                            baseVectors[j].data[i + k] = lfsr.rnd_o[k] ? 1 : base_value;
+                if (HD_DATA_TYPE==0)
+                {
+                    //printf("\e[93mClipping mode:\e[39m Majority voting based on the number of features\n");
+                    // Binary clipping
+                    for (int i=0;i<D;i++)
+                    {
+                        if (HV1.data[i]<total_HVs/2)
+                            HV1.data[i]=0;
+                        else if (HV1.data[i]>total_HVs/2)
+                            HV1.data[i]=1;
+                        else{
+                            // Create a uniform distribution for integer values between 0 and HD_DIM-1
+                            std::uniform_int_distribution<int>dis(0, 1);
+                            HV1.data[i] = dis(gen); // Randomly choose 0 or 1
                         }
                     }
                 }
-                // printf("Base vectors generated using the LFSR random generator\n");
-                // for (int i = 0; i < DS_FEATURE_SIZE; ++i) {
-                //     printf("Base vector %d: ", i);
-                //     for (int j = 0; j < D; ++j) {
-                //         printf("%d ", baseVectors[i].data[j]);
-                //     }
-                //     printf("\n");
-                // }
-            #else
-                for (int vec = 0; vec < DS_FEATURE_SIZE; vec++)
-                    baseVectors[vec]=random_HV();
-            #endif
-            
-        }     
+                else
+                {
+                    // Bipolar clipping
+                    for (int i=0;i<HD_DIM;i++)
+                        if (HV1.data[i] < 0)
+                            HV1.data[i] =- 1;
+                        else if (HV1.data[i] > 0)
+                            HV1.data[i] = 1;   
+                        else{
+                            // Create a uniform distribution for integer values between 0 and HD_DIM-1
+                            std::uniform_int_distribution<int>dis(0, 1);
+                            if (dis(gen)==0)
+                                HV1.data[i] = -1;
+                            else
+                                HV1.data[i] = 1; // Randomly choose 0 or 1
 
-        /* --------------------Level HVs----------------------
-        The LevelHVs are the hypervectors that will be used to encode the value of a feature.
-        They can be generated in three different ways:
-          - if lv_technique == 0, the level vectors are initialized with the linear encoding
-          - if lv_technique == 1, the level vectors are initialized with the approximately linearly encoding
-          - if lv_technique == 2, the level vectors are initialized with the thermometer encoding
+                        }
+                }
+            }
+            else if(clipping_type==2)
+            {
+                printf("\e[93mClipping mode:\e[39m Ternary clipping mode\n");
+                // Ternary clipping
+                for (int i=0;i<D;i++)
+                    if (HV1.data[i]<0)
+                        HV1.data[i]=-1;
+                    else if (HV1.data[i]>0)
+                        HV1.data[i]=1;
+                    else
+                        HV1.data[i]=0;
+            }
+            else if(clipping_type==3)
+            {
+                printf("\e[93mClipping mode:\e[39m Quantized clipping mode\n");
+                // Quantized clipping
+                for (int i=0;i<D;i++)
+                    if (HV1.data[i]<min)
+                        HV1.data[i]=min;
+                    else if (HV1.data[i]>max)
+                        HV1.data[i]=max;
+            }
+            else
+                printf("ERROR: Invalid clipping mode!\n");
+        return HV1;
+        }
+        
 
-        @param LevelVectors: The array of LevelHVs.
-        -------------------------------------------------- */
+
+    
+        // --------------------Level HVs----------------------
+        // Level Vectors: define the level vectors
+        // If READ_HVs_FROM_FILE == 1, the level vectors are read from a file
+        // If READ_HVs_FROM_FILE == 0, the level vectors are initialized accoring to the HD_LV_TYPE,
+        // if HD_LV_TYPE == 0, the level vectors are initialized with the linear encoding
+        // if HD_LV_TYPE == 1, the level vectors are initialized with the approximately linearly encoding
+        // if HD_LV_TYPE == 2, the level vectors are initialized with the thermometer encoding
+        // --------------------------------------------------
         void generate_LevelVectors(HV LevelVectors[HD_LV_LEN])
         {          
             printf("\e[92m----------\nGenerate_LevelVectors()\e[39m --> ");  
@@ -291,34 +358,36 @@ class HDC_op
             {
                 printf("Linear encoding.\n");
                 // Linear encoding
+                // --------------------------------------------------
                 // the first level vector is randomly initialized 
                 int change_ratio;
                 if (density == 1)
                     change_ratio = D * sparsity_factor;          
                 else
-                    change_ratio = D / 2;                 
-                // Flipping random change_ratio bits
-                for (int i = 0; i < change_ratio; i++)
+                    change_ratio = D / 2;     
+                for (int i = 0; i < change_ratio; i++)      // Flipping random change_ratio bits
                 {
                     int index = rand() % D;
                     LevelVectors[0].data[index] = 1;
-                }                
+                }    
+                // --------------------------------------------------            
                 // The other level vectors are obtained flipping a number of bits equal to int(HD_DIM / (2 * totalLevel))
                 // starting from the previous level vector. However, the same element can not be flipped 2 times
                 change_ratio = D / (2 * num_levels);
                 int indexVector[HD_DIM];
                 for (int i = 0; i < D; i++)
-                    indexVector[i] = 1;
+                    indexVector[i] = 1;      // Index vector initialized to 1
+
                 for (int level = 1; level < num_levels; level++)
                 {
-                    LevelVectors[level] = LevelVectors[level - 1];
+                    LevelVectors[level] = LevelVectors[level - 1];      // Copy the previous level vector
                     int i=0;
-                    while (i < change_ratio)
+                    while (i < change_ratio)                            // Flipping random change_ratio bits
                     {
-                        int index = rand() % D;
-                        if (indexVector[index] == 1)
+                        int index = rand() % D;                         // Random selection of the HV element
+                        if (indexVector[index] == 1)                    // When the element has not been flipped yet
                         {                
-                            indexVector[index] = 0;
+                            indexVector[index] = 0;                     // The element can be flipped
                             i++;
                             if (HD_DATA_TYPE==0)
                                 if (LevelVectors[level - 1].data[index] == 0)
@@ -346,57 +415,18 @@ class HDC_op
                     change_ratio = D * sparsity_factor;
                 else
                     change_ratio = D / 2;                
-
-
-                // Random initialization of the first and last level HVs
-                #if (LV_MODE == LV_M_LOGIC)
-        
-                    // Setting a random seed for the LFSR
-                    std::random_device rd;
-                    std::mt19937 gen(rd());
-                    std::uniform_int_distribution<uint64_t> dist(1LL << (LV_M_APPROX_RND_GEN_W_BITS - 2), 1LL << (LV_M_APPROX_RND_GEN_W_BITS - 1));
-                    approximate_lv_lsfr.seed = dist(gen);
-
-                    // Initialize the LFSR with the generated seed
-                    LFSR<BV_RND_GEN_W_BITS, 3, 0, 2, 3, 4, 0>lfsr_lv;
-                    lfsr_lv.set_seed(approximate_lv_lsfr.seed);
-
-                    for (int i = 0; i < HD_DIM; i += LV_M_APPROX_RND_GEN_W_BITS) {
-                        lfsr_lv.randomize();
-                        
-                        
-                        for (int k = 0; k < LV_M_APPROX_RND_GEN_W_BITS; ++k) {
-                            LevelVectors[0].data[i + k] = lfsr_lv.rnd_o[k] ? 1 : base_value;
-                            LevelVectors[num_levels - 1].data[i + k] = lfsr_lv.rnd_o[k] ? 1 : base_value;
-                        }
-                    }
-
-                    // Replace 0s with base_value for the first and last levels
-                    for (int i = 0; i < HD_DIM; ++i) {
-                        if (LevelVectors[0].data[i] == 0) {
-                            LevelVectors[0].data[i] = base_value;
-                        }
-                        if (LevelVectors[num_levels - 1].data[i] == 0) {
-                            LevelVectors[num_levels - 1].data[i] = base_value;
-                        }
-                    }
-            
-                #else
-                    // Random initialization of the first level vector
-                    for (int i = 0; i < change_ratio; i++)
-                    {
-                        int index = rand() % D;
-                        LevelVectors[0].data[index] = 1;
-                    }
-                    // Random initialization of the last level vector
-                    for (int i = 0; i < change_ratio; i++)
-                    {
-                        int index = rand() % D;
-                        LevelVectors[num_levels-1].data[index] = 0;
-                    }
-                #endif
-
-
+                // Random initialization of the first level vector
+                for (int i = 0; i < change_ratio; i++)
+                {
+                    int index = rand() % D;
+                    LevelVectors[0].data[index] = 1;
+                }
+                // Random initialization of the last level vector
+                for (int i = 0; i < change_ratio; i++)
+                {
+                    int index = rand() % D;
+                    LevelVectors[num_levels-1].data[index] = 0;
+                }
                 // Intermediate level vectors
                 for (int level = 1; level<num_levels-1;level++)
                 {
@@ -443,261 +473,6 @@ class HDC_op
                 printf("not known level_technique: %d\n", lv_technique);
             printf("\e[92m----------\n\e[39m");
         }    
-   
-
-        // -----------------SIMILARITY--------------------
-        // Computes the similarity between two HVs
-        // that is Hamming distance for binary HVs
-        // and cosine similarity for bipolar HVs
-        // --------------------------------------------------
-        float similarity(HV HV1, HV HV2)
-        {
-            float sim = 0;
-
-            if (density==1) {
-                // Sparse HV similarity
-                int andCount = 0, hv1Count = 0;
-                for (int i = 0; i < HD_DIM; i++) {
-                    if (HV1.data[i] && HV2.data[i]) {
-                        andCount++;
-                    }
-                    if (HV1.data[i]) {
-                        hv1Count++;
-                    }
-                }
-                sim = (float)(andCount) / hv1Count;
-            }    
-            else if ( HV_similarity == 2 )
-            {   
-                // Hamming distance
-                int hammingDistance = 0;
-                for (int i = 0; i < HD_DIM; i++) {
-                    if (HV1.data[i] != HV2.data[i]) {
-                        hammingDistance++;
-                    }
-                }
-                sim = (float)(hammingDistance) / HD_DIM;
-            }
-            else
-            {
-                // Cosine or dot product
-                float dot = 0.0, denom_a = 0.0, denom_b = 0.0 ;
-
-                if ( clipping_class == 4|| clipping_class==6 )
-                {
-                    for (int i = 0; i < D; ++i) {
-                        if (HV1.data[i] != 0 && HV2.data[i] != 0) {
-                            dot += (HV1.data[i] << HV2.data[i]);
-                        }
-                        denom_a += HV1.data[i] != 0 ? 1 << (HV1.data[i]<<1) : 0;
-                        denom_b += HV2.data[i] != 0 ? 1 << (HV2.data[i]<<1) : 0;
-                    }
-                }
-                else
-                {
-                    for (int i = 0; i < HD_DIM; i++)
-                    {
-                        dot     += HV1.data[i] * HV2.data[i] ;
-                        denom_a += HV1.data[i] * HV1.data[i] ;
-                        denom_b += HV2.data[i] * HV2.data[i] ;
-                    }
-                }
-
-                if ( HV_similarity == 1 )
-                    // Dot product
-                    sim=dot;
-                else
-                    // Cosine similarity
-                    sim = dot / (sqrt(denom_a) * sqrt(denom_b)) ;
-            }
-            return sim;
-        }
-
-
-
-        // Binding operator ->
-        HV bind(HV HV1,HV HV2)
-        {
-            HV Binded_HV;
-            if (HV_type == 0)
-            {
-                // Binary binding
-                for (int i = 0; i < D; i++)
-                    Binded_HV.data[i] = HV1.data[i] ^ HV2.data[i];
-            }
-            else
-            {
-                // Bipolar or integer binding
-                for (int i = 0; i < D; i++)
-                    Binded_HV.data[i] = HV1.data[i] * HV2.data[i];
-            }
-            return Binded_HV;
-        }
-
-
-        // Superposition or bundling operator ->
-        HV bundle(HV HV1, HV HV2)
-        {
-            HV Bundled_HV;
-            // Bipolar bundling
-            for (int i = 0; i < D; i++)
-                Bundled_HV.data[i] = HV1.data[i] + HV2.data[i];
-            return Bundled_HV;
-        }
-
-        // Permutation operator ->
-        HV permutation(HV HV1, int positions)
-        {
-            HV Permuted_HV;
-            Permuted_HV=rollIntArray(HV1, positions);
-            return Permuted_HV;
-        }
-
-        // --------------------CLIPPING-----------------------
-        // Cliping operator:
-        // Function applied to the HV to clip the values in a custom range
-        // From the integer ClassHVs you can:
-        // - Generate a binary vector by clipping the values in the range [0, 1]. This is done through a thresholding operation
-        // - Generate a bipolar vector by clipping the values in the range [-1, 1]. This is done through a modified sign function
-        // - Generate a ternary vector by clipping the values in the range [-1, 0, 1]. This is done through a sign function
-        // - Generate a quantized vector by clipping the values in the range [min, max]. This is done through a thresholding operation
-        // - Generate a power of two vector in which each element is a power of two. This is done through LUT
-        // - Generate a power of two quantized vector in which each element is a power of two. The values are clipped in the range [min, max]. This is done through LUT and thresholding
-        // --------------------------------------------------
-        HV clip(HV HV1, int min, int max, int clipping_type, int total_HVs)
-        {
-            if (clipping_type==0)
-                printf("\e[93mClipping mode:\e[39m No clipping mode, integer output HVs\n");
-            else if(clipping_type==1)
-            {
-                //printf("\e[93mClipping mode:\e[39m Binary clipping mode\n");
-                if (HD_DATA_TYPE==0)
-                {
-                    std::random_device rd;
-                    std::mt19937 gen(rd());
-                    //printf("\e[93mClipping mode:\e[39m Majority voting based on the number of features\n");
-                    // Binary clipping
-                    for (int i=0;i<D;i++)
-                    {
-                        if (HV1.data[i]<total_HVs/2)
-                            HV1.data[i]=0;
-                        else if (HV1.data[i]>total_HVs/2)
-                            HV1.data[i]=1;
-                        else{
-                            // Create a uniform distribution for integer values between 0 and HD_DIM-1
-                            std::uniform_int_distribution<int>dis(0, 1);
-                            HV1.data[i] = dis(gen); // Randomly choose 0 or 1
-                        }
-                    }
-                }
-                else
-                    // Bipolar clipping
-                    for (int i=0;i<HD_DIM;i++)
-                        if (HV1.data[i]<=0)
-                            HV1.data[i]=-1;
-                        else
-                            HV1.data[i]=1;   
-            }
-            else if(clipping_type==2)
-            {
-                printf("\e[93mClipping mode:\e[39m Ternary clipping mode\n");
-                // Ternary clipping
-                for (int i=0;i<D;i++)
-                    if (HV1.data[i]<0)
-                        HV1.data[i]=-1;
-                    else if (HV1.data[i]>0)
-                        HV1.data[i]=1;
-                    else
-                        HV1.data[i]=0;
-            }
-            else if(clipping_type==3)
-            {
-                // Quantized clipping
-                // Max value that can be represented with the given number of bits
-                int max_val = (1 << DO_CLASS_W_BITS) - 1;
-                int max_ds_val = DS_TRAIN_SIZE;
-
-                // Scaling factor
-                double scaling_factor = static_cast<double>(max_val) / max_ds_val;
-
-                // Apply the quantization
-                for (int i = 0; i < D; ++i) {
-                    HV1.data[i] = static_cast<int>(std::round(HV1.data[i] * scaling_factor));
-                }
-            }
-
-            else if (clipping_type == 4)
-            {
-                // Power of two clipping
-                for (int i = 0; i < D; ++i)
-                {
-                   HV1.data[i]= quantizeToExponent(HV1.data[i]);
-                }
-            }
-            else if (clipping_type == 5) {
-                
-                // Power of two quantized clipping
-                // Max value that can be represented with the given number of bits
-                int max_val = (1 << DO_CLASS_W_BITS) - 1;
-                int max_ds_val = DS_TRAIN_SIZE;
-
-                // Scaling factor
-                double scaling_factor = static_cast<double>(max_val) / max_ds_val;
-
-                // Apply the quantization
-                for (int i = 0; i < D; ++i) {
-                    HV1.data[i] = static_cast<int>(std::round(HV1.data[i] * scaling_factor));
-                }
-
-                for (int i = 0; i < D; ++i) {
-                    HV1.data[i]  = quantizeToExponent(HV1.data[i]);
-                }
-            }
-            else if (clipping_type == 6) {
-                // Threshold clipping
-                for (int i=0;i<D;i++)
-                    if (HV1.data[i]<min)
-                        HV1.data[i]=min;
-                    else if (HV1.data[i]>max)
-                        HV1.data[i]=max;
-            }
-            
-            else
-                printf("ERROR: Invalid clipping mode!\n");
-        return HV1;
-        }
-           
-        HV context_dependent_thinning(const HV& Z, int bundled_HVs, int thinning_steps) 
-        {
-            /**
-             * @brief Context-Dependent Thinning (CDT).
-             * 
-             * Mathematical function used for sparse HVs that is performed after a bundling.
-             * It reduces the resulting sparsity factor, keeping it constant.
-             * 
-             * @param Z The input Hyperdimensional Vector (HV).
-             * @param bundled_HVs Number of bundled HVs.
-             * @param thinning_steps Number of thinning steps to perform.
-             * @return The thinned HV.
-             */
-            HV thinned_HV;
-            HV permuted_HV;
-
-            // Context-dependent Thinning:
-            for (int i = 0; i < thinning_steps; ++i) {
-                permuted_HV = permutation(Z, i + 1);
-                for (int j = 0; j < D; ++j) {
-                    thinned_HV.data[j] = thinned_HV.data[j] || permuted_HV.data[j];
-                }
-            }
-
-            HV result;
-            for (int i = 0; i < D; ++i) {
-                result.data[i] = Z.data[i] && thinned_HV.data[i];
-            }
-        
-            return result;
-        }
 
         // ENCODING FUNCTIONS
         // From a given input feature vector, generate the corresponding HDC vector
@@ -710,55 +485,40 @@ class HDC_op
         // Output: HDC vector
         HV encoding(float FeatureVector[DS_FEATURE_SIZE], HV BaseVectors[DS_FEATURE_SIZE], HV LevelVectors[HD_LV_LEN], float *LevelList, int clipping_encoding, int encoding_technique)
         {
-            /**
-            * @brief Encoding function
-            *
-            * Function that encodes the input feature vector into a hypervector.
-            * The encoding can be performed using two different techniques:
-            * - BaseHV+LevelHV, denoted as record-based.
-            * - LevelHV+Permutation, denoted as N-gram based
-            * More information about the encoding techniques can be found in the reference
-            * documentation.
-            */
             HV Encoded_HV;
 
             // 1) Compute the quantization level of each feature using get_quantized_level function
             int quantized_features[DS_FEATURE_SIZE];
-
             for (int i = 0; i < DS_FEATURE_SIZE; i++)
                 quantized_features[i] = get_quantized_level(FeatureVector[i], LevelList, HD_LV_LEN);
 
-            if (density==1)
+            // 2) 
+            // If record-based: BIND the level vector (dependent by the quantized_feature[i]) with the corresponding base vector (dependent by the feature index)
+            // If N-gram: permute the level vector (dependent by the quantized_feature[i]) by the feature index
+            HV binded_feature[DS_FEATURE_SIZE];
+            for (int i = 0; i < DS_FEATURE_SIZE; i++)
             {
-                // Sparse HV encoding
-                for (int i = 0; i < DS_FEATURE_SIZE; i++) {
-                    int index = quantized_features[i];
-                    // Element-wise OR operation
-                    for (int j = 0; j < D; j++) {
-                        Encoded_HV.data[j] = Encoded_HV.data[j] || LevelVectors[index].data[j];
-                    }
-                }
-                Encoded_HV = context_dependent_thinning(Encoded_HV, DS_FEATURE_SIZE, DS_FEATURE_SIZE * 5); // Context-dependent thinning
+                // printf("Feature %d: %f -> Level %d\n", i, FeatureVector[i], quantized_features[i]);
+                if (encoding_technique==0)
+                    binded_feature[i] = bind(LevelVectors[quantized_features[i]], BaseVectors[i]);  // Record-based encoding
+                else
+                    binded_feature[i] = permutation(LevelVectors[quantized_features[i]], i);        // N-gram encoding
+                // printf("Binding Level %d --> ", quantized_features[i]);
+                // print_HV(LevelVectors[quantized_features[i]]);
+                // printf("with Base %d --> ", i);
+                // print_HV(BaseVectors[i]);  
+                // printf("Result --> ");
+                // print_HV(binded_feature[i]);
             }
-            else{
-                // 2) BIND the level vector with the corresponding base vector 
-                HV binded_feature[DS_FEATURE_SIZE];
-                for (int i = 0; i < DS_FEATURE_SIZE; i++)
-                {
-                    if (encoding_technique==0)
-                        binded_feature[i] = bind(LevelVectors[quantized_features[i]], BaseVectors[i]);
-                    else
-                        binded_feature[i] = permutation(LevelVectors[quantized_features[i]], i);
-                }
-                // 3) Bundle all the level vectors together to obtain the HDC vector representation of the input feature vector
-                for (int i = 0; i < DS_FEATURE_SIZE; i++)
-                    Encoded_HV = bundle(Encoded_HV,binded_feature[i]);
-            }
+
+            // 3) Bundle all the binded vectors together to obtain the HDC vector representation of the input feature vector
+            for (int i = 0; i < DS_FEATURE_SIZE; i++)
+                Encoded_HV = bundle(Encoded_HV,binded_feature[i]);
+            // printf("Bundled HV --> "); print_HV(Encoded_HV);
 
             // 4) Clip the HDC vector
-            Encoded_HV=clip(Encoded_HV, -1, 1, CLIPPING_ENCODING,DS_FEATURE_SIZE);
-
-            // 4) Bundle all the level vectors together to obtain the HDC vector representation of the input feature vector
+            Encoded_HV=clip(Encoded_HV, -1, 1, clipping_encoding, DS_FEATURE_SIZE);
+            // printf("Final Encoded HV --> "); print_HV(Encoded_HV);
             return Encoded_HV;
         }
 
@@ -788,38 +548,19 @@ class HDC_op
                     double percentage = (static_cast<double>(i) / DS_TRAIN_SIZE) * 100;
                     std::cout << "Iteration: " << i << " Progress: " << std::ceil(percentage) << "%" << std::endl;
                 }
-                if (n_gram == 0) {
-                    // 4.1) Encode the training data
-                    Encoded_HV = encoding(train_data[i],
-                                        BaseHVs,
-                                        LevelHVs,
-                                        LevelList,
-                                        clipping_encoding,
-                                        encoding_technique);
 
-                    // 4.2) Accumulation: Class HVs
-                    int label = train_labels[i];
-                    ClassHVs[label] = bundle(ClassHVs[label],Encoded_HV);
-                    bundled_labels[label] +=1;
-                }
-                else
-                {
-                    // Temporal Encoding
-                    HV n_gram_HV;
-                    for (int j = 0; j < n_gram_size * DS_FEATURE_SIZE; j++) {
-                        int feature_index = j / n_gram_size;
-                        int permute_step = j % n_gram_size;
-                        int level_index = get_quantized_level(train_data[i + permute_step][feature_index], LevelList, quant_levels);
-                        HV temp_HV      = bind(BaseHVs[feature_index], LevelHVs[level_index]);
-                        temp_HV         = permutation(temp_HV, permute_step);
-                        n_gram_HV       = bundle(n_gram_HV, temp_HV);
-                    }
-                    n_gram_HV = clip(n_gram_HV, quant_min, quant_max, clipping_encoding, n_gram_size * DS_FEATURE_SIZE);
-                    
-                    int label = train_labels[i];
-                    ClassHVs[label] = bundle(ClassHVs[label], n_gram_HV);
-                    bundled_labels[label]++;
-                }
+                // 4.1) Encode the training data
+                Encoded_HV = encoding(train_data[i],
+                                      BaseHVs,
+                                      LevelHVs,
+                                      LevelList,
+                                      CLIPPING_ENCODING,
+                                      ENCODING_TECHNIQUE);
+
+                // 4.2) Accumulation: Class HVs
+                int label = train_labels[i];
+                ClassHVs[label] = bundle(ClassHVs[label],Encoded_HV);
+                bundled_labels[label] +=1;
             }   
 
             // 5) Normalize the Class HVs
@@ -828,52 +569,33 @@ class HDC_op
         }
 
 
-        PredictionResult predict(float test_data[DS_TEST_SIZE][DS_FEATURE_SIZE], int test_labels[DS_TEST_SIZE], int num_classes, float *quantized_levels, int quant_levels,HV BaseHVs[DS_FEATURE_SIZE], HV LevelHVs[HD_LV_LEN], HV ClassHVs[DS_CLASSES_SIZE], int clipping_encoding, int verbose, int n_gram, int n_gram_size,int encoding_technique)
+        float predict(float test_data[DS_TEST_SIZE][DS_FEATURE_SIZE], int test_labels[DS_TEST_SIZE], int num_classes, float *quantized_levels,HV BaseHVs[DS_FEATURE_SIZE], HV LevelHVs[HD_LV_LEN], HV ClassHVs[DS_CLASSES_SIZE], int clipping_encoding, int verbose, int n_gram, int n_gram_size,int encoding_technique, int retrain)
         {
             float similarities[DS_CLASSES_SIZE];
             int correct=0; int actual_class; int estimated_class;
             HV testedHV;
-            std::vector<int> estimated_classes(DS_TEST_SIZE);
-
             for (int i=0;i<DS_TEST_SIZE;i++)
             {
                 // 1) Encode the training data
-                if (n_gram == 0)
-                {
-                    // Spatial encoding    
-                    testedHV = encoding(test_data[i], 
-                                        BaseHVs,
-                                        LevelHVs,
-                                        quantized_levels, 
-                                        clipping_encoding,
-                                        encoding_technique);
-                }
-                else
-                {
-                    // Temporal encoding
-                    HV n_gram_HV;
-                    for (int j = 0; j < n_gram_size * DS_FEATURE_SIZE; j++) {
-                        int feature_index = j / n_gram_size;
-                        int permute_step = j % n_gram_size;
-                        int level_index = get_quantized_level(test_data[i + permute_step][feature_index], 
-                                                            quantized_levels, quant_levels);
-                        HV temp_HV = bind(BaseHVs[feature_index], LevelHVs[level_index]);
-                        temp_HV = permutation(temp_HV, permute_step);
-                        n_gram_HV = bundle(n_gram_HV, temp_HV);
-                    }
-                    n_gram_HV = clip(n_gram_HV, quant_min, quant_max, clipping_encoding, n_gram_size * DS_FEATURE_SIZE);
-                    testedHV = n_gram_HV;
-                }
-
+                testedHV = encoding(test_data[i],
+                                      BaseHVs,
+                                      LevelHVs,
+                                      quantized_levels,
+                                      CLIPPING_ENCODING,
+                                      ENCODING_TECHNIQUE); 
                 actual_class = test_labels[i];
 
                 // 2) Compute the similarity between the encoded HV and the Class HVs
                 for (int j=0;j<num_classes;j++)
-                    similarities[j] = similarity(testedHV,ClassHVs[j]);
+                    if (retrain==1)
+                        similarities[j] = similarity(testedHV,ClassHVs[j], 0); // Always use cosine similarity in retraining, because the
+                                                                             // Clipping is applied at the end of the retraining
+                    else
+                        similarities[j] = similarity(testedHV,ClassHVs[j]);
 
                 // 3) Find the max/min similarity 
                 estimated_class=0;
-                if (HV_similarity==0 || HV_similarity==1 || density==1)
+                if (HV_similarity==0 || HV_similarity==1 || density==1|| retrain==1)
                 {
                     // Find class with max similarity
                     float max=0; int maxIndex;
@@ -906,20 +628,20 @@ class HDC_op
                     double accuracy = (static_cast<double>(correct) / i) * 100;
                     std::cout << "Progress: " << std::ceil(percentage) << "% ---> accuracy: " << accuracy << "%" << std::endl;
                 }                 
-                estimated_classes[i] = estimated_class;
+
             }
             float accuracy=float(correct*100)/DS_TEST_SIZE;
             printf("Accuracy: %f\n",accuracy);
-            return {accuracy, estimated_classes};
+            return accuracy;
         }
 
-        void retrain(float retrain_data[DS_TRAIN_SIZE][DS_FEATURE_SIZE], int retrain_labels[DS_TEST_SIZE], float test_data[DS_TEST_SIZE][DS_FEATURE_SIZE], int test_labels[DS_TEST_SIZE], int num_classes, float *quantized_levels, int quant_levels, HV BaseHVs[DS_FEATURE_SIZE], HV LevelHVs[HD_LV_LEN], HV ClassHVs[DS_CLASSES_SIZE], int clipping_encoding, int verbose, int n_gram, int n_gram_size,int encoding_technique, int clipping_class, int epochs, float starting_accuracy, int lr_max, int beta_lr,int learning_rate_decay, HV best_ClassHVs[DS_CLASSES_SIZE])
+        void retrain(float retrain_data[DS_TRAIN_SIZE][DS_FEATURE_SIZE], int retrain_labels[DS_TEST_SIZE], float test_data[DS_TEST_SIZE][DS_FEATURE_SIZE], int test_labels[DS_TEST_SIZE], int num_classes, float *quantized_levels,HV BaseHVs[DS_FEATURE_SIZE], HV LevelHVs[HD_LV_LEN], HV ClassHVs[DS_CLASSES_SIZE], int clipping_encoding, int verbose, int n_gram, int n_gram_size,int encoding_technique, int clipping_class, int epochs, float starting_accuracy, int lr_max, int beta_lr,int learning_rate_decay, HV best_ClassHVs[DS_CLASSES_SIZE])
         {
             // Initializations:
             float accuracy_before = starting_accuracy;
             float new_accuracy;
             int corrections=10;
-            float error_rate[BETA_LR];
+            float error_rate[beta_lr];
             int learning_rate=lr_max;
             int iterations=0;
             float similarities[DS_CLASSES_SIZE];
@@ -930,7 +652,6 @@ class HDC_op
             int best_bundled_labels[DS_CLASSES_SIZE];
             int best_epoch=0;
             int beta=0;
-            std::vector<int> estimated_classes(DS_TEST_SIZE);
             
             
             // 1) Retraining:
@@ -965,41 +686,29 @@ class HDC_op
                                           BaseHVs,
                                           LevelHVs,
                                           quantized_levels,
-                                          clipping_encoding,
-                                          encoding_technique);
+                                          CLIPPING_ENCODING,
+                                          ENCODING_TECHNIQUE);
                     
                     actual_class = retrain_labels[i];
 
                     // Similatiry between the encoded HV and the Class HVs
                     for (int j=0;j<num_classes;j++)
-                        similarities[j] = similarity(Encoded_HV,ClassHVs[j]);
+                        similarities[j] = similarity(Encoded_HV,ClassHVs[j], 0); // Always use cosine similarity in retraining, because the
+                                                                                 // Clipping is applied at the end of the retraining
 
                     // 1.2) Find the max/min similarity
                     estimated_class=0;
-                    if (HV_similarity==0 || HV_similarity==1 || density==1)
-                    {
-                        // Find class with max similarity
-                        float max=0; int maxIndex;
-                        for (int i = 0; i < DS_CLASSES_SIZE; i++) {
-                            if (similarities[i] > max) {
-                                max = similarities[i];
-                                maxIndex = i;
-                            }
+
+                    // Find class with max similarity
+                    float max=0; int maxIndex;
+                    for (int i = 0; i < DS_CLASSES_SIZE; i++) {
+                        if (similarities[i] > max) {
+                            max = similarities[i];
+                            maxIndex = i;
                         }
-                        estimated_class = maxIndex;
                     }
-                    else
-                    {
-                        // Find class with min similarity
-                        float min=10000000; int minIndex;
-                        for (int i = 0; i < DS_CLASSES_SIZE; i++) {
-                            if (similarities[i] < min) {
-                                min = similarities[i];
-                                minIndex = i;
-                            }
-                        }
-                        estimated_class = minIndex;                            
-                    }
+                    estimated_class = maxIndex;
+
 
                     // 1.3) Update the Class HVs
                     if (estimated_class != actual_class)
@@ -1032,20 +741,19 @@ class HDC_op
                         bundled_labels[estimated_class] += 1*learning_rate;
                     } 
                 }
-                PredictionResult new_data = predict(test_data,            // Test dataset
+                new_accuracy= predict(test_data,            // Test dataset
                                       test_labels,          // Test labels
-                                      num_classes,      // Number of classes
+                                      DS_CLASSES_SIZE,      // Number of classes
                                       quantized_levels,     // LevelList
-                                      quant_levels,         // Number of quantization levels
                                       BaseHVs,              // BaseHVs
                                       LevelHVs,             // LevelHVs
                                       ClassHVs,             // ClassHVs
-                                      clipping_encoding,    // Clipping encoding (0: no clipping, 1: binary, 2: bipolar, 3:quantized)
+                                      CLIPPING_ENCODING,    // Clipping encoding (0: no clipping, 1: binary, 2: bipolar, 3:quantized)
                                       1,                    // Verbose
-                                      n_gram,               // N-gram (0: no n-gram, 1: n-gram)
-                                      n_gram_size,          // N-gram size
-                                      ENCODING_TECHNIQUE);  // Encoding technique (0: record-based, 1: ngram-based)
-                new_accuracy = new_data.accuracy;
+                                      N_GRAM,               // N-gram (0: no n-gram, 1: n-gram)
+                                      N_GRAM_SIZE,          // N-gram size
+                                      ENCODING_TECHNIQUE,   // Encoding technique (0: record-based, 1: ngram-based)
+                                      1);                   // Retrain flag 
                 if (verbose==1)
                     printf("Epoch: %d finished --> Corrections: %d, Accuracy: %f %%\n", iterations, corrections, new_accuracy);
                 iterations++;
@@ -1078,7 +786,7 @@ class HDC_op
 
         }
 };
-#endif
+
 
 
 
