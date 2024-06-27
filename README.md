@@ -2,7 +2,8 @@
 ---
 
 <p align="center">
-  <img src="./doc/img/logo/AeneasHDC_white.png" alt="Aeneas HyperCompute Platform Logo" width="200">
+  <img src="./doc/img/logo/AeneasHDC_white.png#gh-dark-mode-only" alt="Dark Mode Image" width="200">
+  <img src="./doc/img/logo/AeneasHDC_black.png#gh-light-mode-only" alt="Light Mode Image" width="200">
 </p>
 <h1 align="center">Aeneas HyperCompute Platform</h1>
 <h4 align="center"> 🔜 !!The first stable version will be released in July 2024!!⌛ </h2>
