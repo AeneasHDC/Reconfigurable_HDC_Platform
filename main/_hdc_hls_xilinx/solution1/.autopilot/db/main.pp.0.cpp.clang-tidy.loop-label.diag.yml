@@ -182,7 +182,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_cordic_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2269800
+        Offset:          2269806
         Length:          0
         ReplacementText: 'VITIS_LOOP_87_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -191,7 +191,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_cordic_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2270614
+        Offset:          2270620
         Length:          0
         ReplacementText: 'VITIS_LOOP_143_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -200,7 +200,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_cordic_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2273261
+        Offset:          2273267
         Length:          0
         ReplacementText: 'VITIS_LOOP_315_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -209,7 +209,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_cordic_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2275984
+        Offset:          2275990
         Length:          0
         ReplacementText: 'VITIS_LOOP_475_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -218,7 +218,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_cordic_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2279145
+        Offset:          2279151
         Length:          0
         ReplacementText: 'VITIS_LOOP_655_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -227,7 +227,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_cordic_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2279226
+        Offset:          2279232
         Length:          0
         ReplacementText: 'VITIS_LOOP_659_2: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -236,7 +236,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_cordic_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2281535
+        Offset:          2281541
         Length:          0
         ReplacementText: 'VITIS_LOOP_769_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -245,7 +245,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_cordic_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2283029
+        Offset:          2283035
         Length:          0
         ReplacementText: 'VITIS_LOOP_866_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -254,7 +254,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_cordic_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2283259
+        Offset:          2283265
         Length:          0
         ReplacementText: 'VITIS_LOOP_885_2: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -263,7 +263,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_cordic_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2289441
+        Offset:          2289447
         Length:          0
         ReplacementText: 'VITIS_LOOP_1199_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -272,7 +272,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_cordic_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2291044
+        Offset:          2291050
         Length:          0
         ReplacementText: 'VITIS_LOOP_1282_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -281,7 +281,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2298892
+        Offset:          2298898
         Length:          0
         ReplacementText: 'VITIS_LOOP_94_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -290,7 +290,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2299042
+        Offset:          2299048
         Length:          0
         ReplacementText: 'VITIS_LOOP_100_2: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -299,7 +299,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2299139
+        Offset:          2299145
         Length:          0
         ReplacementText: 'VITIS_LOOP_104_3: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -308,7 +308,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2300999
+        Offset:          2301005
         Length:          0
         ReplacementText: 'VITIS_LOOP_171_4: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -317,7 +317,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2301149
+        Offset:          2301155
         Length:          0
         ReplacementText: 'VITIS_LOOP_177_5: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -326,7 +326,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2301246
+        Offset:          2301252
         Length:          0
         ReplacementText: 'VITIS_LOOP_181_6: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -335,7 +335,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2301627
+        Offset:          2301633
         Length:          0
         ReplacementText: 'VITIS_LOOP_196_7: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -344,7 +344,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2301858
+        Offset:          2301864
         Length:          0
         ReplacementText: 'VITIS_LOOP_204_8: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -353,7 +353,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2305305
+        Offset:          2305311
         Length:          0
         ReplacementText: 'VITIS_LOOP_269_9: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -362,7 +362,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2305457
+        Offset:          2305463
         Length:          0
         ReplacementText: 'VITIS_LOOP_275_10: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -371,7 +371,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2305557
+        Offset:          2305563
         Length:          0
         ReplacementText: 'VITIS_LOOP_279_11: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -380,7 +380,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2305939
+        Offset:          2305945
         Length:          0
         ReplacementText: 'VITIS_LOOP_294_12: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -389,7 +389,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2306177
+        Offset:          2306183
         Length:          0
         ReplacementText: 'VITIS_LOOP_302_13: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -398,7 +398,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2321732
+        Offset:          2321738
         Length:          0
         ReplacementText: 'VITIS_LOOP_531_14: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -407,7 +407,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2321884
+        Offset:          2321890
         Length:          0
         ReplacementText: 'VITIS_LOOP_537_15: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -416,7 +416,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2321983
+        Offset:          2321989
         Length:          0
         ReplacementText: 'VITIS_LOOP_541_16: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -425,7 +425,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2322160
+        Offset:          2322166
         Length:          0
         ReplacementText: 'VITIS_LOOP_551_17: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -434,7 +434,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2322258
+        Offset:          2322264
         Length:          0
         ReplacementText: 'VITIS_LOOP_555_18: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -443,7 +443,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2322543
+        Offset:          2322549
         Length:          0
         ReplacementText: 'VITIS_LOOP_565_19: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -452,7 +452,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2322798
+        Offset:          2322804
         Length:          0
         ReplacementText: 'VITIS_LOOP_573_20: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -461,7 +461,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2355037
+        Offset:          2355043
         Length:          0
         ReplacementText: 'VITIS_LOOP_934_21: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -470,7 +470,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2355189
+        Offset:          2355195
         Length:          0
         ReplacementText: 'VITIS_LOOP_940_22: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -479,7 +479,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2355289
+        Offset:          2355295
         Length:          0
         ReplacementText: 'VITIS_LOOP_944_23: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -488,7 +488,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2357965
+        Offset:          2357971
         Length:          0
         ReplacementText: 'VITIS_LOOP_1060_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -497,7 +497,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2358115
+        Offset:          2358121
         Length:          0
         ReplacementText: 'VITIS_LOOP_1066_2: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -506,7 +506,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2358213
+        Offset:          2358219
         Length:          0
         ReplacementText: 'VITIS_LOOP_1070_3: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -515,7 +515,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2361683
+        Offset:          2361689
         Length:          0
         ReplacementText: 'VITIS_LOOP_1157_4: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -524,7 +524,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2361834
+        Offset:          2361840
         Length:          0
         ReplacementText: 'VITIS_LOOP_1163_5: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -533,7 +533,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2361933
+        Offset:          2361939
         Length:          0
         ReplacementText: 'VITIS_LOOP_1167_6: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -542,7 +542,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2362413
+        Offset:          2362419
         Length:          0
         ReplacementText: 'VITIS_LOOP_1186_7: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -551,7 +551,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2362655
+        Offset:          2362661
         Length:          0
         ReplacementText: 'VITIS_LOOP_1193_8: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -560,7 +560,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2368227
+        Offset:          2368233
         Length:          0
         ReplacementText: 'VITIS_LOOP_1309_9: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -569,7 +569,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2368379
+        Offset:          2368385
         Length:          0
         ReplacementText: 'VITIS_LOOP_1315_10: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -578,7 +578,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2368478
+        Offset:          2368484
         Length:          0
         ReplacementText: 'VITIS_LOOP_1319_11: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -587,7 +587,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2368987
+        Offset:          2368993
         Length:          0
         ReplacementText: 'VITIS_LOOP_1339_12: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -596,7 +596,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2369236
+        Offset:          2369242
         Length:          0
         ReplacementText: 'VITIS_LOOP_1346_13: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -605,7 +605,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2386593
+        Offset:          2386599
         Length:          0
         ReplacementText: 'VITIS_LOOP_1608_14: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -614,7 +614,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2386745
+        Offset:          2386751
         Length:          0
         ReplacementText: 'VITIS_LOOP_1614_15: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -623,7 +623,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2386845
+        Offset:          2386851
         Length:          0
         ReplacementText: 'VITIS_LOOP_1618_16: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -632,7 +632,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2387319
+        Offset:          2387325
         Length:          0
         ReplacementText: 'VITIS_LOOP_1642_17: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -641,7 +641,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2387586
+        Offset:          2387592
         Length:          0
         ReplacementText: 'VITIS_LOOP_1649_18: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -650,7 +650,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2426157
+        Offset:          2426163
         Length:          0
         ReplacementText: 'VITIS_LOOP_2079_19: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -659,7 +659,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2426309
+        Offset:          2426315
         Length:          0
         ReplacementText: 'VITIS_LOOP_2085_20: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -668,7 +668,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2426409
+        Offset:          2426415
         Length:          0
         ReplacementText: 'VITIS_LOOP_2089_21: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -677,7 +677,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2429029
+        Offset:          2429035
         Length:          0
         ReplacementText: 'VITIS_LOOP_2219_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -686,7 +686,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2429192
+        Offset:          2429198
         Length:          0
         ReplacementText: 'VITIS_LOOP_2226_2: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -695,7 +695,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2429284
+        Offset:          2429290
         Length:          0
         ReplacementText: 'VITIS_LOOP_2230_3: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -704,7 +704,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2430893
+        Offset:          2430899
         Length:          0
         ReplacementText: 'VITIS_LOOP_2277_4: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -713,7 +713,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2431055
+        Offset:          2431061
         Length:          0
         ReplacementText: 'VITIS_LOOP_2284_5: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -722,7 +722,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2431147
+        Offset:          2431153
         Length:          0
         ReplacementText: 'VITIS_LOOP_2288_6: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -731,7 +731,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2431520
+        Offset:          2431526
         Length:          0
         ReplacementText: 'VITIS_LOOP_2306_7: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -740,7 +740,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2433986
+        Offset:          2433992
         Length:          0
         ReplacementText: 'VITIS_LOOP_2361_8: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -749,7 +749,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2434153
+        Offset:          2434159
         Length:          0
         ReplacementText: 'VITIS_LOOP_2368_9: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -758,7 +758,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2434246
+        Offset:          2434252
         Length:          0
         ReplacementText: 'VITIS_LOOP_2372_10: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -767,7 +767,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2434627
+        Offset:          2434633
         Length:          0
         ReplacementText: 'VITIS_LOOP_2390_11: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -776,7 +776,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2440068
+        Offset:          2440074
         Length:          0
         ReplacementText: 'VITIS_LOOP_2479_12: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -785,7 +785,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2440236
+        Offset:          2440242
         Length:          0
         ReplacementText: 'VITIS_LOOP_2486_13: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -794,7 +794,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2440330
+        Offset:          2440336
         Length:          0
         ReplacementText: 'VITIS_LOOP_2490_14: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -803,7 +803,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2440501
+        Offset:          2440507
         Length:          0
         ReplacementText: 'VITIS_LOOP_2500_15: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -812,7 +812,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2440592
+        Offset:          2440598
         Length:          0
         ReplacementText: 'VITIS_LOOP_2504_16: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -821,7 +821,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2440874
+        Offset:          2440880
         Length:          0
         ReplacementText: 'VITIS_LOOP_2515_17: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -830,7 +830,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2441061
+        Offset:          2441067
         Length:          0
         ReplacementText: 'VITIS_LOOP_2523_18: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -839,7 +839,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2475531
+        Offset:          2475537
         Length:          0
         ReplacementText: 'VITIS_LOOP_2848_19: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -848,7 +848,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2475699
+        Offset:          2475705
         Length:          0
         ReplacementText: 'VITIS_LOOP_2855_20: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -857,7 +857,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2475793
+        Offset:          2475799
         Length:          0
         ReplacementText: 'VITIS_LOOP_2859_21: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -866,7 +866,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2477595
+        Offset:          2477601
         Length:          0
         ReplacementText: 'VITIS_LOOP_2947_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -875,7 +875,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2477703
+        Offset:          2477709
         Length:          0
         ReplacementText: 'VITIS_LOOP_2954_2: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -884,7 +884,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2477774
+        Offset:          2477780
         Length:          0
         ReplacementText: 'VITIS_LOOP_2958_3: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -893,7 +893,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2478062
+        Offset:          2478068
         Length:          0
         ReplacementText: 'VITIS_LOOP_2973_4: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -902,7 +902,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2479276
+        Offset:          2479282
         Length:          0
         ReplacementText: 'VITIS_LOOP_3005_5: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -911,7 +911,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2479387
+        Offset:          2479393
         Length:          0
         ReplacementText: 'VITIS_LOOP_3012_6: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -920,7 +920,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2479460
+        Offset:          2479466
         Length:          0
         ReplacementText: 'VITIS_LOOP_3016_7: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -929,7 +929,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2479755
+        Offset:          2479761
         Length:          0
         ReplacementText: 'VITIS_LOOP_3031_8: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -938,7 +938,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2483088
+        Offset:          2483094
         Length:          0
         ReplacementText: 'VITIS_LOOP_3081_9: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -947,7 +947,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2483199
+        Offset:          2483205
         Length:          0
         ReplacementText: 'VITIS_LOOP_3088_10: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -956,7 +956,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2483272
+        Offset:          2483278
         Length:          0
         ReplacementText: 'VITIS_LOOP_3092_11: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -965,7 +965,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2483568
+        Offset:          2483574
         Length:          0
         ReplacementText: 'VITIS_LOOP_3107_12: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -974,7 +974,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2502880
+        Offset:          2502886
         Length:          0
         ReplacementText: 'VITIS_LOOP_3244_13: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -983,7 +983,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2502994
+        Offset:          2503000
         Length:          0
         ReplacementText: 'VITIS_LOOP_3251_14: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -992,7 +992,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2503069
+        Offset:          2503075
         Length:          0
         ReplacementText: 'VITIS_LOOP_3255_15: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1001,7 +1001,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2503356
+        Offset:          2503362
         Length:          0
         ReplacementText: 'VITIS_LOOP_3270_16: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1010,7 +1010,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2528966
+        Offset:          2528972
         Length:          0
         ReplacementText: 'VITIS_LOOP_3430_17: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1019,7 +1019,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2529080
+        Offset:          2529086
         Length:          0
         ReplacementText: 'VITIS_LOOP_3437_18: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1028,7 +1028,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_exp_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2529157
+        Offset:          2529163
         Length:          0
         ReplacementText: 'VITIS_LOOP_3441_19: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1037,7 +1037,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_log_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2563225
+        Offset:          2563231
         Length:          0
         ReplacementText: 'VITIS_LOOP_729_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1046,7 +1046,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_log_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2571614
+        Offset:          2571620
         Length:          0
         ReplacementText: 'VITIS_LOOP_947_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1055,7 +1055,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_log_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2590588
+        Offset:          2590594
         Length:          0
         ReplacementText: 'VITIS_LOOP_1371_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1064,7 +1064,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_sqrt_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2605522
+        Offset:          2605528
         Length:          0
         ReplacementText: 'VITIS_LOOP_266_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1073,7 +1073,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_sqrt_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2606043
+        Offset:          2606049
         Length:          0
         ReplacementText: 'VITIS_LOOP_294_2: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1082,7 +1082,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_pow_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2622043
+        Offset:          2622049
         Length:          0
         ReplacementText: 'VITIS_LOOP_74_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1091,7 +1091,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_pow_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2623193
+        Offset:          2623199
         Length:          0
         ReplacementText: 'VITIS_LOOP_135_2: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1100,7 +1100,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_pow_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2623502
+        Offset:          2623508
         Length:          0
         ReplacementText: 'VITIS_LOOP_149_3: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1109,7 +1109,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_pow_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2624012
+        Offset:          2624018
         Length:          0
         ReplacementText: 'VITIS_LOOP_179_4: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1118,7 +1118,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_pow_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2625926
+        Offset:          2625932
         Length:          0
         ReplacementText: 'VITIS_LOOP_307_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1127,7 +1127,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_pow_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2626291
+        Offset:          2626297
         Length:          0
         ReplacementText: 'VITIS_LOOP_327_2: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1136,7 +1136,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_pow_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2626599
+        Offset:          2626605
         Length:          0
         ReplacementText: 'VITIS_LOOP_341_3: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1145,7 +1145,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_pow_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2628427
+        Offset:          2628433
         Length:          0
         ReplacementText: 'VITIS_LOOP_459_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1154,7 +1154,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_pow_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2628752
+        Offset:          2628758
         Length:          0
         ReplacementText: 'VITIS_LOOP_473_2: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1163,7 +1163,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_diff_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2631481
+        Offset:          2631487
         Length:          0
         ReplacementText: 'VITIS_LOOP_59_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1172,7 +1172,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_diff_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2634374
+        Offset:          2634380
         Length:          0
         ReplacementText: 'VITIS_LOOP_209_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1181,7 +1181,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_diff_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2635661
+        Offset:          2635667
         Length:          0
         ReplacementText: 'VITIS_LOOP_274_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1190,7 +1190,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_all_any_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2646721
+        Offset:          2646727
         Length:          0
         ReplacementText: 'VITIS_LOOP_42_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1199,7 +1199,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_all_any_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2646896
+        Offset:          2646902
         Length:          0
         ReplacementText: 'VITIS_LOOP_53_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1208,7 +1208,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_all_any_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2647057
+        Offset:          2647063
         Length:          0
         ReplacementText: 'VITIS_LOOP_64_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1217,7 +1217,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_all_any_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2647219
+        Offset:          2647225
         Length:          0
         ReplacementText: 'VITIS_LOOP_75_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1226,7 +1226,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_all_any_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2647393
+        Offset:          2647399
         Length:          0
         ReplacementText: 'VITIS_LOOP_86_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1235,7 +1235,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_all_any_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2647568
+        Offset:          2647574
         Length:          0
         ReplacementText: 'VITIS_LOOP_97_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1244,7 +1244,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_all_any_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2647729
+        Offset:          2647735
         Length:          0
         ReplacementText: 'VITIS_LOOP_108_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1253,7 +1253,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_all_any_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2647891
+        Offset:          2647897
         Length:          0
         ReplacementText: 'VITIS_LOOP_119_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1262,7 +1262,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_mad_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2718912
+        Offset:          2718918
         Length:          0
         ReplacementText: 'VITIS_LOOP_23_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1271,7 +1271,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_cbrt_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2720656
+        Offset:          2720662
         Length:          0
         ReplacementText: 'VITIS_LOOP_66_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1280,7 +1280,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hypot_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2725162
+        Offset:          2725168
         Length:          0
         ReplacementText: 'VITIS_LOOP_75_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1289,7 +1289,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hypot_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2725894
+        Offset:          2725900
         Length:          0
         ReplacementText: 'VITIS_LOOP_107_2: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1298,7 +1298,7 @@ Diagnostics:
     FilePath:        'C:\Xilinx\Vitis_HLS\2023.1\common\technology\autopilot\etc\hls_hypot_apfixed.h'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2727579
+        Offset:          2727585
         Length:          0
         ReplacementText: 'VITIS_LOOP_195_3: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1307,7 +1307,7 @@ Diagnostics:
     FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\lib\hdc_lib\operations.hpp'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2780710
+        Offset:          2780716
         Length:          0
         ReplacementText: 'VITIS_LOOP_13_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1316,7 +1316,7 @@ Diagnostics:
     FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\lib\hdc_lib\operations.hpp'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2780919
+        Offset:          2780925
         Length:          0
         ReplacementText: 'VITIS_LOOP_21_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1325,7 +1325,7 @@ Diagnostics:
     FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\lib\hdc_lib\operations.hpp'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2781126
+        Offset:          2781132
         Length:          0
         ReplacementText: 'VITIS_LOOP_29_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1334,7 +1334,7 @@ Diagnostics:
     FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\lib\hdc_lib\operations.hpp'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2781334
+        Offset:          2781340
         Length:          0
         ReplacementText: 'VITIS_LOOP_37_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1343,7 +1343,7 @@ Diagnostics:
     FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\lib\hdc_lib\operations.hpp'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2781543
+        Offset:          2781549
         Length:          0
         ReplacementText: 'VITIS_LOOP_45_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1352,7 +1352,7 @@ Diagnostics:
     FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\lib\hdc_lib\operations.hpp'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2781751
+        Offset:          2781757
         Length:          0
         ReplacementText: 'VITIS_LOOP_53_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1361,7 +1361,7 @@ Diagnostics:
     FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\lib\headers\sqrt_approx.hpp'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2782662
+        Offset:          2782668
         Length:          0
         ReplacementText: 'VITIS_LOOP_68_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1370,7 +1370,7 @@ Diagnostics:
     FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\lib\headers\sqrt_approx.hpp'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2782727
+        Offset:          2782733
         Length:          0
         ReplacementText: 'VITIS_LOOP_72_2: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1379,7 +1379,7 @@ Diagnostics:
     FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\lib\hdc_lib\HDC_class.hpp'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2783682
+        Offset:          2783688
         Length:          0
         ReplacementText: 'VITIS_LOOP_130_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1388,7 +1388,7 @@ Diagnostics:
     FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\lib\hdc_lib\HDC_class.hpp'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2783746
+        Offset:          2783753
         Length:          0
         ReplacementText: 'VITIS_LOOP_134_2: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1397,7 +1397,7 @@ Diagnostics:
     FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\lib\hdc_lib\HDC_class.hpp'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2785023
+        Offset:          2784632
         Length:          0
         ReplacementText: 'VITIS_LOOP_371_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1406,7 +1406,7 @@ Diagnostics:
     FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\lib\hdc_lib\HDC_class.hpp'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2785432
+        Offset:          2785041
         Length:          0
         ReplacementText: 'VITIS_LOOP_403_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1415,7 +1415,7 @@ Diagnostics:
     FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\lib\hdc_lib\HDC_class.hpp'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2785704
+        Offset:          2785313
         Length:          0
         ReplacementText: 'VITIS_LOOP_426_2: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1424,7 +1424,7 @@ Diagnostics:
     FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\lib\hdc_lib\HDC_class.hpp'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2786064
+        Offset:          2785673
         Length:          0
         ReplacementText: 'VITIS_LOOP_459_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1433,7 +1433,7 @@ Diagnostics:
     FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\lib\hdc_lib\HDC_class.hpp'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2786128
+        Offset:          2785738
         Length:          0
         ReplacementText: 'VITIS_LOOP_463_2: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1442,7 +1442,7 @@ Diagnostics:
     FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\lib\hdc_lib\HDC_class.hpp'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2786803
+        Offset:          2786414
         Length:          0
         ReplacementText: 'VITIS_LOOP_540_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1451,7 +1451,7 @@ Diagnostics:
     FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\lib\hdc_lib\HDC_class.hpp'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2786929
+        Offset:          2786540
         Length:          0
         ReplacementText: 'VITIS_LOOP_548_2: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1460,7 +1460,7 @@ Diagnostics:
     FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\lib\hdc_lib\HDC_class.hpp'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2787568
+        Offset:          2787179
         Length:          0
         ReplacementText: 'VITIS_LOOP_606_3: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1469,7 +1469,7 @@ Diagnostics:
     FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\lib\hdc_lib\HDC_class.hpp'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2787882
+        Offset:          2787493
         Length:          0
         ReplacementText: 'VITIS_LOOP_626_4: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1478,7 +1478,7 @@ Diagnostics:
     FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\lib\hdc_lib\HDC_class.hpp'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2789378
+        Offset:          2788989
         Length:          0
         ReplacementText: 'VITIS_LOOP_849_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1487,7 +1487,7 @@ Diagnostics:
     FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\lib\hdc_lib\HDC_class.hpp'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2789476
+        Offset:          2789087
         Length:          0
         ReplacementText: 'VITIS_LOOP_852_2: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1496,79 +1496,70 @@ Diagnostics:
     FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\lib\hdc_lib\HDC_class.hpp'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2789807
+        Offset:          2789418
         Length:          0
         ReplacementText: 'VITIS_LOOP_877_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_286_1:  '
-    FileOffset:      286
-    FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\main.cpp'
-    Replacements:    
-      - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2793464
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_286_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_294_2:  '
+    Message:         'Added loop label VITIS_LOOP_294_1:  '
     FileOffset:      294
     FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\main.cpp'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2793571
+        Offset:          2793060
         Length:          0
-        ReplacementText: 'VITIS_LOOP_294_2: '
+        ReplacementText: 'VITIS_LOOP_294_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_505_3:  '
+    Message:         'Added loop label VITIS_LOOP_505_2:  '
     FileOffset:      505
     FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\main.cpp'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2794305
+        Offset:          2793738
         Length:          0
-        ReplacementText: 'VITIS_LOOP_505_3: '
+        ReplacementText: 'VITIS_LOOP_505_2: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_511_4:  '
+    Message:         'Added loop label VITIS_LOOP_511_3:  '
     FileOffset:      511
     FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\main.cpp'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2794496
+        Offset:          2793929
         Length:          0
-        ReplacementText: 'VITIS_LOOP_511_4: '
+        ReplacementText: 'VITIS_LOOP_511_3: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_643_5:  '
+    Message:         'Added loop label VITIS_LOOP_643_4:  '
     FileOffset:      643
     FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\main.cpp'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2795352
+        Offset:          2794785
         Length:          0
-        ReplacementText: 'VITIS_LOOP_643_5: '
+        ReplacementText: 'VITIS_LOOP_643_4: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_809_6:  '
+    Message:         'Added loop label VITIS_LOOP_809_5:  '
     FileOffset:      809
     FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\main.cpp'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2796384
+        Offset:          2795818
         Length:          0
-        ReplacementText: 'VITIS_LOOP_809_6: '
+        ReplacementText: 'VITIS_LOOP_809_5: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_916_7:  '
+    Message:         'Added loop label VITIS_LOOP_916_6:  '
     FileOffset:      916
     FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\main.cpp'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2797577
+        Offset:          2796805
         Length:          0
-        ReplacementText: 'VITIS_LOOP_916_7: '
+        ReplacementText: 'VITIS_LOOP_916_6: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_929_8:  '
+    Message:         'Added loop label VITIS_LOOP_929_7:  '
     FileOffset:      929
     FilePath:        'C:\Reconfigurable_HDC_Platform-1\src\hw\hls_xilinx\main.cpp'
     Replacements:    
       - FilePath:        'C:\Reconfigurable_HDC_Platform-1\main\_hdc_hls_xilinx\solution1\.autopilot\db\main.pp.0.cpp'
-        Offset:          2797777
+        Offset:          2796894
         Length:          0
-        ReplacementText: 'VITIS_LOOP_929_8: '
+        ReplacementText: 'VITIS_LOOP_929_7: '
 ...

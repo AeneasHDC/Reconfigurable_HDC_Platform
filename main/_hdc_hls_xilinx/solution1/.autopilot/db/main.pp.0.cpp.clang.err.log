@@ -835,12 +835,27 @@ In file included from ./../src/hw/hls_xilinx/headers/main.hpp:49:
 ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:136:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=similarity_phase1_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS unroll
         ^
+./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:121:43: warning: unused parameter 'denom_a' [-Wunused-parameter]
+                               DenomType &denom_a, DenomType &denom_b, uint8_t mode ) {
+                                          ^
+./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:121:63: warning: unused parameter 'denom_b' [-Wunused-parameter]
+                               DenomType &denom_a, DenomType &denom_b, uint8_t mode ) {
+                                                              ^
 ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:121:80: warning: unused parameter 'mode' [-Wunused-parameter]
                                DenomType &denom_a, DenomType &denom_b, uint8_t mode ) {
                                                                                ^
 ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:280:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=similarity_phase2_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS INLINE
         ^
+./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:278:35: warning: unused parameter 'sim' [-Wunused-parameter]
+  void similarity_phase2(SimType &sim, const DenomType &denom_a, const DenomType &denom_b, uint8_t mode)
+                                  ^
+./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:278:57: warning: unused parameter 'denom_a' [-Wunused-parameter]
+  void similarity_phase2(SimType &sim, const DenomType &denom_a, const DenomType &denom_b, uint8_t mode)
+                                                        ^
+./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:278:83: warning: unused parameter 'denom_b' [-Wunused-parameter]
+  void similarity_phase2(SimType &sim, const DenomType &denom_a, const DenomType &denom_b, uint8_t mode)
+                                                                                  ^
 ./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp:278:100: warning: unused parameter 'mode' [-Wunused-parameter]
   void similarity_phase2(SimType &sim, const DenomType &denom_a, const DenomType &denom_b, uint8_t mode)
                                                                                                    ^
@@ -919,8 +934,11 @@ C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/script.tcl:11:9: warning: 
 ./../src/hw/hls_xilinx/main.cpp:146:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=hdv_engine_XLX_SEP_ PragmaOptions=ap_none port = nrst_i_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS INTERFACE ap_none port = nrst_i
         ^
-./../src/hw/hls_xilinx/main.cpp:149:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=hdv_engine_XLX_SEP_ PragmaOptions=axis port = sdata_i depth = 1_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS INTERFACE axis port = sdata_i depth = 1
+./../src/hw/hls_xilinx/main.cpp:151:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=hdv_engine_XLX_SEP_ PragmaOptions=ap_none port = df_i_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE ap_none port = df_i
+        ^
+./../src/hw/hls_xilinx/main.cpp:152:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=aggregate_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=hdv_engine_XLX_SEP_ PragmaOptions=compact = bit variable = df_i_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS AGGREGATE compact = bit variable = df_i
         ^
 ./../src/hw/hls_xilinx/main.cpp:156:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=hdv_engine_XLX_SEP_ PragmaOptions=ap_none port = chv_i_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS INTERFACE ap_none port = chv_i
@@ -1072,4 +1090,4 @@ C:/Reconfigurable_HDC_Platform-1/main/_hdc_hls_xilinx/script.tcl:11:9: warning: 
 ./../src/hw/hls_xilinx/main.cpp:835:9: warning: Only for/while/do loop or function body support the pipeline pragma [-Wignored-hls-attributes]
 #pragma HLS PIPELINE II=5
         ^~~~~~~~~~~~~~~~~
-330 warnings generated.
+336 warnings generated.

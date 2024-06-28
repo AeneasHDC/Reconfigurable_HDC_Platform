@@ -1,7 +1,0 @@
-Running: xsim.dir/hdv_engine/xsimk.exe -simmode gui -wdb hdv_engine.wdb -simrunnum 0 -socket 64965
-Design successfully loaded
-Design Loading Memory Usage: 10168 KB (Peak: 10168 KB)
-Design Loading CPU Usage: 15 ms
-Simulation completed
-Simulation Memory Usage: 22536 KB (Peak: 22536 KB)
-Simulation CPU Usage: 108 ms

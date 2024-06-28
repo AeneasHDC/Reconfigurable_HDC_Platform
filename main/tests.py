@@ -213,7 +213,7 @@ def change_config(aeneas, dim=None, hd_mode=None, sparsity_factorx10=None, paral
     aeneas.configuration.compile()
 
     # Print the configuration
-    aeneas.configuration.print()
+    #aeneas.configuration.print()
     # ------------------------------------------------------------------------------------
 
 # -------------------------------- TESTS HEADER ------------------------------------------

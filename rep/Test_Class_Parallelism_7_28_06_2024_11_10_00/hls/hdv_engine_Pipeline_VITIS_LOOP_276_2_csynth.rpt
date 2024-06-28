@@ -1,0 +1,142 @@
+
+
+================================================================
+== Vitis HLS Report for 'hdv_engine_Pipeline_VITIS_LOOP_276_2'
+================================================================
+* Date:           Tue Jan 23 00:43:06 2024
+
+* Version:        2023.2.1 (Build 4070103 on Dec 13 2023)
+* Project:        _hdc_hls_xilinx
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu9eg-ffvb1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  50.00 ns|  1.527 ns|    13.50 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        7|        7|  0.350 us|  0.350 us|    7|    7|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_276_2  |        5|        5|         1|          1|          1|     5|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|      20|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|       -|       -|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|      27|    -|
+|Register         |        -|     -|       5|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|       5|      47|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     1824|  2520|  548160|  274080|    0|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------+----------+----+---+----+------------+------------+
+    |    Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------+----------+----+---+----+------------+------------+
+    |add_ln276_fu_56_p2   |         +|   0|  0|  10|           3|           1|
+    |icmp_ln276_fu_50_p2  |      icmp|   0|  0|  10|           3|           3|
+    +---------------------+----------+----+---+----+------------+------------+
+    |Total                |          |   0|  0|  20|           6|           4|
+    +---------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------+----+-----------+-----+-----------+
+    |         Name         | LUT| Input Size| Bits| Total Bits|
+    +----------------------+----+-----------+-----+-----------+
+    |ap_done_int           |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_3  |   9|          2|    3|          6|
+    |i_fu_38               |   9|          2|    3|          6|
+    +----------------------+----+-----------+-----+-----------+
+    |Total                 |  27|          6|    7|         14|
+    +----------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------+---+----+-----+-----------+
+    |     Name    | FF| LUT| Bits| Const Bits|
+    +-------------+---+----+-----+-----------+
+    |ap_CS_fsm    |  1|   0|    1|          0|
+    |ap_done_reg  |  1|   0|    1|          0|
+    |i_fu_38      |  3|   0|    3|          0|
+    +-------------+---+----+-----+-----------+
+    |Total        |  5|   0|    5|          0|
+    +-------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------------------------------------------------------------------+-----+-----+------------+-------------------------------------------------------------------------------+--------------+
+|                                       RTL Ports                                      | Dir | Bits|  Protocol  |                                 Source Object                                 |    C Type    |
++--------------------------------------------------------------------------------------+-----+-----+------------+-------------------------------------------------------------------------------+--------------+
+|ap_clk                                                                                |   in|    1|  ap_ctrl_hs|                                           hdv_engine_Pipeline_VITIS_LOOP_276_2|  return value|
+|ap_rst                                                                                |   in|    1|  ap_ctrl_hs|                                           hdv_engine_Pipeline_VITIS_LOOP_276_2|  return value|
+|ap_start                                                                              |   in|    1|  ap_ctrl_hs|                                           hdv_engine_Pipeline_VITIS_LOOP_276_2|  return value|
+|ap_done                                                                               |  out|    1|  ap_ctrl_hs|                                           hdv_engine_Pipeline_VITIS_LOOP_276_2|  return value|
+|ap_idle                                                                               |  out|    1|  ap_ctrl_hs|                                           hdv_engine_Pipeline_VITIS_LOOP_276_2|  return value|
+|ap_ready                                                                              |  out|    1|  ap_ctrl_hs|                                           hdv_engine_Pipeline_VITIS_LOOP_276_2|  return value|
+|hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_4         |  out|   32|      ap_vld|  hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_4|       pointer|
+|hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_4_ap_vld  |  out|    1|      ap_vld|  hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_4|       pointer|
+|hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_3         |  out|   32|      ap_vld|  hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_3|       pointer|
+|hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_3_ap_vld  |  out|    1|      ap_vld|  hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_3|       pointer|
+|hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_2         |  out|   32|      ap_vld|  hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_2|       pointer|
+|hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_2_ap_vld  |  out|    1|      ap_vld|  hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_2|       pointer|
+|hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_1         |  out|   32|      ap_vld|  hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_1|       pointer|
+|hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_1_ap_vld  |  out|    1|      ap_vld|  hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_1|       pointer|
+|hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl           |  out|   32|      ap_vld|    hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl|       pointer|
+|hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl_ap_vld    |  out|    1|      ap_vld|    hdv_engine_bool_op_mode_t_frame_in_t_stream_chv_p_t_bhv_p_t_lhv_p_t_pred_cl|       pointer|
++--------------------------------------------------------------------------------------+-----+-----+------------+-------------------------------------------------------------------------------+--------------+
+

@@ -33949,9 +33949,9 @@ typedef ap_int<32> bunded_clip_t;
 
 
 typedef ap_uint<1> HV_HD_DIM[512];
-typedef ap_uint<1> HV[64];
-typedef ap_uint<1 +1> HV_OUT[64];
-typedef hv_class_t HV_CLASS[64];
+typedef ap_uint<1> HV[128];
+typedef ap_uint<1 +1> HV_OUT[128];
+typedef hv_class_t HV_CLASS[128];
 
 
 
@@ -33991,11 +33991,11 @@ typedef hls::stream<AXI_VALUE> AXI_STREAM;
 
 
 typedef struct {
-    ap_uint<8> d1[64];
+    ap_uint<8> d1[128];
 } dataf_in_t;
 
 typedef struct {
- dataf_in_t d1[1];
+ dataf_in_t d1[7];
 } dataf_in_p_t;
 
 
@@ -34019,11 +34019,11 @@ typedef struct {
 
 
 typedef struct {
-    ap_uint<1> bvh[64];
+    ap_uint<1> bvh[128];
 } bhv_t;
 
 typedef struct {
- bhv_t el[1];
+ bhv_t el[7];
 } bhv_p_t;
 
 
@@ -34031,11 +34031,11 @@ typedef struct {
 
 
 typedef struct {
-    ap_uint<1> lvh[64];
+    ap_uint<1> lvh[128];
 } lhv_t;
 
 typedef struct {
- lhv_t el[1];
+ lhv_t el[7];
 } lhv_p_t;
 
 
@@ -34044,7 +34044,7 @@ typedef struct {
 
 typedef struct {
 # 153 "./../src/hw/hls_xilinx/headers/datatypes.hpp"
-      ap_uint<11> cvh1[64];
+      ap_uint<1> cvh1[128];
 
 
 
@@ -34052,7 +34052,7 @@ typedef struct {
 } chv_t;
 
 typedef struct {
- chv_t el[1];
+ chv_t el[3];
 } chv_p_t;
 # 171 "./../src/hw/hls_xilinx/headers/datatypes.hpp"
 typedef struct {
@@ -66683,36 +66683,23 @@ class HDC_op
 
 
 
- VITIS_LOOP_130_1: for ( auto i = 0; i < LEN; i += 64 )
+ VITIS_LOOP_130_1: for ( auto i = 0; i < LEN; i += 128 )
     {
 
 #pragma HLS unroll
- VITIS_LOOP_134_2: for ( auto j = 0; j < 64; j++ )
+ VITIS_LOOP_134_2: for ( auto j = 0; j < 128; j++ )
      {
 #pragma HLS unroll
-# 162 "./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp"
+# 153 "./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp"
  {
 
+
+       if ( HV1[i+j] == HV2[i+j] )
        {
-# 207 "./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp"
-        {
-         sim += HV1[i+j] * HV2[i+j];
-
-
-         {
-          denom_a = denom_a + (HV1[i+j]*HV1[i+j]);
-          denom_b = denom_b + (HV2[i+j]*HV2[i+j]);
-         }
-
-        }
-
+        sim += 1;
        }
-# 250 "./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp"
       }
-
-
-
-
+# 255 "./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp"
      }
     }
    }
@@ -66722,33 +66709,8 @@ class HDC_op
   void similarity_phase2(SimType &sim, const DenomType &denom_a, const DenomType &denom_b, uint8_t mode)
   {
 #pragma HLS INLINE
-# 300 "./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp"
- {
-# 321 "./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp"
-    {
-
-     {
-
-
-
-      sim = ( sim * 10000 )/( hls::sqrt(denom_b) * hls::sqrt(denom_a) );
-
-
-
-     }
-
-
-
-
-
-    }
-
-      }
-
-
-
-
-  }
+# 344 "./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp"
+ }
 # 364 "./../src/hw/hls_xilinx/headers/../lib/hdc_lib/HDC_class.hpp"
   template < typename HVType >
   void bind( const HVType& HV1, const HVType& HV2, HVType& Binded_HV )
@@ -66817,11 +66779,11 @@ class HDC_op
 
 
 
- VITIS_LOOP_459_1: for ( auto i = 0; i < LEN; i += 64 )
+ VITIS_LOOP_459_1: for ( auto i = 0; i < LEN; i += 128 )
     {
 
 #pragma HLS unroll
- VITIS_LOOP_463_2: for ( auto j = 0; j < 64; j++ )
+ VITIS_LOOP_463_2: for ( auto j = 0; j < 128; j++ )
      {
 #pragma HLS unroll
 
@@ -67018,9 +66980,9 @@ __attribute__((sdx_kernel("hdv_engine", 0))) void hdv_engine(
   op_mode_t op_mode_i,
   frame_in_t frame_in,
 
-   AXI_STREAM& sdata_i,
 
 
+   dataf_in_p_t &df_i,
 
 
 
@@ -67057,9 +67019,9 @@ __attribute__((sdx_kernel("hdv_engine", 0))) void hdv_engine(
  frame_in_t frame_in,
 
 
-        AXI_STREAM& sdata_i,
 
 
+  dataf_in_p_t &df_i,
 
 
 
@@ -67093,10 +67055,10 @@ __attribute__((sdx_kernel("hdv_engine", 0))) void hdv_engine(
 #pragma HLS INTERFACE ap_none port = nrst_i
 
 
-#pragma HLS INTERFACE axis port = sdata_i depth = 1
 
 
-
+#pragma HLS INTERFACE ap_none port = df_i
+#pragma HLS AGGREGATE compact = bit variable = df_i
 
 
 
@@ -67114,7 +67076,7 @@ __attribute__((sdx_kernel("hdv_engine", 0))) void hdv_engine(
 #pragma HLS INTERFACE ap_none port = status_o
 #pragma HLS AGGREGATE compact=bit variable = status_o
 
- AXI_VALUE _aValue[1];
+ AXI_VALUE _aValue[7];
 
     bhv_t _bhv;
     lhv_t _lhv;
@@ -67134,7 +67096,7 @@ __attribute__((sdx_kernel("hdv_engine", 0))) void hdv_engine(
 
 
 
- static HDC_op<1,1,64> HDC;
+ static HDC_op<1,1,128> HDC;
 
     static HV_CLASS BundledHV;
  static HV_CLASS Clipped_BundledHV;
@@ -67142,8 +67104,8 @@ __attribute__((sdx_kernel("hdv_engine", 0))) void hdv_engine(
     static ap_int<32> similarity_classes[3];
 
 
-  static ap_uint<32> denom_a_classes[3];
-  static ap_uint<32> denom_b_classes[3];
+
+
 
 
     static HV Binded_Features;
@@ -67187,20 +67149,20 @@ __attribute__((sdx_kernel("hdv_engine", 0))) void hdv_engine(
  if ( nrst_i == 0 )
   {
 
-    VITIS_LOOP_286_1: while ( sdata_i.empty() == 0 )
-    {
-     sdata_i.read( _aValue[0] );
-    }
+
+
+
+
 
 
    _pred_class_o.c1 = 0;
 
-   VITIS_LOOP_294_2: for(auto i = 0; i < 3; i++)
+   VITIS_LOOP_294_1: for(auto i = 0; i < 3; i++)
    {
     bunded_train_chv[i] = 0;
 
-     denom_a_classes[i] = 0;
-     denom_b_classes[i] = 0;
+
+
 
     similarity_classes[i] = 0;
    }
@@ -67242,15 +67204,15 @@ __attribute__((sdx_kernel("hdv_engine", 0))) void hdv_engine(
    process_features:
    {
 #pragma HLS INLINE recursive
- auto paralled_feature_inx_end = 1;
+ auto paralled_feature_inx_end = 7;
 # 505 "./../src/hw/hls_xilinx/main.cpp"
-    VITIS_LOOP_505_3: for ( auto feature_p_id = 0; feature_p_id < paralled_feature_inx_end; feature_p_id+=1 )
+    VITIS_LOOP_505_2: for ( auto feature_p_id = 0; feature_p_id < paralled_feature_inx_end; feature_p_id+=1 )
     {
 #pragma HLS UNROLL
 
  _frame_index = frame_in.index + feature_p_id;
 #pragma HLS INLINE recursive
- VITIS_LOOP_511_4: for ( auto state = 0; state < 2; state++)
+ VITIS_LOOP_511_3: for ( auto state = 0; state < 2; state++)
      {
 #pragma HLS PIPELINE II = 5
 
@@ -67303,7 +67265,7 @@ __attribute__((sdx_kernel("hdv_engine", 0))) void hdv_engine(
          {
 #pragma HLS INLINE recursive
 
- VITIS_LOOP_643_5: for(auto i = 0; i < 64; i++)
+ VITIS_LOOP_643_4: for(auto i = 0; i < 128; i++)
           {
 #pragma HLS UNROLL
  hv_class_t tmp_chv_val;
@@ -67371,7 +67333,7 @@ __attribute__((sdx_kernel("hdv_engine", 0))) void hdv_engine(
    process_associate_search:
    {
 #pragma HLS INLINE recursive
- VITIS_LOOP_809_6: for ( auto class_p_id = 0; class_p_id < 1; class_p_id+=1 )
+ VITIS_LOOP_809_5: for ( auto class_p_id = 0; class_p_id < 3; class_p_id+=1 )
     {
 #pragma HLS UNROLL
 
@@ -67396,42 +67358,35 @@ __attribute__((sdx_kernel("hdv_engine", 0))) void hdv_engine(
        ap_uint<32> denom_a= 0; ap_uint<32> denom_b = 0;
 
        HDC.similarity_phase1( _chv.cvh1, Clipped_BundledHV, similarity, denom_a, denom_b, op_mode_i.mode );
-
-
-
-
-
+# 873 "./../src/hw/hls_xilinx/main.cpp"
        {
+
 
 
 
          if ( frame_in.id == 0 )
 
-        {
+         {
 
 
 
-         similarity_classes[_frame_index] = similarity;
-         denom_a_classes[_frame_index] = denom_a;
-         denom_b_classes[_frame_index] = denom_b;
-        }
-        else
-        {
-         similarity_classes[_frame_index] += similarity;
-         denom_a_classes[_frame_index] += denom_a;
-         denom_b_classes[_frame_index] += denom_b;
-        }
+          similarity_classes[_frame_index] = similarity;
 
+         }else
+         {
+          similarity_classes[_frame_index] += similarity;
+         }
 
        }
-# 894 "./../src/hw/hls_xilinx/main.cpp"
+
+
       }
 
 
 
 
 
-        if ( _frame_index == 3 - 1 && frame_in.id == ( 512/64 )-1 )
+        if ( _frame_index == 3 - 1 && frame_in.id == ( 512/128 )-1 )
 
 
        {
@@ -67447,20 +67402,20 @@ __attribute__((sdx_kernel("hdv_engine", 0))) void hdv_engine(
 
 
  {
-         VITIS_LOOP_916_7: for ( auto i = 0; i < 3; i++ )
+         VITIS_LOOP_916_6: for ( auto i = 0; i < 3; i++ )
          {
 #pragma HLS PIPELINE II=3
 
 
- HDC.similarity_phase2( similarity_classes[i], denom_a_classes[i], denom_b_classes[i],op_mode_i.mode );
 
 
 
 
 
-         }
 
-         VITIS_LOOP_929_8: for ( auto i = 0; i < 3; i++ )
+ }
+
+         VITIS_LOOP_929_7: for ( auto i = 0; i < 3; i++ )
          {
 #pragma HLS PIPELINE II=1
 

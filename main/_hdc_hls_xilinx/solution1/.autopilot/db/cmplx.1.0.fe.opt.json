@@ -1,144 +1,24 @@
 {
   "0": {
-    "basicblocks": 146,
-    "calls": "14 13 17 17 11 10 10 10 2 15 3 12 7 5 8 9 6",
+    "basicblocks": 132,
+    "calls": "13 6 12 12 11 3 3 3 9 8 7 4 5 14 2 10",
     "file": "main.cpp",
     "fileloc": 82,
-    "instructions": 670,
+    "instructions": 582,
     "loads": {
-      "G": 14,
-      "L": 19,
+      "G": 12,
+      "L": 15,
       "T": 4
     },
     "name": "hdv_engine",
     "stores": {
-      "G": 23,
+      "G": 17,
       "L": 16,
       "T": 2
     },
-    "total_instructions": 13960
+    "total_instructions": 2532
   },
   "1": {
-    "basicblocks": 1,
-    "calls": "4",
-    "file": "rnd.hpp",
-    "fileloc": 58,
-    "instructions": 6,
-    "name": "RndGenerator",
-    "total_instructions": 47
-  },
-  "10": {
-    "basicblocks": 4,
-    "calls": "13",
-    "file": "datatypes.hpp",
-    "fileloc": 136,
-    "instructions": 11,
-    "name": "",
-    "total_instructions": 29
-  },
-  "11": {
-    "basicblocks": 4,
-    "calls": "14",
-    "file": "datatypes.hpp",
-    "fileloc": 124,
-    "instructions": 11,
-    "name": "",
-    "total_instructions": 29
-  },
-  "12": {
-    "basicblocks": 1,
-    "calls": "1",
-    "file": "HDC_class.hpp",
-    "fileloc": 93,
-    "instructions": 3,
-    "name": "HDC_op",
-    "total_instructions": 50
-  },
-  "13": {
-    "basicblocks": 4,
-    "calls": "",
-    "file": "datatypes.hpp",
-    "fileloc": 132,
-    "instructions": 11,
-    "name": "",
-    "total_instructions": 18
-  },
-  "14": {
-    "basicblocks": 4,
-    "calls": "",
-    "file": "datatypes.hpp",
-    "fileloc": 120,
-    "instructions": 11,
-    "name": "",
-    "total_instructions": 18
-  },
-  "15": {
-    "basicblocks": 1,
-    "calls": "",
-    "file": "datatypes.hpp",
-    "fileloc": 104,
-    "instructions": 3,
-    "name": "",
-    "total_instructions": 10
-  },
-  "16": {
-    "basicblocks": 1,
-    "calls": "18",
-    "file": "hls_sqrt_apfixed.h",
-    "fileloc": 384,
-    "instructions": 18,
-    "loads": {
-      "L": 1
-    },
-    "name": "sqrt_fixed<32>",
-    "stores": {
-      "L": 1
-    },
-    "total_instructions": 5158
-  },
-  "17": {
-    "basicblocks": 4,
-    "calls": "",
-    "file": "datatypes.hpp",
-    "fileloc": 144,
-    "instructions": 11,
-    "name": "",
-    "total_instructions": 18
-  },
-  "18": {
-    "basicblocks": 39,
-    "calls": "",
-    "file": "hls_sqrt_apfixed.h",
-    "fileloc": 42,
-    "instructions": 503,
-    "loads": {
-      "L": 6
-    },
-    "name": "sqrt_fixed<33, 33>",
-    "stores": {
-      "L": 4
-    },
-    "total_instructions": 4858
-  },
-  "2": {
-    "basicblocks": 4,
-    "calls": "17",
-    "file": "datatypes.hpp",
-    "fileloc": 160,
-    "instructions": 11,
-    "name": "",
-    "total_instructions": 29
-  },
-  "3": {
-    "basicblocks": 1,
-    "calls": "",
-    "file": "datatypes.hpp",
-    "fileloc": 112,
-    "instructions": 3,
-    "name": "",
-    "total_instructions": 10
-  },
-  "4": {
     "basicblocks": 1,
     "calls": "",
     "file": "rnd.hpp",
@@ -153,7 +33,43 @@
     },
     "total_instructions": 27
   },
-  "5": {
+  "10": {
+    "basicblocks": 16,
+    "calls": "",
+    "file": "HDC_class.hpp",
+    "fileloc": 120,
+    "instructions": 34,
+    "name": "similarity_phase1<ap_uint<1> [128], ap_uint<32> [128], ap_uint<32>, ap_uint<32> >",
+    "total_instructions": 69
+  },
+  "11": {
+    "basicblocks": 4,
+    "calls": "13",
+    "file": "datatypes.hpp",
+    "fileloc": 124,
+    "instructions": 11,
+    "name": "",
+    "total_instructions": 29
+  },
+  "12": {
+    "basicblocks": 4,
+    "calls": "",
+    "file": "datatypes.hpp",
+    "fileloc": 144,
+    "instructions": 11,
+    "name": "",
+    "total_instructions": 18
+  },
+  "13": {
+    "basicblocks": 4,
+    "calls": "",
+    "file": "datatypes.hpp",
+    "fileloc": 120,
+    "instructions": 11,
+    "name": "",
+    "total_instructions": 18
+  },
+  "14": {
     "basicblocks": 16,
     "calls": "",
     "file": "HDC_class.hpp",
@@ -162,43 +78,22 @@
     "loads": {
       "L": 1
     },
-    "name": "bundle<ap_uint<1> [64], ap_uint<32> [64]>",
+    "name": "bundle<ap_uint<1> [128], ap_uint<32> [128]>",
     "stores": {
       "L": 1
     },
     "total_instructions": 203
   },
-  "6": {
+  "15": {
     "basicblocks": 1,
-    "calls": "",
-    "file": "HDC_class.hpp",
-    "fileloc": 278,
-    "instructions": 50,
-    "loads": {
-      "L": 3
-    },
-    "name": "similarity_phase2<ap_int<32>, ap_uint<32> >",
-    "stores": {
-      "L": 3
-    },
-    "total_instructions": 10623
+    "calls": "1",
+    "file": "rnd.hpp",
+    "fileloc": 58,
+    "instructions": 6,
+    "name": "RndGenerator",
+    "total_instructions": 47
   },
-  "7": {
-    "basicblocks": 8,
-    "calls": "",
-    "file": "HDC_class.hpp",
-    "fileloc": 365,
-    "instructions": 29,
-    "loads": {
-      "L": 1
-    },
-    "name": "bind<ap_uint<1> [64]>",
-    "stores": {
-      "L": 1
-    },
-    "total_instructions": 79
-  },
-  "8": {
+  "2": {
     "basicblocks": 54,
     "calls": "",
     "file": "HDC_class.hpp",
@@ -207,25 +102,79 @@
     "loads": {
       "L": 13
     },
-    "name": "clip<ap_uint<32> [64], ap_uint<32> [64]>",
+    "name": "clip<ap_uint<32> [128], ap_uint<32> [128]>",
     "stores": {
       "L": 9
     },
     "total_instructions": 437
   },
-  "9": {
-    "basicblocks": 14,
+  "3": {
+    "basicblocks": 4,
+    "calls": "6",
+    "file": "datatypes.hpp",
+    "fileloc": 136,
+    "instructions": 11,
+    "name": "",
+    "total_instructions": 29
+  },
+  "4": {
+    "basicblocks": 1,
+    "calls": "15",
+    "file": "HDC_class.hpp",
+    "fileloc": 93,
+    "instructions": 3,
+    "name": "HDC_op",
+    "total_instructions": 50
+  },
+  "5": {
+    "basicblocks": 8,
     "calls": "",
     "file": "HDC_class.hpp",
-    "fileloc": 120,
-    "instructions": 98,
+    "fileloc": 365,
+    "instructions": 29,
     "loads": {
-      "L": 2
+      "L": 1
     },
-    "name": "similarity_phase1<ap_uint<11> [64], ap_uint<32> [64], ap_uint<32>, ap_uint<32> >",
+    "name": "bind<ap_uint<1> [128]>",
     "stores": {
-      "L": 2
+      "L": 1
     },
-    "total_instructions": 569
+    "total_instructions": 79
+  },
+  "6": {
+    "basicblocks": 4,
+    "calls": "",
+    "file": "datatypes.hpp",
+    "fileloc": 132,
+    "instructions": 11,
+    "name": "",
+    "total_instructions": 18
+  },
+  "7": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "datatypes.hpp",
+    "fileloc": 112,
+    "instructions": 3,
+    "name": "",
+    "total_instructions": 10
+  },
+  "8": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "datatypes.hpp",
+    "fileloc": 104,
+    "instructions": 3,
+    "name": "",
+    "total_instructions": 10
+  },
+  "9": {
+    "basicblocks": 4,
+    "calls": "12",
+    "file": "datatypes.hpp",
+    "fileloc": 160,
+    "instructions": 11,
+    "name": "",
+    "total_instructions": 29
   }
 }

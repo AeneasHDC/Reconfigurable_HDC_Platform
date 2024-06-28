@@ -15,11 +15,5 @@
     <clockList>
         <clock name="default" period="5.0" default="false"/>
     </clockList>
-    <Simulation argv="">
-        <SimFlow name="cosim" setup="false" dumpTrace="all" optimizeCompile="false" ldflags="" mflags="" compiledLibrary="" toolName="xsim">
-            <Rtl name="verilog" active="true"/>
-            <Rtl name="vhdl" active="false"/>
-        </SimFlow>
-    </Simulation>
 </AutoPilot:solution>
 

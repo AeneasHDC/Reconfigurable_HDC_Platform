@@ -635,7 +635,7 @@ int main( )
 										for ( int i = 0; i < DI_PARALLEL_W_BITS; i++ )
 										{
 											//printf("loading the frame of CLASS\n");
-											chv_i.el[class_p_id].cvh1[i] = chv_mem[class_id].cvh1[frame_id + i]; 
+											chv_i.el[class_p_id].cvh1[i] = chv_mem[class_id+class_p_id].cvh1[frame_id + i];
 											// printf("%d ", chv_mem[class_id].cvh1[frame_id + i]);
 										}
 										// printf("]\n");
