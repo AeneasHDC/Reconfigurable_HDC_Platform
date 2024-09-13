@@ -6,6 +6,7 @@
   <img src="./doc/img/logo/AeneasHDC_black.png#gh-light-mode-only" alt="Light Mode Image" width="200">
 </p>
 <h1 align="center">Aeneas HyperCompute Platform</h1>
+<h4 align= "center"> New exciting updates coming soon!</h4>
 <p align="center">
     <em>An automatic open-source environment for simple and fast deployment of flexible Hyperdimensional Computing (HDC) learning models in software and hardware.</em>
     <br>
